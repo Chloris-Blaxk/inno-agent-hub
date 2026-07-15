@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inno Agent · 技能库</title>
+<meta name="description" content="Inno Agent Skill Library — 面向教学、创作、研究与开发的可直接调用技能集合。">
+<style>
+  :root{
+    --bg:#f2f0ec; --card:#fbfaf8; --ink:#14140f; --muted:#6f6c63;
+    --line:#e2ded6; --cta:#1f6f4a;
+    --max:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Inter","Helvetica Neue",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
+  .label{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600}
+  h1,h2{font-weight:800; letter-spacing:-.035em; line-height:.95}
+  h1{font-size:clamp(44px,7.5vw,104px)}
+  h2{font-size:clamp(34px,5.5vw,72px)}
+
+  /* header */
+  header{padding:28px 0; border-bottom:1px solid var(--line)}
+  .bar{display:flex; align-items:center; justify-content:space-between; gap:16px}
+  .logo{font-weight:800; letter-spacing:-.02em; font-size:17px}
+  .logo span{color:var(--cta)}
+  .ghlink{font-size:13px; color:var(--muted); text-decoration:none; border:1px solid var(--line); padding:7px 14px; border-radius:999px; background:var(--card); white-space:nowrap}
+  .ghlink:hover{color:var(--ink); border-color:#c9c4b8}
+
+  /* hero */
+  .hero{padding:64px 0 40px; display:grid; grid-template-columns:1.5fr 1fr; gap:32px; align-items:end}
+  .hero p{color:var(--muted); font-size:15px; max-width:38ch}
+  .stats{display:flex; gap:26px; margin-top:22px; flex-wrap:wrap}
+  .stat b{display:block; font-size:26px; font-weight:800; letter-spacing:-.02em}
+  .stat span{font-size:11px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase}
+
+  /* featured */
+  .feat{display:grid; grid-template-columns:1fr 1fr; gap:14px; padding-bottom:56px}
+  .fcard{display:grid; grid-template-columns:230px 1fr; background:var(--card); border:1px solid var(--line); overflow:hidden}
+  .cover{position:relative; padding:16px; display:flex; flex-direction:column; justify-content:space-between; gap:14px; min-height:210px; overflow:hidden}
+  .cover .rings{position:absolute; top:-58px; right:-58px; width:190px; height:190px; opacity:.45; pointer-events:none}
+  .cover .demoImg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block}
+  .cover .scrim{position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,.62) 0%, rgba(0,0,0,.18) 52%, rgba(0,0,0,.3) 100%)}
+  .cover .ctop{position:relative; display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
+  .cover .cbot{position:relative; min-width:0}
+  .cover .num{font-size:40px; font-weight:800; letter-spacing:-.04em; line-height:.85; flex-shrink:0}
+  .cover .cname{font-size:21px; font-weight:800; letter-spacing:-.03em; line-height:1.08; overflow-wrap:anywhere}
+  .cover .cmeta{font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; opacity:.72; margin-top:7px}
+  .cover .kicker{font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; opacity:.62; padding-top:5px}
+  .cover .bars{display:flex; gap:2.5px; align-items:flex-end; height:15px; margin-top:9px}
+  .cover .bars i{width:3.5px; background:currentColor; opacity:.55; border-radius:1px}
+  .cover.hasDemo{color:#fff}
+  .cover.hasDemo .kicker,.cover.hasDemo .num,.cover.hasDemo .cname,.cover.hasDemo .cmeta{
+    text-shadow:0 1px 14px rgba(0,0,0,.55); opacity:1}
+  .cover.hasDemo .kicker,.cover.hasDemo .cmeta{opacity:.9}
+  .demoTag{position:absolute; right:14px; bottom:14px; font-size:9.5px; font-weight:800; letter-spacing:.08em;
+    background:rgba(0,0,0,.72); color:#fff; padding:3px 7px; border-radius:3px; z-index:2}
+  .info{padding:18px; display:flex; flex-direction:column; gap:9px}
+  .irow{display:flex; align-items:center; justify-content:space-between; gap:10px}
+  .owner{font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .badges{display:flex; gap:5px; flex-shrink:0}
+  .b{font-size:10px; font-weight:700; padding:2.5px 7px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap}
+  .b.orig{background:#efe6d4; color:#7a5c1e; border-color:#e2d3b4}
+  .b.ok{background:#e2f0e6; color:var(--cta); border-color:#c6e2ce}
+  .iname{font-size:21px; font-weight:800; letter-spacing:-.025em; line-height:1.15; word-break:break-word}
+  .idesc{font-size:13.5px; color:#4b483f; line-height:1.55; flex:1}
+  .cta{display:flex; align-items:center; justify-content:space-between; margin-top:4px; text-decoration:none}
+  .cta b{font-size:13px; color:var(--cta); font-weight:700}
+  .arrow{width:30px; height:30px; border-radius:50%; background:var(--cta); color:#fff; display:grid; place-items:center; font-size:14px; flex-shrink:0; transition:transform .16s}
+  .cta:hover .arrow{transform:translateX(3px)}
+
+  /* library */
+  .libhead{display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; padding-bottom:22px; border-top:1px solid var(--line); padding-top:56px}
+  .pills{display:flex; gap:7px; flex-wrap:wrap}
+  .pill{font-size:12.5px; font-weight:600; padding:8px 15px; border-radius:999px; border:1px solid var(--line);
+    background:var(--card); color:var(--muted); cursor:pointer; font-family:inherit; transition:.14s}
+  .pill:hover{border-color:#b9b3a5; color:var(--ink)}
+  .pill[aria-pressed="true"]{background:var(--ink); color:#fff; border-color:var(--ink)}
+  .count{font-size:12.5px; color:var(--muted); padding:14px 0 18px}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding-bottom:80px}
+  .gcard{background:var(--card); border:1px solid var(--line); display:flex; flex-direction:column; overflow:hidden}
+  .gcard .cover{min-height:172px}
+  .gcard .cover .num{font-size:34px}
+  .gcard .cover .cname{font-size:19px}
+  .gcard .info{gap:8px}
+  .gcard .iname{font-size:18px}
+  .gcard .idesc{font-size:13px; min-height:3em}
+
+  footer{border-top:1px solid var(--line); padding:26px 0 54px; font-size:12.5px; color:var(--muted);
+    display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  footer a{color:var(--muted)}
+  .empty{padding:48px 0; color:var(--muted); font-size:14px}
+
+  @media (max-width:1000px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .feat{grid-template-columns:1fr}
+    .hero{grid-template-columns:1fr; align-items:start; gap:18px; padding-top:48px}
+  }
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr}
+    .fcard{grid-template-columns:1fr}
+    .cover{min-height:150px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="logo">Inno Agent <span>/</span> 技能库</div>
+    <a class="ghlink" id="ghRepo" href="#" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="label">Start here</div>
+      <h1 style="margin-top:14px">为教学而生<br>的技能库</h1>
+    </div>
+    <div>
+      <p>可直接调用的具体能力 —— 备课、批改、讲题、创作、研究。下载即用,上传到工作区就能跑。</p>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <section class="feat" id="featured"></section>
+
+  <div class="libhead">
+    <div>
+      <div class="label">The library</div>
+      <h2 style="margin-top:12px">全部技能</h2>
+    </div>
+    <div class="pills" id="pills"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <section class="grid" id="grid"></section>
+</main>
+
+<footer class="wrap">
+  <div>Inno Agent Skill Library · 数据由 <code>skill-library/</code> 自动生成</div>
+  <div id="gen"></div>
+</footer>
+
+<script>
+const DATA = {"generated": "2026-07-15", "count": 46, "repo": "https://github.com/Chloris-Blaxk/inno-agent-hub", "categories": [{"name": "教学辅导", "count": 16}, {"name": "内容创作", "count": 11}, {"name": "文档处理", "count": 8}, {"name": "开发工具", "count": 7}, {"name": "研究检索", "count": 4}], "skills": [{"id": "Exam2Knowledge", "name": "Exam2Knowledge", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "把考题逆向拆成高频考点、解题模板与错题库，构建应试模式识别（理科优先）", "description": "把考试题目逆向拆解成高频考点与可复用的解题模式(通用解题模板 + Top3 错题库),重在「识别模式 → 套用方法」的应试反射,而非系统性学习;支持单题、批量题、薄弱点三种输入,理科优先。适合刷题、模考、past paper、归纳考点、错题整理、冲刺备考。触发词:刷题, 模考, 考点, 高频题, 错题本, 冲刺, 备考, 题库, 归纳考点; past paper, mock exam.", "type": "收集", "verified": false, "group": "📚 教育 · 备考与刷题", "refText": "AtomerCore/Exam2Knowledge-skill", "refUrl": "https://github.com/AtomerCore/Exam2Knowledge-skill", "demo": "", "hasDemo": false, "num": "01", "featured": false}, {"id": "algorithmic-art", "name": "algorithmic-art", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "用 p5.js 创作算法生成艺术，支持随机种子与交互式参数探索", "description": "用 p5.js 创作算法生成艺术:基于随机种子的可复现随机性,配合交互式参数探索。当用户想用代码生成艺术、做生成式视觉作品时使用。触发词:生成艺术, 算法艺术, p5.js, 创意编程; generative art, algorithmic art, creative coding.", "type": "收集", "verified": false, "group": "🎨 创作 · 视觉与设计", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/algorithmic-art", "demo": "", "hasDemo": false, "num": "02", "featured": false}, {"id": "backwards-design-unit-planner", "name": "backwards-design-unit-planner", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "逆向设计（UbD）：从学习成果倒推评估证据与学习活动，产出完整单元教学计划", "description": "用 Wiggins & McTighe 的逆向设计(UbD)规划教学单元:从期望学习成果 → 评估证据 → 学习活动三阶段倒推,产出含大概念/基本问题、评估蓝图、WHERETO 教学序列与对齐自检的完整单元计划。开一个新单元或按课程标准重构旧单元时使用。触发词:设计单元, 单元教学设计, 大单元设计, 逆向设计, UbD, 备一个单元, 教学目标对齐, 单元规划; unit plan, backwards design, understanding by design.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "GarethManning/education-agent-skills", "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/backwards-design-unit-planner", "demo": "", "hasDemo": false, "num": "03", "featured": false}, {"id": "baoyu-comic", "name": "baoyu-comic", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "知识漫画创作，支持多种画风与基调，分镜排版并按序生成图像", "description": "知识漫画创作工具:支持多种画风与基调,自动分镜排版并按序生成图像,产出原创的教育/科普漫画。把知识点做成漫画讲解时使用。触发词:知识漫画, 教育漫画, 科普漫画, 人物传记漫画, 漫画讲解; knowledge comic, educational comic.", "type": "收集", "verified": false, "group": "🎨 创作 · 知识可视化", "refText": "JimLiu/baoyu-skills", "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-comic", "demo": "", "hasDemo": false, "num": "04", "featured": false}, {"id": "baoyu-infographic", "name": "baoyu-infographic", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "用 21 种布局与 21 种风格生成可发布的专业信息图", "description": "专业信息图生成:内置 21 种布局 × 21 种视觉风格,先分析内容并推荐布局×风格组合,再产出可直接发布的信息图。把要点或数据可视化成信息图时使用。触发词:信息图, infographic, 可视化海报, 图解, 知识卡片; visual summary.", "type": "收集", "verified": false, "group": "🎨 创作 · 知识可视化", "refText": "JimLiu/baoyu-skills", "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-infographic", "demo": "", "hasDemo": false, "num": "05", "featured": false}, {"id": "baoyu-slide-deck", "name": "baoyu-slide-deck", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "从内容生成专业幻灯片图像，先出带风格的提纲再逐页生图", "description": "从内容生成专业幻灯片图像:先产出带风格说明的提纲,再逐页生成幻灯片图(产物为图片,区别于可编辑的 pptx)。需要快速做一套演示/分享页时使用。触发词:幻灯片, 演示, 做 slides, slide deck, 分享页; presentation, generate deck.", "type": "收集", "verified": false, "group": "🎨 创作 · 知识可视化", "refText": "JimLiu/baoyu-skills", "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-slide-deck", "demo": "", "hasDemo": false, "num": "06", "featured": false}, {"id": "baoyu-url-to-markdown", "name": "baoyu-url-to-markdown", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "用 baoyu-fetch 抓取任意 URL 转为 markdown，内置 X、YouTube 等适配器", "description": "用 baoyu-fetch(基于 Chrome CDP)抓取任意网页转成 Markdown,内置 X/Twitter、YouTube 字幕、Hacker News、通用页面(Defuddle)等适配器,可处理登录/验证码。把网页剪藏成笔记时使用。触发词:网页转 Markdown, 抓取网页, 剪藏, 保存文章; url to markdown, fetch page.", "type": "收集", "verified": false, "group": "🔎 学习 · 研究与笔记", "refText": "JimLiu/baoyu-skills", "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-url-to-markdown", "demo": "", "hasDemo": false, "num": "07", "featured": false}, {"id": "baoyu-youtube-transcript", "name": "baoyu-youtube-transcript", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "按 URL 或视频 ID 下载 YouTube 字幕与封面，支持翻译与分章", "description": "按 URL 或视频 ID 下载 YouTube 字幕/文字稿与封面图,支持多语言、翻译、分章与说话人识别,并缓存原始数据便于重排。把视频内容整理成可学习的文字稿时使用。触发词:YouTube 字幕, 视频转文字, 下载字幕, 视频文稿; youtube transcript, subtitles.", "type": "收集", "verified": false, "group": "🔎 学习 · 研究与笔记", "refText": "JimLiu/baoyu-skills", "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-youtube-transcript", "demo": "", "hasDemo": false, "num": "08", "featured": false}, {"id": "canvas-design", "name": "canvas-design", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "运用设计理念创作海报、艺术品等静态视觉作品，输出 PNG 与 PDF", "description": "运用设计理念创作精美静态视觉作品(海报、艺术图等),输出为 .png 与 .pdf。当用户要做海报、视觉作品、平面设计稿时使用。触发词:海报, 平面设计, 视觉作品, 配图设计; poster, canvas design, visual art.", "type": "收集", "verified": false, "group": "🎨 创作 · 视觉与设计", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/canvas-design", "demo": "", "hasDemo": false, "num": "09", "featured": false}, {"id": "citation-management", "name": "citation-management", "category": "研究检索", "color": {"bg": "#e6e0cd", "fg": "#736846"}, "tagline": "学术引用管理：检索 Google Scholar 与 PubMed，校验文献并生成 BibTeX", "description": "学术引用管理:检索 Google Scholar 与 PubMed,抽取并校验文献元数据,生成规范的 BibTeX 条目。需要管理参考文献、核对引用、生成 BibTeX 时使用。触发词:参考文献, 引用管理, BibTeX, 文献校验, 引文; citation, bibtex, references.", "type": "收集", "verified": false, "group": "🔎 学习 · 研究与笔记", "refText": "K-Dense-AI/scientific-agent-skills", "refUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/HEAD/scientific-skills/citation-management", "demo": "", "hasDemo": false, "num": "10", "featured": false}, {"id": "claude-api", "name": "claude-api", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "构建、调试与优化 Claude API / Anthropic SDK 应用，含 prompt caching 与版本迁移", "description": "构建、调试与优化基于 Claude API / Anthropic SDK 的应用,涵盖 prompt caching、工具调用、流式、迁移升级等,内置 Go/Python/TypeScript/Java/PHP 等多语言示例。学习或开发 AI 应用时使用。触发词:Claude API, Anthropic SDK, 调用大模型, prompt caching, 模型迁移; build with claude, llm app.", "type": "收集", "verified": false, "group": "💻 开发 · 构建与测试", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/claude-api", "demo": "", "hasDemo": false, "num": "11", "featured": false}, {"id": "comment-on-docx", "name": "comment-on-docx", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "给 Word（.docx）加原生批注式反馈，定位到具体词句、不改原文，适合作文/论文/作业批改", "description": "给 Word(.docx)文档添加批注式反馈:按批注规范定位到具体词句,以原生 Word 批注(comment)写回原文而不改动正文,并另存副本。适合作文/论文/作业批改与文稿评审。自带读取文档 runs、起草批注、用 python-docx 程序化插入批注的脚本与指南。触发词:批改作文, 给文档加批注, Word 批注, 论文评阅, 作业反馈, 评审意见, 不改原文的修改建议; comment on docx, word comments, review feedback, add comments.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教师与批改", "refText": "tim-hua-01/comment-on-docx", "refUrl": "https://github.com/tim-hua-01/comment-on-docx", "demo": "", "hasDemo": false, "num": "12", "featured": true}, {"id": "differentiation-adapter", "name": "differentiation-adapter", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "同一任务按学困/超常/多动/读写障碍等差异化适配，保持学习目标不变", "description": "把同一堂课的任务按不同学习者需求做差异化适配,同时保持核心学习目标不变:为学困、超常、注意力障碍(ADHD)、读写障碍、焦虑或二语(EAL)学生调整难度入口与支架,输出改了什么、保留了什么、目标核验与实施建议(明确排斥已被证伪的“学习风格”理论)。同一份教案要照顾不同层次学生时使用。触发词:分层教学, 差异化教学, 因材施教, 照顾不同层次, 学困生辅导, 分层作业, 分层任务, 个别化调整; differentiation, adapt task, SEND, EAL, scaffolding.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "GarethManning/education-agent-skills", "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/differentiation-adapter", "demo": "", "hasDemo": false, "num": "13", "featured": false}, {"id": "doc-coauthoring", "name": "doc-coauthoring", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "引导结构化协作流程，共同撰写技术文档与规范", "description": "引导用户走一套结构化的协作写作流程,共同撰写文档、提案、技术规范、决策记录等。需要系统地写一份正式文档时使用(纯指令型,无捆绑脚本)。触发词:写文档, 协作写作, 技术规范, 提案, 文档共创; documentation, co-authoring, technical spec.", "type": "收集", "verified": false, "group": "📝 写作 · 文档协作", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/doc-coauthoring", "demo": "", "hasDemo": false, "num": "14", "featured": false}, {"id": "docx", "name": "docx", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "创建、读取与编辑 Word（.docx）文档", "description": "创建、读取和编辑 Word 文档(.docx):带格式的正式文稿、样式、修订等。凡涉及 Word 文档的任务都使用本技能。触发词:Word, Word 文档, .docx, 写一份文档, 公文, 报告; word document, docx.", "type": "收集", "verified": false, "group": "📄 文档 · 办公与转换", "refText": "fcakyon/claude-codex-settings", "refUrl": "https://github.com/fcakyon/claude-codex-settings/tree/HEAD/plugins/anthropic-office-skills/skills/docx", "demo": "", "hasDemo": false, "num": "15", "featured": false}, {"id": "edu-analytic-geometry", "name": "edu-analytic-geometry", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "圆锥曲线题 → Canvas 2D 动态画板", "description": "把一道解析几何题解成一个自包含的交互教学网页：左栏题面 + 动态控制台（一个 可变参数滑块驱动实时重算的几何量 + 理论范围/定值指示），中栏 KaTeX 分步解析，右栏 2D Canvas 动态几何画板（椭圆/双曲线/抛物线/圆 + 动直线/动点 + 向量 + 标注 + 画笔涂鸦）。 支持三入口——给定文字题、随机出题、上传题目图片识别后解题。覆盖求标准方程、弦长、向量 数量积范围/定值、三角形面积最值、定点、定值（斜率之积）、轨迹、离心率等题型，统一\"设含参 直线 x=my+c + 联立 + 韦达 + 换元/常数分离\"，并由 sympy 精确计算驱动（答案、坐标、步骤 数值、交互引擎的理论范围同源一致）。其它 agent 也可调用本技能生成此类网页。形态与 edu-solid-geometry 平行，但用 Canvas-2D + KaTeX（非 Three.js）。 触发词：解析几何, 圆锥曲线, 椭圆, 双曲线, 抛物线, 直线与圆锥曲线, 焦点弦, 弦长, 数量积取值范围, 向量数量积, 定点问题, 定值问题, 斜率之积, 三角形面积最值, 轨迹方程, 离心率, 解这道解析几何题, 随机出一道圆锥曲线题, 这张图里的解析几何题; analytic geometry, conic sections, ellipse, hyperbola, parabola, chord length, dot product range, fixed point, fixed value, locus, eccentricity, interactive analytic geometry solution page.", "type": "收集", "verified": false, "group": "📐 教育 · 数学", "refText": "wy51ai/edulab", "refUrl": "https://github.com/wy51ai/edulab/tree/master/skills/edu-analytic-geometry", "demo": "assets/edu-analytic-geometry/demo.gif", "hasDemo": true, "num": "16", "featured": true}, {"id": "edu-solid-geometry", "name": "edu-solid-geometry", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "立体几何题 → Three.js 交互 3D 解题页", "description": "把一道立体几何题解成一个自包含的交互教学网页：左侧 MathJax 分步解析， 右侧 Three.js 可交互 3D 模型（分步高亮 + 镜头切换）。支持三种入口——给定文字题目、 随机出题、上传题目图片识别后解题。覆盖正方体/长方体、棱锥/棱柱、圆柱/圆锥上的线面角、 二面角、异面直线夹角、点到平面距离、体积等题型，统一用\"建系+向量法\"，并由 sympy 精确 计算驱动（答案、3D 坐标、步骤数值同源一致）。其他 agent 也可调用本技能生成此类网页。 触发词：立体几何, 线面角, 二面角, 异面直线, 点到平面距离, 正四棱锥, 正方体求角, 解这道几何题, 随机出一道立体几何题, 这张图里的立体几何题; solid geometry, line-plane angle, dihedral angle, angle between skew lines, distance to plane, interactive geometry solution page.", "type": "收集", "verified": false, "group": "📐 教育 · 数学", "refText": "wy51ai/edulab", "refUrl": "https://github.com/wy51ai/edulab/tree/master/skills/edu-solid-geometry", "demo": "assets/edu-solid-geometry/demo.gif", "hasDemo": true, "num": "17", "featured": true}, {"id": "email-sender", "name": "email-sender", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "通过真实 SMTP 把邮件实际发送出去（而不仅是写出邮件文本）。凡是需要\"把信息通过邮件送达他人\"的场景都用本技能——群…", "description": "通过真实 SMTP 把邮件实际发送出去（而不仅是写出邮件文本）。凡是需要\"把信息通过邮件送达他人\"的场景都用本技能——群发通知、调课/停课/考试提醒、给某人或一组收件人写信、把整理好的内容用邮件发出等。即使用户没明说\"发邮件\"，只要意图是\"通知 / 告知 / 寄给某人 / 发给大家\"，也应触发本技能。触发词：发邮件、发送邮件、群发、通知学生/同学/家长、把…发给…、邮件提醒、寄信、email、send email、notify by email、mail this to。", "type": "收集", "verified": false, "group": "", "refText": "", "refUrl": "", "demo": "", "hasDemo": false, "num": "18", "featured": false}, {"id": "explicit-instruction-sequence-builder", "name": "explicit-instruction-sequence-builder", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "显性教学课时序列（I Do/We Do/You Do），含理解检查点与时间分配的可上课教案", "description": "构建完整的显性教学课时序列:教师示范(I Do)→ 引导练习(We Do)→ 独立练习(You Do),含各阶段理解检查点、时间分配、示例与常见误区,基于渐进释放责任模型。教新技能/新步骤/新概念、需要一份能直接上课的课时教案时使用。触发词:一节课教案, 课时设计, 讲课流程, 教学过程设计, 示范讲解, 精讲精练, 显性教学, 我讲你练; explicit instruction, lesson sequence, gradual release, I do we do you do.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "GarethManning/education-agent-skills", "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/explicit-instruction-sequence-builder", "demo": "", "hasDemo": false, "num": "19", "featured": false}, {"id": "formative-assessment-technique-selector", "name": "formative-assessment-technique-selector", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "按教学时刻挑随堂检测/形成性评估技术，含实施步骤与学生应答解读", "description": "为具体的教学时刻、评估目的与学段挑选合适的形成性评估/随堂检测技术(基于 Black & Wiliam 等循证研究):给出 2–3 种按适配度排序的技术、实施步骤、如何解读学生应答以及常见误区。想在课中、课间或课后检查学生是否学会、设计随堂反馈时使用。触发词:随堂检测, 形成性评价, 课堂提问, 检查理解, 当堂反馈, 出口卡, 学情检测, 怎么知道学生学会没有; formative assessment, check for understanding, exit ticket, hinge question.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "GarethManning/education-agent-skills", "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/formative-assessment-technique-selector", "demo": "", "hasDemo": false, "num": "20", "featured": false}, {"id": "frontend-design", "name": "frontend-design", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "打造高设计品质的生产级前端界面、页面与作品", "description": "打造有设计感、达到生产级品质的前端界面、页面与组件。当用户要做高质量的 Web 组件、页面或应用界面时使用(设计指南型,无捆绑脚本)。触发词:前端设计, UI 界面, 网页组件, 生产级前端; frontend design, ui design, web interface.", "type": "收集", "verified": false, "group": "💻 开发 · 构建与测试", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/frontend-design", "demo": "", "hasDemo": false, "num": "21", "featured": false}, {"id": "frontend-slides", "name": "frontend-slides", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "一句话 / PPT → 零依赖单文件动画网页幻灯片，内置 12 配色预设 + 34 设计模板", "description": "把一句话、一份内容或 PPT 变成零依赖、单文件、带动画的 16:9 网页幻灯片(HTML)。核心理念是“展示风格而非提问”:内置 12 套配色预设与 34 套设计模板,直接产出可在浏览器打开、可投屏演示的精美 deck,也支持把 PPT/PPTX 转成网页幻灯片。适合讲座、答辩、路演与教学课件。触发词:做一套幻灯片, 网页 PPT, 生成 deck, 演示文稿, 把 PPT 转网页, 炫酷幻灯片, 课件演示; frontend slides, web slides, presentation deck, ppt to web, html slides.", "type": "收集", "verified": false, "group": "🎨 创作 · 视觉与设计", "refText": "zarazhangrui/frontend-slides", "refUrl": "https://github.com/zarazhangrui/frontend-slides", "demo": "", "hasDemo": false, "num": "22", "featured": false}, {"id": "homework-grader", "name": "homework-grader", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "量规驱动批改作业：证据引用打分、批量处理、生成评语、师生评分校准、导出 Excel", "description": "量规驱动的 AI 作业批改系统:按评分量规给主观题/作业打分,支持文本、图片与图文混合提交,可批量处理上百份;打分带证据引用与偏见缓解,内置 PDCA 质量闭环,生成个性化评语,并能把 AI 评分与教师样本做一致性校准(Cohen's κ / Spearman ρ / MAD),成绩一键导出 Excel。触发词:批改作业, 主观题评分, 按量规打分, 批量改卷, 作文评分, 生成评语, 成绩导出 Excel, 师生评分校准; grade homework, rubric grading, batch grading, score submissions, calibration.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教师与批改", "refText": "ChantillyAn/homework-grader", "refUrl": "https://github.com/ChantillyAn/homework-grader", "demo": "", "hasDemo": false, "num": "23", "featured": false}, {"id": "ian-xiaohei-illustrations", "name": "ian-xiaohei-illustrations", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "生成 Ian「小黑」风格的中文正文配图（手绘、怪诞、16:9 解释图）", "description": "生成 Ian 风格的中文正文配图。用于用户要求为中文文章、帖子、博客、Notion 文档、工作流文档、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“小黑”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；默认使用小黑 IP、纯白手绘、少量红橙蓝批注、简洁清爽但天马行空的视觉风格。", "type": "收集", "verified": false, "group": "🎨 创作 · 知识可视化", "refText": "helloianneo/ian-xiaohei-illustrations", "refUrl": "https://github.com/helloianneo/ian-xiaohei-illustrations", "demo": "", "hasDemo": false, "num": "24", "featured": false}, {"id": "k12-lesson-differentiation", "name": "k12-lesson-differentiation", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "把已有 K-12 课按学生水平分层：1 份教师分层方案＋3 份学生分层材料，全为可编辑 Word", "description": "把一节已有的 K-12 课(数学、语文/英语 ELA、科学、社会与历史)按学生水平做分层适配:低于年级水平 / 达到年级水平 / 高于年级水平。在向老师追问课程、层级或学生水平之前就应加载本技能。一次性产出 1 份教师用分层方案 + 3 份学生可直接用的分层材料,全部为可编辑 Word 文档;由同一份材料源 JSON 经内置脚本渲染,共享内容只写一次,保证各层不跑偏。连接 Learning Commons 知识图谱时会自动使用,不连也能用。本技能只改造老师带来或指名的已有课程;从零建新课请用 k12-lesson-planning。不适用于批改、量规、评估反馈或测验。触发词:分层教学, 差异化教学, 因材施教, 分层材料, 学生水平不一样, 给这节课做分层, 分层作业, 搭支架, 照顾不同层次; differentiate, tier, scaffold a lesson.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "anthropics/k12-teacher-skills", "refUrl": "https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-differentiation", "demo": "", "hasDemo": false, "num": "25", "featured": false}, {"id": "k12-lesson-planning", "name": "k12-lesson-planning", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "K-12 从零备课：教案＋学生用材料＋课堂观察表，分学科（数学/ELA/科学/社会），输出可编辑 Word", "description": "为 K-12 教师从零创建一节课的完整教学包:教案 + 学生用材料 + 课堂观察表,覆盖数学、语文/英语(ELA)、科学、社会与历史四科,并按学科加载专属参考,产出可编辑的 Word 文档。在向老师追问年级、学科、课题、课标或时长之前就应加载本技能。若同一次请求还要分层/分级材料,仍算一次备课,由本技能在教学包内一并产出,不要再调用 k12-lesson-differentiation。不适用于批改、评分量规、作业反馈、出测验或课标检索(直接回答即可);改造已有教案请用 k12-lesson-differentiation。触发词:备课, 写教案, 教案设计, 写一节课, 课时计划, 单元计划, 迷你课, 我明天要讲, 我在教, 学生用材料, 课堂观察表; lesson plan, mini-lesson, unit plan, daily plan.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "anthropics/k12-teacher-skills", "refUrl": "https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-planning", "demo": "", "hasDemo": false, "num": "26", "featured": true}, {"id": "learning-opportunities", "name": "learning-opportunities", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "AI 辅助编码后塞入循证学习练习，对抗 vibe coding 的能力退化", "description": "在 AI 辅助编码中刻意培养真实技能:完成架构性工作(新建文件、改 schema、重构)后,主动提供 10-15 分钟的循证学习练习(预测-观察-反思、主动回忆 check-in、teach-back 等),用学习科学对抗“vibe coding”带来的流畅幻觉与能力退化。适合做完功能、做设计决策、或想真正读懂代码时使用。触发词:学习练习, 我想真正读懂代码, 边做边学, 对抗 vibe coding, 主动回忆, 复盘巩固; learning opportunities, deliberate practice, understand code better, retrieval practice.", "type": "收集", "verified": false, "group": "🎓 教育 · 自学与辅导", "refText": "DrCatHicks/learning-opportunities", "refUrl": "https://github.com/DrCatHicks/learning-opportunities", "demo": "", "hasDemo": false, "num": "27", "featured": false}, {"id": "markitdown", "name": "markitdown", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "用 MarkItDown 将 PDF、Office 文档、图片、音频等转换为 Markdown", "description": "用 MarkItDown 把各类文件转成 Markdown:PDF、Word/PPT/Excel、图片(OCR)、音频(转写)、HTML、CSV/JSON/XML、ZIP、YouTube 链接、EPub 等。做笔记或喂给模型前先转 Markdown 时使用。触发词:转 Markdown, 文档转换, 提取文本, PDF 转 md; convert to markdown, markitdown.", "type": "收集", "verified": false, "group": "📄 文档 · 办公与转换", "refText": "K-Dense-AI/scientific-agent-skills", "refUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/HEAD/scientific-skills/markitdown", "demo": "", "hasDemo": false, "num": "28", "featured": false}, {"id": "math-tutor", "name": "math-tutor", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "数学自学家教：引导建立真正理解，检查解法/证明而非直接给步骤", "description": "像优秀的人类家教一样教数学自学者:建立可迁移的真正理解,而不是给答案或可背诵的步骤。当有人想自己学懂数学时使用——“讲讲这个概念”“为什么成立”“我卡在……”“帮我理解”“我的推理/证明对吗”“检查我的解法”,或在学习/备考代数、几何、三角、微积分、线性代数、概率统计、离散数学等。即使请求看起来是“直接解出来”,也以引导思考为先。触发词:讲讲这道题, 这个数学概念, 帮我理解, 检查我的解法, 我的证明对吗, 引导我做数学题, 数学自学; math tutor, explain this concept, check my solution, guided math, learn math.", "type": "收集", "verified": false, "group": "🎓 教育 · 自学与辅导", "refText": "cdmorozov/claude-tutors", "refUrl": "https://github.com/cdmorozov/claude-tutors", "demo": "", "hasDemo": false, "num": "29", "featured": false}, {"id": "mcp-builder", "name": "mcp-builder", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "构建高质量 MCP (Model Context Protocol) 服务器以让 LLM 接入外部服务", "description": "构建高质量的 MCP(Model Context Protocol)服务器,让大模型通过设计良好的工具接入外部服务。想给 AI 接外部能力或写 MCP 工具时使用。触发词:MCP, Model Context Protocol, MCP 服务器, 给 AI 加工具; build mcp, tool server.", "type": "收集", "verified": false, "group": "💻 开发 · 构建与测试", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/mcp-builder", "demo": "", "hasDemo": false, "num": "30", "featured": false}, {"id": "paper-lookup", "name": "paper-lookup", "category": "研究检索", "color": {"bg": "#e6e0cd", "fg": "#736846"}, "tagline": "通过 REST API 检索 PubMed、arXiv、OpenAlex 等 10 个学术论文库", "description": "通过 REST API 检索 10 个学术文献库(PubMed、PMC 全文、bioRxiv、medRxiv、arXiv、OpenAlex、Crossref、Semantic Scholar、CORE、Unpaywall),查找论文、预印本与学术文章。触发词:查论文, 文献检索, 找 paper, arXiv, PubMed, 综述检索; search papers, literature search.", "type": "收集", "verified": false, "group": "🔎 学习 · 研究与笔记", "refText": "K-Dense-AI/scientific-agent-skills", "refUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/HEAD/scientific-skills/paper-lookup", "demo": "", "hasDemo": false, "num": "31", "featured": false}, {"id": "pdf", "name": "pdf", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "处理重排版的 PDF 读取、创建与审阅，借 Poppler 渲染与 Python 库", "description": "读取、创建和审阅 PDF,尤其在排版/版式重要时:用 Poppler 渲染页面做可视化检查,用 reportlab/pdfplumber/pypdf 生成与抽取内容,并能处理表单填写。触发词:PDF, 读取 PDF, 生成 PDF, 填表单, 提取 PDF 文本; pdf, fill form.", "type": "收集", "verified": false, "group": "📄 文档 · 办公与转换", "refText": "fcakyon/claude-codex-settings", "refUrl": "https://github.com/fcakyon/claude-codex-settings/tree/HEAD/plugins/openai-office-skills/skills/pdf", "demo": "", "hasDemo": false, "num": "32", "featured": false}, {"id": "pptx", "name": "pptx", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "处理任何涉及 .pptx 的场景：创建、读取、解析或提取幻灯片内容", "description": "创建、读取、解析与提取 PowerPoint(.pptx)内容:制作演示/路演幻灯片,或从已有 pptx 抽取文字。任何涉及 .pptx 的场景都使用本技能。触发词:PPT, 幻灯片, 演示文稿, .pptx, 做一套 slides; pptx, slide deck, presentation.", "type": "收集", "verified": false, "group": "📄 文档 · 办公与转换", "refText": "fcakyon/claude-codex-settings", "refUrl": "https://github.com/fcakyon/claude-codex-settings/tree/HEAD/plugins/anthropic-office-skills/skills/pptx", "demo": "", "hasDemo": false, "num": "33", "featured": false}, {"id": "prompt-engineer", "name": "prompt-engineer", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "编写、重构与评估 LLM 提示词，产出优化模板、结构化输出 schema 与测试套件", "description": "编写、重构与评估 LLM 提示词:产出优化的提示模板、结构化输出 schema、评估量表与测试套件。为新应用设计提示词、改进已有提示或排查触发不准时使用。触发词:提示词, prompt, 提示工程, 优化 prompt, 结构化输出; prompt engineering, refactor prompt.", "type": "收集", "verified": false, "group": "🧩 元能力 · 技能与提示词", "refText": "Jeffallan/claude-skills", "refUrl": "https://github.com/Jeffallan/claude-skills/tree/HEAD/skills/prompt-engineer", "demo": "", "hasDemo": false, "num": "34", "featured": false}, {"id": "scope-and-sequence-designer", "name": "scope-and-sequence-designer", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "课程范围与进度：跨年级/学期的纵向进阶与横向衔接，带先修依赖与连贯性检查", "description": "设计课程的范围与进度(scope & sequence):跨年级、跨学期的纵向进阶与横向衔接,含先修依赖、知识类型诊断、硬性与建议的排序约束、逐条带理由的教学顺序与连贯性检查。搭建新课程、重构学科体系或梳理进阶路径时使用。触发词:课程规划, 教学进度表, 课程大纲, 学期教学计划, 知识点顺序, 单元排布, 课程体系, 进阶路径; scope and sequence, curriculum map, progression.", "type": "收集", "verified": false, "group": "🧑‍🏫 教育 · 教案与教学设计", "refText": "GarethManning/education-agent-skills", "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/scope-and-sequence-designer", "demo": "", "hasDemo": false, "num": "35", "featured": false}, {"id": "skill-creator", "name": "skill-creator", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "创建、修改、优化 skill 并运行评测衡量其表现（自带 Apache-2.0 LICENSE）", "description": "创建、修改和优化 Skill,并量化评估其表现。当用户想从零做一个新 Skill、编辑或改进已有 Skill、运行评测(eval)来测试 Skill、对 Skill 做带方差分析的基准测试,或优化 Skill 的 description 以提升触发准确率时使用本技能。内置评测脚本与评审网页查看器(eval-viewer),可在后台跑测试用例并可视化对比结果。触发词:创建技能, 制作 skill, 写一个 skill, 改进技能, 优化 skill 描述, 评测技能; create skill, build a skill, improve skill, optimize description.", "type": "收集", "verified": false, "group": "🧩 元能力 · 技能与提示词", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/skill-creator", "demo": "", "hasDemo": false, "num": "36", "featured": false}, {"id": "smart-illustrator", "name": "smart-illustrator", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "智能配图与 PPT 信息图生成器，三种模式（文章配图 / 批量信息图 / 封面图）", "description": "智能配图与 PPT 信息图生成器,三种模式:(1) 文章配图——分析文章生成插图;(2) PPT/Slides——批量生成信息图;(3) Cover——生成封面图。默认出图,`--prompt-only` 只出 prompt,支持 Bento Grid 功能展示图风格(`--style bento`)。触发词:配图, 插图, PPT, slides, 封面图, thumbnail, cover, bento grid, 功能展示图; feature showcase.", "type": "收集", "verified": false, "group": "🎨 创作 · 知识可视化", "refText": "axtonliu/smart-illustrator", "refUrl": "https://github.com/axtonliu/smart-illustrator", "demo": "", "hasDemo": false, "num": "37", "featured": false}, {"id": "socratic-tutor", "name": "socratic-tutor", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "苏格拉底式引导讲题：0-4 级提示阶梯，绝不直接给完整答案（编程教学）", "description": "用苏格拉底式对话教编程的教学框架:当学习者想“学会”而不是“要现成代码”时使用。坚持有益的挣扎(productive struggle)、0-4 级渐进提示阶梯、元认知支架与情绪支持,按题型自适应(调试走完整提示阶梯、概念引入可给最小示例、语法错误直接纠正),绝不直接给出完整答案。触发词:教我, 帮我理解, 我在学, 引导我做这道题, 别直接给答案, 苏格拉底式, 启发式讲题, 循序渐进提示; teach me, help me understand, tutor mode, socratic, guided hints, don't give the solution.", "type": "收集", "verified": false, "group": "🎓 教育 · 自学与辅导", "refText": "Pyroxin/opinionated-claude-skills", "refUrl": "https://github.com/Pyroxin/opinionated-claude-skills", "demo": "", "hasDemo": false, "num": "38", "featured": false}, {"id": "storm-research", "name": "storm-research", "category": "研究检索", "color": {"bg": "#e6e0cd", "fg": "#736846"}, "tagline": "多视角提问 + 联网检索 + 强制引用，产出维基百科式带来源的深度研究报告", "description": "做带来源、可追溯的深度研究。多视角提问 + 真实联网检索 + 强制引用，产出维基百科式的完整研究报告。当用户说\"深度调研\"\"帮我研究一下 X 这个主题\"\"写一篇带来源的综述\"\"多角度研究\"时触发。", "type": "收集", "verified": false, "group": "🔎 学习 · 研究与笔记", "refText": "openwhat007/storm-research", "refUrl": "https://github.com/openwhat007/storm-research", "demo": "", "hasDemo": false, "num": "39", "featured": false}, {"id": "tavily-search", "name": "tavily-search", "category": "研究检索", "color": {"bg": "#e6e0cd", "fg": "#736846"}, "tagline": "实时网络搜索，补充过时信息（需申请 [Tavily API Key](https://www.tavily.com/)，免费 1000 次/月）", "description": "通过 Tavily API 进行实时联网搜索，获取模型训练截止日期之后的最新信息。 当用户询问近期事件、实时数据、当前状态、价格、版本号等容易过时的事实， 或明确要求「搜一下 / 查一下 / 帮我搜索」时使用；纯概念解释、闲聊、 基于已有上下文即可完成的推理不要调用。", "type": "原创", "verified": false, "group": "🌐 工具 · 信息获取", "refText": "", "refUrl": "", "demo": "", "hasDemo": false, "num": "40", "featured": false}, {"id": "theme-factory", "name": "theme-factory", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "用预设主题为幻灯片、文档、HTML 落地页等产物统一配色与字体", "description": "用预设主题为各类产物(幻灯片、文档、HTML 落地页等)统一配色与字体,内置 10 套主题,也可自定义。需要给作品套统一视觉风格时使用。触发词:主题, 配色, 视觉风格, 美化幻灯片, 美化文档; theme, styling, color scheme.", "type": "收集", "verified": false, "group": "🎨 创作 · 视觉与设计", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/theme-factory", "demo": "", "hasDemo": false, "num": "41", "featured": false}, {"id": "tutor", "name": "tutor", "category": "教学辅导", "color": {"bg": "#cdd9ce", "fg": "#3f5c48"}, "tagline": "像优秀人类家教一样教任何学科，建立可迁移的真正理解而非直接给答案", "description": "像优秀的人类家教一样教任何学科:建立真正、可迁移的理解,而不是直接给答案。当有人想自己学懂某个东西时使用——“解释一下”“为什么这样”“我卡在……”“帮我理解”“我的思路对吗”“检查我的答案”“我想学 X”。即使请求看起来像“直接给答案”,目标也是教会一个人思考。纯查信息、明显没有学习目标的场景不适用;若有更专门的学科家教(如 math-tutor)更匹配,优先用专门的。触发词:解释这个, 帮我理解, 我想学, 引导式讲解, 检查我的思路, 自学辅导; tutor, explain this, help me understand, I want to learn, guided learning.", "type": "收集", "verified": false, "group": "🎓 教育 · 自学与辅导", "refText": "cdmorozov/claude-tutors", "refUrl": "https://github.com/cdmorozov/claude-tutors", "demo": "", "hasDemo": false, "num": "42", "featured": false}, {"id": "understand", "name": "understand", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "分析代码库生成交互式知识图谱，理解架构、组件与关系", "description": "分析一个代码库,生成交互式知识图谱,帮助理解其架构、组件与相互关系。想快速读懂一个项目或代码库时使用。触发词:理解代码库, 读懂项目, 代码架构, 知识图谱, 代码导览; understand codebase, code map.", "type": "收集", "verified": false, "group": "🔎 学习 · 研究与笔记", "refText": "Lum1104/Understand-Anything", "refUrl": "https://github.com/Lum1104/Understand-Anything/tree/HEAD/understand-anything-plugin/skills/understand", "demo": "", "hasDemo": false, "num": "43", "featured": false}, {"id": "web-artifacts-builder", "name": "web-artifacts-builder", "category": "内容创作", "color": {"bg": "#e8d6ca", "fg": "#9a5c40"}, "tagline": "用 React、Tailwind CSS 与 shadcn/ui 构建复杂多组件的 claude.ai HTML artifact", "description": "用 React、Tailwind CSS、shadcn/ui 等现代前端技术,构建复杂的多组件 claude.ai HTML artifact。需要做交互式网页作品或可视化页面时使用。触发词:HTML artifact, 交互网页, React 组件, 可视化页面; build artifact, interactive web.", "type": "收集", "verified": false, "group": "💻 开发 · 构建与测试", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/web-artifacts-builder", "demo": "", "hasDemo": false, "num": "44", "featured": false}, {"id": "webapp-testing", "name": "webapp-testing", "category": "开发工具", "color": {"bg": "#d7d0de", "fg": "#5b4b73"}, "tagline": "用 Playwright 测试本地 Web 应用，验证前端功能、调试 UI 并截图取日志", "description": "用 Playwright 与本地 Web 应用交互并测试:验证前端功能、调试 UI 行为、截图、抓取控制台日志。需要测试或调试网页应用时使用。触发词:网页测试, Playwright, 前端测试, UI 调试, 自动化测试; webapp testing, browser automation test.", "type": "收集", "verified": false, "group": "💻 开发 · 构建与测试", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/webapp-testing", "demo": "", "hasDemo": false, "num": "45", "featured": false}, {"id": "xlsx", "name": "xlsx", "category": "文档处理", "color": {"bg": "#cddae3", "fg": "#3d627e"}, "tagline": "处理 .xlsx/.csv/.tsv 表格的读取、编辑、修复、分析与公式计算", "description": "读取、编辑、修复和分析电子表格(.xlsx/.xlsm/.csv/.tsv):新增列、计算公式、调整格式、做数据透视与图表等。任何以表格文件为主要输入或输出的任务都使用本技能。触发词:Excel, 电子表格, .xlsx, 表格处理, 公式计算, 数据透视; spreadsheet, xlsx, csv.", "type": "收集", "verified": false, "group": "📄 文档 · 办公与转换", "refText": "anthropics/skills", "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/xlsx", "demo": "", "hasDemo": false, "num": "46", "featured": false}]};
+const esc = s => String(s??'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const skillUrl = s => `${DATA.repo}/tree/main/skill-library/${s.id}`;
+
+const rings = fg => `<svg class="rings" viewBox="0 0 100 100" fill="none" stroke="${fg}" stroke-width="1.4">
+  <circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="22"/><circle cx="50" cy="50" r="11"/></svg>`;
+const bars = () => `<div class="bars">${[7,11,15,9].map(h=>`<i style="height:${h}px"></i>`).join('')}</div>`;
+
+function badges(s){
+  const b = [];
+  if (s.type === '原创') b.push('<span class="b orig">原创</span>');
+  if (s.verified) b.push('<span class="b ok">✓ 已验证</span>');
+  if (!b.length) b.push(`<span class="b">${esc(s.type||'收集')}</span>`);
+  return b.join('');
+}
+
+function cover(s){
+  const {bg, fg} = s.color;
+  const d = !!s.demo;
+  const layer = d
+    ? `<img class="demoImg" src="${esc(s.demo)}" alt="${esc(s.name)} 演示" loading="lazy"><div class="scrim"></div>`
+    : rings(fg);
+  return `<div class="cover${d ? ' hasDemo' : ''}" style="background:${bg}${d ? '' : `;color:${fg}`}">
+    ${layer}
+    <div class="ctop">
+      <div class="kicker">Inno / Skill ${s.num}</div>
+      <div class="num">${s.num}</div>
+    </div>
+    <div class="cbot">
+      <div class="cname">${esc(s.name)}</div>
+      <div class="cmeta">${esc(s.category)}</div>
+      ${d ? '' : bars()}
+    </div>
+    ${d ? '<span class="demoTag">▶ DEMO</span>' : ''}
+  </div>`;
+}
+
+function info(s){
+  return `<div class="info">
+    <div class="irow">
+      <div class="owner">${esc(s.refText || 'inno-agent-hub')}</div>
+      <div class="badges">${badges(s)}</div>
+    </div>
+    <div class="iname">${esc(s.name)}</div>
+    <div class="idesc">${esc(s.tagline)}</div>
+    <a class="cta" href="${skillUrl(s)}" target="_blank" rel="noopener">
+      <b>打开 &amp; 安装</b><span class="arrow">→</span>
+    </a>
+  </div>`;
+}
+
+const fcard = s => `<article class="fcard">${cover(s)}${info(s)}</article>`;
+const gcard = s => `<article class="gcard">${cover(s)}${info(s)}</article>`;
+
+let active = '全部';
+function render(){
+  const list = active === '全部' ? DATA.skills : DATA.skills.filter(s => s.category === active);
+  document.getElementById('count').textContent = `${list.length} 个技能${active==='全部'?'':' · '+active}`;
+  document.getElementById('grid').innerHTML = list.length
+    ? list.map(gcard).join('')
+    : '<div class="empty">这个分类还没有技能。</div>';
+  document.querySelectorAll('#pills .pill').forEach(p =>
+    p.setAttribute('aria-pressed', String(p.dataset.cat === active)));
+}
+
+function init(){
+  document.getElementById('ghRepo').href = DATA.repo;
+  document.getElementById('gen').textContent = `更新于 ${DATA.generated}`;
+
+  const verified = DATA.skills.filter(s => s.verified).length;
+  const demos = DATA.skills.filter(s => s.hasDemo).length;
+  document.getElementById('stats').innerHTML = [
+    [DATA.count, '技能'], [DATA.categories.length, '分类'],
+    [verified, '已验证'], [demos, '带演示'],
+  ].map(([n,l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+
+  document.getElementById('featured').innerHTML =
+    DATA.skills.filter(s => s.featured).map(fcard).join('');
+
+  const cats = ['全部', ...DATA.categories.map(c => c.name)];
+  document.getElementById('pills').innerHTML = cats.map(c => {
+    const n = c === '全部' ? DATA.count : (DATA.categories.find(x => x.name === c)?.count ?? 0);
+    return `<button class="pill" data-cat="${esc(c)}" aria-pressed="false">${esc(c)} ${n}</button>`;
+  }).join('');
+  document.getElementById('pills').addEventListener('click', e => {
+    const b = e.target.closest('.pill'); if (!b) return;
+    active = b.dataset.cat; render();
+  });
+  render();
+}
+init();
+</script>
+</body>
+</html>
