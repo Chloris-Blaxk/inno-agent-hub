@@ -55,6 +55,8 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 
 | Skill | 类型 | 通过验证 | 一句话 | 引用 |
 |---|---|---|---|---|
+| [k12-lesson-planning](./k12-lesson-planning/) | 收集 |  | K-12 从零备课：教案＋学生用材料＋课堂观察表，分学科（数学/ELA/科学/社会），输出可编辑 Word | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-planning) |
+| [k12-lesson-differentiation](./k12-lesson-differentiation/) | 收集 |  | 把已有 K-12 课按学生水平分层：1 份教师分层方案＋3 份学生分层材料，全为可编辑 Word | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-differentiation) |
 | [backwards-design-unit-planner](./backwards-design-unit-planner/) | 收集 |  | 逆向设计（UbD）：从学习成果倒推评估证据与学习活动，产出完整单元教学计划 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/backwards-design-unit-planner) |
 | [scope-and-sequence-designer](./scope-and-sequence-designer/) | 收集 |  | 课程范围与进度：跨年级/学期的纵向进阶与横向衔接，带先修依赖与连贯性检查 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/scope-and-sequence-designer) |
 | [explicit-instruction-sequence-builder](./explicit-instruction-sequence-builder/) | 收集 |  | 显性教学课时序列（I Do/We Do/You Do），含理解检查点与时间分配的可上课教案 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/explicit-instruction-sequence-builder) |
