@@ -53,15 +53,17 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 
 ### 🧑‍🏫 教育 · 教案与教学设计
 
-| Skill | 类型 | 通过验证 | 一句话 | 引用 |
-|---|---|---|---|---|
-| [k12-lesson-planning](./k12-lesson-planning/) | 收集 |  | K-12 从零备课：教案＋学生用材料＋课堂观察表，分学科（数学/ELA/科学/社会），输出可编辑 Word | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-planning) |
-| [k12-lesson-differentiation](./k12-lesson-differentiation/) | 收集 |  | 把已有 K-12 课按学生水平分层：1 份教师分层方案＋3 份学生分层材料，全为可编辑 Word | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-differentiation) |
-| [backwards-design-unit-planner](./backwards-design-unit-planner/) | 收集 |  | 逆向设计（UbD）：从学习成果倒推评估证据与学习活动，产出完整单元教学计划 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/backwards-design-unit-planner) |
-| [scope-and-sequence-designer](./scope-and-sequence-designer/) | 收集 |  | 课程范围与进度：跨年级/学期的纵向进阶与横向衔接，带先修依赖与连贯性检查 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/scope-and-sequence-designer) |
-| [explicit-instruction-sequence-builder](./explicit-instruction-sequence-builder/) | 收集 |  | 显性教学课时序列（I Do/We Do/You Do），含理解检查点与时间分配的可上课教案 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/explicit-instruction-sequence-builder) |
-| [differentiation-adapter](./differentiation-adapter/) | 收集 |  | 同一任务按学困/超常/多动/读写障碍等差异化适配，保持学习目标不变 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/differentiation-adapter) |
-| [formative-assessment-technique-selector](./formative-assessment-technique-selector/) | 收集 |  | 按教学时刻挑随堂检测/形成性评估技术，含实施步骤与学生应答解读 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/formative-assessment-technique-selector) |
+| Skill | 类型 | 通过验证 | 一句话 | 引用 | 效果 |
+|---|---|---|---|---|---|
+| [k12-lesson-planning](./k12-lesson-planning/) | 收集 |  | K-12 从零备课：教案＋学生用材料＋课堂观察表，分学科（数学/ELA/科学/社会），输出可编辑 Word | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-planning) |  |
+| [k12-lesson-differentiation](./k12-lesson-differentiation/) | 收集 |  | 把已有 K-12 课按学生水平分层：1 份教师分层方案＋3 份学生分层材料，全为可编辑 Word | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-differentiation) |  |
+| [backwards-design-unit-planner](./backwards-design-unit-planner/) | 收集 |  | 逆向设计（UbD）：从学习成果倒推评估证据与学习活动，产出完整单元教学计划 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/backwards-design-unit-planner) |  |
+| [scope-and-sequence-designer](./scope-and-sequence-designer/) | 收集 |  | 课程范围与进度：跨年级/学期的纵向进阶与横向衔接，带先修依赖与连贯性检查 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/scope-and-sequence-designer) |  |
+| [explicit-instruction-sequence-builder](./explicit-instruction-sequence-builder/) | 收集 |  | 显性教学课时序列（I Do/We Do/You Do），含理解检查点与时间分配的可上课教案 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/explicit-instruction-sequence-builder) |  |
+| [differentiation-adapter](./differentiation-adapter/) | 收集 |  | 同一任务按学困/超常/多动/读写障碍等差异化适配，保持学习目标不变 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/differentiation-adapter) |  |
+| [formative-assessment-technique-selector](./formative-assessment-technique-selector/) | 收集 |  | 按教学时刻挑随堂检测/形成性评估技术，含实施步骤与学生应答解读 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/formative-assessment-technique-selector) |  |
+| [class-exam-review](./class-exam-review/) | 原创 |  | 试卷＋答案＋评分标准＋班级答题 Excel → 班级学情分析、逐题分析、讲评课方案、重点题讲稿、补偿练习、个人订正单 |  | [demo](./assets/class-exam-review/02-summary.png) |
+| [ketang-choubei-moxie](./ketang-choubei-moxie/) | 原创 |  | 古诗/文言文/课文段落/英语单词 → 可离线打开的课堂抽背、默写、随机点名、投屏问答 HTML |  | [demo](./assets/ketang-choubei-moxie/demo.png) |
 
 ### 🧑‍🏫 教育 · 教师与批改
 
