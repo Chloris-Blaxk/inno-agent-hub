@@ -4,25 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inno Agent · 技能库</title>
-<meta name="description" content="Inno Agent Skill Library — 一句话，变成作品。面向教学、自学、研究与创作的可直接调用技能。">
+<meta name="description" content="Inno Agent Skill Library — 面向教学、自学、研究与创作的可直接调用技能。">
 <style>
   :root{
     --paper:#f7f4ed; --ink:#14140f; --muted:#6f6c63; --line:#e2ded6;
     --cta:#1f6f4a; --hair:rgba(20,20,15,.19);
   }
   *{box-sizing:border-box; margin:0; padding:0}
-  html{scroll-behavior:smooth}
+  html,body{height:100%; overflow:hidden}
   body{
-    background:var(--paper); color:var(--ink); overflow-x:hidden;
+    background:var(--paper); color:var(--ink);
     font-family:"Inter","Helvetica Neue",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  body.locked{overflow:hidden}
-  .serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif SC",Georgia,"Times New Roman",serif}
+  /* 拉丁走 Georgia、中文回落思源/宋体 */
+  .serif{font-family:Georgia,"Times New Roman","Songti SC","Source Han Serif SC","Noto Serif SC",serif}
 
   /* ── header ── */
   header{position:fixed; inset:0 0 auto 0; z-index:50; padding:20px 26px;
-    display:flex; align-items:center; justify-content:space-between; gap:16px; pointer-events:none}
+    display:flex; align-items:center; justify-content:space-between; gap:16px; pointer-events:none;
+    opacity:0; transition:opacity .7s ease .35s}
+  header.in{opacity:1}
   header > *{pointer-events:auto}
   .logo{font-weight:800; letter-spacing:-.02em; font-size:16px}
   .logo span{color:var(--cta)}
@@ -34,26 +36,8 @@
   .nlink.solid{background:var(--ink); color:#fff; border-color:var(--ink)}
   .nlink.solid:hover{background:#000; color:#fff}
 
-  /* ── 开场 ── */
-  .hero{min-height:100vh; display:flex; flex-direction:column; align-items:center;
-    justify-content:center; text-align:center; padding:120px 24px 96px; position:relative}
-  .hero h1{font-size:clamp(52px,8.4vw,124px); font-weight:400; line-height:1.06; letter-spacing:-.02em}
-  .hero p{margin-top:32px; max-width:600px; font-size:15.5px; line-height:1.9; color:var(--muted)}
-  .heroBtn{margin-top:34px; display:inline-flex; align-items:center; gap:9px; text-decoration:none;
-    background:var(--ink); color:#fff; font-size:13.5px; font-weight:600; padding:12px 22px;
-    border-radius:999px; transition:.2s}
-  .heroBtn:hover{background:#000; transform:translateY(-1px)}
-  .scrollCue{position:absolute; left:50%; bottom:38px; transform:translateX(-50%);
-    display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:var(--muted);
-    background:rgba(251,250,248,.9); border:1px solid var(--line); border-radius:999px;
-    padding:9px 16px; cursor:pointer; font-family:inherit; transition:.18s}
-  .scrollCue:hover{color:var(--ink); border-color:#c3bdaf}
-  .scrollCue i{font-style:normal; animation:bob 1.9s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
-
-  /* ── 星图 ── */
-  #mapSection{position:relative; height:100vh; overflow:hidden}
-  #viewport{position:absolute; inset:0; overflow:hidden; cursor:grab; touch-action:pan-y}
+  /* ── 画布 ── */
+  #viewport{position:fixed; inset:0; overflow:hidden; cursor:grab; touch-action:none}
   #viewport.dragging{cursor:grabbing}
   #stage{position:absolute; top:0; left:0; transform-origin:0 0; will-change:transform}
   #wires{position:absolute; top:0; left:0; overflow:visible; pointer-events:none}
@@ -61,11 +45,24 @@
   .wire.alt{stroke-dasharray:3 4; opacity:.62}
   .wire.lit{stroke:var(--sc,#3f5c48); stroke-width:1.7; opacity:1}
 
-  /* 画布里的大字(与开场标题同一句,拆到两角) */
+  /* ── 开场:两个词先合成 “Inno Agent” 居中,再向两角打开 ── */
   .corner{position:absolute; font-size:104px; font-weight:400; letter-spacing:-.02em;
-    color:var(--ink); user-select:none; pointer-events:none; white-space:nowrap; line-height:1}
+    color:var(--ink); user-select:none; pointer-events:none; white-space:nowrap; line-height:1;
+    transform-origin:50% 50%; will-change:transform;
+    transition:transform 1.35s cubic-bezier(.62,.03,.2,1), opacity .55s ease}
+  .corner.noAnim{transition:none}
   #cornerA{left:52px; top:96px}
   #cornerB{right:52px; bottom:104px}
+  /* 开场期间星图内容先不出现,等词分开时一起淡入。
+     intro 类写在 HTML 上,保证首屏第一帧就是隐藏态 —— 若等 JS 再加,
+     用户会先瞥见星图再看它淡出。*/
+  #nodes,#wires{transition:opacity .95s ease .28s}
+  #stage.intro #nodes, #stage.intro #wires{opacity:0}
+  /* 两个词等 playIntro 把它们摆到中间后再显形,避免先在角落闪一帧 */
+  .corner{opacity:0}
+  #stage.armed .corner{opacity:1}
+  .hud{opacity:0; transition:opacity .7s ease .5s}
+  .hud.in{opacity:1}
 
   /* 星系标题 */
   .cluster{position:absolute; width:360px; margin-left:-180px; text-align:center;
@@ -97,8 +94,8 @@
   .dim .tile.on{transform:scale(1.12); z-index:4;
     filter:drop-shadow(0 7px 16px rgba(20,20,15,.2)) saturate(1.15)}
 
-  /* ── HUD(跟随星图区,不是整屏固定) ── */
-  .hud{position:absolute; z-index:30; display:flex; align-items:center; gap:8px}
+  /* ── HUD ── */
+  .hud{position:fixed; z-index:40; display:flex; align-items:center; gap:8px}
   #hint{left:26px; bottom:24px; font-size:12.5px; color:var(--muted); background:rgba(251,250,248,.86);
     border:1px solid var(--line); padding:9px 15px; border-radius:999px; backdrop-filter:blur(6px)}
   #zoom{right:26px; bottom:24px; font-size:12.5px; color:var(--muted)}
@@ -146,10 +143,8 @@
   .dsrc{font-size:10.5px; color:var(--muted); letter-spacing:.06em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 
   @media (max-width:760px){
-    .hero{padding:104px 20px 88px}
-    .hero p{font-size:14.5px; margin-top:24px}
-    .corner{font-size:76px}
-    #cornerA{left:22px; top:60px} #cornerB{right:22px; bottom:64px}
+    .corner{font-size:72px}
+    #cornerA{left:22px; top:66px} #cornerB{right:22px; bottom:70px}
     .cluster{width:250px; margin-left:-125px}
     .cluster h2{font-size:26px}
     #hint{left:14px; bottom:16px; font-size:11.5px; padding:8px 12px}
@@ -158,7 +153,6 @@
     .nlink{padding:6px 11px; font-size:11.5px}
   }
   @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
     *,*::before,*::after{transition:none !important; animation:none !important}
   }
 </style>
@@ -174,7 +168,7 @@
   </pattern>
 </defs></svg>
 
-<header>
+<header id="topbar">
   <div class="logo">Inno Agent <span>/</span> 技能库</div>
   <nav class="navlinks">
     <a class="nlink" id="ghRepo" href="#" target="_blank" rel="noopener">GitHub ↗</a>
@@ -182,27 +176,19 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1 class="serif">一句话，变成作品。</h1>
-  <p id="heroCopy"></p>
-  <a class="heroBtn" href="./all.html">浏览全部技能 <span>→</span></a>
-  <button class="scrollCue" id="scrollCue">向下探索 <i>↓</i></button>
-</section>
+<div id="viewport">
+  <div id="stage" class="intro">
+    <svg id="wires"></svg>
+    <div class="corner serif" id="cornerA">Inno</div>
+    <div class="corner serif" id="cornerB">Agent</div>
+    <div id="nodes"></div>
+  </div>
+</div>
 
-<section id="mapSection">
-  <div id="viewport">
-    <div id="stage">
-      <svg id="wires"></svg>
-      <div class="corner serif" id="cornerA">一句话，</div>
-      <div class="corner serif" id="cornerB">变成作品。</div>
-      <div id="nodes"></div>
-    </div>
-  </div>
-  <div class="hud" id="hint">点击任意图块，看它能帮你做什么</div>
-  <div class="hud" id="zoom">
-    缩放 <button id="zin" aria-label="放大">+</button><button id="zout" aria-label="缩小">−</button>
-  </div>
-</section>
+<div class="hud" id="hint">点击任意图块，看它能帮你做什么</div>
+<div class="hud" id="zoom">
+  缩放 <button id="zin" aria-label="放大">+</button><button id="zout" aria-label="缩小">−</button>
+</div>
 
 <div id="overlay" role="dialog" aria-modal="true" aria-label="技能详情">
   <div class="detail" id="detail"></div>
@@ -218,11 +204,6 @@ const $ = id => document.getElementById(id);
 /* ── 建图 ── */
 function build(){
   $('ghRepo').href = DATA.repo;
-  $('heroCopy').textContent =
-    `备课、讲课、自学、研究、创作 —— ${DATA.count} 个可直接调用的技能，装进你的 Agent 工作台。` +
-    `不用会写提示词，说一句话，拿回来的是能直接用的成品：可编辑的教案 Word、能拖着玩的互动课件、` +
-    `带批注的作文、带引用的研究报告。下面是目前的全部技能。`;
-
   const W = DATA.world.w, H = DATA.world.h;
   const stg = $('stage');
   stg.style.width = W + 'px';
@@ -264,9 +245,9 @@ function build(){
 /* ── 平移缩放 ── */
 const view = { x:0, y:0, k:1 };
 const MIN_K = 0.3, MAX_K = 3.2;
-const box = () => $('mapSection').getBoundingClientRect();
+const box = () => $('viewport').getBoundingClientRect();
 
-/* 关键:把平移夹在「图始终占住视野」的范围内 ——
+/* 把平移夹在「图始终占住视野」的范围内 ——
    最多只让出 12% 的空白,不允许把整张图拖到角落去。*/
 function clampView(){
   const b = box();
@@ -286,7 +267,7 @@ function apply(){
 }
 /* 若此刻拿不到真实尺寸(后台标签页、面板未展开),算出来会是 scale(0) 整张图消失。
    这里先不算,等 Resize/Intersection 观察到真实尺寸再补上。*/
-let fitted = false;
+let fitted = false, introPlayed = false;
 function fit(){
   const b = box();
   if (b.width < 2 || b.height < 2) return;
@@ -295,6 +276,7 @@ function fit(){
   view.y = (b.height - DATA.world.h * view.k) / 2;
   fitted = true;
   apply();
+  if (!introPlayed) { introPlayed = true; playIntro(); }
 }
 function zoomAt(cx, cy, factor){
   const k = Math.min(MAX_K, Math.max(MIN_K, view.k * factor));
@@ -304,6 +286,54 @@ function zoomAt(cx, cy, factor){
   view.k = k;
   apply();
 }
+
+/* ── 进场:Inno Agent 先合在中间,再向两角打开,星图随之浮现 ── */
+function revealAll(){
+  $('topbar').classList.add('in');
+  $('hint').classList.add('in');
+  $('zoom').classList.add('in');
+}
+function playIntro(){
+  const a = $('cornerA'), b = $('cornerB'), stg = $('stage');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bx = box();
+  if (reduce || bx.width < 2) {          // 降级:不做动画,直接呈现最终态
+    stg.classList.remove('intro'); stg.classList.add('armed'); revealAll(); return;
+  }
+
+  const ra = {x:a.offsetLeft, y:a.offsetTop, w:a.offsetWidth, h:a.offsetHeight};
+  const rb = {x:b.offsetLeft, y:b.offsetTop, w:b.offsetWidth, h:b.offsetHeight};
+  const gap = 42, total = ra.w + gap + rb.w;
+  // 让整句在屏幕上约占 58% 宽
+  const S = Math.max(1, Math.min(2.8, (bx.width * 0.58) / (total * view.k)));
+  const cx = bx.width / 2, cy = bx.height / 2;
+  // 先算屏幕上的落点,再换算回世界坐标(stage 被 view.k 缩放过)
+  const sAx = cx - total * view.k * S / 2 + ra.w * view.k * S / 2;
+  const sBx = cx + total * view.k * S / 2 - rb.w * view.k * S / 2;
+  const toWorldX = sx => (sx - view.x) / view.k;
+  const wY = (cy - view.y) / view.k;
+  const dA = { x: toWorldX(sAx) - (ra.x + ra.w/2), y: wY - (ra.y + ra.h/2) };
+  const dB = { x: toWorldX(sBx) - (rb.x + rb.w/2), y: wY - (rb.y + rb.h/2) };
+
+  a.classList.add('noAnim'); b.classList.add('noAnim');
+  a.style.transform = `translate(${dA.x}px, ${dA.y}px) scale(${S})`;
+  b.style.transform = `translate(${dB.x}px, ${dB.y}px) scale(${S})`;
+  void stg.offsetWidth;                       // 强制回流,让起始态先生效
+  a.classList.remove('noAnim'); b.classList.remove('noAnim');
+  stg.classList.add('armed');                 // 摆好位置了,让两个词淡入
+
+  let opened = false;
+  const open = () => {
+    if (opened) return; opened = true;
+    a.style.transform = ''; b.style.transform = '';
+    stg.classList.remove('intro');
+    revealAll();
+    ['pointerdown','keydown','wheel'].forEach(t => removeEventListener(t, open));
+  };
+  setTimeout(open, 1150);
+  ['pointerdown','keydown','wheel'].forEach(t => addEventListener(t, open, {passive:true}));
+}
+
 function initPanZoom(){
   const vp = $('viewport');
   let down = false, px = 0, py = 0;
@@ -321,21 +351,17 @@ function initPanZoom(){
     try { vp.releasePointerCapture(e.pointerId); } catch(_) {} };
   vp.addEventListener('pointerup', up);
   vp.addEventListener('pointercancel', up);
-  // 滚轮留给页面滚动(要能滚回开场);按住 Ctrl/⌘ 才缩放
   vp.addEventListener('wheel', e => {
-    if (!e.ctrlKey && !e.metaKey) return;
     e.preventDefault();
-    const b = box();
-    zoomAt(e.clientX - b.left, e.clientY - b.top, e.deltaY < 0 ? 1.12 : 1/1.12);
+    zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.12 : 1/1.12);
   }, {passive:false});
   const mid = () => { const b = box(); return [b.width/2, b.height/2]; };
   $('zin').onclick  = () => zoomAt(...mid(), 1.28);
   $('zout').onclick = () => zoomAt(...mid(), 1/1.28);
   // 尺寸变了:没 fit 过就补 fit,已 fit 过只重新夹紧(保住用户的缩放与位置)
   addEventListener('resize', () => fitted ? apply() : fit());
-  const sec = $('mapSection');
-  new ResizeObserver(() => { if (!fitted) fit(); }).observe(sec);
-  new IntersectionObserver(es => { if (!fitted && es.some(e => e.isIntersecting)) fit(); }).observe(sec);
+  new ResizeObserver(() => { if (!fitted) fit(); }).observe(vp);
+  new IntersectionObserver(es => { if (!fitted && es.some(e => e.isIntersecting)) fit(); }).observe(vp);
 }
 
 /* ── 悬浮联动 ── */
@@ -397,7 +423,6 @@ function openDetail(id){
     </div>`;
   lastFocus = document.activeElement;
   $('overlay').classList.add('show');
-  document.body.classList.add('locked');
   $('dclose').onclick = closeDetail;
   $('copyBtn').onclick = async e => {
     const b = e.currentTarget;
@@ -416,7 +441,6 @@ function openDetail(id){
 }
 function closeDetail(){
   $('overlay').classList.remove('show');
-  document.body.classList.remove('locked');
   if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
 function initDetail(){
@@ -431,16 +455,20 @@ function initDetail(){
   });
   $('overlay').addEventListener('click', e => { if (e.target === $('overlay')) closeDetail(); });
   addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
-  $('scrollCue').onclick = () => $('mapSection').scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 build(); fit(); initPanZoom(); initHighlight(); initDetail();
 
-/* 兜底:后台标签页 / 面板未展开时,首次 fit 拿不到尺寸,
+/* 兜底:后台标签页 / 面板未展开时首次 fit 拿不到尺寸,
    而观察器在个别环境里也不一定触发 —— 再补几次延迟重试。*/
 requestAnimationFrame(() => { if (!fitted) fit(); });
 addEventListener('load', () => { if (!fitted) fit(); });
 [120, 400, 1200].forEach(d => setTimeout(() => { if (!fitted) fit(); }, d));
+// 最后兜底:始终拿不到尺寸也不能让星图一直藏着
+setTimeout(() => {
+  if (!introPlayed) { introPlayed = true; playIntro(); }
+  const s = $('stage'); s.classList.remove('intro'); s.classList.add('armed'); revealAll();
+}, 2600);
 </script>
 </body>
 </html>
