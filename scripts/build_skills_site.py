@@ -163,7 +163,7 @@ def layout_map(skills: list[dict]) -> list[dict]:
     ] + [(x0 - 14, y0 - 14, x1 + 14, y1 + 14) for (x0, y0, x1, y1) in CORNER_BOXES]
 
     # 矩形分离:沿重叠最小的轴推开,竖版/横版图块都能正确避让
-    gap = 18
+    gap = 52   # 要容得下 ±24px 的漂浮,否则相邻图块会漂到互相压住
     for _ in range(140):
         for i, a in enumerate(skills):
             for b in skills[i + 1:]:
@@ -241,11 +241,11 @@ def main() -> int:
             meta = {"scenario": FALLBACK, "also": [], "example": f"用 {sid} 来帮我……"}
         scenario = meta["scenario"] if meta["scenario"] in valid_sc else FALLBACK
         art = riso_art.make_tile(sid, scenario)
-        # 漂浮参数:幅度保底 3px,否则有的图块看起来是静止的
+        # 漂浮参数:幅度保底 11px,否则看起来跟静止没区别
         fr = riso_art.Rand(riso_art.seed_of(sid + "float"))
-        fx, fy = fr.rng(-9, 9), fr.rng(-9, 9)
-        if abs(fx) < 3: fx = 3 if fx >= 0 else -3
-        if abs(fy) < 3: fy = 3 if fy >= 0 else -3
+        fx, fy = fr.rng(-24, 24), fr.rng(-24, 24)
+        if abs(fx) < 11: fx = 11 if fx >= 0 else -11
+        if abs(fy) < 11: fy = 11 if fy >= 0 else -11
 
         skills.append({
             "id": sid, "name": fm.get("name", sid), "category": cat,
@@ -259,7 +259,8 @@ def main() -> int:
             "example": meta["example"],
             "svg": art["svg"], "w": art["w"], "h": art["h"], "pattern": art["pattern"],
             "fx": round(fx, 1), "fy": round(fy, 1),
-            "dur": round(fr.rng(5.5, 11.5), 1), "delay": round(fr.rng(0, 6), 1),
+            "dur": round(fr.rng(6, 13), 1), "delay": round(fr.rng(0, 7), 1),
+            "rot": round(fr.rng(-1.6, 1.6), 2),   # 轻微旋转,比纯平移更"活"
         })
 
     featured = [s["id"] for s in skills if s["hasDemo"]]

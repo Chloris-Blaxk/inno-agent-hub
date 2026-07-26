@@ -88,7 +88,10 @@
     transition:filter .3s, opacity .3s; will-change:transform; border-radius:1px;
     /* 各自不同的方向/幅度/周期/相位,才有一片“各自呼吸”的感觉 */
     animation:drift var(--dur,8s) var(--delay,0s) ease-in-out infinite alternate}
-  @keyframes drift{ from{transform:translate(0,0)} to{transform:translate(var(--fx,4px), var(--fy,-5px))} }
+  @keyframes drift{
+    from{transform:translate(0,0) rotate(0deg)}
+    to{transform:translate(var(--fx,14px), var(--fy,-16px)) rotate(var(--rot,1deg))}
+  }
   /* 缩放放在内层 svg 上 —— .tile 的 transform 已经给漂浮动画占用了 */
   .tile svg{display:block; box-shadow:0 1px 3px rgba(20,20,15,.12);
     transition:transform .34s cubic-bezier(.22,.68,.24,1)}
@@ -250,7 +253,7 @@ function build(){
   DATA.skills.forEach(s => {
     html.push(`<button class="tile" data-id="${esc(s.id)}" data-sc="${esc(s.scenario)}"
       style="left:${s.x - s.w/2}px; top:${s.y - s.h/2}px;
-        --fx:${s.fx}px; --fy:${s.fy}px; --dur:${s.dur}s; --delay:${s.delay}s"
+        --fx:${s.fx}px; --fy:${s.fy}px; --rot:${s.rot}deg; --dur:${s.dur}s; --delay:${s.delay}s"
       title="${esc(s.name)}" aria-label="${esc(s.name)}：${esc(s.tagline)}">
       ${s.svg}${s.hasDemo ? '<span class="dtag">DEMO</span>' : ''}${s.verified ? '<span class="vtag">✓</span>' : ''}
     </button>`);
@@ -260,7 +263,8 @@ function build(){
 
 /* ── 平移缩放 ── */
 const view = { x:0, y:0, k:1 };
-const MIN_K = 0.3, MAX_K = 3.2;
+let MIN_K = 0.3;                 // fit 后会被锁到「刚好铺满」的比例
+const MAX_K = 3.2;
 const box = () => $('viewport').getBoundingClientRect();
 
 /* 把平移夹在「图始终占住视野」的范围内 ——
@@ -288,6 +292,7 @@ function fit(){
   const b = box();
   if (b.width < 2 || b.height < 2) return;
   view.k = Math.min(b.width / DATA.world.w, b.height / DATA.world.h) * 0.94;
+  MIN_K = view.k;                 // 不允许缩得比"全部可见"还小 —— 否则整张图会缩成一小团
   view.x = (b.width - DATA.world.w * view.k) / 2;
   view.y = (b.height - DATA.world.h * view.k) / 2;
   fitted = true;
@@ -380,11 +385,13 @@ function initPanZoom(){
   vp.addEventListener('wheel', e => {
     if (!opened) return;               // 开场时滚轮是“进入”,不是缩放
     e.preventDefault();
-    zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.12 : 1/1.12);
+    // 按滚动量归一化:触控板一次手势会连发几十个小 delta,固定倍率会瞬间缩到底
+    const f = Math.exp(-e.deltaY * 0.0012);
+    zoomAt(e.clientX, e.clientY, Math.max(0.9, Math.min(1.11, f)));
   }, {passive:false});
   const mid = () => { const b = box(); return [b.width/2, b.height/2]; };
-  $('zin').onclick  = () => zoomAt(...mid(), 1.28);
-  $('zout').onclick = () => zoomAt(...mid(), 1/1.28);
+  $('zin').onclick  = () => zoomAt(...mid(), 1.22);
+  $('zout').onclick = () => zoomAt(...mid(), 1/1.22);
   // 尺寸变了:没 fit 过就补 fit,已 fit 过只重新夹紧(保住用户的缩放与位置)
   addEventListener('resize', () => fitted ? apply() : fit());
   new ResizeObserver(() => { if (!fitted) fit(); }).observe(vp);
