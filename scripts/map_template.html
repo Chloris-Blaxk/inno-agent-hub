@@ -46,13 +46,13 @@
   .wire.lit{stroke:var(--sc,#3f5c48); stroke-width:1.7; opacity:1}
 
   /* ── 开场:两个词先合成 “Inno Agent” 居中,再向两角打开 ── */
-  .corner{position:absolute; font-size:104px; font-weight:400; letter-spacing:-.02em;
+  .corner{position:absolute; font-size:168px; font-weight:400; letter-spacing:-.025em;
     color:var(--ink); user-select:none; pointer-events:none; white-space:nowrap; line-height:1;
     transform-origin:50% 50%; will-change:transform;
     transition:transform 1.35s cubic-bezier(.62,.03,.2,1), opacity .55s ease}
   .corner.noAnim{transition:none}
-  #cornerA{left:52px; top:96px}
-  #cornerB{right:52px; bottom:104px}
+  #cornerA{left:34px; top:56px}
+  #cornerB{right:34px; bottom:64px}
   /* 开场期间星图内容先不出现,等词分开时一起淡入。
      intro 类写在 HTML 上,保证首屏第一帧就是隐藏态 —— 若等 JS 再加,
      用户会先瞥见星图再看它淡出。*/
@@ -63,6 +63,15 @@
   #stage.armed .corner{opacity:1}
   .hud{opacity:0; transition:opacity .7s ease .5s}
   .hud.in{opacity:1}
+  /* 开场停住,等用户滚一下再打开 */
+  #enterCue{position:fixed; left:50%; bottom:46px; transform:translateX(-50%); z-index:45;
+    display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted);
+    background:rgba(251,250,248,.9); border:1px solid var(--line); border-radius:999px;
+    padding:10px 18px; opacity:0; transition:opacity .6s ease .9s; pointer-events:none}
+  #enterCue.in{opacity:1}
+  #enterCue.out{opacity:0; transition:opacity .3s ease}
+  #enterCue i{font-style:normal; animation:bob 1.9s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
 
   /* 星系标题 */
   .cluster{position:absolute; width:360px; margin-left:-180px; text-align:center;
@@ -76,10 +85,15 @@
 
   /* 图块 */
   .tile{position:absolute; padding:0; border:0; background:none; cursor:pointer; line-height:0;
-    transition:transform .34s cubic-bezier(.22,.68,.24,1), filter .3s, opacity .3s;
-    will-change:transform; border-radius:1px}
-  .tile svg{display:block; box-shadow:0 1px 3px rgba(20,20,15,.12)}
-  .tile:hover{transform:scale(1.28) translateY(-3px); z-index:5; filter:drop-shadow(0 12px 22px rgba(20,20,15,.22))}
+    transition:filter .3s, opacity .3s; will-change:transform; border-radius:1px;
+    /* 各自不同的方向/幅度/周期/相位,才有一片“各自呼吸”的感觉 */
+    animation:drift var(--dur,8s) var(--delay,0s) ease-in-out infinite alternate}
+  @keyframes drift{ from{transform:translate(0,0)} to{transform:translate(var(--fx,4px), var(--fy,-5px))} }
+  /* 缩放放在内层 svg 上 —— .tile 的 transform 已经给漂浮动画占用了 */
+  .tile svg{display:block; box-shadow:0 1px 3px rgba(20,20,15,.12);
+    transition:transform .34s cubic-bezier(.22,.68,.24,1)}
+  .tile:hover{z-index:5; filter:drop-shadow(0 12px 22px rgba(20,20,15,.22))}
+  .tile:hover svg{transform:scale(1.28) translateY(-3px)}
   .tile:focus-visible{outline:2px solid var(--cta); outline-offset:3px}
   .tile .vtag{position:absolute; right:-4px; top:-5px; width:13px; height:13px; border-radius:50%;
     background:var(--cta); color:#fff; font-size:8px; line-height:13px; text-align:center; font-weight:800}
@@ -91,8 +105,8 @@
   .dim .cluster:not(.on){opacity:.26}
   .dim .wire:not(.lit){opacity:.05}
   /* 被点亮的要真的“亮”起来:浅色 riso 图块光靠不淡出还不够跳 */
-  .dim .tile.on{transform:scale(1.12); z-index:4;
-    filter:drop-shadow(0 7px 16px rgba(20,20,15,.2)) saturate(1.15)}
+  .dim .tile.on{z-index:4; filter:drop-shadow(0 7px 16px rgba(20,20,15,.2)) saturate(1.15)}
+  .dim .tile.on svg{transform:scale(1.12)}
 
   /* ── HUD ── */
   .hud{position:fixed; z-index:40; display:flex; align-items:center; gap:8px}
@@ -143,8 +157,8 @@
   .dsrc{font-size:10.5px; color:var(--muted); letter-spacing:.06em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 
   @media (max-width:760px){
-    .corner{font-size:72px}
-    #cornerA{left:22px; top:66px} #cornerB{right:22px; bottom:70px}
+    .corner{font-size:108px}
+    #cornerA{left:18px; top:44px} #cornerB{right:18px; bottom:50px}
     .cluster{width:250px; margin-left:-125px}
     .cluster h2{font-size:26px}
     #hint{left:14px; bottom:16px; font-size:11.5px; padding:8px 12px}
@@ -185,6 +199,7 @@
   </div>
 </div>
 
+<div id="enterCue">向下滚动，进入技能星图 <i>↓</i></div>
 <div class="hud" id="hint">点击任意图块，看它能帮你做什么</div>
 <div class="hud" id="zoom">
   缩放 <button id="zin" aria-label="放大">+</button><button id="zout" aria-label="缩小">−</button>
@@ -234,7 +249,8 @@ function build(){
   });
   DATA.skills.forEach(s => {
     html.push(`<button class="tile" data-id="${esc(s.id)}" data-sc="${esc(s.scenario)}"
-      style="left:${s.x - s.w/2}px; top:${s.y - s.h/2}px"
+      style="left:${s.x - s.w/2}px; top:${s.y - s.h/2}px;
+        --fx:${s.fx}px; --fy:${s.fy}px; --dur:${s.dur}s; --delay:${s.delay}s"
       title="${esc(s.name)}" aria-label="${esc(s.name)}：${esc(s.tagline)}">
       ${s.svg}${s.hasDemo ? '<span class="dtag">DEMO</span>' : ''}${s.verified ? '<span class="vtag">✓</span>' : ''}
     </button>`);
@@ -298,6 +314,7 @@ function playIntro(){
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const bx = box();
   if (reduce || bx.width < 2) {          // 降级:不做动画,直接呈现最终态
+    opened = true; armedForEnter = true;
     stg.classList.remove('intro'); stg.classList.add('armed'); revealAll(); return;
   }
 
@@ -322,16 +339,25 @@ function playIntro(){
   a.classList.remove('noAnim'); b.classList.remove('noAnim');
   stg.classList.add('armed');                 // 摆好位置了,让两个词淡入
 
-  let opened = false;
-  const open = () => {
-    if (opened) return; opened = true;
-    a.style.transform = ''; b.style.transform = '';
-    stg.classList.remove('intro');
-    revealAll();
-    ['pointerdown','keydown','wheel'].forEach(t => removeEventListener(t, open));
-  };
-  setTimeout(open, 1150);
-  ['pointerdown','keydown','wheel'].forEach(t => addEventListener(t, open, {passive:true}));
+  $('enterCue').classList.add('in');
+  // 开场停在这里,等用户滚一下(或点/按键)再向两角打开。
+  // 留 400ms 静默期:加载瞬间的杂散事件不该把开场直接跳掉。
+  setTimeout(() => {
+    armedForEnter = true;
+    ['wheel','touchmove','keydown','pointerdown'].forEach(ev =>
+      addEventListener(ev, enterMap, {passive:true}));
+  }, 400);
+}
+
+let opened = false, armedForEnter = false;
+function enterMap(){
+  if (opened || !armedForEnter) return; opened = true;
+  const cue = $('enterCue');
+  cue.classList.remove('in'); cue.classList.add('out');
+  $('cornerA').style.transform = ''; $('cornerB').style.transform = '';
+  $('stage').classList.remove('intro');
+  revealAll();
+  ['wheel','touchmove','keydown','pointerdown'].forEach(ev => removeEventListener(ev, enterMap));
 }
 
 function initPanZoom(){
@@ -352,6 +378,7 @@ function initPanZoom(){
   vp.addEventListener('pointerup', up);
   vp.addEventListener('pointercancel', up);
   vp.addEventListener('wheel', e => {
+    if (!opened) return;               // 开场时滚轮是“进入”,不是缩放
     e.preventDefault();
     zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.12 : 1/1.12);
   }, {passive:false});
@@ -467,7 +494,7 @@ addEventListener('load', () => { if (!fitted) fit(); });
 // 最后兜底:始终拿不到尺寸也不能让星图一直藏着
 setTimeout(() => {
   if (!introPlayed) { introPlayed = true; playIntro(); }
-  const s = $('stage'); s.classList.remove('intro'); s.classList.add('armed'); revealAll();
+  if (!fitted) { armedForEnter = true; $('stage').classList.add('armed'); enterMap(); }   // 尺寸始终拿不到,别把星图永远藏着
 }, 2600);
 </script>
 </body>

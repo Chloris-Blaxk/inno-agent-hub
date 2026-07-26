@@ -58,6 +58,14 @@ CLUSTER_POS = {
     "创造": (1566, 412),
 }
 LABEL_HALF_W, LABEL_HALF_H = 188, 96   # 标题+说明文字的占位框,图块须避开
+# 角落大字(Inno / Agent)的占位框。字号 168px、Georgia 下宽约 2.0~2.5 倍字号,
+# 放大后必须让图块避开,否则会被压住。
+CORNER_FONT = 168
+CORNER_BOXES = [
+    (34, 56, 34 + int(CORNER_FONT * 2.05), 56 + CORNER_FONT),                       # 左上 Inno
+    (WORLD_W - 34 - int(CORNER_FONT * 2.55), WORLD_H - 64 - CORNER_FONT,
+     WORLD_W - 34, WORLD_H - 64),                                                   # 右下 Agent
+]
 GOLDEN = math.pi * (3 - math.sqrt(5))
 
 
@@ -152,7 +160,7 @@ def layout_map(skills: list[dict]) -> list[dict]:
     label_rects = [
         (cx - LABEL_HALF_W, cy - LABEL_HALF_H, cx + LABEL_HALF_W, cy + LABEL_HALF_H)
         for cx, cy in CLUSTER_POS.values()
-    ]
+    ] + [(x0 - 14, y0 - 14, x1 + 14, y1 + 14) for (x0, y0, x1, y1) in CORNER_BOXES]
 
     # 矩形分离:沿重叠最小的轴推开,竖版/横版图块都能正确避让
     gap = 18
@@ -233,6 +241,11 @@ def main() -> int:
             meta = {"scenario": FALLBACK, "also": [], "example": f"用 {sid} 来帮我……"}
         scenario = meta["scenario"] if meta["scenario"] in valid_sc else FALLBACK
         art = riso_art.make_tile(sid, scenario)
+        # 漂浮参数:幅度保底 3px,否则有的图块看起来是静止的
+        fr = riso_art.Rand(riso_art.seed_of(sid + "float"))
+        fx, fy = fr.rng(-9, 9), fr.rng(-9, 9)
+        if abs(fx) < 3: fx = 3 if fx >= 0 else -3
+        if abs(fy) < 3: fy = 3 if fy >= 0 else -3
 
         skills.append({
             "id": sid, "name": fm.get("name", sid), "category": cat,
@@ -245,6 +258,8 @@ def main() -> int:
             "also": [a for a in meta.get("also", []) if a in valid_sc and a != scenario],
             "example": meta["example"],
             "svg": art["svg"], "w": art["w"], "h": art["h"], "pattern": art["pattern"],
+            "fx": round(fx, 1), "fy": round(fy, 1),
+            "dur": round(fr.rng(5.5, 11.5), 1), "delay": round(fr.rng(0, 6), 1),
         })
 
     featured = [s["id"] for s in skills if s["hasDemo"]]
