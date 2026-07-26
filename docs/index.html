@@ -412,9 +412,12 @@ function initHighlight(){
     stg.querySelectorAll('.wire').forEach(w => w.classList.toggle('lit', w.dataset.sc === key));
   };
   const lightSkill = id => {
+    const s = DATA.skills.find(x => x.id === id);
+    // 它连到哪些星系,那些标题就该跟着亮 —— 否则线亮着、线指向的标题却是灰的
+    const keys = s ? [s.scenario, ...(s.also || [])] : [];
     stg.classList.add('dim');
     stg.querySelectorAll('.tile').forEach(t => t.classList.toggle('on', t.dataset.id === id));
-    stg.querySelectorAll('.cluster').forEach(c => c.classList.remove('on'));
+    stg.querySelectorAll('.cluster').forEach(c => c.classList.toggle('on', keys.includes(c.dataset.sc)));
     stg.querySelectorAll('.wire').forEach(w => w.classList.toggle('lit', w.dataset.skill === id));
   };
   const clear = () => {
