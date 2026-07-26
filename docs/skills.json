@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15",
+  "generated": "2026-07-26",
   "count": 46,
   "repo": "https://github.com/Chloris-Blaxk/inno-agent-hub",
   "categories": [
@@ -24,6 +24,77 @@
       "count": 4
     }
   ],
+  "scenarios": [
+    {
+      "key": "备课",
+      "title": "怎么备好一节课?",
+      "blurb": "教案设计、分层适配、出题与批改 —— 把一节课从零备到能上。",
+      "color": {
+        "bg": "#cdd9ce",
+        "fg": "#3f5c48",
+        "ink": "#2f4636"
+      },
+      "count": 12,
+      "x": 452,
+      "y": 556
+    },
+    {
+      "key": "讲课",
+      "title": "课怎么讲得好看?",
+      "blurb": "互动课件、动态几何、幻灯片与配图 —— 让抽象的东西看得见。",
+      "color": {
+        "bg": "#cddae3",
+        "fg": "#3d627e",
+        "ink": "#2d4a60"
+      },
+      "count": 9,
+      "x": 898,
+      "y": 248
+    },
+    {
+      "key": "自学",
+      "title": "学生怎么自己学会?",
+      "blurb": "引导式讲题、家教式辅导 —— 给思路不给答案，建立真正的理解。",
+      "color": {
+        "bg": "#e8d6ca",
+        "fg": "#9a5c40",
+        "ink": "#7d4a33"
+      },
+      "count": 4,
+      "x": 772,
+      "y": 906
+    },
+    {
+      "key": "研究",
+      "title": "怎么把研究做深?",
+      "blurb": "文献检索、引用校验、资料转换与深度报告 —— 从查到写的一整条链路。",
+      "color": {
+        "bg": "#e6e0cd",
+        "fg": "#736846",
+        "ink": "#5c5338"
+      },
+      "count": 9,
+      "x": 1352,
+      "y": 798
+    },
+    {
+      "key": "创造",
+      "title": "怎么做出惊艳的东西?",
+      "blurb": "生成艺术、视觉设计、前端与元能力 —— 把想法直接变成能看能玩的作品。",
+      "color": {
+        "bg": "#d7d0de",
+        "fg": "#5b4b73",
+        "ink": "#48395d"
+      },
+      "count": 12,
+      "x": 1566,
+      "y": 412
+    }
+  ],
+  "world": {
+    "w": 1980,
+    "h": 1180
+  },
   "skills": [
     {
       "id": "Exam2Knowledge",
@@ -42,8 +113,19 @@
       "refUrl": "https://github.com/AtomerCore/Exam2Knowledge-skill",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 Exam2Knowledge 把这份物理期末卷拆成高频考点和解题模板，再整理出一份错题清单。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 50 73\" width=\"50\" height=\"73\" shape-rendering=\"crispEdges\"><rect width=\"50\" height=\"73\" fill=\"#f7f4ed\"/><rect width=\"50\" height=\"73\" fill=\"#d8e8dc\"/><g stroke=\"#2f7d52\" stroke-width=\"1.6\" fill=\"none\"><path d=\"M0.0 0V73\"/><path d=\"M8.3 0V73\"/><path d=\"M16.7 0V73\"/><path d=\"M25.0 0V73\"/><path d=\"M33.3 0V73\"/><path d=\"M41.7 0V73\"/><path d=\"M50.0 0V73\"/><path d=\"M0 0.0H50\"/><path d=\"M0 8.3H50\"/><path d=\"M0 16.7H50\"/><path d=\"M0 25.0H50\"/><path d=\"M0 33.3H50\"/><path d=\"M0 41.7H50\"/><path d=\"M0 50.0H50\"/><path d=\"M0 58.3H50\"/><path d=\"M0 66.7H50\"/></g><g transform=\"translate(-0.4 -0.5)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"13.1\" y=\"24.8\" width=\"24.2\" height=\"28.8\" fill=\"#8fc9a4\"/></g><rect width=\"50\" height=\"73\" fill=\"url(#grain)\"/></svg>",
+      "w": 50,
+      "h": 73,
+      "pattern": "grid",
       "num": "01",
-      "featured": false
+      "featured": false,
+      "x": 565.4,
+      "y": 688.5
     },
     {
       "id": "algorithmic-art",
@@ -62,8 +144,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/algorithmic-art",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 algorithmic-art 生成一群会跟着鼠标游动的发光水母，能调数量、颜色和游动速度，背景是深海渐变。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 61 61\" width=\"61\" height=\"61\" shape-rendering=\"crispEdges\"><rect width=\"61\" height=\"61\" fill=\"#f7f4ed\"/><rect width=\"61\" height=\"61\" fill=\"#e3daf1\"/><rect x=\"16.4\" y=\"54.8\" width=\"3.7\" height=\"3.7\" fill=\"#6b4d9c\"/><rect x=\"7.2\" y=\"16.7\" width=\"3.3\" height=\"3.3\" fill=\"#6b4d9c\"/><rect x=\"1.7\" y=\"2.5\" width=\"3.6\" height=\"3.6\" fill=\"#6b4d9c\"/><rect x=\"21.9\" y=\"39.3\" width=\"6.5\" height=\"6.5\" fill=\"#432f66\"/><rect x=\"20.0\" y=\"49.9\" width=\"4.4\" height=\"4.4\" fill=\"#6b4d9c\"/><rect x=\"18.2\" y=\"40.1\" width=\"6.9\" height=\"6.9\" fill=\"#6b4d9c\"/><rect x=\"44.7\" y=\"28.3\" width=\"4.0\" height=\"4.0\" fill=\"#6b4d9c\"/><rect x=\"24.9\" y=\"38.5\" width=\"4.3\" height=\"4.3\" fill=\"#6b4d9c\"/><rect x=\"28.9\" y=\"43.1\" width=\"4.2\" height=\"4.2\" fill=\"#6b4d9c\"/><rect x=\"35.5\" y=\"25.6\" width=\"5.2\" height=\"5.2\" fill=\"#6b4d9c\"/><rect x=\"23.3\" y=\"16.2\" width=\"4.8\" height=\"4.8\" fill=\"#6b4d9c\"/><rect x=\"36.8\" y=\"43.2\" width=\"2.6\" height=\"2.6\" fill=\"#6b4d9c\"/><rect x=\"4.7\" y=\"19.9\" width=\"5.4\" height=\"5.4\" fill=\"#6b4d9c\"/><rect x=\"2.8\" y=\"5.1\" width=\"3.5\" height=\"3.5\" fill=\"#6b4d9c\"/><rect x=\"16.3\" y=\"53.0\" width=\"6.2\" height=\"6.2\" fill=\"#432f66\"/><rect x=\"30.7\" y=\"47.9\" width=\"6.9\" height=\"6.9\" fill=\"#6b4d9c\"/><rect x=\"10.7\" y=\"25.0\" width=\"6.5\" height=\"6.5\" fill=\"#432f66\"/><rect x=\"14.8\" y=\"10.0\" width=\"3.6\" height=\"3.6\" fill=\"#6b4d9c\"/><rect x=\"33.3\" y=\"30.0\" width=\"4.2\" height=\"4.2\" fill=\"#6b4d9c\"/><rect x=\"29.6\" y=\"4.5\" width=\"5.4\" height=\"5.4\" fill=\"#6b4d9c\"/><rect x=\"2.4\" y=\"26.4\" width=\"6.8\" height=\"6.8\" fill=\"#6b4d9c\"/><rect x=\"33.2\" y=\"18.1\" width=\"6.6\" height=\"6.6\" fill=\"#6b4d9c\"/><rect x=\"13.6\" y=\"6.1\" width=\"5.4\" height=\"5.4\" fill=\"#6b4d9c\"/><rect x=\"44.5\" y=\"37.6\" width=\"4.1\" height=\"4.1\" fill=\"#6b4d9c\"/><rect x=\"53.6\" y=\"56.4\" width=\"2.6\" height=\"2.6\" fill=\"#6b4d9c\"/><g transform=\"translate(-2.0 1.3)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"21.2\" y=\"7.3\" width=\"28.2\" height=\"30.7\" fill=\"#b199d6\"/></g><rect width=\"61\" height=\"61\" fill=\"url(#grain)\"/></svg>",
+      "w": 61,
+      "h": 61,
+      "pattern": "scatter",
       "num": "02",
-      "featured": false
+      "featured": false,
+      "x": 1606.9,
+      "y": 538.5
     },
     {
       "id": "backwards-design-unit-planner",
@@ -82,8 +175,17 @@
       "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/backwards-design-unit-planner",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [],
+      "example": "用 backwards-design-unit-planner 帮我备「二次函数」这个单元的教案，初三，6 课时，目标是学生能根据图象说出性质并解决实际问题。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 93 53\" width=\"93\" height=\"53\" shape-rendering=\"crispEdges\"><rect width=\"93\" height=\"53\" fill=\"#f7f4ed\"/><rect width=\"93\" height=\"53\" fill=\"#d8e8dc\"/><g stroke=\"#2f7d52\" stroke-width=\"2.4\" fill=\"none\"><circle cx=\"52.4\" cy=\"44.1\" r=\"14.4\"/><circle cx=\"52.4\" cy=\"44.1\" r=\"28.8\"/><circle cx=\"52.4\" cy=\"44.1\" r=\"43.2\"/></g><g transform=\"translate(0.6 -2.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"36.2\" y=\"4.0\" width=\"30.9\" height=\"17.9\" fill=\"#8fc9a4\"/></g><rect width=\"93\" height=\"53\" fill=\"url(#grain)\"/></svg>",
+      "w": 93,
+      "h": 53,
+      "pattern": "arcs",
       "num": "03",
-      "featured": false
+      "featured": false,
+      "x": 363.8,
+      "y": 678.5
     },
     {
       "id": "baoyu-comic",
@@ -102,8 +204,19 @@
       "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-comic",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 baoyu-comic 把「光合作用」画成一组四格知识漫画，画风轻松一点。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 69 69\" width=\"69\" height=\"69\" shape-rendering=\"crispEdges\"><rect width=\"69\" height=\"69\" fill=\"#f7f4ed\"/><rect width=\"69\" height=\"69\" fill=\"#d6e5f0\"/><g stroke=\"#2f6f9e\" stroke-width=\"4.1\"><path d=\"M-69 69L0 0\"/><path d=\"M-60.8 69L8.2 0\"/><path d=\"M-52.6 69L16.4 0\"/><path d=\"M-44.4 69L24.6 0\"/><path d=\"M-36.2 69L32.8 0\"/><path d=\"M-28.0 69L41.0 0\"/><path d=\"M-19.8 69L49.2 0\"/><path d=\"M-11.6 69L57.4 0\"/><path d=\"M-3.4 69L65.6 0\"/><path d=\"M4.8 69L73.8 0\"/><path d=\"M13.0 69L82.0 0\"/><path d=\"M21.2 69L90.2 0\"/><path d=\"M29.4 69L98.4 0\"/><path d=\"M37.6 69L106.6 0\"/><path d=\"M45.8 69L114.8 0\"/><path d=\"M54.0 69L123.0 0\"/><path d=\"M62.2 69L131.2 0\"/><path d=\"M70.4 69L139.4 0\"/><path d=\"M78.6 69L147.6 0\"/><path d=\"M86.8 69L155.8 0\"/><path d=\"M95.0 69L164.0 0\"/><path d=\"M103.2 69L172.2 0\"/><path d=\"M111.4 69L180.4 0\"/><path d=\"M119.6 69L188.6 0\"/><path d=\"M127.8 69L196.8 0\"/><path d=\"M136.0 69L205.0 0\"/></g><g transform=\"translate(0.7 -0.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"3.7\" y=\"0.9\" width=\"40.4\" height=\"32.3\" fill=\"#8fbedd\"/></g><rect width=\"69\" height=\"69\" fill=\"url(#grain)\"/></svg>",
+      "w": 69,
+      "h": 69,
+      "pattern": "stripes",
       "num": "04",
-      "featured": false
+      "featured": false,
+      "x": 1020.1,
+      "y": 378.5
     },
     {
       "id": "baoyu-infographic",
@@ -122,8 +235,19 @@
       "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-infographic",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 baoyu-infographic 把「中国四大发明」做成一张可直接发布的信息图。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" width=\"64\" height=\"64\" shape-rendering=\"crispEdges\"><rect width=\"64\" height=\"64\" fill=\"#f7f4ed\"/><rect width=\"64\" height=\"64\" fill=\"#d6e5f0\"/><rect x=\"48.4\" y=\"5.8\" width=\"3.4\" height=\"3.4\" fill=\"#17415f\"/><rect x=\"37.1\" y=\"34.1\" width=\"5.7\" height=\"5.7\" fill=\"#2f6f9e\"/><rect x=\"19.1\" y=\"1.2\" width=\"3.8\" height=\"3.8\" fill=\"#2f6f9e\"/><rect x=\"27.8\" y=\"26.2\" width=\"6.6\" height=\"6.6\" fill=\"#2f6f9e\"/><rect x=\"17.6\" y=\"13.9\" width=\"4.8\" height=\"4.8\" fill=\"#2f6f9e\"/><rect x=\"44.8\" y=\"41.7\" width=\"5.3\" height=\"5.3\" fill=\"#2f6f9e\"/><rect x=\"35.5\" y=\"2.3\" width=\"6.4\" height=\"6.4\" fill=\"#2f6f9e\"/><rect x=\"4.0\" y=\"38.8\" width=\"5.6\" height=\"5.6\" fill=\"#2f6f9e\"/><rect x=\"55.0\" y=\"49.0\" width=\"5.2\" height=\"5.2\" fill=\"#2f6f9e\"/><rect x=\"7.7\" y=\"4.3\" width=\"2.6\" height=\"2.6\" fill=\"#2f6f9e\"/><rect x=\"51.7\" y=\"17.1\" width=\"4.2\" height=\"4.2\" fill=\"#17415f\"/><rect x=\"48.6\" y=\"50.1\" width=\"2.7\" height=\"2.7\" fill=\"#2f6f9e\"/><rect x=\"6.6\" y=\"52.1\" width=\"2.9\" height=\"2.9\" fill=\"#2f6f9e\"/><rect x=\"6.3\" y=\"11.8\" width=\"7.0\" height=\"7.0\" fill=\"#2f6f9e\"/><rect x=\"11.5\" y=\"40.5\" width=\"6.8\" height=\"6.8\" fill=\"#2f6f9e\"/><rect x=\"15.2\" y=\"2.5\" width=\"3.1\" height=\"3.1\" fill=\"#2f6f9e\"/><rect x=\"35.8\" y=\"24.6\" width=\"3.9\" height=\"3.9\" fill=\"#2f6f9e\"/><rect x=\"46.8\" y=\"5.5\" width=\"3.1\" height=\"3.1\" fill=\"#2f6f9e\"/><rect x=\"19.2\" y=\"52.1\" width=\"5.9\" height=\"5.9\" fill=\"#17415f\"/><g transform=\"translate(2.7 -0.5)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"3.5\" y=\"9.3\" width=\"28.9\" height=\"22.7\" fill=\"#8fbedd\"/></g><rect width=\"64\" height=\"64\" fill=\"url(#grain)\"/></svg>",
+      "w": 64,
+      "h": 64,
+      "pattern": "scatter",
       "num": "05",
-      "featured": false
+      "featured": false,
+      "x": 844.9,
+      "y": 376.0
     },
     {
       "id": "baoyu-slide-deck",
@@ -142,8 +266,19 @@
       "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-slide-deck",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 baoyu-slide-deck 把这份教研汇报做成一套带统一风格的幻灯片。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 74 58\" width=\"74\" height=\"58\" shape-rendering=\"crispEdges\"><rect width=\"74\" height=\"58\" fill=\"#f7f4ed\"/><rect width=\"74\" height=\"58\" fill=\"#d6e5f0\"/><g stroke=\"#2f6f9e\" stroke-width=\"2.2\" fill=\"none\"><path d=\"M0.0 0V58\"/><path d=\"M18.5 0V58\"/><path d=\"M37.0 0V58\"/><path d=\"M55.5 0V58\"/><path d=\"M74.0 0V58\"/><path d=\"M0 0.0H74\"/><path d=\"M0 18.5H74\"/><path d=\"M0 37.0H74\"/><path d=\"M0 55.5H74\"/></g><g transform=\"translate(-2.7 1.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"40.4\" y=\"38.5\" width=\"30.2\" height=\"17.7\" fill=\"#8fbedd\"/></g><rect width=\"74\" height=\"58\" fill=\"url(#grain)\"/></svg>",
+      "w": 74,
+      "h": 58,
+      "pattern": "grid",
       "num": "06",
-      "featured": false
+      "featured": false,
+      "x": 887.0,
+      "y": 123.0
     },
     {
       "id": "baoyu-url-to-markdown",
@@ -162,8 +297,17 @@
       "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-url-to-markdown",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [],
+      "example": "用 baoyu-url-to-markdown 把这篇文章抓下来转成 markdown 存进我的笔记。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 56 84\" width=\"56\" height=\"84\" shape-rendering=\"crispEdges\"><rect width=\"56\" height=\"84\" fill=\"#f7f4ed\"/><rect width=\"56\" height=\"84\" fill=\"#f0e5c8\"/><rect x=\"26.6\" y=\"70.8\" width=\"4.4\" height=\"4.4\" fill=\"#6b5420\"/><rect x=\"4.4\" y=\"74.6\" width=\"4.3\" height=\"4.3\" fill=\"#6b5420\"/><rect x=\"10.8\" y=\"66.7\" width=\"3.6\" height=\"3.6\" fill=\"#a58535\"/><rect x=\"9.9\" y=\"35.2\" width=\"4.4\" height=\"4.4\" fill=\"#a58535\"/><rect x=\"21.3\" y=\"15.9\" width=\"6.9\" height=\"6.9\" fill=\"#a58535\"/><rect x=\"34.7\" y=\"31.3\" width=\"6.3\" height=\"6.3\" fill=\"#6b5420\"/><rect x=\"44.5\" y=\"52.6\" width=\"6.9\" height=\"6.9\" fill=\"#a58535\"/><rect x=\"26.8\" y=\"7.4\" width=\"6.9\" height=\"6.9\" fill=\"#a58535\"/><rect x=\"3.3\" y=\"45.0\" width=\"6.4\" height=\"6.4\" fill=\"#a58535\"/><rect x=\"42.2\" y=\"39.9\" width=\"6.3\" height=\"6.3\" fill=\"#a58535\"/><rect x=\"3.1\" y=\"15.5\" width=\"3.4\" height=\"3.4\" fill=\"#a58535\"/><rect x=\"11.8\" y=\"15.8\" width=\"5.7\" height=\"5.7\" fill=\"#a58535\"/><rect x=\"41.0\" y=\"56.4\" width=\"5.2\" height=\"5.2\" fill=\"#a58535\"/><rect x=\"32.4\" y=\"33.8\" width=\"3.2\" height=\"3.2\" fill=\"#a58535\"/><rect x=\"37.5\" y=\"65.4\" width=\"5.3\" height=\"5.3\" fill=\"#a58535\"/><rect x=\"37.3\" y=\"12.7\" width=\"6.6\" height=\"6.6\" fill=\"#a58535\"/><rect x=\"51.1\" y=\"29.2\" width=\"3.9\" height=\"3.9\" fill=\"#a58535\"/><rect x=\"29.8\" y=\"4.6\" width=\"4.6\" height=\"4.6\" fill=\"#6b5420\"/><rect x=\"18.7\" y=\"75.6\" width=\"4.3\" height=\"4.3\" fill=\"#a58535\"/><rect x=\"18.5\" y=\"24.7\" width=\"6.2\" height=\"6.2\" fill=\"#6b5420\"/><rect x=\"42.1\" y=\"10.5\" width=\"4.9\" height=\"4.9\" fill=\"#a58535\"/><rect x=\"14.0\" y=\"25.3\" width=\"4.9\" height=\"4.9\" fill=\"#6b5420\"/><rect x=\"35.7\" y=\"65.5\" width=\"6.5\" height=\"6.5\" fill=\"#a58535\"/><rect x=\"16.6\" y=\"16.3\" width=\"4.6\" height=\"4.6\" fill=\"#a58535\"/><rect x=\"30.7\" y=\"68.8\" width=\"3.3\" height=\"3.3\" fill=\"#a58535\"/><rect x=\"19.1\" y=\"59.5\" width=\"2.5\" height=\"2.5\" fill=\"#a58535\"/><rect x=\"45.3\" y=\"6.3\" width=\"4.5\" height=\"4.5\" fill=\"#a58535\"/><rect x=\"51.5\" y=\"56.4\" width=\"2.8\" height=\"2.8\" fill=\"#a58535\"/><g transform=\"translate(0.7 -1.4)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"18.4\" y=\"25.0\" width=\"29.0\" height=\"47.7\" fill=\"#e0c583\"/></g><rect width=\"56\" height=\"84\" fill=\"url(#grain)\"/></svg>",
+      "w": 56,
+      "h": 84,
+      "pattern": "scatter",
       "num": "07",
-      "featured": false
+      "featured": false,
+      "x": 1416.0,
+      "y": 660.0
     },
     {
       "id": "baoyu-youtube-transcript",
@@ -182,8 +326,19 @@
       "refUrl": "https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-youtube-transcript",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [
+        "自学"
+      ],
+      "example": "用 baoyu-youtube-transcript 下载这个公开课视频的中文字幕，并按章节整理成文稿。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 63 87\" width=\"63\" height=\"87\" shape-rendering=\"crispEdges\"><rect width=\"63\" height=\"87\" fill=\"#f7f4ed\"/><rect width=\"63\" height=\"87\" fill=\"#f0e5c8\"/><g stroke=\"#a58535\" stroke-width=\"5.3\"><path d=\"M-87 87L0 0\"/><path d=\"M-76.4 87L10.6 0\"/><path d=\"M-65.8 87L21.2 0\"/><path d=\"M-55.2 87L31.8 0\"/><path d=\"M-44.6 87L42.4 0\"/><path d=\"M-34.0 87L53.0 0\"/><path d=\"M-23.4 87L63.6 0\"/><path d=\"M-12.8 87L74.2 0\"/><path d=\"M-2.2 87L84.8 0\"/><path d=\"M8.4 87L95.4 0\"/><path d=\"M19.0 87L106.0 0\"/><path d=\"M29.6 87L116.6 0\"/><path d=\"M40.2 87L127.2 0\"/><path d=\"M50.8 87L137.8 0\"/><path d=\"M61.4 87L148.4 0\"/><path d=\"M72.0 87L159.0 0\"/><path d=\"M82.6 87L169.6 0\"/><path d=\"M93.2 87L180.2 0\"/><path d=\"M103.8 87L190.8 0\"/><path d=\"M114.4 87L201.4 0\"/><path d=\"M125.0 87L212.0 0\"/><path d=\"M135.6 87L222.6 0\"/><path d=\"M146.2 87L233.2 0\"/></g><g transform=\"translate(-2.8 -2.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"14.2\" y=\"25.3\" width=\"22.5\" height=\"50.7\" fill=\"#e0c583\"/></g><rect width=\"63\" height=\"87\" fill=\"url(#grain)\"/></svg>",
+      "w": 63,
+      "h": 87,
+      "pattern": "stripes",
       "num": "08",
-      "featured": false
+      "featured": false,
+      "x": 1244.8,
+      "y": 937.5
     },
     {
       "id": "canvas-design",
@@ -202,8 +357,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/canvas-design",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 canvas-design 做一张「校园读书节」的活动海报，输出 PDF 可直接拿去打印。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 57 79\" width=\"57\" height=\"79\" shape-rendering=\"crispEdges\"><rect width=\"57\" height=\"79\" fill=\"#f7f4ed\"/><rect width=\"57\" height=\"79\" fill=\"#e3daf1\"/><rect x=\"8.5\" y=\"0.9\" width=\"5.9\" height=\"5.9\" fill=\"#432f66\"/><rect x=\"37.5\" y=\"52.9\" width=\"5.9\" height=\"5.9\" fill=\"#6b4d9c\"/><rect x=\"17.8\" y=\"49.5\" width=\"5.3\" height=\"5.3\" fill=\"#432f66\"/><rect x=\"35.9\" y=\"2.3\" width=\"5.8\" height=\"5.8\" fill=\"#6b4d9c\"/><rect x=\"8.3\" y=\"68.1\" width=\"2.6\" height=\"2.6\" fill=\"#6b4d9c\"/><rect x=\"46.0\" y=\"39.0\" width=\"5.1\" height=\"5.1\" fill=\"#6b4d9c\"/><rect x=\"47.1\" y=\"51.5\" width=\"6.8\" height=\"6.8\" fill=\"#6b4d9c\"/><rect x=\"44.2\" y=\"8.0\" width=\"5.5\" height=\"5.5\" fill=\"#6b4d9c\"/><rect x=\"6.0\" y=\"23.7\" width=\"5.6\" height=\"5.6\" fill=\"#6b4d9c\"/><rect x=\"29.9\" y=\"58.8\" width=\"5.8\" height=\"5.8\" fill=\"#432f66\"/><rect x=\"7.3\" y=\"64.1\" width=\"5.5\" height=\"5.5\" fill=\"#6b4d9c\"/><rect x=\"50.0\" y=\"16.5\" width=\"3.6\" height=\"3.6\" fill=\"#6b4d9c\"/><rect x=\"31.9\" y=\"13.3\" width=\"5.2\" height=\"5.2\" fill=\"#6b4d9c\"/><rect x=\"31.1\" y=\"36.3\" width=\"4.4\" height=\"4.4\" fill=\"#432f66\"/><rect x=\"49.4\" y=\"39.3\" width=\"6.5\" height=\"6.5\" fill=\"#6b4d9c\"/><rect x=\"38.0\" y=\"73.9\" width=\"2.8\" height=\"2.8\" fill=\"#6b4d9c\"/><rect x=\"33.1\" y=\"13.4\" width=\"6.5\" height=\"6.5\" fill=\"#6b4d9c\"/><rect x=\"49.6\" y=\"26.6\" width=\"5.2\" height=\"5.2\" fill=\"#6b4d9c\"/><rect x=\"47.4\" y=\"42.6\" width=\"3.4\" height=\"3.4\" fill=\"#432f66\"/><rect x=\"39.9\" y=\"35.5\" width=\"2.9\" height=\"2.9\" fill=\"#6b4d9c\"/><rect x=\"45.7\" y=\"18.1\" width=\"3.5\" height=\"3.5\" fill=\"#432f66\"/><rect x=\"48.4\" y=\"52.3\" width=\"4.0\" height=\"4.0\" fill=\"#6b4d9c\"/><rect x=\"26.6\" y=\"50.2\" width=\"3.7\" height=\"3.7\" fill=\"#6b4d9c\"/><rect x=\"25.7\" y=\"14.3\" width=\"6.8\" height=\"6.8\" fill=\"#432f66\"/><rect x=\"23.6\" y=\"5.4\" width=\"5.1\" height=\"5.1\" fill=\"#6b4d9c\"/><rect x=\"29.4\" y=\"61.2\" width=\"4.2\" height=\"4.2\" fill=\"#6b4d9c\"/><g transform=\"translate(2.9 -0.2)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"23.1\" y=\"32.9\" width=\"18.5\" height=\"25.2\" fill=\"#b199d6\"/></g><rect width=\"57\" height=\"79\" fill=\"url(#grain)\"/></svg>",
+      "w": 57,
+      "h": 79,
+      "pattern": "scatter",
       "num": "09",
-      "featured": false
+      "featured": false,
+      "x": 1447.9,
+      "y": 547.5
     },
     {
       "id": "citation-management",
@@ -222,8 +388,17 @@
       "refUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/HEAD/scientific-skills/citation-management",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [],
+      "example": "用 citation-management 帮我核对这几篇参考文献，并生成规范的 BibTeX。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 94 64\" width=\"94\" height=\"64\" shape-rendering=\"crispEdges\"><rect width=\"94\" height=\"64\" fill=\"#f7f4ed\"/><rect width=\"94\" height=\"64\" fill=\"#f0e5c8\"/><g stroke=\"#a58535\" stroke-width=\"6.4\"><path d=\"M-64 64L0 0\"/><path d=\"M-51.2 64L12.8 0\"/><path d=\"M-38.4 64L25.6 0\"/><path d=\"M-25.6 64L38.4 0\"/><path d=\"M-12.8 64L51.2 0\"/><path d=\"M-0.0 64L64.0 0\"/><path d=\"M12.8 64L76.8 0\"/><path d=\"M25.6 64L89.6 0\"/><path d=\"M38.4 64L102.4 0\"/><path d=\"M51.2 64L115.2 0\"/><path d=\"M64.0 64L128.0 0\"/><path d=\"M76.8 64L140.8 0\"/><path d=\"M89.6 64L153.6 0\"/><path d=\"M102.4 64L166.4 0\"/><path d=\"M115.2 64L179.2 0\"/><path d=\"M128.0 64L192.0 0\"/><path d=\"M140.8 64L204.8 0\"/><path d=\"M153.6 64L217.6 0\"/></g><g transform=\"translate(2.3 -0.3)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"54.4\" y=\"12.6\" width=\"34.9\" height=\"19.5\" fill=\"#e0c583\"/></g><rect width=\"94\" height=\"64\" fill=\"url(#grain)\"/></svg>",
+      "w": 94,
+      "h": 64,
+      "pattern": "stripes",
       "num": "10",
-      "featured": false
+      "featured": false,
+      "x": 1323.0,
+      "y": 670.0
     },
     {
       "id": "claude-api",
@@ -242,8 +417,17 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/claude-api",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [],
+      "example": "用 claude-api 帮我写一个调用 Claude 的批量批改脚本，加上 prompt 缓存降低成本。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"80\" height=\"80\" shape-rendering=\"crispEdges\"><rect width=\"80\" height=\"80\" fill=\"#f7f4ed\"/><rect width=\"80\" height=\"80\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 5.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 15.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 25.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 35.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 45.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 55.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 65.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/><path d=\"M0 75.0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0 q10.0 -5.0 20.0 0 q10.0 5.0 20.0 0\"/></g><g transform=\"translate(2.9 -2.5)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"39.9\" y=\"38.0\" width=\"40.0\" height=\"32.4\" fill=\"#b199d6\"/></g><rect width=\"80\" height=\"80\" fill=\"url(#grain)\"/></svg>",
+      "w": 80,
+      "h": 80,
+      "pattern": "waves",
       "num": "11",
-      "featured": false
+      "featured": false,
+      "x": 1581.0,
+      "y": 276.0
     },
     {
       "id": "comment-on-docx",
@@ -262,8 +446,19 @@
       "refUrl": "https://github.com/tim-hua-01/comment-on-docx",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 comment-on-docx 批改这篇作文：按议论文标准，在具体句子上加批注指出论点、论据、结构的问题，不要改我的原文。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 65 65\" width=\"65\" height=\"65\" shape-rendering=\"crispEdges\"><rect width=\"65\" height=\"65\" fill=\"#f7f4ed\"/><rect width=\"65\" height=\"65\" fill=\"#d8e8dc\"/><g fill=\"#2f7d52\"><circle cx=\"5.6\" cy=\"5.6\" r=\"2.0\"/><circle cx=\"16.7\" cy=\"5.6\" r=\"2.6\"/><circle cx=\"27.8\" cy=\"5.6\" r=\"2.6\"/><circle cx=\"39.0\" cy=\"5.6\" r=\"2.1\"/><circle cx=\"50.1\" cy=\"5.6\" r=\"1.2\"/><circle cx=\"61.2\" cy=\"5.6\" r=\"0.6\"/><circle cx=\"5.6\" cy=\"16.7\" r=\"2.8\"/><circle cx=\"16.7\" cy=\"16.7\" r=\"3.7\"/><circle cx=\"27.8\" cy=\"16.7\" r=\"3.8\"/><circle cx=\"39.0\" cy=\"16.7\" r=\"2.9\"/><circle cx=\"50.1\" cy=\"16.7\" r=\"1.8\"/><circle cx=\"61.2\" cy=\"16.7\" r=\"0.6\"/><circle cx=\"5.6\" cy=\"27.8\" r=\"3.0\"/><circle cx=\"16.7\" cy=\"27.8\" r=\"4.2\"/><circle cx=\"27.8\" cy=\"27.8\" r=\"4.3\"/><circle cx=\"39.0\" cy=\"27.8\" r=\"3.1\"/><circle cx=\"50.1\" cy=\"27.8\" r=\"2.0\"/><circle cx=\"61.2\" cy=\"27.8\" r=\"0.8\"/><circle cx=\"5.6\" cy=\"39.0\" r=\"2.6\"/><circle cx=\"16.7\" cy=\"39.0\" r=\"3.4\"/><circle cx=\"27.8\" cy=\"39.0\" r=\"3.4\"/><circle cx=\"39.0\" cy=\"39.0\" r=\"2.7\"/><circle cx=\"50.1\" cy=\"39.0\" r=\"1.6\"/><circle cx=\"61.2\" cy=\"39.0\" r=\"0.6\"/><circle cx=\"5.6\" cy=\"50.1\" r=\"1.7\"/><circle cx=\"16.7\" cy=\"50.1\" r=\"2.2\"/><circle cx=\"27.8\" cy=\"50.1\" r=\"2.3\"/><circle cx=\"39.0\" cy=\"50.1\" r=\"1.8\"/><circle cx=\"50.1\" cy=\"50.1\" r=\"1.0\"/><circle cx=\"61.2\" cy=\"50.1\" r=\"0.6\"/><circle cx=\"5.6\" cy=\"61.2\" r=\"0.7\"/><circle cx=\"16.7\" cy=\"61.2\" r=\"1.1\"/><circle cx=\"27.8\" cy=\"61.2\" r=\"1.1\"/><circle cx=\"39.0\" cy=\"61.2\" r=\"0.7\"/><circle cx=\"50.1\" cy=\"61.2\" r=\"0.6\"/><circle cx=\"61.2\" cy=\"61.2\" r=\"0.6\"/></g><g transform=\"translate(2.8 2.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"4.6\" y=\"8.7\" width=\"27.0\" height=\"30.3\" fill=\"#8fc9a4\"/></g><rect width=\"65\" height=\"65\" fill=\"url(#grain)\"/></svg>",
+      "w": 65,
+      "h": 65,
+      "pattern": "halftone",
       "num": "12",
-      "featured": true
+      "featured": true,
+      "x": 479.8,
+      "y": 427.5
     },
     {
       "id": "differentiation-adapter",
@@ -282,8 +477,19 @@
       "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/differentiation-adapter",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 differentiation-adapter 把这道课堂任务做分层，照顾学困生和学有余力的学生，但保持学习目标不变。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 86 65\" width=\"86\" height=\"65\" shape-rendering=\"crispEdges\"><rect width=\"86\" height=\"65\" fill=\"#f7f4ed\"/><rect width=\"86\" height=\"65\" fill=\"#d8e8dc\"/><g fill=\"#2f7d52\"><circle cx=\"4.6\" cy=\"4.6\" r=\"1.8\"/><circle cx=\"13.8\" cy=\"4.6\" r=\"2.2\"/><circle cx=\"23.0\" cy=\"4.6\" r=\"2.5\"/><circle cx=\"32.3\" cy=\"4.6\" r=\"2.6\"/><circle cx=\"41.5\" cy=\"4.6\" r=\"2.4\"/><circle cx=\"50.7\" cy=\"4.6\" r=\"2.1\"/><circle cx=\"59.9\" cy=\"4.6\" r=\"1.6\"/><circle cx=\"69.1\" cy=\"4.6\" r=\"1.1\"/><circle cx=\"78.3\" cy=\"4.6\" r=\"0.6\"/><circle cx=\"4.6\" cy=\"13.8\" r=\"2.2\"/><circle cx=\"13.8\" cy=\"13.8\" r=\"2.7\"/><circle cx=\"23.0\" cy=\"13.8\" r=\"3.1\"/><circle cx=\"32.3\" cy=\"13.8\" r=\"3.2\"/><circle cx=\"41.5\" cy=\"13.8\" r=\"2.9\"/><circle cx=\"50.7\" cy=\"13.8\" r=\"2.4\"/><circle cx=\"59.9\" cy=\"13.8\" r=\"1.9\"/><circle cx=\"69.1\" cy=\"13.8\" r=\"1.3\"/><circle cx=\"78.3\" cy=\"13.8\" r=\"0.7\"/><circle cx=\"4.6\" cy=\"23.0\" r=\"2.3\"/><circle cx=\"13.8\" cy=\"23.0\" r=\"2.9\"/><circle cx=\"23.0\" cy=\"23.0\" r=\"3.5\"/><circle cx=\"32.3\" cy=\"23.0\" r=\"3.8\"/><circle cx=\"41.5\" cy=\"23.0\" r=\"3.3\"/><circle cx=\"50.7\" cy=\"23.0\" r=\"2.7\"/><circle cx=\"59.9\" cy=\"23.0\" r=\"2.0\"/><circle cx=\"69.1\" cy=\"23.0\" r=\"1.4\"/><circle cx=\"78.3\" cy=\"23.0\" r=\"0.8\"/><circle cx=\"4.6\" cy=\"32.3\" r=\"2.3\"/><circle cx=\"13.8\" cy=\"32.3\" r=\"2.9\"/><circle cx=\"23.0\" cy=\"32.3\" r=\"3.4\"/><circle cx=\"32.3\" cy=\"32.3\" r=\"3.6\"/><circle cx=\"41.5\" cy=\"32.3\" r=\"3.2\"/><circle cx=\"50.7\" cy=\"32.3\" r=\"2.6\"/><circle cx=\"59.9\" cy=\"32.3\" r=\"2.0\"/><circle cx=\"69.1\" cy=\"32.3\" r=\"1.4\"/><circle cx=\"78.3\" cy=\"32.3\" r=\"0.8\"/><circle cx=\"4.6\" cy=\"41.5\" r=\"2.1\"/><circle cx=\"13.8\" cy=\"41.5\" r=\"2.5\"/><circle cx=\"23.0\" cy=\"41.5\" r=\"2.9\"/><circle cx=\"32.3\" cy=\"41.5\" r=\"3.0\"/><circle cx=\"41.5\" cy=\"41.5\" r=\"2.8\"/><circle cx=\"50.7\" cy=\"41.5\" r=\"2.3\"/><circle cx=\"59.9\" cy=\"41.5\" r=\"1.8\"/><circle cx=\"69.1\" cy=\"41.5\" r=\"1.2\"/><circle cx=\"78.3\" cy=\"41.5\" r=\"0.6\"/><circle cx=\"4.6\" cy=\"50.7\" r=\"1.7\"/><circle cx=\"13.8\" cy=\"50.7\" r=\"2.1\"/><circle cx=\"23.0\" cy=\"50.7\" r=\"2.3\"/><circle cx=\"32.3\" cy=\"50.7\" r=\"2.4\"/><circle cx=\"41.5\" cy=\"50.7\" r=\"2.2\"/><circle cx=\"50.7\" cy=\"50.7\" r=\"1.9\"/><circle cx=\"59.9\" cy=\"50.7\" r=\"1.5\"/><circle cx=\"69.1\" cy=\"50.7\" r=\"0.9\"/><circle cx=\"78.3\" cy=\"50.7\" r=\"0.6\"/><circle cx=\"4.6\" cy=\"59.9\" r=\"1.2\"/><circle cx=\"13.8\" cy=\"59.9\" r=\"1.5\"/><circle cx=\"23.0\" cy=\"59.9\" r=\"1.7\"/><circle cx=\"32.3\" cy=\"59.9\" r=\"1.8\"/><circle cx=\"41.5\" cy=\"59.9\" r=\"1.7\"/><circle cx=\"50.7\" cy=\"59.9\" r=\"1.4\"/><circle cx=\"59.9\" cy=\"59.9\" r=\"1.0\"/><circle cx=\"69.1\" cy=\"59.9\" r=\"0.6\"/><circle cx=\"78.3\" cy=\"59.9\" r=\"0.6\"/></g><g transform=\"translate(-1.6 -2.8)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"25.1\" y=\"23.4\" width=\"29.6\" height=\"32.5\" fill=\"#8fc9a4\"/></g><rect width=\"86\" height=\"65\" fill=\"url(#grain)\"/></svg>",
+      "w": 86,
+      "h": 65,
+      "pattern": "halftone",
       "num": "13",
-      "featured": false
+      "featured": false,
+      "x": 479.4,
+      "y": 684.5
     },
     {
       "id": "doc-coauthoring",
@@ -302,8 +508,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/doc-coauthoring",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [
+        "备课"
+      ],
+      "example": "用 doc-coauthoring 和我一起把这份教学设计规范逐节写完整。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 76 76\" width=\"76\" height=\"76\" shape-rendering=\"crispEdges\"><rect width=\"76\" height=\"76\" fill=\"#f7f4ed\"/><rect width=\"76\" height=\"76\" fill=\"#f0e5c8\"/><g stroke=\"#a58535\" stroke-width=\"2.3\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 5.4 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/><path d=\"M0 16.3 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/><path d=\"M0 27.1 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/><path d=\"M0 38.0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/><path d=\"M0 48.9 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/><path d=\"M0 59.7 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/><path d=\"M0 70.6 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0 q9.5 -6.5 19.0 0 q9.5 6.5 19.0 0\"/></g><g transform=\"translate(1.0 -2.2)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"16.7\" y=\"25.1\" width=\"45.0\" height=\"27.4\" fill=\"#e0c583\"/></g><rect width=\"76\" height=\"76\" fill=\"url(#grain)\"/></svg>",
+      "w": 76,
+      "h": 76,
+      "pattern": "waves",
       "num": "14",
-      "featured": false
+      "featured": false,
+      "x": 1455.9,
+      "y": 932.0
     },
     {
       "id": "docx",
@@ -322,8 +539,19 @@
       "refUrl": "https://github.com/fcakyon/claude-codex-settings/tree/HEAD/plugins/anthropic-office-skills/skills/docx",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "研究"
+      ],
+      "example": "用 docx 把这份教案排成正式的 Word 文档，带标题层级、页码和目录。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 82 55\" width=\"82\" height=\"55\" shape-rendering=\"crispEdges\"><rect width=\"82\" height=\"55\" fill=\"#f7f4ed\"/><rect width=\"82\" height=\"55\" fill=\"#d8e8dc\"/><g stroke=\"#2f7d52\" stroke-width=\"1.3\" fill=\"none\"><path d=\"M0.0 0V55\"/><path d=\"M10.2 0V55\"/><path d=\"M20.5 0V55\"/><path d=\"M30.8 0V55\"/><path d=\"M41.0 0V55\"/><path d=\"M51.2 0V55\"/><path d=\"M61.5 0V55\"/><path d=\"M71.8 0V55\"/><path d=\"M82.0 0V55\"/><path d=\"M0 0.0H82\"/><path d=\"M0 10.2H82\"/><path d=\"M0 20.5H82\"/><path d=\"M0 30.8H82\"/><path d=\"M0 41.0H82\"/><path d=\"M0 51.2H82\"/></g><g transform=\"translate(3.0 -0.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"17.9\" y=\"7.2\" width=\"28.3\" height=\"23.8\" fill=\"#8fc9a4\"/></g><rect width=\"82\" height=\"55\" fill=\"url(#grain)\"/></svg>",
+      "w": 82,
+      "h": 55,
+      "pattern": "grid",
       "num": "15",
-      "featured": false
+      "featured": false,
+      "x": 223.0,
+      "y": 563.3
     },
     {
       "id": "edu-analytic-geometry",
@@ -342,8 +570,19 @@
       "refUrl": "https://github.com/wy51ai/edulab/tree/master/skills/edu-analytic-geometry",
       "demo": "assets/edu-analytic-geometry/demo.gif",
       "hasDemo": true,
+      "scenario": "讲课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 edu-analytic-geometry 把这道椭圆题做成能拖动的 2D 动态画板。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 69 69\" width=\"69\" height=\"69\" shape-rendering=\"crispEdges\"><rect width=\"69\" height=\"69\" fill=\"#f7f4ed\"/><rect width=\"69\" height=\"69\" fill=\"#d6e5f0\"/><g stroke=\"#2f6f9e\" stroke-width=\"1.2\" fill=\"none\"><path d=\"M0.0 0V69\"/><path d=\"M8.6 0V69\"/><path d=\"M17.2 0V69\"/><path d=\"M25.9 0V69\"/><path d=\"M34.5 0V69\"/><path d=\"M43.1 0V69\"/><path d=\"M51.8 0V69\"/><path d=\"M60.4 0V69\"/><path d=\"M69.0 0V69\"/><path d=\"M0 0.0H69\"/><path d=\"M0 8.6H69\"/><path d=\"M0 17.2H69\"/><path d=\"M0 25.9H69\"/><path d=\"M0 34.5H69\"/><path d=\"M0 43.1H69\"/><path d=\"M0 51.8H69\"/><path d=\"M0 60.4H69\"/><path d=\"M0 69.0H69\"/></g><g transform=\"translate(1.8 2.1)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"6.7\" y=\"34.3\" width=\"30.9\" height=\"22.5\" fill=\"#8fbedd\"/></g><rect width=\"69\" height=\"69\" fill=\"url(#grain)\"/></svg>",
+      "w": 69,
+      "h": 69,
+      "pattern": "grid",
       "num": "16",
-      "featured": true
+      "featured": true,
+      "x": 933.1,
+      "y": 382.5
     },
     {
       "id": "edu-solid-geometry",
@@ -362,8 +601,19 @@
       "refUrl": "https://github.com/wy51ai/edulab/tree/master/skills/edu-solid-geometry",
       "demo": "assets/edu-solid-geometry/demo.gif",
       "hasDemo": true,
+      "scenario": "讲课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 edu-solid-geometry 把这道题做成能旋转的 3D 解题页：正方体 ABCD-A₁B₁C₁D₁ 中，求异面直线 AC 与 BD₁ 所成的角。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 82 50\" width=\"82\" height=\"50\" shape-rendering=\"crispEdges\"><rect width=\"82\" height=\"50\" fill=\"#f7f4ed\"/><rect width=\"82\" height=\"50\" fill=\"#d6e5f0\"/><g stroke=\"#2f6f9e\" stroke-width=\"2.2\" fill=\"none\"><circle cx=\"41.3\" cy=\"42.9\" r=\"7.3\"/><circle cx=\"41.3\" cy=\"42.9\" r=\"14.5\"/><circle cx=\"41.3\" cy=\"42.9\" r=\"21.8\"/><circle cx=\"41.3\" cy=\"42.9\" r=\"29.1\"/><circle cx=\"41.3\" cy=\"42.9\" r=\"36.3\"/><circle cx=\"41.3\" cy=\"42.9\" r=\"43.6\"/></g><g transform=\"translate(-2.7 2.4)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"52.4\" y=\"12.1\" width=\"25.8\" height=\"21.7\" fill=\"#8fbedd\"/></g><rect width=\"82\" height=\"50\" fill=\"url(#grain)\"/></svg>",
+      "w": 82,
+      "h": 50,
+      "pattern": "arcs",
       "num": "17",
-      "featured": true
+      "featured": true,
+      "x": 669.0,
+      "y": 250.0
     },
     {
       "id": "email-sender",
@@ -382,8 +632,19 @@
       "refUrl": "",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "备课"
+      ],
+      "example": "用 email-sender 把这份家长会通知发到班级邮件组。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 67 67\" width=\"67\" height=\"67\" shape-rendering=\"crispEdges\"><rect width=\"67\" height=\"67\" fill=\"#f7f4ed\"/><rect width=\"67\" height=\"67\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"1.5\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M4.0 23.1C12.5 8.9 28.4 56.7 48.6 2.4\"/><path d=\"M1.9 13.8C8.8 30.2 30.5 56.5 48.8 27.9\"/><path d=\"M7.1 49.2C10.7 75.1 7.6 64.7 61.1 33.5\"/><path d=\"M14.2 34.7C6.7 47.4 42.1 59.6 55.8 27.1\"/></g><g transform=\"translate(1.5 -1.1)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"17.7\" y=\"1.4\" width=\"28.9\" height=\"35.5\" fill=\"#b199d6\"/></g><rect width=\"67\" height=\"67\" fill=\"url(#grain)\"/></svg>",
+      "w": 67,
+      "h": 67,
+      "pattern": "linework",
       "num": "18",
-      "featured": false
+      "featured": false,
+      "x": 1688.9,
+      "y": 541.5
     },
     {
       "id": "explicit-instruction-sequence-builder",
@@ -402,8 +663,17 @@
       "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/explicit-instruction-sequence-builder",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [],
+      "example": "用 explicit-instruction-sequence-builder 做一节「分数除法」的课时教案，I do / we do / you do 结构，带时间分配和随堂检查点。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 91 56\" width=\"91\" height=\"56\" shape-rendering=\"crispEdges\"><rect width=\"91\" height=\"56\" fill=\"#f7f4ed\"/><rect width=\"91\" height=\"56\" fill=\"#d8e8dc\"/><g stroke=\"#2f7d52\" stroke-width=\"6.7\"><path d=\"M-56 56L0 0\"/><path d=\"M-42.6 56L13.4 0\"/><path d=\"M-29.2 56L26.8 0\"/><path d=\"M-15.8 56L40.2 0\"/><path d=\"M-2.4 56L53.6 0\"/><path d=\"M11.0 56L67.0 0\"/><path d=\"M24.4 56L80.4 0\"/><path d=\"M37.8 56L93.8 0\"/><path d=\"M51.2 56L107.2 0\"/><path d=\"M64.6 56L120.6 0\"/><path d=\"M78.0 56L134.0 0\"/><path d=\"M91.4 56L147.4 0\"/><path d=\"M104.8 56L160.8 0\"/><path d=\"M118.2 56L174.2 0\"/><path d=\"M131.6 56L187.6 0\"/><path d=\"M145.0 56L201.0 0\"/></g><g transform=\"translate(-0.4 -0.4)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"10.6\" y=\"6.3\" width=\"43.1\" height=\"19.2\" fill=\"#8fc9a4\"/></g><rect width=\"91\" height=\"56\" fill=\"url(#grain)\"/></svg>",
+      "w": 91,
+      "h": 56,
+      "pattern": "stripes",
       "num": "19",
-      "featured": false
+      "featured": false,
+      "x": 583.1,
+      "y": 432.0
     },
     {
       "id": "formative-assessment-technique-selector",
@@ -422,8 +692,17 @@
       "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/formative-assessment-technique-selector",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [],
+      "example": "用 formative-assessment-technique-selector 帮我挑几个课中检查学生是否听懂的随堂检测方法。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 58\" width=\"80\" height=\"58\" shape-rendering=\"crispEdges\"><rect width=\"80\" height=\"58\" fill=\"#f7f4ed\"/><rect x=\"0\" y=\"0\" width=\"48.3\" height=\"25.7\" fill=\"#d8e8dc\"/><rect x=\"48.3\" y=\"0\" width=\"31.7\" height=\"25.7\" fill=\"#2f7d52\"/><rect x=\"0\" y=\"25.7\" width=\"48.3\" height=\"32.3\" fill=\"#8fc9a4\"/><rect x=\"48.3\" y=\"25.7\" width=\"31.7\" height=\"32.3\" fill=\"#1b4d34\"/><g transform=\"translate(1.2 -0.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"19.8\" y=\"10.9\" width=\"41.8\" height=\"25.8\" fill=\"#8fc9a4\"/></g><rect width=\"80\" height=\"58\" fill=\"url(#grain)\"/></svg>",
+      "w": 80,
+      "h": 58,
+      "pattern": "blocks",
       "num": "20",
-      "featured": false
+      "featured": false,
+      "x": 468.3,
+      "y": 764.0
     },
     {
       "id": "frontend-design",
@@ -442,8 +721,17 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/frontend-design",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [],
+      "example": "用 frontend-design 帮我把这个页面重做得更有设计感，别一眼看上去像 AI 模板。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 61 75\" width=\"61\" height=\"75\" shape-rendering=\"crispEdges\"><rect width=\"61\" height=\"75\" fill=\"#f7f4ed\"/><rect width=\"61\" height=\"75\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"1.9\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M5.2 36.1C49.6 36.2 20.8 78.7 53.3 65.6\"/><path d=\"M8.2 14.4C4.8 9.7 45.4 89.3 47.6 73.7\"/><path d=\"M2.3 42.1C55.0 7.8 29.1 72.3 51.2 62.4\"/><path d=\"M6.0 37.4C19.4 21.0 16.2 14.9 46.5 18.9\"/><path d=\"M16.8 27.0C56.5 -2.2 9.4 76.3 50.7 62.7\"/></g><g transform=\"translate(-2.6 0.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"9.7\" y=\"25.6\" width=\"27.1\" height=\"32.2\" fill=\"#b199d6\"/></g><rect width=\"61\" height=\"75\" fill=\"url(#grain)\"/></svg>",
+      "w": 61,
+      "h": 75,
+      "pattern": "linework",
       "num": "21",
-      "featured": false
+      "featured": false,
+      "x": 1345.9,
+      "y": 365.7
     },
     {
       "id": "frontend-slides",
@@ -462,8 +750,19 @@
       "refUrl": "https://github.com/zarazhangrui/frontend-slides",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 frontend-slides 做一套讲「二次函数图象与性质」的网页幻灯片，带动画，风格清爽。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 67 67\" width=\"67\" height=\"67\" shape-rendering=\"crispEdges\"><rect width=\"67\" height=\"67\" fill=\"#f7f4ed\"/><rect width=\"67\" height=\"67\" fill=\"#d6e5f0\"/><g stroke=\"#2f6f9e\" stroke-width=\"5.0\"><path d=\"M-67 67L0 0\"/><path d=\"M-57.0 67L10.0 0\"/><path d=\"M-47.0 67L20.0 0\"/><path d=\"M-37.0 67L30.0 0\"/><path d=\"M-27.0 67L40.0 0\"/><path d=\"M-17.0 67L50.0 0\"/><path d=\"M-7.0 67L60.0 0\"/><path d=\"M3.0 67L70.0 0\"/><path d=\"M13.0 67L80.0 0\"/><path d=\"M23.0 67L90.0 0\"/><path d=\"M33.0 67L100.0 0\"/><path d=\"M43.0 67L110.0 0\"/><path d=\"M53.0 67L120.0 0\"/><path d=\"M63.0 67L130.0 0\"/><path d=\"M73.0 67L140.0 0\"/><path d=\"M83.0 67L150.0 0\"/><path d=\"M93.0 67L160.0 0\"/><path d=\"M103.0 67L170.0 0\"/><path d=\"M113.0 67L180.0 0\"/><path d=\"M123.0 67L190.0 0\"/><path d=\"M133.0 67L200.0 0\"/></g><g transform=\"translate(-0.5 0.9)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"4.8\" y=\"19.6\" width=\"23.5\" height=\"23.6\" fill=\"#8fbedd\"/></g><rect width=\"67\" height=\"67\" fill=\"url(#grain)\"/></svg>",
+      "w": 67,
+      "h": 67,
+      "pattern": "stripes",
       "num": "22",
-      "featured": false
+      "featured": false,
+      "x": 1119.5,
+      "y": 199.1
     },
     {
       "id": "homework-grader",
@@ -482,8 +781,17 @@
       "refUrl": "https://github.com/ChantillyAn/homework-grader",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [],
+      "example": "用 homework-grader 按这份评分标准批改这些作业，打分要引用原文证据，最后导出成绩 Excel 和每人评语。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 65 82\" width=\"65\" height=\"82\" shape-rendering=\"crispEdges\"><rect width=\"65\" height=\"82\" fill=\"#f7f4ed\"/><rect width=\"65\" height=\"82\" fill=\"#d8e8dc\"/><rect x=\"13.3\" y=\"16.0\" width=\"4.7\" height=\"4.7\" fill=\"#2f7d52\"/><rect x=\"52.5\" y=\"66.5\" width=\"5.9\" height=\"5.9\" fill=\"#1b4d34\"/><rect x=\"56.5\" y=\"7.3\" width=\"3.5\" height=\"3.5\" fill=\"#2f7d52\"/><rect x=\"58.5\" y=\"51.6\" width=\"6.0\" height=\"6.0\" fill=\"#2f7d52\"/><rect x=\"50.8\" y=\"48.3\" width=\"2.9\" height=\"2.9\" fill=\"#2f7d52\"/><rect x=\"37.7\" y=\"67.0\" width=\"5.1\" height=\"5.1\" fill=\"#2f7d52\"/><rect x=\"5.2\" y=\"34.0\" width=\"5.7\" height=\"5.7\" fill=\"#2f7d52\"/><rect x=\"25.1\" y=\"54.6\" width=\"4.6\" height=\"4.6\" fill=\"#2f7d52\"/><rect x=\"56.8\" y=\"34.3\" width=\"6.7\" height=\"6.7\" fill=\"#2f7d52\"/><rect x=\"42.9\" y=\"4.4\" width=\"5.1\" height=\"5.1\" fill=\"#1b4d34\"/><rect x=\"32.7\" y=\"51.7\" width=\"3.3\" height=\"3.3\" fill=\"#2f7d52\"/><rect x=\"46.4\" y=\"8.1\" width=\"5.2\" height=\"5.2\" fill=\"#2f7d52\"/><rect x=\"28.9\" y=\"40.0\" width=\"6.9\" height=\"6.9\" fill=\"#2f7d52\"/><rect x=\"39.5\" y=\"58.5\" width=\"6.0\" height=\"6.0\" fill=\"#2f7d52\"/><rect x=\"41.0\" y=\"27.1\" width=\"5.6\" height=\"5.6\" fill=\"#1b4d34\"/><rect x=\"41.0\" y=\"46.6\" width=\"3.4\" height=\"3.4\" fill=\"#2f7d52\"/><rect x=\"37.1\" y=\"12.3\" width=\"2.9\" height=\"2.9\" fill=\"#2f7d52\"/><rect x=\"23.0\" y=\"45.2\" width=\"3.8\" height=\"3.8\" fill=\"#2f7d52\"/><rect x=\"6.6\" y=\"72.2\" width=\"7.0\" height=\"7.0\" fill=\"#2f7d52\"/><rect x=\"6.1\" y=\"46.0\" width=\"3.0\" height=\"3.0\" fill=\"#1b4d34\"/><rect x=\"8.5\" y=\"34.1\" width=\"6.8\" height=\"6.8\" fill=\"#1b4d34\"/><rect x=\"16.8\" y=\"14.6\" width=\"4.3\" height=\"4.3\" fill=\"#1b4d34\"/><rect x=\"41.1\" y=\"4.4\" width=\"5.7\" height=\"5.7\" fill=\"#2f7d52\"/><rect x=\"44.8\" y=\"78.1\" width=\"2.9\" height=\"2.9\" fill=\"#2f7d52\"/><rect x=\"55.2\" y=\"57.1\" width=\"3.7\" height=\"3.7\" fill=\"#2f7d52\"/><rect x=\"26.2\" y=\"74.2\" width=\"2.9\" height=\"2.9\" fill=\"#1b4d34\"/><g transform=\"translate(1.0 0.9)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"21.8\" y=\"37.9\" width=\"33.1\" height=\"28.4\" fill=\"#8fc9a4\"/></g><rect width=\"65\" height=\"82\" fill=\"url(#grain)\"/></svg>",
+      "w": 65,
+      "h": 82,
+      "pattern": "scatter",
       "num": "23",
-      "featured": false
+      "featured": false,
+      "x": 396.8,
+      "y": 411.2
     },
     {
       "id": "ian-xiaohei-illustrations",
@@ -502,8 +810,19 @@
       "refUrl": "https://github.com/helloianneo/ian-xiaohei-illustrations",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 ian-xiaohei-illustrations 给这篇公众号文章配几张小黑风格的解释图。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 79 62\" width=\"79\" height=\"62\" shape-rendering=\"crispEdges\"><rect width=\"79\" height=\"62\" fill=\"#f7f4ed\"/><rect width=\"79\" height=\"62\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"2.0\" fill=\"none\"><circle cx=\"67.7\" cy=\"25.2\" r=\"8.2\"/><circle cx=\"67.7\" cy=\"25.2\" r=\"16.3\"/><circle cx=\"67.7\" cy=\"25.2\" r=\"24.5\"/><circle cx=\"67.7\" cy=\"25.2\" r=\"32.7\"/><circle cx=\"67.7\" cy=\"25.2\" r=\"40.8\"/></g><g transform=\"translate(-0.1 2.0)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"4.2\" y=\"16.4\" width=\"41.2\" height=\"31.7\" fill=\"#b199d6\"/></g><rect width=\"79\" height=\"62\" fill=\"url(#grain)\"/></svg>",
+      "w": 79,
+      "h": 62,
+      "pattern": "arcs",
       "num": "24",
-      "featured": false
+      "featured": false,
+      "x": 1717.6,
+      "y": 285.0
     },
     {
       "id": "k12-lesson-differentiation",
@@ -522,8 +841,19 @@
       "refUrl": "https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-differentiation",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 k12-lesson-differentiation 把这节课按学生水平分成三层，输出可编辑的 Word 分层材料。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 89 51\" width=\"89\" height=\"51\" shape-rendering=\"crispEdges\"><rect width=\"89\" height=\"51\" fill=\"#f7f4ed\"/><rect width=\"89\" height=\"51\" fill=\"#d8e8dc\"/><g stroke=\"#2f7d52\" stroke-width=\"5.3\"><path d=\"M-51 51L0 0\"/><path d=\"M-40.4 51L10.6 0\"/><path d=\"M-29.8 51L21.2 0\"/><path d=\"M-19.2 51L31.8 0\"/><path d=\"M-8.6 51L42.4 0\"/><path d=\"M2.0 51L53.0 0\"/><path d=\"M12.6 51L63.6 0\"/><path d=\"M23.2 51L74.2 0\"/><path d=\"M33.8 51L84.8 0\"/><path d=\"M44.4 51L95.4 0\"/><path d=\"M55.0 51L106.0 0\"/><path d=\"M65.6 51L116.6 0\"/><path d=\"M76.2 51L127.2 0\"/><path d=\"M86.8 51L137.8 0\"/><path d=\"M97.4 51L148.4 0\"/><path d=\"M108.0 51L159.0 0\"/><path d=\"M118.6 51L169.6 0\"/><path d=\"M129.2 51L180.2 0\"/><path d=\"M139.8 51L190.8 0\"/></g><g transform=\"translate(0.3 0.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"34.9\" y=\"7.7\" width=\"35.3\" height=\"30.6\" fill=\"#8fc9a4\"/></g><rect width=\"89\" height=\"51\" fill=\"url(#grain)\"/></svg>",
+      "w": 89,
+      "h": 51,
+      "pattern": "stripes",
       "num": "25",
-      "featured": false
+      "featured": false,
+      "x": 684.5,
+      "y": 563.4
     },
     {
       "id": "k12-lesson-planning",
@@ -542,8 +872,19 @@
       "refUrl": "https://github.com/anthropics/k12-teacher-skills/tree/main/plugin/skills/k12-lesson-planning",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 k12-lesson-planning 备一节五年级数学「长除法」的课，要教案、学生用材料和课堂观察表。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 53 68\" width=\"53\" height=\"68\" shape-rendering=\"crispEdges\"><rect width=\"53\" height=\"68\" fill=\"#f7f4ed\"/><rect width=\"53\" height=\"68\" fill=\"#d8e8dc\"/><g stroke=\"#2f7d52\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 4.9 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/><path d=\"M0 14.6 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/><path d=\"M0 24.3 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/><path d=\"M0 34.0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/><path d=\"M0 43.7 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/><path d=\"M0 53.4 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/><path d=\"M0 63.1 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0 q6.6 -4.9 13.2 0 q6.6 4.9 13.2 0\"/></g><g transform=\"translate(1.6 2.8)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"27.1\" y=\"9.9\" width=\"21.8\" height=\"30.7\" fill=\"#8fc9a4\"/></g><rect width=\"53\" height=\"68\" fill=\"url(#grain)\"/></svg>",
+      "w": 53,
+      "h": 68,
+      "pattern": "waves",
       "num": "26",
-      "featured": true
+      "featured": true,
+      "x": 212.9,
+      "y": 642.8
     },
     {
       "id": "learning-opportunities",
@@ -562,8 +903,19 @@
       "refUrl": "https://github.com/DrCatHicks/learning-opportunities",
       "demo": "",
       "hasDemo": false,
+      "scenario": "自学",
+      "also": [
+        "创造"
+      ],
+      "example": "用 learning-opportunities 在我写完这段代码之后，给我出几个循证的学习练习巩固一下。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 72 72\" width=\"72\" height=\"72\" shape-rendering=\"crispEdges\"><rect width=\"72\" height=\"72\" fill=\"#f7f4ed\"/><rect width=\"72\" height=\"72\" fill=\"#f6ddc9\"/><g stroke=\"#c25a2e\" stroke-width=\"1.6\" fill=\"none\"><path d=\"M0.0 0V72\"/><path d=\"M18.0 0V72\"/><path d=\"M36.0 0V72\"/><path d=\"M54.0 0V72\"/><path d=\"M72.0 0V72\"/><path d=\"M0 0.0H72\"/><path d=\"M0 18.0H72\"/><path d=\"M0 36.0H72\"/><path d=\"M0 54.0H72\"/><path d=\"M0 72.0H72\"/></g><g transform=\"translate(-2.6 1.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"18.8\" y=\"13.7\" width=\"25.8\" height=\"23.2\" fill=\"#f0a878\"/></g><rect width=\"72\" height=\"72\" fill=\"url(#grain)\"/></svg>",
+      "w": 72,
+      "h": 72,
+      "pattern": "grid",
       "num": "27",
-      "featured": false
+      "featured": false,
+      "x": 864.0,
+      "y": 1009.0
     },
     {
       "id": "markitdown",
@@ -582,8 +934,19 @@
       "refUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/HEAD/scientific-skills/markitdown",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [
+        "备课"
+      ],
+      "example": "用 markitdown 把这堆 PDF 和 PPT 统一转成 Markdown，方便我做笔记。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 72 72\" width=\"72\" height=\"72\" shape-rendering=\"crispEdges\"><rect width=\"72\" height=\"72\" fill=\"#f7f4ed\"/><rect width=\"72\" height=\"72\" fill=\"#f0e5c8\"/><g stroke=\"#a58535\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M20.5 32.1C43.8 65.8 29.2 -11.3 60.2 27.7\"/><path d=\"M0.2 64.4C33.5 78.6 16.9 44.2 69.4 5.2\"/><path d=\"M12.1 23.4C54.6 -13.1 29.6 48.9 68.8 71.5\"/><path d=\"M0.4 70.7C61.3 20.0 12.7 81.8 67.3 7.6\"/><path d=\"M16.8 68.1C65.8 66.7 34.7 22.0 55.9 5.0\"/><path d=\"M0.6 1.8C15.2 68.1 6.8 42.3 52.1 55.6\"/></g><g transform=\"translate(-1.8 -0.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"4.1\" y=\"42.2\" width=\"42.9\" height=\"23.7\" fill=\"#e0c583\"/></g><rect width=\"72\" height=\"72\" fill=\"url(#grain)\"/></svg>",
+      "w": 72,
+      "h": 72,
+      "pattern": "linework",
       "num": "28",
-      "featured": false
+      "featured": false,
+      "x": 1128.0,
+      "y": 742.8
     },
     {
       "id": "math-tutor",
@@ -602,8 +965,17 @@
       "refUrl": "https://github.com/cdmorozov/claude-tutors",
       "demo": "",
       "hasDemo": false,
+      "scenario": "自学",
+      "also": [],
+      "example": "用 math-tutor 讲这道题，别直接给答案，一步步引导我自己做出来：二次函数过点 (1,0)、(3,0)，且最小值为 -2，求解析式。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 93 62\" width=\"93\" height=\"62\" shape-rendering=\"crispEdges\"><rect width=\"93\" height=\"62\" fill=\"#f7f4ed\"/><rect width=\"93\" height=\"62\" fill=\"#f6ddc9\"/><g stroke=\"#c25a2e\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M9.8 45.6C29.3 8.1 74.6 42.2 70.8 29.5\"/><path d=\"M2.9 19.8C63.9 56.7 87.7 -1.3 91.1 51.3\"/><path d=\"M14.1 50.1C85.4 54.5 67.0 10.6 73.1 42.6\"/><path d=\"M11.3 6.9C19.6 36.1 84.9 30.8 86.7 29.0\"/></g><g transform=\"translate(2.6 -1.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"25.3\" y=\"14.5\" width=\"53.4\" height=\"32.1\" fill=\"#f0a878\"/></g><rect width=\"93\" height=\"62\" fill=\"url(#grain)\"/></svg>",
+      "w": 93,
+      "h": 62,
+      "pattern": "linework",
       "num": "29",
-      "featured": false
+      "featured": false,
+      "x": 631.9,
+      "y": 1033.0
     },
     {
       "id": "mcp-builder",
@@ -622,8 +994,17 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/mcp-builder",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [],
+      "example": "用 mcp-builder 把我们学校的教务 API 封装成一个 MCP 服务器。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" width=\"64\" height=\"64\" shape-rendering=\"crispEdges\"><rect width=\"64\" height=\"64\" fill=\"#f7f4ed\"/><rect x=\"0\" y=\"0\" width=\"39.2\" height=\"28.5\" fill=\"#432f66\"/><rect x=\"39.2\" y=\"0\" width=\"24.8\" height=\"28.5\" fill=\"#6b4d9c\"/><rect x=\"0\" y=\"28.5\" width=\"39.2\" height=\"35.5\" fill=\"#e3daf1\"/><rect x=\"39.2\" y=\"28.5\" width=\"24.8\" height=\"35.5\" fill=\"#b199d6\"/><g transform=\"translate(2.2 0.2)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"22.1\" y=\"18.7\" width=\"20.5\" height=\"20.2\" fill=\"#b199d6\"/></g><rect width=\"64\" height=\"64\" fill=\"url(#grain)\"/></svg>",
+      "w": 64,
+      "h": 64,
+      "pattern": "blocks",
       "num": "30",
-      "featured": false
+      "featured": false,
+      "x": 1526.4,
+      "y": 547.7
     },
     {
       "id": "paper-lookup",
@@ -642,8 +1023,17 @@
       "refUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/HEAD/scientific-skills/paper-lookup",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [],
+      "example": "用 paper-lookup 检索近三年「生成式 AI 在中小学教学中的应用」相关的论文。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 62 75\" width=\"62\" height=\"75\" shape-rendering=\"crispEdges\"><rect width=\"62\" height=\"75\" fill=\"#f7f4ed\"/><rect x=\"0\" y=\"0\" width=\"31.3\" height=\"27.8\" fill=\"#a58535\"/><rect x=\"31.3\" y=\"0\" width=\"30.7\" height=\"27.8\" fill=\"#6b5420\"/><rect x=\"0\" y=\"27.8\" width=\"31.3\" height=\"47.2\" fill=\"#f0e5c8\"/><rect x=\"31.3\" y=\"27.8\" width=\"30.7\" height=\"47.2\" fill=\"#e0c583\"/><g transform=\"translate(1.9 1.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"27.8\" y=\"37.8\" width=\"18.6\" height=\"26.0\" fill=\"#e0c583\"/></g><rect width=\"62\" height=\"75\" fill=\"url(#grain)\"/></svg>",
+      "w": 62,
+      "h": 75,
+      "pattern": "blocks",
       "num": "31",
-      "featured": false
+      "featured": false,
+      "x": 1571.0,
+      "y": 723.9
     },
     {
       "id": "pdf",
@@ -662,8 +1052,19 @@
       "refUrl": "https://github.com/fcakyon/claude-codex-settings/tree/HEAD/plugins/openai-office-skills/skills/pdf",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [
+        "备课"
+      ],
+      "example": "用 pdf 把这份扫描的试卷做 OCR，并提取出里面所有题目。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 66\" width=\"80\" height=\"66\" shape-rendering=\"crispEdges\"><rect width=\"80\" height=\"66\" fill=\"#f7f4ed\"/><rect width=\"80\" height=\"66\" fill=\"#f0e5c8\"/><g fill=\"#a58535\"><circle cx=\"4.1\" cy=\"4.1\" r=\"1.5\"/><circle cx=\"12.3\" cy=\"4.1\" r=\"1.9\"/><circle cx=\"20.5\" cy=\"4.1\" r=\"2.1\"/><circle cx=\"28.7\" cy=\"4.1\" r=\"2.2\"/><circle cx=\"36.9\" cy=\"4.1\" r=\"2.1\"/><circle cx=\"45.1\" cy=\"4.1\" r=\"1.8\"/><circle cx=\"53.3\" cy=\"4.1\" r=\"1.4\"/><circle cx=\"61.5\" cy=\"4.1\" r=\"1.0\"/><circle cx=\"69.7\" cy=\"4.1\" r=\"0.6\"/><circle cx=\"77.9\" cy=\"4.1\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"12.3\" r=\"1.8\"/><circle cx=\"12.3\" cy=\"12.3\" r=\"2.3\"/><circle cx=\"20.5\" cy=\"12.3\" r=\"2.6\"/><circle cx=\"28.7\" cy=\"12.3\" r=\"2.7\"/><circle cx=\"36.9\" cy=\"12.3\" r=\"2.5\"/><circle cx=\"45.1\" cy=\"12.3\" r=\"2.2\"/><circle cx=\"53.3\" cy=\"12.3\" r=\"1.7\"/><circle cx=\"61.5\" cy=\"12.3\" r=\"1.3\"/><circle cx=\"69.7\" cy=\"12.3\" r=\"0.8\"/><circle cx=\"77.9\" cy=\"12.3\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"20.5\" r=\"2.0\"/><circle cx=\"12.3\" cy=\"20.5\" r=\"2.5\"/><circle cx=\"20.5\" cy=\"20.5\" r=\"3.0\"/><circle cx=\"28.7\" cy=\"20.5\" r=\"3.2\"/><circle cx=\"36.9\" cy=\"20.5\" r=\"2.9\"/><circle cx=\"45.1\" cy=\"20.5\" r=\"2.4\"/><circle cx=\"53.3\" cy=\"20.5\" r=\"1.9\"/><circle cx=\"61.5\" cy=\"20.5\" r=\"1.4\"/><circle cx=\"69.7\" cy=\"20.5\" r=\"0.9\"/><circle cx=\"77.9\" cy=\"20.5\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"28.7\" r=\"2.1\"/><circle cx=\"12.3\" cy=\"28.7\" r=\"2.6\"/><circle cx=\"20.5\" cy=\"28.7\" r=\"3.1\"/><circle cx=\"28.7\" cy=\"28.7\" r=\"3.5\"/><circle cx=\"36.9\" cy=\"28.7\" r=\"3.0\"/><circle cx=\"45.1\" cy=\"28.7\" r=\"2.5\"/><circle cx=\"53.3\" cy=\"28.7\" r=\"2.0\"/><circle cx=\"61.5\" cy=\"28.7\" r=\"1.4\"/><circle cx=\"69.7\" cy=\"28.7\" r=\"0.9\"/><circle cx=\"77.9\" cy=\"28.7\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"36.9\" r=\"1.9\"/><circle cx=\"12.3\" cy=\"36.9\" r=\"2.4\"/><circle cx=\"20.5\" cy=\"36.9\" r=\"2.8\"/><circle cx=\"28.7\" cy=\"36.9\" r=\"2.9\"/><circle cx=\"36.9\" cy=\"36.9\" r=\"2.7\"/><circle cx=\"45.1\" cy=\"36.9\" r=\"2.3\"/><circle cx=\"53.3\" cy=\"36.9\" r=\"1.8\"/><circle cx=\"61.5\" cy=\"36.9\" r=\"1.4\"/><circle cx=\"69.7\" cy=\"36.9\" r=\"0.8\"/><circle cx=\"77.9\" cy=\"36.9\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"45.1\" r=\"1.7\"/><circle cx=\"12.3\" cy=\"45.1\" r=\"2.0\"/><circle cx=\"20.5\" cy=\"45.1\" r=\"2.3\"/><circle cx=\"28.7\" cy=\"45.1\" r=\"2.4\"/><circle cx=\"36.9\" cy=\"45.1\" r=\"2.3\"/><circle cx=\"45.1\" cy=\"45.1\" r=\"2.0\"/><circle cx=\"53.3\" cy=\"45.1\" r=\"1.6\"/><circle cx=\"61.5\" cy=\"45.1\" r=\"1.1\"/><circle cx=\"69.7\" cy=\"45.1\" r=\"0.7\"/><circle cx=\"77.9\" cy=\"45.1\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"53.3\" r=\"1.3\"/><circle cx=\"12.3\" cy=\"53.3\" r=\"1.6\"/><circle cx=\"20.5\" cy=\"53.3\" r=\"1.8\"/><circle cx=\"28.7\" cy=\"53.3\" r=\"1.9\"/><circle cx=\"36.9\" cy=\"53.3\" r=\"1.8\"/><circle cx=\"45.1\" cy=\"53.3\" r=\"1.6\"/><circle cx=\"53.3\" cy=\"53.3\" r=\"1.2\"/><circle cx=\"61.5\" cy=\"53.3\" r=\"0.8\"/><circle cx=\"69.7\" cy=\"53.3\" r=\"0.6\"/><circle cx=\"77.9\" cy=\"53.3\" r=\"0.6\"/><circle cx=\"4.1\" cy=\"61.5\" r=\"0.9\"/><circle cx=\"12.3\" cy=\"61.5\" r=\"1.1\"/><circle cx=\"20.5\" cy=\"61.5\" r=\"1.3\"/><circle cx=\"28.7\" cy=\"61.5\" r=\"1.4\"/><circle cx=\"36.9\" cy=\"61.5\" r=\"1.3\"/><circle cx=\"45.1\" cy=\"61.5\" r=\"1.1\"/><circle cx=\"53.3\" cy=\"61.5\" r=\"0.8\"/><circle cx=\"61.5\" cy=\"61.5\" r=\"0.6\"/><circle cx=\"69.7\" cy=\"61.5\" r=\"0.6\"/><circle cx=\"77.9\" cy=\"61.5\" r=\"0.6\"/></g><g transform=\"translate(-1.3 -0.4)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"0.7\" y=\"27.5\" width=\"47.0\" height=\"29.5\" fill=\"#e0c583\"/></g><rect width=\"80\" height=\"66\" fill=\"url(#grain)\"/></svg>",
+      "w": 80,
+      "h": 66,
+      "pattern": "halftone",
       "num": "32",
-      "featured": false
+      "featured": false,
+      "x": 1348.2,
+      "y": 973.2
     },
     {
       "id": "pptx",
@@ -682,8 +1083,19 @@
       "refUrl": "https://github.com/fcakyon/claude-codex-settings/tree/HEAD/plugins/anthropic-office-skills/skills/pptx",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "备课"
+      ],
+      "example": "用 pptx 把这份教案做成一套可编辑的 PPT 课件。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 76 53\" width=\"76\" height=\"53\" shape-rendering=\"crispEdges\"><rect width=\"76\" height=\"53\" fill=\"#f7f4ed\"/><rect width=\"76\" height=\"53\" fill=\"#d6e5f0\"/><g stroke=\"#2f6f9e\" stroke-width=\"1.5\" fill=\"none\"><path d=\"M0.0 0V53\"/><path d=\"M19.0 0V53\"/><path d=\"M38.0 0V53\"/><path d=\"M57.0 0V53\"/><path d=\"M76.0 0V53\"/><path d=\"M0 0.0H76\"/><path d=\"M0 19.0H76\"/><path d=\"M0 38.0H76\"/></g><g transform=\"translate(-1.5 1.4)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"9.3\" y=\"16.8\" width=\"33.2\" height=\"24.7\" fill=\"#8fbedd\"/></g><rect width=\"76\" height=\"53\" fill=\"url(#grain)\"/></svg>",
+      "w": 76,
+      "h": 53,
+      "pattern": "grid",
       "num": "33",
-      "featured": false
+      "featured": false,
+      "x": 842.6,
+      "y": 452.5
     },
     {
       "id": "prompt-engineer",
@@ -702,8 +1114,17 @@
       "refUrl": "https://github.com/Jeffallan/claude-skills/tree/HEAD/skills/prompt-engineer",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [],
+      "example": "用 prompt-engineer 帮我把这个批改提示词重写得更稳定，并配一套测试用例。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 65 65\" width=\"65\" height=\"65\" shape-rendering=\"crispEdges\"><rect width=\"65\" height=\"65\" fill=\"#f7f4ed\"/><rect width=\"65\" height=\"65\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"1.8\" fill=\"none\"><circle cx=\"25.8\" cy=\"27.7\" r=\"10.1\"/><circle cx=\"25.8\" cy=\"27.7\" r=\"20.1\"/><circle cx=\"25.8\" cy=\"27.7\" r=\"30.2\"/></g><g transform=\"translate(1.4 1.1)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"6.5\" y=\"41.3\" width=\"23.7\" height=\"23.5\" fill=\"#b199d6\"/></g><rect width=\"65\" height=\"65\" fill=\"url(#grain)\"/></svg>",
+      "w": 65,
+      "h": 65,
+      "pattern": "arcs",
       "num": "34",
-      "featured": false
+      "featured": false,
+      "x": 1426.9,
+      "y": 282.3
     },
     {
       "id": "scope-and-sequence-designer",
@@ -722,8 +1143,17 @@
       "refUrl": "https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/scope-and-sequence-designer",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [],
+      "example": "用 scope-and-sequence-designer 排一份初中数学三年的教学进度表，标出先修依赖。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 77 56\" width=\"77\" height=\"56\" shape-rendering=\"crispEdges\"><rect width=\"77\" height=\"56\" fill=\"#f7f4ed\"/><rect width=\"77\" height=\"56\" fill=\"#d8e8dc\"/><g fill=\"#2f7d52\"><circle cx=\"5.7\" cy=\"5.7\" r=\"2.5\"/><circle cx=\"17.1\" cy=\"5.7\" r=\"3.2\"/><circle cx=\"28.5\" cy=\"5.7\" r=\"3.5\"/><circle cx=\"39.9\" cy=\"5.7\" r=\"3.1\"/><circle cx=\"51.3\" cy=\"5.7\" r=\"2.3\"/><circle cx=\"62.7\" cy=\"5.7\" r=\"1.3\"/><circle cx=\"74.1\" cy=\"5.7\" r=\"0.6\"/><circle cx=\"5.7\" cy=\"17.1\" r=\"3.0\"/><circle cx=\"17.1\" cy=\"17.1\" r=\"4.0\"/><circle cx=\"28.5\" cy=\"17.1\" r=\"4.5\"/><circle cx=\"39.9\" cy=\"17.1\" r=\"3.7\"/><circle cx=\"51.3\" cy=\"17.1\" r=\"2.7\"/><circle cx=\"62.7\" cy=\"17.1\" r=\"1.7\"/><circle cx=\"74.1\" cy=\"17.1\" r=\"0.6\"/><circle cx=\"5.7\" cy=\"28.5\" r=\"3.0\"/><circle cx=\"17.1\" cy=\"28.5\" r=\"3.9\"/><circle cx=\"28.5\" cy=\"28.5\" r=\"4.4\"/><circle cx=\"39.9\" cy=\"28.5\" r=\"3.7\"/><circle cx=\"51.3\" cy=\"28.5\" r=\"2.7\"/><circle cx=\"62.7\" cy=\"28.5\" r=\"1.6\"/><circle cx=\"74.1\" cy=\"28.5\" r=\"0.6\"/><circle cx=\"5.7\" cy=\"39.9\" r=\"2.5\"/><circle cx=\"17.1\" cy=\"39.9\" r=\"3.2\"/><circle cx=\"28.5\" cy=\"39.9\" r=\"3.4\"/><circle cx=\"39.9\" cy=\"39.9\" r=\"3.0\"/><circle cx=\"51.3\" cy=\"39.9\" r=\"2.2\"/><circle cx=\"62.7\" cy=\"39.9\" r=\"1.3\"/><circle cx=\"74.1\" cy=\"39.9\" r=\"0.6\"/><circle cx=\"5.7\" cy=\"51.3\" r=\"1.7\"/><circle cx=\"17.1\" cy=\"51.3\" r=\"2.2\"/><circle cx=\"28.5\" cy=\"51.3\" r=\"2.3\"/><circle cx=\"39.9\" cy=\"51.3\" r=\"2.1\"/><circle cx=\"51.3\" cy=\"51.3\" r=\"1.5\"/><circle cx=\"62.7\" cy=\"51.3\" r=\"0.7\"/><circle cx=\"74.1\" cy=\"51.3\" r=\"0.6\"/></g><g transform=\"translate(2.9 0.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"12.6\" y=\"15.8\" width=\"40.6\" height=\"23.2\" fill=\"#8fc9a4\"/></g><rect width=\"77\" height=\"56\" fill=\"url(#grain)\"/></svg>",
+      "w": 77,
+      "h": 56,
+      "pattern": "halftone",
       "num": "35",
-      "featured": false
+      "featured": false,
+      "x": 588.1,
+      "y": 358.0
     },
     {
       "id": "skill-creator",
@@ -742,8 +1172,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/skill-creator",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "备课"
+      ],
+      "example": "用 skill-creator 把我这套备课流程做成一个可复用的 skill。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 74 74\" width=\"74\" height=\"74\" shape-rendering=\"crispEdges\"><rect width=\"74\" height=\"74\" fill=\"#f7f4ed\"/><rect width=\"74\" height=\"74\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"1.7\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M18.2 26.4C52.4 18.5 37.6 82.5 59.4 60.1\"/><path d=\"M10.4 61.0C17.6 22.2 73.7 12.4 58.3 24.2\"/><path d=\"M17.0 23.5C72.7 75.2 47.0 21.4 66.8 67.0\"/><path d=\"M10.7 21.7C12.3 -9.2 7.8 61.4 64.6 14.9\"/><path d=\"M17.6 57.1C41.5 78.7 43.9 16.6 59.7 13.2\"/><path d=\"M9.9 62.3C48.0 78.1 51.0 88.5 54.0 4.2\"/></g><g transform=\"translate(2.3 0.6)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"34.7\" y=\"16.4\" width=\"38.0\" height=\"43.1\" fill=\"#b199d6\"/></g><rect width=\"74\" height=\"74\" fill=\"url(#grain)\"/></svg>",
+      "w": 74,
+      "h": 74,
+      "pattern": "linework",
       "num": "36",
-      "featured": false
+      "featured": false,
+      "x": 1791.0,
+      "y": 442.7
     },
     {
       "id": "smart-illustrator",
@@ -762,8 +1203,19 @@
       "refUrl": "https://github.com/axtonliu/smart-illustrator",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 smart-illustrator 给这篇课文讲解批量生成配图，再做一张封面图。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 75 75\" width=\"75\" height=\"75\" shape-rendering=\"crispEdges\"><rect width=\"75\" height=\"75\" fill=\"#f7f4ed\"/><rect x=\"0\" y=\"0\" width=\"34.8\" height=\"29.2\" fill=\"#17415f\"/><rect x=\"34.8\" y=\"0\" width=\"40.2\" height=\"29.2\" fill=\"#8fbedd\"/><rect x=\"0\" y=\"29.2\" width=\"34.8\" height=\"45.8\" fill=\"#d6e5f0\"/><rect x=\"34.8\" y=\"29.2\" width=\"40.2\" height=\"45.8\" fill=\"#2f6f9e\"/><g transform=\"translate(-2.0 1.5)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"9.6\" y=\"27.7\" width=\"32.2\" height=\"33.1\" fill=\"#8fbedd\"/></g><rect width=\"75\" height=\"75\" fill=\"url(#grain)\"/></svg>",
+      "w": 75,
+      "h": 75,
+      "pattern": "blocks",
       "num": "37",
-      "featured": false
+      "featured": false,
+      "x": 775.1,
+      "y": 94.2
     },
     {
       "id": "socratic-tutor",
@@ -782,8 +1234,19 @@
       "refUrl": "https://github.com/Pyroxin/opinionated-claude-skills",
       "demo": "",
       "hasDemo": false,
+      "scenario": "自学",
+      "also": [
+        "创造"
+      ],
+      "example": "用 socratic-tutor 引导我理解这段递归代码，只给提示别直接告诉我答案。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 77 77\" width=\"77\" height=\"77\" shape-rendering=\"crispEdges\"><rect width=\"77\" height=\"77\" fill=\"#f7f4ed\"/><rect width=\"77\" height=\"77\" fill=\"#f6ddc9\"/><g stroke=\"#c25a2e\" stroke-width=\"2.1\" fill=\"none\"><circle cx=\"47.2\" cy=\"53.6\" r=\"6.8\"/><circle cx=\"47.2\" cy=\"53.6\" r=\"13.6\"/><circle cx=\"47.2\" cy=\"53.6\" r=\"20.5\"/><circle cx=\"47.2\" cy=\"53.6\" r=\"27.3\"/><circle cx=\"47.2\" cy=\"53.6\" r=\"34.1\"/><circle cx=\"47.2\" cy=\"53.6\" r=\"40.9\"/></g><g transform=\"translate(-2.7 -1.7)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"15.3\" y=\"6.4\" width=\"31.4\" height=\"40.9\" fill=\"#f0a878\"/></g><rect width=\"77\" height=\"77\" fill=\"url(#grain)\"/></svg>",
+      "w": 77,
+      "h": 77,
+      "pattern": "arcs",
       "num": "38",
-      "featured": false
+      "featured": false,
+      "x": 809.1,
+      "y": 730.0
     },
     {
       "id": "storm-research",
@@ -802,8 +1265,17 @@
       "refUrl": "https://github.com/openwhat007/storm-research",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [],
+      "example": "用 storm-research 写一份「人工智能与教育公平」的深度研究报告，要多视角提问并带来源引用。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 62 62\" width=\"62\" height=\"62\" shape-rendering=\"crispEdges\"><rect width=\"62\" height=\"62\" fill=\"#f7f4ed\"/><rect width=\"62\" height=\"62\" fill=\"#f0e5c8\"/><g stroke=\"#a58535\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 4.4 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/><path d=\"M0 13.3 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/><path d=\"M0 22.1 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/><path d=\"M0 31.0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/><path d=\"M0 39.9 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/><path d=\"M0 48.7 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/><path d=\"M0 57.6 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0 q7.8 -6.1 15.5 0 q7.8 6.1 15.5 0\"/></g><g transform=\"translate(-0.7 -2.5)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"29.2\" y=\"10.3\" width=\"25.1\" height=\"25.2\" fill=\"#e0c583\"/></g><rect width=\"62\" height=\"62\" fill=\"url(#grain)\"/></svg>",
+      "w": 62,
+      "h": 62,
+      "pattern": "waves",
       "num": "39",
-      "featured": false
+      "featured": false,
+      "x": 1311.8,
+      "y": 589.0
     },
     {
       "id": "tavily-search",
@@ -822,8 +1294,17 @@
       "refUrl": "",
       "demo": "",
       "hasDemo": false,
+      "scenario": "研究",
+      "also": [],
+      "example": "用 tavily-search 查一下今年最新的中小学人工智能课程相关政策。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 79 59\" width=\"79\" height=\"59\" shape-rendering=\"crispEdges\"><rect width=\"79\" height=\"59\" fill=\"#f7f4ed\"/><rect width=\"79\" height=\"59\" fill=\"#f0e5c8\"/><g stroke=\"#a58535\" stroke-width=\"1.4\" fill=\"none\"><path d=\"M0.0 0V59\"/><path d=\"M9.9 0V59\"/><path d=\"M19.8 0V59\"/><path d=\"M29.6 0V59\"/><path d=\"M39.5 0V59\"/><path d=\"M49.4 0V59\"/><path d=\"M59.2 0V59\"/><path d=\"M69.1 0V59\"/><path d=\"M79.0 0V59\"/><path d=\"M0 0.0H79\"/><path d=\"M0 9.9H79\"/><path d=\"M0 19.8H79\"/><path d=\"M0 29.6H79\"/><path d=\"M0 39.5H79\"/><path d=\"M0 49.4H79\"/></g><g transform=\"translate(-2.2 -1.5)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"7.1\" y=\"24.9\" width=\"46.2\" height=\"25.5\" fill=\"#e0c583\"/></g><rect width=\"79\" height=\"59\" fill=\"url(#grain)\"/></svg>",
+      "w": 79,
+      "h": 59,
+      "pattern": "grid",
       "num": "40",
-      "featured": false
+      "featured": false,
+      "x": 1579.5,
+      "y": 866.3
     },
     {
       "id": "theme-factory",
@@ -842,8 +1323,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/theme-factory",
       "demo": "",
       "hasDemo": false,
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 theme-factory 给这套课件统一配色和字体，风格清爽一点。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 90 52\" width=\"90\" height=\"52\" shape-rendering=\"crispEdges\"><rect width=\"90\" height=\"52\" fill=\"#f7f4ed\"/><rect width=\"90\" height=\"52\" fill=\"#d6e5f0\"/><rect x=\"64.8\" y=\"0.6\" width=\"4.8\" height=\"4.8\" fill=\"#2f6f9e\"/><rect x=\"1.5\" y=\"37.5\" width=\"6.8\" height=\"6.8\" fill=\"#17415f\"/><rect x=\"11.0\" y=\"5.1\" width=\"3.1\" height=\"3.1\" fill=\"#2f6f9e\"/><rect x=\"65.5\" y=\"14.9\" width=\"5.1\" height=\"5.1\" fill=\"#2f6f9e\"/><rect x=\"85.3\" y=\"27.6\" width=\"2.8\" height=\"2.8\" fill=\"#17415f\"/><rect x=\"74.3\" y=\"43.0\" width=\"2.9\" height=\"2.9\" fill=\"#2f6f9e\"/><rect x=\"0.9\" y=\"1.6\" width=\"3.0\" height=\"3.0\" fill=\"#17415f\"/><rect x=\"18.9\" y=\"4.6\" width=\"6.4\" height=\"6.4\" fill=\"#2f6f9e\"/><rect x=\"69.9\" y=\"42.2\" width=\"3.0\" height=\"3.0\" fill=\"#2f6f9e\"/><rect x=\"2.4\" y=\"39.7\" width=\"3.7\" height=\"3.7\" fill=\"#2f6f9e\"/><rect x=\"44.3\" y=\"16.4\" width=\"4.8\" height=\"4.8\" fill=\"#2f6f9e\"/><rect x=\"70.9\" y=\"11.4\" width=\"5.5\" height=\"5.5\" fill=\"#2f6f9e\"/><rect x=\"54.0\" y=\"36.0\" width=\"5.4\" height=\"5.4\" fill=\"#17415f\"/><rect x=\"53.6\" y=\"38.0\" width=\"3.9\" height=\"3.9\" fill=\"#17415f\"/><rect x=\"1.8\" y=\"19.1\" width=\"4.4\" height=\"4.4\" fill=\"#2f6f9e\"/><g transform=\"translate(-2.4 -1.8)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"31.2\" y=\"24.7\" width=\"34.8\" height=\"23.0\" fill=\"#8fbedd\"/></g><rect width=\"90\" height=\"52\" fill=\"url(#grain)\"/></svg>",
+      "w": 90,
+      "h": 52,
+      "pattern": "scatter",
       "num": "41",
-      "featured": false
+      "featured": false,
+      "x": 1131.0,
+      "y": 306.3
     },
     {
       "id": "tutor",
@@ -862,8 +1354,17 @@
       "refUrl": "https://github.com/cdmorozov/claude-tutors",
       "demo": "",
       "hasDemo": false,
+      "scenario": "自学",
+      "also": [],
+      "example": "用 tutor 教我理解「细胞呼吸」，像人类家教那样一步步来，先问我已经知道什么。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 66 83\" width=\"66\" height=\"83\" shape-rendering=\"crispEdges\"><rect width=\"66\" height=\"83\" fill=\"#f7f4ed\"/><rect width=\"66\" height=\"83\" fill=\"#f6ddc9\"/><g stroke=\"#c25a2e\" stroke-width=\"2.1\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 10.4 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0\"/><path d=\"M0 31.1 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0\"/><path d=\"M0 51.9 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0\"/><path d=\"M0 72.6 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0 q8.2 -6.3 16.5 0 q8.2 6.3 16.5 0\"/></g><g transform=\"translate(-1.1 2.0)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"4.0\" y=\"32.5\" width=\"23.5\" height=\"36.4\" fill=\"#f0a878\"/></g><rect width=\"66\" height=\"83\" fill=\"url(#grain)\"/></svg>",
+      "w": 66,
+      "h": 83,
+      "pattern": "waves",
       "num": "42",
-      "featured": false
+      "featured": false,
+      "x": 866.7,
+      "y": 1104.5
     },
     {
       "id": "understand",
@@ -882,8 +1383,19 @@
       "refUrl": "https://github.com/Lum1104/Understand-Anything/tree/HEAD/understand-anything-plugin/skills/understand",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "研究"
+      ],
+      "example": "用 understand 分析这个项目，生成一张交互式的代码知识图谱。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 76 65\" width=\"76\" height=\"65\" shape-rendering=\"crispEdges\"><rect width=\"76\" height=\"65\" fill=\"#f7f4ed\"/><rect width=\"76\" height=\"65\" fill=\"#e3daf1\"/><g fill=\"#6b4d9c\"><circle cx=\"4.0\" cy=\"4.0\" r=\"1.5\"/><circle cx=\"12.1\" cy=\"4.0\" r=\"1.8\"/><circle cx=\"20.2\" cy=\"4.0\" r=\"2.0\"/><circle cx=\"28.3\" cy=\"4.0\" r=\"2.1\"/><circle cx=\"36.3\" cy=\"4.0\" r=\"2.0\"/><circle cx=\"44.4\" cy=\"4.0\" r=\"1.7\"/><circle cx=\"52.5\" cy=\"4.0\" r=\"1.3\"/><circle cx=\"60.6\" cy=\"4.0\" r=\"0.9\"/><circle cx=\"68.7\" cy=\"4.0\" r=\"0.6\"/><circle cx=\"4.0\" cy=\"12.1\" r=\"1.8\"/><circle cx=\"12.1\" cy=\"12.1\" r=\"2.2\"/><circle cx=\"20.2\" cy=\"12.1\" r=\"2.5\"/><circle cx=\"28.3\" cy=\"12.1\" r=\"2.6\"/><circle cx=\"36.3\" cy=\"12.1\" r=\"2.4\"/><circle cx=\"44.4\" cy=\"12.1\" r=\"2.0\"/><circle cx=\"52.5\" cy=\"12.1\" r=\"1.6\"/><circle cx=\"60.6\" cy=\"12.1\" r=\"1.1\"/><circle cx=\"68.7\" cy=\"12.1\" r=\"0.6\"/><circle cx=\"4.0\" cy=\"20.2\" r=\"2.0\"/><circle cx=\"12.1\" cy=\"20.2\" r=\"2.5\"/><circle cx=\"20.2\" cy=\"20.2\" r=\"3.0\"/><circle cx=\"28.3\" cy=\"20.2\" r=\"3.2\"/><circle cx=\"36.3\" cy=\"20.2\" r=\"2.8\"/><circle cx=\"44.4\" cy=\"20.2\" r=\"2.3\"/><circle cx=\"52.5\" cy=\"20.2\" r=\"1.8\"/><circle cx=\"60.6\" cy=\"20.2\" r=\"1.3\"/><circle cx=\"68.7\" cy=\"20.2\" r=\"0.7\"/><circle cx=\"4.0\" cy=\"28.3\" r=\"2.0\"/><circle cx=\"12.1\" cy=\"28.3\" r=\"2.6\"/><circle cx=\"20.2\" cy=\"28.3\" r=\"3.1\"/><circle cx=\"28.3\" cy=\"28.3\" r=\"3.4\"/><circle cx=\"36.3\" cy=\"28.3\" r=\"2.9\"/><circle cx=\"44.4\" cy=\"28.3\" r=\"2.4\"/><circle cx=\"52.5\" cy=\"28.3\" r=\"1.8\"/><circle cx=\"60.6\" cy=\"28.3\" r=\"1.3\"/><circle cx=\"68.7\" cy=\"28.3\" r=\"0.7\"/><circle cx=\"4.0\" cy=\"36.3\" r=\"1.9\"/><circle cx=\"12.1\" cy=\"36.3\" r=\"2.4\"/><circle cx=\"20.2\" cy=\"36.3\" r=\"2.7\"/><circle cx=\"28.3\" cy=\"36.3\" r=\"2.9\"/><circle cx=\"36.3\" cy=\"36.3\" r=\"2.6\"/><circle cx=\"44.4\" cy=\"36.3\" r=\"2.2\"/><circle cx=\"52.5\" cy=\"36.3\" r=\"1.7\"/><circle cx=\"60.6\" cy=\"36.3\" r=\"1.2\"/><circle cx=\"68.7\" cy=\"36.3\" r=\"0.7\"/><circle cx=\"4.0\" cy=\"44.4\" r=\"1.6\"/><circle cx=\"12.1\" cy=\"44.4\" r=\"2.0\"/><circle cx=\"20.2\" cy=\"44.4\" r=\"2.3\"/><circle cx=\"28.3\" cy=\"44.4\" r=\"2.3\"/><circle cx=\"36.3\" cy=\"44.4\" r=\"2.2\"/><circle cx=\"44.4\" cy=\"44.4\" r=\"1.8\"/><circle cx=\"52.5\" cy=\"44.4\" r=\"1.4\"/><circle cx=\"60.6\" cy=\"44.4\" r=\"1.0\"/><circle cx=\"68.7\" cy=\"44.4\" r=\"0.6\"/><circle cx=\"4.0\" cy=\"52.5\" r=\"1.2\"/><circle cx=\"12.1\" cy=\"52.5\" r=\"1.5\"/><circle cx=\"20.2\" cy=\"52.5\" r=\"1.7\"/><circle cx=\"28.3\" cy=\"52.5\" r=\"1.8\"/><circle cx=\"36.3\" cy=\"52.5\" r=\"1.7\"/><circle cx=\"44.4\" cy=\"52.5\" r=\"1.4\"/><circle cx=\"52.5\" cy=\"52.5\" r=\"1.1\"/><circle cx=\"60.6\" cy=\"52.5\" r=\"0.7\"/><circle cx=\"68.7\" cy=\"52.5\" r=\"0.6\"/><circle cx=\"4.0\" cy=\"60.6\" r=\"0.8\"/><circle cx=\"12.1\" cy=\"60.6\" r=\"1.1\"/><circle cx=\"20.2\" cy=\"60.6\" r=\"1.2\"/><circle cx=\"28.3\" cy=\"60.6\" r=\"1.2\"/><circle cx=\"36.3\" cy=\"60.6\" r=\"1.2\"/><circle cx=\"44.4\" cy=\"60.6\" r=\"1.0\"/><circle cx=\"52.5\" cy=\"60.6\" r=\"0.7\"/><circle cx=\"60.6\" cy=\"60.6\" r=\"0.6\"/><circle cx=\"68.7\" cy=\"60.6\" r=\"0.6\"/></g><g transform=\"translate(2.5 -0.1)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"7.4\" y=\"24.7\" width=\"42.1\" height=\"26.7\" fill=\"#b199d6\"/></g><rect width=\"76\" height=\"65\" fill=\"url(#grain)\"/></svg>",
+      "w": 76,
+      "h": 65,
+      "pattern": "halftone",
       "num": "43",
-      "featured": false
+      "featured": false,
+      "x": 1340.0,
+      "y": 453.7
     },
     {
       "id": "web-artifacts-builder",
@@ -902,8 +1414,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/web-artifacts-builder",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 web-artifacts-builder 做一个多组件的互动学习小应用，带状态管理。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 69 69\" width=\"69\" height=\"69\" shape-rendering=\"crispEdges\"><rect width=\"69\" height=\"69\" fill=\"#f7f4ed\"/><rect width=\"69\" height=\"69\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 4.9 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/><path d=\"M0 14.8 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/><path d=\"M0 24.6 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/><path d=\"M0 34.5 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/><path d=\"M0 44.4 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/><path d=\"M0 54.2 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/><path d=\"M0 64.1 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0 q8.6 -3.8 17.2 0 q8.6 3.8 17.2 0\"/></g><g transform=\"translate(1.9 2.2)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"42.5\" y=\"16.2\" width=\"23.4\" height=\"27.3\" fill=\"#b199d6\"/></g><rect width=\"69\" height=\"69\" fill=\"url(#grain)\"/></svg>",
+      "w": 69,
+      "h": 69,
+      "pattern": "waves",
       "num": "44",
-      "featured": false
+      "featured": false,
+      "x": 1701.9,
+      "y": 201.5
     },
     {
       "id": "webapp-testing",
@@ -922,8 +1445,17 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/webapp-testing",
       "demo": "",
       "hasDemo": false,
+      "scenario": "创造",
+      "also": [],
+      "example": "用 webapp-testing 帮我测一下这个页面功能是否正常，顺便截图并把控制台报错抓出来。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 85 50\" width=\"85\" height=\"50\" shape-rendering=\"crispEdges\"><rect width=\"85\" height=\"50\" fill=\"#f7f4ed\"/><rect width=\"85\" height=\"50\" fill=\"#e3daf1\"/><g stroke=\"#6b4d9c\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M0 3.1 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 9.4 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 15.6 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 21.9 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 28.1 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 34.4 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 40.6 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/><path d=\"M0 46.9 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0 q10.6 -4.3 21.2 0 q10.6 4.3 21.2 0\"/></g><g transform=\"translate(0.1 2.2)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"31.5\" y=\"13.5\" width=\"39.9\" height=\"17.5\" fill=\"#b199d6\"/></g><rect width=\"85\" height=\"50\" fill=\"url(#grain)\"/></svg>",
+      "w": 85,
+      "h": 50,
+      "pattern": "waves",
       "num": "45",
-      "featured": false
+      "featured": false,
+      "x": 1696.7,
+      "y": 618.0
     },
     {
       "id": "xlsx",
@@ -942,8 +1474,19 @@
       "refUrl": "https://github.com/anthropics/skills/tree/HEAD/skills/xlsx",
       "demo": "",
       "hasDemo": false,
+      "scenario": "备课",
+      "also": [
+        "研究"
+      ],
+      "example": "用 xlsx 把这份成绩表算出班级均分和排名，再做一个分数段分布图表。",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 83 59\" width=\"83\" height=\"59\" shape-rendering=\"crispEdges\"><rect width=\"83\" height=\"59\" fill=\"#f7f4ed\"/><rect width=\"83\" height=\"59\" fill=\"#d8e8dc\"/><rect x=\"29.4\" y=\"34.4\" width=\"3.2\" height=\"3.2\" fill=\"#2f7d52\"/><rect x=\"54.6\" y=\"35.5\" width=\"5.5\" height=\"5.5\" fill=\"#1b4d34\"/><rect x=\"51.9\" y=\"47.8\" width=\"3.8\" height=\"3.8\" fill=\"#2f7d52\"/><rect x=\"13.4\" y=\"52.7\" width=\"3.7\" height=\"3.7\" fill=\"#2f7d52\"/><rect x=\"60.7\" y=\"43.3\" width=\"3.1\" height=\"3.1\" fill=\"#1b4d34\"/><rect x=\"60.6\" y=\"14.4\" width=\"3.7\" height=\"3.7\" fill=\"#2f7d52\"/><rect x=\"20.7\" y=\"36.4\" width=\"4.3\" height=\"4.3\" fill=\"#2f7d52\"/><rect x=\"3.3\" y=\"34.1\" width=\"5.5\" height=\"5.5\" fill=\"#2f7d52\"/><rect x=\"33.9\" y=\"19.9\" width=\"4.0\" height=\"4.0\" fill=\"#1b4d34\"/><rect x=\"75.0\" y=\"14.7\" width=\"6.6\" height=\"6.6\" fill=\"#2f7d52\"/><rect x=\"75.3\" y=\"15.4\" width=\"7.0\" height=\"7.0\" fill=\"#2f7d52\"/><rect x=\"7.0\" y=\"16.7\" width=\"6.4\" height=\"6.4\" fill=\"#1b4d34\"/><rect x=\"58.2\" y=\"14.0\" width=\"3.9\" height=\"3.9\" fill=\"#2f7d52\"/><rect x=\"47.1\" y=\"16.1\" width=\"6.5\" height=\"6.5\" fill=\"#2f7d52\"/><rect x=\"55.5\" y=\"26.9\" width=\"5.3\" height=\"5.3\" fill=\"#2f7d52\"/><rect x=\"31.7\" y=\"26.7\" width=\"5.6\" height=\"5.6\" fill=\"#1b4d34\"/><rect x=\"36.4\" y=\"2.3\" width=\"3.5\" height=\"3.5\" fill=\"#2f7d52\"/><rect x=\"36.4\" y=\"28.9\" width=\"5.0\" height=\"5.0\" fill=\"#2f7d52\"/><rect x=\"30.0\" y=\"43.0\" width=\"2.8\" height=\"2.8\" fill=\"#2f7d52\"/><rect x=\"17.0\" y=\"38.8\" width=\"3.6\" height=\"3.6\" fill=\"#2f7d52\"/><rect x=\"33.2\" y=\"18.6\" width=\"4.1\" height=\"4.1\" fill=\"#2f7d52\"/><rect x=\"62.7\" y=\"23.0\" width=\"2.5\" height=\"2.5\" fill=\"#2f7d52\"/><rect x=\"76.7\" y=\"33.9\" width=\"6.0\" height=\"6.0\" fill=\"#1b4d34\"/><rect x=\"23.8\" y=\"17.6\" width=\"3.5\" height=\"3.5\" fill=\"#1b4d34\"/><rect x=\"11.0\" y=\"43.2\" width=\"4.2\" height=\"4.2\" fill=\"#1b4d34\"/><rect x=\"28.5\" y=\"48.1\" width=\"5.5\" height=\"5.5\" fill=\"#1b4d34\"/><rect x=\"48.3\" y=\"21.0\" width=\"3.4\" height=\"3.4\" fill=\"#2f7d52\"/><rect x=\"1.7\" y=\"21.3\" width=\"3.4\" height=\"3.4\" fill=\"#2f7d52\"/><g transform=\"translate(1.7 2.8)\" style=\"mix-blend-mode:multiply\" opacity=\"0.55\"><rect x=\"19.2\" y=\"14.5\" width=\"39.8\" height=\"35.0\" fill=\"#8fc9a4\"/></g><rect width=\"83\" height=\"59\" fill=\"url(#grain)\"/></svg>",
+      "w": 83,
+      "h": 59,
+      "pattern": "scatter",
       "num": "46",
-      "featured": false
+      "featured": false,
+      "x": 595.0,
+      "y": 772.5
     }
   ]
 }
