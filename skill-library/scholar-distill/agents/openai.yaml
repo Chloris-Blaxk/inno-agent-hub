@@ -1,0 +1,4 @@
+interface:
+  display_name: "学者蒸馏"
+  short_description: "提炼学者研究画像，辅助研究背景、选题与 Survey 构思"
+  default_prompt: "请用 scholar-distill 帮我分析这位学者的研究脉络，提炼可借鉴的选题视角，并形成 Survey 大纲。"

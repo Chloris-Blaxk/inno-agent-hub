@@ -102,6 +102,41 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 | [understand](./understand/) | 收集 |  | 分析代码库生成交互式知识图谱，理解架构、组件与关系 | [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything/tree/HEAD/understand-anything-plugin/skills/understand) |
 | [storm-research](./storm-research/) | 收集 |  | 多视角提问 + 联网检索 + 强制引用，产出维基百科式带来源的深度研究报告 | [openwhat007/storm-research](https://github.com/openwhat007/storm-research) |
 
+### 🎓 教育 · 研究设计与分析
+
+| Skill | 类型 | 通过验证 | 一句话 | 引用 |
+|---|---|---|---|---|
+| [education-topic-decomposition](./education-topic-decomposition/) | 贡献 |  | 将宽泛教育议题拆成可检索、可研究的具体方向 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-research-question-generation](./education-research-question-generation/) | 贡献 |  | 生成并验证教育研究问题、子问题与假设 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-variable-identification](./education-variable-identification/) | 贡献 |  | 从选题与文献中识别变量、构念及操作化定义 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-theory-framework-matching](./education-theory-framework-matching/) | 贡献 |  | 为研究问题匹配理论、概念与分析框架 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-evidence-check](./education-evidence-check/) | 贡献 |  | 检查论断、引用与证据强度，标记过度推断 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-literature-map](./education-literature-map/) | 贡献 |  | 构建文献计量、共现与研究趋势图谱 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-paper-type-router](./education-paper-type-router/) | 贡献 |  | 根据问题、数据和条件选择合适的论文路线 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-quantitative-study-design](./education-quantitative-study-design/) | 贡献 |  | 设计问卷、实验、相关与纵向量化研究 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-qualitative-study-design](./education-qualitative-study-design/) | 贡献 |  | 设计访谈、观察、案例与质性文本研究 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-mixed-methods-design](./education-mixed-methods-design/) | 贡献 |  | 设计量化与质性整合的混合方法研究 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-action-research-design](./education-action-research-design/) | 贡献 |  | 规划教师行动研究及教学改进循环 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-design-based-research](./education-design-based-research/) | 贡献 |  | 规划教育设计研究的迭代、证据与设计原则 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-program-evaluation](./education-program-evaluation/) | 贡献 |  | 构建课程、项目与教育工具评价方案 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-policy-comparative-analysis](./education-policy-comparative-analysis/) | 贡献 |  | 分析教育政策、课程标准与跨地区比较 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-learning-analytics-design](./education-learning-analytics-design/) | 贡献 |  | 设计学习日志、平台行为与教育数据挖掘研究 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-sampling-data-management](./education-sampling-data-management/) | 贡献 |  | 规划抽样、招募、匿名化、同意与数据管理 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-survey-instrument-design](./education-survey-instrument-design/) | 贡献 |  | 设计问卷、量表、题项及预测试流程 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-psychometric-scale-development](./education-psychometric-scale-development/) | 贡献 |  | 规划量表、测验与教育测量工具开发 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-quantitative-data-cleaning](./education-quantitative-data-cleaning/) | 贡献 |  | 清洗量化研究数据并保留可复现处理记录 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-descriptive-statistics](./education-descriptive-statistics/) | 贡献 |  | 生成样本概况、变量分布和描述统计表 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-inferential-statistics](./education-inferential-statistics/) | 贡献 |  | 执行检验、方差分析、相关回归及效应量报告 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-validity-reliability-analysis](./education-validity-reliability-analysis/) | 贡献 |  | 分析教育量表与问卷的信度、效度及因子结构 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-advanced-quantitative-modeling](./education-advanced-quantitative-modeling/) | 贡献 |  | 规划多层模型、SEM、IRT、DID 等高级分析 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-learning-analytics-modeling](./education-learning-analytics-modeling/) | 贡献 |  | 建模学习行为、序列、预测、聚类与知识追踪 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-qualitative-coding-analysis](./education-qualitative-coding-analysis/) | 贡献 |  | 开展质性编码、主题分析、备忘录与证据追踪 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-ai-assisted-qualitative-analysis](./education-ai-assisted-qualitative-analysis/) | 贡献 |  | 用 AI 辅助试编码、主题聚类与反例搜索 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-coder-reliability](./education-coder-reliability/) | 贡献 |  | 检查多人编码一致性并记录冲突解决过程 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-systematic-review-preparation](./education-systematic-review-preparation/) | 贡献 |  | 准备系统综述、范围综述与 PRISMA 流程 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [education-meta-analysis-preparation](./education-meta-analysis-preparation/) | 贡献 |  | 准备效应量提取、异质性与 Meta-analysis 流程 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+| [scholar-distill](./scholar-distill/) | 贡献 |  | 基于公开研究轨迹提炼学者研究视角与选题线索 | [PR #13](https://github.com/Chloris-Blaxk/inno-agent-hub/pull/13) |
+
 ### 🎨 创作 · 知识可视化
 
 | Skill | 类型 | 通过验证 | 一句话 | 引用 |
@@ -200,5 +235,4 @@ description: >-
 > 需要新增分类? 先提 issue 讨论再加,避免一堆只含 1 个条目的孤立分组。客户端会按字符串完全匹配做分组,**标签拼写要和上表完全一致**(包括中文标点)。
 
 完整贡献流程见仓库根目录 [README.md 的「贡献」一节](../README.md#贡献)。
-
 
