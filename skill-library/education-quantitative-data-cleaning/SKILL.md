@@ -1,6 +1,6 @@
 ---
 name: education-quantitative-data-cleaning
-category: 开发工具
+category: 研究检索
 description: Use after quantitative education data are collected and before descriptive, inferential, reliability, validity, SEM, multilevel, or learning analytics analysis. Covers data import checks, data dictionary validation, missing values, invalid values, outliers, duplicate records, participant attrition, variable coding, reverse scoring, scale scoring, group/timepoint coding, dataset versioning, and reproducible cleaning logs.
 metadata:
   short-description: Clean and prepare quantitative education research data
@@ -87,6 +87,8 @@ Do not expose the skill name to users. Present it as "量化数据清洗与准�
 
 ## Tool Calls
 
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
+
 ### R
 
 ```r
@@ -123,9 +125,19 @@ clean <- raw |>
 Scale score:
 
 ```r
+items <- c("item1", "item2", "item3_r", "item4")
 clean <- clean |>
-  mutate(self_efficacy = rowMeans(across(c(item1, item2, item3_r, item4)), na.rm = TRUE))
+  mutate(
+    self_efficacy_n = rowSums(!is.na(across(all_of(items)))),
+    self_efficacy = if_else(
+      self_efficacy_n >= 3,
+      rowMeans(across(all_of(items)), na.rm = TRUE),
+      NA_real_
+    )
+  )
 ```
+
+Set the minimum valid-item threshold before scoring; the example requires at least 3 of 4 items. Keep the valid-item count in the cleaning report.
 
 ### Python
 

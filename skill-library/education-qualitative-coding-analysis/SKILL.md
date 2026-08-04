@@ -1,6 +1,6 @@
 ---
 name: education-qualitative-coding-analysis
-category: 开发工具
+category: 研究检索
 description: Use when analyzing qualitative education data such as interviews, focus groups, classroom observations, reflective journals, student work, policy documents, teaching artifacts, AI feedback texts, and open-ended survey responses. Covers open coding, axial coding, selective coding, thematic analysis, grounded theory, content analysis, discourse-oriented coding, memo writing, evidence extraction, codebook development, and qualitative findings structure. This is a second-layer execution skill for qualitative, mixed-methods, action research, DBR, policy/comparative analysis, program evaluation, and AI-assisted education research.
 metadata:
   short-description: Execute qualitative coding and thematic analysis for education data
@@ -80,6 +80,8 @@ Do not expose the skill name to users. Present it as "质性材料编码分析" 
 10. Draft findings structure and discussion implications.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### Transcription
 

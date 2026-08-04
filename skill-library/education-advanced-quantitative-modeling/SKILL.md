@@ -1,6 +1,6 @@
 ---
 name: education-advanced-quantitative-modeling
-category: 开发工具
+category: 研究检索
 description: Use when education research needs advanced quantitative modeling beyond common t-tests, ANOVA, chi-square, correlation, and simple regression. Covers multilevel/hierarchical linear models, SEM, latent variable models, mediation, moderation, moderated mediation, IRT, longitudinal/growth models, DID, propensity score adjustment, nested school/class/student data, and advanced model reporting. This second-layer execution skill supports quantitative, mixed-methods, intervention, learning analytics, psychometric, and program evaluation studies.
 metadata:
   short-description: Plan and report advanced quantitative models for education data
@@ -72,6 +72,8 @@ Do not expose the skill name to users. Present it as "高级量化模型分析".
 10. Produce tables, diagrams, and reporting text.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### R Packages
 

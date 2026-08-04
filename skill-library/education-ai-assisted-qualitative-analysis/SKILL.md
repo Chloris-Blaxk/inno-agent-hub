@@ -1,6 +1,6 @@
 ---
 name: education-ai-assisted-qualitative-analysis
-category: 开发工具
+category: 研究检索
 description: Use when applying AI to support qualitative education analysis, including initial coding suggestions, code clustering, theme naming, memo generation, negative-case search, evidence retrieval, contradiction checks, saturation support, and audit-trail creation. This second-layer execution skill complements human qualitative coding and must not treat AI outputs as final findings without researcher confirmation.
 metadata:
   short-description: Use AI to support qualitative coding, clustering, and negative-case search
@@ -81,6 +81,8 @@ All AI outputs must be marked as:
 10. Update codebook and evidence table.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### Qualitative Software With AI Features
 

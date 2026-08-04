@@ -76,6 +76,8 @@ Do not expose the skill name to users. Present it as "样本与数据管理设�
 
 ## Tool Calls
 
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
+
 ### Sample Size and Power
 
 ```text

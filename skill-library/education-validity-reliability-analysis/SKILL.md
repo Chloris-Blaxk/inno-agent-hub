@@ -1,6 +1,6 @@
 ---
 name: education-validity-reliability-analysis
-category: 开发工具
+category: 研究检索
 description: Use when education research uses scales, questionnaires, tests, rubrics, or latent constructs and needs reliability and validity analysis, including Cronbach's alpha, McDonald's omega, item-total correlations, EFA, CFA, CR, AVE, convergent validity, discriminant validity, factor loadings, model fit, and measurement reporting. This second-layer execution skill supports quantitative, mixed-methods, psychometric, program evaluation, and survey studies.
 metadata:
   short-description: Analyze reliability and validity for education scales and questionnaires
@@ -76,6 +76,8 @@ Do not expose the skill name to users. Present it as "信效度分析" or "量�
 9. Produce reporting tables and method/results wording.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### R
 

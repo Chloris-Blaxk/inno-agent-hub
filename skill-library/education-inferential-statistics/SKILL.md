@@ -1,6 +1,6 @@
 ---
 name: education-inferential-statistics
-category: 开发工具
+category: 研究检索
 description: Use after descriptive statistics when an education research project needs hypothesis testing or statistical relationships, including t-tests, ANOVA/ANCOVA, chi-square tests, correlations, linear/logistic regression, simple mediation/moderation screening, effect sizes, assumptions, post-hoc tests, and APA/Chinese education paper result reporting. This second-layer execution skill supports quantitative, mixed-methods, experimental, quasi-experimental, survey, program evaluation, and action research studies.
 metadata:
   short-description: Run and report common inferential statistics for education research
@@ -79,6 +79,8 @@ Do not expose the skill name to users. Present it as "假设检验与统计推�
 | Does one variable explain a pathway? | IV -> mediator -> DV | Mediation analysis |
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### R
 

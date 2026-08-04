@@ -40,6 +40,8 @@ Ask for missing essentials only if absent:
 
 ## Tool Calls
 
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
+
 ### OpenAlex Works Search
 
 Use when no API key is available or broad topic exploration is enough.

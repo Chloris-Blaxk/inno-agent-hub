@@ -1,6 +1,6 @@
 ---
 name: education-learning-analytics-modeling
-category: 开发工具
+category: 研究检索
 description: Use after learning analytics or educational data mining data are available and cleaned, especially LMS logs, AI platform logs, clickstream, assignment histories, assessment sequences, student writing revision traces, knowledge component data, and learning behavior records. Covers feature engineering, sequence analysis, clustering, prediction, early warning, knowledge tracing, model evaluation, explainability, leakage checks, privacy, and education-paper reporting.
 metadata:
   short-description: Model learning logs, behavior data, knowledge tracing, clustering, and prediction
@@ -88,6 +88,8 @@ Do not expose the skill name to users. Present it as "学习行为数据建模" 
 9. Produce figures/tables and result narrative.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### Python
 

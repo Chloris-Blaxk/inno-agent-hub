@@ -1,6 +1,6 @@
 ---
 name: education-descriptive-statistics
-category: 开发工具
+category: 研究检索
 description: Use after quantitative education data cleaning to summarize datasets before reliability, validity, inferential, experimental, regression, SEM, multilevel, or learning analytics analysis. Covers means, standard deviations, medians, frequencies, percentages, cross-tabulations, group comparisons, pre/post descriptive summaries, scale/item descriptives, visualization, and APA/education-paper result table wording.
 metadata:
   short-description: Produce descriptive statistics and baseline summaries for education data
@@ -72,6 +72,8 @@ Do not expose the skill name to users. Present it as "描述性统计与样本�
 8. Draft descriptive-results wording.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### R
 

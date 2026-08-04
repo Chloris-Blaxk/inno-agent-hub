@@ -1,6 +1,6 @@
 ---
 name: education-coder-reliability
-category: 开发工具
+category: 研究检索
 description: Use when education qualitative or content-analysis projects involve multiple coders, coding reliability, coding agreement, pilot coding, codebook calibration, coding conflict resolution, Cohen's Kappa, Krippendorff's Alpha, percent agreement, inter-rater reliability, or reporting coder agreement. This second-layer execution skill supports qualitative coding, content analysis, discourse coding, classroom observation coding, policy text coding, open-ended survey coding, and AI-assisted coding review.
 metadata:
   short-description: Check coder agreement and reliability in education qualitative/content analysis
@@ -78,6 +78,8 @@ Do not force numeric reliability for all interpretive qualitative traditions. Fo
 8. Draft reporting paragraph.
 
 ## Tool Calls
+
+Dependency policy: inspect the current environment first. Do not install packages, clone repositories, or change the user's environment without explicit approval. Prefer a project-local Python virtual environment or R library, and record package versions used for reproducibility.
 
 ### R Packages
 
