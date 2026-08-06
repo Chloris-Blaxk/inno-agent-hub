@@ -1,0 +1,38 @@
+{
+  "id": "chinese-ink",
+  "name": "中国风",
+  "description": "融合传统文化元素（水墨、山水、窗棂、印章），视觉辨识度高。适合语文、历史、传统文化课。",
+  "colors": {
+    "bg": "F5F0E8",
+    "ink": "2C1810",
+    "muted": "8C7B6B",
+    "accent": "8B1A1A",
+    "card": "FFFDF8",
+    "line": "D4C4B0",
+    "good": "2F5D50",
+    "warn": "B8860B"
+  },
+  "fonts": {
+    "head": "Noto Serif SC",
+    "body": "Noto Serif SC"
+  },
+  "layout": {
+    "marginRatio": 0.06,
+    "titleSize": [40, 52],
+    "bodySize": [26, 32],
+    "maxBullets": 4,
+    "maxBulletChars": 20,
+    "maxHeadlineChars": 14
+  },
+  "decorations": {
+    "type": "seal",
+    "coverAccent": "seal",
+    "cardShadow": false,
+    "borderRadius": 4
+  },
+  "applicable": {
+    "grades": ["小学", "初中", "高中"],
+    "subjects": ["语文", "历史", "道德与法治", "传统文化"],
+    "scenes": ["新授课", "复习课"]
+  }
+}

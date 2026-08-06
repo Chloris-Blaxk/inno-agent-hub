@@ -1,0 +1,59 @@
+{
+  "requestId": "req-literature-reading-sample-001",
+  "entryToken": "@文献阅读助手",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "literature_discovery",
+  "sourceRequest": "围绕小学数学课堂即时反馈和错因诊断，筛选 5 篇优先阅读文献，并对用户上传摘要生成速读卡。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "",
+    "existingAchievements": [],
+    "availableCycle": "",
+    "constraints": []
+  },
+  "input": {
+    "researchTopic": "小学数学课堂即时反馈对错因诊断的支持研究",
+    "keywords": ["即时反馈", "错因诊断", "小学数学"],
+    "readingGoal": "筛选 5 篇优先阅读文献，并对用户上传摘要生成速读卡。",
+    "availablePapers": [
+      {
+        "paperId": "paper-demo-001",
+        "title": "课堂即时反馈的教学价值研究",
+        "authors": ["示例作者"],
+        "year": 2023,
+        "journal": "示例期刊",
+        "doi": "",
+        "keywords": ["即时反馈", "课堂评价"],
+        "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper-user-001",
+        "title": "用户上传：错因分类讲评课例片段",
+        "authors": ["用户上传材料"],
+        "year": 2024,
+        "journal": "用户上传原文",
+        "doi": "",
+        "keywords": ["错因诊断", "讲评策略", "小学数学"],
+        "abstract": "",
+        "uploadedText": "该课例围绕小学数学错因分类和针对性讲评展开，教师先收集学生通分错误、约分遗漏等典型错因，再根据错因类型调整讲评顺序。文本未提供正式研究方法和统计结论。",
+        "sourceStatus": "user_provided",
+        "textAvailability": "user_uploaded",
+        "evidenceLevel": "user_text_only"
+      }
+    ]
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

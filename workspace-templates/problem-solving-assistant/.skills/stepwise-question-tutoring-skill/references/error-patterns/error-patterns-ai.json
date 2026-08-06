@@ -1,0 +1,240 @@
+{
+  "version": "1.1",
+  "description": "AI 学科特定错误模式扩展库",
+  "errorCategories": [
+    {
+      "categoryId": "ai-data-leakage",
+      "categoryName": "数据泄露",
+      "description": "在数据预处理或模型训练中，测试集信息泄露到训练过程",
+      "patterns": [
+        {
+          "id": "err-ai-normalize-before-split",
+          "name": "划分前归一化",
+          "knowledgePointIds": ["ai-data-preprocessing", "ai-train-test-split"],
+          "symptom": "先对整个数据集归一化，再划分训练集和测试集",
+          "likelyCause": "不理解归一化使用全局统计量会造成信息泄露",
+          "diagnosisSignals": [
+            "归一化在数据划分之前",
+            "使用全部数据计算均值和方差",
+            "测试集参与了归一化参数的计算"
+          ],
+          "diagnosisPrompt": "检查学生是否在划分数据集之前就对全部数据进行了归一化",
+          "hintTemplate": "注意归一化的顺序。应该先划分数据集，然后只用训练集的统计量来归一化。",
+          "remediationSteps": [
+            "理解什么是数据泄露：测试集的信息不应该影响训练过程",
+            "正确流程：1.划分数据集 → 2.用训练集计算均值/方差 → 3.用同样的参数归一化训练集和测试集",
+            "记住原则：测试集是「未知数据」，任何统计量都不能从测试集获取"
+          ],
+          "exampleQuestionIds": ["ai-preprocess-001", "ai-pipeline-002"]
+        },
+        {
+          "id": "err-ai-feature-selection-leakage",
+          "name": "特征选择泄露",
+          "knowledgePointIds": ["ai-feature-engineering", "ai-model-evaluation"],
+          "symptom": "在划分数据集之前进行特征选择",
+          "likelyCause": "不理解特征选择依赖目标变量的分布，会造成信息泄露",
+          "diagnosisSignals": [
+            "使用全部数据进行特征重要性分析",
+            "在train_test_split之前使用相关性筛选特征",
+            "测试集参与了特征选择过程"
+          ],
+          "diagnosisPrompt": "检查学生是否在划分数据集之前就进行了特征选择",
+          "hintTemplate": "特征选择也会泄露信息。应该只在训练集上进行特征选择。",
+          "remediationSteps": [
+            "理解特征选择的本质：根据特征与目标的关系筛选",
+            "正确流程：1.划分数据集 → 2.只在训练集上选择特征 → 3.测试集使用相同的特征子集",
+            "使用Pipeline封装特征选择和模型训练"
+          ],
+          "exampleQuestionIds": ["ai-feature-001", "ai-pipeline-003"]
+        }
+      ]
+    },
+    {
+      "categoryId": "ai-overfitting",
+      "categoryName": "过拟合理解错误",
+      "description": "对过拟合概念理解错误，或不知道如何判断和解决过拟合",
+      "patterns": [
+        {
+          "id": "err-ai-high-train-acc-best",
+          "name": "训练准确率越高越好",
+          "knowledgePointIds": ["ai-overfitting", "ai-model-evaluation"],
+          "symptom": "认为训练集准确率100%就是最好的模型",
+          "likelyCause": "不理解过拟合的本质：模型记住了训练数据但不能泛化",
+          "diagnosisSignals": [
+            "只关注训练准确率",
+            "没有使用验证集或测试集",
+            "训练集和测试集准确率差距很大但没有意识到问题"
+          ],
+          "diagnosisPrompt": "检查学生是否只关注训练集性能，忽略了泛化能力",
+          "hintTemplate": "训练准确率高不代表模型好。关键是看模型在「没见过的数据」上的表现。",
+          "remediationSteps": [
+            "理解过拟合：模型太复杂，记住了训练数据的噪声",
+            "学会判断：训练集准确率远高于测试集准确率 → 过拟合",
+            "解决方法：减少模型复杂度、增加数据量、使用正则化、Dropout等"
+          ],
+          "exampleQuestionIds": ["ai-overfit-001", "ai-regularization-002"]
+        },
+        {
+          "id": "err-ai-no-validation-set",
+          "name": "不使用验证集",
+          "knowledgePointIds": ["ai-train-test-split", "ai-cross-validation"],
+          "symptom": "只划分训练集和测试集，没有验证集",
+          "likelyCause": "不理解验证集的作用：调参时不能用测试集",
+          "diagnosisSignals": [
+            "直接在测试集上调参",
+            "用测试集选择模型",
+            "没有使用cross_val_score或单独的验证集"
+          ],
+          "diagnosisPrompt": "检查学生是否在调参时使用了测试集，或者没有验证集",
+          "hintTemplate": "测试集只能用一次，在最后评估时使用。调参要用验证集。",
+          "remediationSteps": [
+            "理解三个数据集的作用：训练集（训练）、验证集（调参选模型）、测试集（最终评估）",
+            "正确流程：train-validation-test 三分，或使用交叉验证",
+            "记住原则：测试集是「考试」，只能用一次"
+          ],
+          "exampleQuestionIds": ["ai-split-001", "ai-cv-002"]
+        }
+      ]
+    },
+    {
+      "categoryId": "ai-model-selection",
+      "categoryName": "模型选择错误",
+      "description": "模型、激活函数、损失函数等选择不当",
+      "patterns": [
+        {
+          "id": "err-ai-activation-output",
+          "name": "输出层激活函数错误",
+          "knowledgePointIds": ["ai-neural-network", "ai-activation-function"],
+          "symptom": "二分类输出层使用ReLU或Softmax，多分类使用Sigmoid",
+          "likelyCause": "不理解不同激活函数的输出范围和适用场景",
+          "diagnosisSignals": [
+            "二分类用ReLU（输出不在[0,1]）",
+            "二分类用Softmax（输出是两个概率和为1，但Sigmoid更简洁）",
+            "多分类用Sigmoid（输出不满足概率和为1）"
+          ],
+          "diagnosisPrompt": "检查学生输出层的激活函数是否与任务类型匹配",
+          "hintTemplate": "输出层的激活函数要根据任务选择：二分类用Sigmoid，多分类用Softmax。",
+          "remediationSteps": [
+            "理解激活函数的输出范围：Sigmoid→[0,1]，Softmax→概率分布，ReLU→[0,∞)",
+            "记住规则：二分类输出层用Sigmoid，多分类用Softmax，回归用Linear",
+            "隐藏层常用ReLU（解决梯度消失）"
+          ],
+          "exampleQuestionIds": ["ai-nn-001", "ai-activation-002"]
+        },
+        {
+          "id": "err-ai-loss-mismatch",
+          "name": "损失函数不匹配",
+          "knowledgePointIds": ["ai-loss-function", "ai-model-training"],
+          "symptom": "多分类用binary_crossentropy，回归用categorical_crossentropy",
+          "likelyCause": "不理解损失函数与任务类型的对应关系",
+          "diagnosisSignals": [
+            "多分类任务用binary_crossentropy",
+            "回归任务用交叉熵",
+            "二分类任务用categorical_crossentropy"
+          ],
+          "diagnosisPrompt": "检查学生的损失函数是否与任务类型和输出层激活函数匹配",
+          "hintTemplate": "损失函数要和任务匹配：回归用MSE，二分类用binary_crossentropy，多分类用categorical_crossentropy。",
+          "remediationSteps": [
+            "理解损失函数的作用：衡量预测值与真实值的差距",
+            "记住规则：回归→MSE/MAE，二分类→binary_crossentropy，多分类→categorical_crossentropy",
+            "检查：输出层激活函数和损失函数要配套"
+          ],
+          "exampleQuestionIds": ["ai-loss-001", "ai-compile-002"]
+        }
+      ]
+    },
+    {
+      "categoryId": "ai-evaluation-metrics",
+      "categoryName": "评估指标误用",
+      "description": "选择了不合适的评估指标，或对指标理解错误",
+      "patterns": [
+        {
+          "id": "err-ai-imbalanced-accuracy",
+          "name": "不平衡数据只看准确率",
+          "knowledgePointIds": ["ai-model-evaluation", "ai-imbalanced-data"],
+          "symptom": "数据不平衡（如99%负样本）时，只用准确率评估",
+          "likelyCause": "不理解准确率在不平衡数据上的局限性",
+          "diagnosisSignals": [
+            "数据分布极不平衡但只报告准确率",
+            "没有使用precision、recall、F1-score",
+            "没有查看混淆矩阵"
+          ],
+          "diagnosisPrompt": "检查学生是否在不平衡数据上只使用了准确率",
+          "hintTemplate": "数据不平衡时，准确率会误导。应该看precision、recall、F1-score。",
+          "remediationSteps": [
+            "理解准确率的局限：预测全是多数类也能有高准确率",
+            "学习其他指标：precision（查准率）、recall（查全率）、F1-score（综合指标）",
+            "使用混淆矩阵和分类报告（classification_report）"
+          ],
+          "exampleQuestionIds": ["ai-metrics-001", "ai-imbalanced-002"]
+        },
+        {
+          "id": "err-ai-metric-confusion",
+          "name": "precision和recall混淆",
+          "knowledgePointIds": ["ai-model-evaluation", "ai-classification-metrics"],
+          "symptom": "把precision和recall的定义搞反了",
+          "likelyCause": "对两个指标的定义记忆混淆",
+          "diagnosisSignals": [
+            "认为precision是「预测为正的样本中真正为正的比例」但计算时用错公式",
+            "不理解precision和recall的trade-off",
+            "不知道什么场景优先考虑哪个指标"
+          ],
+          "diagnosisPrompt": "检查学生对precision和recall的理解是否准确",
+          "hintTemplate": "Precision关注「预测为正的有多少是对的」，Recall关注「真正为正的找到了多少」。",
+          "remediationSteps": [
+            "记忆技巧：Precision=「精准」（预测的准不准），Recall=「召回」（找全没找全）",
+            "公式：Precision=TP/(TP+FP)，Recall=TP/(TP+FN)",
+            "场景：医疗诊断优先Recall（不能漏诊），垃圾邮件优先Precision（不能误判）"
+          ],
+          "exampleQuestionIds": ["ai-metrics-002", "ai-classification-003"]
+        }
+      ]
+    },
+    {
+      "categoryId": "ai-algorithm-understanding",
+      "categoryName": "算法理解错误",
+      "description": "对算法原理理解错误，或应用场景判断错误",
+      "patterns": [
+        {
+          "id": "err-ai-knn-no-normalize",
+          "name": "KNN不归一化",
+          "knowledgePointIds": ["ai-knn", "ai-data-preprocessing"],
+          "symptom": "使用KNN算法时不对特征归一化",
+          "likelyCause": "不理解KNN基于距离计算，不同量纲的特征会导致某些特征主导距离",
+          "diagnosisSignals": [
+            "特征量纲差异大（如年龄0-100，收入0-100000）",
+            "直接使用原始数据训练KNN",
+            "结果被某个大数值特征主导"
+          ],
+          "diagnosisPrompt": "检查学生在使用KNN前是否对特征进行了归一化",
+          "hintTemplate": "KNN基于距离，特征量纲不同会导致某些特征主导距离计算。要先归一化。",
+          "remediationSteps": [
+            "理解KNN原理：计算样本间距离，距离受特征量纲影响",
+            "归一化方法：MinMaxScaler（缩放到[0,1]）或StandardScaler（标准化）",
+            "记住：基于距离的算法（KNN、K-Means等）都要归一化"
+          ],
+          "exampleQuestionIds": ["ai-knn-001", "ai-preprocess-003"]
+        },
+        {
+          "id": "err-ai-decision-tree-normalize",
+          "name": "决策树做归一化",
+          "knowledgePointIds": ["ai-decision-tree", "ai-data-preprocessing"],
+          "symptom": "使用决策树或随机森林时做了归一化",
+          "likelyCause": "不理解决策树基于阈值划分，不受特征量纲影响",
+          "diagnosisSignals": [
+            "对决策树输入做了归一化",
+            "认为所有模型都需要归一化"
+          ],
+          "diagnosisPrompt": "检查学生是否误认为决策树也需要归一化",
+          "hintTemplate": "决策树基于阈值划分，不受特征量纲影响，不需要归一化。",
+          "remediationSteps": [
+            "理解决策树原理：基于特征阈值划分（如「年龄>30」），与量纲无关",
+            "记住：决策树、随机森林、XGBoost等树模型不需要归一化",
+            "需要归一化的：KNN、SVM、神经网络等基于距离或梯度的模型"
+          ],
+          "exampleQuestionIds": ["ai-tree-001", "ai-preprocess-004"]
+        }
+      ]
+    }
+  ]
+}

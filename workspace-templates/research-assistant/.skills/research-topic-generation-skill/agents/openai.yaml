@@ -1,0 +1,7 @@
+interface:
+  display_name: "研究选题生成"
+  short_description: "基于教师材料生成可追溯研究选题"
+  default_prompt: "Use $research-topic-generation-skill to turn my teaching materials into research topic candidates with evidence, risks, and next reading questions."
+
+policy:
+  allow_implicit_invocation: true

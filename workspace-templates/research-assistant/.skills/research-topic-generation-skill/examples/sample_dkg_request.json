@@ -1,0 +1,16 @@
+{
+  "theme": "AI赋能小学数学课堂评价",
+  "scene": "小学数学课堂教学改进与教师课题申报",
+  "keywords": ["人工智能", "课堂评价", "形成性评价", "小学数学"],
+  "preference": {
+    "mode": "planning",
+    "top_k": 3
+  },
+  "identity": {
+    "subject": "小学数学",
+    "stage": "小学",
+    "school_conditions": "普通公办小学，有课堂观察记录和作业反馈案例",
+    "ability_base": "有教学反思和校级课题经历，量化方法基础一般",
+    "available_cycle": "1-2年"
+  }
+}

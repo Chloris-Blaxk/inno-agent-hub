@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/reference_resource.schema.json",
+  "title": "ReferenceResource",
+  "type": "object",
+  "required": [
+    "resourceId",
+    "resourceType",
+    "version",
+    "source",
+    "license",
+    "items"
+  ],
+  "properties": {
+    "resourceId": {"type": "string", "minLength": 1},
+    "resourceType": {
+      "enum": [
+        "policy_hotspot",
+        "grant_title_sample",
+        "practice_problem",
+        "document_template",
+        "review_rubric",
+        "budget_rule",
+        "sanitized_case_pattern",
+        "other"
+      ]
+    },
+    "version": {"type": "string", "minLength": 1},
+    "source": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1},
+    "effectiveDate": {"type": "string"},
+    "expiresAt": {"type": "string"},
+    "coverage": {"type": "object", "additionalProperties": true},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["itemId"],
+        "properties": {
+          "itemId": {"type": "string", "minLength": 1},
+          "title": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "sourceRefs": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

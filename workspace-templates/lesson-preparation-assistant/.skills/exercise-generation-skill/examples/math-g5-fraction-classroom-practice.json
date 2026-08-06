@@ -1,0 +1,20 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "单元综合",
+  "topic": "分数加减法单元练习",
+  "knowledgePointIds": [
+    "math-g5-fraction-same-denominator-add",
+    "math-g5-fraction-add",
+    "math-g5-fraction-application"
+  ],
+  "taskType": "classroom_practice",
+  "questionCount": 6,
+  "layers": ["A", "B"],
+  "questionTypes": ["计算题", "应用题", "判断题"],
+  "questionTypeMix": {"计算题": 3, "应用题": 2, "判断题": 1},
+  "difficultyMix": {"1": 1, "2": 3, "3": 2},
+  "requirements": "用于 8 分钟课堂即时诊断，覆盖三个知识点，突出基础方法和易错提醒。"
+}

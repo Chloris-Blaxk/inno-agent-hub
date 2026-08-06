@@ -1,0 +1,41 @@
+{
+  "requestId": "req-paper-writing-complex-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "sourceRequest": "请同时帮我查一句话的出处，并诊断这段论文草稿是否有结构缺口或强论断风险。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "校本教研",
+    "existingAchievements": [],
+    "availableCycle": "一学期",
+    "constraints": ["不能新增未提供数据"]
+  },
+  "input": {
+    "queryText": "课堂即时反馈有助于教师调整教学决策。",
+    "draftText": "摘要：本文旨在研究即时反馈在小学数学讲评课中的应用。即时反馈能够显著提升学生数学成绩。\n引言：课堂中教师经常需要及时了解学生错因，但已有研究对讲评课中的错因记录关注不足。本研究聚焦即时反馈如何帮助教师调整讲评顺序。\n方法：本研究计划采用课堂观察和教学反思，但尚未写明样本范围、数据来源和分析方法。\n结果：课堂观察显示，错因分类记录可以帮助教师调整讲评顺序。\n讨论：后续需要说明研究边界。",
+    "claims": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈有助于教师调整教学决策。"
+      },
+      {
+        "claimId": "claim-002",
+        "claimText": "即时反馈能够显著提升学生数学成绩。"
+      }
+    ],
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

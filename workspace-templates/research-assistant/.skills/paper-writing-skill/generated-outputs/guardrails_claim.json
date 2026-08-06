@@ -1,0 +1,75 @@
+{
+  "claim": "课堂即时反馈有助于教师及时发现学生的典型错因。",
+  "decision": "suggest_insert",
+  "matches": [
+    {
+      "paperId": "EDU-2024-001",
+      "cardId": "ec-sample-001",
+      "evidenceCardId": "ec-sample-001",
+      "locator": "p.7/para.1",
+      "quoteLocation": "p.7/para.1",
+      "sourceLocator": {
+        "locationType": "p.7/para.1",
+        "locator": "p.7/para.1",
+        "confidence": "medium"
+      },
+      "evidence_level": "fulltext_verified",
+      "evidenceLevel": "fulltext_verified",
+      "support_score": 0.2727,
+      "support_relation": "关键词/证据文本命中",
+      "matchType": "evidence_card",
+      "matchSnippet": "学习分析仪表盘有助于教师识别学生在概念理解和解题策略上的差异。",
+      "supportStatus": "supports",
+      "confidence": "high",
+      "gbt7714": "示例作者A,示例作者B.学习分析支持下的小学数学形成性评价改进研究[J].教育测量与评价,2024,15(3):45-52.",
+      "missing_reference_fields": [],
+      "decision": "suggest_insert"
+    },
+    {
+      "paperId": "EDU-UPLOAD-001",
+      "cardId": "ec-sample-002",
+      "evidenceCardId": "ec-sample-002",
+      "locator": "uploaded_segment_05",
+      "quoteLocation": "uploaded_segment_05",
+      "sourceLocator": {
+        "locationType": "uploaded_segment_05",
+        "locator": "uploaded_segment_05",
+        "confidence": "medium"
+      },
+      "evidence_level": "user_text_only",
+      "evidenceLevel": "user_text_only",
+      "support_score": 0.1364,
+      "support_relation": "证据与论点弱相关",
+      "matchType": "evidence_card",
+      "matchSnippet": "分组讲评后，学生对同类错题的解释质量有所提升。",
+      "supportStatus": "not_support",
+      "confidence": "low",
+      "gbt7714": "用户上传文献.教师上传原文：智能反馈在小学数学作业讲评中的应用[J].用户上传,2025.",
+      "missing_reference_fields": [],
+      "decision": "blocked_unsupported"
+    },
+    {
+      "paperId": "EDU-2023-014",
+      "cardId": "ec-sample-003",
+      "evidenceCardId": "ec-sample-003",
+      "locator": "abstract",
+      "quoteLocation": "abstract",
+      "sourceLocator": {
+        "locationType": "abstract",
+        "locator": "abstract",
+        "confidence": "medium"
+      },
+      "evidence_level": "abstract_verified",
+      "evidenceLevel": "abstract_verified",
+      "support_score": 0.0455,
+      "support_relation": "证据与论点弱相关",
+      "matchType": "evidence_card",
+      "matchSnippet": "本文从数据采集、质量控制和伦理治理角度讨论人工智能环境下课堂评价数据治理框架。",
+      "supportStatus": "not_support",
+      "confidence": "low",
+      "gbt7714": "示例作者C.人工智能环境下课堂评价数据治理框架[J].现代教育技术,2023,33(9):20-28.",
+      "missing_reference_fields": [],
+      "decision": "blocked_unsupported"
+    }
+  ]
+}

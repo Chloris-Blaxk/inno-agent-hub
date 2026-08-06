@@ -1,0 +1,84 @@
+{
+  "groups": [
+    {
+      "groupId": "sim-same-basic-add-001",
+      "knowledgePointId": "math-g5-fraction-same-denominator-add",
+      "methodTag": "同分母直接相加",
+      "difficultyBand": "A",
+      "questionIds": ["seed-same-a-001", "seed-same-a-003", "seed-same-a-008", "seed-same-a-012"],
+      "replaceRule": "保持分母相同、分子相加不超过或略超过分母，可替换数值与生活对象。"
+    },
+    {
+      "groupId": "sim-same-basic-subtract-001",
+      "knowledgePointId": "math-g5-fraction-same-denominator-add",
+      "methodTag": "同分母直接相减与整体 1",
+      "difficultyBand": "A",
+      "questionIds": ["seed-same-a-002", "seed-same-a-006", "seed-same-a-007", "seed-same-a-011"],
+      "replaceRule": "保持同分母减法结构，可在纯计算和求剩余情境之间替换。"
+    },
+    {
+      "groupId": "sim-same-multistep-001",
+      "knowledgePointId": "math-g5-fraction-same-denominator-add",
+      "methodTag": "同分母连加连减",
+      "difficultyBand": "B",
+      "questionIds": ["seed-same-b-001", "seed-same-b-002", "seed-same-b-007", "seed-same-b-008", "seed-same-b-009", "seed-same-b-010", "seed-same-c-008"],
+      "replaceRule": "保留同分母连续运算和结果化简要求，替换分母、分子或先增后减情境。"
+    },
+    {
+      "groupId": "sim-same-compare-fill-001",
+      "knowledgePointId": "math-g5-fraction-same-denominator-add",
+      "methodTag": "同分母比较与开放填空",
+      "difficultyBand": "C",
+      "questionIds": ["seed-same-b-006", "seed-same-c-003", "seed-same-c-006", "seed-same-c-007"],
+      "replaceRule": "保持先计算再比较或分子关系推理结构，替换分母和目标结果。"
+    },
+    {
+      "groupId": "sim-frac-basic-calc-001",
+      "knowledgePointId": "math-g5-fraction-add",
+      "methodTag": "异分母先通分再加减",
+      "difficultyBand": "A",
+      "questionIds": ["seed-frac-a-001", "seed-frac-a-002", "seed-frac-a-003", "seed-frac-a-010", "seed-frac-a-011", "seed-frac-a-012", "seed-frac-a-014", "seed-frac-a-015"],
+      "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+    },
+    {
+      "groupId": "sim-frac-application-001",
+      "knowledgePointId": "math-g5-fraction-add",
+      "methodTag": "异分母一步应用",
+      "difficultyBand": "B",
+      "questionIds": ["seed-frac-a-004", "seed-frac-a-013", "seed-frac-b-004", "seed-frac-b-012", "seed-frac-b-014", "seed-frac-b-015", "seed-frac-c-010", "seed-frac-c-012", "seed-frac-c-015"],
+      "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+    },
+    {
+      "groupId": "sim-frac-compare-multistep-001",
+      "knowledgePointId": "math-g5-fraction-add",
+      "methodTag": "异分母比较与多步计算",
+      "difficultyBand": "C",
+      "questionIds": ["seed-frac-c-001", "seed-frac-c-002", "seed-frac-c-003", "seed-frac-c-009", "seed-frac-c-011", "seed-frac-c-013", "seed-frac-c-014"],
+      "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+    },
+    {
+      "groupId": "sim-app-one-step-001",
+      "knowledgePointId": "math-g5-fraction-application",
+      "methodTag": "一步分数加减应用",
+      "difficultyBand": "A",
+      "questionIds": ["seed-app-a-001", "seed-app-a-002", "seed-app-a-003", "seed-app-a-004", "seed-app-a-005", "seed-app-a-006", "seed-app-a-007", "seed-app-a-008", "seed-app-a-009", "seed-app-a-010"],
+      "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+    },
+    {
+      "groupId": "sim-app-two-step-001",
+      "knowledgePointId": "math-g5-fraction-application",
+      "methodTag": "两步分数加减应用",
+      "difficultyBand": "B",
+      "questionIds": ["seed-app-b-001", "seed-app-b-002", "seed-app-b-003", "seed-app-b-004", "seed-app-b-005", "seed-app-b-006", "seed-app-b-007", "seed-app-b-008", "seed-app-b-009", "seed-app-b-010"],
+      "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+    },
+    {
+      "groupId": "sim-app-comprehensive-001",
+      "knowledgePointId": "math-g5-fraction-application",
+      "methodTag": "综合应用与判断说明",
+      "difficultyBand": "C",
+      "questionIds": ["seed-app-c-001", "seed-app-c-002", "seed-app-c-003", "seed-app-c-004", "seed-app-c-005", "seed-app-c-006", "seed-app-c-007", "seed-app-c-008", "seed-app-c-009", "seed-app-c-010"],
+      "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+    }
+  ]
+}

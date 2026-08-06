@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "date": "Tue, 09 Jun 2026 05:17:26 GMT",
+    "content-type": "application/json;charset=utf-8",
+    "content-length": "207",
+    "connection": "keep-alive",
+    "keep-alive": "timeout=25",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "*",
+    "x-acs-request-id": "275BF933-C8DB-5820-9123-FD8071D84BC9",
+    "x-acs-trace-id": "6c9f21930681e833d6ed422752fc6059",
+    "x-envoy-upstream-service-time": "65",
+    "server": "istio-envoy"
+  },
+  "statusCode": 200,
+  "body": {
+    "Code": "0",
+    "Data": {
+      "TaskId": "436fa3c9a9474b94ae9aca5778ffcc92",
+      "TaskKey": "classroom-reflection-20260609131725",
+      "TaskStatus": "ONGOING"
+    },
+    "Message": "success",
+    "RequestId": "275BF933-C8DB-5820-9123-FD8071D84BC9"
+  }
+}

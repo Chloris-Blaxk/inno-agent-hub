@@ -1,0 +1,24 @@
+{
+  "skill": "classroom-reflection-skill",
+  "createdAt": "2026-06-08T19:06:07",
+  "lessonSlug": "test-realtime-output",
+  "conversationId": "case-test-realtime-output-001",
+  "inputFile": "/tmp/test-realtime-output.json",
+  "generatedRoot": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs",
+  "outputDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001",
+  "rubricSource": "通用评价量规 `00_通用.md`",
+  "matchedSubject": "通用",
+  "matchedRubric": "00_通用.md",
+  "rubricPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/assets/rubric/00_通用.md",
+  "reportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/reflection-report.md",
+  "lessonPlanPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/optimized-lesson-plan.md",
+  "teacherTranscriptPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/teacher-transcript.md",
+  "internalDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/.internal",
+  "promptPayloadPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/.internal/prompt-payload.md",
+  "normalizedInputPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/.internal/normalized-input.json",
+  "validationReportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/test-realtime-output/case-test-realtime-output-001/.internal/validation-report.json",
+  "promptTranscriptPreviewChars": 0,
+  "warnings": [
+    "未能可靠匹配学科评价量规，已回退通用评价量规。"
+  ]
+}

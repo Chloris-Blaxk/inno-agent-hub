@@ -1,0 +1,858 @@
+{
+  "exerciseMeta": {
+    "title": "异分母分数加减法 分层作业",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第2课时",
+    "topic": "异分母分数加减法",
+    "taskType": "layered_homework",
+    "questionCount": 9,
+    "source": "internal-sample-seed-question-bank"
+  },
+  "blueprint": {
+    "taskType": "layered_homework",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 3,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 3,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      },
+      {
+        "layer": "C",
+        "name": "拓展层",
+        "targetCount": 3,
+        "difficultyRange": [
+          3,
+          4
+        ],
+        "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+        "cognitiveLevel": "迁移"
+      }
+    ],
+    "questionTypes": [
+      "计算题",
+      "应用题"
+    ],
+    "layerTargets": {
+      "A": 3,
+      "B": 3,
+      "C": 3
+    },
+    "questionTypeTargets": {
+      "计算题": 5,
+      "应用题": 4
+    },
+    "difficultyTargets": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 3
+    },
+    "strictBlueprint": false,
+    "knowledgePointIds": [
+      "math-g5-fraction-add"
+    ],
+    "lessonBoundary": "理解先通分再加减，结果能约分；不引入分式、方程和复杂代数通分。",
+    "requirements": "围绕异分母分数加减法生成三层作业，每层 3 题，附答案、分步解析、常见错因和讲评建议。"
+  },
+  "questions": [
+    {
+      "sourceId": "seed-frac-a-003",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "计算：2/5 + 1/10 = ?",
+      "answer": "1/2",
+      "solutionSteps": [
+        "把 2/5 通分为 4/10。",
+        "4/10 + 1/10 = 5/10。",
+        "5/10 约分为 1/2。"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能约分为最简分数"
+      ],
+      "teachingNote": "这题用于检查学生是否有化简意识。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q001"
+    },
+    {
+      "sourceId": "seed-frac-a-004",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一根彩带第一次用去 1/4 米，第二次用去 1/6 米。两次一共用去多少米？",
+      "answer": "5/12 米",
+      "solutionSteps": [
+        "求一共用去多少，用加法：1/4 + 1/6。",
+        "通分为 3/12 + 2/12。",
+        "结果是 5/12 米。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-denominator-add"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分计算"
+      ],
+      "teachingNote": "让学生先说数量关系，再写算式。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q002"
+    },
+    {
+      "sourceId": "seed-frac-a-001",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：1/2 + 1/3 = ?",
+      "answer": "5/6",
+      "solutionSteps": [
+        "把 1/2 通分为 3/6，把 1/3 通分为 2/6。",
+        "同分母分数相加，3/6 + 2/6 = 5/6。"
+      ],
+      "commonErrors": [
+        "err-denominator-add",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能找到公分母 6",
+        "能正确转化分子",
+        "能正确相加"
+      ],
+      "teachingNote": "重点追问为什么不能写成 2/5。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q003"
+    },
+    {
+      "sourceId": "seed-frac-b-004",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一块地第一天耕了 3/8，第二天耕了 1/4。两天一共耕了这块地的几分之几？还剩几分之几？",
+      "answer": "一共耕了 5/8，还剩 3/8。",
+      "solutionSteps": [
+        "先求一共耕了多少：3/8 + 1/4。",
+        "1/4 = 2/8，所以 3/8 + 2/8 = 5/8。",
+        "再求剩下：1 - 5/8 = 3/8。"
+      ],
+      "commonErrors": [
+        "err-operation-choice"
+      ],
+      "scorePoints": [
+        "能分两步列式",
+        "能正确通分",
+        "能求剩余量"
+      ],
+      "teachingNote": "这是一步加法加一步补全整体的综合题。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q004"
+    },
+    {
+      "sourceId": "seed-frac-b-002",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "计算：2/3 + 3/8 = ?",
+      "answer": "1又1/24",
+      "solutionSteps": [
+        "3 和 8 的公分母可以取 24。",
+        "2/3 = 16/24，3/8 = 9/24。",
+        "16/24 + 9/24 = 25/24 = 1又1/24。"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能把假分数化为带分数"
+      ],
+      "teachingNote": "提醒学生结果大于 1 时要会解释数量意义。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q005"
+    },
+    {
+      "sourceId": "seed-frac-b-012",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "一袋米，第一天吃了 2/5，第二天吃了 1/4，一共吃了几分之几？",
+      "answer": "13/20",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：2/5 + 1/4。",
+        "2/5 = 8/20，1/4 = 5/20。",
+        "8/20 + 5/20 = 13/20。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能正确相加"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-denominator-add"
+      ],
+      "teachingNote": "让学生圈出关键词一共。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。",
+      "id": "q006"
+    },
+    {
+      "sourceId": "seed-frac-c-001",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "计算题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "计算：3/4 + 5/6 - 1/3 = ?",
+      "answer": "5/4",
+      "solutionSteps": [
+        "4、6、3 的公分母可以取 12。",
+        "3/4 = 9/12，5/6 = 10/12，1/3 = 4/12。",
+        "9/12 + 10/12 - 4/12 = 15/12 = 5/4。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能统一三个分数的单位",
+        "能按顺序计算",
+        "能化简结果"
+      ],
+      "teachingNote": "用于检查学生能否把方法迁移到三个分数。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q007"
+    },
+    {
+      "sourceId": "seed-frac-c-002",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一桶水，上午用去 2/5，下午用去 1/6。小华说：“一天共用去不到半桶。”他说得对吗？请说明理由。",
+      "answer": "不对。一天共用去 17/30，比 1/2 多 1/15。",
+      "solutionSteps": [
+        "先求一天共用去多少：2/5 + 1/6。",
+        "通分为 12/30 + 5/30 = 17/30。",
+        "1/2 = 15/30，17/30 > 15/30，所以超过半桶。",
+        "17/30 - 15/30 = 2/30 = 1/15。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能求总量",
+        "能与 1/2 比较",
+        "能说明理由"
+      ],
+      "teachingNote": "鼓励学生用比较而不是只给计算结果。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q008"
+    },
+    {
+      "sourceId": "seed-frac-c-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "计算题",
+      "stem": "计算：1/2 + 2/3 - 1/4 = ?",
+      "answer": "11/12",
+      "solutionSteps": [
+        "2、3、4 的最小公倍数是 12。",
+        "1/2 = 6/12，2/3 = 8/12，1/4 = 3/12。",
+        "6/12 + 8/12 - 3/12 = 11/12。"
+      ],
+      "scorePoints": [
+        "能找到公分母 12",
+        "能统一三个分数的分子",
+        "能按顺序计算"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "teachingNote": "检查学生能否把方法迁移到三个分数。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。",
+      "id": "q009"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "1/2",
+      "solutionSteps": [
+        "把 2/5 通分为 4/10。",
+        "4/10 + 1/10 = 5/10。",
+        "5/10 约分为 1/2。"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能约分为最简分数"
+      ]
+    },
+    {
+      "questionId": "q002",
+      "answer": "5/12 米",
+      "solutionSteps": [
+        "求一共用去多少，用加法：1/4 + 1/6。",
+        "通分为 3/12 + 2/12。",
+        "结果是 5/12 米。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分计算"
+      ]
+    },
+    {
+      "questionId": "q003",
+      "answer": "5/6",
+      "solutionSteps": [
+        "把 1/2 通分为 3/6，把 1/3 通分为 2/6。",
+        "同分母分数相加，3/6 + 2/6 = 5/6。"
+      ],
+      "scorePoints": [
+        "能找到公分母 6",
+        "能正确转化分子",
+        "能正确相加"
+      ]
+    },
+    {
+      "questionId": "q004",
+      "answer": "一共耕了 5/8，还剩 3/8。",
+      "solutionSteps": [
+        "先求一共耕了多少：3/8 + 1/4。",
+        "1/4 = 2/8，所以 3/8 + 2/8 = 5/8。",
+        "再求剩下：1 - 5/8 = 3/8。"
+      ],
+      "scorePoints": [
+        "能分两步列式",
+        "能正确通分",
+        "能求剩余量"
+      ]
+    },
+    {
+      "questionId": "q005",
+      "answer": "1又1/24",
+      "solutionSteps": [
+        "3 和 8 的公分母可以取 24。",
+        "2/3 = 16/24，3/8 = 9/24。",
+        "16/24 + 9/24 = 25/24 = 1又1/24。"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能把假分数化为带分数"
+      ]
+    },
+    {
+      "questionId": "q006",
+      "answer": "13/20",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：2/5 + 1/4。",
+        "2/5 = 8/20，1/4 = 5/20。",
+        "8/20 + 5/20 = 13/20。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能正确相加"
+      ]
+    },
+    {
+      "questionId": "q007",
+      "answer": "5/4",
+      "solutionSteps": [
+        "4、6、3 的公分母可以取 12。",
+        "3/4 = 9/12，5/6 = 10/12，1/3 = 4/12。",
+        "9/12 + 10/12 - 4/12 = 15/12 = 5/4。"
+      ],
+      "scorePoints": [
+        "能统一三个分数的单位",
+        "能按顺序计算",
+        "能化简结果"
+      ]
+    },
+    {
+      "questionId": "q008",
+      "answer": "不对。一天共用去 17/30，比 1/2 多 1/15。",
+      "solutionSteps": [
+        "先求一天共用去多少：2/5 + 1/6。",
+        "通分为 12/30 + 5/30 = 17/30。",
+        "1/2 = 15/30，17/30 > 15/30，所以超过半桶。",
+        "17/30 - 15/30 = 2/30 = 1/15。"
+      ],
+      "scorePoints": [
+        "能求总量",
+        "能与 1/2 比较",
+        "能说明理由"
+      ]
+    },
+    {
+      "questionId": "q009",
+      "answer": "11/12",
+      "solutionSteps": [
+        "2、3、4 的最小公倍数是 12。",
+        "1/2 = 6/12，2/3 = 8/12，1/4 = 3/12。",
+        "6/12 + 8/12 - 3/12 = 11/12。"
+      ],
+      "scorePoints": [
+        "能找到公分母 12",
+        "能统一三个分数的分子",
+        "能按顺序计算"
+      ]
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-add"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-add"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-add": {
+        "questionCount": 9,
+        "questionTypes": {
+          "计算题": 5,
+          "应用题": 4
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 3,
+        "min": 1,
+        "max": 2,
+        "average": 1.67
+      },
+      "B": {
+        "questionCount": 3,
+        "min": 3,
+        "max": 3,
+        "average": 3.0
+      },
+      "C": {
+        "questionCount": 3,
+        "min": 4,
+        "max": 4,
+        "average": 4.0
+      }
+    },
+    "byDifficulty": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 3
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "代数式通分",
+      "分式方程",
+      "复杂最小公倍数证明",
+      "有理数混合运算"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "err-no-simplify",
+      "name": "结果未约分",
+      "relatedQuestionCount": 4,
+      "symptom": "计算正确但保留 4/8、6/12 等非最简结果。",
+      "remediation": "在每道题最后增加“能否再约分或化简”的自查步骤。"
+    },
+    {
+      "misconceptionId": "err-operation-choice",
+      "name": "应用题运算选择错误",
+      "relatedQuestionCount": 4,
+      "symptom": "把求一共误判为求剩余，或把比较问题误判为求和。",
+      "remediation": "要求先圈出关键词并写出数量关系式，再计算。"
+    },
+    {
+      "misconceptionId": "err-numerator-not-converted",
+      "name": "通分后分子未转换",
+      "relatedQuestionCount": 4,
+      "symptom": "分母变成公分母，但分子仍保留原数。",
+      "remediation": "要求学生写出等值转化过程，例如 1/2 = 3/6。"
+    },
+    {
+      "misconceptionId": "err-denominator-add",
+      "name": "分母直接相加",
+      "relatedQuestionCount": 3,
+      "symptom": "把 1/2 + 1/3 写成 2/5，或把分母也参与加减。",
+      "remediation": "先追问两个分数单位是否相同，再用图示或通分把单位统一。"
+    }
+  ],
+  "replacementSuggestions": [
+    {
+      "questionId": "q001",
+      "sourceId": "seed-frac-a-003",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-a-002",
+          "groupId": "sim-frac-basic-calc-001",
+          "methodTag": "异分母先通分再加减",
+          "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+        },
+        {
+          "sourceId": "seed-frac-a-010",
+          "groupId": "sim-frac-basic-calc-001",
+          "methodTag": "异分母先通分再加减",
+          "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+        },
+        {
+          "sourceId": "seed-frac-a-011",
+          "groupId": "sim-frac-basic-calc-001",
+          "methodTag": "异分母先通分再加减",
+          "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+        }
+      ]
+    },
+    {
+      "questionId": "q002",
+      "sourceId": "seed-frac-a-004",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-a-013",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        },
+        {
+          "sourceId": "seed-frac-b-014",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        },
+        {
+          "sourceId": "seed-frac-b-015",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        }
+      ]
+    },
+    {
+      "questionId": "q003",
+      "sourceId": "seed-frac-a-001",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-a-002",
+          "groupId": "sim-frac-basic-calc-001",
+          "methodTag": "异分母先通分再加减",
+          "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+        },
+        {
+          "sourceId": "seed-frac-a-010",
+          "groupId": "sim-frac-basic-calc-001",
+          "methodTag": "异分母先通分再加减",
+          "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+        },
+        {
+          "sourceId": "seed-frac-a-011",
+          "groupId": "sim-frac-basic-calc-001",
+          "methodTag": "异分母先通分再加减",
+          "replaceRule": "保留两项异分母加减结构，优先使用较小公分母，结果需约分。"
+        }
+      ]
+    },
+    {
+      "questionId": "q004",
+      "sourceId": "seed-frac-b-004",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-a-013",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        },
+        {
+          "sourceId": "seed-frac-b-014",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        },
+        {
+          "sourceId": "seed-frac-b-015",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        }
+      ]
+    },
+    {
+      "questionId": "q006",
+      "sourceId": "seed-frac-b-012",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-a-013",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        },
+        {
+          "sourceId": "seed-frac-b-014",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        },
+        {
+          "sourceId": "seed-frac-b-015",
+          "groupId": "sim-frac-application-001",
+          "methodTag": "异分母一步应用",
+          "replaceRule": "保留数量关系不变，可替换生活情境、分数和单位。"
+        }
+      ]
+    },
+    {
+      "questionId": "q007",
+      "sourceId": "seed-frac-c-001",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-c-003",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        },
+        {
+          "sourceId": "seed-frac-c-011",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        },
+        {
+          "sourceId": "seed-frac-c-013",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        }
+      ]
+    },
+    {
+      "questionId": "q008",
+      "sourceId": "seed-frac-c-002",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-c-003",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        },
+        {
+          "sourceId": "seed-frac-c-011",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        },
+        {
+          "sourceId": "seed-frac-c-013",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        }
+      ]
+    },
+    {
+      "questionId": "q009",
+      "sourceId": "seed-frac-c-009",
+      "alternatives": [
+        {
+          "sourceId": "seed-frac-c-003",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        },
+        {
+          "sourceId": "seed-frac-c-011",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        },
+        {
+          "sourceId": "seed-frac-c-013",
+          "groupId": "sim-frac-compare-multistep-001",
+          "methodTag": "异分母比较与多步计算",
+          "replaceRule": "保留多步通分、比较或求差结构，替换分数后需重新校验答案。"
+        }
+      ]
+    }
+  ],
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 9 题，请求 9 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_C_count",
+        "status": "pass",
+        "message": "C 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "pass",
+        "message": "题型比例符合目标 {'计算题': 5, '应用题': 4}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "pass",
+        "message": "难度比例符合目标 {'1': 1, '2': 2, '3': 3, '4': 3}。"
+      },
+      {
+        "id": "post-patch",
+        "status": "pass",
+        "message": "patch_exercise_set.py: 已补全必填字段默认值、去重题目、修复引用、重建 Markdown"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  },
+  "export": {
+    "markdown": "# 异分母分数加减法 分层作业\n\n- 学科：数学\n- 年级：五年级\n- 教材：人教版 · 分数的加法和减法 · 第2课时\n- 课题：异分母分数加减法\n- 题量：9 题\n\n## 出题蓝图\n\n理解先通分再加减，结果能约分；不引入分式、方程和复杂代数通分。\n\n- A 层（基础层）：3 题，难度 [1, 2]。能理解题意并完成一步分数加减计算或基础应用。\n- B 层（巩固层）：3 题，难度 [2, 3]。能在常见变式、一步或两步应用题中正确选择方法。\n- C 层（拓展层）：3 题，难度 [3, 4]。能处理多步、比较、判断或解释类问题，并说明理由。\n- 题型目标：{'计算题': 5, '应用题': 4}\n- 难度目标：{'1': 1, '2': 2, '3': 3, '4': 3}\n\n## 题目\n\n### A 层\n\nq001. 【计算题｜难度 2】计算：2/5 + 1/10 = ?\n\nq002. 【应用题｜难度 2】一根彩带第一次用去 1/4 米，第二次用去 1/6 米。两次一共用去多少米？\n\nq003. 【计算题｜难度 1】计算：1/2 + 1/3 = ?\n\n### B 层\n\nq004. 【应用题｜难度 3】一块地第一天耕了 3/8，第二天耕了 1/4。两天一共耕了这块地的几分之几？还剩几分之几？\n\nq005. 【计算题｜难度 3】计算：2/3 + 3/8 = ?\n\nq006. 【应用题｜难度 3】一袋米，第一天吃了 2/5，第二天吃了 1/4，一共吃了几分之几？\n\n### C 层\n\nq007. 【计算题｜难度 4】计算：3/4 + 5/6 - 1/3 = ?\n\nq008. 【应用题｜难度 4】一桶水，上午用去 2/5，下午用去 1/6。小华说：“一天共用去不到半桶。”他说得对吗？请说明理由。\n\nq009. 【计算题｜难度 4】计算：1/2 + 2/3 - 1/4 = ?\n\n## 答案与解析\n\n### A 层\n\n**q001 答案：** 1/2\n1. 把 2/5 通分为 4/10。\n2. 4/10 + 1/10 = 5/10。\n3. 5/10 约分为 1/2。\n讲评提示：这题用于检查学生是否有化简意识。\n\n**q002 答案：** 5/12 米\n1. 求一共用去多少，用加法：1/4 + 1/6。\n2. 通分为 3/12 + 2/12。\n3. 结果是 5/12 米。\n讲评提示：让学生先说数量关系，再写算式。\n\n**q003 答案：** 5/6\n1. 把 1/2 通分为 3/6，把 1/3 通分为 2/6。\n2. 同分母分数相加，3/6 + 2/6 = 5/6。\n讲评提示：重点追问为什么不能写成 2/5。\n\n### B 层\n\n**q004 答案：** 一共耕了 5/8，还剩 3/8。\n1. 先求一共耕了多少：3/8 + 1/4。\n2. 1/4 = 2/8，所以 3/8 + 2/8 = 5/8。\n3. 再求剩下：1 - 5/8 = 3/8。\n讲评提示：这是一步加法加一步补全整体的综合题。\n\n**q005 答案：** 1又1/24\n1. 3 和 8 的公分母可以取 24。\n2. 2/3 = 16/24，3/8 = 9/24。\n3. 16/24 + 9/24 = 25/24 = 1又1/24。\n讲评提示：提醒学生结果大于 1 时要会解释数量意义。\n\n**q006 答案：** 13/20\n1. 求一共吃了多少，用加法：2/5 + 1/4。\n2. 2/5 = 8/20，1/4 = 5/20。\n3. 8/20 + 5/20 = 13/20。\n讲评提示：让学生圈出关键词一共。\n\n### C 层\n\n**q007 答案：** 5/4\n1. 4、6、3 的公分母可以取 12。\n2. 3/4 = 9/12，5/6 = 10/12，1/3 = 4/12。\n3. 9/12 + 10/12 - 4/12 = 15/12 = 5/4。\n讲评提示：用于检查学生能否把方法迁移到三个分数。\n\n**q008 答案：** 不对。一天共用去 17/30，比 1/2 多 1/15。\n1. 先求一天共用去多少：2/5 + 1/6。\n2. 通分为 12/30 + 5/30 = 17/30。\n3. 1/2 = 15/30，17/30 > 15/30，所以超过半桶。\n4. 17/30 - 15/30 = 2/30 = 1/15。\n讲评提示：鼓励学生用比较而不是只给计算结果。\n\n**q009 答案：** 11/12\n1. 2、3、4 的最小公倍数是 12。\n2. 1/2 = 6/12，2/3 = 8/12，1/4 = 3/12。\n3. 6/12 + 8/12 - 3/12 = 11/12。\n讲评提示：检查学生能否把方法迁移到三个分数。\n\n## 覆盖与讲评建议\n\n- math-g5-fraction-add：9 题，题型分布 {'计算题': 5, '应用题': 4}\n\n- 结果未约分：关联 4 题。在每道题最后增加“能否再约分或化简”的自查步骤。\n- 应用题运算选择错误：关联 4 题。要求先圈出关键词并写出数量关系式，再计算。\n- 通分后分子未转换：关联 4 题。要求学生写出等值转化过程，例如 1/2 = 3/6。\n- 分母直接相加：关联 3 题。先追问两个分数单位是否相同，再用图示或通分把单位统一。\n\n## 换题建议\n\n- q001 可替换为：seed-frac-a-002、seed-frac-a-010、seed-frac-a-011\n- q002 可替换为：seed-frac-a-013、seed-frac-b-014、seed-frac-b-015\n- q003 可替换为：seed-frac-a-002、seed-frac-a-010、seed-frac-a-011\n- q004 可替换为：seed-frac-a-013、seed-frac-b-014、seed-frac-b-015\n- q006 可替换为：seed-frac-a-013、seed-frac-b-014、seed-frac-b-015\n- q007 可替换为：seed-frac-c-003、seed-frac-c-011、seed-frac-c-013\n- q008 可替换为：seed-frac-c-003、seed-frac-c-011、seed-frac-c-013\n- q009 可替换为：seed-frac-c-003、seed-frac-c-011、seed-frac-c-013\n\n## 质量报告\n\n- question_count：pass，生成 9 题，请求 9 题。\n- duplicate_stem：pass，题干无重复。\n- layer_A_count：pass，A 层生成 3 题，目标 3 题。\n- layer_B_count：pass，B 层生成 3 题，目标 3 题。\n- layer_C_count：pass，C 层生成 3 题，目标 3 题。\n- knowledge_coverage：pass，请求知识点均已覆盖。\n- over_scope：pass，未发现明显超纲风险。\n- question_type_mix：pass，题型比例符合目标 {'计算题': 5, '应用题': 4}。\n- difficulty_mix：pass，难度比例符合目标 {'1': 1, '2': 2, '3': 3, '4': 3}。\n- post-patch：pass，patch_exercise_set.py: 已补全必填字段默认值、去重题目、修复引用、重建 Markdown\n- 提醒：难度、分层和区分度为规则型近似，不代表真实测量学参数。\n- 提醒：当前 references 为内部示例数据，扩学科前需补充真实授权数据。\n",
+    "format": "markdown"
+  }
+}

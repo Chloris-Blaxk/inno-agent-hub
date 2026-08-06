@@ -1,0 +1,298 @@
+{
+  "requestId": "req-project-proposal-evidence-missing-001",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "summary": "项目基本信息可生成框架，但研究基础和预期成果材料不足，已在事实表中标记缺失。",
+  "result": {
+    "projectFactTable": {
+      "projectId": "proj-demo-002",
+      "facts": [
+        {
+          "factId": "fact-001",
+          "field": "project.title",
+          "value": "小学数学课堂反馈数据采集流程优化研究",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-002",
+          "field": "project.level",
+          "value": "区级课题",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-003",
+          "field": "team.leader",
+          "value": "项目负责人待确认",
+          "sourceRefs": [
+            "mat-002"
+          ],
+          "confidence": "low",
+          "status": "needs_user_confirmation"
+        },
+        {
+          "factId": "fact-004",
+          "field": "team.memberCount",
+          "value": "核心成员 3 人",
+          "sourceRefs": [
+            "mat-002"
+          ],
+          "confidence": "medium",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-005",
+          "field": "timeline.cycle",
+          "value": "1 年",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "medium",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-006",
+          "field": "goals.mainGoal",
+          "value": "规范课堂反馈数据采集与分析流程",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        }
+      ],
+      "missingFields": [
+        {
+          "field": "basis.practiceRecords",
+          "reason": "未提供课例、观察记录或研究基础材料。"
+        },
+        {
+          "field": "outcomes.expected",
+          "reason": "未提供预期成果清单。"
+        }
+      ],
+      "conflicts": []
+    },
+    "documentDraft": {
+      "documentId": "doc-demo-002",
+      "documentType": "project_application",
+      "title": "小学数学课堂反馈数据采集流程优化研究",
+      "sections": [
+        {
+          "sectionId": "sec-background",
+          "title": "研究背景",
+          "required": true,
+          "content": "项目拟聚焦课堂反馈数据采集流程，但政策或实践背景仍需补充。",
+          "factRefs": [
+            "fact-002"
+          ],
+          "evidenceRefs": [],
+          "status": "needs_evidence"
+        },
+        {
+          "sectionId": "sec-goals",
+          "title": "研究目标与内容",
+          "required": true,
+          "content": "目标是规范课堂反馈数据采集与分析流程。",
+          "factRefs": [
+            "fact-006"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-methods",
+          "title": "研究方法与步骤",
+          "required": true,
+          "content": "研究周期为 1 年，具体课例和观察记录待补充。",
+          "factRefs": [
+            "fact-005"
+          ],
+          "evidenceRefs": [],
+          "status": "needs_evidence"
+        },
+        {
+          "sectionId": "sec-outcomes",
+          "title": "预期成果",
+          "required": true,
+          "content": "预期成果清单未提供，暂不代填。",
+          "factRefs": [],
+          "evidenceRefs": [],
+          "status": "needs_evidence"
+        },
+        {
+          "sectionId": "sec-basis",
+          "title": "研究基础",
+          "required": true,
+          "content": "研究基础材料缺失，需补充已有课例或教研记录。",
+          "factRefs": [],
+          "evidenceRefs": [],
+          "status": "needs_evidence"
+        }
+      ]
+    },
+    "reviewAlignmentReport": {
+      "alignedDimensions": [
+        "研究目标"
+      ],
+      "missingDimensions": [
+        "研究基础",
+        "预期成果"
+      ]
+    },
+    "budgetReport": {
+      "items": [],
+      "warnings": [
+        "未提供预算信息，不能生成金额。"
+      ]
+    },
+    "consistencyReport": {
+      "conflictCount": 0,
+      "notes": [
+        "缺失字段已进入补材料清单。"
+      ]
+    }
+  },
+  "handoff": {
+    "projectFactTableSummary": {
+      "projectId": "proj-demo-002",
+      "factCount": 6,
+      "conflictCount": 0,
+      "missingFields": [
+        "basis.practiceRecords",
+        "outcomes.expected"
+      ]
+    },
+    "documentSummary": {
+      "documentType": "project_application",
+      "requiredSectionCoverage": 1
+    }
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "id": "missing_fields_marked",
+        "status": "pass"
+      },
+      {
+        "id": "no_fabricated_outcomes",
+        "status": "pass"
+      }
+    ],
+    "warnings": [
+      "研究基础和预期成果缺失。"
+    ],
+    "metrics": {
+      "factCount": 6,
+      "conflictCount": 0,
+      "templateSectionCoverage": 1,
+      "budgetWarningCount": 1
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 2,
+    "verifiedSourceCount": 2,
+    "unsupportedClaimCount": 2
+  },
+  "nextActions": [
+    "补充课例、成果清单和预算材料。"
+  ],
+  "status": "warn",
+  "warnings": [
+    "研究基础和预期成果缺失。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-project-proposal-skill",
+    "skillId": "project-proposal-skill",
+    "taskIntent": "project_application",
+    "dataSources": [
+      {
+        "sourceId": "document-templates",
+        "sourceName": "项目文档模板样例",
+        "sourceType": "local_sample",
+        "dataType": "document_template",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "模板为本地样例，真实申报前需替换为地区/项目级别最新模板。"
+        ]
+      },
+      {
+        "sourceId": "budget-rules",
+        "sourceName": "预算规则样例",
+        "sourceType": "local_sample",
+        "dataType": "budget_rule",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "预算规则为样例口径，金额和科目需按科研管理/财务规则确认。"
+        ]
+      },
+      {
+        "sourceId": "review-rubrics",
+        "sourceName": "评审标准样例",
+        "sourceType": "local_sample",
+        "dataType": "review_rubric",
+        "recordCount": 1,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "评审维度为样例，不代表所有地区和项目类别权重。"
+        ]
+      },
+      {
+        "sourceId": "sanitized-case-patterns",
+        "sourceName": "脱敏案例模式样例",
+        "sourceType": "local_sample",
+        "dataType": "sanitized_case_pattern",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "案例为脱敏模式样例，只能辅助结构参考，不能承诺立项结果。"
+        ]
+      },
+      {
+        "sourceId": "user-project-materials",
+        "sourceName": "用户提供项目材料",
+        "sourceType": "user_provided",
+        "dataType": "project_material",
+        "recordCount": 2,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "用户材料先进入 ProjectFactTable；未形成 factRefs 前不得写入正文事实。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前生成 1 类文档；模板、预算和评审规则仍为本地样例，需按真实申报口径复核。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "project_application",
+    "sampleFile": "agent_cases/project-proposal-skill/generated-outputs/sample-evidence-missing.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/project-proposal-skill/generated-outputs/sample-evidence-missing.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

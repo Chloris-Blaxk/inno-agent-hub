@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/literature_record.schema.json",
+  "title": "LiteratureRecord",
+  "type": "object",
+  "required": [
+    "paperId",
+    "title",
+    "authors",
+    "year",
+    "sourceStatus",
+    "textAvailability",
+    "evidenceLevel"
+  ],
+  "properties": {
+    "paperId": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "authors": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "year": {"type": ["integer", "string"]},
+    "journal": {"type": "string"},
+    "doi": {"type": "string"},
+    "keywords": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "sourceStatus": {
+      "enum": ["whitelist", "user_provided", "external_verified", "unverified"]
+    },
+    "textAvailability": {
+      "enum": ["metadata", "abstract", "fulltext", "user_uploaded"]
+    },
+    "evidenceLevel": {
+      "enum": ["metadata_verified", "abstract_verified", "fulltext_verified", "user_text_only"]
+    }
+  },
+  "additionalProperties": true
+}

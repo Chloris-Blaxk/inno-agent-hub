@@ -1,0 +1,203 @@
+{
+  "misconceptions": [
+    {
+      "id": "err-denominator-add",
+      "name": "分母直接相加",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "symptom": "把 1/2 + 1/3 写成 2/5，或把分母也参与加减。",
+      "likelyCause": "没有理解分母表示分数单位，单位不同不能直接合并。",
+      "diagnosisSignals": [
+        "分母相加",
+        "分子分母都相加",
+        "2/5"
+      ],
+      "remediation": "先追问两个分数单位是否相同，再用图示或通分把单位统一。",
+      "exampleQuestionIds": [
+        "seed-frac-a-001",
+        "seed-frac-a-002"
+      ]
+    },
+    {
+      "id": "err-numerator-not-converted",
+      "name": "通分后分子未转换",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "symptom": "分母变成公分母，但分子仍保留原数。",
+      "likelyCause": "只记住找公分母，没有理解等值分数。",
+      "diagnosisSignals": [
+        "分母变了分子没变",
+        "只改分母",
+        "等值转化缺失"
+      ],
+      "remediation": "要求学生写出等值转化过程，例如 1/2 = 3/6。",
+      "exampleQuestionIds": [
+        "seed-frac-a-001",
+        "seed-frac-b-001"
+      ]
+    },
+    {
+      "id": "err-no-simplify",
+      "name": "结果未约分",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add",
+        "math-g5-fraction-add"
+      ],
+      "symptom": "计算正确但保留 4/8、6/12 等非最简结果。",
+      "likelyCause": "缺少结果检查习惯。",
+      "diagnosisSignals": [
+        "未约分",
+        "结果不是最简分数",
+        "保留假分数"
+      ],
+      "remediation": "在每道题最后增加“能否再约分或化简”的自查步骤。",
+      "exampleQuestionIds": [
+        "seed-same-b-003",
+        "seed-frac-b-010"
+      ]
+    },
+    {
+      "id": "err-operation-choice",
+      "name": "应用题运算选择错误",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "symptom": "把求一共误判为求剩余，或把比较问题误判为求和。",
+      "likelyCause": "没有先分析数量关系。",
+      "diagnosisSignals": [
+        "一共",
+        "还剩",
+        "相差",
+        "多多少"
+      ],
+      "remediation": "要求先圈出关键词并写出数量关系式，再计算。",
+      "exampleQuestionIds": [
+        "seed-app-a-001",
+        "seed-app-b-001"
+      ]
+    },
+    {
+      "id": "err-same-denom-unit",
+      "name": "不理解分数单位相同才能直接相加减",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "symptom": "同分母分数也把分母相加，如 2/7 + 3/7 = 5/14；或整数 1 不会转化为同分母分数。",
+      "likelyCause": "没有理解分母代表分数单位，几个 1/7 加几个 1/7 还是几个 1/7。",
+      "diagnosisSignals": [
+        "分母相加",
+        "1 不会化成分数",
+        "整数减分数不会算"
+      ],
+      "remediation": "用图示或分数条让学生直观感受分数单位相同才能直接合并。",
+      "exampleQuestionIds": [
+        "seed-same-a-006",
+        "seed-same-a-007",
+        "seed-same-a-010"
+      ]
+    },
+    {
+      "id": "err-same-denom-mixed",
+      "name": "假分数未化整数或带分数",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "symptom": "结果是 7/5、8/6 等假分数时，未化为整数或带分数。",
+      "likelyCause": "缺少结果规范化意识，不知道假分数需要进一步处理。",
+      "diagnosisSignals": [
+        "假分数",
+        "7/5",
+        "8/6"
+      ],
+      "remediation": "建立三步检查习惯：算对了吗？约分了吗？假分数化了吗？",
+      "exampleQuestionIds": [
+        "seed-same-a-005",
+        "seed-same-b-004"
+      ]
+    },
+    {
+      "id": "err-remaining-model",
+      "name": "整体 1 与剩余量关系混乱",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "symptom": "求还剩多少时没有用 1 减去已用部分，或把已用量当作剩余量。",
+      "likelyCause": "没有把整件物品、全程或全书看作整体 1。",
+      "diagnosisSignals": [
+        "还剩",
+        "一共用去",
+        "整体 1",
+        "12/12"
+      ],
+      "remediation": "先写出“剩余 = 1 - 已用总量”，再进行分数计算。",
+      "exampleQuestionIds": [
+        "seed-app-a-002",
+        "seed-app-b-001",
+        "seed-app-c-001"
+      ]
+    },
+    {
+      "id": "err-unit-missing",
+      "name": "答案缺少单位或对象",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "symptom": "计算结果正确，但没有写米、千米、全书的几分之几等对象。",
+      "likelyCause": "只关注算式，忽略实际情境中的量。",
+      "diagnosisSignals": [
+        "缺单位",
+        "没有对象",
+        "只写分数"
+      ],
+      "remediation": "要求答案末尾回到问题，写清楚“占谁的几分之几”。",
+      "exampleQuestionIds": [
+        "seed-app-a-003",
+        "seed-app-b-004"
+      ]
+    },
+    {
+      "id": "err-compare-reference",
+      "name": "比较基准不一致",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "symptom": "比较两个量时没有统一分母或没有说明比较对象。",
+      "likelyCause": "只凭直觉比较分子或分母，没有先统一单位。",
+      "diagnosisSignals": [
+        "比一半多",
+        "相差",
+        "谁大",
+        "够不够"
+      ],
+      "remediation": "先把两个量化成同分母分数，再写出大小关系和相差量。",
+      "exampleQuestionIds": [
+        "seed-app-a-010",
+        "seed-app-b-008",
+        "seed-app-c-004"
+      ]
+    },
+    {
+      "id": "err-multistep-order",
+      "name": "多步应用题步骤顺序错误",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "symptom": "先求剩余、再求总量等步骤顺序颠倒，导致算式不对应题意。",
+      "likelyCause": "没有分清先发生什么、后比较什么。",
+      "diagnosisSignals": [
+        "两步",
+        "先后",
+        "再",
+        "第三天"
+      ],
+      "remediation": "用“先求什么、再求什么”的两句话拆解题目。",
+      "exampleQuestionIds": [
+        "seed-app-b-010",
+        "seed-app-c-003",
+        "seed-app-c-010"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "研究选题生成 Skill 的最小教师画像 schema。"
+  },
+  "requiredFields": [
+    "subject",
+    "gradeBand",
+    "schoolContext",
+    "availableCycle"
+  ],
+  "optionalFields": [
+    "teacherId",
+    "researchExperience",
+    "existingAchievements",
+    "constraints"
+  ],
+  "fieldDefinitions": {
+    "teacherId": "可选，本地或业务系统中的教师 ID。",
+    "subject": "任教学科或研究学科，如 小学数学。",
+    "gradeBand": "学段或年级范围，如 高年级、初中、七年级。",
+    "schoolContext": "学校类型、区域条件或资源条件。",
+    "researchExperience": "已有论文、课题、教研经历的简要描述。",
+    "existingAchievements": "已有成果列表，必须来自用户材料或用户明确输入。",
+    "availableCycle": "可投入研究周期，如 1 年、1-3 年。",
+    "constraints": "时间、数据、资源、伦理或学校条件限制。"
+  },
+  "defaults": {
+    "researchExperience": "",
+    "existingAchievements": [],
+    "constraints": []
+  },
+  "validationRules": [
+    {
+      "id": "profile_required_fields",
+      "severity": "fail",
+      "rule": "subject、gradeBand、schoolContext、availableCycle 必须存在，缺失时应追问或标记待补充。"
+    },
+    {
+      "id": "achievement_source",
+      "severity": "fail",
+      "rule": "existingAchievements 不得由模型虚构，必须来自 SourceMaterial 或用户明确输入。"
+    },
+    {
+      "id": "cycle_feasibility",
+      "severity": "warn",
+      "rule": "availableCycle 少于 1 学期时，不建议生成大规模实证研究选题。"
+    }
+  ]
+}
+

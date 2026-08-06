@@ -1,0 +1,17 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "第2课时",
+  "topic": "异分母分数加减法·分层作业",
+  "knowledgePointIds": ["math-g5-fraction-same-denominator-add", "math-g5-fraction-add"],
+  "taskType": "layered_homework",
+  "questionCount": 9,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["计算题", "应用题", "比较题"],
+  "questionTypeMix": {"计算题": 5, "应用题": 3, "比较题": 1},
+  "difficultyMix": {"1": 1, "2": 2, "3": 3, "4": 3},
+  "strictBlueprint": true,
+  "requirements": "标准分层作业。A层巩固同分母基础，B层异分母通分计算+简单应用，C层综合应用+比较推理。每层3题，附完整答案解析和错因标签。严格按蓝图配比。"
+}

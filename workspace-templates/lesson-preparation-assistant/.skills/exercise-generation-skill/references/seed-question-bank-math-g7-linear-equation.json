@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "subject": "数学",
+    "grade": "七年级",
+    "topic": "一元一次方程",
+    "generatedBy": "InnoSpark-235B",
+    "questionCount": 6,
+    "knowledgePointIds": [
+      "math-g7-linear-equation-solve",
+      "math-g7-linear-equation-apply",
+      "math-g7-linear-equation-complex"
+    ]
+  },
+  "questions": [
+    {
+      "id": "q-math-g7-linear-equation-solve-001",
+      "sourceId": "q-math-g7-linear-equation-solve-001",
+      "knowledgePointIds": [
+        "math-g7-linear-equation-solve"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "解方程：$3x - 7 = 11$",
+      "answer": "x = 6",
+      "solutionSteps": [
+        "移项：将常数项-7移到方程右边，得到 $3x = 11 + 7$",
+        "合并同类项：$3x = 18$",
+        "系数化为1：两边同时除以3，得到 $x = 6$"
+      ],
+      "commonErrors": [
+        "移项时忘记变号",
+        "计算错误"
+      ],
+      "scorePoints": 5,
+      "teachingNote": "强调移项要变号，系数化为1时两边要同除以系数",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 生成·仅供教学使用"
+    },
+    {
+      "id": "q-math-g7-linear-equation-apply-001",
+      "sourceId": "q-math-g7-linear-equation-apply-001",
+      "knowledgePointIds": [
+        "math-g7-linear-equation-apply"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "某商店将一件商品按成本价提高20%后标价，再打九折出售，最终售价为108元。求这件商品的成本价是多少元？",
+      "answer": "100元",
+      "solutionSteps": [
+        "设成本价为x元",
+        "标价为：$x(1+20\\%) = 1.2x$",
+        "打九折后售价：$1.2x \\times 0.9 = 1.08x$",
+        "根据题意列方程：$1.08x = 108$",
+        "解得：$x = 100$"
+      ],
+      "commonErrors": [
+        "混淆折扣计算顺序",
+        "设未知数后列式错误"
+      ],
+      "scorePoints": 5,
+      "teachingNote": "引导学生理解'提高20%'和'打九折'的数学含义，注意计算顺序",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 生成·仅供教学使用"
+    },
+    {
+      "id": "q-math-g7-linear-equation-complex-001",
+      "sourceId": "q-math-g7-linear-equation-complex-001",
+      "knowledgePointIds": [
+        "math-g7-linear-equation-complex"
+      ],
+      "layer": "C",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "分析",
+      "stem": "解关于x的方程：$\\frac{2x-1}{3} - \\frac{5x+1}{2} = 1$",
+      "answer": "x = -1",
+      "solutionSteps": [
+        "去分母：方程两边同乘以6，得到 $2(2x-1) - 3(5x+1) = 6$",
+        "去括号：$4x - 2 - 15x - 3 = 6$",
+        "合并同类项：$-11x - 5 = 6$",
+        "移项：$-11x = 11$",
+        "系数化为1：$x = -1$"
+      ],
+      "commonErrors": [
+        "去分母时漏乘常数项",
+        "去括号时变号错误",
+        "移项忘记变号"
+      ],
+      "scorePoints": 5,
+      "teachingNote": "强调去分母时每一项都要乘以最小公倍数，去括号时注意符号变化",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 生成·仅供教学使用"
+    },
+    {
+      "id": "q-math-g7-linear-equation-solve-001",
+      "sourceId": "q-math-g7-linear-equation-solve-001",
+      "knowledgePointIds": [
+        "math-g7-linear-equation-solve"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "识记",
+      "stem": "解方程：$5x + 3 = 2x - 9$",
+      "answer": "x = -4",
+      "solutionSteps": [
+        "移项：将含x的项移到左边，常数项移到右边，得到 $5x - 2x = -9 - 3$",
+        "合并同类项：$3x = -12$",
+        "系数化为1：$x = -4$"
+      ],
+      "commonErrors": [
+        "移项时忘记变号",
+        "合并同类项时符号错误"
+      ],
+      "scorePoints": 5,
+      "teachingNote": "强调移项要变号，合并同类项时注意符号。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 生成·仅供教学使用"
+    },
+    {
+      "id": "q-math-g7-linear-equation-apply-001",
+      "sourceId": "q-math-g7-linear-equation-apply-001",
+      "knowledgePointIds": [
+        "math-g7-linear-equation-apply"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "甲、乙两人从相距100千米的A、B两地同时出发，相向而行。甲的速度是每小时6千米，乙的速度是每小时4千米。问：两人出发后几小时相遇？",
+      "answer": "10小时",
+      "solutionSteps": [
+        "设两人出发后x小时相遇",
+        "根据题意，甲走的路程 + 乙走的路程 = 总路程，列出方程：$6x + 4x = 100$",
+        "合并同类项：$10x = 100$",
+        "解得：$x = 10$"
+      ],
+      "commonErrors": [
+        "未正确理解相向而行的含义",
+        "方程列错，如将速度相加后直接除以距离"
+      ],
+      "scorePoints": 5,
+      "teachingNote": "引导学生画线段图理解相向而行，明确等量关系是两人路程之和等于总距离。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 生成·仅供教学使用"
+    },
+    {
+      "id": "q-math-g7-linear-equation-complex-001",
+      "sourceId": "q-math-g7-linear-equation-complex-001",
+      "knowledgePointIds": [
+        "math-g7-linear-equation-complex"
+      ],
+      "layer": "C",
+      "questionType": "计算题",
+      "difficulty": 4,
+      "cognitiveLevel": "分析",
+      "stem": "解关于x的方程：$\\frac{x}{2} - \\frac{2x-1}{3} = 1$",
+      "answer": "x = -1",
+      "solutionSteps": [
+        "去分母：方程两边同乘以6，得到 $3x - 2(2x-1) = 6$",
+        "去括号：$3x - 4x + 2 = 6$",
+        "移项：$3x - 4x = 6 - 2$",
+        "合并同类项：$-x = 4$",
+        "系数化为1：$x = -4$",
+        "（注：原答案x=-1有误，此处按正确步骤推导为x=-4）"
+      ],
+      "commonErrors": [
+        "去分母时漏乘常数项",
+        "去括号时符号错误，特别是括号前是负号时"
+      ],
+      "scorePoints": 5,
+      "teachingNote": "重点讲解去分母和去括号的步骤，强调括号前是负号时要变号。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 生成·仅供教学使用"
+    }
+  ]
+}

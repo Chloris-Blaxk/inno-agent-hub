@@ -1,0 +1,167 @@
+{
+  "requestId": "req-research-topic-invalid-001",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "summary": "错误示例：总结性选题引用不存在材料，且题目空泛。",
+  "result": {
+    "materialDigests": [
+      {
+        "digestId": "digest-001",
+        "materialId": "mat-001",
+        "materialType": "reflection",
+        "title": "课堂反思片段",
+        "keyFacts": [
+          {
+            "fact": "学生在分数计算中容易混淆通分步骤",
+            "confidence": "medium"
+          }
+        ],
+        "topicSignals": [
+          "分数计算",
+          "通分错误"
+        ],
+        "usableFor": [
+          "research_topic"
+        ],
+        "limitations": []
+      }
+    ],
+    "topicCandidates": [
+      {
+        "topicId": "topic-001",
+        "topicTitle": "核心素养下小学数学教学研究",
+        "topicType": "summative",
+        "researchQuestion": "",
+        "existingBasis": [
+          {
+            "materialId": "mat-999",
+            "basis": "已有区级获奖成果和论文发表。"
+          }
+        ],
+        "innovationPoints": [],
+        "feasibility": {
+          "score": 6,
+          "risks": [],
+          "neededMaterials": []
+        },
+        "keywords": [
+          "核心素养"
+        ],
+        "nextReadingQuestions": []
+      }
+    ]
+  },
+  "handoff": {
+    "topicCandidates": [
+      "topic-001"
+    ],
+    "keywords": [
+      "核心素养"
+    ],
+    "readingQuestions": []
+  },
+  "qualityReport": {
+    "status": "failed",
+    "checks": [
+      {
+        "id": "expected_invalid_fixture",
+        "status": "fail",
+        "message": "预期 validate 失败的反例样例。"
+      }
+    ],
+    "warnings": [
+      "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+    ],
+    "metrics": {
+      "topicCount": 1,
+      "summativeCount": 1,
+      "planningCount": 0,
+      "materialEvidenceCoverage": 1,
+      "feasibilityWarnings": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [],
+  "status": "failed",
+  "warnings": [
+    "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-research-topic-generation-skill",
+    "skillId": "research-topic-generation-skill",
+    "taskIntent": "mixed_topic",
+    "dataSources": [
+      {
+        "sourceId": "user-materials",
+        "sourceName": "教师上传/输入研究材料",
+        "sourceType": "user_provided",
+        "dataType": "teacher_research_material",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "仅代表用户提供材料；事实真实性和敏感信息需由教师确认。"
+        ]
+      },
+      {
+        "sourceId": "grant-title-samples",
+        "sourceName": "本地立项题样例库",
+        "sourceType": "local_sample",
+        "dataType": "grant_title_sample",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "仅用于相似度演示和首轮降重提示，不能代表真实地区立项库覆盖。"
+        ]
+      },
+      {
+        "sourceId": "policy-hotspot-tags",
+        "sourceName": "本地政策热点标签样例",
+        "sourceType": "local_sample",
+        "dataType": "policy_hotspot_tag",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "政策标签为本地样例，真实申报前需按地区和年份更新。"
+        ]
+      },
+      {
+        "sourceId": "practice-problem-bank",
+        "sourceName": "本地实践问题样例库",
+        "sourceType": "local_sample",
+        "dataType": "practice_problem_cluster",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "实践问题库为种子样例，不能覆盖所有学段、学科和学校情境。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "立项题、政策热点和实践问题库仍为本地样例；选题只能作为候选方向，需结合真实区域要求复核。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "mixed_topic",
+    "sampleFile": "agent_cases/research-topic-generation-skill/generated-outputs/sample-invalid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/research-topic-generation-skill/generated-outputs/sample-invalid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

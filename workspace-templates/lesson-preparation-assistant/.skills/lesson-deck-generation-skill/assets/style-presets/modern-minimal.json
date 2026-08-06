@@ -1,0 +1,38 @@
+{
+  "id": "modern-minimal",
+  "name": "现代简约风",
+  "description": "大面积留白，单色基调配一种强调色，线条简单，字体清晰。适合初高中理科、通用课件。",
+  "colors": {
+    "bg": "F8FAFC",
+    "ink": "0F172A",
+    "muted": "64748B",
+    "accent": "2563EB",
+    "card": "FFFFFF",
+    "line": "DBE3EF",
+    "good": "0F766E",
+    "warn": "B45309"
+  },
+  "fonts": {
+    "head": "Noto Sans SC",
+    "body": "Noto Sans SC"
+  },
+  "layout": {
+    "marginRatio": 0.06,
+    "titleSize": [36, 48],
+    "bodySize": [24, 32],
+    "maxBullets": 5,
+    "maxBulletChars": 18,
+    "maxHeadlineChars": 16
+  },
+  "decorations": {
+    "type": "none",
+    "coverAccent": "line",
+    "cardShadow": true,
+    "borderRadius": 0
+  },
+  "applicable": {
+    "grades": ["初中", "高中"],
+    "subjects": ["数学", "物理", "化学", "生物", "信息科技", "通用"],
+    "scenes": ["新授课", "复习课", "练习讲评"]
+  }
+}

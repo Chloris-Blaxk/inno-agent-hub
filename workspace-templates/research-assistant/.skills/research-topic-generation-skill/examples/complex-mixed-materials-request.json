@@ -1,0 +1,85 @@
+{
+  "requestId": "req-research-topic-complex-001",
+  "entryToken": "@研究选题生成",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "sourceRequest": "我有课例、反思、数据记录和阶段成果，帮我提炼可申报课题和未来深耕方向。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城乡结合部小学，班级差异较大",
+    "researchExperience": "主持过校级课堂反馈微研究，参与过区级数学教研展示",
+    "existingAchievements": ["校级公开课 2 次", "教学案例获区级二等奖"],
+    "availableCycle": "1-2 年",
+    "constraints": ["可做校内连续课堂观察", "暂不具备跨校样本"]
+  },
+  "input": {
+    "teacherProfile": {
+      "subject": "小学数学",
+      "gradeBand": "高年级",
+      "schoolContext": "城乡结合部小学，班级差异较大",
+      "researchExperience": "主持过校级课堂反馈微研究，参与过区级数学教研展示",
+      "existingAchievements": ["校级公开课 2 次", "教学案例获区级二等奖"],
+      "availableCycle": "1-2 年",
+      "constraints": ["可做校内连续课堂观察", "暂不具备跨校样本"]
+    },
+    "materials": [
+      {
+        "materialId": "mat-case-001",
+        "materialType": "teaching_case",
+        "title": "异分母分数加减法错因分析课例",
+        "content": "围绕通分错误、约分遗漏和结果解释设计课堂诊断，记录学生在分数教学中的典型错因，并在讲评时调整顺序。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-reflection-001",
+        "materialType": "reflection",
+        "title": "即时反馈支持讲评顺序调整的教学反思",
+        "content": "课堂投票和错因分类活动显示，即时反馈能帮助教师发现共性错误，但还缺少连续课堂观察和学生作品对照。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-data-001",
+        "materialType": "data_record",
+        "title": "两轮课堂观察与错题样本记录",
+        "content": "两轮课堂观察记录显示，讲评前收集学习证据后，教师更容易聚焦通分、单位量理解和结果表达三类错因。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-outcome-001",
+        "materialType": "project_outcome",
+        "title": "校本微研究阶段成果",
+        "content": "已形成课堂观察表、错因分类记录模板和 3 篇教学案例，成果主要服务于过程性评价和课堂改进。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-paper-001",
+        "materialType": "paper_draft",
+        "title": "论文草稿：学习证据驱动的小学数学讲评课改进",
+        "content": "草稿已写出研究背景和问题提出，但方法、样本、数据来源和发现边界仍不完整。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      }
+    ],
+    "targetProjectType": "区级课题",
+    "topicCount": {"summative": 3, "planning": 2},
+    "requirements": "总结性选题必须引用已有材料，规划性选题必须说明未来 1-3 年风险和补资料清单。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

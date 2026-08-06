@@ -1,0 +1,14 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "期中复习",
+  "topic": "分数加减法·易错专项突破",
+  "knowledgePointIds": ["math-g5-fraction-add"],
+  "taskType": "topic_drill",
+  "questionCount": 8,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["计算题", "判断题", "填空题"],
+  "requirements": "易错题专项练习。针对学生常见错误设计：分母直接相加、通分后分子未转换、结果未约分、假分数未化简。每道题附详细的错因分析和纠错提示。A层2题B层3题C层3题。"
+}

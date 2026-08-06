@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "学校/区域实践问题库（扩增至 12 簇），覆盖多学科、多年段的常见教学研究问题。用于规划性选题生成和可行性判断。"
+  },
+  "problemClusters": [
+    {
+      "clusterId": "practice-problem-math-feedback-001",
+      "subjectTags": ["小学数学"],
+      "gradeBands": ["中年级", "高年级"],
+      "schoolContexts": ["城区普通小学", "乡镇小学", "集团校"],
+      "problemSignals": ["课堂反馈滞后", "错因记录分散", "讲评顺序依赖经验"],
+      "possibleTopicAngles": [
+        "课堂即时反馈支持错因诊断的实践研究",
+        "基于学习证据的小学数学错因讲评流程优化研究",
+        "小学数学课堂反馈数据采集与应用路径研究"
+      ],
+      "feasibilityRisks": [
+        "需要连续课时观察记录，单节课例不足以支撑结论。",
+        "需要明确学生错因分类标准，避免只做经验描述。"
+      ],
+      "neededMaterials": ["错题样本", "课堂观察表", "讲评调整记录", "学生访谈或学习单"]
+    },
+    {
+      "clusterId": "practice-problem-reading-thinking-001",
+      "subjectTags": ["小学语文", "初中语文"],
+      "gradeBands": ["高年级", "初中"],
+      "schoolContexts": ["城区普通小学", "城乡结合部学校"],
+      "problemSignals": ["阅读策略泛化", "思维过程不可见", "课堂提问层次单一"],
+      "possibleTopicAngles": [
+        "基于问题链的小学语文阅读思维可视化研究",
+        "学习任务群视域下阅读策略迁移的课堂实践研究"
+      ],
+      "feasibilityRisks": [
+        "需要保留学生阅读批注和课堂问答记录。",
+        "题目容易过大，应限定文体、年级或策略类型。"
+      ],
+      "neededMaterials": ["学生批注样本", "课堂问答记录", "阅读任务单", "单元教学设计"]
+    },
+    {
+      "clusterId": "practice-problem-ai-literacy-001",
+      "subjectTags": ["跨学科", "信息科技", "综合实践"],
+      "gradeBands": ["小学", "初中", "高中"],
+      "schoolContexts": ["具备信息化设备学校", "人工智能实验校"],
+      "problemSignals": ["AI 工具使用停留在展示", "学生探究过程评价不足", "课程融合缺少证据"],
+      "possibleTopicAngles": [
+        "人工智能工具支持项目化学习过程评价的实践研究",
+        "生成式 AI 支持学生问题提出能力培养的课堂研究"
+      ],
+      "feasibilityRisks": [
+        "需要明确伦理、隐私和工具使用边界。",
+        "需要收集学生过程性作品，不能只描述工具功能。"
+      ],
+      "neededMaterials": ["项目学习过程记录", "学生作品样例", "评价量规", "工具使用说明与授权情况"]
+    },
+    {
+      "clusterId": "practice-problem-unit-teaching-002",
+      "subjectTags": ["小学数学", "小学语文", "小学英语"],
+      "gradeBands": ["全学段"],
+      "schoolContexts": ["城区普通小学", "集团校", "课改实验校"],
+      "problemSignals": ["单元教学碎片化", "课时之间缺少主线", "评价与教学目标脱节"],
+      "possibleTopicAngles": [
+        "大概念统领的小学数学单元整体教学设计研究",
+        "教学评一致性视角下的单元评价任务设计"
+      ],
+      "feasibilityRisks": [
+        "大单元教学需要教研组协同，单教师推进难度大。",
+        "需要完整单元的课例、作业和学生作品作为证据。"
+      ],
+      "neededMaterials": ["单元教学设计", "课时教案", "学生单元作业样本", "单元测试数据"]
+    },
+    {
+      "clusterId": "practice-problem-homework-design-003",
+      "subjectTags": ["小学数学", "小学语文"],
+      "gradeBands": ["中年级", "高年级"],
+      "schoolContexts": ["城区普通小学", "乡镇小学"],
+      "problemSignals": ["作业同质化严重", "分层作业停留在'多几道题'", "作业反馈效率低"],
+      "possibleTopicAngles": [
+        "基于错因诊断的小学数学分层作业设计研究",
+        "双减背景下小学中高年级数学作业精准化实践"
+      ],
+      "feasibilityRisks": [
+        "分层作业需要准确的学情诊断依据，仅靠经验分层不可靠。",
+        "需要至少一个学期的作业样本对比。"
+      ],
+      "neededMaterials": ["分层作业设计样例", "学生作业正确率数据", "错题分类记录", "学生访谈"]
+    },
+    {
+      "clusterId": "practice-problem-formative-assessment-004",
+      "subjectTags": ["跨学科", "小学数学", "小学语文", "小学英语"],
+      "gradeBands": ["全学段"],
+      "schoolContexts": ["城区普通小学", "课改实验校"],
+      "problemSignals": ["课堂评价以对错批改为主", "学生自我评价能力弱", "缺乏可操作的评价量规"],
+      "possibleTopicAngles": [
+        "小学生数学错因自评能力培养的课堂实践研究",
+        "同伴互评量规在小学数学课堂中的应用研究"
+      ],
+      "feasibilityRisks": [
+        "低年级学生自评/互评能力有限，需设计梯度。",
+        "评价量规需要多轮迭代才能稳定。"
+      ],
+      "neededMaterials": ["评价量规设计稿", "学生自评/互评记录", "教师评价对比数据"]
+    },
+    {
+      "clusterId": "practice-problem-math-concept-005",
+      "subjectTags": ["小学数学"],
+      "gradeBands": ["中年级", "高年级"],
+      "schoolContexts": ["城区普通小学", "乡镇小学", "集团校"],
+      "problemSignals": ["概念教学重记忆轻理解", "学生容易混淆相似概念", "概念迁移能力弱"],
+      "possibleTopicAngles": [
+        "小学数学概念教学中认知冲突的设计与效果研究",
+        "变式教学促进小学数学概念深度理解的实践研究"
+      ],
+      "feasibilityRisks": [
+        "需要设计系统的前测和后测工具。",
+        "概念理解的变化周期较长，至少需要一学期追踪。"
+      ],
+      "neededMaterials": ["概念前测试卷", "教学设计", "学生概念图/思维导图", "后测数据"]
+    },
+    {
+      "clusterId": "practice-problem-cooperative-learning-006",
+      "subjectTags": ["小学数学", "小学语文", "跨学科"],
+      "gradeBands": ["中年级", "高年级"],
+      "schoolContexts": ["城区普通小学", "集团校"],
+      "problemSignals": ["小组合作流于形式", "分工不均导致搭便车", "合作质量缺乏评价标准"],
+      "possibleTopicAngles": [
+        "角色分工机制提升小组合作学习质量的实践研究",
+        "同伴反馈策略在小学数学合作学习中的应用研究"
+      ],
+      "feasibilityRisks": [
+        "需要设计明确的分工机制和评价标准。",
+        "合作质量需要多维数据（过程录音/录像/作品/访谈）。"
+      ],
+      "neededMaterials": ["小组分工记录", "合作过程录像/录音", "小组作品", "同伴互评记录"]
+    },
+    {
+      "clusterId": "practice-problem-thinking-visualization-007",
+      "subjectTags": ["小学数学", "小学科学"],
+      "gradeBands": ["高年级"],
+      "schoolContexts": ["城区普通小学", "课改实验校"],
+      "problemSignals": ["学生解题过程是黑箱", "教师难以诊断思维障碍点", "学生不会表达思考过程"],
+      "possibleTopicAngles": [
+        "思维可视化工具支持小学数学问题解决诊断的实践研究",
+        "数学说题活动促进高年级学生思维外显化的行动研究"
+      ],
+      "feasibilityRisks": [
+        "思维可视化工具需要教师先熟练掌握。",
+        "需要收集学生的出声思维报告或解题草稿作为证据。"
+      ],
+      "neededMaterials": ["学生解题草稿", "出声思维录音/录像", "教师诊断记录", "前测后测对比"]
+    },
+    {
+      "clusterId": "practice-problem-teacher-reflection-008",
+      "subjectTags": ["跨学科"],
+      "gradeBands": ["全学段"],
+      "schoolContexts": ["城区普通小学", "乡镇小学", "集团校"],
+      "problemSignals": ["教师反思停留在感想层面", "缺乏系统性的反思框架", "反思难以转化为教学改进"],
+      "possibleTopicAngles": [
+        "基于课堂观察数据的教师教学反思能力提升研究",
+        "课例研究促进小学数学教师专业发展的实践研究"
+      ],
+      "feasibilityRisks": [
+        "教师反思研究周期通常需要 1-2 年。",
+        "需要多位教师的协作和数据共享。"
+      ],
+      "neededMaterials": ["教师反思日志", "课堂观察记录", "教学改进前后对比", "教师访谈"]
+    },
+    {
+      "clusterId": "practice-problem-math-anxiety-009",
+      "subjectTags": ["小学数学"],
+      "gradeBands": ["中年级", "高年级"],
+      "schoolContexts": ["城区普通小学", "城乡结合部学校"],
+      "problemSignals": ["数学焦虑影响学习表现", "学困生的习得性无助", "错误羞耻感阻碍主动求助"],
+      "possibleTopicAngles": [
+        "错误资源化视角下小学生数学焦虑缓解的课堂实践研究",
+        "成长型思维培养对小学数学学困生学习动机的影响研究"
+      ],
+      "feasibilityRisks": [
+        "心理层面的干预效果需要标准化量表测量。",
+        "可能需要心理健康教师的协作。"
+      ],
+      "neededMaterials": ["数学焦虑量表", "学生访谈记录", "课堂观察记录", "成绩追踪数据"]
+    },
+    {
+      "clusterId": "practice-problem-stratified-teaching-010",
+      "subjectTags": ["小学数学", "小学英语"],
+      "gradeBands": ["全学段"],
+      "schoolContexts": ["城区普通小学", "集团校"],
+      "problemSignals": ["班级内学生水平差异大", "统一教学无法兼顾两端", "分层标准不科学"],
+      "possibleTopicAngles": [
+        "基于课堂即时诊断数据的小学数学动态分层教学研究",
+        "学习任务分层设计提升小学数学课堂参与度的行动研究"
+      ],
+      "feasibilityRisks": [
+        "分层标准需要基于学习证据而非主观判断。",
+        "需要至少 2-3 个教学单元的分层实施数据。"
+      ],
+      "neededMaterials": ["分层标准依据", "分层任务设计", "学生选择记录", "分层前后效果对比"]
+    }
+  ]
+}

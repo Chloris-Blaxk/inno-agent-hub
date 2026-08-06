@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "论文写作助手 source_trace 使用的文献白名单样例。真实上线前应替换为授权文献数据库。"
+  },
+  "papers": [
+    {
+      "paperId": "paper-demo-001",
+      "title": "课堂即时反馈的教学价值研究",
+      "authors": ["示例作者"],
+      "year": 2023,
+      "journal": "示例期刊",
+      "volume": "12",
+      "issue": "3",
+      "pages": "45-48",
+      "doi": "",
+      "keywords": ["即时反馈", "课堂评价", "教学调整"],
+      "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+      "sourceStatus": "whitelist",
+      "textAvailability": "abstract",
+      "evidenceLevel": "metadata_verified"
+    },
+    {
+      "paperId": "paper-demo-002",
+      "title": "小学数学错因诊断与针对性讲评策略研究",
+      "authors": ["示例作者二"],
+      "year": 2022,
+      "journal": "基础教育研究示例",
+      "volume": "8",
+      "issue": "2",
+      "pages": "33-37",
+      "doi": "",
+      "keywords": ["错因诊断", "小学数学", "讲评策略"],
+      "abstract": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+      "sourceStatus": "whitelist",
+      "textAvailability": "abstract",
+      "evidenceLevel": "metadata_verified"
+    }
+  ]
+}

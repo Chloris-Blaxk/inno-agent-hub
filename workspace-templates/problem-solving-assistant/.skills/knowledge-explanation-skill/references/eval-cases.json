@@ -1,0 +1,193 @@
+{
+  "version": "0.9",
+  "createdAt": "2026-06-06",
+  "note": "知识点讲解 Skill 的自然语言评测样例。预期结果使用行为断言，不要求固定 JSON 或 golden output。",
+  "cases": [
+    {
+      "id": "kes-001-concept-weak",
+      "title": "学生对合并同类项概念薄弱",
+      "input": "@知识点讲解 我总是搞不懂合并同类项，什么叫同类？",
+      "expectedAssertions": [
+        "response should explain 同类项 as 字母相同且相同字母指数也相同",
+        "response should first use rough intuition before formal definition",
+        "response should use the intuitive guidance mode rather than a lecture structure",
+        "response should be conversational and short enough for a spoken tutoring turn",
+        "response should use a slow and friendly tone",
+        "response should include one light humorous analogy or reminder that supports understanding",
+        "response should include one small judgement or check item",
+        "response should ask only one question and put it at the end",
+        "response should not include formal definition, multiple examples, common mistakes, and practice all in the first reply",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols",
+        "response should not expose internal fields such as selectedLayer, style, quickChecks, or nextAction"
+      ]
+    },
+    {
+      "id": "kes-002-problem-key-step",
+      "title": "学生有具体题目且卡在移项变号",
+      "input": "@知识点讲解 解方程：3x - 5 = x + 3。我不懂为什么移项要变号。",
+      "expectedAssertions": [
+        "response should focus on 移项等价于等式两边同加或同减",
+        "response should show the key transformation for the given equation",
+        "response should use a light and memorable reminder for the sign change without mocking the student",
+        "response should use the worked-example mode and focus on one key step",
+        "response should not expand into a full 一元一次方程 chapter",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols",
+        "response should end with one natural follow-up question"
+      ]
+    },
+    {
+      "id": "kes-003-impatient-review",
+      "title": "学生要求快讲",
+      "input": "@知识点讲解 合并同类项快一点，直接给规则和易错点。",
+      "expectedAssertions": [
+        "response should reduce analogy and setup",
+        "response should use the quick-summary mode",
+        "response should directly give the rule and one or two common mistakes",
+        "response should include a compact example",
+        "response may include at most one concise humorous reminder",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols",
+        "response should not use a long entry-level explanation"
+      ]
+    },
+    {
+      "id": "kes-004-teacher-reference",
+      "title": "教师备课参考",
+      "input": "@知识点讲解 我要讲一元二次方程，帮我设计从概念到例题的课堂追问。",
+      "expectedAssertions": [
+        "response should switch to teacher-facing guidance",
+        "response may be more structured than student-facing answers but should still stay concise",
+        "response should include classroom organization or board sequence",
+        "response should include at least one classroom question",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols",
+        "response should mention prerequisite checking when appropriate"
+      ]
+    },
+    {
+      "id": "kes-005-missing-target",
+      "title": "学生只说不会但没有说明对象",
+      "input": "@知识点讲解 我不会。",
+      "expectedAssertions": [
+        "response should ask exactly one key clarifying question",
+        "response should stop after the question",
+        "response should not ask for grade, textbook, topic, and question all at once",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols",
+        "response should not start a long generic explanation"
+      ]
+    },
+    {
+      "id": "kes-006-concept-first-turn-gradual",
+      "title": "学生只要求讲解知识点时需要循序渐进",
+      "input": "@知识点讲解 给我讲解一下合并同类项吧",
+      "expectedAssertions": [
+        "response should begin with a simple intuition or metaphor before details",
+        "response should use plain conversational wording and avoid textbook-style headings",
+        "response should include only one core criterion or one micro example in the first turn",
+        "response should stay within a short first-turn length, roughly 80-180 Chinese characters",
+        "response should end with one small judgement question for the student",
+        "response should not ask another question before the final check",
+        "response should not dump definition, several positive and negative examples, common pitfalls, and a practice problem together",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols"
+      ]
+    },
+    {
+      "id": "kes-007-broad-target-clarify",
+      "title": "学生只给出方程方向这类大范围目标",
+      "input": "@知识点讲解 讲一下方程方向的东西",
+      "expectedAssertions": [
+        "response should recognize that 方程方向 is too broad to start teaching directly",
+        "response should ask exactly one clarifying choice question",
+        "response should offer a few concrete entry points such as 方程是什么, 移项变号, or 一元一次方程怎么解",
+        "response should stop after the clarifying question",
+        "response should not explain equation concepts, give examples, or ask a practice question before the target is clarified",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols"
+      ]
+    },
+    {
+      "id": "kes-008-refuse-practice",
+      "title": "学生拒绝继续做题时要尊重本轮意图",
+      "input": "@知识点讲解 我不想再看题目了",
+      "expectedAssertions": [
+        "response should recognize that the student is refusing more practice questions",
+        "response should not provide another exercise or practice problem",
+        "response should not continue the previous teaching plan automatically",
+        "response may offer a short summary or ask whether the student wants a different explanation style",
+        "response should ask at most one question, and that question should appear at the end",
+        "response should not use emoji, checkmark/cross icons, warning icons, or decorative symbols"
+      ]
+    },
+    {
+      "id": "kes-009-style-card-aggressive-safe",
+      "title": "用户指定暴躁老哥讲解风格时要保留安全边界",
+      "input": "@知识点讲解 用暴躁老哥风格讲一下为什么移项要变号",
+      "expectedAssertions": [
+        "response should use the requested aggressive-bro style as a tone layer only",
+        "response should direct the playful aggression at the sign, problem, or common pitfall rather than at the student",
+        "response should explain that 移项变号 comes from doing the same addition or subtraction on both sides of the equation",
+        "response should stay short and conversational rather than becoming a full lecture",
+        "response should ask only one question and put it at the end",
+        "response should not insult, shame, or mock the student",
+        "response should not use profanity, emoji, checkmark/cross icons, warning icons, or decorative symbols",
+        "response should not expose internal style-card names or fields unless the user explicitly asks about design"
+      ]
+    },
+    {
+      "id": "kes-010-default-aggressive-safe-style",
+      "title": "未指定风格时默认使用安全版暴躁老哥风格",
+      "input": "@知识点讲解 为什么移项要变号",
+      "expectedAssertions": [
+        "response should default to the safe aggressive-bro style without requiring the user to request it",
+        "response should use short conversational wording with a light jab at the sign, equation, or common pitfall",
+        "response should explain that 移项变号 comes from doing the same addition or subtraction on both sides of the equation",
+        "response should not become a textbook-style lecture",
+        "response should ask only one question and put it at the end",
+        "response should not insult, shame, or mock the student",
+        "response should not use profanity, emoji, checkmark/cross icons, warning icons, or decorative symbols"
+      ]
+    },
+    {
+      "id": "kes-011-style-game-abstraction",
+      "title": "游戏情境中的数学抽象者风格",
+      "input": "@知识点讲解 用游戏情境中的数学抽象者风格讲一下图形旋转怎么理解",
+      "expectedAssertions": [
+        "response should use the requested style as a tone and organization layer rather than a separate fixed workflow",
+        "response should start from a familiar game, life, object, or dynamic scene",
+        "response should guide the student to observe what changes and what stays unchanged",
+        "response should extract at least one mathematical element such as center, distance, angle, shape, or position",
+        "response should choose one teaching action for this turn, such as intuitive entry or operation verification",
+        "response should ask only one question and put it at the end",
+        "response should not expand into a full classroom algorithm from introduction to summary",
+        "response should not claim that the example comes from a textbook, real activity database, or knowledge base"
+      ]
+    },
+    {
+      "id": "kes-012-style-structured-function-coach",
+      "title": "函数研究套路的结构化教练风格",
+      "input": "@知识点讲解 用函数研究套路的结构化教练风格讲一下怎么研究一个新函数",
+      "expectedAssertions": [
+        "response should use the requested style as a tone and organization layer rather than a separate fixed workflow",
+        "response should recall a general research routine such as concept, graph, properties, and application",
+        "response should use analogy from old knowledge to new knowledge when appropriate",
+        "response should include a special-to-general orientation rather than isolated memorization",
+        "response should use standard mathematical language such as domain, range, monotonicity, graph, or property when relevant",
+        "response should include one small task, judgement, or follow-up question",
+        "response should stay conversational and not become a long lecture or full handout",
+        "response should not claim that generated examples come from textbook tables, classroom group data, or a knowledge base"
+      ]
+    },
+    {
+      "id": "kes-013-style-real-problem-theorem-builder",
+      "title": "真实问题驱动的定理建构者风格",
+      "input": "@知识点讲解 用真实问题驱动的定理建构者风格讲一下正弦定理为什么需要",
+      "expectedAssertions": [
+        "response should use the requested style as a tone and organization layer rather than a separate fixed workflow",
+        "response should begin from a realistic measurement, engineering, technology, astronomy, or other real problem need",
+        "response should show why old methods are limited before introducing the theorem need",
+        "response should explain the meaning or structure of the sine theorem rather than only asking the student to memorize the formula",
+        "response should choose one teaching action for this turn, such as real-problem entry or formula-meaning explanation",
+        "response should ask only one question and put it at the end",
+        "response should not fabricate real engineering data, textbook cases, curriculum-standard tasks, or knowledge-base retrieval",
+        "response should not expand into all special cases, full proof, multiple proof methods, applications, and summary in one turn"
+      ]
+    }
+  ]
+}

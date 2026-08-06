@@ -1,0 +1,18 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "topic": "折线统计图",
+  "innovationType": "interdisciplinary",
+  "durationMin": 40,
+  "constraints": [
+    "普通教室",
+    "小组合作",
+    "需要投影设备"
+  ],
+  "requirements": "根据原有教案重新生成一份 interdisciplinary 教案。",
+  "confirmedContext": {
+    "linkedSubject": "科学",
+    "integrationNodeDescription": "",
+    "applicableBoundaryHint": "适合简单数据和直观图表，不涉及复杂统计分析"
+  }
+}

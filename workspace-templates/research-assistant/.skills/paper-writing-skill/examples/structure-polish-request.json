@@ -1,0 +1,32 @@
+{
+  "requestId": "req-paper-writing-structure-polish-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "conservative_polish",
+  "sourceRequest": "请帮我诊断这段论文草稿结构，并做保守学术化润色。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "校本教研",
+    "existingAchievements": [],
+    "availableCycle": "一学期",
+    "constraints": ["不能新增未提供数据"]
+  },
+  "input": {
+    "queryText": "",
+    "draftText": "摘要：本文旨在研究即时反馈在小学数学讲评课中的应用。即时反馈能显著提升学生数学成绩。\n引言：课堂中教师经常需要及时了解学生错因，但已有研究对讲评课中的错因记录关注不足。本研究聚焦即时反馈如何帮助教师调整讲评顺序。\n结果：课堂观察显示，错因分类记录可以帮助教师调整讲评顺序。",
+    "claims": [],
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

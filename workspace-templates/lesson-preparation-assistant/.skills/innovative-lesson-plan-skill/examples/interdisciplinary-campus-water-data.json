@@ -1,0 +1,15 @@
+{
+  "subject": "科学",
+  "grade": "五年级",
+  "textbookVersion": "教科版",
+  "topic": "校园用水数据调查与节水建议",
+  "innovationType": "interdisciplinary",
+  "durationMin": 40,
+  "constraints": ["普通教室", "小组合作", "可使用电子表格", "已有一组校园用水观察数据"],
+  "requirements": "生成一份科学与数学融合教案，突出数据整理、图表表达、科学解释和共同产出。",
+  "confirmedContext": {
+    "linkedSubject": "数学",
+    "integrationNodeDescription": "学生用数学图表呈现校园用水调查结果，再用科学视角提出节水方案",
+    "applicableBoundaryHint": "适合简单调查和数据表达，不涉及复杂统计推断"
+  }
+}

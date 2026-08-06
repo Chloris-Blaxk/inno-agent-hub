@@ -1,0 +1,38 @@
+{
+  "id": "cartoon-handdrawn",
+  "name": "卡通手绘风",
+  "description": "活泼可爱，亲和力强，色彩明亮鲜艳，卡通人物和手绘元素。适合小学1-3年级。",
+  "colors": {
+    "bg": "FFF5F5",
+    "ink": "3D2C2E",
+    "muted": "9E8E90",
+    "accent": "FF6B6B",
+    "card": "FFFFFF",
+    "line": "FFD6D6",
+    "good": "4ECDC4",
+    "warn": "FFB347"
+  },
+  "fonts": {
+    "head": "ZCOOL KuaiLe",
+    "body": "ZCOOL QingKe HuangYou"
+  },
+  "layout": {
+    "marginRatio": 0.05,
+    "titleSize": [48, 64],
+    "bodySize": [28, 36],
+    "maxBullets": 3,
+    "maxBulletChars": 14,
+    "maxHeadlineChars": 12
+  },
+  "decorations": {
+    "type": "handdrawn",
+    "coverAccent": "circle",
+    "cardShadow": true,
+    "borderRadius": 16
+  },
+  "applicable": {
+    "grades": ["小学低段"],
+    "subjects": ["语文", "数学", "英语", "科学", "道德与法治", "通用"],
+    "scenes": ["新授课", "探究课"]
+  }
+}

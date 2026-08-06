@@ -1,0 +1,618 @@
+{
+  "exerciseMeta": {
+    "title": "分数加减法·易错专项突破 专题练习",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "期中复习",
+    "topic": "分数加减法·易错专项突破",
+    "taskType": "topic_drill",
+    "questionCount": 8,
+    "source": "InnoSpark-235B-dynamic-generation"
+  },
+  "blueprint": {
+    "taskType": "topic_drill",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 2,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 3,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      },
+      {
+        "layer": "C",
+        "name": "拓展层",
+        "targetCount": 3,
+        "difficultyRange": [
+          3,
+          4
+        ],
+        "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+        "cognitiveLevel": "迁移"
+      }
+    ],
+    "questionTypes": [
+      "计算题",
+      "判断题",
+      "填空题"
+    ],
+    "layerTargets": {
+      "A": 2,
+      "B": 3,
+      "C": 3
+    },
+    "questionTypeTargets": {
+      "计算题": 3,
+      "判断题": 3,
+      "填空题": 2
+    },
+    "difficultyTargets": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2
+    },
+    "strictBlueprint": false,
+    "knowledgePointIds": [
+      "math-g5-fraction-add"
+    ],
+    "lessonBoundary": "理解先通分再加减，结果能约分；不引入分式、方程和复杂代数通分。",
+    "requirements": "易错题专项练习。针对学生常见错误设计：分母直接相加、通分后分子未转换、结果未约分、假分数未化简。每道题附详细的错因分析和纠错提示。A层2题B层3题C层3题。"
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{1}{3} + \\frac{1}{5} = ?",
+      "answer": "\\frac{8}{15}",
+      "solutionSteps": [
+        "找到分母3和5的最小公倍数，即15。",
+        "将\\frac{1}{3}通分为\\frac{5}{15}，将\\frac{1}{5}通分为\\frac{3}{15}。",
+        "同分母分数相加：\\frac{5}{15} + \\frac{3}{15} = \\frac{8}{15}。"
+      ],
+      "commonErrors": [
+        "通分错误",
+        "忘记通分直接相加"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调通分是异分母分数加减法的关键步骤，需先统一单位再计算。",
+      "sourceId": "A1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q002",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "小明喝了一杯牛奶的\\frac{1}{4}，小红喝了同一杯牛奶的\\frac{2}{5}。两人一共喝了这杯牛奶的几分之几？",
+      "answer": "\\frac{13}{20}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{4} + \\frac{2}{5}。",
+        "找到分母4和5的最小公倍数，即20。",
+        "将\\frac{1}{4}通分为\\frac{5}{20}，将\\frac{2}{5}通分为\\frac{8}{20}。",
+        "同分母分数相加：\\frac{5}{20} + \\frac{8}{20} = \\frac{13}{20}。"
+      ],
+      "commonErrors": [
+        "通分错误",
+        "计算后未约分"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解‘一共’对应加法运算，并注意通分后的计算准确性。",
+      "sourceId": "A2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q003",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "计算：\\frac{7}{8} - \\frac{2}{5} = ?",
+      "answer": "\\frac{19}{40}",
+      "solutionSteps": [
+        "找到8和5的最小公倍数，即40。",
+        "将\\frac{7}{8}通分为\\frac{35}{40}，将\\frac{2}{5}通分为\\frac{16}{40}。",
+        "进行减法运算：\\frac{35}{40} - \\frac{16}{40} = \\frac{19}{40}。"
+      ],
+      "commonErrors": [
+        "直接分子减分子、分母减分母",
+        "通分时分子忘记乘以相应的倍数"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "强调通分的必要性，提醒学生通分时分子和分母要乘以相同的数。",
+      "sourceId": "B1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q004",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "小明喝了一杯牛奶的\\frac{1}{3}，小红喝了同一杯牛奶的\\frac{2}{5}。谁喝得多？多多少？",
+      "answer": "小红喝得多，多\\frac{1}{15}。",
+      "solutionSteps": [
+        "比较\\frac{1}{3}和\\frac{2}{5}的大小，需要先通分。",
+        "3和5的最小公倍数是15，\\frac{1}{3} = \\frac{5}{15}，\\frac{2}{5} = \\frac{6}{15}。",
+        "因为\\frac{6}{15} > \\frac{5}{15}，所以小红喝得多。",
+        "计算多多少：\\frac{6}{15} - \\frac{5}{15} = \\frac{1}{15}。"
+      ],
+      "commonErrors": [
+        "直接比较分子或分母的大小",
+        "通分错误或计算错误"
+      ],
+      "scorePoints": 4,
+      "teachingNote": "引导学生理解比较分数大小需要先通分，再比较分子的大小。",
+      "sourceId": "B2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q005",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "判断题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "判断：\\frac{3}{4} + \\frac{1}{6} = \\frac{4}{10} = \\frac{2}{5}。这个计算过程对吗？为什么？",
+      "answer": "不对。正确计算应为\\frac{11}{12}。",
+      "solutionSteps": [
+        "指出错误：不能直接将分子和分母分别相加。",
+        "正确计算：4和6的最小公倍数是12，\\frac{3}{4} = \\frac{9}{12}，\\frac{1}{6} = \\frac{2}{12}。",
+        "相加：\\frac{9}{12} + \\frac{2}{12} = \\frac{11}{12}。"
+      ],
+      "commonErrors": [
+        "直接分子加分子、分母加分母",
+        "通分时找错最小公倍数"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "强调异分母分数加减法必须先通分，不能直接加减分子和分母。",
+      "sourceId": "B3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q006",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "计算题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "计算：\\frac{7}{8} - \\frac{2}{3} + \\frac{1}{6} = ?",
+      "answer": "\\frac{11}{24}",
+      "solutionSteps": [
+        "8、3、6的最小公分母是24。",
+        "\\frac{7}{8} = \\frac{21}{24}，\\frac{2}{3} = \\frac{16}{24}，\\frac{1}{6} = \\frac{4}{24}。",
+        "21/24 - 16/24 + 4/24 = 9/24 = 11/24。"
+      ],
+      "commonErrors": [
+        "通分时分子忘记乘对应倍数",
+        "加减运算顺序错误"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "强调多步运算时要统一通分，注意运算顺序，结果要约分。",
+      "sourceId": "C1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q007",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "判断题",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "stem": "小明说：\\frac{3}{4} + \\frac{1}{5} 的结果一定比 \\frac{3}{4} 大，但比 \\frac{4}{5} 小。他的说法正确吗？请说明理由。",
+      "answer": "正确。\\frac{3}{4} + \\frac{1}{5} = \\frac{19}{20}，而 \\frac{3}{4} = \\frac{15}{20}，\\frac{4}{5} = \\frac{16}{20}，所以 \\frac{15}{20} < \\frac{19}{20} < \\frac{16}{20} 不成立，但 \\frac{3}{4} < \\frac{19}{20} 成立，且 \\frac{19}{20} > \\frac{4}{5}，所以原说法错误。",
+      "solutionSteps": [
+        "计算 \\frac{3}{4} + \\frac{1}{5} = \\frac{15}{20} + \\frac{4}{20} = \\frac{19}{20}。",
+        "比较 \\frac{19}{20} 和 \\frac{3}{4}：\\frac{3}{4} = \\frac{15}{20}，所以 \\frac{19}{20} > \\frac{15}{20}。",
+        "比较 \\frac{19}{20} 和 \\frac{4}{5}：\\frac{4}{5} = \\frac{16}{20}，所以 \\frac{19}{20} > \\frac{16}{20}。",
+        "因此，\\frac{3}{4} + \\frac{1}{5} 比 \\frac{3}{4} 大，但比 \\frac{4}{5} 大，所以小明的说法错误。"
+      ],
+      "commonErrors": [
+        "误认为加法结果一定比两个加数都大",
+        "分数大小比较方法错误"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "引导学生理解分数加法的意义，以及分数大小比较的方法，特别是通分比较。",
+      "sourceId": "C2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q008",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一个工程队修一条路，第一天修了全长的 \\frac{1}{3}，第二天修了全长的 \\frac{2}{5}，第三天修了全长的 \\frac{1}{6}。三天一共修了全长的几分之几？还剩几分之几没有修？",
+      "answer": "三天一共修了 \\frac{9}{10}，还剩 \\frac{1}{10} 没有修。",
+      "solutionSteps": [
+        "求三天一共修了多少：\\frac{1}{3} + \\frac{2}{5} + \\frac{1}{6}。",
+        "3、5、6的最小公分母是30。",
+        "\\frac{1}{3} = \\frac{10}{30}，\\frac{2}{5} = \\frac{12}{30}，\\frac{1}{6} = \\frac{5}{30}。",
+        "10/30 + 12/30 + 5/30 = 27/30 = 9/10。",
+        "求还剩多少：1 - \\frac{9}{10} = \\frac{1}{10}。"
+      ],
+      "commonErrors": [
+        "通分时找错最小公分母",
+        "忘记将结果约分",
+        "求剩余部分时用错减法"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "强调多步应用题的解题步骤，先求和再求差，注意单位‘1’的运用。",
+      "sourceId": "C3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "\\frac{8}{15}",
+      "solutionSteps": [
+        "找到分母3和5的最小公倍数，即15。",
+        "将\\frac{1}{3}通分为\\frac{5}{15}，将\\frac{1}{5}通分为\\frac{3}{15}。",
+        "同分母分数相加：\\frac{5}{15} + \\frac{3}{15} = \\frac{8}{15}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q002",
+      "answer": "\\frac{13}{20}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{4} + \\frac{2}{5}。",
+        "找到分母4和5的最小公倍数，即20。",
+        "将\\frac{1}{4}通分为\\frac{5}{20}，将\\frac{2}{5}通分为\\frac{8}{20}。",
+        "同分母分数相加：\\frac{5}{20} + \\frac{8}{20} = \\frac{13}{20}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q003",
+      "answer": "\\frac{19}{40}",
+      "solutionSteps": [
+        "找到8和5的最小公倍数，即40。",
+        "将\\frac{7}{8}通分为\\frac{35}{40}，将\\frac{2}{5}通分为\\frac{16}{40}。",
+        "进行减法运算：\\frac{35}{40} - \\frac{16}{40} = \\frac{19}{40}。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q004",
+      "answer": "小红喝得多，多\\frac{1}{15}。",
+      "solutionSteps": [
+        "比较\\frac{1}{3}和\\frac{2}{5}的大小，需要先通分。",
+        "3和5的最小公倍数是15，\\frac{1}{3} = \\frac{5}{15}，\\frac{2}{5} = \\frac{6}{15}。",
+        "因为\\frac{6}{15} > \\frac{5}{15}，所以小红喝得多。",
+        "计算多多少：\\frac{6}{15} - \\frac{5}{15} = \\frac{1}{15}。"
+      ],
+      "scorePoints": 4
+    },
+    {
+      "questionId": "q005",
+      "answer": "不对。正确计算应为\\frac{11}{12}。",
+      "solutionSteps": [
+        "指出错误：不能直接将分子和分母分别相加。",
+        "正确计算：4和6的最小公倍数是12，\\frac{3}{4} = \\frac{9}{12}，\\frac{1}{6} = \\frac{2}{12}。",
+        "相加：\\frac{9}{12} + \\frac{2}{12} = \\frac{11}{12}。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q006",
+      "answer": "\\frac{11}{24}",
+      "solutionSteps": [
+        "8、3、6的最小公分母是24。",
+        "\\frac{7}{8} = \\frac{21}{24}，\\frac{2}{3} = \\frac{16}{24}，\\frac{1}{6} = \\frac{4}{24}。",
+        "21/24 - 16/24 + 4/24 = 9/24 = 11/24。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q007",
+      "answer": "正确。\\frac{3}{4} + \\frac{1}{5} = \\frac{19}{20}，而 \\frac{3}{4} = \\frac{15}{20}，\\frac{4}{5} = \\frac{16}{20}，所以 \\frac{15}{20} < \\frac{19}{20} < \\frac{16}{20} 不成立，但 \\frac{3}{4} < \\frac{19}{20} 成立，且 \\frac{19}{20} > \\frac{4}{5}，所以原说法错误。",
+      "solutionSteps": [
+        "计算 \\frac{3}{4} + \\frac{1}{5} = \\frac{15}{20} + \\frac{4}{20} = \\frac{19}{20}。",
+        "比较 \\frac{19}{20} 和 \\frac{3}{4}：\\frac{3}{4} = \\frac{15}{20}，所以 \\frac{19}{20} > \\frac{15}{20}。",
+        "比较 \\frac{19}{20} 和 \\frac{4}{5}：\\frac{4}{5} = \\frac{16}{20}，所以 \\frac{19}{20} > \\frac{16}{20}。",
+        "因此，\\frac{3}{4} + \\frac{1}{5} 比 \\frac{3}{4} 大，但比 \\frac{4}{5} 大，所以小明的说法错误。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q008",
+      "answer": "三天一共修了 \\frac{9}{10}，还剩 \\frac{1}{10} 没有修。",
+      "solutionSteps": [
+        "求三天一共修了多少：\\frac{1}{3} + \\frac{2}{5} + \\frac{1}{6}。",
+        "3、5、6的最小公分母是30。",
+        "\\frac{1}{3} = \\frac{10}{30}，\\frac{2}{5} = \\frac{12}{30}，\\frac{1}{6} = \\frac{5}{30}。",
+        "10/30 + 12/30 + 5/30 = 27/30 = 9/10。",
+        "求还剩多少：1 - \\frac{9}{10} = \\frac{1}{10}。"
+      ],
+      "scorePoints": 3
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-add"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-add"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-add": {
+        "questionCount": 8,
+        "questionTypes": {
+          "计算题": 3,
+          "应用题": 3,
+          "判断题": 2
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 2,
+        "min": 1,
+        "max": 2,
+        "average": 1.5
+      },
+      "B": {
+        "questionCount": 3,
+        "min": 2,
+        "max": 3,
+        "average": 2.33
+      },
+      "C": {
+        "questionCount": 3,
+        "min": 3,
+        "max": 4,
+        "average": 3.67
+      }
+    },
+    "byDifficulty": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 2
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "代数式通分",
+      "分式方程",
+      "复杂最小公倍数证明",
+      "有理数混合运算"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "通分错误",
+      "name": "通分错误",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记通分直接相加",
+      "name": "忘记通分直接相加",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算后未约分",
+      "name": "计算后未约分",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接分子减分子、分母减分母",
+      "name": "直接分子减分子、分母减分母",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时分子忘记乘以相应的倍数",
+      "name": "通分时分子忘记乘以相应的倍数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接比较分子或分母的大小",
+      "name": "直接比较分子或分母的大小",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分错误或计算错误",
+      "name": "通分错误或计算错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接分子加分子、分母加分母",
+      "name": "直接分子加分子、分母加分母",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时找错最小公倍数",
+      "name": "通分时找错最小公倍数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时分子忘记乘对应倍数",
+      "name": "通分时分子忘记乘对应倍数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "加减运算顺序错误",
+      "name": "加减运算顺序错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "误认为加法结果一定比两个加数都大",
+      "name": "误认为加法结果一定比两个加数都大",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分数大小比较方法错误",
+      "name": "分数大小比较方法错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时找错最小公分母",
+      "name": "通分时找错最小公分母",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记将结果约分",
+      "name": "忘记将结果约分",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "求剩余部分时用错减法",
+      "name": "求剩余部分时用错减法",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    }
+  ],
+  "replacementSuggestions": [],
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 8 题，请求 8 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_C_count",
+        "status": "pass",
+        "message": "C 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "warn",
+        "message": "题型比例未完全匹配目标 {'计算题': 3, '判断题': 3, '填空题': 2}，实际 {'计算题': 3, '应用题': 3, '判断题': 2}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "warn",
+        "message": "难度比例未完全匹配目标 {'1': 2, '2': 2, '3': 2, '4': 2}，实际 {'1': 1, '2': 3, '3': 2, '4': 2}。"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  }
+}

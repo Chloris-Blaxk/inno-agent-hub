@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "description": "信息技术学科错误模式库（编程与算法题型）",
+  "errorCategories": [
+    {
+      "categoryId": "it-programming-logic",
+      "categoryName": "编程逻辑错误",
+      "description": "条件判断、循环控制、逻辑运算中的错误",
+      "patterns": [
+        {
+          "id": "err-it-loop-condition",
+          "name": "循环条件错误",
+          "knowledgePointIds": ["it-loop", "it-control-structure"],
+          "symptom": "循环次数不对，或死循环",
+          "likelyCause": "循环条件写错，或循环变量更新错误",
+          "diagnosisSignals": ["少循环一次或多循环一次", "循环变量没更新导致死循环", "边界条件判断错误"],
+          "hintTemplate": "检查循环条件和循环变量的更新。循环多少次？从哪里开始？到哪里结束？",
+          "remediationSteps": [
+            "明确循环次数：例如循环10次，i从0到9还是从1到10？",
+            "检查边界：for i in range(10) 是 0到9，不包括10",
+            "确保循环变量更新：while循环中要有 i += 1，否则死循环"
+          ]
+        },
+        {
+          "id": "err-it-condition-logic",
+          "name": "条件判断逻辑错误",
+          "knowledgePointIds": ["it-conditional", "it-boolean-logic"],
+          "symptom": "if-else条件写错，导致结果不对",
+          "likelyCause": "混淆and/or逻辑，或判断条件不全面",
+          "diagnosisSignals": ["and和or用反", "忘记考虑边界情况", "多条件判断顺序错误"],
+          "hintTemplate": "and表示'并且'（都要满足），or表示'或者'（满足一个就行）。",
+          "remediationSteps": [
+            "理解逻辑运算：and→两个条件都为真才为真，or→至少一个为真就为真",
+            "检查边界：例如 x>=0 and x<=100 才能覆盖0到100的所有数",
+            "多条件判断：先判断特殊情况，再判断一般情况"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "it-algorithm-understanding",
+      "categoryName": "算法理解错误",
+      "description": "排序、查找、递归等算法理解和实现错误",
+      "patterns": [
+        {
+          "id": "err-it-array-index",
+          "name": "数组索引错误",
+          "knowledgePointIds": ["it-array", "it-index"],
+          "symptom": "数组越界或索引位置不对",
+          "likelyCause": "不理解数组索引从0开始，或边界处理不当",
+          "diagnosisSignals": ["访问arr[n]导致越界（n是数组长度）", "索引-1错误", "循环中索引超出范围"],
+          "hintTemplate": "数组索引从0开始。长度为n的数组，最后一个元素是arr[n-1]。",
+          "remediationSteps": [
+            "记住规则：长度为n的数组，索引范围是0到n-1",
+            "常见错误：for i in range(len(arr)) 正确，range(len(arr)+1) 会越界",
+            "边界检查：访问arr[i]前，确保 0 <= i < len(arr)"
+          ]
+        },
+        {
+          "id": "err-it-recursion-base-case",
+          "name": "递归基例缺失",
+          "knowledgePointIds": ["it-recursion"],
+          "symptom": "递归函数没有终止条件，导致无限递归",
+          "likelyCause": "不理解递归必须有基例（base case）",
+          "diagnosisSignals": ["栈溢出错误", "没有返回语句", "递归调用没有向基例靠近"],
+          "hintTemplate": "递归必须有终止条件（基例），否则会无限调用下去。",
+          "remediationSteps": [
+            "理解递归结构：基例（终止条件）+ 递归调用（向基例靠近）",
+            "检查基例：例如阶乘 factorial(0)=1 或 factorial(1)=1",
+            "确保向基例靠近：每次递归调用，参数要朝着基例变化"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "it-syntax-error",
+      "categoryName": "语法错误",
+      "description": "代码语法不规范，导致编译或运行错误",
+      "patterns": [
+        {
+          "id": "err-it-indentation",
+          "name": "缩进错误（Python）",
+          "knowledgePointIds": ["it-python-syntax"],
+          "symptom": "Python代码缩进不一致，导致IndentationError",
+          "likelyCause": "混用tab和空格，或缩进层次不对",
+          "diagnosisSignals": ["IndentationError", "语句不在正确的代码块中", "混用tab和空格"],
+          "hintTemplate": "Python用缩进表示代码块。同一层次的代码缩进要一致。",
+          "remediationSteps": [
+            "统一缩进：建议用4个空格，不要混用tab和空格",
+            "检查层次：if语句下的代码要缩进一层，嵌套if再缩进一层",
+            "用编辑器的'显示空白字符'功能检查"
+          ]
+        },
+        {
+          "id": "err-it-variable-scope",
+          "name": "变量作用域错误",
+          "knowledgePointIds": ["it-variable", "it-scope"],
+          "symptom": "在函数内修改全局变量失败，或访问未定义的变量",
+          "likelyCause": "不理解变量作用域（局部变量vs全局变量）",
+          "diagnosisSignals": ["NameError: name 'x' is not defined", "函数内赋值没影响外部变量", "没有用global声明"],
+          "hintTemplate": "函数内定义的变量是局部变量，只在函数内有效。要修改全局变量需要用global。",
+          "remediationSteps": [
+            "理解作用域：局部变量在函数内，全局变量在函数外",
+            "读取全局变量：直接使用即可",
+            "修改全局变量：需要先 global x 声明，再赋值"
+          ]
+        }
+      ]
+    }
+  ]
+}

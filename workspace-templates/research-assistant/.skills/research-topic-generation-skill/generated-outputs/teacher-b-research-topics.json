@@ -1,0 +1,691 @@
+{
+  "requestId": "req-research-topic-teacher-b-001",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "status": "pass",
+  "summary": "基于王老师4份材料（《朝花夕拾》整本书阅读教学设计、学生阅读成果分析与教学反思、思维品质培养策略研究论文草稿、教研组分享PPT），识别出2个材料主题簇，研究轨迹处于theme_consolidation阶段。生成3个总结性选题和2个规划性选题。总结性选题均回链具体材料，规划性选题源于教学反思中教师自提的待研究问题。",
+  "inputSummary": {
+    "teacherProfile": {
+      "name": "王老师",
+      "subject": "初中语文",
+      "gradeBand": "七年级",
+      "schoolContext": "第一中学",
+      "researchExperience": "已完成一轮整本书阅读教学实践（82人、8课时），有论文草稿和教研组分享经验",
+      "availableCycle": "1年"
+    },
+    "materialsCount": 4,
+    "targetProjectType": "区级课题",
+    "topicCount": { "summative": 3, "planning": 2 }
+  },
+  "warnings": [
+    "差异化对比使用的mock立项题样本以小学数学为主，语文学科相关样本仅2条(grant-demo-015, grant-demo-016)，相似度评分可能因样本偏差而低估",
+    "教师画像字段(researchExperience, constraints等)从材料推断，未经教师显式确认",
+    "文献元数据索引未接入，literatureSignals未生成",
+    "DKG轨未启用"
+  ],
+  "dataSourceReport": {
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "dataSources": [
+      {
+        "sourceId": "ref-grant-title-samples",
+        "sourceName": "历年立项题目样本(grant-title-samples.json)",
+        "sourceType": "mock",
+        "dataType": "mock",
+        "recordCount": 22,
+        "authorizationStatus": "mock_sample",
+        "version": "1.0",
+        "limitations": ["mock样本以小学数学为主，语文学科仅2条，不能代表真实立项分布"]
+      },
+      {
+        "sourceId": "ref-policy-hotspot-tags",
+        "sourceName": "政策热点标签(policy-hotspot-tags.json)",
+        "sourceType": "mock",
+        "dataType": "mock",
+        "recordCount": 20,
+        "authorizationStatus": "mock_sample",
+        "version": "1.0",
+        "limitations": ["固定mock数据，未对接实时政策采集"]
+      },
+      {
+        "sourceId": "ref-practice-problem-bank",
+        "sourceName": "实践问题库(practice-problem-bank.json)",
+        "sourceType": "mock",
+        "dataType": "mock",
+        "recordCount": 12,
+        "authorizationStatus": "mock_sample",
+        "version": "1.0",
+        "limitations": ["mock数据，未覆盖所有学科和学段"]
+      },
+      {
+        "sourceId": "ref-topic-evaluation-rubric",
+        "sourceName": "选题评价量规(topic-evaluation-rubric.json)",
+        "sourceType": "mock",
+        "dataType": "mock",
+        "recordCount": 4,
+        "authorizationStatus": "mock_sample",
+        "version": "1.0",
+        "limitations": ["评价维度为mock设计，非经实证验证的量规"]
+      },
+      {
+        "sourceId": "mat-b-001",
+        "sourceName": "《朝花夕拾》整本书阅读教学设计",
+        "sourceType": "teaching_case",
+        "dataType": "user_provided",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": []
+      },
+      {
+        "sourceId": "mat-b-002",
+        "sourceName": "学生阅读成果分析与教学反思",
+        "sourceType": "reflection",
+        "dataType": "user_provided",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": []
+      },
+      {
+        "sourceId": "mat-b-003",
+        "sourceName": "初中语文整本书阅读教学中学生思维品质培养的策略研究(论文草稿)",
+        "sourceType": "paper",
+        "dataType": "user_provided",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": []
+      },
+      {
+        "sourceId": "mat-b-004",
+        "sourceName": "整本书阅读：从内容梳理到思维培养(教研组分享PPT)",
+        "sourceType": "project_outcome",
+        "dataType": "user_provided",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": []
+      }
+    ],
+    "overallLimitations": [
+      "当前包含 mock/local sample 数据源，结果只能作为流程样例或候选建议，不能视为真实库完整检索。",
+      "立项题样本为mock数据，真实立项题远多于此，申报前需查区/市教研网公示",
+      "政策热点标签为固定mock，未对接实时政策采集",
+      "文献元数据索引未接入，未生成literatureSignals"
+    ]
+  },
+  "result": {
+    "materialDigests": [
+      {
+        "digestId": "digest-b-001",
+        "materialId": "mat-b-001",
+        "materialType": "teaching_case",
+        "title": "《朝花夕拾》整本书阅读教学设计",
+        "keyFacts": [
+          { "fact": "设计面向七年级学生，8课时四阶段流程：通读感知(2课时)→精读批注(2课时)→专题探究(2课时)→成果展示(2课时)", "confidence": "high" },
+          { "fact": "设计了'三色批注法'：蓝色(语言品味)、红色(质疑探究)、绿色(个人联想)", "confidence": "high" },
+          { "fact": "设计了四个专题探究方向：鲁迅笔下的童年与成年、人物形象分析、民俗文化、批判精神与温情", "confidence": "high" },
+          { "fact": "设计了思维品质观察量表雏形，从分析能力、评价能力、创造能力、反思能力四个维度记录学生思维发展", "confidence": "high" },
+          { "fact": "教学反思中指出：部分学生阅读速度慢、专题研究深度参差不齐、思维品质评价标准需进一步量化验证", "confidence": "high" }
+        ],
+        "topicSignals": ["整本书阅读", "三色批注法", "专题探究", "思维品质", "四阶段教学模式", "阅读地图", "初中语文", "《朝花夕拾》"],
+        "usableFor": ["research_topic", "project_basis", "paper_background"],
+        "limitations": []
+      },
+      {
+        "digestId": "digest-b-002",
+        "materialId": "mat-b-002",
+        "materialType": "reflection",
+        "title": "学生阅读成果分析与教学反思",
+        "keyFacts": [
+          { "fact": "在两个班级(七3班42人、七5班40人)实施了《朝花夕拾》整本书阅读教学", "confidence": "high" },
+          { "fact": "收集了82份阅读初感记录表、82份三色批注作品(平均每生23.6处)、14组专题研究报告(含思维导图+文字报告)、82份思维品质观察量表(前测+后测)", "confidence": "high" },
+          { "fact": "批注质量分布：优秀22.0%、良好54.9%、待提升23.2%", "confidence": "high" },
+          { "fact": "专题报告深度分布：深入分析28.6%、基本分析50.0%、内容复述21.4%", "confidence": "high" },
+          { "fact": "思维品质前后测提升：分析+1.3、评价+1.1、创造+0.8、反思+1.2(5分制)", "confidence": "high" },
+          { "fact": "批注质量与学生的日常阅读习惯高度相关", "confidence": "high" },
+          { "fact": "教师反思提出了3个待研究问题：整本书阅读对差异化影响、课时平衡、思维品质量化评价科学化", "confidence": "high" },
+          { "fact": "建议在专题探究前增加'分析方法工作坊'(0.5课时)", "confidence": "high" }
+        ],
+        "topicSignals": ["整本书阅读", "三色批注法", "思维品质观察量表", "前后测", "专题探究深度", "差异化影响", "分析方法工作坊", "初中语文"],
+        "usableFor": ["research_topic", "project_basis", "paper_background"],
+        "limitations": [
+          "未设置严格对照组，只有实验班前后测",
+          "思维品质观察量表的信效度尚未验证",
+          "评分依赖教师个人判断"
+        ]
+      },
+      {
+        "digestId": "digest-b-003",
+        "materialId": "mat-b-003",
+        "materialType": "paper",
+        "title": "初中语文整本书阅读教学中学生思维品质培养的策略研究",
+        "keyFacts": [
+          { "fact": "论文以布鲁姆认知目标分类学(修订版)和维果茨基'最近发展区'为理论框架", "confidence": "high" },
+          { "fact": "论证了四阶段教学模式与布鲁姆认知层级(记忆/理解→应用→分析→评价→创造)的对应关系", "confidence": "high" },
+          { "fact": "实验数据显示分析能力提升1.3分、反思能力提升1.2分", "confidence": "high" },
+          { "fact": "学生平均批注数量从12.3处提升至23.6处，课堂主动提问增加约60%，82.1%更愿读整本书", "confidence": "high" },
+          { "fact": "论文指出研究局限：样本量较小(82人)、未设严格对照，建议扩大样本和准实验设计", "confidence": "high" }
+        ],
+        "topicSignals": ["整本书阅读", "思维品质培养", "四阶段教学模式", "布鲁姆认知目标分类学", "最近发展区", "专题探究", "初中语文"],
+        "usableFor": ["research_topic", "project_basis", "paper_background"],
+        "limitations": [
+          "论文处于草稿阶段，尚未发表",
+          "理论框架与教学阶段的对应关系还需逐阶段精确论证"
+        ]
+      },
+      {
+        "digestId": "digest-b-004",
+        "materialId": "mat-b-004",
+        "materialType": "project_outcome",
+        "title": "整本书阅读：从内容梳理到思维培养(教研组分享PPT)",
+        "keyFacts": [
+          { "fact": "在教研组层面分享了四阶段教学模式、三色批注法使用效果和思维品质观察数据", "confidence": "high" },
+          { "fact": "展示了三色批注法效果：批注数量从12.3→23.6处/生，课堂主动提问增加约60%", "confidence": "high" },
+          { "fact": "PPT中明确了论文方向为'初中语文整本书阅读教学中学生思维品质培养的策略研究'", "confidence": "high" },
+          { "fact": "提出了反思与下一步方向：思维培养需'设计驱动'、专题探究是核心环节、量表需要更多客观指标", "confidence": "high" }
+        ],
+        "topicSignals": ["整本书阅读", "思维培养", "教研分享", "三色批注法", "四阶段模式", "论文方向"],
+        "usableFor": ["research_topic", "project_basis"],
+        "limitations": [
+          "PPT为分享材料，非正式发表成果"
+        ]
+      }
+    ],
+    "materialClusters": [
+      {
+        "clusterId": "cluster-b-001",
+        "clusterTitle": "整本书阅读四阶段教学模式实践",
+        "materialIds": ["mat-b-001", "mat-b-002", "mat-b-004"],
+        "coreSignals": ["整本书阅读", "四阶段教学模式", "三色批注法", "专题探究", "阅读地图"],
+        "researchAxis": "围绕《朝花夕拾》的'通读感知→精读批注→专题探究→成果展示'四阶段教学设计、实施与效果验证形成连续研究。",
+        "evidenceSummary": [
+          { "materialId": "mat-b-001", "fact": "设计了8课时四阶段教学流程，含三色批注法和四个专题探究方向" },
+          { "materialId": "mat-b-002", "fact": "在82人中实施并收集了全过程数据（阅读初感、三色批注、专题报告、观察量表）" },
+          { "materialId": "mat-b-004", "fact": "在教研组层面分享了实践经验和效果数据" }
+        ],
+        "currentStage": "evidence_building",
+        "gaps": ["缺少严格对照组数据", "未进行第二轮教学迭代验证"],
+        "usableTopicAngles": [
+          "四阶段教学模式促进思维品质发展的效果研究",
+          "三色批注法在深度阅读中的应用效果研究",
+          "专题探究环节的思维培养机制研究"
+        ]
+      },
+      {
+        "clusterId": "cluster-b-002",
+        "clusterTitle": "思维品质培养与量化评价",
+        "materialIds": ["mat-b-002", "mat-b-003", "mat-b-004"],
+        "coreSignals": ["思维品质", "观察量表", "前后测", "布鲁姆认知目标", "形成性评价", "信效度"],
+        "researchAxis": "围绕整本书阅读过程中学生分析/评价/创造/反思四维思维品质的培养路径与测量工具开发。",
+        "evidenceSummary": [
+          { "materialId": "mat-b-002", "fact": "设计了四维五级思维品质观察量表，获得82人前后测数据" },
+          { "materialId": "mat-b-003", "fact": "以布鲁姆认知目标分类学为理论框架，论证了四阶段教学对思维品质的提升效果" },
+          { "materialId": "mat-b-004", "fact": "教研分享中展示了思维品质四维提升数据可视化" }
+        ],
+        "currentStage": "theme_consolidation",
+        "gaps": ["量表信效度未经验证", "缺少评分者信度数据", "样本量偏小(82人)"],
+        "usableTopicAngles": [
+          "思维品质观察量表的开发与验证研究",
+          "整本书阅读对不同阅读水平学生思维品质的差异化影响",
+          "文本分析方法指导对专题探究深度的影响研究"
+        ]
+      }
+    ],
+    "researchTrajectory": {
+      "trajectoryId": "trajectory-b-001",
+      "stage": "theme_consolidation",
+      "sourceMaterialIds": ["mat-b-001", "mat-b-002", "mat-b-003", "mat-b-004"],
+      "dominantThemes": ["整本书阅读教学实践", "思维品质培养与评价"],
+      "trajectorySummary": "王老师已完成一轮完整的《朝花夕拾》整本书阅读教学实践(82人、8课时)，积累了从教学设计到效果验证的完整证据链。已有论文草稿搭建了理论框架，教研组分享标志着成果初步扩散。当前处于'研究方向成形'阶段，可从单一案例向可复制研究模式升级。",
+      "pastAccumulation": [
+        "完成8课时四阶段整本书阅读教学设计",
+        "在82人中实施并收集全过程数据（批注、报告、量表前后测）",
+        "撰写以布鲁姆认知目标分类学为框架的论文草稿",
+        "在教研组层面分享实践经验"
+      ],
+      "currentFocusableDirections": [
+        "将四阶段教学模式提炼为可复制的教学策略体系",
+        "完成思维品质观察量表的信效度验证",
+        "补充严格对照设计或扩大样本以提高研究说服力"
+      ],
+      "futureDeepeningPath": [
+        {
+          "stepId": "path-b-001",
+          "timeframe": "0-3个月",
+          "action": "将选题1(四阶段模式)整理为区级课题申报书，补充研究问题和研究方法描述",
+          "requiredEvidence": ["mat-b-001", "mat-b-002", "mat-b-003"],
+          "output": "区级课题申报书"
+        },
+        {
+          "stepId": "path-b-002",
+          "timeframe": "0-3个月",
+          "action": "将选题2(三色批注法)写成教学论文，分析82份批注的质量分布和影响因素",
+          "requiredEvidence": ["mat-b-001", "mat-b-002"],
+          "output": "教学论文（可投区级/市级教研论文评比）"
+        },
+        {
+          "stepId": "path-b-003",
+          "timeframe": "3-12个月",
+          "action": "为选题3(量表开发)补充信效度数据：邀请同事协作评分、积累评分者信度证据",
+          "requiredEvidence": ["mat-b-002", "mat-b-003"],
+          "output": "思维品质观察量表信效度报告"
+        },
+        {
+          "stepId": "path-b-004",
+          "timeframe": "6-12个月",
+          "action": "在下一轮教学中实施'分析方法工作坊'并收集对比数据",
+          "requiredEvidence": ["mat-b-001", "mat-b-002"],
+          "output": "分析方法工作坊效果对比数据"
+        },
+        {
+          "stepId": "path-b-005",
+          "timeframe": "1-3年",
+          "action": "扩大样本至150+、设计准实验方案，将选题4(差异化影响)作为市级课题申报方向",
+          "requiredEvidence": ["mat-b-002", "mat-b-003"],
+          "output": "市级课题申报方案"
+        }
+      ],
+      "risks": [
+        "量表信效度验证需要教育测量学专业支持，王老师可能需要合作者",
+        "扩大样本至150+需要跨年级或跨校协作",
+        "准实验设计的实施难度高于单组前后测"
+      ]
+    },
+    "topicCandidates": [
+      {
+        "topicId": "topic-b-001",
+        "topicTitle": "初中语文整本书阅读'四阶段'教学模式促进学生思维品质发展的实践研究——以《朝花夕拾》为例",
+        "topicType": "summative",
+        "researchQuestion": "初中语文整本书阅读的'通读感知—精读批注—专题探究—成果展示'四阶段教学模式如何促进学生分析、评价、创造、反思四维思维品质的发展？",
+        "existingBasis": [
+          { "materialId": "mat-b-001", "basis": "已有《朝花夕拾》8课时四阶段教学设计" },
+          { "materialId": "mat-b-002", "basis": "已有82人前后测数据，思维品质四维均有提升" },
+          { "materialId": "mat-b-003", "basis": "已有布鲁姆认知目标分类学+维果茨基'最近发展区'理论框架论文草稿" }
+        ],
+        "innovationPoints": [
+          "将四阶段教学模式与思维品质四维度做交叉对应分析，超越目前整本书阅读研究中的笼统'效果描述'",
+          "用前后测数据而非读后感或考试得分作为思维品质发展的证据"
+        ],
+        "feasibility": {
+          "score": 4,
+          "risks": ["缺少严格对照组数据", "论文草稿中理论框架与教学阶段的对应还需逐阶段精确论证"],
+          "neededMaterials": ["对照班数据（建议至少1个班）", "四阶段与四维思维品质的交叉分析表"]
+        },
+        "basisGap": {
+          "currentBasis": ["完整教学设计", "82人前后测数据", "理论框架论文草稿"],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果",
+          "gaps": ["缺少严格对照组数据", "研究方法部分需要更具体的描述（如研究设计类型、数据分析方法）"],
+          "upgradePath": ["补充至少1个对照班的对比数据", "细化研究方法描述", "完成理论框架与教学阶段的逐阶段精确映射"]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-015",
+          "nearestGrantTitle": "小学语文整本书阅读指导策略的实践研究",
+          "similarityScore": 0.35,
+          "riskLevel": "low",
+          "differenceStrategy": "聚焦初中语文学段、以思维品质发展为效果指标（而非笼统的'阅读效果'）、四阶段模式有具体操作规范（而非泛泛的'指导策略'）",
+          "differentiatedTitleSuggestion": "初中语文整本书阅读'四阶段'教学模式促进学生思维品质发展的实践研究"
+        },
+        "keywords": ["整本书阅读", "四阶段教学模式", "思维品质", "初中语文", "《朝花夕拾》", "前后测"],
+        "nextReadingQuestions": [
+          "近3年区级/市级立项中有多少'整本书阅读+思维'相关课题？它们的聚焦点是什么？",
+          "布鲁姆认知目标分类学在语文学科的应用研究有哪些代表性文献？",
+          "语文思维品质的测量工具研究现状如何？有哪些可借鉴的量表？"
+        ]
+      },
+      {
+        "topicId": "topic-b-002",
+        "topicTitle": "'三色批注法'在初中整本书深度阅读中的应用效果研究",
+        "topicType": "summative",
+        "researchQuestion": "'三色批注法'（蓝色语言品味/红色质疑探究/绿色个人联想）如何影响初中生的整本书阅读深度？不同颜色批注的分布与学生思维品质各维度之间存在怎样的关联？",
+        "existingBasis": [
+          { "materialId": "mat-b-001", "basis": "已有三色批注法操作规范设计" },
+          { "materialId": "mat-b-002", "basis": "已有82份三色批注作品数据：平均23.6处/生、优秀率22.0%、批注质量与阅读习惯相关" }
+        ],
+        "innovationPoints": [
+          "将批注从经验做法提升为可操作化的三色分类策略，并检验其与思维品质的关联",
+          "三色分类（理解→质疑→联系）与布鲁姆认知层级有天然对应关系，可发展为'用批注颜色追踪思维层级'的分析框架"
+        ],
+        "feasibility": {
+          "score": 5,
+          "risks": ["批注质量评价依赖教师个人判断，缺少评分者间信度"],
+          "neededMaterials": ["另一位教师的独立评分数据（10-15份即可，用于计算评分者信度）"]
+        },
+        "basisGap": {
+          "currentBasis": ["三色批注法操作规范", "82份批注样本及质量分布数据", "批注质量与阅读习惯的关联发现"],
+          "targetRequirement": "区级课题/教学论文需要明确的研究方法、数据分析过程和可推广的教学策略",
+          "gaps": ["缺少评分者信度数据", "缺少批注质量的变化追踪（同一批学生从第1次到第N次的变化）"],
+          "upgradePath": ["邀请同事独立评分10-15份，计算一致性", "在下一轮教学中追踪批注质量变化", "将三色批注与布鲁姆认知层级的对应关系理论化"]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-015",
+          "nearestGrantTitle": "小学语文整本书阅读指导策略的实践研究",
+          "similarityScore": 0.25,
+          "riskLevel": "low",
+          "differenceStrategy": "聚焦批注这一具体教学策略而非泛泛的'指导策略'，有82份样本的量化数据支撑，三色分类框架具有可复制性",
+          "differentiatedTitleSuggestion": "'三色批注法'在初中整本书深度阅读中的应用效果研究"
+        },
+        "keywords": ["三色批注法", "整本书阅读", "深度阅读", "初中语文", "思维品质", "批注质量"],
+        "nextReadingQuestions": [
+          "语文阅读批注教学的研究现状如何？有哪些代表性的批注策略研究？",
+          "批注质量评价的评分标准有哪些可参考的研究？",
+          "'批注颜色'与'认知层级'的对应关系在哪些研究中已有探讨？"
+        ]
+      },
+      {
+        "topicId": "topic-b-003",
+        "topicTitle": "初中语文整本书阅读教学中思维品质观察量表的开发与验证研究",
+        "topicType": "summative",
+        "researchQuestion": "如何开发一个信效度良好的初中语文整本书阅读思维品质观察量表？该量表的四维结构（分析、评价、创造、反思）是否具有结构效度？",
+        "existingBasis": [
+          { "materialId": "mat-b-001", "basis": "已有思维品质观察量表雏形（四维度、五等级）" },
+          { "materialId": "mat-b-002", "basis": "已有82人前后测数据，四个维度提升幅度不同（分析+1.3、反思+1.2、评价+1.1、创造+0.8）" },
+          { "materialId": "mat-b-003", "basis": "已有布鲁姆认知目标分类学理论框架支撑量表维度设计" }
+        ],
+        "innovationPoints": [
+          "目前整本书阅读领域缺少经过信效度验证的思维品质评价工具——你的量表填补了这个空白",
+          "四维结构的提升幅度差异（分析>反思>评价>创造）提供了有价值的效度证据——不同维度的提升幅度不同，说明量表具有区分度"
+        ],
+        "feasibility": {
+          "score": 3,
+          "risks": ["量表信效度验证工作量较大（内容效度、评分者信度、结构效度）", "82人样本量对因子分析来说偏小", "需要教育测量学专业支持"],
+          "neededMaterials": ["3-5位教研员/资深教师的量表评审意见（内容效度）", "至少2位教师的独立评分数据（评分者信度）", "扩大至150+的样本数据（结构效度）"]
+        },
+        "basisGap": {
+          "currentBasis": ["四维五级量表雏形", "82人前后测数据", "理论框架支撑"],
+          "targetRequirement": "量表开发研究通常需要内容效度、评分者信度、结构效度等多重验证",
+          "gaps": ["内容效度未经专家评审", "评分者信度未经检验（目前只有王老师一人评分）", "样本量不足（82<100，不适合因子分析）"],
+          "upgradePath": ["邀请3-5位教研员评审量表指标（内容效度）", "邀请同事独立评分10-15份（评分者信度）", "扩大样本至150+后进行探索性因子分析（结构效度）"]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-021",
+          "nearestGrantTitle": "教学评一致性视角下小学数学课堂评价任务设计研究",
+          "similarityScore": 0.2,
+          "riskLevel": "low",
+          "differenceStrategy": "聚焦整本书阅读领域、开发学科特定的思维品质评价工具（而非通用的评价任务设计），学科和研究焦点完全不同",
+          "differentiatedTitleSuggestion": "初中语文整本书阅读思维品质观察量表的开发与验证研究"
+        },
+        "keywords": ["思维品质", "观察量表", "信效度验证", "整本书阅读", "初中语文", "评价工具"],
+        "nextReadingQuestions": [
+          "语文思维品质评价工具有哪些代表性研究？",
+          "教育测量学中量表开发的标准流程是什么？",
+          "整本书阅读领域的评价研究现状如何？"
+        ]
+      },
+      {
+        "topicId": "topic-b-004",
+        "topicType": "planning",
+        "topicTitle": "整本书阅读教学对不同阅读水平初中生思维品质发展的差异化影响研究",
+        "researchQuestion": "整本书阅读的四阶段教学模式对不同阅读水平（高/中/低）初中生的思维品质发展是否存在差异化影响？影响差异主要体现在思维品质的哪个维度？",
+        "existingBasis": [
+          { "materialId": "mat-b-002", "basis": "教师反思中自提的待研究问题：'整本书阅读教学对不同阅读水平学生的差异化影响是什么？'" },
+          { "materialId": "mat-b-002", "basis": "已发现批注质量与学生日常阅读习惯高度相关——暗示阅读水平是关键调节变量" }
+        ],
+        "innovationPoints": [
+          "目前整本书阅读研究多报告'整体提升'，缺少'谁提升得多、谁提升得少、为什么'的分析",
+          "将研究从'是否有效'升级为'对谁有效、为何有效'——引入阅读水平作为调节变量"
+        ],
+        "feasibility": {
+          "score": 3,
+          "risks": ["当前82人按阅读水平分层后每层仅20-30人，统计检验力不足", "需要标准化的阅读水平前测工具", "需要多班级准实验设计，协调难度大"],
+          "neededMaterials": ["标准化初中生阅读水平测验", "4-6个班级(120-180人)的样本", "准实验设计方案（不同阅读水平×不同教学策略）"]
+        },
+        "basisGap": {
+          "currentBasis": ["已确认阅读水平可能影响整本书阅读效果", "已有82人基础数据"],
+          "targetRequirement": "差异化影响研究需要分层对比设计、足够的样本量和标准化的前测工具",
+          "gaps": ["缺少标准化的阅读水平前测工具", "样本量不足以支撑分层对比", "缺少跨班级的准实验设计方案"],
+          "upgradePath": ["选择或开发标准化阅读水平测验工具", "扩大样本至4-6个班级(120-180人)", "设计准实验方案（阅读水平×教学策略）"]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-015",
+          "nearestGrantTitle": "小学语文整本书阅读指导策略的实践研究",
+          "similarityScore": 0.25,
+          "riskLevel": "low",
+          "differenceStrategy": "聚焦'差异化影响'而非'整体效果'，引入阅读水平作为调节变量，采用分层对比设计而非单组前后测",
+          "differentiatedTitleSuggestion": "整本书阅读对不同阅读水平初中生思维品质的差异化影响研究"
+        },
+        "keywords": ["整本书阅读", "差异化影响", "阅读水平", "思维品质", "初中语文", "分层对比"],
+        "nextReadingQuestions": [
+          "语文阅读水平标准化测验工具有哪些？哪个适合初中生？",
+          "差异化教学影响研究的方法论文献有哪些？",
+          "分层线性模型(HLM)在教育干预研究中的应用情况如何？"
+        ]
+      },
+      {
+        "topicId": "topic-b-005",
+        "topicType": "planning",
+        "topicTitle": "初中语文整本书阅读教学中'分析方法工作坊'的设计与效果研究——以专题探究前置指导为例",
+        "researchQuestion": "在专题探究前增设'分析方法工作坊'(0.5课时)是否能显著提升学生专题研究报告的分析深度？工作坊的哪个要素（人物分析框架/主题提炼方法/证据引用规范）对研究深度的贡献最大？",
+        "existingBasis": [
+          { "materialId": "mat-b-001", "basis": "已设计四个专题探究方向和小组研究流程" },
+          { "materialId": "mat-b-002", "basis": "已发现21.4%的专题报告停留于内容复述，教师反思中明确提出'在专题探究前增加分析方法工作坊(0.5课时)'的建议" }
+        ],
+        "innovationPoints": [
+          "切口极小——0.5课时的前置干预能否显著提升探究深度？这是一个有清晰因果假设的研究",
+          "将研究焦点从'教什么(整本书内容)'转向'怎么教分析(元认知策略)'，是教学研究中的稀缺角度"
+        ],
+        "feasibility": {
+          "score": 4,
+          "risks": ["工作坊内容需从头设计（人物分析框架、主题提炼方法、证据引用规范等）", "需要'有工作坊'和'无工作坊'班级的对比数据"],
+          "neededMaterials": ["分析方法工作坊教学方案", "有/无工作坊班级的专题报告质量对比数据", "专题报告分析深度的评价量规"]
+        },
+        "basisGap": {
+          "currentBasis": ["已有专题探究环节的设计和实施经验", "已发现专题报告深度参差不齐的问题", "教师已提出'分析方法工作坊'的干预设想"],
+          "targetRequirement": "干预效果验证需要对比设计和明确的评价标准",
+          "gaps": ["工作坊教学方案尚未设计", "缺少专题报告分析深度的标准化评价量规", "缺少有/无工作坊的对比数据"],
+          "upgradePath": ["设计分析方法工作坊教学方案", "开发专题报告分析深度评价量规", "在下一轮教学中实施对比（有工作坊vs无工作坊）"]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-015",
+          "nearestGrantTitle": "小学语文整本书阅读指导策略的实践研究",
+          "similarityScore": 0.15,
+          "riskLevel": "low",
+          "differenceStrategy": "聚焦的是'元层面'的教学问题——不是教整本书本身，而是教学生'怎么分析文本'。干预精准（0.5课时）、因果假设明确",
+          "differentiatedTitleSuggestion": "初中语文整本书阅读教学中'分析方法工作坊'的设计与效果研究"
+        },
+        "keywords": ["分析方法工作坊", "专题探究", "前置指导", "整本书阅读", "初中语文", "文本分析工具"],
+        "nextReadingQuestions": [
+          "文本分析教学策略的研究现状如何？有哪些可参考的分析框架？",
+          "元认知策略教学（教学生'怎么学'）的效果研究有哪些代表性文献？",
+          "微干预(Micro-intervention)研究在教育领域的应用情况？"
+        ]
+      }
+    ],
+    "topicEvaluationReport": {
+      "materialEvidenceCoverage": 1.0,
+      "clusteredMaterialCoverage": 1.0,
+      "materialClusterChecks": [
+        { "clusterId": "cluster-b-001", "materialCount": 3, "signalCount": 5 },
+        { "clusterId": "cluster-b-002", "materialCount": 3, "signalCount": 5 }
+      ],
+      "researchTrajectoryCheck": {
+        "stage": "theme_consolidation",
+        "sourceMaterialCount": 4,
+        "futureStepCount": 5
+      },
+      "differentiationChecks": [
+        { "topicId": "topic-b-001", "nearestGrantId": "grant-demo-015", "similarityScore": 0.35, "riskLevel": "low" },
+        { "topicId": "topic-b-002", "nearestGrantId": "grant-demo-015", "similarityScore": 0.25, "riskLevel": "low" },
+        { "topicId": "topic-b-003", "nearestGrantId": "grant-demo-021", "similarityScore": 0.2, "riskLevel": "low" },
+        { "topicId": "topic-b-004", "nearestGrantId": "grant-demo-015", "similarityScore": 0.25, "riskLevel": "low" },
+        { "topicId": "topic-b-005", "nearestGrantId": "grant-demo-015", "similarityScore": 0.15, "riskLevel": "low" }
+      ],
+      "basisGapChecks": [
+        { "topicId": "topic-b-001", "gapCount": 2, "upgradeStepCount": 3 },
+        { "topicId": "topic-b-002", "gapCount": 2, "upgradeStepCount": 3 },
+        { "topicId": "topic-b-003", "gapCount": 3, "upgradeStepCount": 3 },
+        { "topicId": "topic-b-004", "gapCount": 3, "upgradeStepCount": 3 },
+        { "topicId": "topic-b-005", "gapCount": 3, "upgradeStepCount": 3 }
+      ],
+      "notes": [
+        "所有总结性选题(3个)均回链了至少2份材料",
+        "所有规划性选题(2个)均源于教师反思中自提的待研究问题",
+        "差异化对比使用的mock立项题样本以小学数学为主，语文学科样本较少(仅grant-demo-015和016)，相似度评分可能低估",
+        "选题4和选题5的nextReadingQuestions可作为@文献阅读助手的输入"
+      ]
+    }
+  },
+  "handoff": {
+    "topicCandidates": [
+      {
+        "topicId": "topic-b-001",
+        "topicTitle": "初中语文整本书阅读'四阶段'教学模式促进学生思维品质发展的实践研究——以《朝花夕拾》为例",
+        "topicType": "summative",
+        "keywords": ["整本书阅读", "四阶段教学模式", "思维品质", "初中语文", "《朝花夕拾》"],
+        "researchQuestion": "四阶段教学模式如何促进学生分析、评价、创造、反思四维思维品质的发展？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 4,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "近3年整本书阅读+思维品质相关立项题有哪些？",
+          "布鲁姆认知目标分类学在语文学科的应用研究有哪些代表作？",
+          "语文思维品质测量工具的研究现状如何？"
+        ]
+      },
+      {
+        "topicId": "topic-b-002",
+        "topicTitle": "'三色批注法'在初中整本书深度阅读中的应用效果研究",
+        "topicType": "summative",
+        "keywords": ["三色批注法", "深度阅读", "整本书阅读", "初中语文", "批注质量"],
+        "researchQuestion": "'三色批注法'如何影响初中生的整本书阅读深度？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 5,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "语文阅读批注教学的策略研究有哪些代表作？",
+          "批注质量评价的评分标准研究现状？"
+        ]
+      },
+      {
+        "topicId": "topic-b-003",
+        "topicTitle": "初中语文整本书阅读教学中思维品质观察量表的开发与验证研究",
+        "topicType": "summative",
+        "keywords": ["思维品质", "观察量表", "信效度验证", "整本书阅读", "评价工具"],
+        "researchQuestion": "如何开发信效度良好的整本书阅读思维品质观察量表？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 3,
+        "riskLevel": "medium",
+        "nextReadingQuestions": [
+          "教育测量学中量表开发的标准流程与方法论文献？",
+          "语文思维品质评价工具的代表性研究？"
+        ]
+      },
+      {
+        "topicId": "topic-b-004",
+        "topicTitle": "整本书阅读教学对不同阅读水平初中生思维品质发展的差异化影响研究",
+        "topicType": "planning",
+        "keywords": ["整本书阅读", "差异化影响", "阅读水平", "思维品质", "分层对比"],
+        "researchQuestion": "四阶段教学模式对不同阅读水平学生的思维品质是否存在差异化影响？",
+        "evidenceStatus": "needs_evidence",
+        "feasibilityScore": 3,
+        "riskLevel": "medium",
+        "nextReadingQuestions": [
+          "语文阅读水平标准化测验工具有哪些？",
+          "分层线性模型在教育干预研究中的应用？"
+        ]
+      },
+      {
+        "topicId": "topic-b-005",
+        "topicTitle": "初中语文整本书阅读教学中'分析方法工作坊'的设计与效果研究",
+        "topicType": "planning",
+        "keywords": ["分析方法工作坊", "专题探究", "前置指导", "文本分析工具"],
+        "researchQuestion": "前置分析方法工作坊(0.5课时)能否显著提升专题报告分析深度？",
+        "evidenceStatus": "needs_evidence",
+        "feasibilityScore": 4,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "文本分析教学策略的研究现状？",
+          "元认知策略教学效果研究有哪些代表作？"
+        ]
+      }
+    ],
+    "materialClusters": [
+      {
+        "clusterId": "cluster-b-001",
+        "clusterTitle": "整本书阅读四阶段教学模式实践",
+        "materialIds": ["mat-b-001", "mat-b-002", "mat-b-004"],
+        "coreSignals": ["整本书阅读", "四阶段教学模式", "三色批注法", "专题探究"],
+        "currentStage": "evidence_building"
+      },
+      {
+        "clusterId": "cluster-b-002",
+        "clusterTitle": "思维品质培养与量化评价",
+        "materialIds": ["mat-b-002", "mat-b-003", "mat-b-004"],
+        "coreSignals": ["思维品质", "观察量表", "前后测", "信效度"],
+        "currentStage": "theme_consolidation"
+      }
+    ],
+    "researchTrajectory": {
+      "trajectoryId": "trajectory-b-001",
+      "stage": "theme_consolidation",
+      "dominantThemes": ["整本书阅读教学实践", "思维品质培养与评价"],
+      "sourceMaterialIds": ["mat-b-001", "mat-b-002", "mat-b-003", "mat-b-004"]
+    },
+    "keywords": ["整本书阅读", "思维品质", "三色批注法", "四阶段教学模式", "观察量表", "专题探究", "初中语文", "《朝花夕拾》", "布鲁姆认知目标分类学", "前后测"],
+    "readingQuestions": [
+      "近3年区级/市级'整本书阅读+思维品质'相关立项题的聚焦点和差异点？",
+      "语文思维品质评价工具的信效度研究现状？",
+      "布鲁姆认知目标分类学在语文学科研究中的应用实例？",
+      "文本分析策略教学(教'怎么分析'而非'教什么')的效果研究？"
+    ]
+  },
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      { "id": "summative-material-refs", "status": "pass", "detail": "所有3个总结性选题均回链至少2份材料" },
+      { "id": "basis-gap-present", "status": "pass", "detail": "所有5个选题均包含basisGap和differentiation" },
+      { "id": "feasibility-assessment", "status": "pass", "detail": "所有5个选题均包含feasibility评估和风险提示" },
+      { "id": "cluster-material-refs", "status": "pass", "detail": "2个材料聚类均回链真实材料ID和事实" },
+      { "id": "trajectory-stage-evidence", "status": "pass", "detail": "研究轨迹阶段判定有4份材料支撑" },
+      { "id": "mock-data-disclosure", "status": "pass", "detail": "数据来源声明明确标注mock数据局限性" }
+    ],
+    "warnings": [
+      "差异化对比使用的mock立项题样本以小学数学为主，语文学科相关样本仅2条(grant-demo-015, grant-demo-016)，相似度评分可能因样本偏差而低估",
+      "教师画像字段(researchExperience, constraints等)从材料推断，未经教师显式确认",
+      "文献元数据索引未接入，literatureSignals未生成",
+      "DKG轨未启用"
+    ],
+    "metrics": {
+      "topicCount": 5,
+      "summativeCount": 3,
+      "planningCount": 2,
+      "materialEvidenceCoverage": 1.0,
+      "feasibilityWarnings": 5,
+      "basisGapCount": 5,
+      "differentiationCheckCount": 5,
+      "highSimilarityCount": 0,
+      "materialClusterCount": 2,
+      "clusteredMaterialCoverage": 1.0,
+      "trajectoryStepCount": 5,
+      "dkgEnabled": false,
+      "dkgCoverage": 0,
+      "literatureSignalCount": 0,
+      "literatureSignalHighRiskCount": 0,
+      "gapEvidenceCount": 0,
+      "trendConfidence": 0,
+      "feedbackLoopCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 4,
+    "verifiedSourceCount": 4,
+    "unsupportedClaimCount": 0,
+    "sources": [
+      { "source": "mat-b-001", "type": "teaching_case", "verified": true },
+      { "source": "mat-b-002", "type": "reflection", "verified": true },
+      { "source": "mat-b-003", "type": "paper", "verified": true },
+      { "source": "mat-b-004", "type": "project_outcome", "verified": true }
+    ]
+  },
+  "nextActions": [
+    "整理选题1(四阶段模式)为区级课题申报书",
+    "将选题2(三色批注法)写成教学论文投稿",
+    "邀请同事协助补充评分者信度数据(选题3前置工作)",
+    "设计'分析方法工作坊'教学方案(选题5前置工作)",
+    "查询区/市教研网近3年整本书阅读相关立项公示，确认真实差异化",
+    "在中国知网检索'整本书阅读+思维品质'相关期刊论文和硕士论文"
+  ]
+}

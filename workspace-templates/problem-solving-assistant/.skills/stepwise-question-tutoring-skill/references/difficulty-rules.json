@@ -1,0 +1,59 @@
+{
+  "layers": {
+    "A": {
+      "name": "基础层",
+      "difficultyRange": [1, 2],
+      "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+      "cognitiveLevel": "理解"
+    },
+    "B": {
+      "name": "巩固层",
+      "difficultyRange": [2, 3],
+      "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+      "cognitiveLevel": "应用"
+    },
+    "C": {
+      "name": "拓展层",
+      "difficultyRange": [3, 4],
+      "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+      "cognitiveLevel": "迁移"
+    }
+  },
+  "taskTypeDefaults": {
+    "classroom_practice": {
+      "questionCount": 6,
+      "layers": ["A", "B"],
+      "layerMix": {"A": 4, "B": 2},
+      "questionTypeMix": {"计算题": 3, "应用题": 2, "判断题": 1},
+      "difficultyMix": {"1": 2, "2": 3, "3": 1}
+    },
+    "layered_homework": {
+      "questionCount": 9,
+      "layers": ["A", "B", "C"],
+      "layerMix": {"A": 3, "B": 3, "C": 3},
+      "questionTypeMix": {"计算题": 4, "应用题": 3, "比较题": 1, "判断题": 1},
+      "difficultyMix": {"1": 2, "2": 3, "3": 3, "4": 1}
+    },
+    "topic_drill": {
+      "questionCount": 10,
+      "layers": ["A", "B", "C"],
+      "layerMix": {"A": 3, "B": 4, "C": 3},
+      "questionTypeMix": {"计算题": 6, "应用题": 3, "比较题": 1},
+      "difficultyMix": {"1": 2, "2": 3, "3": 3, "4": 2}
+    },
+    "unit_test": {
+      "questionCount": 15,
+      "layers": ["A", "B", "C"],
+      "layerMix": {"A": 8, "B": 5, "C": 2},
+      "questionTypeMix": {"计算题": 6, "应用题": 6, "比较题": 1, "判断题": 1, "填空题": 1},
+      "difficultyMix": {"1": 4, "2": 4, "3": 5, "4": 2}
+    },
+    "stage_test": {
+      "questionCount": 15,
+      "layers": ["A", "B", "C"],
+      "layerMix": {"A": 8, "B": 5, "C": 2},
+      "questionTypeMix": {"计算题": 5, "应用题": 7, "比较题": 1, "判断题": 1, "填空题": 1},
+      "difficultyMix": {"1": 4, "2": 4, "3": 5, "4": 2}
+    }
+  }
+}

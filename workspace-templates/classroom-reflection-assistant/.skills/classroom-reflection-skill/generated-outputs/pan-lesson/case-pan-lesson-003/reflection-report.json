@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "skill": "classroom-reflection-skill",
+    "generatedAt": "2026-06-05T10:14:02Z",
+    "inputFile": "《盼》.json",
+    "conversationId": "case-pan-lesson-003"
+  },
+  "basicJudgment": {
+    "level": "良好",
+    "score": 87,
+    "diagnosis": "这是一堂扎实的六年级语文习作单元公开课，教师紧扣'围绕中心意思写'这一核心教学目标，通过层层递进的文本解读和生动的情境教学，引导学生体会作者如何运用对话、心理、环境等描写手法表现人物内心'盼'的情感，体现了较强的语文教学专业能力。但在学生参与度广度和思维深度拓展上仍有提升空间。",
+    "subject": "语文",
+    "rubric": "01_语文.md"
+  },
+  "segments": [
+    {"name": "导入与目标唤起", "timeLabel": "0 分 21 秒 -12 分 15 秒（21-735 秒）"},
+    {"name": "新知建构与文本/任务推进", "timeLabel": "12 分 15 秒 -24 分 10 秒（735-1450 秒）"},
+    {"name": "学生练习或探究活动", "timeLabel": "24 分 10 秒 -36 分 05 秒（1450-2165 秒）"},
+    {"name": "总结提升与作业布置", "timeLabel": "36 分 05 秒 -48 分 00 秒（2165-2880 秒）"}
+  ],
+  "scores": {
+    "totalScore": 87,
+    "maxScore": 100,
+    "grades": {
+      "优秀": "90-100",
+      "良好": "80-89",
+      "合格": "70-79",
+      "待改进": "60-69",
+      "问题较大": "<60"
+    },
+    "dimensionScores": [
+      {"dimension": "教学目标与内容 - 语文核心素养导向", "fullScore": 8, "getScore": 7},
+      {"dimension": "教学目标与内容 - 文本/任务解读", "fullScore": 7, "getScore": 7},
+      {"dimension": "教学目标与内容 - 重难点与学情", "fullScore": 5, "getScore": 5},
+      {"dimension": "教学过程与方法 - 语言实践活动", "fullScore": 12, "getScore": 11},
+      {"dimension": "教学过程与方法 - 问题链与思维发展", "fullScore": 10, "getScore": 9},
+      {"dimension": "教学过程与方法 - 阅读/表达指导", "fullScore": 8, "getScore": 8},
+      {"dimension": "教学过程与方法 - 课堂结构与时间", "fullScore": 5, "getScore": 5},
+      {"dimension": "学生学习与评价 - 主体参与", "fullScore": 8, "getScore": 7},
+      {"dimension": "学生学习与评价 - 学习证据", "fullScore": 7, "getScore": 6},
+      {"dimension": "学生学习与评价 - 评价反馈", "fullScore": 5, "getScore": 4},
+      {"dimension": "教师素养 - 语言与引导", "fullScore": 7, "getScore": 7},
+      {"dimension": "教师素养 - 板书/资源", "fullScore": 4, "getScore": 3},
+      {"dimension": "教师素养 - 课堂调控", "fullScore": 4, "getScore": 4},
+      {"dimension": "教学效果与特色 - 目标达成", "fullScore": 7, "getScore": 6},
+      {"dimension": "教学效果与特色 - 学科特色", "fullScore": 3, "getScore": 3}
+    ]
+  },
+  "mainStrengths": [
+    {
+      "title": "情境化教学生动，有效拉近学生与文本距离",
+      "evidence": "教师在指导学生朗读妈妈对话时，亲自示范撒娇语气",
+      "timestamp": "1948.53-1981.42 秒"
+    },
+    {
+      "title": "对比阅读设计精巧，帮助学生建立写作策略库",
+      "evidence": "将本课与前一课《夏天是万物迅速生长的季节》对比，明确选材方法差异",
+      "timestamp": "1243.686-1253.23 秒"
+    },
+    {
+      "title": "抓关键词点拨精准，培养学生细读能力",
+      "evidence": "引导学生找出全文表示心理活动的词并解释其作用",
+      "timestamp": "2266-2325 秒"
+    },
+    {
+      "title": "教师语言富有感染力，课堂氛围活跃而不乱",
+      "evidence": "使用'亲友团''灵魂拷问'等语言调动积极性",
+      "timestamp": "全程"
+    }
+  ],
+  "keyIssues": [
+    {
+      "issue": "学生参与度不均衡，未覆盖全体",
+      "impact": "部分学生成为'观众'，学习效果参差不齐",
+      "solution": "采用随机点名工具或座位轮换机制；增加同桌互说、小组内轮流发言环节"
+    },
+    {
+      "issue": "课堂缺少即时写作实践",
+      "impact": "写作方法停留在'知道'层面，缺乏'会用'的体验",
+      "solution": "在总结前增设 5 分钟微写作训练"
+    },
+    {
+      "issue": "评价反馈偏重鼓励，质量提升指引不足",
+      "impact": "学生不知自己好在哪里、如何改得更好",
+      "solution": "采用三段式反馈；引导学生互评"
+    },
+    {
+      "issue": "板书缺失，关键概念未能可视化固化",
+      "impact": "抽象的写作方法缺乏直观支架",
+      "solution": "设计结构化板书"
+    }
+  ],
+  "statistics": {
+    "utteranceCount": {"total": 205, "teacher": 99, "student": 105, "other": 1},
+    "speakingDurationSec": {"teacher": 1418.93, "student": 847.29, "other": 123.54},
+    "talkRatio": {"teacher": 0.594, "student": 0.355, "other": 0.052},
+    "totalDurationSec": 2859.49,
+    "teacherQuestionMarkCount": 120
+  }
+}

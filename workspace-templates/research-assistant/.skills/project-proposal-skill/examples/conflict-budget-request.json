@@ -1,0 +1,76 @@
+{
+  "requestId": "req-project-proposal-conflict-budget-001",
+  "entryToken": "@项目申报助手",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "sourceRequest": "根据项目材料生成申报书框架，并检查团队人数和预算是否一致。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参与过小学数学课堂反馈研究",
+    "existingAchievements": [],
+    "availableCycle": "2026-09 至 2027-08",
+    "constraints": []
+  },
+  "input": {
+    "documentType": "project_application",
+    "projectLevel": "区级课题",
+    "projectMaterials": [
+      {
+        "materialId": "mat-team-a",
+        "materialType": "team",
+        "title": "团队申报表",
+        "content": "项目负责人 1 人，核心成员 4 人，均参与过课堂反馈研究。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-team-b",
+        "materialType": "team",
+        "title": "团队补充说明",
+        "content": "项目负责人 1 人，核心成员 5 人，其中 2 人负责课堂观察。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-practice",
+        "materialType": "practice",
+        "title": "实践基础",
+        "content": "已完成 3 节错因诊断课例，积累课堂投票和错因分类活动记录。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-outcome",
+        "materialType": "outcome",
+        "title": "成果清单",
+        "content": "形成教学案例 2 篇、课堂观察记录 6 份。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      }
+    ],
+    "budgetInfo": {
+      "totalAmount": "1.5 万元",
+      "items": [
+        {"category": "资料费", "amount": "0.5 万元", "purpose": "购买研究资料和打印观察表"},
+        {"category": "培训研讨费", "amount": "0.8 万元", "purpose": "开展校内课题研讨"}
+      ]
+    },
+    "teamInfo": {},
+    "requirements": "先标记冲突，再生成可继续补充的申报书框架。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

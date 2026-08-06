@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>师说</title>
+  <style>
+    :root {
+      --bg: #f6f2e8;
+      --paper: #fffdf7;
+      --ink: #17201c;
+      --muted: #68706b;
+      --line: #d9d3c4;
+      --accent: #d95f43;
+      --accent-2: #0c7c72;
+      --warn: #b6463a;
+      --good: #16745e;
+      --shadow: 0 22px 50px rgba(23, 32, 28, .12);
+      --radius: 8px;
+      --nav-safe-bottom: 9vh;
+      --ease-entry: cubic-bezier(.2, 0, .12, 1);
+    }
+    body[data-theme="chalk-grid"] {
+      --bg: #1f2d25;
+      --paper: #26382f;
+      --ink: #f4f0dc;
+      --muted: #b9c1ae;
+      --line: #526353;
+      --accent: #f1c94a;
+      --accent-2: #8bd3c7;
+      --warn: #ef9a83;
+      --good: #8ed9a8;
+      --shadow: 0 24px 60px rgba(0, 0, 0, .28);
+    }
+    body[data-theme="daylight"] {
+      --bg: #f6f2e8;
+      --paper: #fffdf7;
+      --ink: #17201c;
+      --muted: #68706b;
+      --line: #d9d3c4;
+      --accent: #d95f43;
+      --accent-2: #0c7c72;
+    }
+    body[data-theme="science-lab"] {
+      --bg: #eef5f6;
+      --paper: #fbfeff;
+      --ink: #13242e;
+      --muted: #5e6d76;
+      --line: #cad9df;
+      --accent: #007c89;
+      --accent-2: #6b7fda;
+    }
+    body[data-theme="humanities-ink"] {
+      --bg: #f3eee3;
+      --paper: #fffaf0;
+      --ink: #2a1f19;
+      --muted: #78685d;
+      --line: #dccfc0;
+      --accent: #9f2f2f;
+      --accent-2: #2f665b;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--line) 26%, transparent) 1px, transparent 1px),
+        linear-gradient(0deg, color-mix(in srgb, var(--line) 20%, transparent) 1px, transparent 1px),
+        var(--bg);
+      background-size: 64px 64px, 64px 64px, auto;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei UI", "Noto Sans SC", sans-serif;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .42;
+      background:
+        linear-gradient(135deg, transparent 0 68%, color-mix(in srgb, var(--accent) 10%, transparent) 68% 69%, transparent 69%),
+        linear-gradient(45deg, transparent 0 78%, color-mix(in srgb, var(--accent-2) 9%, transparent) 78% 79%, transparent 79%);
+      z-index: 0;
+    }
+    body.low-power {
+      background: var(--bg);
+    }
+    body.low-power::before {
+      display: none;
+    }
+    body.low-power *,
+    body.low-power *::before,
+    body.low-power *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+    #deck {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      transform: translateX(calc(var(--index, 0) * -100vw));
+      transition: transform .38s cubic-bezier(.2, .8, .2, 1);
+      position: relative;
+      z-index: 1;
+    }
+    body.low-power #deck {
+      transition: none;
+    }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      flex: 0 0 100vw;
+      padding: 28px;
+      display: grid;
+      place-items: center;
+    }
+    .slide [data-animate] {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .slide.is-active [data-animate] {
+      animation: edu-rise .52s var(--ease-entry) forwards;
+    }
+    .slide.is-active .footer[data-animate] {
+      animation-delay: .12s;
+    }
+    body.low-power .slide [data-animate],
+    body.overview .slide [data-animate] {
+      opacity: 1;
+      transform: none;
+    }
+    .slide-inner {
+      width: min(1500px, calc(100vw - 56px));
+      aspect-ratio: 16 / 9;
+      max-height: calc(100vh - 56px);
+      background:
+        linear-gradient(180deg, color-mix(in srgb, var(--paper) 95%, white), var(--paper)),
+        var(--paper);
+      box-shadow: var(--shadow);
+      border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr);
+      overflow: hidden;
+      position: relative;
+    }
+    @keyframes edu-rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .rail {
+      border-right: 1px solid var(--line);
+      padding: 28px 18px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 18px;
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+    }
+    .page-no {
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 850;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+    .rail-label {
+      display: none;
+    }
+    .rail-time {
+      font-size: 13px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .content {
+      padding: 52px 58px 44px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 28px;
+      min-width: 0;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .kicker::before {
+      content: "";
+      width: 28px;
+      height: 4px;
+      background: var(--accent);
+      display: inline-block;
+    }
+    .stage-meta { text-align: right; max-width: 46ch; }
+    .main {
+      display: grid;
+      gap: 32px;
+      min-height: 0;
+    }
+    .layout-cover .main { grid-template-columns: 1.1fr .9fr; align-items: center; }
+    .layout-map .main,
+    .layout-hook .main,
+    .layout-inquiry .main,
+    .layout-concept .main,
+    .layout-model .main,
+    .layout-example .main,
+    .layout-error .main,
+    .layout-activity .main,
+    .layout-summary .main,
+    .layout-exit .main { grid-template-columns: .92fr 1.08fr; align-items: center; }
+    .layout-practice .main { grid-template-columns: .72fr 1.28fr; align-items: center; }
+    .layout-ed01 .slide-inner {
+      background:
+        linear-gradient(90deg, var(--paper) 0 63%, color-mix(in srgb, var(--accent) 14%, var(--paper)) 63%),
+        var(--paper);
+    }
+    .layout-ed01 .headline {
+      max-width: 8em;
+    }
+    .layout-ed02 .panel {
+      align-content: stretch;
+    }
+    .layout-ed02 .route-item {
+      min-height: 68px;
+    }
+    .layout-ed03 .hook-card {
+      min-height: 360px;
+      border-top: 10px solid var(--accent);
+    }
+    .layout-ed03 .question {
+      margin-top: 22px;
+      padding-left: 22px;
+      border-left: 9px solid var(--accent);
+    }
+    .layout-ed04 .compare-grid {
+      min-height: 330px;
+      align-content: stretch;
+    }
+    .layout-ed04 .compare-card:nth-child(1) {
+      background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+    }
+    .layout-ed04 .compare-card:nth-child(2) {
+      background: color-mix(in srgb, var(--accent-2) 10%, var(--paper));
+    }
+    .layout-ed05 .concept-canvas {
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--line) 48%, transparent) 1px, transparent 1px),
+        linear-gradient(0deg, color-mix(in srgb, var(--line) 36%, transparent) 1px, transparent 1px),
+        color-mix(in srgb, var(--paper) 88%, var(--bg));
+      background-size: 38px 38px;
+    }
+    .layout-ed06 .board-panel {
+      background: color-mix(in srgb, var(--ink) 88%, var(--paper));
+      color: var(--paper);
+      border-color: color-mix(in srgb, var(--ink) 70%, var(--line));
+    }
+    .layout-ed06 .board-panel li {
+      color: var(--paper);
+    }
+    .layout-ed07 .step-panel {
+      border-left: 12px solid var(--accent);
+    }
+    .layout-ed08 .task-card,
+    .layout-ed12 .ticket-card,
+    .layout-ed12 .task-card {
+      min-height: 190px;
+      align-content: center;
+    }
+    .layout-ed08 .task-card {
+      background: color-mix(in srgb, var(--accent) 8%, var(--paper));
+    }
+    .layout-ed09 .error-stack {
+      background: color-mix(in srgb, var(--warn) 7%, transparent);
+      padding: 18px;
+      border: 1px solid color-mix(in srgb, var(--warn) 34%, var(--line));
+    }
+    .layout-ed10 .activity-card {
+      min-height: 340px;
+      border: 2px dashed color-mix(in srgb, var(--accent) 70%, var(--line));
+      background: color-mix(in srgb, var(--accent-2) 8%, var(--paper));
+      align-content: center;
+    }
+    .layout-ed11 .summary-panel {
+      border-top: 12px solid var(--accent-2);
+    }
+    .layout-ed12 .ticket-grid {
+      padding-bottom: var(--nav-safe-bottom);
+    }
+    h1, h2, p { margin: 0; }
+    .headline {
+      font-size: 50px;
+      line-height: 1.08;
+      font-weight: 850;
+      letter-spacing: 0;
+      max-width: 11em;
+    }
+    .headline.large { font-size: 68px; }
+    .subtitle {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 24px;
+      line-height: 1.38;
+      max-width: 28em;
+    }
+    .outcome {
+      margin-top: 30px;
+      display: inline-flex;
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      color: var(--ink);
+      background: color-mix(in srgb, var(--accent) 7%, transparent);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .visual-card,
+    .panel {
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 90%, var(--bg));
+      min-height: 300px;
+      padding: 28px;
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      border-radius: var(--radius);
+      position: relative;
+    }
+    .visual-slot::after {
+      display: none;
+    }
+    .visual-mark {
+      min-height: 360px;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, transparent 0 48%, var(--line) 48% 52%, transparent 52%),
+        linear-gradient(0deg, transparent 0 48%, var(--line) 48% 52%, transparent 52%);
+    }
+    .visual-mark::before {
+      content: attr(data-mark);
+      font-size: 96px;
+      font-weight: 900;
+      color: color-mix(in srgb, var(--accent) 82%, var(--ink));
+    }
+    .route {
+      display: grid;
+      gap: 14px;
+    }
+    .route-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    .route-index,
+    .num {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: var(--paper);
+      font-weight: 850;
+      font-variant-numeric: tabular-nums;
+    }
+    .route-text,
+    .task-title,
+    .step-title {
+      font-size: 25px;
+      line-height: 1.24;
+      font-weight: 750;
+    }
+    .question {
+      font-size: 36px;
+      line-height: 1.18;
+      font-weight: 850;
+      color: var(--accent);
+    }
+    .brief,
+    .body-copy {
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.48;
+    }
+    .bullet-list,
+    .summary-list {
+      display: grid;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .bullet-list li,
+    .summary-list li {
+      border-left: 7px solid var(--accent);
+      padding: 6px 0 6px 18px;
+      font-size: 26px;
+      line-height: 1.24;
+      font-weight: 720;
+    }
+    .key-idea {
+      font-size: 34px;
+      line-height: 1.2;
+      font-weight: 850;
+      color: var(--accent-2);
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+    .compare-card,
+    .task-card,
+    .ticket-card {
+      border: 1px solid var(--line);
+      padding: 20px;
+      min-height: 122px;
+      background: var(--paper);
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .step-list {
+      display: grid;
+      gap: 14px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+    }
+    .step:last-child { border-bottom: 0; padding-bottom: 0; }
+    .cue {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+    .task-grid,
+    .ticket-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      position: relative;
+    }
+    .error-stack {
+      display: grid;
+      gap: 18px;
+      position: relative;
+    }
+    .error-box,
+    .fix-box,
+    .check-box {
+      border-left: 9px solid var(--warn);
+      padding: 18px 20px;
+      background: var(--paper);
+      font-size: 24px;
+      line-height: 1.36;
+      font-weight: 720;
+    }
+    .fix-box { border-left-color: var(--good); }
+    .check-box { border-left-color: var(--accent); color: var(--muted); font-size: 20px; }
+    .activity-card {
+      display: grid;
+      gap: 12px;
+      border: 1px solid var(--line);
+      padding: 24px;
+      background: var(--paper);
+      position: relative;
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      min-width: 0;
+    }
+    .footer span {
+      white-space: nowrap;
+    }
+    #hud {
+      position: fixed;
+      right: 20px;
+      bottom: 18px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      z-index: 10;
+      padding: 8px 10px;
+      background: color-mix(in srgb, var(--paper) 88%, transparent);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+      backdrop-filter: blur(10px);
+    }
+    #hud button {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      font: inherit;
+      cursor: pointer;
+    }
+    #hud button:disabled { opacity: .35; cursor: default; }
+    #count { color: var(--muted); font-size: 13px; min-width: 52px; text-align: center; }
+    #dots {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 26px;
+      display: flex;
+      gap: 7px;
+      z-index: 10;
+      max-width: 44vw;
+      overflow: hidden;
+    }
+    #dots button {
+      width: 9px;
+      height: 9px;
+      border: 1px solid color-mix(in srgb, var(--accent) 70%, var(--line));
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
+    #dots button.is-active {
+      width: 24px;
+      background: var(--accent);
+    }
+    #speaker {
+      position: fixed;
+      left: 20px;
+      bottom: 18px;
+      max-width: 520px;
+      background: color-mix(in srgb, var(--paper) 94%, transparent);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+      padding: 14px 16px;
+      color: var(--ink);
+      display: none;
+      z-index: 10;
+    }
+    body.show-speaker #speaker { display: block; }
+    #speaker-title { font-weight: 850; margin-bottom: 8px; color: var(--accent); }
+    #speaker-text { color: var(--muted); line-height: 1.45; font-size: 14px; white-space: pre-line; }
+    body.overview {
+      overflow: auto;
+    }
+    body.overview #deck {
+      display: grid;
+      width: auto;
+      height: auto;
+      min-height: 100vh;
+      transform: none !important;
+      transition: none;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      padding: 24px;
+    }
+    body.overview .slide {
+      width: auto;
+      height: auto;
+      flex: none;
+      padding: 0;
+      cursor: pointer;
+      place-items: stretch;
+    }
+    body.overview .slide-inner {
+      width: 100%;
+      max-height: none;
+      aspect-ratio: 16 / 9;
+      grid-template-columns: 42px minmax(0, 1fr);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+    }
+    body.overview .rail {
+      padding: 10px 7px;
+    }
+    body.overview .page-no {
+      font-size: 18px;
+    }
+    body.overview .rail-label,
+    body.overview .rail-time,
+    body.overview .stage-meta,
+    body.overview .footer,
+    body.overview #speaker {
+      display: none !important;
+    }
+    body.overview .content {
+      padding: 14px;
+      gap: 8px;
+    }
+    body.overview .main,
+    body.overview .layout-cover .main,
+    body.overview .layout-map .main,
+    body.overview .layout-hook .main,
+    body.overview .layout-inquiry .main,
+    body.overview .layout-concept .main,
+    body.overview .layout-model .main,
+    body.overview .layout-example .main,
+    body.overview .layout-practice .main,
+    body.overview .layout-error .main,
+    body.overview .layout-activity .main,
+    body.overview .layout-summary .main,
+    body.overview .layout-exit .main {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    body.overview .headline {
+      font-size: 22px;
+    }
+    body.overview .headline.large {
+      font-size: 28px;
+    }
+    body.overview .subtitle,
+    body.overview .brief,
+    body.overview .body-copy,
+    body.overview .question,
+    body.overview .route-text,
+    body.overview .task-title,
+    body.overview .step-title {
+      font-size: 12px;
+    }
+    body.overview .visual-card,
+    body.overview .panel,
+    body.overview .visual-mark,
+    body.overview .activity-card {
+      min-height: 72px;
+      padding: 10px;
+    }
+    body.overview #dots {
+      display: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #deck,
+      .slide.is-active [data-animate] {
+        transition: none;
+        animation: none;
+      }
+      .slide [data-animate] {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    @media (max-width: 900px) {
+      .slide { padding: 12px; }
+      .slide-inner {
+        width: calc(100vw - 24px);
+        height: calc(100vh - 118px);
+        max-height: none;
+        aspect-ratio: auto;
+        grid-template-columns: 58px 1fr;
+      }
+      .rail { padding: 16px 9px; gap: 10px; }
+      .page-no { font-size: 28px; }
+      .rail-label { font-size: 10px; letter-spacing: .1em; }
+      .rail-time { font-size: 10px; }
+      .content { padding: 22px 18px 18px; gap: 12px; overflow: hidden; }
+      .topbar { font-size: 11px; gap: 10px; }
+      .kicker { font-size: 10px; gap: 7px; }
+      .kicker::before { width: 20px; height: 3px; }
+      .stage-meta { max-width: 18ch; }
+      .main,
+      .layout-cover .main,
+      .layout-map .main,
+      .layout-hook .main,
+      .layout-inquiry .main,
+      .layout-concept .main,
+      .layout-model .main,
+      .layout-example .main,
+      .layout-practice .main,
+      .layout-error .main,
+      .layout-activity .main,
+      .layout-summary .main,
+      .layout-exit .main { grid-template-columns: 1fr; gap: 18px; }
+      .headline { font-size: 30px; max-width: 9em; }
+      .headline.large { font-size: 36px; }
+      .subtitle { font-size: 16px; margin-top: 9px; }
+      .outcome { font-size: 14px; margin-top: 14px; padding: 9px 11px; }
+      .question { font-size: 21px; }
+      .route-text, .task-title, .step-title { font-size: 17px; }
+      .brief, .body-copy { font-size: 15px; }
+      .key-idea { font-size: 20px; }
+      .bullet-list li, .summary-list li { font-size: 17px; border-left-width: 5px; padding-left: 12px; }
+      .visual-card, .panel, .visual-mark, .activity-card { min-height: 120px; padding: 16px; }
+      .visual-mark::before { font-size: 54px; }
+      .route-item { grid-template-columns: 38px 1fr; gap: 10px; padding: 9px 0; }
+      .route-index, .num { width: 34px; height: 34px; }
+      .compare-card, .task-card, .ticket-card { min-height: 86px; padding: 14px; }
+      .layout-ed08 .task-card, .layout-ed12 .task-card { min-height: 112px; }
+      .error-box, .fix-box, .check-box { font-size: 16px; padding: 13px 14px; }
+      .cue { font-size: 13px; }
+      .footer { font-size: 10px; padding-top: 8px; gap: 10px; }
+      .task-grid, .ticket-grid, .compare-grid { grid-template-columns: 1fr; }
+      #hud { right: 12px; bottom: 12px; }
+      #dots { bottom: 70px; max-width: 68vw; }
+      #speaker { display: none !important; }
+    }
+  </style>
+</head>
+<body data-theme="humanities-ink">
+  <main id="deck">
+    
+    <section class="slide layout-ed01 layout-cover" data-layout="ED01" data-stage="cover" data-slot="cover_mark" data-slot-type="symbol_mark" data-slot-ratio="1:1" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">01</div>
+          <div class="rail-time">1 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">封面</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h1 class="headline large">师说</h1><p class="subtitle">高一语文 · 新授课</p><div class="outcome">本节课结束时，学生能说清要点、完成练习并辨析常见偏差。</div></div><div class="visual-mark visual-slot" data-slot="cover_mark" data-slot-type="symbol_mark" data-slot-ratio="1:1" data-asset-status="placeholder" data-mark="CN"></div></div>
+          <div class="footer" data-animate="fade"><span>1 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed02 layout-map" data-layout="ED02" data-stage="objective_map" data-slot="journey_map" data-slot-type="route" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">02</div>
+          <div class="rail-time">2 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">学习路线</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">今天走五步</h2><p class="subtitle">先知道要去哪里，课堂才不会迷路。</p></div><div class="panel journey-panel visual-slot" data-slot="journey_map" data-slot-type="route" data-slot-ratio="16:9" data-asset-status="placeholder"><div class="route"><div class="route-item"><div class="route-index">1</div><div class="route-text">诵读感知</div></div><div class="route-item"><div class="route-index">2</div><div class="route-text">整体把握</div></div><div class="route-item"><div class="route-index">3</div><div class="route-text">深入分析</div></div><div class="route-item"><div class="route-index">4</div><div class="route-text">迁移运用</div></div><div class="route-item"><div class="route-index">5</div><div class="route-text">交流与检测</div></div></div></div></div>
+          <div class="footer" data-animate="fade"><span>2 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed03 layout-scene" data-layout="ED03" data-stage="lead_in" data-slot="hook_visual" data-slot-type="situation_visual" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">03</div>
+          <div class="rail-time">4 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">导入</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">带着问题来读</h2><p class="question">韩愈在《师说》开篇只写了十个字，却被后人称为千古名句。这十个字是什么？为什么一句话就能成为文章的灵魂？</p></div><div class="visual-card hook-card visual-slot" data-slot="hook_visual" data-slot-type="situation_visual" data-slot-ratio="16:9" data-asset-status="placeholder"><p class="brief">《师说》论证结构图：中心论点（古之学者必有师）→ 三个分论点（从师必要性、从师标准、从师态度）→ 正反对比 → 举例论证 → 写作目的</p></div></div>
+          <div class="footer" data-animate="fade"><span>3 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed04 layout-scene" data-layout="ED04" data-stage="text_explore" data-slot="inquiry_workspace" data-slot-type="thinking_board" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">04</div>
+          <div class="rail-time">5 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">文本探究</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">文中哪里读得懂，哪里读不懂</h2><p class="subtitle">同桌互说：哪些句子意思清楚？哪些地方需要借助注释仍有困难？</p></div><div class="compare-grid visual-slot" data-slot="inquiry_workspace" data-slot-type="thinking_board" data-slot-ratio="16:9" data-asset-status="placeholder"><div class="compare-card"><div class="task-title">已读懂：字面意思清晰的句子</div></div><div class="compare-card"><div class="task-title">有困难：文言句式或深层含义</div></div></div></div>
+          <div class="footer" data-animate="fade"><span>4 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed05 layout-model" data-layout="ED05" data-stage="analysis" data-slot="concept_diagram" data-slot-type="editable_diagram" data-slot-ratio="16:10" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">05</div>
+          <div class="rail-time">6 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">要点梳理</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">核心要义</h2><p class="key-idea">把握中心论点：古之学者必有师</p><ul class="bullet-list"><li>把握中心论点：古之学者必有师</li><li>理清论证层次：从师之必要 → 从师之标准 → 从师之榜样</li><li>体会对比论证：古之圣人/今之众人，圣人/弟子，君子/巫医乐师百工</li><li>理解名句内涵：&#x27;道之所存，师之所存也&#x27;突破了门第观念</li></ul></div><div class="visual-card concept-canvas visual-slot" data-slot="concept_diagram" data-slot-type="editable_diagram" data-slot-ratio="16:10" data-asset-status="placeholder"><p class="brief">《师说》论证结构图：中心论点（古之学者必有师）→ 三个分论点（从师必要性、从师标准、从师态度）→ 正反对比 → 举例论证 → 写作目的</p></div></div>
+          <div class="footer" data-animate="fade"><span>5 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed07 layout-flow" data-layout="ED07" data-stage="example" data-slot="step_flow" data-slot-type="editable_step_flow" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">06</div>
+          <div class="rail-time">8 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">典型分析</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">逐层分析</h2><p class="subtitle">精读第一段：&#x27;古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。&#x27;——分析其论点、论据和论证逻辑</p></div><div class="panel step-panel visual-slot" data-slot="step_flow" data-slot-type="editable_step_flow" data-slot-ratio="16:9" data-asset-status="placeholder"><div class="step-list"><div class="step"><div class="num">1</div><div><div class="step-title">通读全文，借助注释疏通文意，标注不认识的字词</div><div class="cue">追问：这一步解决了什么问题？依据是什么？</div></div></div><div class="step"><div class="num">2</div><div><div class="step-title">找出每段的中心句，用一句话概括段落大意</div><div class="cue">追问：这一步解决了什么问题？依据是什么？</div></div></div><div class="step"><div class="num">3</div><div><div class="step-title">画出第一段的论证逻辑链：提出论点 → 阐述理由 → 得出结论</div><div class="cue">追问：这一步解决了什么问题？依据是什么？</div></div></div><div class="step"><div class="num">4</div><div><div class="step-title">梳理第二段的对比结构：古之圣人 vs 今之众人，君子 vs 巫医乐师百工</div><div class="cue">追问：这一步解决了什么问题？依据是什么？</div></div></div><div class="step"><div class="num">5</div><div><div class="step-title">分析第三段&#x27;圣人无常师&#x27;的举例论证作用，理解其如何服务于中心论点</div><div class="cue">追问：这一步解决了什么问题？依据是什么？</div></div></div></div></div></div>
+          <div class="footer" data-animate="fade"><span>6 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed08 layout-assessment" data-layout="ED08" data-stage="practice" data-slot="practice_grid" data-slot-type="editable_tasks" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">07</div>
+          <div class="rail-time">6 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">课堂练习</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">先说思路再下笔</h2><p class="subtitle">先说方法，再开始动笔。</p></div><div class="task-grid visual-slot" data-slot="practice_grid" data-slot-type="editable_tasks" data-slot-ratio="16:9" data-asset-status="placeholder"><div class="task-card"><div class="num">1</div><div class="task-title">翻译&#x27;彼童子之师，授之书而习其句读者，非吾所谓传其道解其惑者也&#x27;</div></div><div class="task-card"><div class="num">2</div><div class="task-title">画出第二段正反对比的表格，列出至少三组对照关系</div></div><div class="task-card"><div class="num">3</div><div class="task-title">用现代汉语概括韩愈关于&#x27;从师之道&#x27;的核心主张（100字左右）</div></div></div></div>
+          <div class="footer" data-animate="fade"><span>7 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed09 layout-assessment" data-layout="ED09" data-stage="misconception_check" data-slot="error_pair" data-slot-type="error_correction_pair" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">08</div>
+          <div class="rail-time">4 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">偏差辨析</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">这个理解哪里不够</h2><p class="subtitle">错误不是终点，是看清方法边界的入口。</p></div><div class="error-stack visual-slot" data-slot="error_pair" data-slot-type="error_correction_pair" data-slot-ratio="16:9" data-asset-status="placeholder"><div class="error-box">把《师说》简单理解为一篇&#x27;尊师重教&#x27;的倡议书，忽略了其严密的论证结构和&#x27;不拘于时&#x27;的批判锋芒。</div><div class="fix-box">《师说》是一篇议论文而非抒情文。要关注其&#x27;论点—论据—论证&#x27;的完整链条，特别是正反对比的层次设计。同时注意写作背景：韩愈针对的是&#x27;耻学于师&#x27;的社会风气，有明确的现实指向。</div><div class="check-box">请指出这个理解的不当之处，并用原文说明正确理解。</div></div></div>
+          <div class="footer" data-animate="fade"><span>8 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed11 layout-model" data-layout="ED11" data-stage="summary" data-slot="summary_board" data-slot-type="editable_board" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">09</div>
+          <div class="rail-time">3 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">要点小结</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">把理解带走</h2><p class="subtitle">把今天的方法压缩成可带走的句子。</p></div><div class="panel summary-panel visual-slot" data-slot="summary_board" data-slot-type="editable_board" data-slot-ratio="16:9" data-asset-status="placeholder"><ul class="summary-list"><li>把握中心论点：古之学者必有师</li><li>理清论证层次：从师之必要 → 从师之标准 → 从师之榜样</li><li>体会对比论证：古之圣人/今之众人，圣人/弟子，君子/巫医乐师百工</li><li>遇到同类文章先问：体裁和写作背景是否清楚</li></ul></div></div>
+          <div class="footer" data-animate="fade"><span>9 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="slide layout-ed12 layout-assessment" data-layout="ED12" data-stage="exit_ticket" data-slot="exit_ticket" data-slot-type="editable_exit_tasks" data-slot-ratio="16:9" data-asset-status="placeholder">
+      <div class="slide-inner">
+        <aside class="rail">
+          <div class="page-no">10</div>
+          <div class="rail-time">1 min</div>
+        </aside>
+        <div class="content">
+          <div class="topbar" data-animate="fade">
+            <div class="kicker">出门测</div>
+          </div>
+          <div class="main" data-animate="rise"><div><h2 class="headline">两分钟出门测</h2><p class="subtitle">用短测决定下一步教学。</p></div><div class="ticket-grid visual-slot" data-slot="exit_ticket" data-slot-type="editable_exit_tasks" data-slot-ratio="16:9" data-asset-status="placeholder"><div class="task-card"><div class="num">1</div><div class="task-title">默写&#x27;师者，所以传道受业解惑也&#x27;，并用自己的话解释&#x27;传道&#x27;&#x27;受业&#x27;&#x27;解惑&#x27;三个层次</div></div><div class="task-card"><div class="num">2</div><div class="task-title">指出第二段中至少两组对比关系，并说明其论证效果</div></div></div></div>
+          <div class="footer" data-animate="fade"><span>10 / 10</span></div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <aside id="speaker">
+    <div id="speaker-title">教师备注</div>
+    <div id="speaker-text">-</div>
+  </aside>
+  <nav id="hud" aria-label="课件导航">
+    <button id="prev" type="button" aria-label="上一页" title="上一页">‹</button>
+    <span id="count">1 / 1</span>
+    <button id="next" type="button" aria-label="下一页" title="下一页">›</button>
+    <button id="overview-toggle" type="button" aria-label="索引" title="ESC 索引">⌘</button>
+    <button id="speaker-toggle" type="button" aria-label="教师备注" title="N 教师备注">N</button>
+    <button id="power-toggle" type="button" aria-label="低功耗模式" title="B 低功耗模式">B</button>
+  </nav>
+  <div id="dots" aria-label="页面圆点导航"></div>
+  <script type="application/json" id="deck-json">{"deckMeta": {"title": "师说", "visualSystem": "edu-deck-v1", "layoutLockVersion": "edu-layout-lock-v1", "subject": "语文", "grade": "高一", "lessonType": "new_concept", "durationMin": 40, "slideCount": 10, "stylePreset": "humanities-ink", "subjectMark": "CN"}, "curriculumContext": {"textbookVersion": "待确认", "unit": "待确认", "period": "待确认", "assumptions": ["未提供教材版本，按课题常见教学位置处理。", "未提供教材单元，需教师确认课时边界。", "未提供课时序号，默认按第一课时设计。", "未接入真实课标库，教学目标和知识边界需教师最终确认。"]}, "designPlan": [{"page": 1, "slideId": "s01", "stage": "cover", "layoutId": "ED01", "reason": "建立学习主题和课堂期待。", "visualSlots": ["cover_mark"], "feedbackEvidence": "教师观察学生是否进入学习状态。"}, {"page": 2, "slideId": "s02", "stage": "objective_map", "layoutId": "ED02", "reason": "让学生明确本课路径。", "visualSlots": ["journey_map"], "feedbackEvidence": "学生能复述本课学习路径。"}, {"page": 3, "slideId": "s03", "stage": "lead_in", "layoutId": "ED03", "reason": "激活旧知并制造认知冲突。", "visualSlots": ["hook_visual"], "feedbackEvidence": "抽取 2-3 个学生判断或理由，记录认知冲突。"}, {"page": 4, "slideId": "s04", "stage": "text_explore", "layoutId": "ED04", "reason": "让学生通过比较形成解释需求。", "visualSlots": ["inquiry_workspace"], "feedbackEvidence": "收集 2-3 个同桌讨论结果，比较不同理解。"}, {"page": 5, "slideId": "s05", "stage": "analysis", "layoutId": "ED05", "reason": "把观察提升为可迁移方法。", "visualSlots": ["concept_diagram"], "feedbackEvidence": "学生能说出本页关键论点、层次或手法。"}, {"page": 6, "slideId": "s06", "stage": "example", "layoutId": "ED07", "reason": "示范标准分析过程。", "visualSlots": ["step_flow"], "feedbackEvidence": "学生能说明分析过程中每一步的作用。"}, {"page": 7, "slideId": "s07", "stage": "practice", "layoutId": "ED08", "reason": "检查方法迁移。", "visualSlots": ["practice_grid"], "feedbackEvidence": "教师巡视、同伴互查或抽取板演，判断是否能独立分析。"}, {"page": 8, "slideId": "s08", "stage": "misconception_check", "layoutId": "ED09", "reason": "定位并修正常见误解。", "visualSlots": ["error_pair"], "feedbackEvidence": "学生能修正偏差并解释原因。"}, {"page": 9, "slideId": "s09", "stage": "summary", "layoutId": "ED11", "reason": "形成可复述的板书结构。", "visualSlots": ["summary_board"], "feedbackEvidence": "学生能用一句话复述本课核心要点。"}, {"page": 10, "slideId": "s10", "stage": "exit_ticket", "layoutId": "ED12", "reason": "判断是否达成本课目标。", "visualSlots": ["exit_ticket"], "feedbackEvidence": "根据完成情况判断下一课补救、巩固或进入新内容。"}], "lessonOutline": [{"stage": "cover", "title": "师说", "layoutId": "ED01", "minutes": 1, "goal": "建立学习主题和课堂期待。"}, {"stage": "objective_map", "title": "学习路线", "layoutId": "ED02", "minutes": 2, "goal": "让学生明确本课路径。"}, {"stage": "lead_in", "title": "问题导入", "layoutId": "ED03", "minutes": 4, "goal": "激活旧知并制造认知冲突。"}, {"stage": "text_explore", "title": "比较与讨论", "layoutId": "ED04", "minutes": 5, "goal": "让学生通过比较形成解释需求。"}, {"stage": "analysis", "title": "要点梳理", "layoutId": "ED05", "minutes": 6, "goal": "把观察提升为可迁移方法。"}, {"stage": "example", "title": "典型分析", "layoutId": "ED07", "minutes": 8, "goal": "示范标准分析过程。"}, {"stage": "practice", "title": "课堂练习", "layoutId": "ED08", "minutes": 6, "goal": "检查方法迁移。"}, {"stage": "misconception_check", "title": "偏差辨析", "layoutId": "ED09", "minutes": 4, "goal": "定位并修正常见误解。"}, {"stage": "summary", "title": "要点小结", "layoutId": "ED11", "minutes": 3, "goal": "形成可复述的板书结构。"}, {"stage": "exit_ticket", "title": "出门测", "layoutId": "ED12", "minutes": 1, "goal": "判断是否达成本课目标。"}], "slides": [{"id": "s01", "page": 1, "stage": "cover", "layoutId": "ED01", "layoutName": "Studio Cover", "title": "师说", "teachingIntent": "建立学习主题和课堂期待。", "screen": {"headline": "师说", "subtitle": "高一语文 · 新授课", "outcome": "本节课结束时，学生能说清要点、完成练习并辨析常见偏差。", "eyebrow": "COVER"}, "teacherScript": {"say": "同学们，今天我们一起研究「师说」。这节课不只记结论，更要弄清楚背后的道理。", "ask": [], "expectedResponses": [], "transition": ""}, "visualSlots": [{"id": "cover_mark", "type": "symbol_mark", "ratio": "1:1", "assetStatus": "placeholder", "description": "师说", "prompt": "1:1 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "教师观察学生是否进入学习状态。", "timing": {"minutes": 1}, "notes": ["封面只建立主题，不讲细节。"]}, {"id": "s02", "page": 2, "stage": "objective_map", "layoutId": "ED02", "layoutName": "Lesson Journey", "title": "学习路线", "teachingIntent": "让学生明确本课路径。", "screen": {"headline": "今天走五步", "route": ["诵读感知", "整体把握", "深入分析", "迁移运用", "交流与检测"], "eyebrow": "OBJECTIVE_MAP"}, "teacherScript": {"say": "今天我们按五步推进。每一步都要留下一个证据，证明你真的理解了。", "ask": [], "expectedResponses": [], "transition": "先从你们已经会的内容开始。"}, "visualSlots": [{"id": "journey_map", "type": "route", "ratio": "16:9", "assetStatus": "placeholder", "description": "今天走五步", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "学生能复述本课学习路径。", "timing": {"minutes": 2}, "notes": ["路线图用学生能懂的语言。"]}, {"id": "s03", "page": 3, "stage": "lead_in", "layoutId": "ED03", "layoutName": "Hook Scene", "title": "问题导入", "teachingIntent": "激活旧知并制造认知冲突。", "screen": {"headline": "带着问题来读", "question": "韩愈在《师说》开篇只写了十个字，却被后人称为千古名句。这十个字是什么？为什么一句话就能成为文章的灵魂？", "visualBrief": "《师说》论证结构图：中心论点（古之学者必有师）→ 三个分论点（从师必要性、从师标准、从师态度）→ 正反对比 → 举例论证 → 写作目的", "eyebrow": "LEAD_IN"}, "teacherScript": {"say": "还记得我们学过的初中文言文基础吗？请先不要急着看注释，先自己读一遍，说说你从题目中能联想到什么。", "ask": ["韩愈在《师说》开篇只写了十个字，却被后人称为千古名句。这十个字是什么？为什么一句话就能成为文章的灵魂？", "你读这篇文章时最大的困难是什么？"], "expectedResponses": ["学生会有不同的阅读体验或提出疑问。"], "transition": "这个分歧就是今天要解决的关键。"}, "visualSlots": [{"id": "hook_visual", "type": "situation_visual", "ratio": "16:9", "assetStatus": "placeholder", "description": "《师说》论证结构图：中心论点（古之学者必有师）→ 三个分论点（从师必要性、从师标准、从师态度）→ 正反对比 → 举例论证 → 写作目的", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "抽取 2-3 个学生判断或理由，记录认知冲突。", "timing": {"minutes": 4}, "notes": ["保留不同理解，为后续分析服务。"]}, {"id": "s04", "page": 4, "stage": "text_explore", "layoutId": "ED04", "layoutName": "Inquiry Split", "title": "比较与讨论", "teachingIntent": "让学生通过比较形成解释需求。", "screen": {"headline": "文中哪里读得懂，哪里读不懂", "prompt": "同桌互说：哪些句子意思清楚？哪些地方需要借助注释仍有困难？", "comparePoints": ["已读懂：字面意思清晰的句子", "有困难：文言句式或深层含义"], "eyebrow": "TEXT_EXPLORE"}, "teacherScript": {"say": "请同桌用 1 分钟互相交流：哪些句子一读就懂？哪些地方需要反复推敲？", "ask": ["读不懂的地方在哪里？", "需要补充什么知识才能理解？"], "expectedResponses": ["学生能说出理解上的困难点。"], "transition": "当困难清晰起来，分析方法就有了方向。"}, "visualSlots": [{"id": "inquiry_workspace", "type": "thinking_board", "ratio": "16:9", "assetStatus": "placeholder", "description": "文中哪里读得懂，哪里读不懂", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "收集 2-3 个同桌讨论结果，比较不同理解。", "timing": {"minutes": 5}, "notes": ["教师板书学生表达中的关键词。"]}, {"id": "s05", "page": 5, "stage": "analysis", "layoutId": "ED05", "layoutName": "Concept Canvas", "title": "要点梳理", "teachingIntent": "把观察提升为可迁移方法。", "screen": {"headline": "核心要义", "keyIdea": "把握中心论点：古之学者必有师", "bullets": ["把握中心论点：古之学者必有师", "理清论证层次：从师之必要 → 从师之标准 → 从师之榜样", "体会对比论证：古之圣人/今之众人，圣人/弟子，君子/巫医乐师百工", "理解名句内涵：'道之所存，师之所存也'突破了门第观念"], "visualBrief": "《师说》论证结构图：中心论点（古之学者必有师）→ 三个分论点（从师必要性、从师标准、从师态度）→ 正反对比 → 举例论证 → 写作目的", "eyebrow": "ANALYSIS"}, "teacherScript": {"say": "我们把刚才的阅读发现整理成要点。注意，每一点都要回到原文找依据，而不是凭感觉概括。", "ask": ["这些要点中，哪一点最关键？"], "expectedResponses": ["学生能说出核心论点或主旨。"], "transition": "接下来用第一段来示范完整的分析方法。"}, "visualSlots": [{"id": "concept_diagram", "type": "editable_diagram", "ratio": "16:10", "assetStatus": "placeholder", "description": "《师说》论证结构图：中心论点（古之学者必有师）→ 三个分论点（从师必要性、从师标准、从师态度）→ 正反对比 → 举例论证 → 写作目的", "prompt": "16:10 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "学生能说出本页关键论点、层次或手法。", "timing": {"minutes": 6}, "notes": ["把核心分析板书保留到课末。"]}, {"id": "s06", "page": 6, "stage": "example", "layoutId": "ED07", "layoutName": "Example Flow", "title": "典型分析", "teachingIntent": "示范标准分析过程。", "screen": {"headline": "逐层分析", "example": "精读第一段：'古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。'——分析其论点、论据和论证逻辑", "steps": [{"label": "1", "content": "通读全文，借助注释疏通文意，标注不认识的字词", "teacherCue": "追问：这一步解决了什么问题？依据是什么？"}, {"label": "2", "content": "找出每段的中心句，用一句话概括段落大意", "teacherCue": "追问：这一步解决了什么问题？依据是什么？"}, {"label": "3", "content": "画出第一段的论证逻辑链：提出论点 → 阐述理由 → 得出结论", "teacherCue": "追问：这一步解决了什么问题？依据是什么？"}, {"label": "4", "content": "梳理第二段的对比结构：古之圣人 vs 今之众人，君子 vs 巫医乐师百工", "teacherCue": "追问：这一步解决了什么问题？依据是什么？"}, {"label": "5", "content": "分析第三段'圣人无常师'的举例论证作用，理解其如何服务于中心论点", "teacherCue": "追问：这一步解决了什么问题？依据是什么？"}], "eyebrow": "EXAMPLE"}, "teacherScript": {"say": "请一边看分析，一边想每一步揭示了什么。只会背注释不算会，能说明为什么这样理解才算会。", "ask": ["这一步的分析依据是什么？", "最后为什么要回到全文验证？"], "expectedResponses": ["学生能说明分析思路。"], "transition": "现在换一段文字，由你们来试。"}, "visualSlots": [{"id": "step_flow", "type": "editable_step_flow", "ratio": "16:9", "assetStatus": "placeholder", "description": "精读第一段：'古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。'——分析其论点、论据和论证逻辑", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "学生能说明分析过程中每一步的作用。", "timing": {"minutes": 8}, "notes": ["PPTX 可按分析步骤做分步动画。"]}, {"id": "s07", "page": 7, "stage": "practice", "layoutId": "ED08", "layoutName": "Practice Lab", "title": "课堂练习", "teachingIntent": "检查方法迁移。", "screen": {"headline": "先说思路再下笔", "tasks": [{"label": "1", "content": "翻译'彼童子之师，授之书而习其句读者，非吾所谓传其道解其惑者也'", "target": "检验分析能力能否迁移", "feedback": "教师巡视并抽取 1-2 个代表性做法讲评。"}, {"label": "2", "content": "画出第二段正反对比的表格，列出至少三组对照关系", "target": "检验分析能力能否迁移", "feedback": "教师巡视并抽取 1-2 个代表性做法讲评。"}, {"label": "3", "content": "用现代汉语概括韩愈关于'从师之道'的核心主张（100字左右）", "target": "检验分析能力能否迁移", "feedback": "教师巡视并抽取 1-2 个代表性做法讲评。"}], "eyebrow": "PRACTICE"}, "teacherScript": {"say": "每道题先口头说你的理解思路，再开始写。做完后和同桌互查：思路是否清晰？依据是否充分？", "ask": ["你的分析思路是什么？", "你如何判断自己的翻译准确？"], "expectedResponses": ["学生能独立完成并解释分析思路。"], "transition": "练习中最常见的偏差，我们单独拿出来辨析。"}, "visualSlots": [{"id": "practice_grid", "type": "editable_tasks", "ratio": "16:9", "assetStatus": "placeholder", "description": "先说思路再下笔", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "教师巡视、同伴互查或抽取板演，判断是否能独立分析。", "timing": {"minutes": 6}, "notes": ["屏幕只放题目，反馈方式进备注。"]}, {"id": "s08", "page": 8, "stage": "misconception_check", "layoutId": "ED09", "layoutName": "Error Clinic", "title": "偏差辨析", "teachingIntent": "定位并修正常见误解。", "screen": {"headline": "这个理解哪里不够", "misconception": "把《师说》简单理解为一篇'尊师重教'的倡议书，忽略了其严密的论证结构和'不拘于时'的批判锋芒。", "correction": "《师说》是一篇议论文而非抒情文。要关注其'论点—论据—论证'的完整链条，特别是正反对比的层次设计。同时注意写作背景：韩愈针对的是'耻学于师'的社会风气，有明确的现实指向。", "checkQuestion": "请指出这个理解的不当之处，并用原文说明正确理解。", "eyebrow": "MISCONCEPTION_CHECK"}, "teacherScript": {"say": "这个理解看起来似乎有道理，但它忽略了文章的深层含义。请先指出偏差所在，再用正确方法分析。", "ask": ["偏差是什么？", "应该如何理解？"], "expectedResponses": ["学生能说出偏差并修正。"], "transition": "能辨析偏差，说明理解正在深入。"}, "visualSlots": [{"id": "error_pair", "type": "error_correction_pair", "ratio": "16:9", "assetStatus": "placeholder", "description": "这个理解哪里不够", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "学生能修正偏差并解释原因。", "timing": {"minutes": 4}, "notes": ["把偏差当作理解层次的标志，不否定学生。"]}, {"id": "s09", "page": 9, "stage": "summary", "layoutId": "ED11", "layoutName": "Summary Board", "title": "要点小结", "teachingIntent": "形成可复述的板书结构。", "screen": {"headline": "把理解带走", "summary": ["把握中心论点：古之学者必有师", "理清论证层次：从师之必要 → 从师之标准 → 从师之榜样", "体会对比论证：古之圣人/今之众人，圣人/弟子，君子/巫医乐师百工", "遇到同类文章先问：体裁和写作背景是否清楚"], "eyebrow": "SUMMARY"}, "teacherScript": {"say": "今天的内容请压缩成三句话。以后遇到同类文章，先看什么，再分析什么，最后怎样验证理解。", "ask": ["哪一个分析步骤最容易忽略？"], "expectedResponses": ["学生能指出关键步骤。"], "transition": "最后用一道短测确认掌握情况。"}, "visualSlots": [{"id": "summary_board", "type": "editable_board", "ratio": "16:9", "assetStatus": "placeholder", "description": "把理解带走", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "学生能用一句话复述本课核心要点。", "timing": {"minutes": 3}, "notes": ["小结用于板书回收。"]}, {"id": "s10", "page": 10, "stage": "exit_ticket", "layoutId": "ED12", "layoutName": "Exit Ticket", "title": "出门测", "teachingIntent": "判断是否达成本课目标。", "screen": {"headline": "两分钟出门测", "tickets": [{"label": "1", "content": "默写'师者，所以传道受业解惑也'，并用自己的话解释'传道''受业''解惑'三个层次", "target": "判断本课目标是否达成", "feedback": "教师课后快速分类：已掌握 / 需巩固 / 需补救。"}, {"label": "2", "content": "指出第二段中至少两组对比关系，并说明其论证效果", "target": "判断本课目标是否达成", "feedback": "教师课后快速分类：已掌握 / 需巩固 / 需补救。"}], "eyebrow": "EXIT_TICKET"}, "teacherScript": {"say": "请独立完成出门测。第一题看会不会答，第二题看能不能说清楚依据。", "ask": [], "expectedResponses": ["学生能独立完成并说明关键依据。"], "transition": ""}, "visualSlots": [{"id": "exit_ticket", "type": "editable_exit_tasks", "ratio": "16:9", "assetStatus": "placeholder", "description": "两分钟出门测", "prompt": "16:9 classroom teaching visual for 师说; clean editable composition; no title, no footer, no logo, keep labels as editable text outside image"}], "feedbackEvidence": "根据完成情况判断下一课补救、巩固或进入新内容。", "timing": {"minutes": 1}, "notes": ["根据出门测决定是否补充练习。"]}], "teacherScript": [{"slideId": "s01", "title": "师说", "say": "同学们，今天我们一起研究「师说」。这节课不只记结论，更要弄清楚背后的道理。", "ask": [], "expectedResponses": [], "transition": "", "feedbackEvidence": "教师观察学生是否进入学习状态。"}, {"slideId": "s02", "title": "学习路线", "say": "今天我们按五步推进。每一步都要留下一个证据，证明你真的理解了。", "ask": [], "expectedResponses": [], "transition": "先从你们已经会的内容开始。", "feedbackEvidence": "学生能复述本课学习路径。"}, {"slideId": "s03", "title": "问题导入", "say": "还记得我们学过的初中文言文基础吗？请先不要急着看注释，先自己读一遍，说说你从题目中能联想到什么。", "ask": ["韩愈在《师说》开篇只写了十个字，却被后人称为千古名句。这十个字是什么？为什么一句话就能成为文章的灵魂？", "你读这篇文章时最大的困难是什么？"], "expectedResponses": ["学生会有不同的阅读体验或提出疑问。"], "transition": "这个分歧就是今天要解决的关键。", "feedbackEvidence": "抽取 2-3 个学生判断或理由，记录认知冲突。"}, {"slideId": "s04", "title": "比较与讨论", "say": "请同桌用 1 分钟互相交流：哪些句子一读就懂？哪些地方需要反复推敲？", "ask": ["读不懂的地方在哪里？", "需要补充什么知识才能理解？"], "expectedResponses": ["学生能说出理解上的困难点。"], "transition": "当困难清晰起来，分析方法就有了方向。", "feedbackEvidence": "收集 2-3 个同桌讨论结果，比较不同理解。"}, {"slideId": "s05", "title": "要点梳理", "say": "我们把刚才的阅读发现整理成要点。注意，每一点都要回到原文找依据，而不是凭感觉概括。", "ask": ["这些要点中，哪一点最关键？"], "expectedResponses": ["学生能说出核心论点或主旨。"], "transition": "接下来用第一段来示范完整的分析方法。", "feedbackEvidence": "学生能说出本页关键论点、层次或手法。"}, {"slideId": "s06", "title": "典型分析", "say": "请一边看分析，一边想每一步揭示了什么。只会背注释不算会，能说明为什么这样理解才算会。", "ask": ["这一步的分析依据是什么？", "最后为什么要回到全文验证？"], "expectedResponses": ["学生能说明分析思路。"], "transition": "现在换一段文字，由你们来试。", "feedbackEvidence": "学生能说明分析过程中每一步的作用。"}, {"slideId": "s07", "title": "课堂练习", "say": "每道题先口头说你的理解思路，再开始写。做完后和同桌互查：思路是否清晰？依据是否充分？", "ask": ["你的分析思路是什么？", "你如何判断自己的翻译准确？"], "expectedResponses": ["学生能独立完成并解释分析思路。"], "transition": "练习中最常见的偏差，我们单独拿出来辨析。", "feedbackEvidence": "教师巡视、同伴互查或抽取板演，判断是否能独立分析。"}, {"slideId": "s08", "title": "偏差辨析", "say": "这个理解看起来似乎有道理，但它忽略了文章的深层含义。请先指出偏差所在，再用正确方法分析。", "ask": ["偏差是什么？", "应该如何理解？"], "expectedResponses": ["学生能说出偏差并修正。"], "transition": "能辨析偏差，说明理解正在深入。", "feedbackEvidence": "学生能修正偏差并解释原因。"}, {"slideId": "s09", "title": "要点小结", "say": "今天的内容请压缩成三句话。以后遇到同类文章，先看什么，再分析什么，最后怎样验证理解。", "ask": ["哪一个分析步骤最容易忽略？"], "expectedResponses": ["学生能指出关键步骤。"], "transition": "最后用一道短测确认掌握情况。", "feedbackEvidence": "学生能用一句话复述本课核心要点。"}, {"slideId": "s10", "title": "出门测", "say": "请独立完成出门测。第一题看会不会答，第二题看能不能说清楚依据。", "ask": [], "expectedResponses": ["学生能独立完成并说明关键依据。"], "transition": "", "feedbackEvidence": "根据完成情况判断下一课补救、巩固或进入新内容。"}], "exportPlan": {"htmlPreview": true, "pptxReady": true, "pageSize": "16:9", "editableObjects": ["text", "shape", "visual-slot", "speaker-notes"], "visualSlotRules": "references/lesson-layout-lock.md"}, "qualityReport": {"status": "pass", "warnings": [], "assumptions": ["未提供教材版本，按课题常见教学位置处理。", "未提供教材单元，需教师确认课时边界。", "未提供课时序号，默认按第一课时设计。", "未接入真实课标库，教学目标和知识边界需教师最终确认。"], "checkedRules": ["edu_layout_lock", "visual_slots", "feedback_evidence", "timing", "teacher_script", "projection_density", "html_runtime"]}}</script>
+  <script>
+    const deck = document.getElementById('deck');
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const count = document.getElementById('count');
+    const speakerToggle = document.getElementById('speaker-toggle');
+    const overviewToggle = document.getElementById('overview-toggle');
+    const powerToggle = document.getElementById('power-toggle');
+    const dots = document.getElementById('dots');
+    const speakerText = document.getElementById('speaker-text');
+    const deckData = JSON.parse(document.getElementById('deck-json').textContent || '{}');
+    const slideData = Array.isArray(deckData.slides) ? deckData.slides : [];
+    let index = 0;
+    let lastWheel = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const savedLowPower = localStorage.getItem('edu-deck-low-power') === '1';
+    if (savedLowPower) document.body.classList.add('low-power');
+    function noteFor(i) {
+      const item = slideData[i] || {};
+      const script = item.teacherScript || {};
+      const parts = [
+        item.teachingIntent ? `教学意图：${item.teachingIntent}` : '',
+        script.say ? `教师说：${script.say}` : '',
+        script.ask && script.ask.length ? `追问：${script.ask.join(' / ')}` : '',
+        item.feedbackEvidence ? `反馈证据：${item.feedbackEvidence}` : '',
+        item.notes && item.notes.length ? `备注：${item.notes.join('；')}` : ''
+      ].filter(Boolean);
+      return parts.join('\n');
+    }
+    function renderDots() {
+      dots.innerHTML = '';
+      slides.forEach((slide, i) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', `第 ${i + 1} 页`);
+        button.addEventListener('click', () => go(i));
+        dots.appendChild(button);
+        slide.addEventListener('click', () => {
+          if (!document.body.classList.contains('overview')) return;
+          document.body.classList.remove('overview');
+          go(i);
+        });
+      });
+    }
+    function setOverview(force) {
+      const nextState = typeof force === 'boolean' ? force : !document.body.classList.contains('overview');
+      document.body.classList.toggle('overview', nextState);
+      if (!nextState) go(index);
+    }
+    function setLowPower(force) {
+      const nextState = typeof force === 'boolean' ? force : !document.body.classList.contains('low-power');
+      document.body.classList.toggle('low-power', nextState);
+      localStorage.setItem('edu-deck-low-power', nextState ? '1' : '0');
+    }
+    function go(target) {
+      index = Math.max(0, Math.min(slides.length - 1, target));
+      deck.style.setProperty('--index', index);
+      count.textContent = `${index + 1} / ${slides.length}`;
+      prev.disabled = index === 0;
+      next.disabled = index === slides.length - 1;
+      speakerText.textContent = noteFor(index) || '-';
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+      Array.from(dots.children).forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+    }
+    prev.addEventListener('click', () => go(index - 1));
+    next.addEventListener('click', () => go(index + 1));
+    speakerToggle.addEventListener('click', () => document.body.classList.toggle('show-speaker'));
+    overviewToggle.addEventListener('click', () => setOverview());
+    powerToggle.addEventListener('click', () => setLowPower());
+    window.addEventListener('keydown', (event) => {
+      if (event.target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(event.target.tagName)) return;
+      if (event.key === 'Escape') {
+        setOverview();
+        return;
+      }
+      if (document.body.classList.contains('overview') && event.key !== 'Escape') return;
+      if (event.key === 'ArrowRight' || event.key === ' ') go(index + 1);
+      if (event.key === 'ArrowLeft') go(index - 1);
+      if (event.key.toLowerCase() === 'n') document.body.classList.toggle('show-speaker');
+      if (event.key.toLowerCase() === 'b') setLowPower();
+    });
+    window.addEventListener('wheel', (event) => {
+      if (Math.abs(event.deltaX) + Math.abs(event.deltaY) < 44) return;
+      const now = Date.now();
+      if (now - lastWheel < 420) return;
+      lastWheel = now;
+      go(index + (event.deltaY + event.deltaX > 0 ? 1 : -1));
+    }, { passive: true });
+    window.addEventListener('touchstart', (event) => {
+      const touch = event.changedTouches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+    window.addEventListener('touchend', (event) => {
+      const touch = event.changedTouches[0];
+      const dx = touch.clientX - touchStartX;
+      const dy = touch.clientY - touchStartY;
+      if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+      go(index + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+    renderDots();
+    go(0);
+  </script>
+</body>
+</html>

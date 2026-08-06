@@ -1,0 +1,7 @@
+{
+	"id": "office-assistant",
+	"name": "办公助手",
+	"description": "处理PPT、Word、Excel和PDF文件,一站式提升日常办公效率。",
+	"category": "办公",
+	"icon": "briefcase"
+}

@@ -1,0 +1,37 @@
+{
+  "requestId": "req-paper-writing-chapter-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "chapter_drafting",
+  "sourceRequest": "请根据已有材料生成引言参考草稿。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "校本教研",
+    "existingAchievements": [],
+    "availableCycle": "一学期",
+    "constraints": ["不能新增未提供数据"]
+  },
+  "input": {
+    "title": "小学数学课堂即时反馈支持错因诊断的实践研究",
+    "sectionId": "introduction",
+    "sourceMaterials": [
+      {
+        "materialId": "mat-001",
+        "content": "课堂中教师通过即时反馈收集通分错误、约分遗漏等典型错因，并据此调整讲评顺序。"
+      }
+    ],
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

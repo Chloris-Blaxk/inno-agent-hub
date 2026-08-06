@@ -1,0 +1,15 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "第3课时",
+  "topic": "分数加减法应用·应用题专练",
+  "knowledgePointIds": ["math-g5-fraction-application"],
+  "taskType": "layered_homework",
+  "questionCount": 6,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["应用题", "比较题"],
+  "questionTypeMix": {"应用题": 4, "比较题": 2},
+  "requirements": "应用题专项练习。全部围绕生活场景（分物品、量长度、算时间等）。A层一步应用，B层两步应用，C层说理+比较。每层2题。"
+}

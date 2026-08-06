@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "failures": [
+    "Missing required section: ## 三、定性评价结果",
+    "Report should use ## 三、定性评价结果 instead of ## 三、评分结果.",
+    "Report should not include a quantitative total score.",
+    "Report should not include quantitative score columns."
+  ],
+  "warnings": []
+}

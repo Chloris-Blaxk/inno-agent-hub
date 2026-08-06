@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "项目申报、结题报告和成果汇报三类文档模板样例。"
+  },
+  "templates": [
+    {
+      "templateId": "project-application-district-demo",
+      "documentType": "project_application",
+      "name": "区级课题申报书模板",
+      "sections": [
+        {"sectionId": "sec-background", "title": "研究背景", "required": true, "scoreWeight": 15, "requiredFactFields": ["project.level", "policy.alignment"]},
+        {"sectionId": "sec-goals", "title": "研究目标与内容", "required": true, "scoreWeight": 25, "requiredFactFields": ["goals.mainGoal"]},
+        {"sectionId": "sec-methods", "title": "研究方法与步骤", "required": true, "scoreWeight": 20, "requiredFactFields": ["timeline.cycle", "basis.practiceRecords"]},
+        {"sectionId": "sec-outcomes", "title": "预期成果", "required": true, "scoreWeight": 15, "requiredFactFields": ["outcomes.expected"]},
+        {"sectionId": "sec-basis", "title": "研究基础", "required": true, "scoreWeight": 15, "requiredFactFields": ["team.memberCount", "basis.practiceRecords"]},
+        {"sectionId": "sec-budget", "title": "经费预算", "required": false, "scoreWeight": 10, "requiredFactFields": ["budget.total", "budget.items"]}
+      ]
+    },
+    {
+      "templateId": "closing-report-demo",
+      "documentType": "closing_report",
+      "name": "结题报告模板",
+      "sections": [
+        {"sectionId": "sec-summary", "title": "项目概况", "required": true, "requiredFactFields": ["project.title", "timeline.cycle"]},
+        {"sectionId": "sec-process", "title": "研究过程", "required": true, "requiredFactFields": ["basis.practiceRecords"]},
+        {"sectionId": "sec-results", "title": "研究成果", "required": true, "requiredFactFields": ["outcomes.actual"]},
+        {"sectionId": "sec-reflection", "title": "问题与反思", "required": true, "requiredFactFields": ["risks"]}
+      ]
+    },
+    {
+      "templateId": "achievement-report-demo",
+      "documentType": "achievement_report",
+      "name": "成果汇报模板",
+      "sections": [
+        {"sectionId": "sec-highlight", "title": "成果亮点", "required": true, "requiredFactFields": ["outcomes.actual"]},
+        {"sectionId": "sec-timeline", "title": "过程时间线", "required": true, "requiredFactFields": ["timeline.cycle"]},
+        {"sectionId": "sec-data", "title": "量化成果", "required": true, "requiredFactFields": ["data.sampleScope", "outcomes.actual"]},
+        {"sectionId": "sec-next", "title": "推广与下一步", "required": false, "requiredFactFields": ["outcomes.expected"]}
+      ]
+    }
+  ]
+}

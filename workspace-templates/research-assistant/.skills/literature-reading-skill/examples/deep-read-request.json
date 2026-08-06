@@ -1,0 +1,36 @@
+{
+  "requestId": "req-literature-deep-read-001",
+  "entryToken": "@文献阅读助手",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "deep_read",
+  "sourceRequest": "请对这篇用户上传论文做精读，回答研究方法和主要发现。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "",
+    "existingAchievements": [],
+    "availableCycle": "",
+    "constraints": []
+  },
+  "input": {
+    "paperId": "paper-user-deep-read-001",
+    "paperTitle": "用户上传：小学数学即时反馈研究片段",
+    "paperMdPath": "examples/sample-paper-for-deep-read.md",
+    "researchTopic": "小学数学课堂即时反馈",
+    "keywords": ["即时反馈", "小学数学", "课堂观察"],
+    "questions": [
+      "这篇论文采用了什么研究方法？",
+      "这篇论文的主要发现和局限是什么？"
+    ]
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": ["examples/sample-paper-for-deep-read.md"]
+}

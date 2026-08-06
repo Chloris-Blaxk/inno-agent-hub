@@ -1,0 +1,38 @@
+{
+  "gap_id": "",
+  "rank_score": 0,
+  "gap_type": "",
+  "gap_cause": {
+    "trigger_basis": "",
+    "both_sides": [],
+    "relation_to_request": ""
+  },
+  "topo_evidence": {
+    "indicator_types": [],
+    "threshold_strategy": "",
+    "conclusion": ""
+  },
+  "trend_evidence": {
+    "method": "",
+    "time_window": "",
+    "conclusion": "",
+    "confidence": 0,
+    "fallback": false
+  },
+  "source_coverage": {
+    "source_count": 0,
+    "source_type_distribution": {},
+    "temporal_window": "",
+    "ref_date": ""
+  },
+  "path": "",
+  "score_breakdown": {
+    "MatchScore": 0,
+    "GapScore": 0,
+    "TrendScore": 0,
+    "FeasibilityScore": 0,
+    "composite": 0,
+    "synthesis": ""
+  },
+  "uncertainty_note": []
+}

@@ -1,0 +1,37 @@
+{
+  "requestId": "req-paper-writing-source-trace-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "sourceRequest": "帮我调研一下“课堂即时反馈有助于教师及时发现学生的典型错因”这句话出自哪篇文章。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "",
+    "existingAchievements": [],
+    "availableCycle": "",
+    "constraints": []
+  },
+  "input": {
+    "queryText": "课堂即时反馈有助于教师及时发现学生的典型错因。",
+    "draftText": "",
+    "claims": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈有助于教师及时发现学生的典型错因。"
+      }
+    ],
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

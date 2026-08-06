@@ -1,0 +1,220 @@
+{
+  "requestId": "req-paper-writing-structure-polish-001",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "conservative_polish",
+  "summary": "已完成论文写作校验；查源、结构诊断和保守润色均遵守未获证据不生成支撑性引用的原则。",
+  "result": {
+    "literatureRecords": [],
+    "sourceTraceResults": [],
+    "claimChecks": [],
+    "structureDiagnosis": {
+      "documentType": "research_paper",
+      "sectionCoverage": [
+        {
+          "sectionId": "introduction",
+          "label": "Introduction",
+          "status": "present",
+          "missingElements": [],
+          "weakElements": []
+        },
+        {
+          "sectionId": "methods",
+          "label": "Methods",
+          "status": "missing",
+          "missingElements": [
+            "对象/样本",
+            "数据来源",
+            "研究过程",
+            "分析方法"
+          ],
+          "weakElements": []
+        },
+        {
+          "sectionId": "results",
+          "label": "Results",
+          "status": "weak",
+          "missingElements": [],
+          "weakElements": [
+            "发现边界"
+          ]
+        },
+        {
+          "sectionId": "discussion",
+          "label": "Discussion",
+          "status": "missing",
+          "missingElements": [
+            "解释发现",
+            "实践意义",
+            "局限和后续研究"
+          ],
+          "weakElements": []
+        }
+      ],
+      "abstractChecklist": [
+        {
+          "element": "purpose",
+          "label": "目的",
+          "status": "present",
+          "evidenceSnippet": "本文旨在研究即时反馈在小学数学讲评课中的应用。"
+        },
+        {
+          "element": "methods",
+          "label": "方法",
+          "status": "missing",
+          "evidenceSnippet": ""
+        },
+        {
+          "element": "results",
+          "label": "结果",
+          "status": "missing",
+          "evidenceSnippet": ""
+        },
+        {
+          "element": "conclusion",
+          "label": "结论",
+          "status": "missing",
+          "evidenceSnippet": ""
+        }
+      ],
+      "revisionPriorities": [
+        "补充 Methods：需要说明对象/样本、数据来源、研究过程、分析方法。",
+        "加强 Results：补齐发现边界。",
+        "补充 Discussion：需要说明解释发现、实践意义、局限和后续研究。",
+        "摘要补充方法要素。",
+        "摘要补充结果要素。",
+        "摘要补充结论要素。"
+      ]
+    },
+    "revisionSuggestions": [
+      {
+        "suggestionId": "rev-001",
+        "originalText": "即时反馈能显著提升学生数学成绩。",
+        "revisedText": "即时反馈可能有助于改善学生数学成绩。",
+        "editType": "claim_softening",
+        "changedFacts": false,
+        "addedFacts": [],
+        "needsEvidence": true,
+        "riskNotes": [
+          "原句包含强因果或强效果表述，保守改写后仍需文献、数据或课堂材料支撑。"
+        ]
+      }
+    ],
+    "citationChecks": [],
+    "insertionSuggestions": [],
+    "citationWarnings": []
+  },
+  "handoff": {
+    "claimChecks": [],
+    "usableEvidenceCards": [],
+    "paperRevisionSummary": {
+      "addedFacts": 0,
+      "revisionSuggestionCount": 1,
+      "needsEvidenceRevisionCount": 1,
+      "citationCheckCount": 0,
+      "insertionSuggestionCount": 0,
+      "citationPolicy": "no_supporting_citation_inserted"
+    }
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "id": "structure_diagnosis",
+        "status": "pass"
+      },
+      {
+        "id": "conservative_revision_no_new_facts",
+        "status": "pass"
+      }
+    ],
+    "warnings": [
+      "草稿存在结构或摘要要素缺口。",
+      "部分润色建议仍需补充文献、数据或课堂材料支撑。"
+    ],
+    "metrics": {
+      "claimCount": 0,
+      "supportedClaimCount": 0,
+      "needsEvidenceCount": 0,
+      "sourceTraceHitCount": 0,
+      "citationFormatWarnings": 0,
+      "structureIssueCount": 6,
+      "missingAbstractElementCount": 3,
+      "revisionSuggestionCount": 1,
+      "addedFactCount": 0,
+      "needsEvidenceRevisionCount": 1,
+      "citationCheckCount": 0,
+      "citationReadyCount": 0,
+      "insertionSuggestionCount": 0,
+      "pendingTeacherConfirmationCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 0,
+    "verifiedSourceCount": 0,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "补充缺失的 IMRaD 章节、摘要要素或研究边界，再进行下一轮润色。",
+    "为弱化后的关键论断补充真实文献、课堂数据或用户材料。"
+  ],
+  "status": "warn",
+  "warnings": [
+    "草稿存在结构或摘要要素缺口。",
+    "部分润色建议仍需补充文献、数据或课堂材料支撑。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-paper-writing-skill",
+    "skillId": "paper-writing-skill",
+    "taskIntent": "conservative_polish",
+    "dataSources": [
+      {
+        "sourceId": "shared-literature-pool",
+        "sourceName": "科研线共享本地文献池",
+        "sourceType": "local_mock",
+        "dataType": "literature_record",
+        "recordCount": 0,
+        "authorizationStatus": "mock_sample",
+        "version": "research-literature-adapter-v1",
+        "limitations": [
+          "由本地 mock 文献索引和样例白名单合并而来，不能替代真实授权检索。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-evidence-card-index",
+        "sourceName": "论文写作证据卡样例库",
+        "sourceType": "local_sample",
+        "dataType": "evidence_card",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "证据卡为样例数据；进入引用建议前仍需支撑性、定位和教师确认校验。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前查源依赖本地 mock/样例文献池；未验证支撑性的候选不得进入引用或正文事实。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "conservative_polish",
+    "sampleFile": "agent_cases/paper-writing-skill/generated-outputs/sample-structure-polish.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/sample-structure-polish.json",
+      "description": "样例结构化输出"
+    },
+    {
+      "type": "markdown",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/sample-structure-polish.md",
+      "description": "样例教师可读输出"
+    }
+  ]
+}

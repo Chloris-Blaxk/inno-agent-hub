@@ -1,0 +1,151 @@
+{
+  "reportMetadata": {
+    "skill": "classroom-reflection-skill",
+    "generatedAt": "2026-06-03T10:35:00Z",
+    "conversationId": "case-pan-lesson-002",
+    "lessonSlug": "pan-lesson",
+    "inputFile": "《盼》.json"
+  },
+  "basicJudgment": {
+    "level": "优秀",
+    "diagnosis": "这是一堂扎实的习作单元常态课，教师准确把握'围绕中心意思选材'的教学重点，通过对《盼》一课的深度研读，引导学生从对话、环境、心理、动作等多角度体会作者如何把'盼'的心理写具体，教学逻辑清晰、互动真实有效，但在目标明确性和学生深度学习引导上仍有提升空间。"
+  },
+  "subjectIdentification": {
+    "userProvidedSubject": null,
+    "inferredSubject": "语文",
+    "confidence": "高",
+    "evidence": ["课文", "作文", "自然段", "作者", "习作", "中心意思"],
+    "rubricSource": "匹配评分表 `01_语文.md`"
+  },
+  "classSegments": [
+    {
+      "name": "导入与交流预热",
+      "timeRangeSec": "21-735",
+      "timeLabel": "0 分 21 秒 -12 分 15 秒",
+      "teacherActions": "话筒调试、自我介绍、询问怕写作文的学生、推荐作文写得好的同学、介绍作家铁凝",
+      "studentActions": "回答怕不怕写作文、推荐同学、分享作文方法、介绍喜欢的作家、朗读课文",
+      "highlights": "导入自然亲切，通过话筒调试拉近师生距离；但正式上课前的预热时间略长"
+    },
+    {
+      "name": "新知建构 - 文本初读",
+      "timeRangeSec": "735-1450",
+      "timeLabel": "12 分 15 秒 -24 分 10 秒",
+      "teacherActions": "提问课文写了什么、新雨衣的特点、小标题概括、比较十六课与十七课选材方法",
+      "studentActions": "概括课文大意、描述雨衣特点、用小标题概括盼的内容、回忆十六课写法、填写对比表格",
+      "highlights": "从故事要素入手梳理情节，小标题训练扎实；通过单元内两篇课文对比强化'围绕中心选材'的概念"
+    },
+    {
+      "name": "研读品析 - 写法探究",
+      "timeRangeSec": "1450-2165",
+      "timeLabel": "24 分 10 秒 -36 分 05 秒",
+      "teacherActions": "布置默读任务、采访角色表演者、组织对话朗读、引导学生发现对话/环境/心理/动作描写的作用",
+      "studentActions": "默读课文标注生动之处、分享发现的描写手法、角色扮演朗读、分析人物心理变化、讨论反常动作的作用",
+      "highlights": "通过角色扮演和朗读深入体验人物内心；教师引导细致，学生参与度高"
+    },
+    {
+      "name": "总结提升",
+      "timeRangeSec": "2165-2880",
+      "timeLabel": "36 分 05 秒 -48 分 00 秒",
+      "teacherActions": "引用作家创作谈、梳理学习收获、布置课后作业",
+      "studentActions": "齐答学习收获、回顾习作能力进阶过程",
+      "highlights": "总结层次清晰；但结尾略显仓促"
+    }
+  ],
+  "scoreSummary": {
+    "totalScore": 89,
+    "maxScore": 100,
+    "grade": "良好",
+    "scoresByCategory": [
+      {"category": "教学目标与内容 - 语文核心素养导向", "fullScore": 8, "obtainedScore": 7},
+      {"category": "教学目标与内容 - 文本/任务解读", "fullScore": 7, "obtainedScore": 6},
+      {"category": "教学目标与内容 - 重难点与学情", "fullScore": 5, "obtainedScore": 5},
+      {"category": "教学过程与方法 - 语言实践活动", "fullScore": 12, "obtainedScore": 11},
+      {"category": "教学过程与方法 - 问题链与思维发展", "fullScore": 10, "obtainedScore": 9},
+      {"category": "教学过程与方法 - 阅读/表达指导", "fullScore": 8, "obtainedScore": 8},
+      {"category": "教学过程与方法 - 课堂结构与时间", "fullScore": 5, "obtainedScore": 4},
+      {"category": "学生学习与评价 - 主体参与", "fullScore": 8, "obtainedScore": 7},
+      {"category": "学生学习与评价 - 学习证据", "fullScore": 7, "obtainedScore": 6},
+      {"category": "学生学习与评价 - 评价反馈", "fullScore": 5, "obtainedScore": 5},
+      {"category": "教师素养 - 语言与引导", "fullScore": 7, "obtainedScore": 7},
+      {"category": "教师素养 - 板书/资源", "fullScore": 4, "obtainedScore": 3},
+      {"category": "教师素养 - 课堂调控", "fullScore": 4, "obtainedScore": 4},
+      {"category": "教学效果与特色 - 目标达成", "fullScore": 7, "obtainedScore": 6},
+      {"category": "教学效果与特色 - 学科特色", "fullScore": 3, "obtainedScore": 3}
+    ]
+  },
+  "mainStrengths": [
+    {
+      "title": "问题设计层层递进，推动思维深入",
+      "evidence": "初始问题：课文写了什么？→深化问题：哪些地方写得最好？→核心问题：作者仅仅在写对话吗？还写出了什么？",
+      "impact": "学生从情节概括逐步走向写法探究，思维由浅入深"
+    },
+    {
+      "title": "角色扮演与朗读指导细致，帮助体验人物内心",
+      "evidence": "'央求'语气指导：'这里要求的灵魂是啊这个字……拐几个弯''撒娇视角提醒：你是八九岁，你不是十一二岁''嘟囔语气示范：声音要小一点，而且省略号告诉我们也要断断续续地再来一下'",
+      "impact": "学生能通过朗读真正体会人物盼穿雨衣的复杂心理"
+    },
+    {
+      "title": "单元内比较教学，强化习作方法",
+      "evidence": "引导学生明确：十六课是不同方面，《盼》是不同事例",
+      "impact": "帮助学生建立习作单元的整体认知，理解同一主题下不同选材策略的价值"
+    },
+    {
+      "title": "课堂氛围亲和，鼓励式评价到位",
+      "evidence": "'猜，猜错了也没有关系的。''大胆地举起你的手。'",
+      "impact": "学生在安全氛围中敢于表达，展现真实的思考状态"
+    }
+  ],
+  "keyIssues": [
+    {
+      "issue": "导入预热时间偏长，压缩研读深度",
+      "evidence": "正式上课前约 10 分钟的试话筒、自我介绍、作文经验分享等预热，占总时长近 25%",
+      "impact": "导致后续总结提升环节仓促（仅约 12 分钟），学生缺少将所学方法迁移到表达的时机",
+      "suggestions": "将话筒调试等准备工作放在课前完成；导入直奔课题；压缩作文经验分享至 2-3 分钟"
+    },
+    {
+      "issue": "写作方法的迁移应用缺失",
+      "evidence": "课程结束前布置的作业是写烦或写心中的烦，但未要求学生实际运用围绕中心意思选取不同事例的方法进行片段写作",
+      "impact": "学生理解了方法，但未经历用方法的过程，难以形成稳定的写作能力",
+      "suggestions": "增加 5 分钟微写作环节；或采用口头提纲形式"
+    },
+    {
+      "issue": "学生参与面可能不均衡",
+      "evidence": "逐字稿中发言学生多为个别学生，未见小组合作或全员参与的明显证据",
+      "impact": "可能只有少数活跃学生深度参与，其他学生处于旁观状态",
+      "suggestions": "增加同桌互议环节；设计书面批注后全班随机抽查；采用全体手势回应 + 个别发言的组合方式"
+    },
+    {
+      "issue": "情感体验挖掘深度有限",
+      "evidence": "对盼的情感体验主要停留在兴奋失望不甘心等基础情绪词汇",
+      "impact": "学生难以通过课文与自身生活经验建立深层连接，审美创造素养培养不足",
+      "suggestions": "追问是否有过类似的盼的经历；引导学生体会平凡生活中蕴含的情感力量"
+    }
+  ],
+  "statisticalData": {
+    "utteranceCount": {
+      "total": 205,
+      "teacher": 99,
+      "student": 105,
+      "other": 1
+    },
+    "speakingDurationSec": {
+      "teacher": 1418.93,
+      "student": 847.29,
+      "other": 123.54
+    },
+    "talkRatio": {
+      "teacher": 0.594,
+      "student": 0.355,
+      "other": 0.052
+    },
+    "totalDurationSec": 2859.49,
+    "teacherQuestionMarkCount": 120
+  },
+  "recommendedNextSteps": [
+    "补充学段信息（确认是小学几年级）",
+    "提供明确的教学目标",
+    "获取原教案了解教师的原始设计意图",
+    "了解学生基础和公开课类型",
+    "生成优化版教案或教师上课逐字稿"
+  ]
+}

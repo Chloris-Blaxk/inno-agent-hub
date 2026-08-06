@@ -1,0 +1,20 @@
+{
+  "skill": "classroom-reflection-skill",
+  "createdAt": "2026-06-03T10:35:02",
+  "lessonSlug": "pan-lesson",
+  "conversationId": "case-pan-lesson-002",
+  "inputFile": "《盼》.json",
+  "generatedRoot": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs",
+  "outputDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002",
+  "rubricSource": "匹配评分表 `01_语文.md`",
+  "matchedSubject": "语文",
+  "matchedRubric": "01_语文.md",
+  "rubricPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/assets/rubric/01_语文.md",
+  "reportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002/reflection-report.md",
+  "reportJsonPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002/reflection-report.json",
+  "lessonPlanPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002/optimized-lesson-plan.md",
+  "teacherTranscriptPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002/teacher-transcript.md",
+  "promptPayloadPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002/prompt-payload.md",
+  "normalizedInputPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-002/normalized-input.json",
+  "warnings": []
+}

@@ -1,0 +1,47 @@
+{
+  "ocr_api": {
+    "provider": "edusys",
+    "endpoint": "https://edusys5.sii.edu.cn/ocr",
+    "auth_type": "bearer_token",
+    "env_var": "OCR_API_KEY",
+    "timeout_ms": 120000,
+    "retry_strategy": {
+      "max_attempts": 4,
+      "retry_delays_seconds": [2, 5, 10],
+      "retry_on_status_codes": [404, 500, 502, 503, 504],
+      "retry_on_errors": ["timeout", "connection_error", "network_error"]
+    },
+    "request_format": {
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer ${OCR_API_KEY}",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "image": "${base64_image}"
+      }
+    },
+    "response_format": {
+      "success_field": "success",
+      "text_field": "text",
+      "confidence_field": "confidence"
+    },
+    "fallback_messages": {
+      "all_retries_failed": "抱歉,题目识别服务暂时繁忙,请稍后重试,或者你可以直接把题目和你的解答文字发给我。",
+      "network_error": "抱歉,题目识别服务暂时无法连接,请稍后重试,或者你可以直接把题目和你的解答文字发给我。",
+      "timeout": "抱歉,题目识别服务响应超时,请稍后重试,或者你可以直接把题目和你的解答文字发给我。"
+    }
+  },
+  "vlm_priority": {
+    "enabled": true,
+    "description": "优先使用视觉语言模型直接识别图片,只有在模型不支持视觉或识别失败时才调用 OCR API",
+    "vlm_models": [
+      "claude-opus-4",
+      "claude-sonnet-4",
+      "claude-3-5-sonnet",
+      "gpt-4-vision",
+      "gpt-4o",
+      "gemini-pro-vision"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "项目申报助手"
+  short_description: "抽取项目事实并生成申报/结题/汇报文档"
+  default_prompt: "Use $project-proposal-skill to extract a project fact table, draft project documents, and check budget or cross-document consistency."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,58 @@
+{
+  "requestId": "req-research-topic-sample-001",
+  "entryToken": "@研究选题生成",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "sourceRequest": "我是小学数学教师，有一个错因分析课例和一篇即时反馈反思，帮我生成 3 个总结性选题和 2 个规划性选题。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参与过校本课堂反馈研究",
+    "existingAchievements": [],
+    "availableCycle": "1 年",
+    "constraints": ["可开展校内课堂观察", "暂未形成正式论文"]
+  },
+  "input": {
+    "teacherProfile": {
+      "subject": "小学数学",
+      "gradeBand": "高年级",
+      "schoolContext": "城区普通小学",
+      "researchExperience": "参与过校本课堂反馈研究",
+      "existingAchievements": [],
+      "availableCycle": "1 年",
+      "constraints": ["可开展校内课堂观察", "暂未形成正式论文"]
+    },
+    "materials": [
+      {
+        "materialId": "mat-001",
+        "materialType": "teaching_case",
+        "title": "异分母分数加减法错因分析课例",
+        "content": "围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-002",
+        "materialType": "reflection",
+        "title": "小组合作中的即时反馈反思",
+        "content": "记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      }
+    ],
+    "targetProjectType": "区级课题",
+    "topicCount": {"summative": 3, "planning": 2},
+    "requirements": "生成 3 个总结性选题和 2 个规划性选题，并说明已有基础、创新点、可行性风险和下一步资料清单。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

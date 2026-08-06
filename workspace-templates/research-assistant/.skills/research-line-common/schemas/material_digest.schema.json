@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/material_digest.schema.json",
+  "title": "MaterialDigest",
+  "type": "object",
+  "required": [
+    "digestId",
+    "materialId",
+    "materialType",
+    "title",
+    "keyFacts",
+    "topicSignals",
+    "sourceStatus",
+    "limits"
+  ],
+  "properties": {
+    "digestId": {"type": "string", "minLength": 1},
+    "materialId": {"type": "string", "minLength": 1},
+    "materialType": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "teachingContext": {"type": "object", "additionalProperties": true},
+    "keyFacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fact", "sourceSpan"],
+        "properties": {
+          "fact": {"type": "string", "minLength": 1},
+          "sourceSpan": {"type": "string", "minLength": 1},
+          "confidence": {"enum": ["high", "medium", "low"]},
+          "usableFor": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "topicSignals": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "claims": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "events": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "sourceStatus": {"type": "string"},
+    "limits": {"type": "array", "items": {"type": "string"}},
+    "sourceRefs": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

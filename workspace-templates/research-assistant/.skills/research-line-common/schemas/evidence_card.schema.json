@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/evidence_card.schema.json",
+  "title": "EvidenceCard",
+  "type": "object",
+  "required": [
+    "cardId",
+    "claim",
+    "evidenceText",
+    "paperId",
+    "quoteLocation",
+    "supportType",
+    "evidenceLevel"
+  ],
+  "properties": {
+    "cardId": {"type": "string", "minLength": 1},
+    "claim": {"type": "string", "minLength": 1},
+    "evidenceText": {"type": "string", "minLength": 1},
+    "paperId": {"type": "string", "minLength": 1},
+    "quoteLocation": {"type": "string", "minLength": 1},
+    "sourceLocator": {
+      "type": "object",
+      "properties": {
+        "locationType": {"type": "string"},
+        "locator": {"type": "string"},
+        "page": {"type": ["string", "number"]},
+        "paragraph": {"type": "string"},
+        "confidence": {"enum": ["high", "medium", "low"]}
+      },
+      "additionalProperties": true
+    },
+    "supportType": {
+      "enum": ["direct_support", "partial_support", "background", "not_support"]
+    },
+    "evidenceLevel": {
+      "enum": ["metadata_verified", "abstract_verified", "fulltext_verified", "user_text_only"]
+    },
+    "usableFor": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "limits": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "paperTitle": {
+      "type": "string",
+      "description": "推荐填写。论文标题，使下游 Skill 可直接生成 GB/T 7714 引用，无需通过 paperId 反查 LiteratureRecord。"
+    },
+    "paperAuthors": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "推荐填写。论文作者列表。"
+    },
+    "paperYear": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2100,
+      "description": "推荐填写。发表年份。"
+    },
+    "paperJournal": {
+      "type": "string",
+      "description": "推荐填写。期刊名称。"
+    }
+  },
+  "additionalProperties": true
+}

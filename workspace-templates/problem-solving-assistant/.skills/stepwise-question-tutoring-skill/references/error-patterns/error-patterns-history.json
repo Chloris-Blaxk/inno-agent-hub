@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "description": "历史学科错误模式库（仅材料分析题型要点提取）",
+  "errorCategories": [
+    {
+      "categoryId": "history-material-analysis",
+      "categoryName": "材料分析要点提取错误",
+      "description": "从史料中提取信息、归纳要点的错误",
+      "patterns": [
+        {
+          "id": "err-his-key-info-missing",
+          "name": "关键信息遗漏",
+          "knowledgePointIds": ["his-material-reading", "his-information-extraction"],
+          "symptom": "提取的要点不全，遗漏重要信息",
+          "likelyCause": "阅读不仔细，或不会识别史料中的关键信息",
+          "diagnosisSignals": ["只提取了部分要点", "遗漏时间、地点、人物等关键要素", "忽略材料中的转折词"],
+          "hintTemplate": "材料中有几个层次/几个方面的信息？注意{关键标志词}。",
+          "remediationSteps": [
+            "逐句分析：每句话的核心信息是什么",
+            "识别关键词：时间、地点、人物、事件、影响",
+            "注意层次：'此外''另外''但是'等提示有多个要点"
+          ]
+        },
+        {
+          "id": "err-his-over-interpretation",
+          "name": "过度解读",
+          "knowledgePointIds": ["his-material-analysis"],
+          "symptom": "提取了材料中没有的信息，或过度推断",
+          "likelyCause": "用背景知识代替材料信息，或主观臆断",
+          "diagnosisSignals": ["答案中有材料没提到的内容", "用教材知识代替材料分析", "推断过度"],
+          "hintTemplate": "要'依据材料'回答。材料说了什么，就提取什么，不要加入材料外的内容。",
+          "remediationSteps": [
+            "区分：材料信息 vs 背景知识",
+            "原则：题目要求'根据材料'，就只能从材料中找",
+            "检查：每个要点能否在材料中找到依据"
+          ]
+        },
+        {
+          "id": "err-his-not-generalized",
+          "name": "未归纳概括",
+          "knowledgePointIds": ["his-generalization"],
+          "symptom": "直接摘抄原文，没有用自己的话概括",
+          "likelyCause": "不会归纳，或不理解题目要求的概括层次",
+          "diagnosisSignals": ["大段摘抄原文", "未提炼关键词", "表述冗长"],
+          "hintTemplate": "要用简洁的语言概括要点，不是照抄原文。",
+          "remediationSteps": [
+            "提炼关键词：把一句话浓缩成几个关键词",
+            "归纳角度：政治、经济、文化、社会等",
+            "简洁表述：'材料反映了...'的核心内容"
+          ]
+        }
+      ]
+    }
+  ]
+}

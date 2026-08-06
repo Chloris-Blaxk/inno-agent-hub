@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-topic-generation-skill"
+version = "0.2.0"
+description = "教师教育研究选题生成 Skill，支持材料理解与 DKG 图计算双轨"
+requires-python = ">=3.11"
+dependencies = [
+    "PyPDF2>=3.0.0",
+    "python-docx>=1.0.0",
+    "python-pptx>=0.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.5.0",
+]
+file-parser = [
+    "PyPDF2>=3.0.0",
+    "python-docx>=1.0.0",
+    "python-pptx>=0.6.0",
+]
+test-data = [
+    "PyPDF2>=3.0.0",
+    "python-docx>=1.0.0",
+    "python-pptx>=0.6.0",
+    "fpdf2>=2.7.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["scripts"]

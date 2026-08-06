@@ -1,0 +1,38 @@
+{
+  "id": "fresh-nature",
+  "name": "小清新",
+  "description": "色彩柔和自然，追求视觉舒适度，传递积极轻松的学习氛围。适合小学中高年级、生物、地理。",
+  "colors": {
+    "bg": "F0F7F4",
+    "ink": "2D3E36",
+    "muted": "7A8F85",
+    "accent": "5FA88A",
+    "card": "FFFFFF",
+    "line": "C8DDD3",
+    "good": "4A9B8E",
+    "warn": "D4A056"
+  },
+  "fonts": {
+    "head": "Noto Sans SC",
+    "body": "Noto Sans SC"
+  },
+  "layout": {
+    "marginRatio": 0.05,
+    "titleSize": [42, 56],
+    "bodySize": [26, 34],
+    "maxBullets": 4,
+    "maxBulletChars": 16,
+    "maxHeadlineChars": 14
+  },
+  "decorations": {
+    "type": "nature",
+    "coverAccent": "leaf",
+    "cardShadow": true,
+    "borderRadius": 12
+  },
+  "applicable": {
+    "grades": ["小学中段", "小学高段"],
+    "subjects": ["语文", "科学", "生物", "地理", "英语"],
+    "scenes": ["新授课", "探究课", "实验课"]
+  }
+}

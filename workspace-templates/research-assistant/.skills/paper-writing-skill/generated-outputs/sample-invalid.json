@@ -1,0 +1,138 @@
+{
+  "requestId": "req-paper-writing-invalid-001",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "summary": "错误示例：把只有元数据的候选文献当成已验证来源。",
+  "result": {
+    "sourceTraceResults": [
+      {
+        "queryText": "课堂即时反馈能够显著提升学生数学成绩。",
+        "candidates": [
+          {
+            "paperId": "paper-fiction-999",
+            "matchType": "metadata",
+            "matchSnippet": "即时反馈",
+            "supportStatus": "supports",
+            "confidence": "high",
+            "citation": ""
+          }
+        ],
+        "decision": "verified_source_found"
+      }
+    ],
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈能够显著提升学生数学成绩。",
+        "status": "supported",
+        "matchedEvidenceCards": [
+          "ec-fiction-001"
+        ],
+        "riskNotes": [],
+        "recommendedRewrite": "课堂即时反馈能够显著提升学生数学成绩。"
+      }
+    ],
+    "structureDiagnosis": {},
+    "revisionSuggestions": [],
+    "citationWarnings": []
+  },
+  "handoff": {
+    "claimChecks": [],
+    "usableEvidenceCards": [
+      {
+        "cardId": "ec-fiction-001",
+        "claim": "课堂即时反馈能够显著提升学生数学成绩",
+        "evidenceText": "元数据关键词命中。",
+        "paperId": "paper-fiction-999",
+        "quoteLocation": "metadata",
+        "supportType": "direct_support",
+        "evidenceLevel": "metadata_verified",
+        "usableFor": [
+          "论文结论"
+        ],
+        "limits": []
+      }
+    ],
+    "paperRevisionSummary": {}
+  },
+  "qualityReport": {
+    "status": "failed",
+    "checks": [
+      {
+        "id": "expected_invalid_fixture",
+        "status": "fail",
+        "message": "预期 validate 失败的反例样例。"
+      }
+    ],
+    "warnings": [
+      "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+    ],
+    "metrics": {
+      "claimCount": 1,
+      "supportedClaimCount": 1,
+      "needsEvidenceCount": 0,
+      "sourceTraceHitCount": 1,
+      "citationFormatWarnings": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [],
+  "status": "failed",
+  "warnings": [
+    "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-paper-writing-skill",
+    "skillId": "paper-writing-skill",
+    "taskIntent": "source_trace",
+    "dataSources": [
+      {
+        "sourceId": "shared-literature-pool",
+        "sourceName": "科研线共享本地文献池",
+        "sourceType": "local_mock",
+        "dataType": "literature_record",
+        "recordCount": 0,
+        "authorizationStatus": "mock_sample",
+        "version": "research-literature-adapter-v1",
+        "limitations": [
+          "由本地 mock 文献索引和样例白名单合并而来，不能替代真实授权检索。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-evidence-card-index",
+        "sourceName": "论文写作证据卡样例库",
+        "sourceType": "local_sample",
+        "dataType": "evidence_card",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "证据卡为样例数据；进入引用建议前仍需支撑性、定位和教师确认校验。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前查源依赖本地 mock/样例文献池；未验证支撑性的候选不得进入引用或正文事实。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "source_trace",
+    "sampleFile": "agent_cases/paper-writing-skill/generated-outputs/sample-invalid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/sample-invalid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

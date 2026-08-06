@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "description": "语文学科错误模式库（仅文言文翻译与病句修改题型）",
+  "errorCategories": [
+    {
+      "categoryId": "chinese-classical-translation",
+      "categoryName": "文言文翻译错误",
+      "description": "文言文实词、虚词、句式翻译中的错误",
+      "patterns": [
+        {
+          "id": "err-chi-word-meaning",
+          "name": "实词翻译错误",
+          "knowledgePointIds": ["chi-classical-vocab", "chi-word-meaning"],
+          "symptom": "实词翻译不准确或使用现代义",
+          "likelyCause": "不理解古今异义，或用常见义代替特定语境义",
+          "diagnosisSignals": ["用现代汉语常见义翻译", "忽略一词多义", "不结合语境"],
+          "hintTemplate": "这个词是古今异义词/一词多义。要根据上下文选择合适的意思。",
+          "remediationSteps": [
+            "识别古今异义：如'走'（古义：跑），'去'（古义：离开）",
+            "一词多义：根据语境判断，如'因'可能是'于是''依靠''原因'",
+            "记住常见实词：考纲120个实词要准确掌握"
+          ]
+        },
+        {
+          "id": "err-chi-sentence-pattern",
+          "name": "特殊句式未识别",
+          "knowledgePointIds": ["chi-classical-syntax", "chi-sentence-pattern"],
+          "symptom": "倒装、省略、被动等特殊句式翻译成现代语序",
+          "likelyCause": "不熟悉文言文特殊句式，按现代汉语语序理解",
+          "diagnosisSignals": ["宾语前置未识别", "定语后置未调整", "被动句未翻译被动"],
+          "hintTemplate": "这是{句式类型}句式，翻译时要调整语序。",
+          "remediationSteps": [
+            "识别倒装：宾语前置（'何陋之有'→有何陋），状语后置",
+            "识别省略：补出省略的主语、宾语",
+            "识别被动：'见''于''为...所'表被动"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "chinese-sentence-correction",
+      "categoryName": "病句修改错误",
+      "description": "病句类型判断和修改方法错误",
+      "patterns": [
+        {
+          "id": "err-chi-sentence-type",
+          "name": "病句类型判断错误",
+          "knowledgePointIds": ["chi-sentence-error", "chi-grammar"],
+          "symptom": "未能准确判断病句属于哪种类型",
+          "likelyCause": "对六大病句类型特征不熟悉",
+          "diagnosisSignals": ["搭配不当误判为成分残缺", "语序不当误判为搭配不当", "混淆病句类型"],
+          "hintTemplate": "这个句子的问题是{病句类型}。注意{关键标志}。",
+          "remediationSteps": [
+            "掌握六大类型：搭配不当、成分残缺/赘余、语序不当、结构混乱、表意不明、不合逻辑",
+            "识别标志：'和''与''及'→可能搭配不当，'使''让'→可能成分残缺",
+            "逐项排查：先看结构，再看搭配，最后看逻辑"
+          ]
+        },
+        {
+          "id": "err-chi-collocation",
+          "name": "搭配不当未识别",
+          "knowledgePointIds": ["chi-collocation", "chi-sentence-error"],
+          "symptom": "动宾、主谓、修饰语与中心词搭配不当",
+          "likelyCause": "对词语搭配习惯不敏感",
+          "diagnosisSignals": ["动宾不搭配", "主谓不搭配", "定语中心词不搭配", "一词多配"],
+          "hintTemplate": "'{词A}'和'{词B}'不能搭配。应该改为...。",
+          "remediationSteps": [
+            "检查动宾搭配：'提高水平'可以，'提高价格'不可以（应该'提高'改'提升'）",
+            "检查主谓搭配：主语能否发出谓语的动作",
+            "注意一词多配：'学习和研究问题'→'学习'不能搭配'问题'"
+          ]
+        },
+        {
+          "id": "err-chi-component-missing",
+          "name": "成分残缺未识别",
+          "knowledgePointIds": ["chi-sentence-component"],
+          "symptom": "句子缺少主语、宾语或其他必要成分",
+          "likelyCause": "忽略介词短语、'使'字句等导致的主语缺失",
+          "diagnosisSignals": ["介词'通过''经过'导致主语缺失", "'使'字句缺少主语", "缺少宾语中心词"],
+          "hintTemplate": "这个句子缺少{成分}。",
+          "remediationSteps": [
+            "警惕介词：'通过...使...'结构常导致主语缺失",
+            "检查主干：把定语、状语删掉，看主谓宾是否完整",
+            "宾语中心词：'提高教学质量的方法'不能单独做宾语，要加'水平'等中心词"
+          ]
+        }
+      ]
+    }
+  ]
+}

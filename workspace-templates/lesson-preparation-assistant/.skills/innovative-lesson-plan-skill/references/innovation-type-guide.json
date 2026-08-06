@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "创新类型引导决策数据，供主控模型（Controller）在阶段一（需求明确）中引导教师选择创新类型并补充类型专属信息。"
+  },
+
+  "typeDecisionGuide": {
+    "description": "当教师未明确 innovationType 时，通过目的和任务特征引导决策，而非直接展示术语选项。",
+
+    "decisionQuestions": [
+      {
+        "id": "dq-pbl",
+        "signal": "学生要围绕一个真实问题进行探究，并产出可展示、可评价的作品",
+        "recommendedType": "PBL",
+        "clarificationQuestion": "你的课是否围绕一个学生需要探究和解决的真实问题，最终要做出一个作品？",
+        "exampleTrigger": ["做一个方案", "设计一个产品", "解决一个问题", "项目式", "项目化"]
+      },
+      {
+        "id": "dq-interdisciplinary",
+        "signal": "完成核心任务必须用到两个或以上学科的知识和方法",
+        "recommendedType": "interdisciplinary",
+        "clarificationQuestion": "你的课是否需要用到另一个学科的知识才能完成核心任务？",
+        "exampleTrigger": ["结合数学和科学", "语文和科学一起", "跨学科", "融合两个学科"]
+      },
+      {
+        "id": "dq-ai-integrated",
+        "signal": "想在课堂某个环节嵌入 AI 工具来提升学习效果",
+        "recommendedType": "ai_integrated",
+        "clarificationQuestion": "你想让学生在课堂中使用 AI 工具来辅助某个学习环节吗？",
+        "exampleTrigger": ["用AI辅助", "让学生用大模型", "AI工具", "ChatGPT", "智能工具"]
+      }
+    ],
+
+    "multiTypeHint": "如果教师描述同时命中多个信号，优先追问：'你的课最核心的目标是什么？'按核心目标推荐一个主类型，其他类型元素可以作为附加设计。不建议一次教案同时承载两种以上创新类型的完整流程。"
+  },
+
+  "typeSpecificPrompts": {
+    "description": "确定创新类型后，主控模型（Controller）应追问的专属问题。这些问题直接对应生成输出中的类型专属字段。",
+
+    "PBL": {
+      "goalLabel": "让学生的探究被一个真实问题驱动，经历完整的探究-产出-评价闭环",
+      "questions": [
+        {
+          "id": "pbl-q1",
+          "field": "drivingQuestion",
+          "question": "驱动问题的方向你有想法吗？比如'我们能否……''怎样让……'这样的开放问题。",
+          "purpose": "确定驱动问题方向，避免问题太大无法探究或太小不值得探究",
+          "fallbackIfUnknown": "生成模型（Generator）将根据课题和学段生成候选驱动问题供选择"
+        },
+        {
+          "id": "pbl-q2",
+          "field": "finalProduct",
+          "question": "你希望学生最终做出什么类型的产出？（方案海报/口头汇报/书面报告/模型/视频等）",
+          "purpose": "确定最终产出形态，确保产出可展示、可评价",
+          "fallbackIfUnknown": "默认建议方案海报或书面报告"
+        },
+        {
+          "id": "pbl-q3",
+          "field": "milestones",
+          "question": "这是单课时项目（40分钟内完成）还是多课时项目？如果是多课时，预计几个课时？",
+          "purpose": "确定里程碑拆分粒度",
+          "fallbackIfUnknown": "默认按单课时 40 分钟设计"
+        }
+      ],
+      "pitfallReminder": "驱动问题要能真正驱动探究——避免变成资料搜集或手抄报。判断标准：如果学生只需搜索复制就能回答，说明问题不够驱动探究。"
+    },
+
+    "interdisciplinary": {
+      "goalLabel": "让两个学科的知识在一个核心任务中自然交汇，而不是简单拼接",
+      "questions": [
+        {
+          "id": "inter-q1",
+          "field": "disciplineConnections",
+          "question": "主学科是什么？你想融入哪个学科的知识？",
+          "purpose": "确定学科关联的双方",
+          "fallbackIfUnknown": "需要教师明确，否则无法生成跨学科教案"
+        },
+        {
+          "id": "inter-q2",
+          "field": "integrationNodes",
+          "question": "两个学科的知识在哪个具体环节自然交汇？比如'学生用数学图表呈现科学调查结果'。",
+          "purpose": "确定融合节点，避免两个学科任务互不依赖",
+          "fallbackIfUnknown": "生成模型（Generator）将基于学科组合推荐可能的融合节点"
+        },
+        {
+          "id": "inter-q3",
+          "field": "applicableBoundary",
+          "question": "这个跨学科设计适合什么范围？有没有超出学生能力的部分需要排除？",
+          "purpose": "明确适用边界，防止跨学科扩展到超出学段能力的深度",
+          "fallbackIfUnknown": "生成模型（Generator）将根据学段和课标自动推断适用边界"
+        }
+      ],
+      "pitfallReminder": "融合节点必须是完成核心任务的必要环节，不是装饰性的。判断标准：去掉关联学科后，核心任务是否还能完成？如果能，说明融合不够必要。"
+    },
+
+    "ai_integrated": {
+      "goalLabel": "让 AI 工具在课堂特定环节服务教学目标，学生学会审辨 AI 输出",
+      "questions": [
+        {
+          "id": "ai-q1",
+          "field": "aiToolRoles",
+          "question": "你想在课堂的哪个环节借助 AI？（资料整理→让 AI 帮筛选资料 / 草稿修改→让 AI 给表达反馈 / 探究追问→让 AI 生成深入问题）",
+          "purpose": "确定 AI 工具角色和介入环节",
+          "fallbackIfUnknown": "生成模型（Generator）将根据课题和课型推荐最合适的 AI 融合模式"
+        },
+        {
+          "id": "ai-q2",
+          "field": "useBoundaries",
+          "question": "你希望 AI 的使用边界是什么？比如'AI 只给建议不替学生写'，还是'AI 可以生成初稿但学生必须改写'？",
+          "purpose": "限定 AI 使用程度，防止 AI 代替学生思考",
+          "fallbackIfUnknown": "默认最保守边界：AI 只给建议和反馈，不替学生生成最终作品"
+        },
+        {
+          "id": "ai-q3",
+          "field": "studentCritiqueTasks",
+          "question": "你希望学生如何'审辨' AI 的输出？比如标注哪些信息可靠/存疑，或比较 AI 建议和自己的修改。",
+          "purpose": "确保学生不只是被动接收 AI 输出，而是主动审视",
+          "fallbackIfUnknown": "默认审辨任务：标注 AI 输出中可靠和存疑的部分，并写判断依据"
+        }
+      ],
+      "pitfallReminder": "AI 必须服务教学目标，不能只作为炫技环节。判断标准：去掉 AI 后，这个环节的学习目标是否还能达成？如果不能，说明 AI 是必要的；如果去掉 AI 只是换了一种方式也能达成，那 AI 至少是合理的辅助。但如果去掉 AI 完全不影响，说明 AI 是装饰。"
+    }
+  },
+
+  "confirmationTemplate": {
+    "description": "阶段一结束时的需求确认摘要模板，主控模型（Controller）填充后让教师确认。",
+    "template": "确认一下你的需求：\n- 课题：{topic}（{grade} {subject}）\n- 类型：{innovationTypeLabel}\n- {typeSpecificSummary}\n- 时长：{durationMin} 分钟\n\n确认后我将生成完整教案。需要调整吗？",
+    "typeSpecificSummaryTemplate": {
+      "PBL": "驱动问题方向：{drivingQuestion}；最终产出：{finalProduct}",
+      "interdisciplinary": "学科关联：{disciplineConnections}；融合节点：{integrationNodes}",
+      "ai_integrated": "AI 角色：{aiToolRoles}；介入环节：{interventionStages}"
+    }
+  }
+}

@@ -1,0 +1,858 @@
+{
+  "requestId": "req-research-topic-sample-001",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "status": "pass",
+  "summary": "已生成总结性/规划性选题候选；总结性选题均回链用户材料。",
+  "inputSummary": {
+    "sourceRequest": "我是小学数学教师，有一个错因分析课例和一篇即时反馈反思，帮我生成 3 个总结性选题和 2 个规划性选题。",
+    "materialCount": 2,
+    "teacherProfileFields": [
+      "availableCycle",
+      "constraints",
+      "gradeBand",
+      "researchExperience",
+      "schoolContext",
+      "subject"
+    ],
+    "targetProjectType": "区级课题",
+    "assumptions": [],
+    "constraints": {
+      "language": "zh-CN",
+      "allowExternalSearch": false,
+      "strictEvidence": true
+    }
+  },
+  "warnings": [],
+  "dataSourceReport": {
+    "reportId": "dsr-research-topic-generation-skill",
+    "skillId": "research-topic-generation-skill",
+    "taskIntent": "mixed_topic",
+    "dataSources": [
+      {
+        "sourceId": "user-materials",
+        "sourceName": "教师上传/输入研究材料",
+        "sourceType": "user_provided",
+        "dataType": "teacher_research_material",
+        "recordCount": 2,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "仅代表用户提供材料；事实真实性和敏感信息需由教师确认。"
+        ]
+      },
+      {
+        "sourceId": "grant-title-samples",
+        "sourceName": "本地立项题样例库",
+        "sourceType": "local_sample",
+        "dataType": "grant_title_sample",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "仅用于相似度演示和首轮降重提示，不能代表真实地区立项库覆盖。"
+        ]
+      },
+      {
+        "sourceId": "policy-hotspot-tags",
+        "sourceName": "本地政策热点标签样例",
+        "sourceType": "local_sample",
+        "dataType": "policy_hotspot_tag",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "政策标签为本地样例，真实申报前需按地区和年份更新。"
+        ]
+      },
+      {
+        "sourceId": "practice-problem-bank",
+        "sourceName": "本地实践问题样例库",
+        "sourceType": "local_sample",
+        "dataType": "practice_problem_cluster",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "实践问题库为种子样例，不能覆盖所有学段、学科和学校情境。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "立项题、政策热点和实践问题库仍为本地样例；选题只能作为候选方向，需结合真实区域要求复核。"
+    ]
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/research-topic-generation-skill/generated-outputs/render-sample.json",
+      "description": "结构化研究选题生成结果"
+    },
+    {
+      "type": "markdown",
+      "path": "agent_cases/research-topic-generation-skill/generated-outputs/render-sample.md",
+      "description": "教师可读研究选题报告"
+    }
+  ],
+  "result": {
+    "materialDigests": [
+      {
+        "digestId": "digest-001",
+        "materialId": "mat-001",
+        "materialType": "teaching_case",
+        "title": "异分母分数加减法错因分析课例",
+        "keyFacts": [
+          {
+            "fact": "围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。",
+            "confidence": "high"
+          }
+        ],
+        "topicSignals": [
+          "错因分析"
+        ],
+        "usableFor": [
+          "research_topic",
+          "project_basis"
+        ],
+        "limitations": []
+      },
+      {
+        "digestId": "digest-002",
+        "materialId": "mat-002",
+        "materialType": "reflection",
+        "title": "小组合作中的即时反馈反思",
+        "keyFacts": [
+          {
+            "fact": "记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。",
+            "confidence": "high"
+          }
+        ],
+        "topicSignals": [
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "usableFor": [
+          "research_topic",
+          "project_basis"
+        ],
+        "limitations": []
+      }
+    ],
+    "materialClusters": [
+      {
+        "clusterId": "cluster-001",
+        "clusterTitle": "错因诊断与精准讲评",
+        "materialIds": [
+          "mat-001",
+          "mat-002"
+        ],
+        "coreSignals": [
+          "错因分析",
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "researchAxis": "围绕学生典型错因识别、分类记录和讲评调整形成连续研究。",
+        "evidenceSummary": [
+          {
+            "materialId": "mat-001",
+            "fact": "围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。"
+          },
+          {
+            "materialId": "mat-002",
+            "fact": "记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          }
+        ],
+        "currentStage": "theme_consolidation",
+        "gaps": [
+          "缺少连续课堂观察、学生作品或数据记录。"
+        ],
+        "usableTopicAngles": [
+          "错因诊断支持精准讲评",
+          "分数教学典型错因的证据化改进"
+        ]
+      },
+      {
+        "clusterId": "cluster-002",
+        "clusterTitle": "即时反馈与课堂调控",
+        "materialIds": [
+          "mat-002"
+        ],
+        "coreSignals": [
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "researchAxis": "围绕课堂即时反馈信息如何帮助教师调整讲评顺序和教学决策。",
+        "evidenceSummary": [
+          {
+            "materialId": "mat-002",
+            "fact": "记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          }
+        ],
+        "currentStage": "material_accumulation",
+        "gaps": [
+          "缺少连续课堂观察、学生作品或数据记录。"
+        ],
+        "usableTopicAngles": [
+          "即时反馈支持课堂调控",
+          "课堂投票数据支持精准讲评"
+        ]
+      }
+    ],
+    "researchTrajectory": {
+      "trajectoryId": "trajectory-001",
+      "stage": "theme_consolidation",
+      "sourceMaterialIds": [
+        "mat-001",
+        "mat-002"
+      ],
+      "dominantThemes": [
+        "错因诊断与精准讲评",
+        "即时反馈与课堂调控"
+      ],
+      "trajectorySummary": "已有材料集中在错因诊断与精准讲评，可从零散实践积累升级为连续证据链研究。",
+      "pastAccumulation": [
+        "围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。",
+        "记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+      ],
+      "currentFocusableDirections": [
+        "围绕学生典型错因识别、分类记录和讲评调整形成连续研究。",
+        "围绕课堂即时反馈信息如何帮助教师调整讲评顺序和教学决策。"
+      ],
+      "futureDeepeningPath": [
+        {
+          "stepId": "path-001",
+          "timeframe": "0-1 个月",
+          "action": "把已有课例、反思和成果按共同主题整理成问题链。",
+          "requiredEvidence": [
+            "mat-001",
+            "mat-002"
+          ],
+          "output": "研究问题与材料证据对应表"
+        },
+        {
+          "stepId": "path-002",
+          "timeframe": "1-2 个月",
+          "action": "补充连续课堂观察、学生作品或错题样本，验证主题是否稳定出现。",
+          "requiredEvidence": [
+            "课堂观察表",
+            "学生作品",
+            "错题样本"
+          ],
+          "output": "连续实践证据包"
+        },
+        {
+          "stepId": "path-003",
+          "timeframe": "1 学期内",
+          "action": "明确研究方法、对象范围和成果形态，将总结性方向转化为申报题目。",
+          "requiredEvidence": [
+            "研究设计",
+            "过程数据",
+            "成果形态说明"
+          ],
+          "output": "可申报选题与研究设计草案"
+        }
+      ],
+      "risks": [
+        "缺少连续课堂观察、学生作品或数据记录。"
+      ]
+    },
+    "topicCandidates": [
+      {
+        "topicId": "topic-sum-001",
+        "topicTitle": "错因诊断支持精准讲评的实践研究",
+        "topicType": "summative",
+        "researchQuestion": "如何基于错因诊断与精准讲评提炼可持续研究的课堂改进问题？",
+        "existingBasis": [
+          {
+            "materialId": "mat-001",
+            "basis": "已有材料显示：围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。"
+          },
+          {
+            "materialId": "mat-002",
+            "basis": "已有材料显示：记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          }
+        ],
+        "innovationPoints": [
+          "把已有课例、反思或成果聚合为可追踪的问题链和证据链。"
+        ],
+        "feasibility": {
+          "score": 4,
+          "risks": [
+            "缺少连续课堂观察、学生作品或数据记录。"
+          ],
+          "neededMaterials": [
+            "课堂观察表",
+            "学生错题样本",
+            "讲评调整记录"
+          ]
+        },
+        "keywords": [
+          "错因分析",
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "已有材料显示：围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。",
+            "已有材料显示：记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "课堂观察表",
+            "学生错题样本",
+            "讲评调整记录"
+          ],
+          "upgradePath": [
+            "把已有课例或反思整理为材料摘要和问题链。",
+            "补充至少一轮连续课堂观察、学生作品或错题样本。",
+            "明确研究方法、对象范围和阶段性成果形态。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-001",
+          "nearestGrantTitle": "小学数学课堂即时反馈促进学生深度学习的实践研究",
+          "similarityScore": 0.14,
+          "riskLevel": "low",
+          "differenceStrategy": "与样例立项题相似度较低，仍需在申报书中说明研究对象、方法和成果形态。",
+          "differentiatedTitleSuggestion": "错因诊断支持精准讲评的实践研究"
+        }
+      },
+      {
+        "topicId": "topic-sum-002",
+        "topicTitle": "即时反馈支持课堂调控的实践研究",
+        "topicType": "summative",
+        "researchQuestion": "如何基于即时反馈与课堂调控提炼可持续研究的课堂改进问题？",
+        "existingBasis": [
+          {
+            "materialId": "mat-002",
+            "basis": "已有材料显示：记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          }
+        ],
+        "innovationPoints": [
+          "把已有课例、反思或成果聚合为可追踪的问题链和证据链。"
+        ],
+        "feasibility": {
+          "score": 4,
+          "risks": [
+            "缺少连续课堂观察、学生作品或数据记录。"
+          ],
+          "neededMaterials": [
+            "课堂观察表",
+            "学生错题样本",
+            "讲评调整记录"
+          ]
+        },
+        "keywords": [
+          "即时反馈",
+          "课堂投票",
+          "讲评",
+          "小学数学"
+        ],
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "已有材料显示：记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "课堂观察表",
+            "学生错题样本",
+            "讲评调整记录"
+          ],
+          "upgradePath": [
+            "把已有课例或反思整理为材料摘要和问题链。",
+            "补充至少一轮连续课堂观察、学生作品或错题样本。",
+            "明确研究方法、对象范围和阶段性成果形态。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-001",
+          "nearestGrantTitle": "小学数学课堂即时反馈促进学生深度学习的实践研究",
+          "similarityScore": 0.4,
+          "riskLevel": "medium",
+          "differenceStrategy": "存在部分主题重合；建议若用户研究错因诊断，应突出错因分类和课堂调控机制。",
+          "differentiatedTitleSuggestion": "即时反馈支持课堂调控的实践研究"
+        }
+      },
+      {
+        "topicId": "topic-sum-003",
+        "topicTitle": "错因诊断支持精准讲评的实践研究：材料转化路径",
+        "topicType": "summative",
+        "researchQuestion": "如何基于错因诊断与精准讲评提炼可持续研究的课堂改进问题？",
+        "existingBasis": [
+          {
+            "materialId": "mat-001",
+            "basis": "已有材料显示：围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。"
+          },
+          {
+            "materialId": "mat-002",
+            "basis": "已有材料显示：记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          }
+        ],
+        "innovationPoints": [
+          "把已有课例、反思或成果聚合为可追踪的问题链和证据链。"
+        ],
+        "feasibility": {
+          "score": 4,
+          "risks": [
+            "缺少连续课堂观察、学生作品或数据记录。"
+          ],
+          "neededMaterials": [
+            "课堂观察表",
+            "学生错题样本",
+            "讲评调整记录"
+          ]
+        },
+        "keywords": [
+          "错因分析",
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "已有材料显示：围绕通分错误和约分遗漏设计课堂诊断，记录学生在通分、约分和结果解释中的典型表现。",
+            "已有材料显示：记录了课堂投票和错因分类活动的效果，发现即时反馈能帮助教师调整讲评顺序。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "课堂观察表",
+            "学生错题样本",
+            "讲评调整记录"
+          ],
+          "upgradePath": [
+            "把已有课例或反思整理为材料摘要和问题链。",
+            "补充至少一轮连续课堂观察、学生作品或错题样本。",
+            "明确研究方法、对象范围和阶段性成果形态。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-001",
+          "nearestGrantTitle": "小学数学课堂即时反馈促进学生深度学习的实践研究",
+          "similarityScore": 0.14,
+          "riskLevel": "low",
+          "differenceStrategy": "与样例立项题相似度较低，仍需在申报书中说明研究对象、方法和成果形态。",
+          "differentiatedTitleSuggestion": "错因诊断支持精准讲评的实践研究：材料转化路径"
+        }
+      },
+      {
+        "topicId": "topic-plan-001",
+        "topicTitle": "小学数学课堂即时反馈支持错因诊断的实践研究",
+        "topicType": "planning",
+        "researchQuestion": "未来 1-3 年如何围绕该课堂问题形成连续实践和证据积累？",
+        "existingBasis": [
+          {
+            "basis": "依据教师画像和实践问题库生成，尚需用户材料进一步确认。"
+          }
+        ],
+        "innovationPoints": [
+          "从实践问题、证据采集和成果形态三个维度规划研究。"
+        ],
+        "feasibility": {
+          "score": 3,
+          "risks": [
+            "需要连续课时观察记录，单节课例不足以支撑结论。",
+            "需要明确学生错因分类标准，避免只做经验描述。"
+          ],
+          "neededMaterials": [
+            "错题样本",
+            "课堂观察表",
+            "讲评调整记录",
+            "学生访谈或学习单"
+          ]
+        },
+        "keywords": [
+          "课堂反馈滞后",
+          "错因记录分散",
+          "小学数学",
+          "实践研究"
+        ],
+        "nextReadingQuestions": [
+          "该主题已有研究主要采用哪些方法？",
+          "需要收集哪些课堂证据？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "依据教师画像和实践问题库生成，尚需用户材料进一步确认。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "错题样本",
+            "课堂观察表",
+            "讲评调整记录",
+            "学生访谈或学习单"
+          ],
+          "upgradePath": [
+            "把已有课例或反思整理为材料摘要和问题链。",
+            "补充至少一轮连续课堂观察、学生作品或错题样本。",
+            "明确研究方法、对象范围和阶段性成果形态。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-001",
+          "nearestGrantTitle": "小学数学课堂即时反馈促进学生深度学习的实践研究",
+          "similarityScore": 0.29,
+          "riskLevel": "low",
+          "differenceStrategy": "与样例立项题相似度较低，仍需在申报书中说明研究对象、方法和成果形态。",
+          "differentiatedTitleSuggestion": "小学数学课堂即时反馈支持错因诊断的实践研究"
+        }
+      },
+      {
+        "topicId": "topic-plan-002",
+        "topicTitle": "基于学习证据的小学数学错因讲评流程优化研究",
+        "topicType": "planning",
+        "researchQuestion": "未来 1-3 年如何围绕该课堂问题形成连续实践和证据积累？",
+        "existingBasis": [
+          {
+            "basis": "依据教师画像和实践问题库生成，尚需用户材料进一步确认。"
+          }
+        ],
+        "innovationPoints": [
+          "从实践问题、证据采集和成果形态三个维度规划研究。"
+        ],
+        "feasibility": {
+          "score": 3,
+          "risks": [
+            "需要连续课时观察记录，单节课例不足以支撑结论。",
+            "需要明确学生错因分类标准，避免只做经验描述。"
+          ],
+          "neededMaterials": [
+            "错题样本",
+            "课堂观察表",
+            "讲评调整记录",
+            "学生访谈或学习单"
+          ]
+        },
+        "keywords": [
+          "课堂反馈滞后",
+          "错因记录分散",
+          "小学数学",
+          "实践研究"
+        ],
+        "nextReadingQuestions": [
+          "该主题已有研究主要采用哪些方法？",
+          "需要收集哪些课堂证据？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "依据教师画像和实践问题库生成，尚需用户材料进一步确认。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "错题样本",
+            "课堂观察表",
+            "讲评调整记录",
+            "学生访谈或学习单"
+          ],
+          "upgradePath": [
+            "把已有课例或反思整理为材料摘要和问题链。",
+            "补充至少一轮连续课堂观察、学生作品或错题样本。",
+            "明确研究方法、对象范围和阶段性成果形态。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-003",
+          "nearestGrantTitle": "课堂观察支持小学数学精准讲评的行动研究",
+          "similarityScore": 0.22,
+          "riskLevel": "low",
+          "differenceStrategy": "与样例立项题相似度较低，仍需在申报书中说明研究对象、方法和成果形态。",
+          "differentiatedTitleSuggestion": "基于学习证据的小学数学错因讲评流程优化研究"
+        }
+      }
+    ],
+    "topicEvaluationReport": {
+      "materialEvidenceCoverage": 0.6,
+      "clusteredMaterialCoverage": 1.0,
+      "materialClusterChecks": [
+        {
+          "clusterId": "cluster-001",
+          "materialCount": 2,
+          "signalCount": 4
+        },
+        {
+          "clusterId": "cluster-002",
+          "materialCount": 1,
+          "signalCount": 3
+        }
+      ],
+      "researchTrajectoryCheck": {
+        "stage": "theme_consolidation",
+        "sourceMaterialCount": 2,
+        "futureStepCount": 3
+      },
+      "differentiationChecks": [
+        {
+          "topicId": "topic-sum-001",
+          "nearestGrantId": "grant-demo-001",
+          "similarityScore": 0.14,
+          "riskLevel": "low"
+        },
+        {
+          "topicId": "topic-sum-002",
+          "nearestGrantId": "grant-demo-001",
+          "similarityScore": 0.4,
+          "riskLevel": "medium"
+        },
+        {
+          "topicId": "topic-sum-003",
+          "nearestGrantId": "grant-demo-001",
+          "similarityScore": 0.14,
+          "riskLevel": "low"
+        },
+        {
+          "topicId": "topic-plan-001",
+          "nearestGrantId": "grant-demo-001",
+          "similarityScore": 0.29,
+          "riskLevel": "low"
+        },
+        {
+          "topicId": "topic-plan-002",
+          "nearestGrantId": "grant-demo-003",
+          "similarityScore": 0.22,
+          "riskLevel": "low"
+        }
+      ],
+      "basisGapChecks": [
+        {
+          "topicId": "topic-sum-001",
+          "gapCount": 3,
+          "upgradeStepCount": 3
+        },
+        {
+          "topicId": "topic-sum-002",
+          "gapCount": 3,
+          "upgradeStepCount": 3
+        },
+        {
+          "topicId": "topic-sum-003",
+          "gapCount": 3,
+          "upgradeStepCount": 3
+        },
+        {
+          "topicId": "topic-plan-001",
+          "gapCount": 4,
+          "upgradeStepCount": 3
+        },
+        {
+          "topicId": "topic-plan-002",
+          "gapCount": 4,
+          "upgradeStepCount": 3
+        }
+      ],
+      "notes": [
+        "总结性选题来自用户材料；规划性选题来自教师画像和实践问题库；差异化仅基于本地立项样本做首轮降重提示。"
+      ]
+    }
+  },
+  "handoff": {
+    "topicCandidates": [
+      {
+        "topicId": "topic-sum-001",
+        "topicTitle": "错因诊断支持精准讲评的实践研究",
+        "topicType": "summative",
+        "keywords": [
+          "错因分析",
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "researchQuestion": "如何基于错因诊断与精准讲评提炼可持续研究的课堂改进问题？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 4,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ]
+      },
+      {
+        "topicId": "topic-sum-002",
+        "topicTitle": "即时反馈支持课堂调控的实践研究",
+        "topicType": "summative",
+        "keywords": [
+          "即时反馈",
+          "课堂投票",
+          "讲评",
+          "小学数学"
+        ],
+        "researchQuestion": "如何基于即时反馈与课堂调控提炼可持续研究的课堂改进问题？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 4,
+        "riskLevel": "medium",
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ]
+      },
+      {
+        "topicId": "topic-sum-003",
+        "topicTitle": "错因诊断支持精准讲评的实践研究：材料转化路径",
+        "topicType": "summative",
+        "keywords": [
+          "错因分析",
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "researchQuestion": "如何基于错因诊断与精准讲评提炼可持续研究的课堂改进问题？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 4,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ]
+      },
+      {
+        "topicId": "topic-plan-001",
+        "topicTitle": "小学数学课堂即时反馈支持错因诊断的实践研究",
+        "topicType": "planning",
+        "keywords": [
+          "课堂反馈滞后",
+          "错因记录分散",
+          "小学数学",
+          "实践研究"
+        ],
+        "researchQuestion": "未来 1-3 年如何围绕该课堂问题形成连续实践和证据积累？",
+        "evidenceStatus": "planning_needs_materials",
+        "feasibilityScore": 3,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "该主题已有研究主要采用哪些方法？",
+          "需要收集哪些课堂证据？"
+        ]
+      },
+      {
+        "topicId": "topic-plan-002",
+        "topicTitle": "基于学习证据的小学数学错因讲评流程优化研究",
+        "topicType": "planning",
+        "keywords": [
+          "课堂反馈滞后",
+          "错因记录分散",
+          "小学数学",
+          "实践研究"
+        ],
+        "researchQuestion": "未来 1-3 年如何围绕该课堂问题形成连续实践和证据积累？",
+        "evidenceStatus": "planning_needs_materials",
+        "feasibilityScore": 3,
+        "riskLevel": "low",
+        "nextReadingQuestions": [
+          "该主题已有研究主要采用哪些方法？",
+          "需要收集哪些课堂证据？"
+        ]
+      }
+    ],
+    "materialClusters": [
+      {
+        "clusterId": "cluster-001",
+        "clusterTitle": "错因诊断与精准讲评",
+        "materialIds": [
+          "mat-001",
+          "mat-002"
+        ],
+        "coreSignals": [
+          "错因分析",
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "currentStage": "theme_consolidation"
+      },
+      {
+        "clusterId": "cluster-002",
+        "clusterTitle": "即时反馈与课堂调控",
+        "materialIds": [
+          "mat-002"
+        ],
+        "coreSignals": [
+          "即时反馈",
+          "课堂投票",
+          "讲评"
+        ],
+        "currentStage": "material_accumulation"
+      }
+    ],
+    "researchTrajectory": {
+      "trajectoryId": "trajectory-001",
+      "stage": "theme_consolidation",
+      "dominantThemes": [
+        "错因诊断与精准讲评",
+        "即时反馈与课堂调控"
+      ],
+      "sourceMaterialIds": [
+        "mat-001",
+        "mat-002"
+      ]
+    },
+    "keywords": [
+      "错因分析",
+      "即时反馈",
+      "课堂投票",
+      "讲评",
+      "小学数学",
+      "课堂反馈滞后",
+      "错因记录分散",
+      "实践研究"
+    ],
+    "readingQuestions": [
+      "课堂即时反馈如何支持教师调整教学？",
+      "错因诊断如何转化为讲评策略？",
+      "该主题已有研究主要采用哪些方法？",
+      "需要收集哪些课堂证据？"
+    ]
+  },
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "summative_material_ref",
+        "status": "pass"
+      },
+      {
+        "id": "topic_risks_or_materials",
+        "status": "pass"
+      }
+    ],
+    "warnings": [],
+    "metrics": {
+      "topicCount": 5,
+      "summativeCount": 3,
+      "planningCount": 2,
+      "materialEvidenceCoverage": 0.6,
+      "feasibilityWarnings": 5,
+      "basisGapCount": 5,
+      "differentiationCheckCount": 5,
+      "highSimilarityCount": 0,
+      "materialClusterCount": 2,
+      "clusteredMaterialCoverage": 1.0,
+      "trajectoryStepCount": 3
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 2,
+    "verifiedSourceCount": 2,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "补充连续课堂观察记录以增强可行性论证。"
+  ]
+}

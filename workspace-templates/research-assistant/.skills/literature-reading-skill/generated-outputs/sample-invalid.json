@@ -1,0 +1,145 @@
+{
+  "requestId": "req-literature-reading-invalid-001",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "evidence_carding",
+  "summary": "错误示例：metadata-only 文献被生成了支撑性证据卡。",
+  "result": {
+    "literatureRecords": [
+      {
+        "paperId": "paper-demo-003",
+        "title": "过程性评价支持课堂教学改进的实践路径",
+        "authors": [
+          "示例作者三"
+        ],
+        "year": 2021,
+        "journal": "教育评价示例",
+        "doi": "",
+        "keywords": [
+          "过程性评价",
+          "课堂改进",
+          "学习证据"
+        ],
+        "abstract": "",
+        "sourceStatus": "whitelist",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      }
+    ],
+    "quickReadCards": [],
+    "deepReadCards": [],
+    "comparisonMatrix": [],
+    "evidenceCards": [
+      {
+        "cardId": "ec-invalid-001",
+        "claim": "过程性评价能显著提升课堂质量",
+        "evidenceText": "关键词命中课堂改进。",
+        "paperId": "paper-demo-003",
+        "quoteLocation": "metadata",
+        "supportType": "direct_support",
+        "evidenceLevel": "metadata_verified",
+        "usableFor": [
+          "论文结论"
+        ],
+        "limits": []
+      }
+    ]
+  },
+  "handoff": {
+    "literatureRecords": [
+      "paper-demo-003"
+    ],
+    "evidenceCards": []
+  },
+  "qualityReport": {
+    "status": "failed",
+    "checks": [
+      {
+        "id": "expected_invalid_fixture",
+        "status": "fail",
+        "message": "预期 validate 失败的反例样例。"
+      }
+    ],
+    "warnings": [
+      "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+    ],
+    "metrics": {
+      "literatureHitCount": 1,
+      "metadataOnlyCount": 1,
+      "abstractAvailableCount": 0,
+      "fulltextAvailableCount": 0,
+      "evidenceCardCount": 1
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [],
+  "status": "failed",
+  "warnings": [
+    "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-literature-reading-skill",
+    "skillId": "literature-reading-skill",
+    "taskIntent": "evidence_carding",
+    "dataSources": [
+      {
+        "sourceId": "literature-index-sample",
+        "sourceName": "本地教育文献索引样例",
+        "sourceType": "local_mock",
+        "dataType": "literature_metadata_index",
+        "recordCount": 4,
+        "authorizationStatus": "mock_sample",
+        "version": "edu-lit-mock-2026-05",
+        "limitations": [
+          "模拟大型文献库检索结果，不代表真实授权库完整覆盖。"
+        ]
+      },
+      {
+        "sourceId": "literature-reading-whitelist",
+        "sourceName": "文献阅读白名单样例",
+        "sourceType": "local_sample",
+        "dataType": "literature_whitelist",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "用于流程测试和文本可用性分级，真实引用前需接入授权库。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-whitelist",
+        "sourceName": "论文写作共享白名单样例",
+        "sourceType": "local_sample",
+        "dataType": "literature_whitelist",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "与论文写作共用的样例白名单，不能代表完整文献检索。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前文献索引和白名单包含 mock/local sample 数据；EvidenceCard 只能在文本可用性满足规则时生成。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "evidence_carding",
+    "sampleFile": "agent_cases/literature-reading-skill/generated-outputs/sample-invalid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/literature-reading-skill/generated-outputs/sample-invalid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

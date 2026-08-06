@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "description": "地理学科错误模式库（仅计算题型）",
+  "errorCategories": [
+    {
+      "categoryId": "geo-time-calculation",
+      "categoryName": "时区与时差计算错误",
+      "description": "区时、时区、地方时计算中的错误",
+      "patterns": [
+        {
+          "id": "err-geo-time-zone",
+          "name": "时区计算错误",
+          "knowledgePointIds": ["geo-time-zone", "geo-earth-rotation"],
+          "symptom": "时区数量计算错误，或东西时区判断错误",
+          "likelyCause": "不理解经度与时区的换算关系，或东加西减规则混淆",
+          "diagnosisSignals": ["时区相差数计算错误", "跨日界线未调整", "东加西减用反"],
+          "hintTemplate": "相差1个时区，时间相差1小时。东边的时间早，要加；西边的时间晚，要减。",
+          "remediationSteps": [
+            "时区计算：经度÷15°=时区数（四舍五入到整数）",
+            "时差计算：两地时区数之差=时差",
+            "东加西减：求东边时区的时间=西边时间+时差"
+          ]
+        },
+        {
+          "id": "err-geo-local-time",
+          "name": "地方时计算错误",
+          "knowledgePointIds": ["geo-local-time", "geo-longitude"],
+          "symptom": "根据经度计算地方时出错",
+          "likelyCause": "不理解经度相差15°时间相差1小时，或东西方向判断错误",
+          "diagnosisSignals": ["经度差转时间差错误", "东西方向判断错", "未考虑跨越日期"],
+          "hintTemplate": "经度相差15°，地方时相差1小时。经度相差1°，时间相差4分钟。",
+          "remediationSteps": [
+            "经度差转时间差：相差经度÷15°=相差小时数",
+            "判断方向：东边经度大，地方时早；西边经度小，地方时晚",
+            "跨日期处理：向东跨日界线-1天，向西跨日界线+1天"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "geo-scale-calculation",
+      "categoryName": "比例尺计算错误",
+      "description": "比例尺换算、实际距离计算中的错误",
+      "patterns": [
+        {
+          "id": "err-geo-scale-conversion",
+          "name": "比例尺单位换算错误",
+          "knowledgePointIds": ["geo-scale", "geo-map"],
+          "symptom": "图上距离与实际距离换算时单位错误",
+          "likelyCause": "不理解比例尺是无单位的比，或单位换算不熟练",
+          "diagnosisSignals": ["cm和km混用", "比例尺公式用错", "结果数量级差很多"],
+          "hintTemplate": "比例尺=图上距离/实际距离，两边单位要统一。1km=100000cm。",
+          "remediationSteps": [
+            "单位统一：把km换算成cm（1km=100000cm）",
+            "公式：实际距离=图上距离÷比例尺",
+            "检查：结果的数量级是否合理（一般不会是几米或几万公里）"
+          ]
+        }
+      ]
+    }
+  ]
+}

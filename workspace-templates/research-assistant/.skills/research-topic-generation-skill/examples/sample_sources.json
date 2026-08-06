@@ -1,0 +1,93 @@
+[
+  {
+    "source_id": "policy:2024-ai-edu",
+    "source_type": "政策热点",
+    "source_trust": 0.92,
+    "timestamp": "2024-04",
+    "entities": [
+      {"name": "人工智能赋能课堂评价", "type": "研究主题", "aliases": ["AI课堂评价", "智能评价"]},
+      {"name": "形成性评价", "type": "研究方法", "aliases": ["过程性评价"]},
+      {"name": "教师数字素养", "type": "能力要素", "aliases": []}
+    ],
+    "relations": [
+      {"source": "人工智能赋能课堂评价", "target": "形成性评价", "type": "关联"},
+      {"source": "人工智能赋能课堂评价", "target": "教师数字素养", "type": "依赖"}
+    ]
+  },
+  {
+    "source_id": "paper:2023-learning-analytics",
+    "source_type": "论文",
+    "source_trust": 0.78,
+    "timestamp": "2023",
+    "entities": [
+      {"name": "学习分析", "type": "研究方法", "aliases": ["learning analytics"]},
+      {"name": "课堂互动数据", "type": "数据来源", "aliases": ["课堂行为数据"]},
+      {"name": "个性化反馈", "type": "研究主题", "aliases": ["精准反馈"]}
+    ],
+    "relations": [
+      {"source": "学习分析", "target": "课堂互动数据", "type": "采用"},
+      {"source": "学习分析", "target": "个性化反馈", "type": "支持"},
+      {"source": "个性化反馈", "target": "形成性评价", "type": "关联"}
+    ]
+  },
+  {
+    "source_id": "project:2022-classroom-observation",
+    "source_type": "立项题",
+    "source_trust": 0.82,
+    "timestamp": "2022",
+    "entities": [
+      {"name": "课堂观察", "type": "研究方法", "aliases": ["课堂观察量表"]},
+      {"name": "教师专业发展", "type": "研究主题", "aliases": []},
+      {"name": "小学数学课堂", "type": "教育情境", "aliases": ["小学数学"]}
+    ],
+    "relations": [
+      {"source": "课堂观察", "target": "教师专业发展", "type": "支持"},
+      {"source": "课堂观察", "target": "小学数学课堂", "type": "适用"}
+    ]
+  },
+  {
+    "source_id": "case:2024-primary-math",
+    "source_type": "教学案例",
+    "source_trust": 0.68,
+    "timestamp": "2024-09",
+    "entities": [
+      {"name": "小学数学课堂", "type": "教育情境", "aliases": ["小学数学"]},
+      {"name": "课堂提问质量", "type": "指标要素", "aliases": ["提问质量"]},
+      {"name": "学生课堂参与", "type": "指标要素", "aliases": ["课堂参与度"]}
+    ],
+    "relations": [
+      {"source": "小学数学课堂", "target": "课堂提问质量", "type": "包含"},
+      {"source": "小学数学课堂", "target": "学生课堂参与", "type": "包含"}
+    ]
+  },
+  {
+    "source_id": "paper:2021-formative-feedback",
+    "source_type": "论文",
+    "source_trust": 0.76,
+    "timestamp": "2021",
+    "entities": [
+      {"name": "形成性评价", "type": "研究方法", "aliases": ["过程性评价"]},
+      {"name": "学生课堂参与", "type": "指标要素", "aliases": ["课堂参与度"]},
+      {"name": "学习动机", "type": "变量要素", "aliases": []}
+    ],
+    "relations": [
+      {"source": "形成性评价", "target": "学生课堂参与", "type": "影响"},
+      {"source": "学生课堂参与", "target": "学习动机", "type": "关联"}
+    ]
+  },
+  {
+    "source_id": "problem:2025-school",
+    "source_type": "学校实践问题",
+    "source_trust": 0.7,
+    "timestamp": "2025-02",
+    "entities": [
+      {"name": "作业反馈滞后", "type": "实践问题", "aliases": ["反馈不及时"]},
+      {"name": "个性化反馈", "type": "研究主题", "aliases": ["精准反馈"]},
+      {"name": "小学数学课堂", "type": "教育情境", "aliases": ["小学数学"]}
+    ],
+    "relations": [
+      {"source": "作业反馈滞后", "target": "个性化反馈", "type": "需求"},
+      {"source": "作业反馈滞后", "target": "小学数学课堂", "type": "发生于"}
+    ]
+  }
+]

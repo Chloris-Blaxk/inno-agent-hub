@@ -1,0 +1,18 @@
+{
+  "subject": "物理",
+  "grade": "八年级",
+  "topic": "杠杆原理在生活中的应用",
+  "innovationType": "PBL",
+  "durationMin": 40,
+  "constraints": [
+    "普通教室",
+    "小组合作",
+    "需要投影设备"
+  ],
+  "requirements": "根据原有教案重新生成一份 PBL 教案。",
+  "confirmedContext": {
+    "drivingQuestionDirection": "如何为学校厨房设计一个便于开启大桶食用油盖的省力辅助工具？",
+    "finalProductType": "",
+    "projectSpan": "单课时40分钟"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "requestId": "req-paper-writing-citation-ready-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "sourceRequest": "帮我确认“课堂即时反馈有助于教师调整教学决策”是否有可引用来源。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "",
+    "existingAchievements": [],
+    "availableCycle": "",
+    "constraints": []
+  },
+  "input": {
+    "queryText": "课堂即时反馈有助于教师调整教学决策。",
+    "draftText": "",
+    "claims": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈有助于教师调整教学决策。"
+      }
+    ],
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

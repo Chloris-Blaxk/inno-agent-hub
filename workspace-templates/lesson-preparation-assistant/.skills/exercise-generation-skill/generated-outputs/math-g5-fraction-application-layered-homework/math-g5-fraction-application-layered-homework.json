@@ -1,0 +1,920 @@
+{
+  "exerciseMeta": {
+    "title": "分数加减法应用 分层作业",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第3课时",
+    "topic": "分数加减法应用",
+    "taskType": "layered_homework",
+    "questionCount": 9,
+    "source": "internal-sample-seed-question-bank"
+  },
+  "blueprint": {
+    "taskType": "layered_homework",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 3,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 3,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      },
+      {
+        "layer": "C",
+        "name": "拓展层",
+        "targetCount": 3,
+        "difficultyRange": [
+          3,
+          4
+        ],
+        "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+        "cognitiveLevel": "迁移"
+      }
+    ],
+    "questionTypes": [
+      "应用题",
+      "比较题",
+      "判断题",
+      "填空题"
+    ],
+    "layerTargets": {
+      "A": 3,
+      "B": 3,
+      "C": 3
+    },
+    "questionTypeTargets": {
+      "应用题": 6,
+      "比较题": 1,
+      "判断题": 1,
+      "填空题": 1
+    },
+    "difficultyTargets": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 3
+    },
+    "strictBlueprint": false,
+    "knowledgePointIds": [
+      "math-g5-fraction-application"
+    ],
+    "lessonBoundary": "解决一步或两步简单实际问题，能说明数量关系；不引入复杂方程建模。",
+    "requirements": "围绕分数加减法实际问题生成三层作业，每层 3 题，附答案、分步解析、常见错因和讲评建议。"
+  },
+  "questions": [
+    {
+      "sourceId": "seed-app-a-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "小华走了 1/4 千米，又走了 1/2 千米。他一共走了多少千米？",
+      "answer": "3/4 千米",
+      "solutionSteps": [
+        "求一共走了多少，用加法：1/4 + 1/2。",
+        "把 1/2 通分为 2/4。",
+        "1/4 + 2/4 = 3/4 千米。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-unit-missing",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能写单位"
+      ],
+      "teachingNote": "答案必须带“千米”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q001"
+    },
+    {
+      "sourceId": "seed-app-a-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一本书，第一天看了 5/6，第二天比第一天少看了 1/3。第二天看了全书的几分之几？",
+      "answer": "1/2",
+      "solutionSteps": [
+        "求第二天看了多少，用减法：5/6 - 1/3。",
+        "1/3 = 2/6。",
+        "5/6 - 2/6 = 3/6 = 1/2。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能理解“少看”用减法",
+        "能通分",
+        "能约分"
+      ],
+      "teachingNote": "圈出“比第一天少”帮助判断运算。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q002"
+    },
+    {
+      "sourceId": "seed-app-a-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "一块蛋糕，小明吃了 1/5，小红吃了 2/5。两人一共吃了这块蛋糕的几分之几？",
+      "answer": "3/5",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：1/5 + 2/5。",
+        "同分母分数相加，得到 3/5。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确相加",
+        "能写清对象"
+      ],
+      "teachingNote": "追问“3/5 是谁的 3/5”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q003"
+    },
+    {
+      "sourceId": "seed-app-b-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一桶油，第一次用去 1/6，第二次用去 1/4。两次一共用去几分之几？还剩几分之几？",
+      "answer": "一共用去 5/12，还剩 7/12。",
+      "solutionSteps": [
+        "先求用去总量：1/6 + 1/4 = 2/12 + 3/12 = 5/12。",
+        "把整桶油看作 1，即 12/12。",
+        "12/12 - 5/12 = 7/12。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能先求总量",
+        "能把 1 转化为 12/12",
+        "能求剩余"
+      ],
+      "teachingNote": "两步题要求学生写清先后顺序。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q004"
+    },
+    {
+      "sourceId": "seed-app-b-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一个小组计划完成实验记录的 3/5，已经完成了 1/4。还需要完成几分之几才能达到计划？",
+      "answer": "7/20",
+      "solutionSteps": [
+        "求还差多少，用减法：3/5 - 1/4。",
+        "通分为 12/20 - 5/20。",
+        "结果是 7/20。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能理解“还需要”用减法",
+        "能通分",
+        "能写清达到计划"
+      ],
+      "teachingNote": "区别“达到计划”与“完成全部”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q005"
+    },
+    {
+      "sourceId": "seed-app-b-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一本书，上午看了 2/7，下午看了 1/7。一天共看了几分之几？还剩几分之几没看？",
+      "answer": "共看了 3/7，还剩 4/7。",
+      "solutionSteps": [
+        "先求共看：2/7 + 1/7 = 3/7。",
+        "把全书看作 1，即 7/7。",
+        "7/7 - 3/7 = 4/7。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能求已看总量",
+        "能求剩余",
+        "能写清全书的几分之几"
+      ],
+      "teachingNote": "引导学生使用“已看 + 未看 = 1”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q006"
+    },
+    {
+      "sourceId": "seed-app-c-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "比较 1/2 + 1/6 和 3/4 - 1/8 的大小，并说明相差多少。",
+      "answer": "1/2 + 1/6 更大，相差 1/24。",
+      "solutionSteps": [
+        "1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3。",
+        "3/4 - 1/8 = 6/8 - 1/8 = 5/8。",
+        "2/3 = 16/24，5/8 = 15/24，所以前者大 1/24。"
+      ],
+      "commonErrors": [
+        "err-compare-reference",
+        "err-no-simplify",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能分别计算两式",
+        "能统一分母比较",
+        "能求相差量"
+      ],
+      "teachingNote": "要求学生把比较过程写完整。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q007"
+    },
+    {
+      "sourceId": "seed-app-c-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "判断题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一个项目已经完成 1/4，又完成 5/12。小林说：“已经超过 2/3 了。”他说得对吗？请说明理由。",
+      "answer": "不对，正好完成 2/3，没有超过。",
+      "solutionSteps": [
+        "已完成：1/4 + 5/12 = 3/12 + 5/12 = 8/12。",
+        "8/12 约分为 2/3。",
+        "所以正好是 2/3，不是超过 2/3。"
+      ],
+      "commonErrors": [
+        "err-compare-reference",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能计算已完成量",
+        "能与 2/3 比较",
+        "能说明“正好”"
+      ],
+      "teachingNote": "注意判断题需要准确表述。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q008"
+    },
+    {
+      "sourceId": "seed-app-c-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "填空题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一次活动中，阅读安排了 1/6，讨论安排了 1/4。如果希望阅读、讨论和展示三项一共占 3/4，展示应安排多少？",
+      "answer": "1/3",
+      "solutionSteps": [
+        "先求阅读和讨论共占多少：1/6 + 1/4 = 2/12 + 3/12 = 5/12。",
+        "展示应占：3/4 - 5/12。",
+        "3/4 = 9/12，9/12 - 5/12 = 4/12 = 1/3。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能先求已安排量",
+        "能从目标量中相减",
+        "能约分"
+      ],
+      "teachingNote": "这是逆向应用题，先明确目标总量。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。",
+      "id": "q009"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "3/4 千米",
+      "solutionSteps": [
+        "求一共走了多少，用加法：1/4 + 1/2。",
+        "把 1/2 通分为 2/4。",
+        "1/4 + 2/4 = 3/4 千米。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能写单位"
+      ]
+    },
+    {
+      "questionId": "q002",
+      "answer": "1/2",
+      "solutionSteps": [
+        "求第二天看了多少，用减法：5/6 - 1/3。",
+        "1/3 = 2/6。",
+        "5/6 - 2/6 = 3/6 = 1/2。"
+      ],
+      "scorePoints": [
+        "能理解“少看”用减法",
+        "能通分",
+        "能约分"
+      ]
+    },
+    {
+      "questionId": "q003",
+      "answer": "3/5",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：1/5 + 2/5。",
+        "同分母分数相加，得到 3/5。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确相加",
+        "能写清对象"
+      ]
+    },
+    {
+      "questionId": "q004",
+      "answer": "一共用去 5/12，还剩 7/12。",
+      "solutionSteps": [
+        "先求用去总量：1/6 + 1/4 = 2/12 + 3/12 = 5/12。",
+        "把整桶油看作 1，即 12/12。",
+        "12/12 - 5/12 = 7/12。"
+      ],
+      "scorePoints": [
+        "能先求总量",
+        "能把 1 转化为 12/12",
+        "能求剩余"
+      ]
+    },
+    {
+      "questionId": "q005",
+      "answer": "7/20",
+      "solutionSteps": [
+        "求还差多少，用减法：3/5 - 1/4。",
+        "通分为 12/20 - 5/20。",
+        "结果是 7/20。"
+      ],
+      "scorePoints": [
+        "能理解“还需要”用减法",
+        "能通分",
+        "能写清达到计划"
+      ]
+    },
+    {
+      "questionId": "q006",
+      "answer": "共看了 3/7，还剩 4/7。",
+      "solutionSteps": [
+        "先求共看：2/7 + 1/7 = 3/7。",
+        "把全书看作 1，即 7/7。",
+        "7/7 - 3/7 = 4/7。"
+      ],
+      "scorePoints": [
+        "能求已看总量",
+        "能求剩余",
+        "能写清全书的几分之几"
+      ]
+    },
+    {
+      "questionId": "q007",
+      "answer": "1/2 + 1/6 更大，相差 1/24。",
+      "solutionSteps": [
+        "1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3。",
+        "3/4 - 1/8 = 6/8 - 1/8 = 5/8。",
+        "2/3 = 16/24，5/8 = 15/24，所以前者大 1/24。"
+      ],
+      "scorePoints": [
+        "能分别计算两式",
+        "能统一分母比较",
+        "能求相差量"
+      ]
+    },
+    {
+      "questionId": "q008",
+      "answer": "不对，正好完成 2/3，没有超过。",
+      "solutionSteps": [
+        "已完成：1/4 + 5/12 = 3/12 + 5/12 = 8/12。",
+        "8/12 约分为 2/3。",
+        "所以正好是 2/3，不是超过 2/3。"
+      ],
+      "scorePoints": [
+        "能计算已完成量",
+        "能与 2/3 比较",
+        "能说明“正好”"
+      ]
+    },
+    {
+      "questionId": "q009",
+      "answer": "1/3",
+      "solutionSteps": [
+        "先求阅读和讨论共占多少：1/6 + 1/4 = 2/12 + 3/12 = 5/12。",
+        "展示应占：3/4 - 5/12。",
+        "3/4 = 9/12，9/12 - 5/12 = 4/12 = 1/3。"
+      ],
+      "scorePoints": [
+        "能先求已安排量",
+        "能从目标量中相减",
+        "能约分"
+      ]
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-application"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-application"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-application": {
+        "questionCount": 9,
+        "questionTypes": {
+          "应用题": 6,
+          "比较题": 1,
+          "判断题": 1,
+          "填空题": 1
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 3,
+        "min": 1,
+        "max": 2,
+        "average": 1.67
+      },
+      "B": {
+        "questionCount": 3,
+        "min": 2,
+        "max": 3,
+        "average": 2.67
+      },
+      "C": {
+        "questionCount": 3,
+        "min": 4,
+        "max": 4,
+        "average": 4.0
+      }
+    },
+    "byDifficulty": {
+      "1": 1,
+      "2": 3,
+      "3": 2,
+      "4": 3
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "含未知数方程求解",
+      "复杂比例推理",
+      "多步百分数应用"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "err-numerator-not-converted",
+      "name": "通分后分子未转换",
+      "relatedQuestionCount": 7,
+      "symptom": "分母变成公分母，但分子仍保留原数。",
+      "remediation": "要求学生写出等值转化过程，例如 1/2 = 3/6。"
+    },
+    {
+      "misconceptionId": "err-operation-choice",
+      "name": "应用题运算选择错误",
+      "relatedQuestionCount": 4,
+      "symptom": "把求一共误判为求剩余，或把比较问题误判为求和。",
+      "remediation": "要求先圈出关键词并写出数量关系式，再计算。"
+    },
+    {
+      "misconceptionId": "err-no-simplify",
+      "name": "结果未约分",
+      "relatedQuestionCount": 4,
+      "symptom": "计算正确但保留 4/8、6/12 等非最简结果。",
+      "remediation": "在每道题最后增加“能否再约分或化简”的自查步骤。"
+    },
+    {
+      "misconceptionId": "err-unit-missing",
+      "name": "答案缺少单位或对象",
+      "relatedQuestionCount": 3,
+      "symptom": "计算结果正确，但没有写米、千米、全书的几分之几等对象。",
+      "remediation": "要求答案末尾回到问题，写清楚“占谁的几分之几”。"
+    },
+    {
+      "misconceptionId": "err-remaining-model",
+      "name": "整体 1 与剩余量关系混乱",
+      "relatedQuestionCount": 2,
+      "symptom": "求还剩多少时没有用 1 减去已用部分，或把已用量当作剩余量。",
+      "remediation": "先写出“剩余 = 1 - 已用总量”，再进行分数计算。"
+    },
+    {
+      "misconceptionId": "err-compare-reference",
+      "name": "比较基准不一致",
+      "relatedQuestionCount": 2,
+      "symptom": "比较两个量时没有统一分母或没有说明比较对象。",
+      "remediation": "先把两个量化成同分母分数，再写出大小关系和相差量。"
+    },
+    {
+      "misconceptionId": "err-multistep-order",
+      "name": "多步应用题步骤顺序错误",
+      "relatedQuestionCount": 1,
+      "symptom": "先求剩余、再求总量等步骤顺序颠倒，导致算式不对应题意。",
+      "remediation": "用“先求什么、再求什么”的两句话拆解题目。"
+    }
+  ],
+  "replacementSuggestions": [
+    {
+      "questionId": "q001",
+      "sourceId": "seed-app-a-003",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-a-002",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        },
+        {
+          "sourceId": "seed-app-a-005",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        },
+        {
+          "sourceId": "seed-app-a-006",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        }
+      ]
+    },
+    {
+      "questionId": "q002",
+      "sourceId": "seed-app-a-004",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-a-002",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        },
+        {
+          "sourceId": "seed-app-a-005",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        },
+        {
+          "sourceId": "seed-app-a-006",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        }
+      ]
+    },
+    {
+      "questionId": "q003",
+      "sourceId": "seed-app-a-001",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-a-002",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        },
+        {
+          "sourceId": "seed-app-a-005",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        },
+        {
+          "sourceId": "seed-app-a-006",
+          "groupId": "sim-app-one-step-001",
+          "methodTag": "一步分数加减应用",
+          "replaceRule": "保持一步求和、求剩余或求差关系，替换对象和单位。"
+        }
+      ]
+    },
+    {
+      "questionId": "q004",
+      "sourceId": "seed-app-b-001",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-b-004",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        },
+        {
+          "sourceId": "seed-app-b-005",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        },
+        {
+          "sourceId": "seed-app-b-006",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        }
+      ]
+    },
+    {
+      "questionId": "q005",
+      "sourceId": "seed-app-b-002",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-b-004",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        },
+        {
+          "sourceId": "seed-app-b-005",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        },
+        {
+          "sourceId": "seed-app-b-006",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        }
+      ]
+    },
+    {
+      "questionId": "q006",
+      "sourceId": "seed-app-b-003",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-b-004",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        },
+        {
+          "sourceId": "seed-app-b-005",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        },
+        {
+          "sourceId": "seed-app-b-006",
+          "groupId": "sim-app-two-step-001",
+          "methodTag": "两步分数加减应用",
+          "replaceRule": "保留先求总量再求剩余、先比较再求差等两步结构。"
+        }
+      ]
+    },
+    {
+      "questionId": "q007",
+      "sourceId": "seed-app-c-004",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-c-001",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        },
+        {
+          "sourceId": "seed-app-c-002",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        },
+        {
+          "sourceId": "seed-app-c-003",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        }
+      ]
+    },
+    {
+      "questionId": "q008",
+      "sourceId": "seed-app-c-008",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-c-001",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        },
+        {
+          "sourceId": "seed-app-c-002",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        },
+        {
+          "sourceId": "seed-app-c-003",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        }
+      ]
+    },
+    {
+      "questionId": "q009",
+      "sourceId": "seed-app-c-010",
+      "alternatives": [
+        {
+          "sourceId": "seed-app-c-001",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        },
+        {
+          "sourceId": "seed-app-c-002",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        },
+        {
+          "sourceId": "seed-app-c-003",
+          "groupId": "sim-app-comprehensive-001",
+          "methodTag": "综合应用与判断说明",
+          "replaceRule": "保留多问、判断、比较或逆向补全结构，替换分数后需检查不超出整体 1。"
+        }
+      ]
+    }
+  ],
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 9 题，请求 9 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_C_count",
+        "status": "pass",
+        "message": "C 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "pass",
+        "message": "题型比例符合目标 {'应用题': 6, '比较题': 1, '判断题': 1, '填空题': 1}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "pass",
+        "message": "难度比例符合目标 {'1': 1, '2': 3, '3': 2, '4': 3}。"
+      },
+      {
+        "id": "post-patch",
+        "status": "pass",
+        "message": "patch_exercise_set.py: 已补全必填字段默认值、去重题目、修复引用、重建 Markdown"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  },
+  "export": {
+    "markdown": "# 分数加减法应用 分层作业\n\n- 学科：数学\n- 年级：五年级\n- 教材：人教版 · 分数的加法和减法 · 第3课时\n- 课题：分数加减法应用\n- 题量：9 题\n\n## 出题蓝图\n\n解决一步或两步简单实际问题，能说明数量关系；不引入复杂方程建模。\n\n- A 层（基础层）：3 题，难度 [1, 2]。能理解题意并完成一步分数加减计算或基础应用。\n- B 层（巩固层）：3 题，难度 [2, 3]。能在常见变式、一步或两步应用题中正确选择方法。\n- C 层（拓展层）：3 题，难度 [3, 4]。能处理多步、比较、判断或解释类问题，并说明理由。\n- 题型目标：{'应用题': 6, '比较题': 1, '判断题': 1, '填空题': 1}\n- 难度目标：{'1': 1, '2': 3, '3': 2, '4': 3}\n\n## 题目\n\n### A 层\n\nq001. 【应用题｜难度 2】小华走了 1/4 千米，又走了 1/2 千米。他一共走了多少千米？\n\nq002. 【应用题｜难度 2】一本书，第一天看了 5/6，第二天比第一天少看了 1/3。第二天看了全书的几分之几？\n\nq003. 【应用题｜难度 1】一块蛋糕，小明吃了 1/5，小红吃了 2/5。两人一共吃了这块蛋糕的几分之几？\n\n### B 层\n\nq004. 【应用题｜难度 3】一桶油，第一次用去 1/6，第二次用去 1/4。两次一共用去几分之几？还剩几分之几？\n\nq005. 【应用题｜难度 3】一个小组计划完成实验记录的 3/5，已经完成了 1/4。还需要完成几分之几才能达到计划？\n\nq006. 【应用题｜难度 2】一本书，上午看了 2/7，下午看了 1/7。一天共看了几分之几？还剩几分之几没看？\n\n### C 层\n\nq007. 【比较题｜难度 4】比较 1/2 + 1/6 和 3/4 - 1/8 的大小，并说明相差多少。\n\nq008. 【判断题｜难度 4】一个项目已经完成 1/4，又完成 5/12。小林说：“已经超过 2/3 了。”他说得对吗？请说明理由。\n\nq009. 【填空题｜难度 4】一次活动中，阅读安排了 1/6，讨论安排了 1/4。如果希望阅读、讨论和展示三项一共占 3/4，展示应安排多少？\n\n## 答案与解析\n\n### A 层\n\n**q001 答案：** 3/4 千米\n1. 求一共走了多少，用加法：1/4 + 1/2。\n2. 把 1/2 通分为 2/4。\n3. 1/4 + 2/4 = 3/4 千米。\n讲评提示：答案必须带“千米”。\n\n**q002 答案：** 1/2\n1. 求第二天看了多少，用减法：5/6 - 1/3。\n2. 1/3 = 2/6。\n3. 5/6 - 2/6 = 3/6 = 1/2。\n讲评提示：圈出“比第一天少”帮助判断运算。\n\n**q003 答案：** 3/5\n1. 求一共吃了多少，用加法：1/5 + 2/5。\n2. 同分母分数相加，得到 3/5。\n讲评提示：追问“3/5 是谁的 3/5”。\n\n### B 层\n\n**q004 答案：** 一共用去 5/12，还剩 7/12。\n1. 先求用去总量：1/6 + 1/4 = 2/12 + 3/12 = 5/12。\n2. 把整桶油看作 1，即 12/12。\n3. 12/12 - 5/12 = 7/12。\n讲评提示：两步题要求学生写清先后顺序。\n\n**q005 答案：** 7/20\n1. 求还差多少，用减法：3/5 - 1/4。\n2. 通分为 12/20 - 5/20。\n3. 结果是 7/20。\n讲评提示：区别“达到计划”与“完成全部”。\n\n**q006 答案：** 共看了 3/7，还剩 4/7。\n1. 先求共看：2/7 + 1/7 = 3/7。\n2. 把全书看作 1，即 7/7。\n3. 7/7 - 3/7 = 4/7。\n讲评提示：引导学生使用“已看 + 未看 = 1”。\n\n### C 层\n\n**q007 答案：** 1/2 + 1/6 更大，相差 1/24。\n1. 1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3。\n2. 3/4 - 1/8 = 6/8 - 1/8 = 5/8。\n3. 2/3 = 16/24，5/8 = 15/24，所以前者大 1/24。\n讲评提示：要求学生把比较过程写完整。\n\n**q008 答案：** 不对，正好完成 2/3，没有超过。\n1. 已完成：1/4 + 5/12 = 3/12 + 5/12 = 8/12。\n2. 8/12 约分为 2/3。\n3. 所以正好是 2/3，不是超过 2/3。\n讲评提示：注意判断题需要准确表述。\n\n**q009 答案：** 1/3\n1. 先求阅读和讨论共占多少：1/6 + 1/4 = 2/12 + 3/12 = 5/12。\n2. 展示应占：3/4 - 5/12。\n3. 3/4 = 9/12，9/12 - 5/12 = 4/12 = 1/3。\n讲评提示：这是逆向应用题，先明确目标总量。\n\n## 覆盖与讲评建议\n\n- math-g5-fraction-application：9 题，题型分布 {'应用题': 6, '比较题': 1, '判断题': 1, '填空题': 1}\n\n- 通分后分子未转换：关联 7 题。要求学生写出等值转化过程，例如 1/2 = 3/6。\n- 应用题运算选择错误：关联 4 题。要求先圈出关键词并写出数量关系式，再计算。\n- 结果未约分：关联 4 题。在每道题最后增加“能否再约分或化简”的自查步骤。\n- 答案缺少单位或对象：关联 3 题。要求答案末尾回到问题，写清楚“占谁的几分之几”。\n- 整体 1 与剩余量关系混乱：关联 2 题。先写出“剩余 = 1 - 已用总量”，再进行分数计算。\n- 比较基准不一致：关联 2 题。先把两个量化成同分母分数，再写出大小关系和相差量。\n- 多步应用题步骤顺序错误：关联 1 题。用“先求什么、再求什么”的两句话拆解题目。\n\n## 换题建议\n\n- q001 可替换为：seed-app-a-002、seed-app-a-005、seed-app-a-006\n- q002 可替换为：seed-app-a-002、seed-app-a-005、seed-app-a-006\n- q003 可替换为：seed-app-a-002、seed-app-a-005、seed-app-a-006\n- q004 可替换为：seed-app-b-004、seed-app-b-005、seed-app-b-006\n- q005 可替换为：seed-app-b-004、seed-app-b-005、seed-app-b-006\n- q006 可替换为：seed-app-b-004、seed-app-b-005、seed-app-b-006\n- q007 可替换为：seed-app-c-001、seed-app-c-002、seed-app-c-003\n- q008 可替换为：seed-app-c-001、seed-app-c-002、seed-app-c-003\n- q009 可替换为：seed-app-c-001、seed-app-c-002、seed-app-c-003\n\n## 质量报告\n\n- question_count：pass，生成 9 题，请求 9 题。\n- duplicate_stem：pass，题干无重复。\n- layer_A_count：pass，A 层生成 3 题，目标 3 题。\n- layer_B_count：pass，B 层生成 3 题，目标 3 题。\n- layer_C_count：pass，C 层生成 3 题，目标 3 题。\n- knowledge_coverage：pass，请求知识点均已覆盖。\n- over_scope：pass，未发现明显超纲风险。\n- question_type_mix：pass，题型比例符合目标 {'应用题': 6, '比较题': 1, '判断题': 1, '填空题': 1}。\n- difficulty_mix：pass，难度比例符合目标 {'1': 1, '2': 3, '3': 2, '4': 3}。\n- post-patch：pass，patch_exercise_set.py: 已补全必填字段默认值、去重题目、修复引用、重建 Markdown\n- 提醒：难度、分层和区分度为规则型近似，不代表真实测量学参数。\n- 提醒：当前 references 为内部示例数据，扩学科前需补充真实授权数据。\n",
+    "format": "markdown"
+  }
+}

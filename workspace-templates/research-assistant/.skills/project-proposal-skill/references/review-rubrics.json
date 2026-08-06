@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "项目申报评审标准与分值权重样例。"
+  },
+  "rubrics": [
+    {
+      "rubricId": "district-project-rubric-demo",
+      "projectLevel": "区级课题",
+      "dimensions": [
+        {"id": "problem_value", "name": "问题价值", "scoreWeight": 20, "criteria": "研究问题来自真实教学场景，具有改进价值。"},
+        {"id": "research_design", "name": "研究设计", "scoreWeight": 25, "criteria": "目标清楚，内容、方法、步骤匹配。"},
+        {"id": "basis_feasibility", "name": "研究基础与可行性", "scoreWeight": 20, "criteria": "团队、课例、数据和成果基础真实可追溯。"},
+        {"id": "innovation", "name": "创新点", "scoreWeight": 15, "criteria": "在对象、方法、工具或成果形态上有明确差异。"},
+        {"id": "outcomes", "name": "预期成果", "scoreWeight": 10, "criteria": "成果形态明确，数量合理。"},
+        {"id": "budget", "name": "经费预算", "scoreWeight": 10, "criteria": "科目合规，用途与研究活动匹配。"}
+      ]
+    }
+  ]
+}
+

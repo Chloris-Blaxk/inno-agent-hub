@@ -1,0 +1,58 @@
+{
+  "requestId": "cli-smoke-paper-writing-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "sourceRequest": "@论文写作助手 诊断这段论文摘要并检查引用证据",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "五六年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参加过校本教研和区级公开课磨课",
+    "existingAchievements": ["校内公开课 2 节", "错因诊断教学反思 3 篇"],
+    "availableCycle": "1 年",
+    "constraints": ["不能新增未提供样本量或显著性结论"]
+  },
+  "input": {
+    "queryText": "课堂即时反馈有助于教师调整教学决策。",
+    "draftText": "摘要：本文旨在研究即时反馈在小学数学讲评课中的应用。教师通过即时投票和错因标签收集学生通分错误、约分遗漏等表现，并据此调整讲评顺序。即时反馈能够显著提升学生数学成绩。\n引言：讲评课中教师需要及时了解学生错因，但已有研究对错因记录如何支持讲评调整关注不足。本研究聚焦即时反馈如何帮助教师调整讲评顺序。\n方法：本研究计划采用课堂观察、学生作业分析和教师反思记录，但尚未写明样本范围和分析方法。\n结果：课堂观察显示，错因分类记录可以帮助教师调整讲评顺序。\n讨论：后续需要说明研究边界。",
+    "claims": [
+      {
+        "claimId": "claim-cli-001",
+        "claimText": "课堂即时反馈有助于教师调整教学决策。"
+      },
+      {
+        "claimId": "claim-cli-002",
+        "claimText": "即时反馈能够显著提升学生数学成绩。"
+      }
+    ],
+    "availableLiteratureRecords": [
+      {
+        "paperId": "paper-demo-001",
+        "title": "课堂即时反馈的教学价值研究",
+        "authors": ["示例作者"],
+        "year": 2023,
+        "journal": "示例期刊",
+        "volume": "12",
+        "issue": "3",
+        "pages": "45-48",
+        "doi": "",
+        "keywords": ["即时反馈", "课堂评价", "教学调整"],
+        "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "abstract_verified"
+      }
+    ],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

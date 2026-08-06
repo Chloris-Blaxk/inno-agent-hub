@@ -1,0 +1,108 @@
+{
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math-g5-fraction-same-denominator-add",
+      "name": "同分母分数加减法",
+      "subject": "数学",
+      "grade": "五年级",
+      "unitId": "pep-math-g5b-u4",
+      "standardIds": [
+        "std-math-g5-fraction-001"
+      ],
+      "prerequisites": [
+        "分数的意义",
+        "分数单位",
+        "同分母分数大小比较",
+        "约分"
+      ],
+      "learningLevel": "掌握",
+      "commonErrors": [
+        "err-same-denom-unit",
+        "err-no-simplify",
+        "err-same-denom-mixed"
+      ],
+      "forbiddenScope": [
+        "异分母分数运算",
+        "分式方程",
+        "代数式通分"
+      ],
+      "competencyTags": [
+        "运算能力",
+        "数感",
+        "推理意识"
+      ],
+      "boundaryNotes": "只处理分母相同或整数 1 可转化为同分母分数的情境。"
+    },
+    {
+      "knowledgePointId": "math-g5-fraction-add",
+      "name": "异分母分数加减法",
+      "subject": "数学",
+      "grade": "五年级",
+      "unitId": "pep-math-g5b-u4",
+      "standardIds": [
+        "std-math-g5-fraction-002"
+      ],
+      "prerequisites": [
+        "分数的意义",
+        "等值分数",
+        "通分",
+        "约分",
+        "同分母分数加减法"
+      ],
+      "learningLevel": "掌握",
+      "commonErrors": [
+        "err-denominator-add",
+        "err-numerator-not-converted",
+        "err-no-simplify",
+        "err-operation-choice"
+      ],
+      "forbiddenScope": [
+        "分式方程",
+        "有理数混合运算",
+        "代数式通分",
+        "复杂最小公倍数证明"
+      ],
+      "competencyTags": [
+        "运算能力",
+        "推理意识",
+        "模型意识"
+      ],
+      "boundaryNotes": "重点是先统一分数单位再加减，不引入代数式通分。"
+    },
+    {
+      "knowledgePointId": "math-g5-fraction-application",
+      "name": "分数加减法应用",
+      "subject": "数学",
+      "grade": "五年级",
+      "unitId": "pep-math-g5b-u4",
+      "standardIds": [
+        "std-math-g5-fraction-003"
+      ],
+      "prerequisites": [
+        "同分母分数加减法",
+        "异分母分数加减法",
+        "整体 1 的意义",
+        "简单数量关系"
+      ],
+      "learningLevel": "应用",
+      "commonErrors": [
+        "err-operation-choice",
+        "err-remaining-model",
+        "err-unit-missing",
+        "err-compare-reference",
+        "err-multistep-order"
+      ],
+      "forbiddenScope": [
+        "含未知数方程求解",
+        "复杂比例推理",
+        "多步百分数应用"
+      ],
+      "competencyTags": [
+        "应用意识",
+        "模型意识",
+        "表达能力"
+      ],
+      "boundaryNotes": "限定在一步或两步分数加减实际问题，允许简单比较和判断理由。"
+    }
+  ]
+}

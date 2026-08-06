@@ -1,0 +1,415 @@
+{
+  "exerciseMeta": {
+    "title": "同分母分数加减法·课堂速测 课堂练习",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第1课时",
+    "topic": "同分母分数加减法·课堂速测",
+    "taskType": "classroom_practice",
+    "questionCount": 5,
+    "source": "InnoSpark-235B-dynamic-generation"
+  },
+  "blueprint": {
+    "taskType": "classroom_practice",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 2,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 3,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      }
+    ],
+    "questionTypes": [
+      "计算题",
+      "判断题"
+    ],
+    "layerTargets": {
+      "A": 2,
+      "B": 3
+    },
+    "questionTypeTargets": {
+      "计算题": 3,
+      "判断题": 2
+    },
+    "difficultyTargets": {
+      "1": 2,
+      "2": 2,
+      "3": 1
+    },
+    "strictBlueprint": false,
+    "knowledgePointIds": [
+      "math-g5-fraction-same-denominator-add"
+    ],
+    "lessonBoundary": "理解分数单位相同才能直接相加减；结果要约成最简分数；假分数可化成整数或带分数。",
+    "requirements": "5分钟课堂速测。只出A层和B层，以计算题为主，加1道判断题。题目简短，适合当堂完成。"
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{4}{9} + \\frac{2}{9} = ?",
+      "answer": "\\frac{6}{9}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相加。",
+        "4 + 2 = 6，所以 \\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。"
+      ],
+      "commonErrors": [
+        "分子分母同时相加",
+        "忘记约分"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加法的计算法则，提醒学生注意结果是否需要约分。",
+      "sourceId": "A1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q002",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一个水桶装了 \\frac{3}{10} 的水，又倒入了 \\frac{5}{10} 的水，现在水桶里有几分之几的水？",
+      "answer": "\\frac{8}{10}",
+      "solutionSteps": [
+        "求现在水桶里有多少水，用加法：\\frac{3}{10} + \\frac{5}{10}。",
+        "分母相同，分子相加：3 + 5 = 8，得 \\frac{8}{10}。"
+      ],
+      "commonErrors": [
+        "误用减法",
+        "混淆单位1"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解题目中的数量关系，明确是求总量，因此用加法。",
+      "sourceId": "A2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q003",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "计算：\\frac{4}{9} + \\frac{2}{9} - \\frac{1}{9} = ?",
+      "answer": "\\frac{5}{9}",
+      "solutionSteps": [
+        "按从左到右顺序计算：\\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。",
+        "\\frac{6}{9} - \\frac{1}{9} = \\frac{5}{9}。",
+        "注意：\\frac{6}{9} 可以约分为 \\frac{2}{3}，但本题要求同分母运算，直接相减更简便。"
+      ],
+      "commonErrors": [
+        "计算顺序错误，先算减法再算加法",
+        "忘记约分（虽然本题答案已最简，但需注意此习惯）"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加减法的运算顺序，以及在混合运算中保持分母不变的原则。",
+      "sourceId": "B1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q004",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一瓶果汁，小明喝了 \\frac{3}{10}，小红喝了 \\frac{4}{10}，还剩这瓶果汁的几分之几？",
+      "answer": "\\frac{3}{10}",
+      "solutionSteps": [
+        "将整瓶果汁看作单位 1，即 \\frac{10}{10}。",
+        "先计算两人一共喝了多少：\\frac{3}{10} + \\frac{4}{10} = \\frac{7}{10}。",
+        "再计算剩余部分：\\frac{10}{10} - \\frac{7}{10} = \\frac{3}{10}。"
+      ],
+      "commonErrors": [
+        "忘记将单位 1 转化为同分母分数（如直接用 1 - \\frac{7}{10} 但未理解其含义）",
+        "计算错误，如分子相加时出错"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解单位 1 在分数应用题中的作用，培养分步解决问题的能力。",
+      "sourceId": "B2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q005",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "判断题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "判断对错：\\frac{5}{12} + \\frac{7}{12} = 1。",
+      "answer": "对",
+      "solutionSteps": [
+        "同分母分数相加，分母不变，分子相加：5 + 7 = 12。",
+        "所以 \\frac{5}{12} + \\frac{7}{12} = \\frac{12}{12} = 1。",
+        "结论：该等式成立。"
+      ],
+      "commonErrors": [
+        "误认为分子相加后需要约分（如错误地将 \\frac{12}{12} 约分为 \\frac{1}{1} 后认为不等于 1）",
+        "计算错误，如分子相加时出错"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "通过判断题形式，强化学生对同分母分数加法结果为 1 的特殊情况的理解，培养严谨的数学思维。",
+      "sourceId": "B3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "\\frac{6}{9}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相加。",
+        "4 + 2 = 6，所以 \\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q002",
+      "answer": "\\frac{8}{10}",
+      "solutionSteps": [
+        "求现在水桶里有多少水，用加法：\\frac{3}{10} + \\frac{5}{10}。",
+        "分母相同，分子相加：3 + 5 = 8，得 \\frac{8}{10}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q003",
+      "answer": "\\frac{5}{9}",
+      "solutionSteps": [
+        "按从左到右顺序计算：\\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。",
+        "\\frac{6}{9} - \\frac{1}{9} = \\frac{5}{9}。",
+        "注意：\\frac{6}{9} 可以约分为 \\frac{2}{3}，但本题要求同分母运算，直接相减更简便。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q004",
+      "answer": "\\frac{3}{10}",
+      "solutionSteps": [
+        "将整瓶果汁看作单位 1，即 \\frac{10}{10}。",
+        "先计算两人一共喝了多少：\\frac{3}{10} + \\frac{4}{10} = \\frac{7}{10}。",
+        "再计算剩余部分：\\frac{10}{10} - \\frac{7}{10} = \\frac{3}{10}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q005",
+      "answer": "对",
+      "solutionSteps": [
+        "同分母分数相加，分母不变，分子相加：5 + 7 = 12。",
+        "所以 \\frac{5}{12} + \\frac{7}{12} = \\frac{12}{12} = 1。",
+        "结论：该等式成立。"
+      ],
+      "scorePoints": 1
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-same-denominator-add": {
+        "questionCount": 5,
+        "questionTypes": {
+          "计算题": 2,
+          "应用题": 2,
+          "判断题": 1
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 2,
+        "min": 1,
+        "max": 2,
+        "average": 1.5
+      },
+      "B": {
+        "questionCount": 3,
+        "min": 2,
+        "max": 3,
+        "average": 2.33
+      }
+    },
+    "byDifficulty": {
+      "1": 1,
+      "2": 3,
+      "3": 1
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "代数式通分",
+      "分式方程",
+      "异分母分数运算"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "计算错误，如分子相加时出错",
+      "name": "计算错误，如分子相加时出错",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分子分母同时相加",
+      "name": "分子分母同时相加",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记约分",
+      "name": "忘记约分",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "误用减法",
+      "name": "误用减法",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "混淆单位1",
+      "name": "混淆单位1",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算顺序错误，先算减法再算加法",
+      "name": "计算顺序错误，先算减法再算加法",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记约分（虽然本题答案已最简，但需注意此习惯）",
+      "name": "忘记约分（虽然本题答案已最简，但需注意此习惯）",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记将单位 1 转化为同分母分数（如直接用 1 - \\frac{7}{10} 但未理解其含义）",
+      "name": "忘记将单位 1 转化为同分母分数（如直接用 1 - \\frac{7}{10} 但未理解其含义）",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "误认为分子相加后需要约分（如错误地将 \\frac{12}{12} 约分为 \\frac{1}{1} 后认为不等于 1）",
+      "name": "误认为分子相加后需要约分（如错误地将 \\frac{12}{12} 约分为 \\frac{1}{1} 后认为不等于 1）",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    }
+  ],
+  "replacementSuggestions": [],
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 5 题，请求 5 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "warn",
+        "message": "题型比例未完全匹配目标 {'计算题': 3, '判断题': 2}，实际 {'计算题': 2, '应用题': 2, '判断题': 1}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "warn",
+        "message": "难度比例未完全匹配目标 {'1': 2, '2': 2, '3': 1}，实际 {'1': 1, '2': 3, '3': 1}。"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "requestId": "req-literature-reading-sample-001",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "literature_discovery",
+  "status": "pass",
+  "summary": "已按 literature_discovery 模式生成文献阅读产物；metadata-only 文献不生成支撑性证据卡。",
+  "inputSummary": {
+    "sourceRequest": "围绕小学数学课堂即时反馈和错因诊断，筛选 5 篇优先阅读文献，并对用户上传摘要生成速读卡。",
+    "researchTopic": "小学数学课堂即时反馈对错因诊断的支持研究",
+    "keywordCount": 3,
+    "availablePaperCount": 2,
+    "sourceFileCount": 0,
+    "assumptions": [],
+    "constraints": {
+      "language": "zh-CN",
+      "citationStyle": "GB/T 7714",
+      "allowExternalSearch": false,
+      "strictEvidence": true
+    }
+  },
+  "warnings": [],
+  "dataSourceReport": {
+    "reportId": "dsr-literature-reading-skill",
+    "skillId": "literature-reading-skill",
+    "taskIntent": "literature_discovery",
+    "dataSources": [
+      {
+        "sourceId": "literature-index-sample",
+        "sourceName": "本地教育文献索引样例",
+        "sourceType": "local_mock",
+        "dataType": "literature_metadata_index",
+        "recordCount": 4,
+        "authorizationStatus": "mock_sample",
+        "version": "edu-lit-mock-2026-05",
+        "limitations": [
+          "模拟大型文献库检索结果，不代表真实授权库完整覆盖。"
+        ]
+      },
+      {
+        "sourceId": "literature-reading-whitelist",
+        "sourceName": "文献阅读白名单样例",
+        "sourceType": "local_sample",
+        "dataType": "literature_whitelist",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "用于流程测试和文本可用性分级，真实引用前需接入授权库。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-whitelist",
+        "sourceName": "论文写作共享白名单样例",
+        "sourceType": "local_sample",
+        "dataType": "literature_whitelist",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "与论文写作共用的样例白名单，不能代表完整文献检索。"
+        ]
+      },
+      {
+        "sourceId": "user-available-papers",
+        "sourceName": "用户提供文献记录",
+        "sourceType": "user_provided",
+        "dataType": "literature_record",
+        "recordCount": 2,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "用户提供文献的题录真实性、授权状态和全文范围需另行确认。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前文献索引和白名单包含 mock/local sample 数据；EvidenceCard 只能在文本可用性满足规则时生成。"
+    ]
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/literature-reading-skill/generated-outputs/render-sample.json",
+      "description": "结构化文献阅读结果"
+    },
+    {
+      "type": "markdown",
+      "path": "agent_cases/literature-reading-skill/generated-outputs/render-sample.md",
+      "description": "教师可读文献阅读报告"
+    }
+  ],
+  "result": {
+    "corpusSearchReport": {
+      "adapterVersion": "research-literature-adapter-v1",
+      "indexName": "edu-lit-mock-2026-05",
+      "indexSource": "local_mock_index",
+      "simulatedCorpusSize": 1500000,
+      "query": {
+        "researchTopic": "小学数学课堂即时反馈对错因诊断的支持研究",
+        "keywords": [
+          "即时反馈",
+          "错因诊断",
+          "小学数学"
+        ],
+        "filters": {
+          "requireReadableText": false
+        }
+      },
+      "candidateCount": 8,
+      "returnedCount": 5,
+      "rankingSignals": [
+        "keyword_overlap",
+        "topic_overlap",
+        "text_availability",
+        "source_verification"
+      ],
+      "topHits": [
+        {
+          "paperId": "paper-index-001",
+          "score": 8,
+          "matchedKeywords": [
+            "即时反馈",
+            "错因诊断",
+            "小学数学"
+          ],
+          "textAvailability": "abstract",
+          "sourceStatus": "external_verified",
+          "selectionReason": "主题匹配且具备可读文本。",
+          "source": "mock-edu-index"
+        },
+        {
+          "paperId": "paper-demo-002",
+          "score": 6,
+          "matchedKeywords": [
+            "错因诊断",
+            "小学数学"
+          ],
+          "textAvailability": "abstract",
+          "sourceStatus": "whitelist",
+          "selectionReason": "主题匹配且具备可读文本。",
+          "source": "paper_writing_whitelist"
+        },
+        {
+          "paperId": "paper-user-001",
+          "score": 5,
+          "matchedKeywords": [
+            "错因诊断",
+            "小学数学"
+          ],
+          "textAvailability": "user_uploaded",
+          "sourceStatus": "user_provided",
+          "selectionReason": "主题匹配且具备可读文本。",
+          "source": "user_available_papers"
+        },
+        {
+          "paperId": "paper-demo-001",
+          "score": 4,
+          "matchedKeywords": [
+            "即时反馈"
+          ],
+          "textAvailability": "abstract",
+          "sourceStatus": "whitelist",
+          "selectionReason": "主题匹配且具备可读文本。",
+          "source": "paper_writing_whitelist"
+        },
+        {
+          "paperId": "paper-index-002",
+          "score": 4,
+          "matchedKeywords": [
+            "小学数学"
+          ],
+          "textAvailability": "fulltext",
+          "sourceStatus": "external_verified",
+          "selectionReason": "主题匹配且具备可读文本。",
+          "source": "mock-edu-index"
+        }
+      ]
+    },
+    "literatureRecords": [
+      {
+        "paperId": "paper-index-001",
+        "title": "小学数学课堂即时反馈与错因诊断的行动研究",
+        "authors": [
+          "索引示例作者一"
+        ],
+        "year": 2024,
+        "journal": "小学数学教育示例",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "错因诊断",
+          "小学数学",
+          "行动研究"
+        ],
+        "abstract": "本文基于小学数学课堂观察，讨论即时反馈信息如何帮助教师识别学生典型错因并调整讲评策略。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "小学数学",
+        "journalTier": "核心期刊样例",
+        "database": "mock-edu-index"
+      },
+      {
+        "paperId": "paper-demo-002",
+        "title": "小学数学错因诊断与针对性讲评策略研究",
+        "authors": [
+          "示例作者二"
+        ],
+        "year": 2022,
+        "journal": "基础教育研究示例",
+        "doi": "",
+        "keywords": [
+          "错因诊断",
+          "小学数学",
+          "讲评策略"
+        ],
+        "abstract": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "database": "paper_writing_whitelist",
+        "volume": "8",
+        "issue": "2",
+        "pages": "33-37"
+      },
+      {
+        "paperId": "paper-user-001",
+        "title": "用户上传：错因分类讲评课例片段",
+        "authors": [
+          "用户上传材料"
+        ],
+        "year": 2024,
+        "journal": "用户上传原文",
+        "doi": "",
+        "keywords": [
+          "错因诊断",
+          "讲评策略",
+          "小学数学"
+        ],
+        "abstract": "",
+        "uploadedText": "该课例围绕小学数学错因分类和针对性讲评展开，教师先收集学生通分错误、约分遗漏等典型错因，再根据错因类型调整讲评顺序。文本未提供正式研究方法和统计结论。",
+        "sourceStatus": "user_provided",
+        "textAvailability": "user_uploaded",
+        "evidenceLevel": "user_text_only",
+        "database": "user_available_papers"
+      },
+      {
+        "paperId": "paper-demo-001",
+        "title": "课堂即时反馈的教学价值研究",
+        "authors": [
+          "示例作者"
+        ],
+        "year": 2023,
+        "journal": "示例期刊",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "课堂评价",
+          "教学调整"
+        ],
+        "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "database": "paper_writing_whitelist",
+        "volume": "12",
+        "issue": "3",
+        "pages": "45-48"
+      },
+      {
+        "paperId": "paper-index-002",
+        "title": "学习证据视角下的小学数学讲评课改进路径",
+        "authors": [
+          "索引示例作者二"
+        ],
+        "year": 2023,
+        "journal": "课堂教学研究示例",
+        "doi": "",
+        "keywords": [
+          "学习证据",
+          "讲评课",
+          "课堂观察",
+          "小学数学"
+        ],
+        "abstract": "研究围绕学习证据采集、错因归类和讲评课改进路径展开，强调过程记录在教师教学调整中的作用。",
+        "fullText": "研究围绕学习证据采集、错因归类和讲评课改进路径展开。教师通过课堂观察、学生作业和讲评记录识别共性错因，并据此调整后续讲评顺序。研究采用课堂观察和案例分析，未报告统计显著性结论。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "fulltext",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "小学数学",
+        "journalTier": "普通期刊样例",
+        "database": "mock-edu-index"
+      }
+    ],
+    "quickReadCards": [],
+    "deepReadCards": [],
+    "deepReadSessions": [],
+    "comparisonMatrix": [],
+    "evidenceCards": []
+  },
+  "handoff": {
+    "literatureRecords": [
+      {
+        "paperId": "paper-index-001",
+        "title": "小学数学课堂即时反馈与错因诊断的行动研究",
+        "authors": [
+          "索引示例作者一"
+        ],
+        "year": 2024,
+        "journal": "小学数学教育示例",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "错因诊断",
+          "小学数学",
+          "行动研究"
+        ],
+        "abstract": "本文基于小学数学课堂观察，讨论即时反馈信息如何帮助教师识别学生典型错因并调整讲评策略。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "小学数学",
+        "journalTier": "核心期刊样例",
+        "database": "mock-edu-index"
+      },
+      {
+        "paperId": "paper-demo-002",
+        "title": "小学数学错因诊断与针对性讲评策略研究",
+        "authors": [
+          "示例作者二"
+        ],
+        "year": 2022,
+        "journal": "基础教育研究示例",
+        "doi": "",
+        "keywords": [
+          "错因诊断",
+          "小学数学",
+          "讲评策略"
+        ],
+        "abstract": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "database": "paper_writing_whitelist",
+        "volume": "8",
+        "issue": "2",
+        "pages": "33-37"
+      },
+      {
+        "paperId": "paper-user-001",
+        "title": "用户上传：错因分类讲评课例片段",
+        "authors": [
+          "用户上传材料"
+        ],
+        "year": 2024,
+        "journal": "用户上传原文",
+        "doi": "",
+        "keywords": [
+          "错因诊断",
+          "讲评策略",
+          "小学数学"
+        ],
+        "abstract": "",
+        "uploadedText": "该课例围绕小学数学错因分类和针对性讲评展开，教师先收集学生通分错误、约分遗漏等典型错因，再根据错因类型调整讲评顺序。文本未提供正式研究方法和统计结论。",
+        "sourceStatus": "user_provided",
+        "textAvailability": "user_uploaded",
+        "evidenceLevel": "user_text_only",
+        "database": "user_available_papers"
+      },
+      {
+        "paperId": "paper-demo-001",
+        "title": "课堂即时反馈的教学价值研究",
+        "authors": [
+          "示例作者"
+        ],
+        "year": 2023,
+        "journal": "示例期刊",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "课堂评价",
+          "教学调整"
+        ],
+        "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "database": "paper_writing_whitelist",
+        "volume": "12",
+        "issue": "3",
+        "pages": "45-48"
+      },
+      {
+        "paperId": "paper-index-002",
+        "title": "学习证据视角下的小学数学讲评课改进路径",
+        "authors": [
+          "索引示例作者二"
+        ],
+        "year": 2023,
+        "journal": "课堂教学研究示例",
+        "doi": "",
+        "keywords": [
+          "学习证据",
+          "讲评课",
+          "课堂观察",
+          "小学数学"
+        ],
+        "abstract": "研究围绕学习证据采集、错因归类和讲评课改进路径展开，强调过程记录在教师教学调整中的作用。",
+        "fullText": "研究围绕学习证据采集、错因归类和讲评课改进路径展开。教师通过课堂观察、学生作业和讲评记录识别共性错因，并据此调整后续讲评顺序。研究采用课堂观察和案例分析，未报告统计显著性结论。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "fulltext",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "小学数学",
+        "journalTier": "普通期刊样例",
+        "database": "mock-edu-index"
+      }
+    ],
+    "evidenceCards": []
+  },
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "task_intent_route",
+        "status": "pass"
+      },
+      {
+        "id": "metadata_no_evidence_card",
+        "status": "pass"
+      },
+      {
+        "id": "evidence_card_backlink",
+        "status": "pass"
+      }
+    ],
+    "warnings": [],
+    "metrics": {
+      "literatureHitCount": 5,
+      "metadataOnlyCount": 0,
+      "abstractAvailableCount": 3,
+      "fulltextAvailableCount": 1,
+      "userUploadedCount": 1,
+      "deepReadCardCount": 0,
+      "deepReadSessionCount": 0,
+      "comparisonRowCount": 0,
+      "evidenceCardCount": 0,
+      "searchCandidateCount": 8,
+      "searchReturnedCount": 5,
+      "priorityReadCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 5,
+    "verifiedSourceCount": 2,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": []
+}

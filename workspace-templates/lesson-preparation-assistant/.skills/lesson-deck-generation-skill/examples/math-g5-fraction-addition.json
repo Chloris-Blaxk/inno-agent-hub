@@ -1,0 +1,26 @@
+{
+  "requestId": "demo-001",
+  "sourceRequest": "帮我生成一个五年级数学异分母分数加减法的课件",
+  "taskIntent": "script",
+  "input": {
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第 1 课时",
+    "topic": "异分母分数加减法",
+    "lessonType": "new_concept",
+    "durationMin": 40,
+    "studentProfile": {
+      "priorKnowledge": ["同分母分数加减法", "通分"],
+      "commonDifficulties": ["分母直接相加", "忘记约分"]
+    },
+    "requirements": "突出通分的本质，包含错误辨析和出门测。"
+  },
+  "options": {
+    "stylePreset": "auto",
+    "outputFormat": "html_preview+deck_json+teacher_script_md+pptx_ready"
+  },
+  "constraints": ["普通教室", "教师电脑投影", "可板书"],
+  "assumptions": ["学生已学通分", "使用人教版教材"]
+}

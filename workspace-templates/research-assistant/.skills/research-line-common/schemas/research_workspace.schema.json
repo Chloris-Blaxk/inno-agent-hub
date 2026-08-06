@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/research_workspace.schema.json",
+  "title": "ResearchWorkspace",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "workspaceId",
+    "topicCandidates",
+    "literatureRecords",
+    "evidenceCards",
+    "qualityReports"
+  ],
+  "properties": {
+    "schemaVersion": {"type": "integer", "minimum": 1},
+    "workspaceId": {"type": "string", "minLength": 1},
+    "sourceOutputCount": {"type": "integer", "minimum": 0},
+    "topicCandidates": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "materialDigests": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "literatureRecords": {
+      "type": "array",
+      "items": {"$ref": "literature_record.schema.json"}
+    },
+    "evidenceCards": {
+      "type": "array",
+      "items": {"$ref": "evidence_card.schema.json"}
+    },
+    "claimChecks": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "paperRevisionSummary": {"type": "object"},
+    "projectFactTables": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "qualityReports": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "contextBudget": {
+      "type": "object",
+      "properties": {
+        "estimatedTokens": {"type": "integer", "minimum": 0},
+        "qualityReportTokens": {"type": "integer", "minimum": 0},
+        "status": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "description": "生物学科错误模式库（计算与推理题型）",
+  "errorCategories": [
+    {
+      "categoryId": "bio-genetics-calculation",
+      "categoryName": "遗传计算错误",
+      "description": "基因频率、遗传概率计算中的错误",
+      "patterns": [
+        {
+          "id": "err-bio-probability-calculation",
+          "name": "遗传概率计算错误",
+          "knowledgePointIds": ["bio-genetics", "bio-probability"],
+          "symptom": "基因型或表型概率计算结果错误",
+          "likelyCause": "不理解分离定律和自由组合定律，或不会用棋盘法",
+          "diagnosisSignals": ["单因素遗传算错比例", "双因素遗传不会用9:3:3:1", "忘记考虑致死情况"],
+          "hintTemplate": "先写出亲代基因型，再用棋盘法或分支法计算子代比例。",
+          "remediationSteps": [
+            "单因素遗传：Aa×Aa → 1AA:2Aa:1aa（基因型），3A_:1aa（表型）",
+            "双因素遗传：AaBb×AaBb → 9A_B_:3A_bb:3aaB_:1aabb",
+            "特殊情况：如果有致死，从正常比例中删除致死基因型"
+          ]
+        },
+        {
+          "id": "err-bio-gene-frequency",
+          "name": "基因频率计算错误",
+          "knowledgePointIds": ["bio-hardy-weinberg", "bio-population-genetics"],
+          "symptom": "基因频率或基因型频率计算错误",
+          "likelyCause": "混淆基因频率和基因型频率，或不会用Hardy-Weinberg平衡",
+          "diagnosisSignals": ["把基因型频率当成基因频率", "不会从表型推算基因频率", "不理解p+q=1"],
+          "hintTemplate": "基因频率=该基因的总数/基因总数。隐性性状频率=q²，可推算q。",
+          "remediationSteps": [
+            "理解定义：基因频率是某个等位基因占全部等位基因的比例",
+            "计算方法：从已知基因型频率→统计基因数→计算比例",
+            "Hardy-Weinberg：AA频率=p²，Aa频率=2pq，aa频率=q²，p+q=1"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "bio-experiment-procedure",
+      "categoryName": "实验步骤错误",
+      "description": "实验设计、对照实验、变量控制中的错误",
+      "patterns": [
+        {
+          "id": "err-bio-control-variable",
+          "name": "变量控制不当",
+          "knowledgePointIds": ["bio-experiment-design", "bio-control-variable"],
+          "symptom": "实验中未遵循单一变量原则，或缺少对照组",
+          "likelyCause": "不理解对照实验的原理，或不会识别自变量、因变量",
+          "diagnosisSignals": ["同时改变多个条件", "缺少对照组", "没有控制无关变量"],
+          "hintTemplate": "对照实验的原则：只改变一个条件（自变量），其他条件都相同。",
+          "remediationSteps": [
+            "识别变量：自变量（实验操作改变的）、因变量（观察测量的）、无关变量（需控制的）",
+            "设计对照：实验组与对照组只有一个条件不同",
+            "检查：除了自变量，其他条件（温度、光照、材料量等）是否都相同"
+          ]
+        },
+        {
+          "id": "err-bio-experiment-order",
+          "name": "实验步骤顺序错误",
+          "knowledgePointIds": ["bio-experiment-procedure"],
+          "symptom": "实验步骤的先后顺序不合理，影响结果",
+          "likelyCause": "不理解实验原理，或不知道某些步骤必须先做",
+          "diagnosisSignals": ["先加试剂再加样品", "先观察再染色", "灭菌顺序错误"],
+          "hintTemplate": "实验步骤有逻辑顺序，要先准备材料，再处理，最后观察。",
+          "remediationSteps": [
+            "理解实验原理：为什么要这样做？每一步的目的是什么？",
+            "记住关键顺序：染色实验→制片→染色→漂洗→观察",
+            "微生物实验→先灭菌再接种，避免污染"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "bio-concept-reasoning",
+      "categoryName": "概念推理错误",
+      "description": "生物学概念理解和推理中的错误",
+      "patterns": [
+        {
+          "id": "err-bio-photosynthesis-respiration",
+          "name": "光合呼吸混淆",
+          "knowledgePointIds": ["bio-photosynthesis", "bio-respiration"],
+          "symptom": "把光合作用和呼吸作用的场所、产物、条件搞混",
+          "likelyCause": "不理解两者的区别和联系",
+          "diagnosisSignals": ["认为呼吸只在夜间", "认为光合只产生氧气", "物质和能量变化搞反"],
+          "hintTemplate": "光合作用制造有机物储存能量，呼吸作用分解有机物释放能量。",
+          "remediationSteps": [
+            "对比记忆：光合→吸收CO₂+H₂O，产生有机物+O₂，储存能量",
+            "呼吸→吸收O₂，分解有机物产生CO₂+H₂O，释放能量",
+            "场所：光合在叶绿体，呼吸在线粒体（有氧）和细胞质（无氧）"
+          ]
+        }
+      ]
+    }
+  ]
+}

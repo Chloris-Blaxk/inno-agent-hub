@@ -1,0 +1,31 @@
+{
+  "requestId": "req-paper-writing-outline-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "outline_generation",
+  "sourceRequest": "请为小学数学课堂即时反馈研究生成论文大纲。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "校本教研",
+    "existingAchievements": [],
+    "availableCycle": "一学期",
+    "constraints": []
+  },
+  "input": {
+    "title": "小学数学课堂即时反馈支持错因诊断的实践研究",
+    "researchQuestion": "即时反馈如何帮助教师识别典型错因并调整讲评顺序？",
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

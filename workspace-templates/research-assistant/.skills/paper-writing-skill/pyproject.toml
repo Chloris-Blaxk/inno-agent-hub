@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paper-writing-skill"
+version = "0.2.0"
+description = "教育论文写作助手 Skill，支持结构诊断、真实查源、保守润色、大纲和章节草稿"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.5.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["scripts"]

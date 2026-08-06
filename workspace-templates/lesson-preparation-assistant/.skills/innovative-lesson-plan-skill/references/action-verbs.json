@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "学习目标行为动词表和学段上限，用于行为动词不过级检查。参照布鲁姆认知目标分类（修订版）与中国新课标常用行为动词。"
+  },
+  "allowedVerbs": [
+    {"verb": "识别", "level": 1, "description": "能辨认对象、概念或现象"},
+    {"verb": "列举", "level": 1, "description": "能举出相关例子"},
+    {"verb": "说出", "level": 1, "description": "能口头表达基本事实或概念"},
+    {"verb": "观察", "level": 1, "description": "能用感官或工具有目的地感知对象特征"},
+    {"verb": "描述", "level": 2, "description": "能用语言说明对象特征或过程"},
+    {"verb": "整理", "level": 2, "description": "能按规则收集和归类信息"},
+    {"verb": "概括", "level": 2, "description": "能从具体事例中提炼共性或要点"},
+    {"verb": "说明", "level": 2, "description": "能解释事物的特征、原因或关系"},
+    {"verb": "归纳", "level": 2, "description": "能从多个事例中总结出一般规律"},
+    {"verb": "解释", "level": 3, "description": "能说明原因、关系或依据"},
+    {"verb": "比较", "level": 3, "description": "能指出异同和判断依据"},
+    {"verb": "运用", "level": 3, "description": "能将所学知识应用于新情境"},
+    {"verb": "计算", "level": 3, "description": "能用数学方法求解具体问题"},
+    {"verb": "演示", "level": 3, "description": "能通过操作或展示说明过程或原理"},
+    {"verb": "分析", "level": 4, "description": "能拆解问题并解释关键因素"},
+    {"verb": "设计", "level": 4, "description": "能提出方案、作品或活动流程"},
+    {"verb": "区分", "level": 4, "description": "能根据标准辨别不同类别的对象或概念"},
+    {"verb": "推断", "level": 4, "description": "能根据已有信息得出合理结论"},
+    {"verb": "调查", "level": 4, "description": "能通过系统收集信息回答研究问题"},
+    {"verb": "组织", "level": 4, "description": "能将信息或材料按逻辑结构进行编排"},
+    {"verb": "评价", "level": 5, "description": "能基于标准作出判断并说明理由"},
+    {"verb": "改进", "level": 5, "description": "能基于反馈优化方案或表达"},
+    {"verb": "创作", "level": 5, "description": "能独立产出有个人表达的原创作品"},
+    {"verb": "论证", "level": 5, "description": "能用证据和推理支持自己的观点或结论"},
+    {"verb": "制定", "level": 5, "description": "能提出完整的行动方案或规则体系"}
+  ],
+  "maxLevelByAgeBand": {
+    "lower-primary": 2,
+    "upper-primary": 4,
+    "middle-school": 5,
+    "high-school": 5
+  },
+  "discouragedVagueVerbs": ["了解", "掌握", "培养", "提高", "理解", "学会", "认识", "感受"]
+}

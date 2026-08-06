@@ -1,0 +1,87 @@
+{
+  "requestId": "req-project-proposal-complex-001",
+  "entryToken": "@项目申报助手",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "document_set",
+  "sourceRequest": "根据项目过程材料、成果清单、团队信息和预算，同时生成申报书、结题报告和成果汇报框架。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城乡结合部小学",
+    "researchExperience": "主持过校级课堂反馈微研究",
+    "existingAchievements": [],
+    "availableCycle": "2026-09 至 2027-08",
+    "constraints": ["样本暂限本校"]
+  },
+  "input": {
+    "documentType": "document_set",
+    "projectLevel": "区级课题",
+    "projectMaterials": [
+      {
+        "materialId": "mat-plan-complex",
+        "materialType": "proposal",
+        "title": "申报构想",
+        "content": "围绕小学数学课堂即时反馈与错因诊断开展实践研究，项目周期 2026-09 至 2027-08，预期形成课堂反馈记录工具、案例集和阶段性研究报告。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-team-complex",
+        "materialType": "team",
+        "title": "团队信息",
+        "content": "项目负责人 1 人，核心成员 5 人，其中 2 人负责课堂观察与数据整理。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-process-complex",
+        "materialType": "process",
+        "title": "过程记录",
+        "content": "已完成 8 节错因诊断课例，积累课堂投票、错因分类活动记录和课后讲评改进记录。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-outcome-complex",
+        "materialType": "outcome",
+        "title": "成果清单",
+        "content": "成果清单：形成教学案例 5 篇、课堂观察记录 16 份，样本覆盖 2 个班 96 名学生。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-risk-complex",
+        "materialType": "reflection",
+        "title": "问题与反思",
+        "content": "风险：样本范围局限于本校高年级，后续需要补充跨班级推广材料和长期追踪证据。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      }
+    ],
+    "budgetInfo": {
+      "totalAmount": "2.0 万元",
+      "items": [
+        {"category": "资料费", "amount": "0.6 万元", "purpose": "购买研究资料和打印课堂观察表"},
+        {"category": "培训研讨费", "amount": "0.8 万元", "purpose": "开展校内课题研讨和专家指导"},
+        {"category": "数据采集与分析费", "amount": "0.4 万元", "purpose": "整理课堂观察记录和样本数据"},
+        {"category": "成果印刷与发表费", "amount": "0.2 万元", "purpose": "汇编案例集和阶段成果材料"}
+      ]
+    },
+    "teamInfo": {},
+    "requirements": "三份文档都必须回链 ProjectFactTable，成果汇报只能使用材料中已有的数量做图表建议。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

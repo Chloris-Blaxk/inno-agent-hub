@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "脱敏成功案例结构样例，只用于组织方式参考，不得迁移事实、成果、数据、经费或团队经历。"
+  },
+  "patterns": [
+    {
+      "patternId": "case-pattern-application-001",
+      "documentType": "project_application",
+      "projectLevel": "区级课题",
+      "structureMoves": [
+        "从真实课堂问题切入，说明问题表现和改进价值。",
+        "把已有课例、观察记录和团队经验归入研究基础。",
+        "用阶段安排说明目标、内容、方法之间的对应关系。",
+        "预期成果写成可交付清单，避免空泛表述。"
+      ],
+      "doNotCopy": ["成果数量", "学校名称", "经费金额", "负责人经历"]
+    },
+    {
+      "patternId": "case-pattern-closing-001",
+      "documentType": "closing_report",
+      "projectLevel": "校级或区级课题",
+      "structureMoves": [
+        "先交代项目周期和研究对象。",
+        "按阶段梳理关键活动和材料证据。",
+        "成果部分区分制度、课例、工具、论文或展示交流。",
+        "问题反思要落到后续改进，不写成形式化套话。"
+      ],
+      "doNotCopy": ["实际成果", "获奖情况", "数据结论", "推广范围"]
+    },
+    {
+      "patternId": "case-pattern-achievement-001",
+      "documentType": "achievement_report",
+      "projectLevel": "成果汇报",
+      "structureMoves": [
+        "用一句话概括核心成果。",
+        "用时间线展示关键节点。",
+        "用成果列表区分材料型、工具型、课堂型和传播型成果。",
+        "量化数据只来自事实表，缺少数据时改用材料清单。"
+      ],
+      "doNotCopy": ["百分比", "样本人数", "获奖等级", "推广学校数量"]
+    }
+  ]
+}

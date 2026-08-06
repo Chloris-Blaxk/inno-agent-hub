@@ -1,0 +1,17 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "第3课时",
+  "topic": "分数加减法应用",
+  "knowledgePointIds": ["math-g5-fraction-application"],
+  "taskType": "layered_homework",
+  "questionCount": 9,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["应用题", "比较题", "判断题", "填空题"],
+  "questionTypeMix": {"应用题": 6, "比较题": 1, "判断题": 1, "填空题": 1},
+  "difficultyMix": {"1": 1, "2": 3, "3": 2, "4": 3},
+  "difficultyRange": [1, 4],
+  "requirements": "围绕分数加减法实际问题生成三层作业，每层 3 题，附答案、分步解析、常见错因和讲评建议。"
+}

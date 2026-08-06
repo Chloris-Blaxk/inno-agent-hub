@@ -1,0 +1,698 @@
+{
+  "exerciseMeta": {
+    "title": "异分母分数加减法·分层作业 分层作业",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第2课时",
+    "topic": "异分母分数加减法·分层作业",
+    "taskType": "layered_homework",
+    "questionCount": 9,
+    "source": "InnoSpark-235B-dynamic-generation"
+  },
+  "blueprint": {
+    "taskType": "layered_homework",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 3,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 3,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      },
+      {
+        "layer": "C",
+        "name": "拓展层",
+        "targetCount": 3,
+        "difficultyRange": [
+          3,
+          4
+        ],
+        "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+        "cognitiveLevel": "迁移"
+      }
+    ],
+    "questionTypes": [
+      "计算题",
+      "应用题",
+      "比较题"
+    ],
+    "layerTargets": {
+      "A": 3,
+      "B": 3,
+      "C": 3
+    },
+    "questionTypeTargets": {
+      "计算题": 5,
+      "应用题": 3,
+      "比较题": 1
+    },
+    "difficultyTargets": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 3
+    },
+    "strictBlueprint": true,
+    "knowledgePointIds": [
+      "math-g5-fraction-same-denominator-add",
+      "math-g5-fraction-add"
+    ],
+    "lessonBoundary": "覆盖同分母、异分母和简单实际问题，控制在五年级分数加减法范围内。",
+    "requirements": "标准分层作业。A层巩固同分母基础，B层异分母通分计算+简单应用，C层综合应用+比较推理。每层3题，附完整答案解析和错因标签。严格按蓝图配比。"
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{4}{9} + \\frac{2}{9} = ?",
+      "answer": "\\frac{6}{9}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相加。",
+        "4 + 2 = 6，所以 \\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。"
+      ],
+      "commonErrors": [
+        "计算时误将分母相加",
+        "忘记约分"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加法的本质是分数单位的累加，分母不变。",
+      "sourceId": "A1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q002",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一盒牛奶，小明喝了 \\frac{1}{5}，小红喝了 \\frac{2}{5}，两人一共喝了这盒牛奶的几分之几？",
+      "answer": "\\frac{3}{5}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{5} + \\frac{2}{5}。",
+        "分母相同，分子相加：1 + 2 = 3，得 \\frac{3}{5}。"
+      ],
+      "commonErrors": [
+        "误用减法",
+        "混淆单位1与分数"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生将生活情境转化为数学问题，理解“一共”对应加法运算。",
+      "sourceId": "A2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q003",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{7}{10} - \\frac{3}{10} = ?",
+      "answer": "\\frac{4}{10}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{10}，直接把分子相减。",
+        "7 - 3 = 4，所以 \\frac{7}{10} - \\frac{3}{10} = \\frac{4}{10}。"
+      ],
+      "commonErrors": [
+        "计算时误将分母相减",
+        "忘记约分"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数减法的本质是分数单位的减少，分母不变。",
+      "sourceId": "A3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q004",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "计算：\\frac{5}{9} + \\frac{2}{9} - \\frac{1}{9} = ?",
+      "answer": "\\frac{2}{3}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，按从左到右顺序计算。",
+        "先算 \\frac{5}{9} + \\frac{2}{9} = \\frac{7}{9}。",
+        "再算 \\frac{7}{9} - \\frac{1}{9} = \\frac{6}{9}。",
+        "\\frac{6}{9} 约分，分子分母同时除以3，得 \\frac{2}{3}。"
+      ],
+      "commonErrors": [
+        "计算顺序错误，先算减法再算加法",
+        "忘记约分，答案写成 \\frac{6}{9}"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加减法的运算顺序和结果必须化为最简分数。",
+      "sourceId": "B1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q005",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "小明喝了一杯果汁的 \\frac{1}{4}，小红喝了同一杯果汁的 \\frac{2}{5}。两人一共喝了这杯果汁的几分之几？",
+      "answer": "\\frac{13}{20}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{4} + \\frac{2}{5}。",
+        "分母不同，需要先通分。4和5的最小公倍数是20。",
+        "将 \\frac{1}{4} 化为 \\frac{5}{20}，将 \\frac{2}{5} 化为 \\frac{8}{20}。",
+        "相加：\\frac{5}{20} + \\frac{8}{20} = \\frac{13}{20}。"
+      ],
+      "commonErrors": [
+        "直接将分子分母相加，得到 \\frac{3}{9}",
+        "通分时分子忘记乘以相应的倍数"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "通过具体情境帮助学生理解异分母分数加法需要先通分，强调通分时分子分母要同乘一个数。",
+      "sourceId": "B2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q006",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一根彩带长 \\frac{7}{8} 米，第一次用去 \\frac{3}{8} 米，第二次用去 \\frac{1}{8} 米。这根彩带还剩多少米？",
+      "answer": "\\frac{3}{8}",
+      "solutionSteps": [
+        "方法一：先算一共用去多少：\\frac{3}{8} + \\frac{1}{8} = \\frac{4}{8} = \\frac{1}{2} 米。",
+        "再算还剩多少：\\frac{7}{8} - \\frac{1}{2} = \\frac{7}{8} - \\frac{4}{8} = \\frac{3}{8} 米。",
+        "方法二：连续减去两次用去的：\\frac{7}{8} - \\frac{3}{8} - \\frac{1}{8} = \\frac{4}{8} - \\frac{1}{8} = \\frac{3}{8} 米。"
+      ],
+      "commonErrors": [
+        "计算错误，如 \\frac{7}{8} - \\frac{3}{8} - \\frac{1}{8} = \\frac{3}{8} - \\frac{1}{8} = \\frac{2}{8}",
+        "忘记将 \\frac{4}{8} 化为 \\frac{1}{2} 再计算"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解“连续减去”和“先求和再减去”两种思路，培养灵活解题的能力。",
+      "sourceId": "B3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q007",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "stem": "小明喝了一杯果汁的 \\frac{2}{5}，小红喝了同一杯果汁的 \\frac{1}{5}。如果这杯果汁还剩下 \\frac{1}{5}，那么这杯果汁原来有多少？请用分数表示并说明理由。",
+      "answer": "1",
+      "solutionSteps": [
+        "将喝掉的部分和剩下的部分相加，得到原来的总量。",
+        "喝掉的部分：\\frac{2}{5} + \\frac{1}{5} = \\frac{3}{5}。",
+        "原来的总量：\\frac{3}{5} + \\frac{1}{5} = \\frac{4}{5}。",
+        "但题目中提到的“还剩下 \\frac{1}{5}”与计算结果矛盾，说明题目可能存在误导。实际上，如果喝掉 \\frac{2}{5} 和 \\frac{1}{5}，剩下 \\frac{2}{5}，因此题目描述可能有误。",
+        "假设题目描述正确，即喝掉 \\frac{2}{5} 和 \\frac{1}{5} 后剩下 \\frac{1}{5}，则原来的总量应为 \\frac{2}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{4}{5}，但这与“一杯果汁”的常识矛盾。",
+        "更合理的解释是题目描述有误，实际应为“喝掉 \\frac{2}{5} 和 \\frac{1}{5} 后，还剩下 \\frac{2}{5}”，此时原来的总量为 1。",
+        "因此，题目可能存在错误，但根据常规理解，一杯果汁的总量应为 1。"
+      ],
+      "commonErrors": [
+        "未发现题目描述矛盾，直接计算 \\frac{2}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{4}{5}。",
+        "忽略“一杯果汁”的常识，认为总量可以是 \\frac{4}{5}。"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "本题旨在考察学生对分数加法的理解以及对题目描述的批判性思维。教师应引导学生发现题目中的矛盾，并讨论“单位1”的概念。",
+      "sourceId": "C1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q008",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "比较 \\frac{3}{4} + \\frac{1}{5} 和 \\frac{2}{3} + \\frac{1}{2} 的大小。请用通分的方法计算并说明理由。",
+      "answer": "\\frac{3}{4} + \\frac{1}{5} < \\frac{2}{3} + \\frac{1}{2}",
+      "solutionSteps": [
+        "计算 \\frac{3}{4} + \\frac{1}{5}：",
+        "通分，分母为 20：\\frac{15}{20} + \\frac{4}{20} = \\frac{19}{20}。",
+        "计算 \\frac{2}{3} + \\frac{1}{2}：",
+        "通分，分母为 6：\\frac{4}{6} + \\frac{3}{6} = \\frac{7}{6}。",
+        "比较 \\frac{19}{20} 和 \\frac{7}{6}：",
+        "将 \\frac{7}{6} 化为带分数：1\\frac{1}{6}，明显大于 1。",
+        "而 \\frac{19}{20} 小于 1，因此 \\frac{19}{20} < \\frac{7}{6}。",
+        "所以 \\frac{3}{4} + \\frac{1}{5} < \\frac{2}{3} + \\frac{1}{2}。"
+      ],
+      "commonErrors": [
+        "通分时找错最小公倍数，如将 \\frac{3}{4} + \\frac{1}{5} 的分母误算为 15。",
+        "计算错误，如 \\frac{3}{4} + \\frac{1}{5} = \\frac{4}{9}。",
+        "比较时未通分，直接比较分子或分母。"
+      ],
+      "scorePoints": 4,
+      "teachingNote": "本题考察异分母分数加法和大小比较。教师应强调通分的必要性，并提醒学生注意计算的准确性。",
+      "sourceId": "C2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q009",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "questionType": "填空题",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "stem": "在括号里填上合适的分数，使等式成立：\\frac{1}{8} + （ ） + \\frac{3}{8} = 1。请写出所有可能的解。",
+      "answer": "\\frac{4}{8}",
+      "solutionSteps": [
+        "将等式变形：（ ） = 1 - \\frac{1}{8} - \\frac{3}{8}。",
+        "计算 1 - \\frac{1}{8} = \\frac{7}{8}。",
+        "再计算 \\frac{7}{8} - \\frac{3}{8} = \\frac{4}{8}。",
+        "因此，括号里应填 \\frac{4}{8}。",
+        "由于题目要求“所有可能的解”，而 \\frac{4}{8} 是唯一解，因此答案为 \\frac{4}{8}。"
+      ],
+      "commonErrors": [
+        "计算错误，如 1 - \\frac{1}{8} - \\frac{3}{8} = \\frac{6}{8}。",
+        "未将 1 化为 \\frac{8}{8}，导致计算困难。",
+        "误认为有多个解，如 \\frac{2}{8} + \\frac{2}{8}。"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "本题考察同分母分数减法和单位1的理解。教师应强调将 1 化为同分母分数的重要性，并引导学生理解“唯一解”的概念。",
+      "sourceId": "C3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "\\frac{6}{9}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相加。",
+        "4 + 2 = 6，所以 \\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q002",
+      "answer": "\\frac{3}{5}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{5} + \\frac{2}{5}。",
+        "分母相同，分子相加：1 + 2 = 3，得 \\frac{3}{5}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q003",
+      "answer": "\\frac{4}{10}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{10}，直接把分子相减。",
+        "7 - 3 = 4，所以 \\frac{7}{10} - \\frac{3}{10} = \\frac{4}{10}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q004",
+      "answer": "\\frac{2}{3}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，按从左到右顺序计算。",
+        "先算 \\frac{5}{9} + \\frac{2}{9} = \\frac{7}{9}。",
+        "再算 \\frac{7}{9} - \\frac{1}{9} = \\frac{6}{9}。",
+        "\\frac{6}{9} 约分，分子分母同时除以3，得 \\frac{2}{3}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q005",
+      "answer": "\\frac{13}{20}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{4} + \\frac{2}{5}。",
+        "分母不同，需要先通分。4和5的最小公倍数是20。",
+        "将 \\frac{1}{4} 化为 \\frac{5}{20}，将 \\frac{2}{5} 化为 \\frac{8}{20}。",
+        "相加：\\frac{5}{20} + \\frac{8}{20} = \\frac{13}{20}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q006",
+      "answer": "\\frac{3}{8}",
+      "solutionSteps": [
+        "方法一：先算一共用去多少：\\frac{3}{8} + \\frac{1}{8} = \\frac{4}{8} = \\frac{1}{2} 米。",
+        "再算还剩多少：\\frac{7}{8} - \\frac{1}{2} = \\frac{7}{8} - \\frac{4}{8} = \\frac{3}{8} 米。",
+        "方法二：连续减去两次用去的：\\frac{7}{8} - \\frac{3}{8} - \\frac{1}{8} = \\frac{4}{8} - \\frac{1}{8} = \\frac{3}{8} 米。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q007",
+      "answer": "1",
+      "solutionSteps": [
+        "将喝掉的部分和剩下的部分相加，得到原来的总量。",
+        "喝掉的部分：\\frac{2}{5} + \\frac{1}{5} = \\frac{3}{5}。",
+        "原来的总量：\\frac{3}{5} + \\frac{1}{5} = \\frac{4}{5}。",
+        "但题目中提到的“还剩下 \\frac{1}{5}”与计算结果矛盾，说明题目可能存在误导。实际上，如果喝掉 \\frac{2}{5} 和 \\frac{1}{5}，剩下 \\frac{2}{5}，因此题目描述可能有误。",
+        "假设题目描述正确，即喝掉 \\frac{2}{5} 和 \\frac{1}{5} 后剩下 \\frac{1}{5}，则原来的总量应为 \\frac{2}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{4}{5}，但这与“一杯果汁”的常识矛盾。",
+        "更合理的解释是题目描述有误，实际应为“喝掉 \\frac{2}{5} 和 \\frac{1}{5} 后，还剩下 \\frac{2}{5}”，此时原来的总量为 1。",
+        "因此，题目可能存在错误，但根据常规理解，一杯果汁的总量应为 1。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q008",
+      "answer": "\\frac{3}{4} + \\frac{1}{5} < \\frac{2}{3} + \\frac{1}{2}",
+      "solutionSteps": [
+        "计算 \\frac{3}{4} + \\frac{1}{5}：",
+        "通分，分母为 20：\\frac{15}{20} + \\frac{4}{20} = \\frac{19}{20}。",
+        "计算 \\frac{2}{3} + \\frac{1}{2}：",
+        "通分，分母为 6：\\frac{4}{6} + \\frac{3}{6} = \\frac{7}{6}。",
+        "比较 \\frac{19}{20} 和 \\frac{7}{6}：",
+        "将 \\frac{7}{6} 化为带分数：1\\frac{1}{6}，明显大于 1。",
+        "而 \\frac{19}{20} 小于 1，因此 \\frac{19}{20} < \\frac{7}{6}。",
+        "所以 \\frac{3}{4} + \\frac{1}{5} < \\frac{2}{3} + \\frac{1}{2}。"
+      ],
+      "scorePoints": 4
+    },
+    {
+      "questionId": "q009",
+      "answer": "\\frac{4}{8}",
+      "solutionSteps": [
+        "将等式变形：（ ） = 1 - \\frac{1}{8} - \\frac{3}{8}。",
+        "计算 1 - \\frac{1}{8} = \\frac{7}{8}。",
+        "再计算 \\frac{7}{8} - \\frac{3}{8} = \\frac{4}{8}。",
+        "因此，括号里应填 \\frac{4}{8}。",
+        "由于题目要求“所有可能的解”，而 \\frac{4}{8} 是唯一解，因此答案为 \\frac{4}{8}。"
+      ],
+      "scorePoints": 3
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add",
+      "math-g5-fraction-add"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add",
+      "math-g5-fraction-add"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-same-denominator-add": {
+        "questionCount": 7,
+        "questionTypes": {
+          "计算题": 3,
+          "应用题": 3,
+          "填空题": 1
+        }
+      },
+      "math-g5-fraction-add": {
+        "questionCount": 2,
+        "questionTypes": {
+          "应用题": 1,
+          "比较题": 1
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 3,
+        "min": 1,
+        "max": 2,
+        "average": 1.33
+      },
+      "B": {
+        "questionCount": 3,
+        "min": 2,
+        "max": 3,
+        "average": 2.33
+      },
+      "C": {
+        "questionCount": 3,
+        "min": 3,
+        "max": 4,
+        "average": 3.33
+      }
+    },
+    "byDifficulty": {
+      "1": 2,
+      "2": 3,
+      "3": 3,
+      "4": 1
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "代数式通分",
+      "分式方程",
+      "复杂最小公倍数证明",
+      "异分母分数运算",
+      "有理数混合运算"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "忘记约分",
+      "name": "忘记约分",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算时误将分母相加",
+      "name": "计算时误将分母相加",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "误用减法",
+      "name": "误用减法",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "混淆单位1与分数",
+      "name": "混淆单位1与分数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算时误将分母相减",
+      "name": "计算时误将分母相减",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算顺序错误，先算减法再算加法",
+      "name": "计算顺序错误，先算减法再算加法",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记约分，答案写成 \\frac{6}{9}",
+      "name": "忘记约分，答案写成 \\frac{6}{9}",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接将分子分母相加，得到 \\frac{3}{9}",
+      "name": "直接将分子分母相加，得到 \\frac{3}{9}",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时分子忘记乘以相应的倍数",
+      "name": "通分时分子忘记乘以相应的倍数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算错误，如 \\frac{7}{8} - \\frac{3}{8} - \\frac{1}{8} = \\frac{3}{8} - \\frac{1}{8} = \\frac{2}{8}",
+      "name": "计算错误，如 \\frac{7}{8} - \\frac{3}{8} - \\frac{1}{8} = \\frac{3}{8} - \\frac{1}{8} = \\frac{2}{8}",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记将 \\frac{4}{8} 化为 \\frac{1}{2} 再计算",
+      "name": "忘记将 \\frac{4}{8} 化为 \\frac{1}{2} 再计算",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "未发现题目描述矛盾，直接计算 \\frac{2}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{4}{5}。",
+      "name": "未发现题目描述矛盾，直接计算 \\frac{2}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{4}{5}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忽略“一杯果汁”的常识，认为总量可以是 \\frac{4}{5}。",
+      "name": "忽略“一杯果汁”的常识，认为总量可以是 \\frac{4}{5}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时找错最小公倍数，如将 \\frac{3}{4} + \\frac{1}{5} 的分母误算为 15。",
+      "name": "通分时找错最小公倍数，如将 \\frac{3}{4} + \\frac{1}{5} 的分母误算为 15。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算错误，如 \\frac{3}{4} + \\frac{1}{5} = \\frac{4}{9}。",
+      "name": "计算错误，如 \\frac{3}{4} + \\frac{1}{5} = \\frac{4}{9}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "比较时未通分，直接比较分子或分母。",
+      "name": "比较时未通分，直接比较分子或分母。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算错误，如 1 - \\frac{1}{8} - \\frac{3}{8} = \\frac{6}{8}。",
+      "name": "计算错误，如 1 - \\frac{1}{8} - \\frac{3}{8} = \\frac{6}{8}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "未将 1 化为 \\frac{8}{8}，导致计算困难。",
+      "name": "未将 1 化为 \\frac{8}{8}，导致计算困难。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "误认为有多个解，如 \\frac{2}{8} + \\frac{2}{8}。",
+      "name": "误认为有多个解，如 \\frac{2}{8} + \\frac{2}{8}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    }
+  ],
+  "replacementSuggestions": [],
+  "qualityReport": {
+    "status": "fail",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 9 题，请求 9 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "layer_C_count",
+        "status": "pass",
+        "message": "C 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "fail",
+        "message": "题型比例未完全匹配目标 {'计算题': 5, '应用题': 3, '比较题': 1}，实际 {'计算题': 3, '应用题': 4, '比较题': 1, '填空题': 1}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "fail",
+        "message": "难度比例未完全匹配目标 {'1': 1, '2': 2, '3': 3, '4': 3}，实际 {'1': 2, '2': 3, '3': 3, '4': 1}。"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  }
+}

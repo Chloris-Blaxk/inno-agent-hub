@@ -1,0 +1,16 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "第2课时",
+  "topic": "异分母分数加减法",
+  "knowledgePointIds": ["math-g5-fraction-add"],
+  "taskType": "topic_drill",
+  "questionCount": 10,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["计算题", "应用题", "比较题"],
+  "questionTypeMix": {"计算题": 6, "应用题": 3, "比较题": 1},
+  "difficultyMix": {"1": 1, "2": 3, "3": 3, "4": 3},
+  "requirements": "围绕异分母分数加减法做专题练习，覆盖基础计算、易错、变式和应用，并给出可替换题建议。"
+}

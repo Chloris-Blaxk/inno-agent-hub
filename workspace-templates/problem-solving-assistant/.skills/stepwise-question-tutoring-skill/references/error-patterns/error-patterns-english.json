@@ -1,0 +1,125 @@
+{
+  "version": "1.0",
+  "description": "英语学科错误模式库（仅客观题型）",
+  "errorCategories": [
+    {
+      "categoryId": "english-grammar",
+      "categoryName": "语法错误",
+      "description": "时态、语态、主谓一致、非谓语动词等语法错误",
+      "patterns": [
+        {
+          "id": "err-eng-tense-wrong",
+          "name": "时态错误",
+          "knowledgePointIds": ["eng-tense", "eng-verb"],
+          "symptom": "句子的时态与时间状语或语境不匹配",
+          "likelyCause": "不理解时态的使用规则，或受母语干扰",
+          "diagnosisSignals": ["现在时用于过去事件", "完成时与一般过去时混用", "时间标志词与时态不匹配"],
+          "hintTemplate": "注意时间标志词。'yesterday'用一般过去时，'since'用现在完成时。",
+          "remediationSteps": [
+            "识别时间标志词：ago/yesterday/last→一般过去时，since/for→现在完成时",
+            "理解时态含义：现在完成时强调对现在的影响",
+            "记住固定搭配：by the time→过去完成时"
+          ]
+        },
+        {
+          "id": "err-eng-subject-verb-agreement",
+          "name": "主谓不一致",
+          "knowledgePointIds": ["eng-subject-verb-agreement"],
+          "symptom": "主语和谓语动词的单复数不一致",
+          "likelyCause": "被中间修饰成分干扰，或不熟悉集合名词的单复数",
+          "diagnosisSignals": ["复数主语+单数动词", "单数主语+复数动词", "就近原则使用错误"],
+          "hintTemplate": "找到真正的主语，忽略中间的修饰成分。主语是单数，动词用单数。",
+          "remediationSteps": [
+            "识别主语：去掉定语、介词短语等修饰成分",
+            "判断单复数：集合名词(family/team)作整体看→单数，作成员看→复数",
+            "记住就近原则：neither...nor / either...or 靠近谓语的名词决定单复数"
+          ]
+        },
+        {
+          "id": "err-eng-non-finite-verb",
+          "name": "非谓语动词误用",
+          "knowledgePointIds": ["eng-infinitive", "eng-gerund", "eng-participle"],
+          "symptom": "to do / doing / done 选择错误",
+          "likelyCause": "不理解非谓语动词的逻辑主语和主被动关系",
+          "diagnosisSignals": ["主动用了done", "被动用了doing", "固定搭配错误"],
+          "hintTemplate": "看逻辑主语和动作的关系。主动用doing，被动用done。",
+          "remediationSteps": [
+            "找逻辑主语：非谓语动词的动作由谁发出",
+            "判断主被动：逻辑主语主动发出→doing/to do，被动承受→done",
+            "记住固定搭配：enjoy doing, decide to do"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "english-word-choice",
+      "categoryName": "词汇选择错误",
+      "description": "近义词辨析、固定搭配、词性混淆等错误",
+      "patterns": [
+        {
+          "id": "err-eng-word-confusion",
+          "name": "近义词混淆",
+          "knowledgePointIds": ["eng-vocabulary", "eng-synonym"],
+          "symptom": "使用了意思相近但用法不同的词",
+          "likelyCause": "只记中文意思，不理解英文词的细微差别和使用场景",
+          "diagnosisSignals": ["see/watch/look混用", "say/speak/talk/tell混用", "borrow/lend混用"],
+          "hintTemplate": "这几个词虽然意思接近，但用法不同。注意它们的搭配。",
+          "remediationSteps": [
+            "理解细微差别：see=看见（结果），watch=观看（过程），look=看（动作）",
+            "记住固定搭配：look at, watch TV, see a film",
+            "通过例句记忆：在真实语境中理解用法"
+          ]
+        },
+        {
+          "id": "err-eng-collocation",
+          "name": "固定搭配错误",
+          "knowledgePointIds": ["eng-collocation", "eng-phrase"],
+          "symptom": "介词、动词、名词等搭配不符合英语习惯",
+          "likelyCause": "用中文思维硬套，不熟悉英语的固定搭配",
+          "diagnosisSignals": ["介词搭配错误", "动词名词搭配错误", "生造短语"],
+          "hintTemplate": "英语中某些词的搭配是固定的，不能按中文直译。",
+          "remediationSteps": [
+            "记住常见固定搭配：be good at, be interested in, depend on",
+            "注意介词搭配：arrive at(小地点)/in(大地点), listen to, wait for",
+            "积累地道表达：make a decision（不是do a decision）"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "english-sentence-structure",
+      "categoryName": "句子结构错误",
+      "description": "句子成分残缺、语序错误、从句使用错误",
+      "patterns": [
+        {
+          "id": "err-eng-word-order",
+          "name": "语序错误",
+          "knowledgePointIds": ["eng-word-order", "eng-sentence-structure"],
+          "symptom": "句子成分的位置不符合英语语序规则",
+          "likelyCause": "受汉语语序影响，或不熟悉特殊句型的语序",
+          "diagnosisSignals": ["疑问句语序错误", "副词位置不当", "宾补结构错误"],
+          "hintTemplate": "英语的语序有规则。陈述句：主+谓+宾，疑问句要倒装。",
+          "remediationSteps": [
+            "掌握基本语序：主语+谓语+宾语+地点+时间",
+            "疑问句规则：疑问词+助动词+主语+动词原形",
+            "频度副词位置：实义动词前，be动词后"
+          ]
+        },
+        {
+          "id": "err-eng-clause-usage",
+          "name": "从句使用错误",
+          "knowledgePointIds": ["eng-clause", "eng-relative-clause"],
+          "symptom": "定语从句、宾语从句等关系词选择错误",
+          "likelyCause": "不理解关系词的选择规则，或从句语序错误",
+          "diagnosisSignals": ["关系词that/which/who混用", "从句用疑问句语序", "缺少关系词"],
+          "hintTemplate": "从句要用陈述句语序。关系词的选择看先行词是人还是物。",
+          "remediationSteps": [
+            "关系词选择：先行词是人→who/that，是物→which/that",
+            "从句语序：宾语从句、主语从句都用陈述句语序",
+            "关系词在从句中的成分：作主语不能省略，作宾语可省略"
+          ]
+        }
+      ]
+    }
+  ]
+}

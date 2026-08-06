@@ -1,0 +1,29 @@
+{
+  "headers": {
+    "date": "Tue, 09 Jun 2026 05:19:27 GMT",
+    "content-type": "application/json;charset=utf-8",
+    "content-length": "537",
+    "connection": "keep-alive",
+    "keep-alive": "timeout=25",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "*",
+    "x-acs-request-id": "A54EDB3C-06A6-5662-8AAF-6E637818AF8E",
+    "x-acs-trace-id": "3643e91344f3d21e9f273d96050964d0",
+    "x-envoy-upstream-service-time": "22",
+    "server": "istio-envoy"
+  },
+  "statusCode": 200,
+  "body": {
+    "Code": "0",
+    "Data": {
+      "Result": {
+        "Transcription": "https://prod-tingwu-paas-common-beijing.oss-cn-beijing.aliyuncs.com/tingwu/output/1660463455080654/436fa3c9a9474b94ae9aca5778ffcc92/436fa3c9a9474b94ae9aca5778ffcc92_Transcription_20260609131925.json?Expires=1783574367&OSSAccessKeyId=LTAI5tMzZ1D4o1drkJN1TfCr&Signature=sjCAUGcmtUUmlZxkuWaG9SWHy1E%3D"
+      },
+      "TaskId": "436fa3c9a9474b94ae9aca5778ffcc92",
+      "TaskKey": "classroom-reflection-20260609131725",
+      "TaskStatus": "COMPLETED"
+    },
+    "Message": "success",
+    "RequestId": "A54EDB3C-06A6-5662-8AAF-6E637818AF8E"
+  }
+}

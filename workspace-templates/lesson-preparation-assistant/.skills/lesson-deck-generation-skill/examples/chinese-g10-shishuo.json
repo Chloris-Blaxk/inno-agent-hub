@@ -1,0 +1,23 @@
+{
+  "requestId": "demo-20260602-shishuo",
+  "sourceRequest": "帮我生成一个高一年级语文《师说》的教学课件",
+  "taskIntent": "design",
+  "input": {
+    "subject": "语文",
+    "grade": "高一",
+    "topic": "师说",
+    "lessonType": "new_concept",
+    "durationMin": 40,
+    "studentProfile": {
+      "priorKnowledge": ["初中文言文基础", "议论文基本结构", "韩愈简介"],
+      "commonDifficulties": ["古今异义词理解", "论证逻辑梳理", "背诵段落记忆"]
+    },
+    "requirements": "突出论证结构分析，包含古今异义对比和背诵指导。"
+  },
+  "options": {
+    "stylePreset": "auto",
+    "outputFormat": "html_preview+deck_json+teacher_script_md+pptx_ready"
+  },
+  "constraints": ["普通教室", "教师电脑投影", "可板书"],
+  "assumptions": ["人教版必修上册", "第三单元", "使用部编版教材"]
+}

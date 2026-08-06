@@ -1,0 +1,32 @@
+{
+  "skill": "classroom-reflection-skill",
+  "createdAt": "2026-06-09T13:19:28",
+  "lessonSlug": "classroom-reflection",
+  "conversationId": "case-classroom-reflection-001",
+  "inputFile": "https://5089-2407-cdc0-f008-46-00.ngrok-free.app/1309105672-1-192.mp4",
+  "generatedRoot": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs",
+  "outputDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001",
+  "rubricSource": "通用评价量规 `00_通用.md`",
+  "matchedSubject": "通用",
+  "matchedRubric": "00_通用.md",
+  "rubricPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/assets/rubric/00_通用.md",
+  "reportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/reflection-report.md",
+  "lessonPlanPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/optimized-lesson-plan.md",
+  "teacherTranscriptPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/teacher-transcript.md",
+  "internalDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal",
+  "promptPayloadPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal/prompt-payload.md",
+  "normalizedInputPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal/normalized-input.json",
+  "validationReportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal/validation-report.json",
+  "promptTranscriptPreviewChars": 0,
+  "warnings": [
+    "未能可靠匹配学科评价量规，已回退通用评价量规。"
+  ],
+  "mediaTranscription": {
+    "source": "https://5089-2407-cdc0-f008-46-00.ngrok-free.app/1309105672-1-192.mp4",
+    "sourceType": "media-url",
+    "tool": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-media-tool/transcribe_media.py",
+    "requestPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal/media-transcription-request.json",
+    "rawArtifactPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal/tingwu-direct-raw.json",
+    "rawDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/classroom-reflection/case-classroom-reflection-001/.internal/tingwu-raw"
+  }
+}

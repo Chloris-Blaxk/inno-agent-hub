@@ -1,0 +1,59 @@
+{
+  "requestId": "cli-smoke-literature-reading-001",
+  "entryToken": "@文献阅读助手",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "literature_discovery",
+  "sourceRequest": "@文献阅读助手 推荐并整理这个选题下的核心文献",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "五六年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参加过校本教研和区级公开课磨课",
+    "existingAchievements": ["校内公开课 2 节", "错因诊断教学反思 3 篇"],
+    "availableCycle": "1 年",
+    "constraints": ["不能虚构不存在的文献结论"]
+  },
+  "input": {
+    "researchTopic": "小学数学讲评课中即时反馈支持错因诊断的实践研究",
+    "keywords": ["即时反馈", "错因诊断", "讲评课", "小学数学"],
+    "readingGoal": "筛选 5 篇优先阅读文献，区分元数据、摘要、全文和用户上传文本的证据边界。",
+    "availablePapers": [
+      {
+        "paperId": "user-paper-cli-001",
+        "title": "用户上传：五年级分数讲评课错因分类记录",
+        "authors": ["用户上传材料"],
+        "year": 2026,
+        "journal": "用户上传原文",
+        "doi": "",
+        "keywords": ["错因诊断", "讲评课", "小学数学"],
+        "abstract": "",
+        "uploadedText": "材料记录了 3 节五年级分数讲评课。教师先用即时投票收集通分错误、约分遗漏和结果解释不完整三类错因，再按错因类型组织小组讲评。材料没有报告统计显著性，也没有跨校样本。",
+        "sourceStatus": "user_provided",
+        "textAvailability": "user_uploaded",
+        "evidenceLevel": "user_text_only"
+      },
+      {
+        "paperId": "external-metadata-cli-001",
+        "title": "课堂反馈策略与学习证据采集研究",
+        "authors": ["外部题录示例"],
+        "year": 2022,
+        "journal": "外部题录示例期刊",
+        "doi": "",
+        "keywords": ["课堂反馈", "学习证据", "教学调整"],
+        "abstract": "",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      }
+    ]
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

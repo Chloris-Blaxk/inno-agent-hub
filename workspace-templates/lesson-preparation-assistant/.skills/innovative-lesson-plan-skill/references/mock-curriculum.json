@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "模拟课标、知识点和教材进度，用于创新教案生成 MVP。覆盖科学、数学、语文、物理、生物、历史、地理等学科。"
+  },
+  "standards": [
+    {
+      "standardId": "std-sci-g6-water-001",
+      "subject": "科学",
+      "gradeBand": "5-6",
+      "module": "物质与环境",
+      "contentRequirement": "能基于真实生活问题收集数据，分析资源使用现象，并提出改进方案。",
+      "competencyTags": ["科学观念", "探究实践", "态度责任"],
+      "forbiddenScope": ["复杂水化学检测", "城市级水务系统建模"]
+    },
+    {
+      "standardId": "std-math-g5-data-001",
+      "subject": "数学",
+      "gradeBand": "5-6",
+      "module": "统计与概率",
+      "contentRequirement": "能收集、整理和表示简单数据，并结合数据作出解释。",
+      "competencyTags": ["数据意识", "应用意识"],
+      "forbiddenScope": ["方差", "回归分析", "假设检验"]
+    },
+    {
+      "standardId": "std-math-g8-trig-001",
+      "subject": "数学",
+      "gradeBand": "7-9",
+      "module": "图形与几何",
+      "contentRequirement": "能运用三角函数解决与直角三角形有关的实际问题。",
+      "competencyTags": ["几何直观", "运算能力", "应用意识"],
+      "forbiddenScope": ["反三角函数", "三角函数图像变换"]
+    },
+    {
+      "standardId": "std-chn-g7-exposition-001",
+      "subject": "语文",
+      "gradeBand": "7-9",
+      "module": "实用性阅读与表达",
+      "contentRequirement": "能围绕说明对象筛选资料，组织信息，并用准确、清楚的语言进行说明。",
+      "competencyTags": ["语言运用", "思维能力", "审美创造"],
+      "forbiddenScope": ["学术论文写作", "复杂文献综述"]
+    },
+    {
+      "standardId": "std-phy-g8-optics-001",
+      "subject": "物理",
+      "gradeBand": "7-9",
+      "module": "光现象",
+      "contentRequirement": "能通过实验观察光的折射现象，归纳折射规律，用折射知识解释生活现象。",
+      "competencyTags": ["物理观念", "科学思维", "科学探究"],
+      "forbiddenScope": ["全反射临界角计算", "光的偏振", "波动光学"]
+    },
+    {
+      "standardId": "std-phy-g8-mechanics-001",
+      "subject": "物理",
+      "gradeBand": "7-9",
+      "module": "力与运动",
+      "contentRequirement": "能通过实验探究杠杆平衡条件，用杠杆原理解释生活中的省力或费力现象。",
+      "competencyTags": ["物理观念", "科学思维", "科学探究"],
+      "forbiddenScope": ["力矩的矢量运算", "刚体转动惯量"]
+    },
+    {
+      "standardId": "std-bio-g7-ecology-001",
+      "subject": "生物",
+      "gradeBand": "7-9",
+      "module": "生物与环境",
+      "contentRequirement": "能调查校园或社区的生物多样性，分析生物与环境的相互关系，提出保护建议。",
+      "competencyTags": ["生命观念", "科学思维", "社会责任"],
+      "forbiddenScope": ["种群数量模型", "生态系统能量流动定量计算"]
+    },
+    {
+      "standardId": "std-his-g7-local-001",
+      "subject": "历史",
+      "gradeBand": "7-9",
+      "module": "跨学科主题学习",
+      "contentRequirement": "能通过实地调查或资料搜集，了解本地历史变迁，用多种方式呈现调查成果。",
+      "competencyTags": ["唯物史观", "时空观念", "史料实证"],
+      "forbiddenScope": ["历史学方法论", "档案学专业检索"]
+    },
+    {
+      "standardId": "std-geo-g7-climate-001",
+      "subject": "地理",
+      "gradeBand": "7-9",
+      "module": "自然地理基础",
+      "contentRequirement": "能阅读气候资料图表，描述气温和降水特征，分析气候对生产生活的影响。",
+      "competencyTags": ["区域认知", "综合思维", "地理实践力"],
+      "forbiddenScope": ["气候成因的气团分析", "全球气候模型"]
+    },
+    {
+      "standardId": "std-chn-g9-argumentation-001",
+      "subject": "语文",
+      "gradeBand": "7-9",
+      "module": "思辨性阅读与表达",
+      "contentRequirement": "能围绕社会热点问题搜集资料，形成自己的观点，用事实和逻辑进行论证。",
+      "competencyTags": ["语言运用", "思维能力"],
+      "forbiddenScope": ["学术论文规范", "形式逻辑符号化"]
+    }
+  ],
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "sci-g6-water-saving",
+      "name": "校园节水调查与方案设计",
+      "subject": "科学",
+      "grade": "六年级",
+      "standardIds": ["std-sci-g6-water-001"],
+      "prerequisites": ["观察记录", "简单数据整理"],
+      "commonPitfalls": ["只做口号宣传", "缺少真实数据支撑", "方案不可执行"]
+    },
+    {
+      "knowledgePointId": "math-g5-data-chart",
+      "name": "用统计图表表示调查数据",
+      "subject": "数学",
+      "grade": "五年级",
+      "standardIds": ["std-math-g5-data-001"],
+      "prerequisites": ["分类计数", "表格整理"],
+      "commonPitfalls": ["图表标题缺失", "数据单位不一致", "只描述不解释"]
+    },
+    {
+      "knowledgePointId": "math-g8-trig-refraction",
+      "name": "用三角函数计算折射角",
+      "subject": "数学",
+      "grade": "八年级",
+      "standardIds": ["std-math-g8-trig-001"],
+      "prerequisites": ["直角三角形", "正弦函数定义", "计算器使用"],
+      "commonPitfalls": ["角度与弧度混淆", "计算器模式错误", "忽略有效数字"]
+    },
+    {
+      "knowledgePointId": "chn-g7-exposition-source-use",
+      "name": "说明文资料筛选与表达优化",
+      "subject": "语文",
+      "grade": "七年级",
+      "standardIds": ["std-chn-g7-exposition-001"],
+      "prerequisites": ["说明对象", "说明顺序", "说明方法"],
+      "commonPitfalls": ["资料堆砌", "来源不明", "语言空泛"]
+    },
+    {
+      "knowledgePointId": "phy-g8-refraction",
+      "name": "光的折射现象与规律",
+      "subject": "物理",
+      "grade": "八年级",
+      "standardIds": ["std-phy-g8-optics-001"],
+      "prerequisites": ["光的直线传播", "光的反射", "入射角与折射角"],
+      "commonPitfalls": ["混淆反射与折射", "忽略折射条件（斜射）", "误认为折射角一定小于入射角"]
+    },
+    {
+      "knowledgePointId": "phy-g8-lever",
+      "name": "杠杆平衡条件与应用",
+      "subject": "物理",
+      "grade": "八年级",
+      "standardIds": ["std-phy-g8-mechanics-001"],
+      "prerequisites": ["力的概念", "力臂的画法"],
+      "commonPitfalls": ["力臂画错（不垂直）", "混淆动力和阻力", "忽略杠杆自重"]
+    },
+    {
+      "knowledgePointId": "bio-g7-biodiversity",
+      "name": "校园生物多样性调查",
+      "subject": "生物",
+      "grade": "七年级",
+      "standardIds": ["std-bio-g7-ecology-001"],
+      "prerequisites": ["生物分类基础", "观察记录方法"],
+      "commonPitfalls": ["只记录常见物种", "忽略栖息地描述", "调查范围不明确"]
+    },
+    {
+      "knowledgePointId": "his-g7-local-history",
+      "name": "本地历史遗迹调查与保护建议",
+      "subject": "历史",
+      "grade": "七年级",
+      "standardIds": ["std-his-g7-local-001"],
+      "prerequisites": ["历史年代概念", "资料搜集方法"],
+      "commonPitfalls": ["只做旅游介绍", "缺少历史背景分析", "保护建议空泛"]
+    },
+    {
+      "knowledgePointId": "geo-g7-climate-data",
+      "name": "阅读气温降水图表分析气候特征",
+      "subject": "地理",
+      "grade": "七年级",
+      "standardIds": ["std-geo-g7-climate-001"],
+      "prerequisites": ["气温和降水概念", "坐标图读取"],
+      "commonPitfalls": ["混淆气温年较差和日较差", "降水柱状图读数错误", "气候特征描述不完整"]
+    },
+    {
+      "knowledgePointId": "chn-g9-argumentation",
+      "name": "围绕社会热点进行论证写作",
+      "subject": "语文",
+      "grade": "九年级",
+      "standardIds": ["std-chn-g9-argumentation-001"],
+      "prerequisites": ["论点", "论据", "论证方法"],
+      "commonPitfalls": ["论点不明确", "论据与论点脱节", "以偏概全"]
+    }
+  ],
+  "textbookProgress": [
+    {
+      "textbookVersion": "教科版",
+      "subject": "科学",
+      "grade": "六年级",
+      "unitId": "sci-g6-u3",
+      "unitTitle": "环境与我们",
+      "lessonId": "sci-g6-u3-l4",
+      "lessonTitle": "珍惜水资源",
+      "knowledgePointIds": ["sci-g6-water-saving"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "数学",
+      "grade": "五年级",
+      "unitId": "math-g5-u7",
+      "unitTitle": "统计",
+      "lessonId": "math-g5-u7-l2",
+      "lessonTitle": "调查数据的整理与表达",
+      "knowledgePointIds": ["math-g5-data-chart"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "数学",
+      "grade": "八年级",
+      "unitId": "math-g8-u5",
+      "unitTitle": "三角函数",
+      "lessonId": "math-g8-u5-l2",
+      "lessonTitle": "正弦函数与直角三角形",
+      "knowledgePointIds": ["math-g8-trig-refraction"]
+    },
+    {
+      "textbookVersion": "统编版",
+      "subject": "语文",
+      "grade": "七年级",
+      "unitId": "chn-g7-u5",
+      "unitTitle": "说明文阅读与表达",
+      "lessonId": "chn-g7-u5-l3",
+      "lessonTitle": "抓住事物特征进行说明",
+      "knowledgePointIds": ["chn-g7-exposition-source-use"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "物理",
+      "grade": "八年级",
+      "unitId": "phy-g8-u4",
+      "unitTitle": "光现象",
+      "lessonId": "phy-g8-u4-l3",
+      "lessonTitle": "光的折射",
+      "knowledgePointIds": ["phy-g8-refraction"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "物理",
+      "grade": "八年级",
+      "unitId": "phy-g8-u12",
+      "unitTitle": "简单机械",
+      "lessonId": "phy-g8-u12-l1",
+      "lessonTitle": "杠杆",
+      "knowledgePointIds": ["phy-g8-lever"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "生物",
+      "grade": "七年级",
+      "unitId": "bio-g7-u2",
+      "unitTitle": "生物圈中的绿色植物",
+      "lessonId": "bio-g7-u2-l1",
+      "lessonTitle": "调查周边环境中的生物",
+      "knowledgePointIds": ["bio-g7-biodiversity"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "历史",
+      "grade": "七年级",
+      "unitId": "his-g7-u4",
+      "unitTitle": "三国两晋南北朝时期",
+      "lessonId": "his-g7-u4-l3",
+      "lessonTitle": "本地历史遗迹调查",
+      "knowledgePointIds": ["his-g7-local-history"]
+    },
+    {
+      "textbookVersion": "人教版",
+      "subject": "地理",
+      "grade": "七年级",
+      "unitId": "geo-g7-u3",
+      "unitTitle": "天气与气候",
+      "lessonId": "geo-g7-u3-l2",
+      "lessonTitle": "气温的变化与分布",
+      "knowledgePointIds": ["geo-g7-climate-data"]
+    },
+    {
+      "textbookVersion": "统编版",
+      "subject": "语文",
+      "grade": "九年级",
+      "unitId": "chn-g9-u4",
+      "unitTitle": "议论文写作",
+      "lessonId": "chn-g9-u4-l2",
+      "lessonTitle": "用事实和逻辑说话",
+      "knowledgePointIds": ["chn-g9-argumentation"]
+    }
+  ]
+}

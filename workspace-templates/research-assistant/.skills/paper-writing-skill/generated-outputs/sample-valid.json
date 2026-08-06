@@ -1,0 +1,263 @@
+{
+  "requestId": "req-paper-writing-valid-001",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "summary": "已找到可回链到真实 paperId 的摘要级证据，可作为保守引用建议。",
+  "result": {
+    "literatureRecords": [
+      {
+        "paperId": "paper-demo-001",
+        "title": "课堂即时反馈的教学价值研究",
+        "authors": [
+          "示例作者"
+        ],
+        "year": 2023,
+        "journal": "示例期刊",
+        "volume": "12",
+        "issue": "3",
+        "pages": "45-48",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "课堂评价",
+          "教学调整"
+        ],
+        "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified"
+      }
+    ],
+    "sourceTraceResults": [
+      {
+        "queryText": "课堂即时反馈有助于教师调整教学决策。",
+        "candidates": [
+          {
+            "paperId": "paper-demo-001",
+            "matchType": "abstract",
+            "matchSnippet": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+            "supportStatus": "supports",
+            "confidence": "medium",
+            "evidenceCardId": "ec-demo-001",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract:sentence-001",
+              "page": "",
+              "paragraph": "abstract",
+              "confidence": "medium"
+            },
+            "evidenceLevel": "abstract_verified",
+            "citation": "示例作者. 课堂即时反馈的教学价值研究[J]. 示例期刊, 2023, 12(3): 45-48."
+          }
+        ],
+        "decision": "verified_source_found"
+      }
+    ],
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈有助于教师调整教学决策。",
+        "status": "supported",
+        "matchedEvidenceCards": [
+          "ec-demo-001"
+        ],
+        "riskNotes": [
+          "证据来自摘要，只能支撑教学调整相关表述。"
+        ],
+        "recommendedRewrite": "课堂即时反馈有助于教师了解学生学习状态并调整教学。"
+      }
+    ],
+    "structureDiagnosis": {},
+    "revisionSuggestions": [],
+    "citationChecks": [
+      {
+        "citationId": "cit-001",
+        "paperId": "paper-demo-001",
+        "evidenceCardId": "ec-demo-001",
+        "citationStyle": "GB/T 7714",
+        "formattedCitation": "示例作者. 课堂即时反馈的教学价值研究[J]. 示例期刊, 2023, 12(3): 45-48.",
+        "formatStatus": "warn",
+        "requiredFieldsPresent": true,
+        "missingFields": [],
+        "sourceLocator": {
+          "locationType": "abstract",
+          "locator": "abstract:sentence-001",
+          "page": "",
+          "paragraph": "abstract",
+          "confidence": "medium"
+        },
+        "warnings": [
+          "当前证据位置为摘要级，不能支撑页码级直接引文。"
+        ]
+      }
+    ],
+    "insertionSuggestions": [
+      {
+        "insertionId": "insert-001",
+        "claimId": "claim-001",
+        "paperId": "paper-demo-001",
+        "evidenceCardId": "ec-demo-001",
+        "inTextMarker": "[1]",
+        "formattedCitation": "示例作者. 课堂即时反馈的教学价值研究[J]. 示例期刊, 2023, 12(3): 45-48.",
+        "sourceLocator": {
+          "locationType": "abstract",
+          "locator": "abstract:sentence-001",
+          "page": "",
+          "paragraph": "abstract",
+          "confidence": "medium"
+        },
+        "requiresTeacherConfirmation": true,
+        "status": "pending_teacher_confirmation",
+        "riskNotes": [
+          "摘要级证据，不能支撑成绩显著提升或因果结论。",
+          "教师确认前不得自动插入正文或参考文献表。"
+        ]
+      }
+    ],
+    "citationWarnings": [
+      "当前证据位置为摘要级，不能支撑页码级直接引文。"
+    ]
+  },
+  "handoff": {
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "status": "supported",
+        "matchedEvidenceCards": [
+          "ec-demo-001"
+        ]
+      }
+    ],
+    "usableEvidenceCards": [
+      {
+        "cardId": "ec-demo-001",
+        "claim": "课堂即时反馈有助于教师调整教学决策",
+        "evidenceText": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "paperId": "paper-demo-001",
+        "quoteLocation": "abstract",
+        "sourceLocator": {
+          "locationType": "abstract",
+          "locator": "abstract:sentence-001",
+          "page": "",
+          "paragraph": "abstract"
+        },
+        "supportType": "direct_support",
+        "evidenceLevel": "abstract_verified",
+        "usableFor": [
+          "论文引言",
+          "研究背景"
+        ],
+        "limits": [
+          "摘要级证据，不能支撑成绩显著提升或因果结论。"
+        ]
+      }
+    ],
+    "paperRevisionSummary": {
+      "addedFacts": 0,
+      "revisionSuggestionCount": 0,
+      "needsEvidenceRevisionCount": 0,
+      "citationCheckCount": 1,
+      "insertionSuggestionCount": 1,
+      "citationPolicy": "only_verified_sources"
+    }
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "id": "source_trace_decision",
+        "status": "pass"
+      },
+      {
+        "id": "evidence_card_backlink",
+        "status": "pass"
+      },
+      {
+        "id": "citation_format_check",
+        "status": "pass"
+      }
+    ],
+    "warnings": [
+      "引用格式或出处位置存在待补字段。"
+    ],
+    "metrics": {
+      "claimCount": 1,
+      "supportedClaimCount": 1,
+      "needsEvidenceCount": 0,
+      "sourceTraceHitCount": 1,
+      "citationFormatWarnings": 1,
+      "structureIssueCount": 0,
+      "missingAbstractElementCount": 0,
+      "revisionSuggestionCount": 0,
+      "addedFactCount": 0,
+      "needsEvidenceRevisionCount": 0,
+      "citationCheckCount": 1,
+      "citationReadyCount": 0,
+      "insertionSuggestionCount": 1,
+      "pendingTeacherConfirmationCount": 1
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "教师确认是否接受摘要级引用边界。"
+  ],
+  "status": "warn",
+  "warnings": [
+    "引用格式或出处位置存在待补字段。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-paper-writing-skill",
+    "skillId": "paper-writing-skill",
+    "taskIntent": "source_trace",
+    "dataSources": [
+      {
+        "sourceId": "shared-literature-pool",
+        "sourceName": "科研线共享本地文献池",
+        "sourceType": "local_mock",
+        "dataType": "literature_record",
+        "recordCount": 1,
+        "authorizationStatus": "mock_sample",
+        "version": "research-literature-adapter-v1",
+        "limitations": [
+          "由本地 mock 文献索引和样例白名单合并而来，不能替代真实授权检索。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-evidence-card-index",
+        "sourceName": "论文写作证据卡样例库",
+        "sourceType": "local_sample",
+        "dataType": "evidence_card",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "证据卡为样例数据；进入引用建议前仍需支撑性、定位和教师确认校验。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前查源依赖本地 mock/样例文献池；未验证支撑性的候选不得进入引用或正文事实。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "source_trace",
+    "sampleFile": "agent_cases/paper-writing-skill/generated-outputs/sample-valid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/sample-valid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

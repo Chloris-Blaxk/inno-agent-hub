@@ -1,0 +1,48 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "topic": "异分母分数加减法",
+  "lessonType": "new_concept",
+  "rubricType": "general",
+  "lessonDurationMin": 40,
+  "focus": ["questioning", "feedback", "wait_time", "talk_ratio"],
+  "lessonContext": {
+    "objectives": [
+      "理解异分母分数加减必须先通分的道理",
+      "掌握简单异分母分数加减的基本算法"
+    ],
+    "stages": [
+      {"name": "lead_in", "startSec": 0, "endSec": 180},
+      {"name": "explore", "startSec": 180, "endSec": 1080},
+      {"name": "practice", "startSec": 1080, "endSec": 2100},
+      {"name": "summary", "startSec": 2100, "endSec": 2400}
+    ]
+  },
+  "transcription": [
+    {"id": 1, "content": "同学们，上节课我们学了同分母分数加减法。今天看这个问题：小明喝了 1/2 瓶水，小红喝了 1/3 瓶水。两个人一共喝了几瓶水？", "start": 10.0, "end": 35.0, "speaker": "教师"},
+    {"id": 2, "content": "请大家先想一想，这道题和上节课的题目有什么不同？", "start": 36.0, "end": 46.0, "speaker": "教师"},
+    {"id": 3, "content": "分母不一样了，一个是 2，一个是 3。", "start": 50.0, "end": 56.0, "speaker": "学生"},
+    {"id": 4, "content": "对，分母不一样。那分母不一样的时候，能直接加吗？", "start": 57.0, "end": 64.0, "speaker": "教师"},
+    {"id": 5, "content": "不能。", "start": 66.0, "end": 69.0, "speaker": "学生"},
+    {"id": 6, "content": "为什么不能？请大家先独立想一下：1/2 加 1/3 第一步应该做什么？", "start": 70.0, "end": 85.0, "speaker": "教师"},
+    {"id": 7, "content": "谁来说一说？", "start": 87.0, "end": 90.0, "speaker": "教师"},
+    {"id": 8, "content": "要先通分，把分母变成一样的。", "start": 92.0, "end": 100.0, "speaker": "学生"},
+    {"id": 9, "content": "很好，那通分成多少？", "start": 101.0, "end": 105.0, "speaker": "教师"},
+    {"id": 10, "content": "通分成 6。", "start": 107.0, "end": 110.0, "speaker": "学生"},
+    {"id": 11, "content": "对。1/2 等于 3/6，1/3 等于 2/6。这就是说，我们必须把分数变成相同的分数单位，才能直接相加。这是异分母分数加减法的关键。", "start": 111.0, "end": 125.0, "speaker": "教师"},
+    {"id": 12, "content": "下面请大家拿出练习纸，先独立完成第 1 题：1/4 + 1/6。完成后和同桌互相说一说你的通分步骤。", "start": 180.0, "end": 200.0, "speaker": "教师"},
+    {"id": 13, "content": "我通分到 12，1/4 是 3/12，1/6 是 2/12，加起来是 5/12。", "start": 330.0, "end": 345.0, "speaker": "学生"},
+    {"id": 14, "content": "对，5/12。", "start": 346.0, "end": 350.0, "speaker": "教师"},
+    {"id": 15, "content": "我们刚才用的 12 是 4 和 6 的公倍数。如果题目里分母比较大，怎么选公分母会更方便？", "start": 360.0, "end": 378.0, "speaker": "教师"},
+    {"id": 16, "content": "用最小公倍数会比较小，计算简单。", "start": 385.0, "end": 395.0, "speaker": "学生"},
+    {"id": 17, "content": "你说得对，我们要选最小公倍数做公分母，这样数字小，计算简单，约分也更方便。", "start": 396.0, "end": 410.0, "speaker": "教师"},
+    {"id": 18, "content": "下面进入分层练习。A 层做第 1、2 题，B 层做 3、4 题，C 层做 5 题。完成后举手。", "start": 1110.0, "end": 1130.0, "speaker": "教师"},
+    {"id": 19, "content": "老师，我做 5/6 减 1/4，通分到 12，是 10/12 减 3/12，等于 7/12。", "start": 1510.0, "end": 1530.0, "speaker": "学生"},
+    {"id": 20, "content": "对。", "start": 1531.0, "end": 1534.0, "speaker": "教师"},
+    {"id": 21, "content": "比较一下今天和上节课的算法，有什么相同的地方？又有什么新的步骤？", "start": 1920.0, "end": 1950.0, "speaker": "教师"},
+    {"id": 22, "content": "相同的是最后都要分母相同再加减；不一样的是异分母要先通分。", "start": 1955.0, "end": 1975.0, "speaker": "学生"},
+    {"id": 23, "content": "总结得很好。也就是说，无论同分母还是异分母，本质都是把分数单位变成一样的。这就是分数加减法的核心。", "start": 1976.0, "end": 2000.0, "speaker": "教师"},
+    {"id": 24, "content": "我们今天学了异分母分数加减法，关键步骤是先通分再加减。下课前请大家在笔记本上写一句话：'异分母分数加减法最重要的一步是 _____。'", "start": 2130.0, "end": 2155.0, "speaker": "教师"}
+  ],
+  "requirements": "标注提问类型与候答时间，重点关注简单确认偏多的反馈环节，并给出可替换的师生对话片段。"
+}

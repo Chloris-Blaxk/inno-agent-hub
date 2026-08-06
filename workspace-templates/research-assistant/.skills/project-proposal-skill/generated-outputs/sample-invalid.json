@@ -1,0 +1,182 @@
+{
+  "requestId": "req-project-proposal-invalid-001",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "summary": "错误示例：事实无来源、模板章节缺失，并虚构经费和获批概率。",
+  "result": {
+    "projectFactTable": {
+      "projectId": "proj-demo-invalid",
+      "facts": [
+        {
+          "factId": "fact-001",
+          "field": "project.title",
+          "value": "智慧课堂教学研究",
+          "sourceRefs": [],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-002",
+          "field": "project.level",
+          "value": "区级课题",
+          "sourceRefs": [
+            "generated"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        }
+      ],
+      "missingFields": [],
+      "conflicts": []
+    },
+    "documentDraft": {
+      "documentId": "doc-demo-invalid",
+      "documentType": "project_application",
+      "title": "智慧课堂教学研究",
+      "sections": [
+        {
+          "sectionId": "sec-background",
+          "title": "研究背景",
+          "required": true,
+          "content": "本项目预计获批概率高，预算 2 万元。",
+          "factRefs": [
+            "fact-001"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        }
+      ]
+    },
+    "reviewAlignmentReport": {},
+    "budgetReport": {
+      "totalAmount": "2 万元",
+      "items": [
+        {
+          "category": "资料费",
+          "amount": "2 万元"
+        }
+      ],
+      "warnings": []
+    },
+    "consistencyReport": {}
+  },
+  "handoff": {
+    "projectFactTableSummary": {},
+    "documentSummary": {}
+  },
+  "qualityReport": {
+    "status": "failed",
+    "checks": [
+      {
+        "id": "expected_invalid_fixture",
+        "status": "fail",
+        "message": "预期 validate 失败的反例样例。"
+      }
+    ],
+    "warnings": [
+      "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+    ],
+    "metrics": {
+      "factCount": 2,
+      "conflictCount": 0,
+      "templateSectionCoverage": 1,
+      "budgetWarningCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 0,
+    "verifiedSourceCount": 0,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [],
+  "status": "failed",
+  "warnings": [
+    "预期失败反例：该文件用于验证 validate 脚本能拦截错误输出，不得作为可交付产物。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-project-proposal-skill",
+    "skillId": "project-proposal-skill",
+    "taskIntent": "project_application",
+    "dataSources": [
+      {
+        "sourceId": "document-templates",
+        "sourceName": "项目文档模板样例",
+        "sourceType": "local_sample",
+        "dataType": "document_template",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "模板为本地样例，真实申报前需替换为地区/项目级别最新模板。"
+        ]
+      },
+      {
+        "sourceId": "budget-rules",
+        "sourceName": "预算规则样例",
+        "sourceType": "local_sample",
+        "dataType": "budget_rule",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "预算规则为样例口径，金额和科目需按科研管理/财务规则确认。"
+        ]
+      },
+      {
+        "sourceId": "review-rubrics",
+        "sourceName": "评审标准样例",
+        "sourceType": "local_sample",
+        "dataType": "review_rubric",
+        "recordCount": 1,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "评审维度为样例，不代表所有地区和项目类别权重。"
+        ]
+      },
+      {
+        "sourceId": "sanitized-case-patterns",
+        "sourceName": "脱敏案例模式样例",
+        "sourceType": "local_sample",
+        "dataType": "sanitized_case_pattern",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "案例为脱敏模式样例，只能辅助结构参考，不能承诺立项结果。"
+        ]
+      },
+      {
+        "sourceId": "user-project-materials",
+        "sourceName": "用户提供项目材料",
+        "sourceType": "user_provided",
+        "dataType": "project_material",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "用户材料先进入 ProjectFactTable；未形成 factRefs 前不得写入正文事实。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前生成 1 类文档；模板、预算和评审规则仍为本地样例，需按真实申报口径复核。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "project_application",
+    "sampleFile": "agent_cases/project-proposal-skill/generated-outputs/sample-invalid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/project-proposal-skill/generated-outputs/sample-invalid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

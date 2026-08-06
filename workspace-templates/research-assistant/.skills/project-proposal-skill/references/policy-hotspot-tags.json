@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "项目申报助手的政策热点与资助方向标签样例。"
+  },
+  "tags": [
+    {
+      "policyId": "policy-digital-feedback-001",
+      "policyTopic": "教育数字化与课堂评价",
+      "keywords": ["即时反馈", "课堂数据", "过程性评价", "精准教学"],
+      "applicableDocumentTypes": ["project_application"],
+      "alignmentPrompt": "说明项目如何利用课堂反馈数据改进教学决策。"
+    },
+    {
+      "policyId": "policy-core-literacy-001",
+      "policyTopic": "核心素养导向课堂改革",
+      "keywords": ["核心素养", "学习任务", "课堂转型"],
+      "applicableDocumentTypes": ["project_application", "closing_report"],
+      "alignmentPrompt": "说明研究问题如何服务学科核心素养落地。"
+    }
+  ]
+}
+

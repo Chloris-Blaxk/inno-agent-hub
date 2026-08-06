@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "项目申报助手项目事实表 schema 与冲突检测规则。"
+  },
+  "requiredFields": [
+    "project.title",
+    "project.level",
+    "team.leader",
+    "team.memberCount",
+    "timeline.cycle",
+    "goals.mainGoal",
+    "basis.practiceRecords",
+    "outcomes.expected"
+  ],
+  "optionalFields": [
+    "budget.total",
+    "budget.items",
+    "data.sampleScope",
+    "policy.alignment",
+    "risks"
+  ],
+  "factStatus": [
+    "confirmed",
+    "inferred",
+    "missing",
+    "conflict",
+    "needs_user_confirmation"
+  ],
+  "factTemplate": {
+    "factId": "fact-001",
+    "field": "team.memberCount",
+    "value": "核心成员 4 人",
+    "sourceRefs": ["mat-001"],
+    "confidence": "high",
+    "status": "confirmed"
+  },
+  "conflictRules": [
+    {
+      "id": "timeline_conflict",
+      "fieldPattern": "timeline.*",
+      "rule": "同一时间字段出现多个不同值时标记 conflict。"
+    },
+    {
+      "id": "outcome_count_conflict",
+      "fieldPattern": "outcomes.*Count",
+      "rule": "成果数量在不同材料中不一致时标记 conflict。"
+    },
+    {
+      "id": "budget_sum_mismatch",
+      "fieldPattern": "budget.*",
+      "rule": "预算明细合计与总额不一致时标记 conflict。"
+    }
+  ]
+}
+

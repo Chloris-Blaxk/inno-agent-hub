@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "研究选题生成 Skill 的政策热点与资助方向标签（扩增至 20 条）。覆盖 2024-2026 教育部课题指南、各省教研热点和学科教学改革方向，供规划性选题对齐政策趋势。"
+  },
+  "tags": [
+    {
+      "policyId": "policy-core-literacy-001",
+      "policyTopic": "核心素养导向课堂教学",
+      "keywords": ["核心素养", "课堂转型", "学习任务", "大单元教学", "深度学习"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "基础教育课堂教学改革",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-digital-feedback-001",
+      "policyTopic": "数字化赋能教学评价",
+      "keywords": ["即时反馈", "课堂数据", "过程性评价", "精准教学", "数据驱动"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "教育数字化与教学评价创新",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-homework-quality-001",
+      "policyTopic": "作业设计与减负增效",
+      "keywords": ["分层作业", "单元作业", "减负", "学习质量", "双减"],
+      "applicableScenario": ["research_topic"],
+      "grantDirection": "义务教育作业改革",
+      "trend": "stable"
+    },
+    {
+      "policyId": "policy-new-curriculum-001",
+      "policyTopic": "新课标理念下的学科教学转型",
+      "keywords": ["新课标", "课程标准", "教学评一体化", "学科核心素养", "学业质量标准"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "义务教育课程标准实施",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-ai-education-001",
+      "policyTopic": "人工智能赋能教育教学",
+      "keywords": ["人工智能", "AI教育", "智能批改", "自适应学习", "人机协同教学"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "教育数字化转型",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-cross-disciplinary-001",
+      "policyTopic": "跨学科主题学习与项目化学习",
+      "keywords": ["跨学科", "项目化学习", "主题学习", "综合实践", "STEM教育"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "课程综合化改革",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-teacher-development-001",
+      "policyTopic": "教师专业发展与教研共同体建设",
+      "keywords": ["教师发展", "校本教研", "教研共同体", "课例研究", "名师工作室"],
+      "applicableScenario": ["research_topic"],
+      "grantDirection": "教师队伍建设",
+      "trend": "stable"
+    },
+    {
+      "policyId": "policy-learning-science-001",
+      "policyTopic": "学习科学与认知规律应用",
+      "keywords": ["学习科学", "元认知", "学习策略", "思维可视化", "认知负荷"],
+      "applicableScenario": ["research_topic"],
+      "grantDirection": "学习科学前沿应用",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-reading-literacy-001",
+      "policyTopic": "全学科阅读与整本书阅读",
+      "keywords": ["阅读素养", "整本书阅读", "群文阅读", "阅读策略", "读写结合"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "阅读素养提升工程",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-assessment-reform-001",
+      "policyTopic": "学业质量评价改革",
+      "keywords": ["表现性评价", "档案袋评价", "综合素质评价", "学业质量监测", "考试命题改革"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "教育评价改革",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-classroom-interaction-001",
+      "policyTopic": "课堂互动与学习共同体构建",
+      "keywords": ["课堂互动", "合作学习", "学习共同体", "对话教学", "倾听关系"],
+      "applicableScenario": ["research_topic"],
+      "grantDirection": "课堂教学方式变革",
+      "trend": "stable"
+    },
+    {
+      "policyId": "policy-math-education-001",
+      "policyTopic": "数学核心素养培育与教学改进",
+      "keywords": ["数学核心素养", "数感", "量感", "运算能力", "数学建模", "问题解决"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "数学教育质量提升",
+      "trend": "stable"
+    },
+    {
+      "policyId": "policy-double-reduction-001",
+      "policyTopic": "双减背景下课堂提质增效",
+      "keywords": ["双减", "课堂效率", "课后服务", "作业管理", "学习负担"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "义务教育减负提质",
+      "trend": "stable"
+    },
+    {
+      "policyId": "policy-equity-quality-001",
+      "policyTopic": "教育公平与城乡教育均衡",
+      "keywords": ["教育公平", "城乡差距", "薄弱学校", "教育均衡", "精准帮扶"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "义务教育优质均衡",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-mental-health-001",
+      "policyTopic": "学生心理健康与情感教育",
+      "keywords": ["心理健康", "情感教育", "社会情感学习", "抗逆力", "心理韧性"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "学生心理健康促进",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-home-school-001",
+      "policyTopic": "家校社协同育人",
+      "keywords": ["家校合作", "家庭教育", "家长参与", "协同育人", "三方联动"],
+      "applicableScenario": ["research_topic"],
+      "grantDirection": "家校社协同育人机制",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-unit-teaching-001",
+      "policyTopic": "大单元教学设计与实施",
+      "keywords": ["大单元", "单元整体教学", "结构化教学", "大概念", "教学重构"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "课堂教学深化改革",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-formative-assessment-001",
+      "policyTopic": "形成性评价与学习反馈优化",
+      "keywords": ["形成性评价", "学习反馈", "评价量规", "自我评价", "同伴互评"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "教学评价改革",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-thinking-ability-001",
+      "policyTopic": "高阶思维与创新能力培养",
+      "keywords": ["批判性思维", "创造性思维", "问题提出", "探究学习", "思维品质"],
+      "applicableScenario": ["research_topic"],
+      "grantDirection": "创新人才培养",
+      "trend": "rising"
+    },
+    {
+      "policyId": "policy-info-literacy-001",
+      "policyTopic": "师生信息素养提升",
+      "keywords": ["信息素养", "数字素养", "技术融合", "线上线下混合", "数字资源"],
+      "applicableScenario": ["research_topic", "project_application"],
+      "grantDirection": "教育信息化 2.0",
+      "trend": "rising"
+    }
+  ]
+}

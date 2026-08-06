@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "论文写作助手的证据卡索引——第 3 级查源（最后兜底）。source_trace 必须先查 PedaScope KB MCP（第 1 级）和文献阅读助手共享索引（第 2 级），此处仅作为本地补充。",
+    "searchPriority": 3,
+    "note": "不要在未查 PedaScope 的情况下只查本文件就输出 no_source_found"
+  },
+  "evidenceCards": [
+    {
+      "cardId": "ec-demo-001",
+      "claim": "即时反馈有助于教师调整教学决策",
+      "evidenceText": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+      "paperId": "paper-demo-001",
+      "paperTitle": "课堂即时反馈的教学价值研究",
+      "paperAuthors": ["示例作者"],
+      "paperYear": 2023,
+      "paperJournal": "示例期刊",
+      "quoteLocation": "abstract",
+      "sourceLocator": {
+        "locationType": "abstract",
+        "locator": "abstract:sentence-001",
+        "page": "",
+        "paragraph": "abstract"
+      },
+      "supportType": "partial_support",
+      "evidenceLevel": "abstract_verified",
+      "usableFor": ["论文引言", "研究背景"],
+      "limits": ["只能支撑教学调整相关表述，不能支撑成绩显著提升。"]
+    },
+    {
+      "cardId": "ec-demo-002",
+      "claim": "错因诊断可以帮助教师设计更有针对性的讲评",
+      "evidenceText": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+      "paperId": "paper-demo-002",
+      "paperTitle": "小学数学错因诊断与针对性讲评策略研究",
+      "paperAuthors": ["示例作者二"],
+      "paperYear": 2022,
+      "paperJournal": "基础教育研究示例",
+      "quoteLocation": "abstract",
+      "sourceLocator": {
+        "locationType": "abstract",
+        "locator": "abstract:sentence-001",
+        "page": "",
+        "paragraph": "abstract"
+      },
+      "supportType": "background",
+      "evidenceLevel": "abstract_verified",
+      "usableFor": ["论文引言", "项目研究基础"],
+      "limits": ["仅基于摘要，不能证明具体课堂效果。"]
+    }
+  ]
+}

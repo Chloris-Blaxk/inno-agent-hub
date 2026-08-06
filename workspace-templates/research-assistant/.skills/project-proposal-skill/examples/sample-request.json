@@ -1,0 +1,61 @@
+{
+  "requestId": "req-project-proposal-sample-001",
+  "entryToken": "@项目申报助手",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "sourceRequest": "根据这些项目材料生成区级课题申报书框架和研究基础部分。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参与过小学数学课堂反馈研究",
+    "existingAchievements": [],
+    "availableCycle": "1 年",
+    "constraints": []
+  },
+  "input": {
+    "documentType": "project_application",
+    "projectLevel": "区级课题",
+    "projectMaterials": [
+      {
+        "materialId": "mat-001",
+        "materialType": "team",
+        "title": "团队信息",
+        "content": "项目负责人 1 人，核心成员 4 人，均参与过小学数学课堂反馈研究。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-002",
+        "materialType": "practice",
+        "title": "实践基础",
+        "content": "已完成 3 节错因诊断课例，积累课堂投票和错因分类活动记录。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "mat-003",
+        "materialType": "outcome",
+        "title": "成果清单",
+        "content": "形成教学案例 2 篇、课堂观察记录 6 份。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      }
+    ],
+    "budgetInfo": {},
+    "teamInfo": {},
+    "requirements": "先抽取项目事实表，再生成申报书框架和研究基础部分。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

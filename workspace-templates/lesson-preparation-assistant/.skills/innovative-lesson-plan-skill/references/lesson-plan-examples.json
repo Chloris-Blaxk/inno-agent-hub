@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "创新教案 few-shot 样例，供模型生成时参考结构与语气。每类创新教案 2-3 个范例，覆盖不同学段和学科。"
+  },
+  "examples": [
+    {
+      "lessonPlanId": "example-pbl-water-saving",
+      "innovationType": "PBL",
+      "subject": "科学",
+      "grade": "六年级",
+      "topic": "校园节水方案设计",
+      "drivingQuestion": "我们能否基于校园真实用水情况，提出一份可执行的节水方案？",
+      "objectives": [
+        "描述校园用水浪费的常见情境。",
+        "分析调查数据，解释主要浪费原因。",
+        "设计一份包含证据、措施和评价方式的节水方案。"
+      ],
+      "activities": [
+        "情境导入：展示校园用水照片，引出驱动问题。",
+        "小组调查：整理用水点位和观察记录。",
+        "方案设计：提出节水措施并说明证据。",
+        "展示互评：使用量规评价方案可行性。"
+      ],
+      "assessmentTasks": ["调查记录单", "节水方案海报", "小组展示与互评"]
+    },
+    {
+      "lessonPlanId": "example-pbl-biodiversity",
+      "innovationType": "PBL",
+      "subject": "生物",
+      "grade": "七年级",
+      "topic": "校园生物多样性调查与保护建议",
+      "drivingQuestion": "我们的校园生物多样性状况如何？能为校园生态保护提出什么建议？",
+      "objectives": [
+        "观察并记录校园内不同区域的生物种类。",
+        "分析生物分布与环境条件的关系。",
+        "制定一份校园生态保护建议方案。"
+      ],
+      "activities": [
+        "情境导入：展示校园不同区域照片，讨论生物栖息地。",
+        "实地调查：分区域观察记录动植物种类和数量。",
+        "数据整理：汇总各组数据，制作生物分布表。",
+        "方案设计：分析数据，提出保护建议并制作海报。",
+        "展示汇报：各组汇报调查发现和保护建议。"
+      ],
+      "assessmentTasks": ["实地观察记录表", "生物分布数据表", "生态保护建议海报", "小组汇报"]
+    },
+    {
+      "lessonPlanId": "example-pbl-lever",
+      "innovationType": "PBL",
+      "subject": "物理",
+      "grade": "八年级",
+      "topic": "杠杆原理与生活应用",
+      "drivingQuestion": "能否用杠杆原理解释和改进校园中的一个工具？",
+      "objectives": [
+        "通过实验归纳杠杆平衡条件。",
+        "运用杠杆原理分析生活工具的省力或费力特点。",
+        "设计一个改进方案并用数据说明改进效果。"
+      ],
+      "activities": [
+        "情境导入：展示校园中的工具（剪刀、撬棍等），讨论省力原理。",
+        "实验探究：分组实验，改变力臂和力的大小，记录数据。",
+        "规律归纳：汇总数据，归纳杠杆平衡条件。",
+        "应用分析：选择一个校园工具，分析其杠杆特点。",
+        "改进设计：提出改进方案并用杠杆原理验证。"
+      ],
+      "assessmentTasks": ["实验数据记录表", "杠杆分析报告", "改进方案说明书"]
+    },
+    {
+      "lessonPlanId": "example-interdisciplinary-water-data",
+      "innovationType": "interdisciplinary",
+      "subject": "科学",
+      "grade": "五年级",
+      "topic": "校园用水数据调查",
+      "disciplineConnection": "科学提出节水问题，数学帮助整理和解释调查数据。",
+      "objectives": [
+        "收集校园用水相关数据。",
+        "用统计图表表示调查结果。",
+        "解释数据背后的节水改进方向。"
+      ],
+      "activities": ["确定调查问题", "整理数据表", "制作图表", "提出建议"],
+      "assessmentTasks": ["数据表", "统计图", "节水建议说明"]
+    },
+    {
+      "lessonPlanId": "example-interdisciplinary-refraction-math",
+      "innovationType": "interdisciplinary",
+      "subject": "物理",
+      "grade": "八年级",
+      "topic": "光的折射与三角函数",
+      "disciplineConnection": "物理提供折射现象和实验数据，数学提供三角函数计算方法验证折射规律。",
+      "objectives": [
+        "通过实验观察光的折射现象并测量角度。",
+        "运用三角函数计算折射角并与实测值比较。",
+        "解释折射规律在生活中的应用。"
+      ],
+      "activities": [
+        "导入：观察水中筷子弯折现象，提出问题。",
+        "物理实验：用光具盘测量入射角和折射角。",
+        "数学计算：用三角函数计算理论折射角。",
+        "对比分析：比较实测值与计算值，分析误差原因。",
+        "生活应用：解释游泳池看起来变浅等现象。"
+      ],
+      "assessmentTasks": ["实验数据记录表", "三角函数计算过程", "误差分析与现象解释"]
+    },
+    {
+      "lessonPlanId": "example-interdisciplinary-argumentation-history",
+      "innovationType": "interdisciplinary",
+      "subject": "语文",
+      "grade": "九年级",
+      "topic": "围绕历史事件的论证写作",
+      "disciplineConnection": "语文提供论证结构和表达方法，历史提供史料实证和时空观念。",
+      "objectives": [
+        "围绕一个历史事件搜集多种史料。",
+        "运用论证方法组织论据支持自己的观点。",
+        "撰写一篇有史料支撑的议论文。"
+      ],
+      "activities": [
+        "导入：围绕一个有争议的历史事件，讨论不同观点。",
+        "史料搜集：分组搜集不同来源的史料。",
+        "观点形成：基于史料形成自己的观点。",
+        "论证写作：运用论据和论证方法撰写议论文。",
+        "互评修改：同伴互评，修改完善。"
+      ],
+      "assessmentTasks": ["史料搜集记录", "论证提纲", "议论文定稿", "同伴互评表"]
+    },
+    {
+      "lessonPlanId": "example-ai-exposition",
+      "innovationType": "ai_integrated",
+      "subject": "语文",
+      "grade": "七年级",
+      "topic": "说明文资料筛选与表达优化",
+      "aiRole": "资料筛选助手和表达反馈伙伴",
+      "objectives": [
+        "识别说明文资料是否围绕说明对象。",
+        "评价 AI 建议中的可靠信息和存疑信息。",
+        "修改说明文片段，使表达更准确清楚。"
+      ],
+      "activities": ["人工初筛资料", "使用 AI 获得筛选建议", "审辨 AI 输出", "修改并说明取舍"],
+      "assessmentTasks": ["资料筛选表", "AI 建议审辨单", "修改说明"]
+    },
+    {
+      "lessonPlanId": "example-ai-climate-geography",
+      "innovationType": "ai_integrated",
+      "subject": "地理",
+      "grade": "七年级",
+      "topic": "气候数据分析与特征描述",
+      "aiRole": "数据分析助手和可视化审阅员",
+      "objectives": [
+        "阅读气温降水图表，提取关键数据。",
+        "评价 AI 的图表建议并选择最适合的表达方式。",
+        "描述气候特征并分析其对生活的影响。"
+      ],
+      "activities": [
+        "导入：展示不同城市气候数据，引出分析任务。",
+        "数据提取：学生自主读取图表数据。",
+        "AI 辅助：使用 AI 获取图表类型建议。",
+        "审辨选择：比较 AI 建议与自己的选择，说明理由。",
+        "特征描述：撰写气候特征分析。"
+      ],
+      "assessmentTasks": ["数据提取表", "图表选择理由说明", "气候特征分析报告"]
+    },
+    {
+      "lessonPlanId": "example-ai-experiment-physics",
+      "innovationType": "ai_integrated",
+      "subject": "物理",
+      "grade": "八年级",
+      "topic": "杠杆平衡条件探究",
+      "aiRole": "实验方案建议器和追问生成器",
+      "objectives": [
+        "审查 AI 建议的实验方案，找出需要改进的变量控制。",
+        "通过实验探究杠杆平衡条件。",
+        "选择 AI 生成的追问中最值得探究的问题并回应。"
+      ],
+      "activities": [
+        "导入：展示杠杆工具，提出探究问题。",
+        "方案审查：AI 提供实验方案建议，学生审查并修改。",
+        "实验操作：按修改后的方案进行实验。",
+        "规律归纳：汇总数据，归纳平衡条件。",
+        "追问深化：AI 生成延伸问题，学生选择并回应。"
+      ],
+      "assessmentTasks": ["实验方案审查记录", "实验数据表", "追问回应单"]
+    }
+  ]
+}

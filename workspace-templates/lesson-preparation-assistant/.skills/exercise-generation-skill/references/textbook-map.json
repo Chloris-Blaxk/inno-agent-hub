@@ -1,0 +1,48 @@
+{
+  "textbooks": [
+    {
+      "textbookVersion": "人教版",
+      "subject": "数学",
+      "grade": "五年级",
+      "volume": "下册",
+      "unitId": "pep-math-g5b-u4",
+      "unit": "分数的加法和减法",
+      "periods": [
+        {
+          "period": "第1课时",
+          "topic": "同分母分数加减法",
+          "knowledgePointIds": [
+            "math-g5-fraction-same-denominator-add"
+          ],
+          "lessonBoundary": "理解分数单位相同才能直接相加减；结果要约成最简分数；假分数可化成整数或带分数。"
+        },
+        {
+          "period": "第2课时",
+          "topic": "异分母分数加减法",
+          "knowledgePointIds": [
+            "math-g5-fraction-add"
+          ],
+          "lessonBoundary": "理解先通分再加减，结果能约分；不引入分式、方程和复杂代数通分。"
+        },
+        {
+          "period": "第3课时",
+          "topic": "分数加减法应用",
+          "knowledgePointIds": [
+            "math-g5-fraction-application"
+          ],
+          "lessonBoundary": "解决一步或两步简单实际问题，能说明数量关系；不引入复杂方程建模。"
+        },
+        {
+          "period": "单元综合",
+          "topic": "分数加减法单元练习",
+          "knowledgePointIds": [
+            "math-g5-fraction-same-denominator-add",
+            "math-g5-fraction-add",
+            "math-g5-fraction-application"
+          ],
+          "lessonBoundary": "覆盖同分母、异分母和简单实际问题，控制在五年级分数加减法范围内。"
+        }
+      ]
+    }
+  ]
+}

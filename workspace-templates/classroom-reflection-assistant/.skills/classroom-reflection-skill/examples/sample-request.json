@@ -1,0 +1,12 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "topic": "异分母分数加减法",
+  "rubricType": "general",
+  "transcription": [
+    {"id": 1, "content": "计算 1/2 加 1/3，大家觉得第一步应该做什么？", "start": 70.0, "end": 85.0, "speaker": "教师"},
+    {"id": 2, "content": "要先通分。", "start": 87.0, "end": 91.0, "speaker": "学生"},
+    {"id": 3, "content": "对。", "start": 92.0, "end": 94.0, "speaker": "教师"}
+  ],
+  "requirements": "标注提问类型、候答时间和反馈方式，并给出证据化反思。"
+}

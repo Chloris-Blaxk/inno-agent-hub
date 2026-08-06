@@ -1,0 +1,23 @@
+{
+  "requestId": "req-paper-writing-local-rewrite-001",
+  "entryToken": "@论文写作助手",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "local_rewrite",
+  "sourceRequest": "请只改写这句话，弱化强结论。",
+  "teacherProfile": {},
+  "input": {
+    "selectedText": "即时反馈能显著提升学生数学成绩。",
+    "rewriteMode": "conservative_polish",
+    "availableLiteratureRecords": [],
+    "availableEvidenceCards": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

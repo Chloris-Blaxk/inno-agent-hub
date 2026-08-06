@@ -1,0 +1,23 @@
+[
+  {
+    "id": "math-g7-linear-equation-solve",
+    "name": "一元一次方程的解法",
+    "description": "掌握移项、合并同类项、系数化为1等解方程的基本步骤，能熟练求解一元一次方程",
+    "layer": "A/B/C",
+    "cognitiveLevels": ["识记", "理解", "应用"]
+  },
+  {
+    "id": "math-g7-linear-equation-apply",
+    "name": "一元一次方程的应用",
+    "description": "能根据实际问题中的等量关系列出一元一次方程并求解，包括行程问题、工程问题、销售问题等",
+    "layer": "A/B/C",
+    "cognitiveLevels": ["理解", "应用", "分析"]
+  },
+  {
+    "id": "math-g7-linear-equation-complex",
+    "name": "含参数与复杂一元一次方程",
+    "description": "能解含括号、分母、参数的复杂一元一次方程，能对解进行分类讨论",
+    "layer": "B/C",
+    "cognitiveLevels": ["应用", "分析", "评价"]
+  }
+]

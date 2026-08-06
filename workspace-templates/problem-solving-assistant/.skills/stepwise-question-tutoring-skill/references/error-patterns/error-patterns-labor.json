@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "description": "劳动教育学科错误模式库（仅理论知识题型）",
+  "errorCategories": [
+    {
+      "categoryId": "labor-safety-concept",
+      "categoryName": "安全知识理解错误",
+      "description": "劳动安全、工具使用、防护措施等知识点错误",
+      "patterns": [
+        {
+          "id": "err-lab-safety-procedure",
+          "name": "安全操作顺序错误",
+          "knowledgePointIds": ["lab-safety", "lab-procedure"],
+          "symptom": "劳动操作的安全步骤顺序不对",
+          "likelyCause": "不理解安全操作的逻辑顺序",
+          "diagnosisSignals": ["先操作后检查", "忽略防护措施", "步骤颠倒"],
+          "hintTemplate": "安全操作要遵循'先检查、再防护、后操作'的顺序。",
+          "remediationSteps": [
+            "记住原则：安全第一，预防为主",
+            "标准流程：检查工具→佩戴防护→规范操作→清理现场",
+            "危险操作：电器要先断电，化学品要先通风"
+          ]
+        },
+        {
+          "id": "err-lab-tool-selection",
+          "name": "工具选择错误",
+          "knowledgePointIds": ["lab-tools", "lab-equipment"],
+          "symptom": "选择了不合适的劳动工具",
+          "likelyCause": "不了解工具的用途和适用场景",
+          "diagnosisSignals": ["用错工具", "忽略专用工具", "不考虑材料特性"],
+          "hintTemplate": "这个任务应该用{工具名称}，不能用{错误工具}。",
+          "remediationSteps": [
+            "了解工具：每种工具的用途和限制",
+            "匹配任务：根据材料、精度、力度选择",
+            "安全考虑：使用专业工具更安全"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "labor-theory-concept",
+      "categoryName": "劳动理论概念错误",
+      "description": "劳动价值、劳动精神、职业素养等概念理解错误",
+      "patterns": [
+        {
+          "id": "err-lab-value-understanding",
+          "name": "劳动价值理解错误",
+          "knowledgePointIds": ["lab-value", "lab-spirit"],
+          "symptom": "对劳动的意义和价值理解不准确",
+          "likelyCause": "对劳动教育理论概念理解表面化",
+          "diagnosisSignals": ["只看到劳动的工具价值", "忽略劳动的育人价值", "价值判断片面"],
+          "hintTemplate": "劳动不仅创造物质财富，还培养{品质/能力}。",
+          "remediationSteps": [
+            "理解多重价值：物质价值+精神价值+育人价值",
+            "劳动精神：崇尚劳动、尊重劳动、热爱劳动",
+            "实践育人：通过劳动培养责任、合作、创新"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,895 @@
+{
+  "exerciseMeta": {
+    "title": "分数的加法和减法·单元测验 单元测验",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "单元综合",
+    "topic": "分数的加法和减法·单元测验",
+    "taskType": "unit_test",
+    "questionCount": 15,
+    "source": "InnoSpark-235B-dynamic-generation"
+  },
+  "blueprint": {
+    "taskType": "unit_test",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 8,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 5,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      },
+      {
+        "layer": "C",
+        "name": "拓展层",
+        "targetCount": 2,
+        "difficultyRange": [
+          3,
+          4
+        ],
+        "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+        "cognitiveLevel": "迁移"
+      }
+    ],
+    "questionTypes": [
+      "计算题",
+      "应用题",
+      "比较题",
+      "判断题",
+      "填空题"
+    ],
+    "layerTargets": {
+      "A": 8,
+      "B": 5,
+      "C": 2
+    },
+    "questionTypeTargets": {
+      "计算题": 6,
+      "应用题": 6,
+      "比较题": 1,
+      "判断题": 1,
+      "填空题": 1
+    },
+    "difficultyTargets": {
+      "1": 4,
+      "2": 4,
+      "3": 5,
+      "4": 2
+    },
+    "strictBlueprint": true,
+    "knowledgePointIds": [
+      "math-g5-fraction-same-denominator-add",
+      "math-g5-fraction-add",
+      "math-g5-fraction-application"
+    ],
+    "lessonBoundary": "覆盖同分母、异分母和简单实际问题，控制在五年级分数加减法范围内。",
+    "requirements": "单元测验卷。覆盖全部3个知识点，5种题型。基础50%巩固35%拓展15%。要求严格按蓝图配比，附完整答案、解析、评分标准和讲评建议。"
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{1}{5} + \\frac{2}{5} = ?",
+      "answer": "\\frac{3}{5}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{5}，直接把分子相加。",
+        "1 + 2 = 3，所以 \\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}。"
+      ],
+      "commonErrors": [
+        "分母相加",
+        "分子分母相加"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加法时分母不变，只加分子。",
+      "sourceId": 1,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q002",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{7}{9} - \\frac{4}{9} = ?",
+      "answer": "\\frac{3}{9}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相减。",
+        "7 - 4 = 3，所以 \\frac{7}{9} - \\frac{4}{9} = \\frac{3}{9}。"
+      ],
+      "commonErrors": [
+        "分母相减",
+        "分子分母相减"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数减法时分母不变，只减分子。",
+      "sourceId": 2,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q003",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一根绳子长 \\frac{5}{6} 米，剪掉 \\frac{2}{6} 米，还剩多少米？",
+      "answer": "\\frac{3}{6}",
+      "solutionSteps": [
+        "求剩余长度，用减法：\\frac{5}{6} - \\frac{2}{6}。",
+        "分母相同，分子相减：5 - 2 = 3，得 \\frac{3}{6} 米。"
+      ],
+      "commonErrors": [
+        "加法误用",
+        "单位混淆"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解“剪掉”对应减法运算，并注意单位。",
+      "sourceId": 3,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q004",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{3}{8} + \\frac{4}{8} = ?",
+      "answer": "\\frac{7}{8}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{8}，直接把分子相加。",
+        "3 + 4 = 7，所以 \\frac{3}{8} + \\frac{4}{8} = \\frac{7}{8}。"
+      ],
+      "commonErrors": [
+        "分母相加",
+        "分子分母相加"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加法时分母不变，只加分子。",
+      "sourceId": 4,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q005",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一盒牛奶，小明喝了 \\frac{1}{4}，小红喝了 \\frac{2}{4}，两人一共喝了这盒牛奶的几分之几？",
+      "answer": "\\frac{3}{4}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{4} + \\frac{2}{4}。",
+        "分母相同，分子相加：1 + 2 = 3，得 \\frac{3}{4}。"
+      ],
+      "commonErrors": [
+        "减法误用",
+        "单位混淆"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解“一共”对应加法运算，并注意单位。",
+      "sourceId": 5,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q006",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{9}{10} - \\frac{3}{10} = ?",
+      "answer": "\\frac{6}{10}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{10}，直接把分子相减。",
+        "9 - 3 = 6，所以 \\frac{9}{10} - \\frac{3}{10} = \\frac{6}{10}。"
+      ],
+      "commonErrors": [
+        "分母相减",
+        "分子分母相减"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数减法时分母不变，只减分子。",
+      "sourceId": 6,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q007",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一块蛋糕，小华吃了 \\frac{2}{7}，小丽吃了 \\frac{3}{7}，两人一共吃了这块蛋糕的几分之几？",
+      "answer": "\\frac{5}{7}",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：\\frac{2}{7} + \\frac{3}{7}。",
+        "分母相同，分子相加：2 + 3 = 5，得 \\frac{5}{7}。"
+      ],
+      "commonErrors": [
+        "减法误用",
+        "单位混淆"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解“一共”对应加法运算，并注意单位。",
+      "sourceId": 7,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q008",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{5}{12} + \\frac{6}{12} = ?",
+      "answer": "\\frac{11}{12}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{12}，直接把分子相加。",
+        "5 + 6 = 11，所以 \\frac{5}{12} + \\frac{6}{12} = \\frac{11}{12}。"
+      ],
+      "commonErrors": [
+        "分母相加",
+        "分子分母相加"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加法时分母不变，只加分子。",
+      "sourceId": 8,
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q009",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "计算：\\frac{5}{9} + \\frac{2}{9} - \\frac{4}{9} = ?",
+      "answer": "\\frac{1}{3}",
+      "solutionSteps": [
+        "按从左到右顺序计算：\\frac{5}{9} + \\frac{2}{9} = \\frac{7}{9}。",
+        "\\frac{7}{9} - \\frac{4}{9} = \\frac{3}{9}。",
+        "将 \\frac{3}{9} 约分为最简分数 \\frac{1}{3}。"
+      ],
+      "commonErrors": [
+        "计算顺序错误",
+        "忘记约分"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "强调同分母分数加减法的运算顺序和结果必须化为最简分数。",
+      "sourceId": "B1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q010",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "计算：\\frac{1}{4} + \\frac{3}{8} = ?",
+      "answer": "\\frac{5}{8}",
+      "solutionSteps": [
+        "分母不同，需要先通分。4和8的最小公倍数是8。",
+        "将 \\frac{1}{4} 转化为 \\frac{2}{8}。",
+        "\\frac{2}{8} + \\frac{3}{8} = \\frac{5}{8}。"
+      ],
+      "commonErrors": [
+        "直接分子分母相加",
+        "通分时分子忘记乘相应倍数"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "重点讲解通分的必要性和方法，强调通分时分子分母要同乘一个数。",
+      "sourceId": "B2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q011",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "小明喝了一杯牛奶的 \\frac{1}{3}，小红喝了同一杯牛奶的 \\frac{1}{4}，两人一共喝了这杯牛奶的几分之几？",
+      "answer": "\\frac{7}{12}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{3} + \\frac{1}{4}。",
+        "分母不同，先通分。3和4的最小公倍数是12。",
+        "将 \\frac{1}{3} 转化为 \\frac{4}{12}，将 \\frac{1}{4} 转化为 \\frac{3}{12}。",
+        "\\frac{4}{12} + \\frac{3}{12} = \\frac{7}{12}。"
+      ],
+      "commonErrors": [
+        "直接分子分母相加",
+        "通分错误"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "引导学生理解实际问题中的分数加法，强调通分在解决异分母分数加法中的关键作用。",
+      "sourceId": "B3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q012",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一根绳子长 \\frac{7}{10} 米，第一次用去 \\frac{2}{10} 米，第二次用去 \\frac{3}{10} 米，还剩多少米？",
+      "answer": "\\frac{1}{5}",
+      "solutionSteps": [
+        "先算两次一共用去多少：\\frac{2}{10} + \\frac{3}{10} = \\frac{5}{10}。",
+        "再算还剩多少：\\frac{7}{10} - \\frac{5}{10} = \\frac{2}{10}。",
+        "将 \\frac{2}{10} 约分为最简分数 \\frac{1}{5}。"
+      ],
+      "commonErrors": [
+        "计算顺序错误",
+        "忘记约分"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "培养学生分步解决问题的能力，同时强调结果的最简形式。",
+      "sourceId": "B4",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q013",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一块地，种了 \\frac{1}{2} 的玉米，\\frac{1}{3} 的大豆，剩下的种了蔬菜。种蔬菜的地占这块地的几分之几？",
+      "answer": "\\frac{1}{6}",
+      "solutionSteps": [
+        "把整块地看作单位 1。",
+        "先算玉米和大豆一共占多少：\\frac{1}{2} + \\frac{1}{3}。",
+        "通分：\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}。",
+        "再算蔬菜占多少：1 - \\frac{5}{6} = \\frac{6}{6} - \\frac{5}{6} = \\frac{1}{6}。"
+      ],
+      "commonErrors": [
+        "忘记单位1",
+        "通分错误"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "引导学生理解单位1在分数应用题中的作用，巩固异分母分数加减法的综合运用。",
+      "sourceId": "B5",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q014",
+      "knowledgePointIds": [
+        "math-g5-fraction-add",
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "stem": "小明喝了一杯果汁的 \\frac{1}{3}，小红喝了同一杯果汁的 \\frac{2}{5}。请问谁喝得多？多多少？",
+      "answer": "小红喝得多，多 \\frac{1}{15} 杯。",
+      "solutionSteps": [
+        "比较 \\frac{1}{3} 和 \\frac{2}{5} 的大小，需要先通分。",
+        "3 和 5 的最小公倍数是 15，所以 \\frac{1}{3} = \\frac{5}{15}，\\frac{2}{5} = \\frac{6}{15}。",
+        "因为 \\frac{6}{15} > \\frac{5}{15}，所以小红喝得多。",
+        "计算多多少：\\frac{6}{15} - \\frac{5}{15} = \\frac{1}{15}。"
+      ],
+      "commonErrors": [
+        "直接比较分子或分母，忽略通分",
+        "通分时分子忘记乘以相应的倍数"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "本题考察异分母分数的比较和减法运算。教学时应强调通分的必要性，并引导学生理解分数单位的变化。",
+      "sourceId": "C1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q015",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add",
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "判断题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "判断题：如果 \\frac{a}{8} + \\frac{b}{8} = \\frac{7}{8}，那么 a 和 b 的值一定是 3 和 4。这个说法对吗？请说明理由。",
+      "answer": "不对。a 和 b 可以是 1 和 6、2 和 5、3 和 4、4 和 3、5 和 2、6 和 1 等多种组合。",
+      "solutionSteps": [
+        "根据同分母分数加法法则，\\frac{a}{8} + \\frac{b}{8} = \\frac{a+b}{8}。",
+        "题目给出 \\frac{a+b}{8} = \\frac{7}{8}，所以 a + b = 7。",
+        "a 和 b 是正整数，满足 a + b = 7 的组合有：(1,6)、(2,5)、(3,4)、(4,3)、(5,2)、(6,1)。",
+        "因此原说法不全面，是错误的。"
+      ],
+      "commonErrors": [
+        "思维定式，只想到 3+4=7",
+        "忽略 a 和 b 可以互换位置"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "本题考察同分母分数加法的逆向思维和开放性思考。教学时应鼓励学生全面考虑所有可能性，培养严谨的数学思维。",
+      "sourceId": "C2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "\\frac{3}{5}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{5}，直接把分子相加。",
+        "1 + 2 = 3，所以 \\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q002",
+      "answer": "\\frac{3}{9}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相减。",
+        "7 - 4 = 3，所以 \\frac{7}{9} - \\frac{4}{9} = \\frac{3}{9}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q003",
+      "answer": "\\frac{3}{6}",
+      "solutionSteps": [
+        "求剩余长度，用减法：\\frac{5}{6} - \\frac{2}{6}。",
+        "分母相同，分子相减：5 - 2 = 3，得 \\frac{3}{6} 米。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q004",
+      "answer": "\\frac{7}{8}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{8}，直接把分子相加。",
+        "3 + 4 = 7，所以 \\frac{3}{8} + \\frac{4}{8} = \\frac{7}{8}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q005",
+      "answer": "\\frac{3}{4}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{4} + \\frac{2}{4}。",
+        "分母相同，分子相加：1 + 2 = 3，得 \\frac{3}{4}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q006",
+      "answer": "\\frac{6}{10}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{10}，直接把分子相减。",
+        "9 - 3 = 6，所以 \\frac{9}{10} - \\frac{3}{10} = \\frac{6}{10}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q007",
+      "answer": "\\frac{5}{7}",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：\\frac{2}{7} + \\frac{3}{7}。",
+        "分母相同，分子相加：2 + 3 = 5，得 \\frac{5}{7}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q008",
+      "answer": "\\frac{11}{12}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{12}，直接把分子相加。",
+        "5 + 6 = 11，所以 \\frac{5}{12} + \\frac{6}{12} = \\frac{11}{12}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q009",
+      "answer": "\\frac{1}{3}",
+      "solutionSteps": [
+        "按从左到右顺序计算：\\frac{5}{9} + \\frac{2}{9} = \\frac{7}{9}。",
+        "\\frac{7}{9} - \\frac{4}{9} = \\frac{3}{9}。",
+        "将 \\frac{3}{9} 约分为最简分数 \\frac{1}{3}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q010",
+      "answer": "\\frac{5}{8}",
+      "solutionSteps": [
+        "分母不同，需要先通分。4和8的最小公倍数是8。",
+        "将 \\frac{1}{4} 转化为 \\frac{2}{8}。",
+        "\\frac{2}{8} + \\frac{3}{8} = \\frac{5}{8}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q011",
+      "answer": "\\frac{7}{12}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{3} + \\frac{1}{4}。",
+        "分母不同，先通分。3和4的最小公倍数是12。",
+        "将 \\frac{1}{3} 转化为 \\frac{4}{12}，将 \\frac{1}{4} 转化为 \\frac{3}{12}。",
+        "\\frac{4}{12} + \\frac{3}{12} = \\frac{7}{12}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q012",
+      "answer": "\\frac{1}{5}",
+      "solutionSteps": [
+        "先算两次一共用去多少：\\frac{2}{10} + \\frac{3}{10} = \\frac{5}{10}。",
+        "再算还剩多少：\\frac{7}{10} - \\frac{5}{10} = \\frac{2}{10}。",
+        "将 \\frac{2}{10} 约分为最简分数 \\frac{1}{5}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q013",
+      "answer": "\\frac{1}{6}",
+      "solutionSteps": [
+        "把整块地看作单位 1。",
+        "先算玉米和大豆一共占多少：\\frac{1}{2} + \\frac{1}{3}。",
+        "通分：\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}。",
+        "再算蔬菜占多少：1 - \\frac{5}{6} = \\frac{6}{6} - \\frac{5}{6} = \\frac{1}{6}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q014",
+      "answer": "小红喝得多，多 \\frac{1}{15} 杯。",
+      "solutionSteps": [
+        "比较 \\frac{1}{3} 和 \\frac{2}{5} 的大小，需要先通分。",
+        "3 和 5 的最小公倍数是 15，所以 \\frac{1}{3} = \\frac{5}{15}，\\frac{2}{5} = \\frac{6}{15}。",
+        "因为 \\frac{6}{15} > \\frac{5}{15}，所以小红喝得多。",
+        "计算多多少：\\frac{6}{15} - \\frac{5}{15} = \\frac{1}{15}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q015",
+      "answer": "不对。a 和 b 可以是 1 和 6、2 和 5、3 和 4、4 和 3、5 和 2、6 和 1 等多种组合。",
+      "solutionSteps": [
+        "根据同分母分数加法法则，\\frac{a}{8} + \\frac{b}{8} = \\frac{a+b}{8}。",
+        "题目给出 \\frac{a+b}{8} = \\frac{7}{8}，所以 a + b = 7。",
+        "a 和 b 是正整数，满足 a + b = 7 的组合有：(1,6)、(2,5)、(3,4)、(4,3)、(5,2)、(6,1)。",
+        "因此原说法不全面，是错误的。"
+      ],
+      "scorePoints": 2
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add",
+      "math-g5-fraction-add",
+      "math-g5-fraction-application"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add",
+      "math-g5-fraction-add",
+      "math-g5-fraction-application"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-same-denominator-add": {
+        "questionCount": 8,
+        "questionTypes": {
+          "计算题": 6,
+          "应用题": 1,
+          "判断题": 1
+        }
+      },
+      "math-g5-fraction-add": {
+        "questionCount": 3,
+        "questionTypes": {
+          "计算题": 1,
+          "应用题": 2
+        }
+      },
+      "math-g5-fraction-application": {
+        "questionCount": 6,
+        "questionTypes": {
+          "应用题": 5,
+          "判断题": 1
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 8,
+        "min": 1,
+        "max": 2,
+        "average": 1.38
+      },
+      "B": {
+        "questionCount": 5,
+        "min": 2,
+        "max": 3,
+        "average": 2.4
+      },
+      "C": {
+        "questionCount": 2,
+        "min": 3,
+        "max": 4,
+        "average": 3.5
+      }
+    },
+    "byDifficulty": {
+      "1": 5,
+      "2": 6,
+      "3": 3,
+      "4": 1
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "代数式通分",
+      "分式方程",
+      "含未知数方程求解",
+      "复杂最小公倍数证明",
+      "复杂比例推理",
+      "多步百分数应用",
+      "异分母分数运算",
+      "有理数混合运算"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "分母相加",
+      "name": "分母相加",
+      "relatedQuestionCount": 3,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分子分母相加",
+      "name": "分子分母相加",
+      "relatedQuestionCount": 3,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "单位混淆",
+      "name": "单位混淆",
+      "relatedQuestionCount": 3,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分母相减",
+      "name": "分母相减",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分子分母相减",
+      "name": "分子分母相减",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "减法误用",
+      "name": "减法误用",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算顺序错误",
+      "name": "计算顺序错误",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记约分",
+      "name": "忘记约分",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接分子分母相加",
+      "name": "直接分子分母相加",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分错误",
+      "name": "通分错误",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "加法误用",
+      "name": "加法误用",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时分子忘记乘相应倍数",
+      "name": "通分时分子忘记乘相应倍数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记单位1",
+      "name": "忘记单位1",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接比较分子或分母，忽略通分",
+      "name": "直接比较分子或分母，忽略通分",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时分子忘记乘以相应的倍数",
+      "name": "通分时分子忘记乘以相应的倍数",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "思维定式，只想到 3+4=7",
+      "name": "思维定式，只想到 3+4=7",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忽略 a 和 b 可以互换位置",
+      "name": "忽略 a 和 b 可以互换位置",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    }
+  ],
+  "replacementSuggestions": [],
+  "qualityReport": {
+    "status": "fail",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 15 题，请求 15 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 8 题，目标 8 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 5 题，目标 5 题。"
+      },
+      {
+        "id": "layer_C_count",
+        "status": "pass",
+        "message": "C 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "fail",
+        "message": "题型比例未完全匹配目标 {'计算题': 6, '应用题': 6, '比较题': 1, '判断题': 1, '填空题': 1}，实际 {'计算题': 7, '应用题': 7, '判断题': 1}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "fail",
+        "message": "难度比例未完全匹配目标 {'1': 4, '2': 4, '3': 5, '4': 2}，实际 {'1': 5, '2': 6, '3': 3, '4': 1}。"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  }
+}

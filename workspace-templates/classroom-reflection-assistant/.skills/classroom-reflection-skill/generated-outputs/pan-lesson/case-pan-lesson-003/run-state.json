@@ -1,0 +1,23 @@
+{
+  "skill": "classroom-reflection-skill",
+  "createdAt": "2026-06-05T10:14:02",
+  "lessonSlug": "pan-lesson",
+  "conversationId": "case-pan-lesson-003",
+  "inputFile": "《盼》.json",
+  "generatedRoot": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs",
+  "outputDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003",
+  "rubricSource": "匹配评分表 `01_语文.md`",
+  "matchedSubject": "语文",
+  "matchedRubric": "01_语文.md",
+  "rubricPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/assets/rubric/01_语文.md",
+  "reportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/reflection-report.md",
+  "reportJsonPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/reflection-report.json",
+  "lessonPlanPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/optimized-lesson-plan.md",
+  "teacherTranscriptPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/teacher-transcript.md",
+  "internalDir": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/.internal",
+  "promptPayloadPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/.internal/prompt-payload.md",
+  "normalizedInputPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/.internal/normalized-input.json",
+  "validationReportPath": "/Users/jzq/Desktop/AgentDesign/agent_cases/classroom-reflection-skill/generated-outputs/pan-lesson/case-pan-lesson-003/.internal/validation-report.json",
+  "promptTranscriptPreviewChars": 0,
+  "warnings": []
+}

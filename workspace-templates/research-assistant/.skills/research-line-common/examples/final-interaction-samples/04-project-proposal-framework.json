@@ -1,0 +1,82 @@
+{
+  "requestId": "final-interaction-project-proposal-001",
+  "entryToken": "@项目申报助手",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "sourceRequest": "@项目申报助手 根据项目材料生成申报书框架",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "五年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参加过校本教研、公开课磨课和区级命题研讨",
+    "existingAchievements": ["校内公开课 2 节", "错因诊断教学反思 3 篇"],
+    "availableCycle": "2026-09 至 2027-08",
+    "constraints": ["预算和成果数量必须来自材料或标记待确认"]
+  },
+  "input": {
+    "documentType": "project_application",
+    "projectLevel": "区级课题",
+    "projectMaterials": [
+      {
+        "materialId": "project-plan-001",
+        "materialType": "project_process_record",
+        "title": "课题构想",
+        "content": "拟申报区级课题：小学数学讲评课中即时反馈支持错因诊断的实践研究。周期为 2026-09 至 2027-08。",
+        "sourceStatus": "user_provided",
+        "sensitivity": "internal"
+      },
+      {
+        "materialId": "project-team-001",
+        "materialType": "team_info",
+        "title": "团队信息",
+        "content": "项目负责人 1 人，核心成员 4 人，其中 2 人负责课堂观察与错因样例整理。",
+        "sourceStatus": "user_provided",
+        "sensitivity": "internal"
+      },
+      {
+        "materialId": "project-practice-001",
+        "materialType": "project_process_record",
+        "title": "实践基础",
+        "content": "已完成 3 节五年级分数讲评课实践，形成课堂观察表 6 份、学生错因样例 42 条和课后访谈摘要 5 份。",
+        "sourceStatus": "user_provided",
+        "sensitivity": "internal"
+      },
+      {
+        "materialId": "project-outcome-001",
+        "materialType": "project_result",
+        "title": "已有成果",
+        "content": "已形成错因诊断教学反思 3 篇、校内公开课 2 节，尚未形成正式论文。",
+        "sourceStatus": "user_provided",
+        "sensitivity": "internal"
+      },
+      {
+        "materialId": "project-risk-001",
+        "materialType": "teaching_reflection",
+        "title": "风险与限制",
+        "content": "现有材料主要来自本校一个年级，缺少连续追踪和跨班级推广证据。",
+        "sourceStatus": "user_provided",
+        "sensitivity": "internal"
+      }
+    ],
+    "budgetInfo": {
+      "totalAmount": "1.8 万元",
+      "items": [
+        {"category": "资料费", "amount": "0.5 万元", "purpose": "购买研究资料和打印课堂观察表"},
+        {"category": "培训研讨费", "amount": "0.7 万元", "purpose": "开展校内课题研讨和专家指导"},
+        {"category": "数据整理费", "amount": "0.4 万元", "purpose": "整理课堂观察记录和错因样例"},
+        {"category": "成果印刷费", "amount": "0.2 万元", "purpose": "汇编案例集和阶段成果材料"}
+      ]
+    },
+    "teamInfo": {},
+    "requirements": "先抽取项目事实表，再生成申报书框架；缺少来源的事实必须标记待确认。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

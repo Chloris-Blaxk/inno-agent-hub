@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "description": "道德与法治学科错误模式库（仅概念辨析题型）",
+  "errorCategories": [
+    {
+      "categoryId": "ethics-concept-distinction",
+      "categoryName": "概念辨析错误",
+      "description": "混淆相似概念，或理解概念不准确",
+      "patterns": [
+        {
+          "id": "err-eth-concept-confusion",
+          "name": "相似概念混淆",
+          "knowledgePointIds": ["eth-legal-concept", "eth-moral-concept"],
+          "symptom": "把意思相近但有区别的概念混用",
+          "likelyCause": "不理解概念的内涵和外延，或只记大概意思",
+          "diagnosisSignals": ["权利与权力混淆", "义务与职责混淆", "违法与犯罪混淆"],
+          "hintTemplate": "'{概念A}'和'{概念B}'是不同的概念。区别在于...。",
+          "remediationSteps": [
+            "理解内涵：权利=公民享有的权益，权力=管理的职权",
+            "记住区别：违法包括一般违法和犯罪，犯罪是严重违法",
+            "对比记忆：用表格对比相似概念的区别"
+          ]
+        },
+        {
+          "id": "err-eth-concept-scope",
+          "name": "概念范围理解错误",
+          "knowledgePointIds": ["eth-legal-system"],
+          "symptom": "对概念的适用范围理解错误",
+          "likelyCause": "不理解概念的外延和边界",
+          "diagnosisSignals": ["把特殊情况当成普遍规律", "范围扩大或缩小", "忽略前提条件"],
+          "hintTemplate": "这个概念适用于{范围}，不包括{排除情况}。",
+          "remediationSteps": [
+            "明确范围：如'未成年人'指不满18周岁",
+            "注意例外：一般规律有例外情况",
+            "理解层次：包含关系、并列关系等"
+          ]
+        }
+      ]
+    }
+  ]
+}

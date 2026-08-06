@@ -1,0 +1,3011 @@
+{
+  "questions": [
+    {
+      "sourceId": "seed-same-a-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：2/7 + 3/7 = ?",
+      "answer": "5/7",
+      "solutionSteps": [
+        "分母相同，分数单位都是 1/7，直接把分子相加。",
+        "2 + 3 = 5，所以 2/7 + 3/7 = 5/7。"
+      ],
+      "scorePoints": [
+        "能正确将分子相加",
+        "能保持分母不变"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "追问学生：为什么不能把分母 7 也加上去？",
+      "estimatedTimeSec": 45,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：5/8 - 2/8 = ?",
+      "answer": "3/8",
+      "solutionSteps": [
+        "分母相同，分子直接相减。",
+        "5 - 2 = 3，所以 5/8 - 2/8 = 3/8。"
+      ],
+      "scorePoints": [
+        "能正确将分子相减",
+        "能保持分母不变"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "强调分数单位相同，才能直接减分子。",
+      "estimatedTimeSec": 45,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：1/6 + 4/6 = ?",
+      "answer": "5/6",
+      "solutionSteps": [
+        "分母不变，分子相加。",
+        "1 + 4 = 5，结果是 5/6。"
+      ],
+      "scorePoints": [
+        "能正确将分子相加",
+        "结果正确"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "检查学生是否写成 5/12。",
+      "estimatedTimeSec": 45,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：7/10 - 3/10 = ?",
+      "answer": "2/5",
+      "solutionSteps": [
+        "分母相同，分子相减：7 - 3 = 4，得 4/10。",
+        "4/10 约分，分子分母同时除以 2，得 2/5。"
+      ],
+      "scorePoints": [
+        "能正确相减",
+        "能对结果进行约分"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "teachingNote": "提醒学生最后一步检查能否约分。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-005",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：3/5 + 4/5 = ?",
+      "answer": "1又2/5",
+      "solutionSteps": [
+        "分子相加：3 + 4 = 7，得 7/5。",
+        "7/5 是假分数，化成带分数：7 ÷ 5 = 1 余 2，所以是 1又2/5。"
+      ],
+      "scorePoints": [
+        "能正确相加",
+        "能把假分数化为带分数"
+      ],
+      "commonErrors": [
+        "err-same-denom-mixed"
+      ],
+      "teachingNote": "强调结果大于1时，通常要化成带分数。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-006",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "一块布用了 3/8，还剩这块布的几分之几？",
+      "answer": "5/8",
+      "solutionSteps": [
+        "把整块布看作单位 1，即 8/8。",
+        "8/8 - 3/8 = 5/8。"
+      ],
+      "scorePoints": [
+        "能把 1 转化为 8/8",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "让学生先说谁是单位 1，再写算式。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-007",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：1 - 5/9 = ?",
+      "answer": "4/9",
+      "solutionSteps": [
+        "把 1 化成 9/9。",
+        "9/9 - 5/9 = 4/9。"
+      ],
+      "scorePoints": [
+        "能把 1 转化为同分母分数",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "追问：1 里面有几个 1/9？",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：4/9 + 2/9 = ?",
+      "answer": "2/3",
+      "solutionSteps": [
+        "分子相加：4 + 2 = 6，得 6/9。",
+        "6/9 约分，分子分母同时除以 3，得 2/3。"
+      ],
+      "scorePoints": [
+        "能正确相加",
+        "能约分为最简分数"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "teachingNote": "这题用于检查学生是否有化简意识。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：8/15 - 3/15 = ?",
+      "answer": "1/3",
+      "solutionSteps": [
+        "分子相减：8 - 3 = 5，得 5/15。",
+        "5/15 约分，分子分母同时除以 5，得 1/3。"
+      ],
+      "scorePoints": [
+        "能正确相减",
+        "能约分为最简分数"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "teachingNote": "提醒学生最后检查结果是否为最简分数。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "判断题",
+      "stem": "小红说：3/10 + 7/10 = 10/20 = 1/2。她算得对吗？如果不对，请写出正确答案。",
+      "answer": "不对。3/10 + 7/10 = 10/10 = 1。",
+      "solutionSteps": [
+        "同分母分数相加，分母不变，分子相加。",
+        "3 + 7 = 10，分母还是 10，所以是 10/10 = 1。",
+        "小红错误地把分母也相加了。"
+      ],
+      "scorePoints": [
+        "能判断对错",
+        "能指出分母不应相加",
+        "能给出正确答案"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "用此题诊断学生是否真正理解分数单位。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-a-011",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：6/11 - 2/11 = ?",
+      "answer": "4/11",
+      "solutionSteps": [
+        "分母相同，分数单位都是 1/11。",
+        "6 - 2 = 4，所以 6/11 - 2/11 = 4/11。"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "scorePoints": [
+        "能保持分母不变",
+        "能正确相减"
+      ],
+      "teachingNote": "强调同分母相减时减的是分数单位的个数。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-a-012",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一张练习纸，小组已经完成了 3/12，又完成了 4/12。一共完成了这张练习纸的几分之几？",
+      "answer": "7/12",
+      "solutionSteps": [
+        "求一共完成多少，用加法：3/12 + 4/12。",
+        "分母相同，分子相加：3 + 4 = 7，得 7/12。"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确相加",
+        "能写清对象"
+      ],
+      "teachingNote": "让学生回到题目说明“这张练习纸的 7/12”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-b-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：2/7 + 5/7 - 3/7 = ?",
+      "answer": "4/7",
+      "solutionSteps": [
+        "按从左到右顺序计算：2/7 + 5/7 = 7/7 = 1。",
+        "1 - 3/7 = 7/7 - 3/7 = 4/7。"
+      ],
+      "scorePoints": [
+        "能按顺序计算",
+        "能正确处理整数减分数"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "提醒学生不要跳步，按顺序计算。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：1 - 2/9 - 5/9 = ?",
+      "answer": "2/9",
+      "solutionSteps": [
+        "把 1 化成 9/9。",
+        "9/9 - 2/9 = 7/9。",
+        "7/9 - 5/9 = 2/9。"
+      ],
+      "scorePoints": [
+        "能把 1 转化为 9/9",
+        "能按顺序正确相减"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "也可以先算 2/9 + 5/9 = 7/9，再用 1 - 7/9 = 2/9。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "三天分别看了全书的 1/8、3/8、2/8，一共看了全书的几分之几？",
+      "answer": "3/4",
+      "solutionSteps": [
+        "求一共看了多少，用加法：1/8 + 3/8 + 2/8。",
+        "分子相加：1 + 3 + 2 = 6，得 6/8。",
+        "6/8 约分，得 3/4。"
+      ],
+      "scorePoints": [
+        "能正确列式",
+        "能连加计算",
+        "能约分"
+      ],
+      "commonErrors": [
+        "err-no-simplify",
+        "err-operation-choice"
+      ],
+      "teachingNote": "让学生先找关键词一共，再确定用加法。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：5/6 + 1/6 + 2/6 = ?",
+      "answer": "1又1/3",
+      "solutionSteps": [
+        "分子相加：5 + 1 + 2 = 8，得 8/6。",
+        "8/6 约分，得 4/3。",
+        "4/3 化成带分数，得 1又1/3。"
+      ],
+      "scorePoints": [
+        "能正确连加",
+        "能约分",
+        "能把假分数化为带分数"
+      ],
+      "commonErrors": [
+        "err-no-simplify",
+        "err-same-denom-mixed"
+      ],
+      "teachingNote": "三步检查：算对了吗？约分了吗？假分数化了吗？",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-005",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "一根绳子长 7/8 米，剪下 3/8 米，还剩多少米？",
+      "answer": "1/2 米",
+      "solutionSteps": [
+        "求还剩多少，用减法：7/8 - 3/8。",
+        "7 - 3 = 4，得 4/8。",
+        "4/8 约分，得 1/2 米。"
+      ],
+      "scorePoints": [
+        "能判断用减法",
+        "能正确相减",
+        "能约分并写单位"
+      ],
+      "commonErrors": [
+        "err-no-simplify",
+        "err-operation-choice"
+      ],
+      "teachingNote": "提醒学生最后写单位和约分。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-006",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "questionType": "比较题",
+      "stem": "比较 3/7 + 2/7 和 6/7 - 1/7 的大小。",
+      "answer": "一样大，都等于 5/7。",
+      "solutionSteps": [
+        "计算左边：3/7 + 2/7 = 5/7。",
+        "计算右边：6/7 - 1/7 = 5/7。",
+        "5/7 = 5/7，所以一样大。"
+      ],
+      "scorePoints": [
+        "能正确计算左边",
+        "能正确计算右边",
+        "能比较大小"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "引导学生发现：加法和减法可以得到相同的结果。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-007",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：9/10 - 3/10 - 2/10 = ?",
+      "answer": "2/5",
+      "solutionSteps": [
+        "按从左到右计算：9/10 - 3/10 = 6/10。",
+        "6/10 - 2/10 = 4/10。",
+        "4/10 约分，得 2/5。"
+      ],
+      "scorePoints": [
+        "能按顺序计算",
+        "能约分"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "teachingNote": "也可以先算一共减去了多少：3/10 + 2/10 = 5/10 = 1/2，再用 9/10 - 1/2 = 9/10 - 5/10 = 4/10 = 2/5。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-b-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "计算：11/12 - 5/12 + 2/12 = ?",
+      "answer": "2/3",
+      "solutionSteps": [
+        "同分母分数按顺序计算：11/12 - 5/12 = 6/12。",
+        "6/12 + 2/12 = 8/12。",
+        "8/12 约分为 2/3。"
+      ],
+      "commonErrors": [
+        "err-no-simplify",
+        "err-same-denom-unit"
+      ],
+      "scorePoints": [
+        "能按顺序计算",
+        "能约分为最简分数"
+      ],
+      "teachingNote": "提醒学生连加连减后还要检查能否约分。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-b-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "计算：1 - 3/10 + 1/10 = ?",
+      "answer": "4/5",
+      "solutionSteps": [
+        "把 1 看作 10/10。",
+        "10/10 - 3/10 + 1/10 = 8/10。",
+        "8/10 约分为 4/5。"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能把 1 转化为 10/10",
+        "能按顺序计算",
+        "能约分"
+      ],
+      "teachingNote": "重点追问为什么 1 可以写成 10/10。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-b-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "花坛里 5/9 种了月季，2/9 种了菊花。月季和菊花一共占花坛的几分之几？还剩几分之几没有种这两种花？",
+      "answer": "一共占 7/9，还剩 2/9。",
+      "solutionSteps": [
+        "先求一共占多少：5/9 + 2/9 = 7/9。",
+        "把整个花坛看作 1，也就是 9/9。",
+        "9/9 - 7/9 = 2/9。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-same-denom-unit"
+      ],
+      "scorePoints": [
+        "能先求总量",
+        "能把 1 转化为 9/9",
+        "能求剩余"
+      ],
+      "teachingNote": "让学生用“总量、已用、剩余”三句话解释。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-c-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "questionType": "应用题",
+      "stem": "水缸里有 7/8 桶水，用去 3/8 桶，又倒入 5/8 桶，现在有几桶水？",
+      "answer": "1又1/8 桶",
+      "solutionSteps": [
+        "先算用去后还剩多少：7/8 - 3/8 = 4/8。",
+        "再算倒入后有多少：4/8 + 5/8 = 9/8。",
+        "9/8 化成带分数，得 1又1/8 桶。"
+      ],
+      "scorePoints": [
+        "能分两步列式",
+        "能正确相减和相加",
+        "能把假分数化为带分数"
+      ],
+      "commonErrors": [
+        "err-same-denom-mixed",
+        "err-operation-choice"
+      ],
+      "teachingNote": "让学生先画线段图理解数量变化。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-c-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "应用题",
+      "stem": "三个小朋友分吃一个西瓜，小明吃了 2/8，小红吃了 3/8，小丽吃了 2/8。（1）他们一共吃了这个西瓜的几分之几？（2）够吃吗？还剩多少？",
+      "answer": "（1）7/8；（2）够吃，还剩 1/8。",
+      "solutionSteps": [
+        "求一共吃了多少：2/8 + 3/8 + 2/8 = 7/8。",
+        "把整个西瓜看作 1（即 8/8）。",
+        "8/8 - 7/8 = 1/8，所以够吃，还剩 1/8。"
+      ],
+      "scorePoints": [
+        "能连加计算",
+        "能把 1 转化为 8/8",
+        "能判断够吃并求剩余"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "鼓励学生先估计再计算，判断结果是否合理。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-c-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "填空题",
+      "stem": "（ ）/10 + （ ）/10 = 9/10，如果括号里填不同的正整数，有多少种填法？请列出所有可能。",
+      "answer": "8种：1和8、2和7、3和6、4和5、5和4、6和3、7和2、8和1。",
+      "solutionSteps": [
+        "设两个正整数为 a 和 b，则 a + b = 9，且 a ≠ b。",
+        "正整数解有：(1,8)、(2,7)、(3,6)、(4,5)、(5,4)、(6,3)、(7,2)、(8,1)。",
+        "共 8 种填法。"
+      ],
+      "scorePoints": [
+        "能列出所有和为9的正整数对",
+        "能排除相同的数",
+        "能数出总种数"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "引导学生有序列举，避免重复和遗漏。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-c-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "questionType": "应用题",
+      "stem": "一条路，第一天修了 2/9，第二天修了 4/9，第三天修了 1/9。（1）三天一共修了几分之几？（2）还剩几分之几没修？",
+      "answer": "（1）7/9；（2）2/9。",
+      "solutionSteps": [
+        "求一共修了多少：2/9 + 4/9 + 1/9 = 7/9。",
+        "求还剩多少：1 - 7/9 = 9/9 - 7/9 = 2/9。"
+      ],
+      "scorePoints": [
+        "能连加计算",
+        "能把 1 转化为 9/9",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit",
+        "err-operation-choice"
+      ],
+      "teachingNote": "先让学生估计三天修的有没有超过一半。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-c-005",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "比较题",
+      "stem": "比较 1/5 + 3/5 + 2/5 和 1 的大小，并说明相差多少。",
+      "answer": "大于 1，多 1/5。",
+      "solutionSteps": [
+        "计算左边：1/5 + 3/5 + 2/5 = 6/5。",
+        "6/5 = 1又1/5。",
+        "1又1/5 - 1 = 1/5，所以比 1 多 1/5。"
+      ],
+      "scorePoints": [
+        "能正确连加",
+        "能化成带分数",
+        "能与 1 比较并求差"
+      ],
+      "commonErrors": [
+        "err-same-denom-mixed"
+      ],
+      "teachingNote": "让学生先估计：三个分数加起来会不会超过 1？",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-same-c-006",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "比较 9/14 - 4/14 和 2/14 + 3/14 的大小，并说明理由。",
+      "answer": "相等，都是 5/14。",
+      "solutionSteps": [
+        "左边：9/14 - 4/14 = 5/14。",
+        "右边：2/14 + 3/14 = 5/14。",
+        "两个结果相等。"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "scorePoints": [
+        "能分别计算两边",
+        "能正确比较",
+        "能说明理由"
+      ],
+      "teachingNote": "比较题要提醒学生先算后比。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-c-007",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "questionType": "填空题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "（ ）/12 - （ ）/12 = 5/12，如果括号里填不同的正整数，请写出 3 组可能。",
+      "answer": "示例：6/12 - 1/12，7/12 - 2/12，8/12 - 3/12。",
+      "solutionSteps": [
+        "同分母分数相减时，只需要让两个分子的差等于 5。",
+        "可以选择 6 - 1 = 5、7 - 2 = 5、8 - 3 = 5。"
+      ],
+      "commonErrors": [
+        "err-same-denom-unit"
+      ],
+      "scorePoints": [
+        "能抓住分子差为 5",
+        "能写出不同答案",
+        "答案符合正整数条件"
+      ],
+      "teachingNote": "开放填空题重点看学生是否理解算理。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-same-c-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一根绳子第一次剪去 2/11，第二次剪去 5/11，又接上 3/11。现在比原来短了这根绳子的几分之几？",
+      "answer": "4/11",
+      "solutionSteps": [
+        "先求一共剪去：2/11 + 5/11 = 7/11。",
+        "又接上 3/11，实际变短：7/11 - 3/11 = 4/11。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-same-denom-unit"
+      ],
+      "scorePoints": [
+        "能分清剪去和接上",
+        "能正确列两步式",
+        "能写清变短量"
+      ],
+      "teachingNote": "引导学生画箭头表示“减少、增加、净减少”。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-a-001",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：1/2 + 1/3 = ?",
+      "answer": "5/6",
+      "solutionSteps": [
+        "把 1/2 通分为 3/6，把 1/3 通分为 2/6。",
+        "同分母分数相加，3/6 + 2/6 = 5/6。"
+      ],
+      "commonErrors": [
+        "err-denominator-add",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能找到公分母 6",
+        "能正确转化分子",
+        "能正确相加"
+      ],
+      "teachingNote": "重点追问为什么不能写成 2/5。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-a-002",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：3/4 - 1/6 = ?",
+      "answer": "7/12",
+      "solutionSteps": [
+        "4 和 6 的公分母可以取 12。",
+        "3/4 = 9/12，1/6 = 2/12。",
+        "9/12 - 2/12 = 7/12。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能正确相减"
+      ],
+      "teachingNote": "提醒学生减法也要先统一分数单位。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-a-003",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "计算：2/5 + 1/10 = ?",
+      "answer": "1/2",
+      "solutionSteps": [
+        "把 2/5 通分为 4/10。",
+        "4/10 + 1/10 = 5/10。",
+        "5/10 约分为 1/2。"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能约分为最简分数"
+      ],
+      "teachingNote": "这题用于检查学生是否有化简意识。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-a-004",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一根彩带第一次用去 1/4 米，第二次用去 1/6 米。两次一共用去多少米？",
+      "answer": "5/12 米",
+      "solutionSteps": [
+        "求一共用去多少，用加法：1/4 + 1/6。",
+        "通分为 3/12 + 2/12。",
+        "结果是 5/12 米。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-denominator-add"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分计算"
+      ],
+      "teachingNote": "让学生先说数量关系，再写算式。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-a-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：1/4 + 1/2 = ?",
+      "answer": "3/4",
+      "solutionSteps": [
+        "1/2 = 2/4。",
+        "1/4 + 2/4 = 3/4。"
+      ],
+      "scorePoints": [
+        "能把 1/2 通分为 2/4",
+        "能正确相加"
+      ],
+      "commonErrors": [
+        "err-denominator-add"
+      ],
+      "teachingNote": "追问为什么 1/2 等于 2/4。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-a-011",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：5/6 - 1/3 = ?",
+      "answer": "1/2",
+      "solutionSteps": [
+        "1/3 = 2/6。",
+        "5/6 - 2/6 = 3/6。",
+        "3/6 约分，得 1/2。"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能正确相减",
+        "能约分"
+      ],
+      "commonErrors": [
+        "err-no-simplify",
+        "err-numerator-not-converted"
+      ],
+      "teachingNote": "提醒学生最后检查能否约分。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-a-012",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：1/5 + 3/10 = ?",
+      "answer": "1/2",
+      "solutionSteps": [
+        "1/5 = 2/10。",
+        "2/10 + 3/10 = 5/10。",
+        "5/10 约分，得 1/2。"
+      ],
+      "scorePoints": [
+        "能找到公分母 10",
+        "能正确转化分子",
+        "能约分"
+      ],
+      "commonErrors": [
+        "err-no-simplify",
+        "err-numerator-not-converted"
+      ],
+      "teachingNote": "让学生说出为什么公分母是 10。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-a-013",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "小明走了 1/5 千米，又走了 1/2 千米，一共走了多少千米？",
+      "answer": "7/10 千米",
+      "solutionSteps": [
+        "求一共走了多少，用加法：1/5 + 1/2。",
+        "1/5 = 2/10，1/2 = 5/10。",
+        "2/10 + 5/10 = 7/10 千米。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能写单位"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-denominator-add"
+      ],
+      "teachingNote": "让学生先说数量关系，再写算式。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-a-014",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "questionType": "计算题",
+      "stem": "计算：7/8 - 1/4 = ?",
+      "answer": "5/8",
+      "solutionSteps": [
+        "1/4 = 2/8。",
+        "7/8 - 2/8 = 5/8。"
+      ],
+      "scorePoints": [
+        "能把 1/4 通分为 2/8",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted"
+      ],
+      "teachingNote": "适合检查学生是否理解等值分数。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-a-015",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "计算：2/3 - 1/6 = ?",
+      "answer": "1/2",
+      "solutionSteps": [
+        "把 2/3 通分为 4/6。",
+        "4/6 - 1/6 = 3/6。",
+        "3/6 约分为 1/2。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能正确相减",
+        "能约分"
+      ],
+      "teachingNote": "强调通分后分子也要随分母变化。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-b-001",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "计算：5/6 - 1/4 = ?",
+      "answer": "7/12",
+      "solutionSteps": [
+        "6 和 4 的公分母可以取 12。",
+        "5/6 = 10/12，1/4 = 3/12。",
+        "10/12 - 3/12 = 7/12。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能正确找公分母",
+        "能完成等值转化",
+        "能正确相减"
+      ],
+      "teachingNote": "适合讲评分子随分母变化的原因。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-b-002",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "计算：2/3 + 3/8 = ?",
+      "answer": "1又1/24",
+      "solutionSteps": [
+        "3 和 8 的公分母可以取 24。",
+        "2/3 = 16/24，3/8 = 9/24。",
+        "16/24 + 9/24 = 25/24 = 1又1/24。"
+      ],
+      "commonErrors": [
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能把假分数化为带分数"
+      ],
+      "teachingNote": "提醒学生结果大于 1 时要会解释数量意义。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-b-003",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "计算：7/9 - 1/6 = ?",
+      "answer": "11/18",
+      "solutionSteps": [
+        "9 和 6 的公分母可以取 18。",
+        "7/9 = 14/18，1/6 = 3/18。",
+        "14/18 - 3/18 = 11/18。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能正确通分",
+        "能正确相减"
+      ],
+      "teachingNote": "适合作为独立练习后的同桌互查题。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-b-004",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一块地第一天耕了 3/8，第二天耕了 1/4。两天一共耕了这块地的几分之几？还剩几分之几？",
+      "answer": "一共耕了 5/8，还剩 3/8。",
+      "solutionSteps": [
+        "先求一共耕了多少：3/8 + 1/4。",
+        "1/4 = 2/8，所以 3/8 + 2/8 = 5/8。",
+        "再求剩下：1 - 5/8 = 3/8。"
+      ],
+      "commonErrors": [
+        "err-operation-choice"
+      ],
+      "scorePoints": [
+        "能分两步列式",
+        "能正确通分",
+        "能求剩余量"
+      ],
+      "teachingNote": "这是一步加法加一步补全整体的综合题。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-b-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：3/5 + 1/4 = ?",
+      "answer": "17/20",
+      "solutionSteps": [
+        "5 和 4 的最小公倍数是 20。",
+        "3/5 = 12/20，1/4 = 5/20。",
+        "12/20 + 5/20 = 17/20。"
+      ],
+      "scorePoints": [
+        "能找到公分母 20",
+        "能正确通分",
+        "能正确相加"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted"
+      ],
+      "teachingNote": "追问学生：为什么不找 40 或 60 做公分母？",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-b-011",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：5/6 - 3/4 = ?",
+      "answer": "1/12",
+      "solutionSteps": [
+        "6 和 4 的最小公倍数是 12。",
+        "5/6 = 10/12，3/4 = 9/12。",
+        "10/12 - 9/12 = 1/12。"
+      ],
+      "scorePoints": [
+        "能找到公分母 12",
+        "能正确通分",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "teachingNote": "提醒学生 1/12 已经是最简分数。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-b-012",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "一袋米，第一天吃了 2/5，第二天吃了 1/4，一共吃了几分之几？",
+      "answer": "13/20",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：2/5 + 1/4。",
+        "2/5 = 8/20，1/4 = 5/20。",
+        "8/20 + 5/20 = 13/20。"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能正确相加"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-denominator-add"
+      ],
+      "teachingNote": "让学生圈出关键词一共。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-b-013",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "questionType": "计算题",
+      "stem": "计算：4/9 + 1/6 = ?",
+      "answer": "11/18",
+      "solutionSteps": [
+        "9 和 6 的最小公倍数是 18。",
+        "4/9 = 8/18，1/6 = 3/18。",
+        "8/18 + 3/18 = 11/18。"
+      ],
+      "scorePoints": [
+        "能找到公分母 18",
+        "能正确通分",
+        "能正确相加"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted"
+      ],
+      "teachingNote": "让学生解释为什么 18 是最小公分母。",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-b-014",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "questionType": "应用题",
+      "stem": "一本书，第一天看了 1/3，第二天看了 1/4。第二天比第一天少看全书的几分之几？",
+      "answer": "1/12",
+      "solutionSteps": [
+        "求第二天比第一天少看多少，用减法：1/3 - 1/4。",
+        "1/3 = 4/12，1/4 = 3/12。",
+        "4/12 - 3/12 = 1/12。"
+      ],
+      "scorePoints": [
+        "能判断用减法",
+        "能正确通分",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-denominator-add"
+      ],
+      "teachingNote": "让学生先估计：1/3 和 1/4 相差大吗？",
+      "estimatedTimeSec": 120,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-b-015",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一瓶饮料，上午喝了 1/5，下午喝了 1/4。两次一共喝了这瓶饮料的几分之几？",
+      "answer": "9/20",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：1/5 + 1/4。",
+        "通分为 4/20 + 5/20。",
+        "结果是 9/20。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能写清对象"
+      ],
+      "teachingNote": "要求学生先说“上午喝的 + 下午喝的”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-c-001",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "计算题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "计算：3/4 + 5/6 - 1/3 = ?",
+      "answer": "5/4",
+      "solutionSteps": [
+        "4、6、3 的公分母可以取 12。",
+        "3/4 = 9/12，5/6 = 10/12，1/3 = 4/12。",
+        "9/12 + 10/12 - 4/12 = 15/12 = 5/4。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能统一三个分数的单位",
+        "能按顺序计算",
+        "能化简结果"
+      ],
+      "teachingNote": "用于检查学生能否把方法迁移到三个分数。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-c-002",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一桶水，上午用去 2/5，下午用去 1/6。小华说：“一天共用去不到半桶。”他说得对吗？请说明理由。",
+      "answer": "不对。一天共用去 17/30，比 1/2 多 1/15。",
+      "solutionSteps": [
+        "先求一天共用去多少：2/5 + 1/6。",
+        "通分为 12/30 + 5/30 = 17/30。",
+        "1/2 = 15/30，17/30 > 15/30，所以超过半桶。",
+        "17/30 - 15/30 = 2/30 = 1/15。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能求总量",
+        "能与 1/2 比较",
+        "能说明理由"
+      ],
+      "teachingNote": "鼓励学生用比较而不是只给计算结果。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-c-003",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "比较 5/8 + 1/6 和 3/4 的大小，并说明相差多少。",
+      "answer": "5/8 + 1/6 更大，大 1/24。",
+      "solutionSteps": [
+        "先计算 5/8 + 1/6。",
+        "通分为 15/24 + 4/24 = 19/24。",
+        "3/4 = 18/24。",
+        "19/24 比 18/24 大 1/24。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能先求和",
+        "能把 3/4 通分比较",
+        "能求差"
+      ],
+      "teachingNote": "适合让学生解释“比较”和“相差”两个动作。",
+      "sourceType": "curated_internal_sample",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-c-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "计算题",
+      "stem": "计算：1/2 + 2/3 - 1/4 = ?",
+      "answer": "11/12",
+      "solutionSteps": [
+        "2、3、4 的最小公倍数是 12。",
+        "1/2 = 6/12，2/3 = 8/12，1/4 = 3/12。",
+        "6/12 + 8/12 - 3/12 = 11/12。"
+      ],
+      "scorePoints": [
+        "能找到公分母 12",
+        "能统一三个分数的分子",
+        "能按顺序计算"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "teachingNote": "检查学生能否把方法迁移到三个分数。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-c-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "questionType": "应用题",
+      "stem": "一瓶果汁，第一次喝了 1/3，第二次喝了 1/4，还剩几分之几？",
+      "answer": "5/12",
+      "solutionSteps": [
+        "先求一共喝了多少：1/3 + 1/4 = 4/12 + 3/12 = 7/12。",
+        "再求还剩多少：1 - 7/12 = 12/12 - 7/12 = 5/12。"
+      ],
+      "scorePoints": [
+        "能先求和",
+        "能把 1 转化为 12/12",
+        "能正确相减"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-same-denom-unit"
+      ],
+      "teachingNote": "鼓励学生用两种方法：先加后减，或者依次减。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-c-011",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "比较题",
+      "stem": "比较 2/3 + 1/4 和 5/6 的大小，并说明相差多少。",
+      "answer": "2/3 + 1/4 更大，大 1/12。",
+      "solutionSteps": [
+        "计算 2/3 + 1/4：2/3 = 8/12，1/4 = 3/12，8/12 + 3/12 = 11/12。",
+        "5/6 = 10/12。",
+        "11/12 > 10/12，相差 1/12。"
+      ],
+      "scorePoints": [
+        "能先求和",
+        "能把 5/6 通分比较",
+        "能求差"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "teachingNote": "让学生先估计再精确计算。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-c-012",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "questionType": "应用题",
+      "stem": "修一条路，第一天修了 1/4，第二天修了 1/3，第三天修了 1/6。（1）三天一共修了几分之几？（2）还剩几分之几没修？",
+      "answer": "（1）3/4；（2）1/4。",
+      "solutionSteps": [
+        "求一共修了多少：1/4 + 1/3 + 1/6。",
+        "4、3、6 的最小公倍数是 12。",
+        "1/4 = 3/12，1/3 = 4/12，1/6 = 2/12。",
+        "3/12 + 4/12 + 2/12 = 9/12 = 3/4。",
+        "还剩：1 - 3/4 = 1/4。"
+      ],
+      "scorePoints": [
+        "能找到公分母 12",
+        "能统一三个分数",
+        "能求和并约分",
+        "能求剩余"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "teachingNote": "让学生先判断三天修的是否超过一半。",
+      "estimatedTimeSec": 240,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-c-013",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "questionType": "比较题",
+      "stem": "比较 1/2 + 1/5 和 3/5 的大小，并说明理由。",
+      "answer": "1/2 + 1/5 更大。",
+      "solutionSteps": [
+        "计算 1/2 + 1/5：1/2 = 5/10，1/5 = 2/10，5/10 + 2/10 = 7/10。",
+        "3/5 = 6/10。",
+        "7/10 > 6/10，所以 1/2 + 1/5 更大。"
+      ],
+      "scorePoints": [
+        "能先求和",
+        "能把 3/5 通分比较",
+        "能说明理由"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-operation-choice"
+      ],
+      "teachingNote": "鼓励学生用估算：1/2 已经比 3/5 小一点，但加上 1/5 后应该更大。",
+      "estimatedTimeSec": 180,
+      "isOriginal": true,
+      "licenseNote": "教师自编，可用于内部研发与演示。"
+    },
+    {
+      "sourceId": "seed-frac-c-014",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "比较 3/5 - 1/6 和 1/3 的大小，并说明相差多少。",
+      "answer": "3/5 - 1/6 更大，相差 1/10。",
+      "solutionSteps": [
+        "3/5 - 1/6 = 18/30 - 5/30 = 13/30。",
+        "1/3 = 10/30。",
+        "13/30 > 10/30，相差 3/30 = 1/10。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-compare-reference"
+      ],
+      "scorePoints": [
+        "能通分计算差",
+        "能统一分母比较",
+        "能求出相差量"
+      ],
+      "teachingNote": "比较题要同时检查大小关系和相差量。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-frac-c-015",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-add"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一块实验田，第一组浇了 1/2，第二组浇了 1/6，后来又补浇了 1/4。现在一共浇了这块田的几分之几？超过整块田了吗？",
+      "answer": "一共浇了 11/12，没有超过整块田。",
+      "solutionSteps": [
+        "先求三次一共浇了多少：1/2 + 1/6 + 1/4。",
+        "通分为 6/12 + 2/12 + 3/12 = 11/12。",
+        "11/12 小于 1，所以没有超过整块田。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-compare-reference"
+      ],
+      "scorePoints": [
+        "能统一分母",
+        "能连加计算",
+        "能与 1 比较"
+      ],
+      "teachingNote": "提醒学生把 1 看作 12/12 再判断。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "一块蛋糕，小明吃了 1/5，小红吃了 2/5。两人一共吃了这块蛋糕的几分之几？",
+      "answer": "3/5",
+      "solutionSteps": [
+        "求一共吃了多少，用加法：1/5 + 2/5。",
+        "同分母分数相加，得到 3/5。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确相加",
+        "能写清对象"
+      ],
+      "teachingNote": "追问“3/5 是谁的 3/5”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "一根木条用去 3/8，还剩这根木条的几分之几？",
+      "answer": "5/8",
+      "solutionSteps": [
+        "把整根木条看作 1，即 8/8。",
+        "8/8 - 3/8 = 5/8。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能把整体看作 1",
+        "能正确求剩余",
+        "能写清对象"
+      ],
+      "teachingNote": "让学生先写“还剩 = 1 - 用去”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "小华走了 1/4 千米，又走了 1/2 千米。他一共走了多少千米？",
+      "answer": "3/4 千米",
+      "solutionSteps": [
+        "求一共走了多少，用加法：1/4 + 1/2。",
+        "把 1/2 通分为 2/4。",
+        "1/4 + 2/4 = 3/4 千米。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-unit-missing",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能判断用加法",
+        "能正确通分",
+        "能写单位"
+      ],
+      "teachingNote": "答案必须带“千米”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一本书，第一天看了 5/6，第二天比第一天少看了 1/3。第二天看了全书的几分之几？",
+      "answer": "1/2",
+      "solutionSteps": [
+        "求第二天看了多少，用减法：5/6 - 1/3。",
+        "1/3 = 2/6。",
+        "5/6 - 2/6 = 3/6 = 1/2。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能理解“少看”用减法",
+        "能通分",
+        "能约分"
+      ],
+      "teachingNote": "圈出“比第一天少”帮助判断运算。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-005",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "食堂一袋米，上午用了 2/7，下午用了 3/7。一天共用了这袋米的几分之几？",
+      "answer": "5/7",
+      "solutionSteps": [
+        "求一天共用多少，用加法：2/7 + 3/7。",
+        "同分母相加，得 5/7。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能列加法算式",
+        "能正确计算",
+        "能写清这袋米的几分之几"
+      ],
+      "teachingNote": "提醒学生答案不是“5”，而是“5/7”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-006",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一段路已经修了 3/10，还剩 1/10 没铺路面。已经铺好路面的部分比没铺路面的部分多全路的几分之几？",
+      "answer": "1/5",
+      "solutionSteps": [
+        "求多多少，用减法：3/10 - 1/10。",
+        "3/10 - 1/10 = 2/10。",
+        "2/10 约分为 1/5。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能判断求差",
+        "能正确相减",
+        "能约分"
+      ],
+      "teachingNote": "比较“多多少”不是求一共。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-007",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "小丽第一周读了全书的 1/6，第二周读了全书的 1/3。两周一共读了全书的几分之几？",
+      "answer": "1/2",
+      "solutionSteps": [
+        "求两周一共读多少：1/6 + 1/3。",
+        "1/3 = 2/6。",
+        "1/6 + 2/6 = 3/6 = 1/2。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能列加法",
+        "能通分",
+        "能约分"
+      ],
+      "teachingNote": "让学生用“全书的”补完整答案。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "一个图形涂色了 4/9，没有涂色的部分占这个图形的几分之几？",
+      "answer": "5/9",
+      "solutionSteps": [
+        "把整个图形看作 1，即 9/9。",
+        "9/9 - 4/9 = 5/9。"
+      ],
+      "commonErrors": [
+        "err-remaining-model"
+      ],
+      "scorePoints": [
+        "能把整体转化为同分母分数",
+        "能正确相减"
+      ],
+      "teachingNote": "可配合画图解释整体 1。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "应用",
+      "stem": "一杯果汁，小强喝了 1/8，小敏喝了 3/8。他们一共喝了这杯果汁的几分之几？",
+      "answer": "1/2",
+      "solutionSteps": [
+        "求一共喝了多少：1/8 + 3/8 = 4/8。",
+        "4/8 约分为 1/2。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-no-simplify",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能正确相加",
+        "能约分",
+        "能写清对象"
+      ],
+      "teachingNote": "提醒结果 4/8 应约分。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-a-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一桶水有 4/5 桶，倒出 1/2 桶。还剩多少桶？",
+      "answer": "3/10 桶",
+      "solutionSteps": [
+        "求还剩多少，用减法：4/5 - 1/2。",
+        "通分为 8/10 - 5/10。",
+        "结果是 3/10 桶。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能判断用减法",
+        "能通分",
+        "能写单位"
+      ],
+      "teachingNote": "注意这里单位是“桶”。",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一桶油，第一次用去 1/6，第二次用去 1/4。两次一共用去几分之几？还剩几分之几？",
+      "answer": "一共用去 5/12，还剩 7/12。",
+      "solutionSteps": [
+        "先求用去总量：1/6 + 1/4 = 2/12 + 3/12 = 5/12。",
+        "把整桶油看作 1，即 12/12。",
+        "12/12 - 5/12 = 7/12。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能先求总量",
+        "能把 1 转化为 12/12",
+        "能求剩余"
+      ],
+      "teachingNote": "两步题要求学生写清先后顺序。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一个小组计划完成实验记录的 3/5，已经完成了 1/4。还需要完成几分之几才能达到计划？",
+      "answer": "7/20",
+      "solutionSteps": [
+        "求还差多少，用减法：3/5 - 1/4。",
+        "通分为 12/20 - 5/20。",
+        "结果是 7/20。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能理解“还需要”用减法",
+        "能通分",
+        "能写清达到计划"
+      ],
+      "teachingNote": "区别“达到计划”与“完成全部”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一本书，上午看了 2/7，下午看了 1/7。一天共看了几分之几？还剩几分之几没看？",
+      "answer": "共看了 3/7，还剩 4/7。",
+      "solutionSteps": [
+        "先求共看：2/7 + 1/7 = 3/7。",
+        "把全书看作 1，即 7/7。",
+        "7/7 - 3/7 = 4/7。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能求已看总量",
+        "能求剩余",
+        "能写清全书的几分之几"
+      ],
+      "teachingNote": "引导学生使用“已看 + 未看 = 1”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一根绳子长 5/6 米，先剪去 1/3 米，又剪去 1/6 米。还剩多少米？",
+      "answer": "1/3 米",
+      "solutionSteps": [
+        "先统一分母：1/3 = 2/6。",
+        "剩余：5/6 - 2/6 - 1/6 = 2/6。",
+        "2/6 约分为 1/3 米。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-unit-missing",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能按顺序相减",
+        "能约分",
+        "能写单位"
+      ],
+      "teachingNote": "这是实际长度，不是“全长的几分之几”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-005",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "商店上午卖出一批糖果的 1/5，下午卖出 3/10。一天共卖出几分之几？还剩几分之几？",
+      "answer": "共卖出 1/2，还剩 1/2。",
+      "solutionSteps": [
+        "求共卖出：1/5 + 3/10 = 2/10 + 3/10 = 5/10。",
+        "5/10 约分为 1/2。",
+        "剩余：1 - 1/2 = 1/2。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-no-simplify",
+        "err-remaining-model"
+      ],
+      "scorePoints": [
+        "能通分求和",
+        "能约分",
+        "能求剩余"
+      ],
+      "teachingNote": "提醒学生先化简再求剩余也可以。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-006",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "水缸原来有 3/8 缸水，又倒入 1/4 缸，后来用去 1/8 缸。现在有几缸水？",
+      "answer": "1/2 缸",
+      "solutionSteps": [
+        "把 1/4 通分为 2/8。",
+        "3/8 + 2/8 - 1/8 = 4/8。",
+        "4/8 约分为 1/2 缸。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-no-simplify",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能按事件顺序列式",
+        "能通分",
+        "能约分写单位"
+      ],
+      "teachingNote": "用时间顺序帮助列式。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-007",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一块地第一天种了 2/9，第二天种了 1/3。两天一共种了几分之几？还剩几分之几没种？",
+      "answer": "一共种了 5/9，还剩 4/9。",
+      "solutionSteps": [
+        "1/3 = 3/9。",
+        "两天共种：2/9 + 3/9 = 5/9。",
+        "剩余：9/9 - 5/9 = 4/9。"
+      ],
+      "commonErrors": [
+        "err-numerator-not-converted",
+        "err-remaining-model"
+      ],
+      "scorePoints": [
+        "能通分",
+        "能求总量",
+        "能求剩余"
+      ],
+      "teachingNote": "要求学生说明把整块地看作 1。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "迁移",
+      "stem": "美术作品中，红色占 1/4，蓝色占 1/3。红色和蓝色合起来超过作品的一半吗？超过多少？",
+      "answer": "超过，超过 1/12。",
+      "solutionSteps": [
+        "红色和蓝色合起来：1/4 + 1/3 = 3/12 + 4/12 = 7/12。",
+        "一半是 1/2 = 6/12。",
+        "7/12 比 6/12 多 1/12。"
+      ],
+      "commonErrors": [
+        "err-compare-reference",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能求合计",
+        "能与 1/2 比较",
+        "能求超过量"
+      ],
+      "teachingNote": "判断题要有理由，不能只写“超过”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "作业本已经完成了 2/5，又完成了 1/5。一共完成了几分之几？如果目标是完成全部，还剩几分之几？",
+      "answer": "一共完成 3/5，还剩 2/5。",
+      "solutionSteps": [
+        "先求完成总量：2/5 + 1/5 = 3/5。",
+        "把全部看作 1，即 5/5。",
+        "5/5 - 3/5 = 2/5。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-unit-missing"
+      ],
+      "scorePoints": [
+        "能求完成总量",
+        "能求剩余",
+        "能写清目标是全部"
+      ],
+      "teachingNote": "让学生说明“目标是完成全部”。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-b-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一座桥，第一周修了 1/6，第二周修了 1/3，第三周修了 1/4。三周一共修了几分之几？",
+      "answer": "3/4",
+      "solutionSteps": [
+        "通分：1/6 = 2/12，1/3 = 4/12，1/4 = 3/12。",
+        "三周共修：2/12 + 4/12 + 3/12 = 9/12。",
+        "9/12 约分为 3/4。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能统一分母",
+        "能连加",
+        "能约分"
+      ],
+      "teachingNote": "连加题要注意最后化简。",
+      "estimatedTimeSec": 90,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-001",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "水池上午用去 1/3，下午用去 1/4，傍晚又补充了 1/6。现在水池里还剩原来水量的几分之几？",
+      "answer": "7/12",
+      "solutionSteps": [
+        "把原来水量看作 1。",
+        "列式：1 - 1/3 - 1/4 + 1/6。",
+        "通分为 12/12 - 4/12 - 3/12 + 2/12 = 7/12。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-multistep-order",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能把原来水量看作 1",
+        "能按事件顺序列式",
+        "能正确计算"
+      ],
+      "teachingNote": "此题重点是“补充”表示增加。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-002",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "甲队修了全路的 2/5，乙队修了全路的 1/3。（1）两队共修了几分之几？（2）甲队比乙队多修了几分之几？",
+      "answer": "共修 11/15，甲队多修 1/15。",
+      "solutionSteps": [
+        "共修：2/5 + 1/3 = 6/15 + 5/15 = 11/15。",
+        "比较：2/5 - 1/3 = 6/15 - 5/15 = 1/15。"
+      ],
+      "commonErrors": [
+        "err-operation-choice",
+        "err-compare-reference",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能分别处理求和与求差",
+        "能通分",
+        "能写出两个答案"
+      ],
+      "teachingNote": "一题两问，要求先看清每问的数量关系。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-003",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一本书，第一周读了 1/4，第二周读了 2/5。如果第三周再读 1/5，三周后一共读了几分之几？还剩几分之几？",
+      "answer": "三周共读 17/20，还剩 3/20。",
+      "solutionSteps": [
+        "先求三周共读：1/4 + 2/5 + 1/5。",
+        "通分：1/4 = 5/20，2/5 = 8/20，1/5 = 4/20。",
+        "共读 17/20，还剩 20/20 - 17/20 = 3/20。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-numerator-not-converted",
+        "err-remaining-model"
+      ],
+      "scorePoints": [
+        "能连加求总量",
+        "能求剩余",
+        "能保持同一整体"
+      ],
+      "teachingNote": "强调三周都占“全书”的几分之几。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-004",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "比较 1/2 + 1/6 和 3/4 - 1/8 的大小，并说明相差多少。",
+      "answer": "1/2 + 1/6 更大，相差 1/24。",
+      "solutionSteps": [
+        "1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3。",
+        "3/4 - 1/8 = 6/8 - 1/8 = 5/8。",
+        "2/3 = 16/24，5/8 = 15/24，所以前者大 1/24。"
+      ],
+      "commonErrors": [
+        "err-compare-reference",
+        "err-no-simplify",
+        "err-numerator-not-converted"
+      ],
+      "scorePoints": [
+        "能分别计算两式",
+        "能统一分母比较",
+        "能求相差量"
+      ],
+      "teachingNote": "要求学生把比较过程写完整。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-005",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一幅图，红色占 1/3，蓝色占 1/4，黄色占 1/6。（1）三种颜色共占几分之几？（2）没有涂色的部分占几分之几？",
+      "answer": "三种颜色共占 3/4，没有涂色的部分占 1/4。",
+      "solutionSteps": [
+        "三种颜色共占：1/3 + 1/4 + 1/6。",
+        "通分为 4/12 + 3/12 + 2/12 = 9/12 = 3/4。",
+        "没有涂色：1 - 3/4 = 1/4。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能连加",
+        "能约分",
+        "能求未涂色部分"
+      ],
+      "teachingNote": "让学生把整体图形看作 1。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-006",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一次远足分三段路，第一段占全程的 1/6，第二段占 5/12，第三段占 1/4。三段一共占全程的几分之几？还剩几分之几没走？",
+      "answer": "三段共占 5/6，还剩 1/6。",
+      "solutionSteps": [
+        "通分：1/6 = 2/12，1/4 = 3/12。",
+        "三段共占 2/12 + 5/12 + 3/12 = 10/12 = 5/6。",
+        "剩余：1 - 5/6 = 1/6。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-no-simplify",
+        "err-remaining-model"
+      ],
+      "scorePoints": [
+        "能通分连加",
+        "能约分",
+        "能求剩余"
+      ],
+      "teachingNote": "提醒学生全程是同一个整体。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-007",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一节综合实践课，讨论用了 1/5，实验用了 1/4，展示用了 3/10。还剩这节课的几分之几用于总结？",
+      "answer": "1/4",
+      "solutionSteps": [
+        "先求已经用去的时间：1/5 + 1/4 + 3/10。",
+        "通分为 4/20 + 5/20 + 6/20 = 15/20 = 3/4。",
+        "剩余：1 - 3/4 = 1/4。"
+      ],
+      "commonErrors": [
+        "err-remaining-model",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能求已用总量",
+        "能求剩余",
+        "能写清用于总结"
+      ],
+      "teachingNote": "可以让学生画时间条。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-008",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "判断题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一个项目已经完成 1/4，又完成 5/12。小林说：“已经超过 2/3 了。”他说得对吗？请说明理由。",
+      "answer": "不对，正好完成 2/3，没有超过。",
+      "solutionSteps": [
+        "已完成：1/4 + 5/12 = 3/12 + 5/12 = 8/12。",
+        "8/12 约分为 2/3。",
+        "所以正好是 2/3，不是超过 2/3。"
+      ],
+      "commonErrors": [
+        "err-compare-reference",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能计算已完成量",
+        "能与 2/3 比较",
+        "能说明“正好”"
+      ],
+      "teachingNote": "注意判断题需要准确表述。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-009",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "方案 A 用去材料的 2/5 和 1/10，方案 B 用去材料的 1/3 和 1/6。两个方案一共用去的材料一样多吗？",
+      "answer": "一样多，都是 1/2。",
+      "solutionSteps": [
+        "方案 A：2/5 + 1/10 = 4/10 + 1/10 = 5/10 = 1/2。",
+        "方案 B：1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2。",
+        "两个方案一样多。"
+      ],
+      "commonErrors": [
+        "err-compare-reference",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能分别计算两个方案",
+        "能化简",
+        "能比较结果"
+      ],
+      "teachingNote": "引导学生不要只比较原始分母。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    },
+    {
+      "sourceId": "seed-app-c-010",
+      "sourceType": "curated_internal_sample",
+      "subject": "数学",
+      "grade": "五年级",
+      "unit": "分数的加法和减法",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "填空题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "一次活动中，阅读安排了 1/6，讨论安排了 1/4。如果希望阅读、讨论和展示三项一共占 3/4，展示应安排多少？",
+      "answer": "1/3",
+      "solutionSteps": [
+        "先求阅读和讨论共占多少：1/6 + 1/4 = 2/12 + 3/12 = 5/12。",
+        "展示应占：3/4 - 5/12。",
+        "3/4 = 9/12，9/12 - 5/12 = 4/12 = 1/3。"
+      ],
+      "commonErrors": [
+        "err-multistep-order",
+        "err-numerator-not-converted",
+        "err-no-simplify"
+      ],
+      "scorePoints": [
+        "能先求已安排量",
+        "能从目标量中相减",
+        "能约分"
+      ],
+      "teachingNote": "这是逆向应用题，先明确目标总量。",
+      "estimatedTimeSec": 150,
+      "isOriginal": true,
+      "licenseNote": "内部示例题，用于出题 SKILL 离线验证。"
+    }
+  ]
+}

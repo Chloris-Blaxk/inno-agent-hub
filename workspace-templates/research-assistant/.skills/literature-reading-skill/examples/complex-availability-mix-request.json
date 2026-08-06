@@ -1,0 +1,99 @@
+{
+  "requestId": "req-literature-reading-complex-001",
+  "entryToken": "@文献阅读助手",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "evidence_carding",
+  "sourceRequest": "围绕即时反馈、错因诊断和过程性评价，混合处理元数据、摘要、全文和用户上传文本。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "高年级",
+    "schoolContext": "城乡结合部小学",
+    "researchExperience": "校本课堂反馈微研究",
+    "existingAchievements": [],
+    "availableCycle": "1 年",
+    "constraints": []
+  },
+  "input": {
+    "researchTopic": "小学数学即时反馈支持错因诊断与过程性评价的实践研究",
+    "keywords": ["即时反馈", "错因诊断", "过程性评价", "学习证据", "小学数学"],
+    "readingGoal": "筛选优先阅读文献，区分文本可用性，并只对有摘要、全文或上传文本的文献生成证据卡。",
+    "availablePapers": [
+      {
+        "paperId": "paper-complex-meta-001",
+        "title": "小学数学即时反馈与错因诊断研究述评",
+        "authors": ["示例作者 A"],
+        "year": 2022,
+        "journal": "教育研究样例",
+        "doi": "",
+        "keywords": ["即时反馈", "错因诊断", "小学数学", "学习证据"],
+        "abstract": "",
+        "sourceStatus": "whitelist",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper-complex-abs-001",
+        "title": "课堂即时反馈促进教师教学调整的机制研究",
+        "authors": ["示例作者 B"],
+        "year": 2023,
+        "journal": "课程教学研究",
+        "doi": "",
+        "keywords": ["即时反馈", "教学调整", "过程性评价"],
+        "abstract": "研究基于课堂观察和访谈讨论即时反馈如何帮助教师识别学生学习状态，并调整讲评顺序。摘要未提供完整样本和统计结果。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "abstract_verified"
+      },
+      {
+        "paperId": "paper-complex-full-001",
+        "title": "学习证据驱动的小学数学错因诊断行动研究",
+        "authors": ["示例作者 C"],
+        "year": 2021,
+        "journal": "小学数学教育",
+        "doi": "",
+        "keywords": ["学习证据", "错因诊断", "小学数学", "行动研究"],
+        "abstract": "本文以小学数学讲评课为场景，讨论学习证据采集和错因分类如何支持课堂改进。",
+        "fullText": "研究采用行动研究和课堂观察方法，围绕通分错误、数量关系理解和结果表达三类错因建立记录表。教师依据学习证据调整讲评顺序，并在反思中记录适用边界。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "fulltext",
+        "evidenceLevel": "fulltext_verified"
+      },
+      {
+        "paperId": "paper-complex-user-001",
+        "title": "用户上传：错因分类讲评课例片段",
+        "authors": ["用户上传材料"],
+        "year": 2024,
+        "journal": "用户上传原文",
+        "doi": "",
+        "keywords": ["错因诊断", "讲评策略", "小学数学", "即时反馈"],
+        "abstract": "",
+        "uploadedText": "该课例围绕小学数学错因分类和针对性讲评展开，教师先收集学生通分错误、约分遗漏等典型错因，再根据错因类型调整讲评顺序。文本未提供正式研究方法和统计结论。",
+        "sourceStatus": "user_provided",
+        "textAvailability": "user_uploaded",
+        "evidenceLevel": "user_text_only"
+      },
+      {
+        "paperId": "paper-complex-abs-002",
+        "title": "过程性评价视角下课堂学习证据的采集与应用",
+        "authors": ["示例作者 D"],
+        "year": 2020,
+        "journal": "基础教育课程",
+        "doi": "",
+        "keywords": ["过程性评价", "学习证据", "课堂观察"],
+        "abstract": "文章从过程性评价视角说明课堂观察、学生作品和即时反馈数据可作为教学改进依据，但摘要不能支撑强因果结论。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "abstract_verified"
+      }
+    ]
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

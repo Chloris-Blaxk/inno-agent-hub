@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "经费预算科目与合规提示样例。真实上线前需由财务或科研管理部门确认。"
+  },
+  "categories": [
+    {
+      "categoryId": "materials",
+      "name": "资料费",
+      "allowedUses": ["购买研究资料", "打印问卷", "资料复印"],
+      "commonMistakes": ["购买与项目无关的通用办公用品"],
+      "warningRule": "用途必须与研究材料收集或成果整理直接相关。"
+    },
+    {
+      "categoryId": "training",
+      "name": "培训研讨费",
+      "allowedUses": ["专家指导", "课题研讨", "校内培训"],
+      "commonMistakes": ["无参与人员或主题说明"],
+      "warningRule": "需说明研讨主题、对象和与项目的关系。"
+    },
+    {
+      "categoryId": "data",
+      "name": "数据采集与分析费",
+      "allowedUses": ["问卷工具", "数据整理", "课堂观察记录处理"],
+      "commonMistakes": ["未说明样本范围或数据用途"],
+      "warningRule": "需关联研究方法和数据来源。"
+    },
+    {
+      "categoryId": "publication",
+      "name": "成果印刷与发表费",
+      "allowedUses": ["成果汇编", "案例集印刷", "论文版面相关费用"],
+      "commonMistakes": ["成果形式不明确"],
+      "warningRule": "需与预期成果清单一致。"
+    }
+  ],
+  "checks": [
+    {
+      "id": "budget_item_known",
+      "severity": "warn",
+      "rule": "预算科目不在 categories 中时提示人工确认。"
+    },
+    {
+      "id": "budget_use_aligned",
+      "severity": "warn",
+      "rule": "预算用途无法关联研究活动或成果时提示合规风险。"
+    },
+    {
+      "id": "budget_no_fabrication",
+      "severity": "fail",
+      "rule": "用户未提供经费信息时，不得编造金额。"
+    }
+  ]
+}
+

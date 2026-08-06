@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "description": "化学学科错误模式库",
+  "errorCategories": [
+    {
+      "categoryId": "chem-equation-balancing",
+      "categoryName": "化学方程式错误",
+      "description": "化学方程式的书写、配平中的常见错误",
+      "patterns": [
+        {
+          "id": "err-chem-unbalanced",
+          "name": "方程式未配平",
+          "knowledgePointIds": ["chem-equation", "chem-mass-conservation"],
+          "symptom": "化学方程式两边原子数不相等",
+          "likelyCause": "忘记配平或配平方法不熟练",
+          "diagnosisSignals": ["等号左右某元素原子数不等", "系数全为1"],
+          "hintTemplate": "化学方程式两边每种原子的个数必须相等，这是质量守恒定律的要求。",
+          "remediationSteps": [
+            "逐个检查每种元素在两边的原子数",
+            "从最复杂的物质开始配平",
+            "配平后再次检查所有元素"
+          ]
+        },
+        {
+          "id": "err-chem-wrong-product",
+          "name": "生成物判断错误",
+          "knowledgePointIds": ["chem-reaction-type", "chem-compound"],
+          "symptom": "反应生成物写错（如燃烧产物写错）",
+          "likelyCause": "不清楚反应规律或不熟悉常见反应产物",
+          "diagnosisSignals": ["有机物燃烧产物不是CO₂和H₂O", "金属+酸的产物不是盐+H₂"],
+          "hintTemplate": "先判断反应类型（化合、分解、置换、复分解），再根据规律推断产物。",
+          "remediationSteps": [
+            "记住常见反应规律：有机物完全燃烧→CO₂+H₂O",
+            "金属+酸→盐+H₂（活泼金属）",
+            "先判断反应类型再写产物"
+          ]
+        },
+        {
+          "id": "err-chem-condition-missing",
+          "name": "反应条件遗漏",
+          "knowledgePointIds": ["chem-equation", "chem-reaction-condition"],
+          "symptom": "化学方程式缺少反应条件（点燃、加热、催化剂等）",
+          "likelyCause": "只关注反应物和生成物，忽略反应条件",
+          "diagnosisSignals": ["需要点燃的反应没写'点燃'", "需要催化剂的反应没标注"],
+          "hintTemplate": "化学方程式不仅要写对物质，还要标注反应条件（写在等号上方）。",
+          "remediationSteps": [
+            "记住常见反应条件：燃烧→点燃，分解→加热(△)，合成氨→高温高压催化剂",
+            "条件写在等号上方",
+            "气体↑和沉淀↓也要标注"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "chem-stoichiometry",
+      "categoryName": "化学计量错误",
+      "description": "物质的量、摩尔质量、气体摩尔体积等计算错误",
+      "patterns": [
+        {
+          "id": "err-chem-mol-mass-confusion",
+          "name": "摩尔质量与相对分子质量混淆",
+          "knowledgePointIds": ["chem-mole", "chem-molar-mass"],
+          "symptom": "摩尔质量数值写对但单位写错，或与相对分子质量混用",
+          "likelyCause": "不理解摩尔质量有单位(g/mol)而相对分子质量无单位",
+          "diagnosisSignals": ["摩尔质量写成'18'而非'18g/mol'", "单位混用"],
+          "hintTemplate": "摩尔质量有单位(g/mol)，相对分子质量没有单位。数值相等但含义不同。",
+          "remediationSteps": [
+            "摩尔质量M，单位g/mol，如H₂O的M=18g/mol",
+            "相对分子质量Mr，无单位，如H₂O的Mr=18",
+            "计算中用摩尔质量（有单位才能参与单位换算）"
+          ]
+        },
+        {
+          "id": "err-chem-ratio-wrong",
+          "name": "化学计量比使用错误",
+          "knowledgePointIds": ["chem-stoichiometry", "chem-equation"],
+          "symptom": "利用方程式系数比计算时比例关系搞错",
+          "likelyCause": "混淆了质量比和物质的量之比",
+          "diagnosisSignals": ["系数比当成质量比使用", "忘记乘摩尔质量"],
+          "hintTemplate": "方程式系数比=物质的量之比≠质量之比。质量比要乘各自的摩尔质量。",
+          "remediationSteps": [
+            "方程式系数比 = 物质的量之比 = 分子个数比",
+            "质量比 = 系数×摩尔质量之比",
+            "体积比（同温同压气体） = 系数比"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "chem-valence-bonding",
+      "categoryName": "化合价与化学键错误",
+      "description": "化合价判断和化学键理解中的错误",
+      "patterns": [
+        {
+          "id": "err-chem-valence-wrong",
+          "name": "化合价标注错误",
+          "knowledgePointIds": ["chem-valence", "chem-ionic-compound"],
+          "symptom": "化合物中某元素化合价判断错误",
+          "likelyCause": "不熟悉常见元素的化合价规律",
+          "diagnosisSignals": ["化合物中各元素化合价代数和不为0", "变价元素取了错误的价态"],
+          "hintTemplate": "化合物中各元素化合价代数和=0。先确定已知元素的化合价再推算未知的。",
+          "remediationSteps": [
+            "记住常见化合价：H(+1), O(-2), Na/K(+1), Ca/Mg(+2)",
+            "化合物化合价代数和=0",
+            "变价元素（Fe、S、N等）根据化合物推算"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/bibliographic_candidate.schema.json",
+  "title": "BibliographicCandidate",
+  "description": "Metadata-level literature candidate. It can guide reading, source tracing, or citation drafting, but cannot become supporting evidence without readable text.",
+  "type": "object",
+  "required": [
+    "candidateId",
+    "paperId",
+    "title",
+    "authors",
+    "year",
+    "relation",
+    "sourceStatus",
+    "textAvailability",
+    "evidenceLevel",
+    "limits"
+  ],
+  "properties": {
+    "candidateId": {"type": "string", "minLength": 1},
+    "paperId": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "authors": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "year": {"type": ["integer", "string"]},
+    "journal": {"type": "string"},
+    "doi": {"type": "string"},
+    "keywords": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "generatedSummary": {"type": "string"},
+    "relation": {
+      "enum": ["topic_related", "claim_candidate", "background_candidate"]
+    },
+    "supportStrength": {
+      "enum": ["strong", "moderate", "weak", "unknown"]
+    },
+    "sourceStatus": {
+      "enum": ["external_verified", "whitelist", "user_provided", "unverified"]
+    },
+    "textAvailability": {
+      "const": "metadata"
+    },
+    "evidenceLevel": {
+      "const": "metadata_verified"
+    },
+    "abstractType": {
+      "enum": ["generated_non_verbatim", ""]
+    },
+    "retrievalScore": {"type": ["number", "integer", "string"]},
+    "citationDraft": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "limits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": true
+}

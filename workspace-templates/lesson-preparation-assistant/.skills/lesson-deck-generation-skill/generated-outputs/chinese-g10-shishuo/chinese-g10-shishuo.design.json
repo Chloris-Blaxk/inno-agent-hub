@@ -1,0 +1,228 @@
+{
+  "deckMeta": {
+    "title": "师说",
+    "visualSystem": "edu-deck-v1",
+    "layoutLockVersion": "edu-layout-lock-v1",
+    "subject": "语文",
+    "grade": "高一",
+    "lessonType": "new_concept",
+    "durationMin": 40,
+    "slideCount": 10,
+    "stylePreset": "humanities-ink",
+    "subjectMark": "CN"
+  },
+  "curriculumContext": {
+    "textbookVersion": "待确认",
+    "unit": "待确认",
+    "period": "待确认",
+    "assumptions": [
+      "未提供教材版本，按课题常见教学位置处理。",
+      "未提供教材单元，需教师确认课时边界。",
+      "未提供课时序号，默认按第一课时设计。",
+      "未接入真实课标库，教学目标和知识边界需教师最终确认。"
+    ]
+  },
+  "designPlan": [
+    {
+      "page": 1,
+      "slideId": "s01",
+      "stage": "cover",
+      "layoutId": "ED01",
+      "reason": "建立学习主题和课堂期待。",
+      "visualSlots": [
+        "cover_mark"
+      ],
+      "feedbackEvidence": "教师观察学生是否进入学习状态。"
+    },
+    {
+      "page": 2,
+      "slideId": "s02",
+      "stage": "objective_map",
+      "layoutId": "ED02",
+      "reason": "让学生明确本课路径。",
+      "visualSlots": [
+        "journey_map"
+      ],
+      "feedbackEvidence": "学生能复述本课学习路径。"
+    },
+    {
+      "page": 3,
+      "slideId": "s03",
+      "stage": "lead_in",
+      "layoutId": "ED03",
+      "reason": "激活旧知并制造认知冲突。",
+      "visualSlots": [
+        "hook_visual"
+      ],
+      "feedbackEvidence": "抽取 2-3 个学生判断或理由，记录认知冲突。"
+    },
+    {
+      "page": 4,
+      "slideId": "s04",
+      "stage": "text_explore",
+      "layoutId": "ED04",
+      "reason": "让学生通过比较形成解释需求。",
+      "visualSlots": [
+        "inquiry_workspace"
+      ],
+      "feedbackEvidence": "收集 2-3 个同桌讨论结果，比较不同理解。"
+    },
+    {
+      "page": 5,
+      "slideId": "s05",
+      "stage": "analysis",
+      "layoutId": "ED05",
+      "reason": "把观察提升为可迁移方法。",
+      "visualSlots": [
+        "concept_diagram"
+      ],
+      "feedbackEvidence": "学生能说出本页关键论点、层次或手法。"
+    },
+    {
+      "page": 6,
+      "slideId": "s06",
+      "stage": "example",
+      "layoutId": "ED07",
+      "reason": "示范标准分析过程。",
+      "visualSlots": [
+        "step_flow"
+      ],
+      "feedbackEvidence": "学生能说明分析过程中每一步的作用。"
+    },
+    {
+      "page": 7,
+      "slideId": "s07",
+      "stage": "practice",
+      "layoutId": "ED08",
+      "reason": "检查方法迁移。",
+      "visualSlots": [
+        "practice_grid"
+      ],
+      "feedbackEvidence": "教师巡视、同伴互查或抽取板演，判断是否能独立分析。"
+    },
+    {
+      "page": 8,
+      "slideId": "s08",
+      "stage": "misconception_check",
+      "layoutId": "ED09",
+      "reason": "定位并修正常见误解。",
+      "visualSlots": [
+        "error_pair"
+      ],
+      "feedbackEvidence": "学生能修正偏差并解释原因。"
+    },
+    {
+      "page": 9,
+      "slideId": "s09",
+      "stage": "summary",
+      "layoutId": "ED11",
+      "reason": "形成可复述的板书结构。",
+      "visualSlots": [
+        "summary_board"
+      ],
+      "feedbackEvidence": "学生能用一句话复述本课核心要点。"
+    },
+    {
+      "page": 10,
+      "slideId": "s10",
+      "stage": "exit_ticket",
+      "layoutId": "ED12",
+      "reason": "判断是否达成本课目标。",
+      "visualSlots": [
+        "exit_ticket"
+      ],
+      "feedbackEvidence": "根据完成情况判断下一课补救、巩固或进入新内容。"
+    }
+  ],
+  "lessonOutline": [
+    {
+      "stage": "cover",
+      "title": "师说",
+      "layoutId": "ED01",
+      "minutes": 1,
+      "goal": "建立学习主题和课堂期待。"
+    },
+    {
+      "stage": "objective_map",
+      "title": "学习路线",
+      "layoutId": "ED02",
+      "minutes": 2,
+      "goal": "让学生明确本课路径。"
+    },
+    {
+      "stage": "lead_in",
+      "title": "问题导入",
+      "layoutId": "ED03",
+      "minutes": 4,
+      "goal": "激活旧知并制造认知冲突。"
+    },
+    {
+      "stage": "text_explore",
+      "title": "比较与讨论",
+      "layoutId": "ED04",
+      "minutes": 5,
+      "goal": "让学生通过比较形成解释需求。"
+    },
+    {
+      "stage": "analysis",
+      "title": "要点梳理",
+      "layoutId": "ED05",
+      "minutes": 6,
+      "goal": "把观察提升为可迁移方法。"
+    },
+    {
+      "stage": "example",
+      "title": "典型分析",
+      "layoutId": "ED07",
+      "minutes": 8,
+      "goal": "示范标准分析过程。"
+    },
+    {
+      "stage": "practice",
+      "title": "课堂练习",
+      "layoutId": "ED08",
+      "minutes": 6,
+      "goal": "检查方法迁移。"
+    },
+    {
+      "stage": "misconception_check",
+      "title": "偏差辨析",
+      "layoutId": "ED09",
+      "minutes": 4,
+      "goal": "定位并修正常见误解。"
+    },
+    {
+      "stage": "summary",
+      "title": "要点小结",
+      "layoutId": "ED11",
+      "minutes": 3,
+      "goal": "形成可复述的板书结构。"
+    },
+    {
+      "stage": "exit_ticket",
+      "title": "出门测",
+      "layoutId": "ED12",
+      "minutes": 1,
+      "goal": "判断是否达成本课目标。"
+    }
+  ],
+  "qualityReport": {
+    "status": "pass",
+    "warnings": [],
+    "assumptions": [
+      "未提供教材版本，按课题常见教学位置处理。",
+      "未提供教材单元，需教师确认课时边界。",
+      "未提供课时序号，默认按第一课时设计。",
+      "未接入真实课标库，教学目标和知识边界需教师最终确认。"
+    ],
+    "checkedRules": [
+      "edu_layout_lock",
+      "visual_slots",
+      "feedback_evidence",
+      "timing",
+      "teacher_script",
+      "projection_density",
+      "html_runtime"
+    ]
+  }
+}

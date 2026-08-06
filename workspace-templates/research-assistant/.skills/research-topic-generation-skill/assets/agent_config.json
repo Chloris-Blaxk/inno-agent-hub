@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "scene": "教育科研选题",
+    "preference": {
+      "mode": "planning",
+      "top_k": 5
+    },
+    "identity": "教师"
+  },
+  "runtime": {
+    "anchor_threshold": 0.18,
+    "k_hops": 2,
+    "edge_top_m": 80,
+    "top_k": 5,
+    "gap_types": ["sparse_region", "structural_hole"],
+    "diversity": {
+      "per_community_cap": 2
+    }
+  },
+  "weights": {
+    "w1": 0.30,
+    "w2": 0.30,
+    "w3": 0.20,
+    "w4": 0.20
+  },
+  "output_schema": {
+    "rank_list": ["rank", "title", "gap_id", "gap_type", "composite_score", "score_breakdown", "next_materials"],
+    "evidence_chain": ["gap_type", "gap_cause", "topo_evidence", "trend_evidence", "source_coverage", "path", "score_breakdown", "uncertainty_note"]
+  }
+}

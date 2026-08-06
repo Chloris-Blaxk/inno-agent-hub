@@ -1,0 +1,38 @@
+{
+  "id": "blackboard",
+  "name": "黑板风",
+  "description": "模拟传统黑板或绿板的视觉效果，营造怀旧而亲切的课堂氛围。适合数学、语文（全学段通用）。",
+  "colors": {
+    "bg": "2D3A2E",
+    "ink": "F0F0E8",
+    "muted": "A8B0A0",
+    "accent": "F4D03F",
+    "card": "3A4A3A",
+    "line": "4A5A4A",
+    "good": "82E0AA",
+    "warn": "F1948A"
+  },
+  "fonts": {
+    "head": "Ma Shan Zheng",
+    "body": "Noto Sans SC"
+  },
+  "layout": {
+    "marginRatio": 0.04,
+    "titleSize": [40, 52],
+    "bodySize": [26, 32],
+    "maxBullets": 5,
+    "maxBulletChars": 18,
+    "maxHeadlineChars": 16
+  },
+  "decorations": {
+    "type": "chalk",
+    "coverAccent": "chalk-line",
+    "cardShadow": false,
+    "borderRadius": 0
+  },
+  "applicable": {
+    "grades": ["小学", "初中", "高中"],
+    "subjects": ["数学", "语文", "英语", "通用"],
+    "scenes": ["新授课", "复习课", "练习讲评"]
+  }
+}

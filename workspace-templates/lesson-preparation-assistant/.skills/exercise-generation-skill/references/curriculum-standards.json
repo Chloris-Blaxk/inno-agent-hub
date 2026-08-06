@@ -1,0 +1,62 @@
+{
+  "standards": [
+    {
+      "standardId": "std-math-g5-fraction-001",
+      "subject": "数学",
+      "gradeBand": "小学高段",
+      "module": "数与代数",
+      "contentRequirement": "理解分数意义和分数单位，能进行同分母分数加减运算，并能解释计算过程。",
+      "learningLevel": "掌握",
+      "competencyTags": [
+        "运算能力",
+        "数感",
+        "推理意识"
+      ],
+      "forbiddenScope": [
+        "异分母分数运算",
+        "分式方程",
+        "代数式通分"
+      ],
+      "source": "curated-internal-sample-v2"
+    },
+    {
+      "standardId": "std-math-g5-fraction-002",
+      "subject": "数学",
+      "gradeBand": "小学高段",
+      "module": "数与代数",
+      "contentRequirement": "理解通分的必要性，能进行简单异分母分数加减运算，并能对结果进行约分或化成带分数。",
+      "learningLevel": "掌握",
+      "competencyTags": [
+        "运算能力",
+        "推理意识",
+        "模型意识"
+      ],
+      "forbiddenScope": [
+        "分式方程",
+        "有理数混合运算",
+        "代数式通分",
+        "复杂最小公倍数证明"
+      ],
+      "source": "curated-internal-sample-v2"
+    },
+    {
+      "standardId": "std-math-g5-fraction-003",
+      "subject": "数学",
+      "gradeBand": "小学高段",
+      "module": "综合与实践",
+      "contentRequirement": "能在简单实际情境中选择合适的分数加减法解决问题，能说明数量关系和判断理由。",
+      "learningLevel": "应用",
+      "competencyTags": [
+        "应用意识",
+        "表达能力",
+        "模型意识"
+      ],
+      "forbiddenScope": [
+        "含未知数方程求解",
+        "复杂比例推理",
+        "多步百分数应用"
+      ],
+      "source": "curated-internal-sample-v2"
+    }
+  ]
+}

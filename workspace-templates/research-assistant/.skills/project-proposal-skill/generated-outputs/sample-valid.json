@@ -1,0 +1,377 @@
+{
+  "requestId": "req-project-proposal-valid-001",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "summary": "已基于用户材料抽取项目事实表，并按区级课题申报书模板生成草稿框架。",
+  "result": {
+    "projectFactTable": {
+      "projectId": "proj-demo-001",
+      "facts": [
+        {
+          "factId": "fact-001",
+          "field": "project.title",
+          "value": "小学数学课堂即时反馈支持错因诊断的实践研究",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-002",
+          "field": "project.level",
+          "value": "区级课题",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-003",
+          "field": "team.leader",
+          "value": "项目负责人 1 人",
+          "sourceRefs": [
+            "mat-002"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-004",
+          "field": "team.memberCount",
+          "value": "核心成员 4 人",
+          "sourceRefs": [
+            "mat-002"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-005",
+          "field": "timeline.cycle",
+          "value": "2026-09 至 2027-08",
+          "sourceRefs": [
+            "mat-003"
+          ],
+          "confidence": "medium",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-006",
+          "field": "goals.mainGoal",
+          "value": "形成课堂即时反馈记录与错因讲评改进流程",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-007",
+          "field": "basis.practiceRecords",
+          "value": "已有异分母分数加减法错因分析课例 1 份",
+          "sourceRefs": [
+            "mat-004"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-008",
+          "field": "outcomes.expected",
+          "value": "形成课例、观察记录模板和阶段性研究报告",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "medium",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-009",
+          "field": "policy.alignment",
+          "value": "对齐过程性评价与课堂教学改进",
+          "sourceRefs": [
+            "mat-001"
+          ],
+          "confidence": "medium",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-010",
+          "field": "budget.total",
+          "value": "1.5 万元",
+          "sourceRefs": [
+            "budgetInfo"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-011",
+          "field": "budget.items",
+          "value": [
+            {
+              "category": "资料费",
+              "amount": "0.5 万元",
+              "purpose": "购买研究资料和打印课堂观察表"
+            },
+            {
+              "category": "培训研讨费",
+              "amount": "1.0 万元",
+              "purpose": "开展课题研讨和专家指导"
+            }
+          ],
+          "sourceRefs": [
+            "budgetInfo"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        }
+      ],
+      "missingFields": [],
+      "conflicts": []
+    },
+    "documentDraft": {
+      "documentId": "doc-demo-001",
+      "documentType": "project_application",
+      "title": "小学数学课堂即时反馈支持错因诊断的实践研究",
+      "sections": [
+        {
+          "sectionId": "sec-background",
+          "title": "研究背景",
+          "required": true,
+          "content": "项目面向区级课题申报，聚焦过程性评价和课堂教学改进。",
+          "factRefs": [
+            "fact-002",
+            "fact-009"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-goals",
+          "title": "研究目标与内容",
+          "required": true,
+          "content": "目标是形成课堂即时反馈记录与错因讲评改进流程。",
+          "factRefs": [
+            "fact-006"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-methods",
+          "title": "研究方法与步骤",
+          "required": true,
+          "content": "以已有课例为基础，在一个研究周期内进行观察、记录和迭代。",
+          "factRefs": [
+            "fact-005",
+            "fact-007"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-outcomes",
+          "title": "预期成果",
+          "required": true,
+          "content": "预期形成课例、观察记录模板和阶段性研究报告。",
+          "factRefs": [
+            "fact-008"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-basis",
+          "title": "研究基础",
+          "required": true,
+          "content": "团队已有错因分析课例和 4 名核心成员参与基础。",
+          "factRefs": [
+            "fact-003",
+            "fact-004",
+            "fact-007"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-budget",
+          "title": "经费预算",
+          "required": false,
+          "content": "预算总额 1.5 万元，包含资料费和培训研讨费，均来自用户预算信息。",
+          "factRefs": [
+            "fact-010",
+            "fact-011"
+          ],
+          "evidenceRefs": [],
+          "status": "draft"
+        }
+      ]
+    },
+    "reviewAlignmentReport": {
+      "alignedDimensions": [
+        "问题价值",
+        "研究设计",
+        "研究基础"
+      ]
+    },
+    "budgetReport": {
+      "totalAmount": "1.5 万元",
+      "items": [
+        {
+          "category": "资料费",
+          "amount": "0.5 万元",
+          "purpose": "购买研究资料和打印课堂观察表",
+          "sourceRefs": [
+            "budgetInfo"
+          ],
+          "status": "confirmed"
+        },
+        {
+          "category": "培训研讨费",
+          "amount": "1.0 万元",
+          "purpose": "开展课题研讨和专家指导",
+          "sourceRefs": [
+            "budgetInfo"
+          ],
+          "status": "confirmed"
+        }
+      ],
+      "warnings": []
+    },
+    "consistencyReport": {
+      "conflictCount": 0,
+      "notes": []
+    }
+  },
+  "handoff": {
+    "projectFactTableSummary": {
+      "projectId": "proj-demo-001",
+      "factCount": 11,
+      "conflictCount": 0
+    },
+    "documentSummary": {
+      "documentType": "project_application",
+      "requiredSectionCoverage": 1
+    }
+  },
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "fact_source_refs",
+        "status": "pass"
+      },
+      {
+        "id": "template_required_sections",
+        "status": "pass"
+      }
+    ],
+    "warnings": [],
+    "metrics": {
+      "factCount": 11,
+      "conflictCount": 0,
+      "templateSectionCoverage": 1,
+      "missingFieldCount": 0,
+      "budgetWarningCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 4,
+    "verifiedSourceCount": 4,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "按申报通知复核预算科目和报销口径。"
+  ],
+  "status": "pass",
+  "warnings": [],
+  "dataSourceReport": {
+    "reportId": "dsr-project-proposal-skill",
+    "skillId": "project-proposal-skill",
+    "taskIntent": "project_application",
+    "dataSources": [
+      {
+        "sourceId": "document-templates",
+        "sourceName": "项目文档模板样例",
+        "sourceType": "local_sample",
+        "dataType": "document_template",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "模板为本地样例，真实申报前需替换为地区/项目级别最新模板。"
+        ]
+      },
+      {
+        "sourceId": "budget-rules",
+        "sourceName": "预算规则样例",
+        "sourceType": "local_sample",
+        "dataType": "budget_rule",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "预算规则为样例口径，金额和科目需按科研管理/财务规则确认。"
+        ]
+      },
+      {
+        "sourceId": "review-rubrics",
+        "sourceName": "评审标准样例",
+        "sourceType": "local_sample",
+        "dataType": "review_rubric",
+        "recordCount": 1,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "评审维度为样例，不代表所有地区和项目类别权重。"
+        ]
+      },
+      {
+        "sourceId": "sanitized-case-patterns",
+        "sourceName": "脱敏案例模式样例",
+        "sourceType": "local_sample",
+        "dataType": "sanitized_case_pattern",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "案例为脱敏模式样例，只能辅助结构参考，不能承诺立项结果。"
+        ]
+      },
+      {
+        "sourceId": "user-project-materials",
+        "sourceName": "用户提供项目材料",
+        "sourceType": "user_provided",
+        "dataType": "project_material",
+        "recordCount": 5,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "用户材料先进入 ProjectFactTable；未形成 factRefs 前不得写入正文事实。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前生成 1 类文档；模板、预算和评审规则仍为本地样例，需按真实申报口径复核。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "project_application",
+    "sampleFile": "agent_cases/project-proposal-skill/generated-outputs/sample-valid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/project-proposal-skill/generated-outputs/sample-valid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

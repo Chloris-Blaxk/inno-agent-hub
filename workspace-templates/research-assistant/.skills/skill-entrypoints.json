@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "policy": {
+    "routingMode": "fixed_entry_name",
+    "fixedEntryNamesOnly": true,
+    "keywordRouting": "disabled",
+    "missingEntryAction": "needs_skill_selection"
+  },
+  "entrypoints": [
+    {
+      "index": 1,
+      "entryName": "研究选题生成",
+      "entryToken": "@研究选题生成",
+      "skillId": "research-topic-generation-skill",
+      "displayName": "研究选题生成",
+      "status": "runnable_prototype",
+      "primaryOutputs": ["json", "markdown"],
+      "requiredSlots": [],
+      "optionalSlots": ["teacherProfile", "materials", "researchField", "targetProjectType", "topicCount", "requirements", "constraints"],
+      "execution": {
+        "renderScript": ".skills/research-topic-generation-skill/scripts/render_research_topic.py",
+        "validateScript": ".skills/research-topic-generation-skill/scripts/validate_research_topic.py",
+        "outputDir": ".skills/research-topic-generation-skill/generated-outputs"
+      }
+    },
+    {
+      "index": 2,
+      "entryName": "文献阅读助手",
+      "entryToken": "@文献阅读助手",
+      "skillId": "literature-reading-skill",
+      "displayName": "文献阅读助手",
+      "status": "runnable_prototype",
+      "primaryOutputs": ["json", "markdown"],
+      "requiredSlots": [],
+      "optionalSlots": ["researchTopic", "keywords", "readingGoal", "availablePapers", "topicCandidates", "sourceFiles"],
+      "execution": {
+        "renderScript": ".skills/literature-reading-skill/scripts/render_literature_reading.py",
+        "validateScript": ".skills/literature-reading-skill/scripts/validate_literature_reading.py",
+        "outputDir": ".skills/literature-reading-skill/generated-outputs"
+      }
+    },
+    {
+      "index": 3,
+      "entryName": "论文写作助手",
+      "entryToken": "@论文写作助手",
+      "skillId": "paper-writing-skill",
+      "displayName": "论文写作助手",
+      "status": "runnable_prototype",
+      "primaryOutputs": ["json", "markdown"],
+      "requiredSlots": [],
+      "optionalSlots": ["queryText", "draftText", "claims", "sectionType", "availableLiteratureRecords", "availableEvidenceCards", "citationStyle"],
+      "execution": {
+        "renderScript": ".skills/paper-writing-skill/scripts/render_paper_writing.py",
+        "validateScript": ".skills/paper-writing-skill/scripts/validate_paper_writing.py",
+        "outputDir": ".skills/paper-writing-skill/generated-outputs"
+      }
+    },
+    {
+      "index": 4,
+      "entryName": "项目申报助手",
+      "entryToken": "@项目申报助手",
+      "skillId": "project-proposal-skill",
+      "displayName": "项目申报助手",
+      "status": "runnable_prototype",
+      "primaryOutputs": ["json", "markdown"],
+      "requiredSlots": [],
+      "optionalSlots": ["projectMaterials", "documentType", "projectLevel", "budgetInfo", "teamInfo", "requirements", "constraints"],
+      "execution": {
+        "renderScript": ".skills/project-proposal-skill/scripts/render_project_proposal.py",
+        "validateScript": ".skills/project-proposal-skill/scripts/validate_project_proposal.py",
+        "outputDir": ".skills/project-proposal-skill/generated-outputs"
+      }
+    }
+  ]
+}

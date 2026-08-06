@@ -1,0 +1,999 @@
+{
+  "requestId": "req-project-proposal-teacher-c-001",
+  "skillId": "project-proposal-skill",
+  "taskIntent": "project_application",
+  "status": "warn",
+  "summary": "已从5份教师材料中抽取项目事实表（35条事实），用户已确认团队核心成员5人、申报级别区级，按区级课题申报书模板生成6章节框架。预算金额未提供，仅给出科目建议。",
+  "inputSummary": {
+    "sourceFiles": [
+      "01-课题构想与申报初稿.txt",
+      "02-团队信息-申报表版.txt",
+      "03-团队信息-补充说明版.txt",
+      "04-实践基础与过程记录.txt",
+      "05-成果清单.txt"
+    ],
+    "materialCount": 5,
+    "projectLevelRequested": "区级课题",
+    "projectLevelInMaterials": "市级课题",
+    "subject": "高中英语",
+    "grade": "高二"
+  },
+  "warnings": [
+    "budget.total和budget.items缺失，经费预算章节为needs_evidence"
+  ],
+  "dataSourceReport": {
+    "mockDataUsed": false,
+    "dataSources": [
+      {
+        "sourceId": "mat-c-01",
+        "sourceName": "01-课题构想与申报初稿",
+        "sourceType": "user_provided",
+        "dataType": "project_material",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "limitations": []
+      },
+      {
+        "sourceId": "mat-c-02",
+        "sourceName": "02-团队信息-申报表版",
+        "sourceType": "user_provided",
+        "dataType": "team_info",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "limitations": [
+          "2026年4月版本，核心成员4人，已被03补充说明版更新"
+        ]
+      },
+      {
+        "sourceId": "mat-c-03",
+        "sourceName": "03-团队信息-补充说明版",
+        "sourceType": "user_provided",
+        "dataType": "team_info",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "limitations": [
+          "2026年5月更新版，注明'以本版为准'，但申报表尚未更新"
+        ]
+      },
+      {
+        "sourceId": "mat-c-04",
+        "sourceName": "04-实践基础与过程记录",
+        "sourceType": "user_provided",
+        "dataType": "practice_record",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "limitations": []
+      },
+      {
+        "sourceId": "mat-c-05",
+        "sourceName": "05-成果清单",
+        "sourceType": "user_provided",
+        "dataType": "outcome_list",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "limitations": []
+      }
+    ],
+    "overallLimitations": [
+      "预算信息完全缺失",
+      "研究阶段细节未提供",
+      "对照班具体安排未明确"
+    ]
+  },
+  "artifacts": [],
+  "result": {
+    "projectFactTable": {
+      "projectId": "proj-teacher-c-001",
+      "facts": [
+        {
+          "factId": "fact-001",
+          "field": "project.title",
+          "value": "基于项目式学习的高中英语跨文化交际能力培养实践研究",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-002",
+          "field": "project.level",
+          "value": "区级课题（用户已确认）",
+          "sourceRefs": [
+            "mat-c-01",
+            "user_request"
+          ],
+          "confidence": "high",
+          "status": "confirmed",
+          "note": "材料原文为市级课题，用户已确认申报级别为区级。"
+        },
+        {
+          "factId": "fact-003",
+          "field": "project.subject",
+          "value": "高中英语",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-004",
+          "field": "project.grade",
+          "value": "高二",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-005",
+          "field": "team.leader",
+          "value": "刘老师，教龄10年，区级骨干教师（2024年认定），市级教学能手（2026年5月新获评）",
+          "sourceRefs": [
+            "mat-c-01",
+            "mat-c-02",
+            "mat-c-03",
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-006",
+          "field": "team.leader.researchExperience",
+          "value": "参与省级课题1项（核心成员）、市级课题1项（核心成员），发表论文5篇（核心期刊2篇），开发校本课程1门。首次以负责人身份申报课题。",
+          "sourceRefs": [
+            "mat-c-01",
+            "mat-c-02"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-007",
+          "field": "team.leader.honors",
+          "value": "区级骨干教师（2024）、市级教学能手（2026.05）、区级教学比赛一等奖（2024）、指导学生获市级英语演讲比赛一等奖（2025）",
+          "sourceRefs": [
+            "mat-c-02",
+            "mat-c-03",
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-008",
+          "field": "team.coreMembers.v2",
+          "value": "4人（2026年4月申报表版）：赵老师（教研组长，15年）、钱老师（高二英语，8年）、孙老师（信息技术，6年）、周老师（高二英语，4年）",
+          "sourceRefs": [
+            "mat-c-02"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-009",
+          "field": "team.coreMembers.v3",
+          "value": "5人（2026年5月补充说明版，新增吴老师——心理教师，5年教龄，负责跨文化敏感度测量和问卷编制）",
+          "sourceRefs": [
+            "mat-c-03"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-010",
+          "field": "team.totalCount",
+          "value": "6人（含负责人），其中英语学科4人+信息技术1人+心理1人；3人有市级及以上课题参与经验",
+          "sourceRefs": [
+            "mat-c-03"
+          ],
+          "confidence": "high",
+          "status": "confirmed",
+          "note": "用户已确认以03补充说明版（5名核心成员）为准。"
+        },
+        {
+          "factId": "fact-011",
+          "field": "team.memberCount",
+          "value": "核心成员5人（用户已确认），团队共6人（含负责人）",
+          "sourceRefs": [
+            "mat-c-03"
+          ],
+          "confidence": "high",
+          "status": "confirmed",
+          "note": "用户已确认采用03补充说明版数据（5名核心成员，含新增吴老师）。"
+        },
+        {
+          "factId": "fact-012",
+          "field": "team.structure",
+          "value": "学科结构：英语教学4人、信息技术1人、心理测量1人。分工覆盖：研究方法指导、课堂教学实施、数据采集、在线平台搭建、问卷编制、案例分析、文献整理。",
+          "sourceRefs": [
+            "mat-c-02",
+            "mat-c-03"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-013",
+          "field": "timeline.cycle",
+          "value": "2026年9月 至 2028年8月（2年）",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-014",
+          "field": "data.sampleScope",
+          "value": "高二两个班（高二1班38人、高二3班40人），共78名学生",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-015",
+          "field": "data.design",
+          "value": "实验班与对照班对比设计（具体班级分配待确认）",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "medium",
+          "status": "needs_user_confirmation"
+        },
+        {
+          "factId": "fact-016",
+          "field": "background.problem1",
+          "value": "教材文化内容为'知识性介绍'，缺乏真实情境下的文化体验和交际实践",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-017",
+          "field": "background.problem2",
+          "value": "学生跨文化误判：约63%的学生在'准时观念差异'案例中将'不准时'定性为'不尊重'，反映用自己的文化标准评判他人的倾向",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-018",
+          "field": "background.problem3",
+          "value": "PBL提供了真实任务平台，但如何系统性地在PBL中嵌入跨文化交际能力培养目标，缺乏成熟框架",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-019",
+          "field": "basis.previousProjects",
+          "value": "省级课题《高中英语阅读教学中文化意识的培养》核心成员（2022-2024）；市级课题《项目式学习在高中英语教学中的应用》核心成员（2023-2025）",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-020",
+          "field": "basis.schoolCurriculum",
+          "value": "校本课程《高中英语跨文化交际》已实施两轮（2024秋18课时+2025春18课时），含完整课程方案、18课时教学设计、学生评价方案",
+          "sourceRefs": [
+            "mat-c-01",
+            "mat-c-04",
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-021",
+          "field": "basis.internationalChannel",
+          "value": "姊妹学校项目，可安排学生与英语国家学生线上交流（第二轮课程中已实施2次视频交流）",
+          "sourceRefs": [
+            "mat-c-01",
+            "mat-c-04"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-022",
+          "field": "basis.caseLibrary",
+          "value": "跨文化交际案例库12个（时间观念2+礼貌表达3+教育观念2+人际关系2+非语言交际3），每个含情境描述、文化分析、教学建议和学生常见误判类型",
+          "sourceRefs": [
+            "mat-c-04",
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-023",
+          "field": "basis.evaluationScale",
+          "value": "跨文化交际能力评价量表v1.0（知识+态度+技能三维度），已在两轮校本课程中初步试用，信效度数据待补充",
+          "sourceRefs": [
+            "mat-c-04",
+            "mat-c-05"
+          ],
+          "confidence": "medium",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-024",
+          "field": "basis.observationData",
+          "value": "2025年秋季学期6周课堂观察：文化意识三阶段发展数据（惊奇78%→理解55%→反思28%）；学生行为变化（文化元素识别增2.3倍、跨文化比较表达增多、解释性模式替代评判性模式）；反思关键词统计（perspective-taking 37次、open-minded 29次、stereotype 24次）",
+          "sourceRefs": [
+            "mat-c-04"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-025",
+          "field": "goals.list",
+          "value": "①构建基于PBL的高中英语跨文化交际能力培养框架；②开发跨文化交际能力评价量表（知识、态度、技能三维度）；③形成可推广的PBL教学案例集（4-6个跨文化交际项目设计）；④验证PBL模式对跨文化交际能力培养的效果（实验班与对照班对比）",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-026",
+          "field": "goals.mainGoal",
+          "value": "构建基于PBL的高中英语跨文化交际能力培养框架，并通过实验验证其效果",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-027",
+          "field": "basis.practiceRecords",
+          "value": "两轮校本课程《高中英语跨文化交际》实施（2024秋18课时+2025春18课时，覆盖78人）；6周系统课堂观察（含文化意识三阶段发展数据和行为变化量化记录）；跨文化交际案例库12个；评价量表v1.0初步试用",
+          "sourceRefs": [
+            "mat-c-04"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-028",
+          "field": "outcomes.existing.papers",
+          "value": "5篇（核心期刊2篇：《中小学外语教学》2023、《中小学英语教学与研究》2024；省级期刊3篇）",
+          "sourceRefs": [
+            "mat-c-01",
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-029",
+          "field": "outcomes.existing.teachingCases",
+          "value": "6篇（含Culture Shock and Adaptation案例、跨文化交际指南项目设计、文化差异认知单元案例、线上跨文化交流活动设计、跨文化案例分析课堂案例、跨文化交际能力评价案例）",
+          "sourceRefs": [
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-030",
+          "field": "outcomes.existing.studentWorks",
+          "value": "74份'跨文化交际指南'项目作品（平均约1200英文词/份，提交率94.9%，优秀31.1%+良好55.4%+基本完成13.5%）",
+          "sourceRefs": [
+            "mat-c-04",
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-031",
+          "field": "outcomes.existing.tools",
+          "value": "4件教学工具：跨文化交际案例库、评价量表v1.0、PBL设计模板（含驱动问题+成果要求+评价量规）、课堂观察编码表（含文化意识行为指标）",
+          "sourceRefs": [
+            "mat-c-05"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-032",
+          "field": "outcomes.expected",
+          "value": "基于目标推导：PBL跨文化交际能力培养框架1套、评价量表（信效度验证版）、PBL教学案例集（4-6个项目设计）、实验班vs对照班对比研究报告",
+          "sourceRefs": [
+            "mat-c-01",
+            "inferred_from_goals"
+          ],
+          "confidence": "medium",
+          "status": "inferred"
+        },
+        {
+          "factId": "fact-033",
+          "field": "project.distinction",
+          "value": "首次以项目负责人身份独立申报；选题是文化意识培养与项目式学习两个方向的交叉融合——从'参与研究'走向'主持研究'，从'单一方向'走向'交叉融合'",
+          "sourceRefs": [
+            "mat-c-01"
+          ],
+          "confidence": "high",
+          "status": "confirmed"
+        },
+        {
+          "factId": "fact-034",
+          "field": "project.innovation",
+          "value": "①将PBL与跨文化交际能力培养进行系统性融合（填补框架空白）；②引入心理测量维度（跨文化敏感度测量）；③依托国际姊妹学校资源实现真实跨文化交际场景",
+          "sourceRefs": [
+            "mat-c-01",
+            "mat-c-03",
+            "mat-c-04"
+          ],
+          "confidence": "medium",
+          "status": "inferred"
+        },
+        {
+          "factId": "fact-035",
+          "field": "policy.alignment",
+          "value": "对接《普通高中英语课程标准（2017版2020年修订）》文化意识素养要求；对接教育数字化转型中信息技术与教学融合方向",
+          "sourceRefs": [
+            "inferred_from_context"
+          ],
+          "confidence": "medium",
+          "status": "inferred"
+        }
+      ],
+      "missingFields": [
+        {
+          "field": "budget.total",
+          "reason": "所有材料中均未提供预算总额",
+          "impact": "经费预算章节只能给出科目建议，不能填写金额"
+        },
+        {
+          "field": "budget.items",
+          "reason": "所有材料中均未提供预算科目明细和金额",
+          "impact": "预算报告仅能输出科目建议和非金额型提示"
+        },
+        {
+          "field": "timeline.phases",
+          "reason": "仅提供了研究起止时间（2026.09-2028.08），未提供阶段划分",
+          "impact": "研究方法与步骤章节的阶段划分由模板推断，需用户确认"
+        },
+        {
+          "field": "data.controlClass",
+          "reason": "提及实验班与对照班对比，但未明确哪些班级为实验组/对照组",
+          "impact": "研究设计描述需要用户补充确认"
+        }
+      ],
+      "conflicts": []
+    },
+    "documentDraft": {
+      "documentId": "doc-teacher-c-001",
+      "documentType": "project_application",
+      "title": "基于项目式学习的高中英语跨文化交际能力培养实践研究",
+      "sections": [
+        {
+          "sectionId": "sec-background",
+          "title": "一、研究背景",
+          "required": true,
+          "scoreWeight": 15,
+          "content": "【问题的提出】\n\n在高中英语教学中，学生的跨文化交际能力培养面临三个突出问题：\n\n1. **教材文化内容停留于知识层面**：现行教材中的文化内容多为'知识性介绍'（如节日、习俗等事实性知识），缺乏真实情境下的文化体验和交际实践。学生'知道'文化差异，但无法在交际场景中灵活运用。\n\n2. **学生存在普遍的文化误判倾向**：在跨文化案例分析教学中发现，学生最常见的误判是'用自己的文化标准评判他人'。例如在'准时观念差异'案例分析中，约63%的学生最初将'不准时'定性为'不尊重'，反映出文化自我中心倾向较为突出。\n\n3. **PBL与跨文化能力培养缺乏整合框架**：项目式学习（PBL）提供了一个让学生在真实任务中发展跨文化能力的平台，但如何在PBL中系统性地嵌入跨文化交际能力培养目标，目前缺乏成熟的操作框架。\n\n【研究意义】\n\n本课题响应《普通高中英语课程标准（2017版2020年修订）》对文化意识素养的培养要求，尝试将PBL方法论与跨文化交际能力培养进行系统性融合，为高中英语文化教学从'知识传授'走向'能力培养'提供可操作的实践路径。",
+          "factRefs": [
+            "fact-001",
+            "fact-002",
+            "fact-023",
+            "fact-023",
+            "fact-023",
+            "fact-035"
+          ],
+          "evidenceRefs": [
+            "mat-c-01"
+          ],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-goals",
+          "title": "二、研究目标与内容",
+          "required": true,
+          "scoreWeight": 25,
+          "content": "【研究目标】\n\n1. **构建培养框架**：构建基于PBL的高中英语跨文化交际能力培养框架，明确目标体系、活动设计原则和评价标准。\n\n2. **开发评价工具**：开发并验证跨文化交际能力评价量表（含知识、态度、技能三个维度），为教学效果评估提供可靠工具。\n\n3. **形成案例资源**：形成可推广的PBL教学案例集（含4-6个跨文化交际项目设计），覆盖不同文化主题和交际场景。\n\n4. **验证实践效果**：通过实验班与对照班对比，验证PBL模式对跨文化交际能力培养的实际效果。\n\n【研究内容】\n\n（1）高中英语跨文化交际能力的内涵与维度梳理——基于课标要求和已有研究，界定本课题所培养的跨文化交际能力的内涵与构成。\n\n（2）PBL与跨文化交际能力培养的整合框架设计——明确PBL各阶段（驱动问题→探究活动→成果产出→反思评价）中跨文化能力目标的嵌入方式。\n\n（3）跨文化交际能力评价量表的开发与信效度验证——在现有v1.0量表基础上，通过两轮教学实践完成信效度检验和修订。\n\n（4）4-6个PBL跨文化交际项目的设计与实施——覆盖时间观念、礼貌表达、教育观念、人际关系、非语言交际等文化维度。\n\n（5）实验班与对照班对比研究——采集前测/后测数据，分析PBL模式对跨文化知识、态度、技能三个维度的提升效果。",
+          "factRefs": [
+            "fact-035",
+            "fact-035",
+            "fact-023",
+            "fact-013",
+            "fact-023"
+          ],
+          "evidenceRefs": [
+            "mat-c-01"
+          ],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-methods",
+          "title": "三、研究方法与步骤",
+          "required": true,
+          "scoreWeight": 20,
+          "content": "【研究方法】\n\n1. **行动研究法**：以高二两个班为实践场域，按'计划→行动→观察→反思'循环推进PBL教学改进。\n\n2. **准实验研究法**：设置实验班与对照班，采集跨文化交际能力前测/后测数据，进行组间对比分析。\n\n3. **问卷调查法**：使用自编跨文化交际能力评价量表（含知识、态度、技能三维度）进行前后测；使用跨文化敏感度量表（心理教师吴老师负责）辅助测量。\n\n4. **课堂观察法**：使用已有的课堂观察编码表，系统记录学生文化意识行为指标变化。\n\n5. **文本分析法**：对学生PBL项目作品（跨文化交际指南）进行内容分析，追踪跨文化思维发展。\n\n6. **案例研究法**：选取典型案例进行深度分析，提炼PBL跨文化项目的设计原则和实施策略。\n\n【研究步骤】（建议阶段划分，待用户确认）\n\n**第一阶段：准备与设计（2026年9月—2027年1月）**\n- 文献梳理与理论框架搭建\n- PBL-跨文化能力整合框架设计\n- 评价量表修订与前测实施\n- 首批2-3个PBL项目设计\n\n**第二阶段：实施与迭代（2027年2月—2027年12月）**\n- 第一轮PBL项目教学实施与数据采集\n- 第二轮PBL项目教学实施（含框架调整）\n- 姊妹学校线上跨文化交流活动\n- 中期数据分析和框架修订\n\n**第三阶段：总结与推广（2028年1月—2028年8月）**\n- 后测实施与对比数据分析\n- 评价量表信效度检验\n- PBL案例集整理与成果撰写\n- 结题报告撰写与成果推广",
+          "factRefs": [
+            "fact-012",
+            "fact-023",
+            "fact-023",
+            "fact-023",
+            "fact-013",
+            "fact-011"
+          ],
+          "evidenceRefs": [
+            "mat-c-01",
+            "mat-c-04"
+          ],
+          "status": "draft",
+          "note": "阶段划分为基于2年周期的合理推断，需用户确认。"
+        },
+        {
+          "sectionId": "sec-outcomes",
+          "title": "四、预期成果",
+          "required": true,
+          "scoreWeight": 15,
+          "content": "【预期成果清单】\n\n| 序号 | 成果类型 | 成果名称/描述 | 数量 | 完成时间 |\n|------|---------|--------------|------|---------|\n| 1 | 理论框架 | 基于PBL的高中英语跨文化交际能力培养框架 | 1套 | 2027.01 |\n| 2 | 评价工具 | 跨文化交际能力评价量表（信效度验证版） | 1份 | 2028.06 |\n| 3 | 教学资源 | PBL跨文化交际项目设计案例集 | 4-6个 | 2027.12 |\n| 4 | 研究报告 | 实验班vs对照班对比研究报告 | 1份 | 2028.06 |\n| 5 | 学术论文 | 研究论文（争取核心期刊发表） | 1-2篇 | 2028.08 |\n| 6 | 结题报告 | 课题结题报告 | 1份 | 2028.08 |\n\n【已有成果基础】（非本课题产出，而是研究基础的证明）\n- 论文5篇（核心期刊2篇）\n- 校本课程《高中英语跨文化交际》1门（两轮实施）\n- 教学案例6篇\n- 课堂观察记录12份\n- 学生项目作品74份\n- 教学工具4件（案例库、评价量表v1.0、PBL设计模板、课堂观察编码表）",
+          "factRefs": [
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-023"
+          ],
+          "evidenceRefs": [
+            "mat-c-01",
+            "mat-c-05"
+          ],
+          "status": "draft",
+          "note": "评价量表信效度验证为预期产出（当前v1.0信效度数据待补充），标注为needs_evidence"
+        },
+        {
+          "sectionId": "sec-basis",
+          "title": "五、研究基础与可行性分析",
+          "required": true,
+          "scoreWeight": 15,
+          "content": "【负责人基础】\n\n项目负责人刘老师，教龄10年，区级骨干教师（2024年认定），市级教学能手（2026年5月新获评）。具备扎实的课题研究经历：参与省级课题《高中英语阅读教学中文化意识的培养》（2022-2024，核心成员）、市级课题《项目式学习在高中英语教学中的应用》（2023-2025，核心成员），系统掌握了文化教学理论框架和PBL设计与实施方法。发表论文5篇（含核心期刊2篇），开发校本课程1门，获区级教学比赛一等奖（2024年），指导学生获市级英语演讲比赛一等奖（2025年）。本课题是负责人从'参与研究'走向'主持研究'、从'单一方向'走向'交叉融合'的重要一步。\n\n【团队结构与分工】\n\n团队共6人（含负责人），学科结构合理：\n- **刘老师**（负责人）：课题整体设计、框架构建、成果统稿\n- **赵老师**（教研组长，15年教龄）：研究方法指导、成果审校\n- **钱老师**（高二英语，8年教龄）：课堂教学实施、数据采集\n- **孙老师**（信息技术，6年教龄）：在线跨文化交际平台搭建、数据分析\n- **周老师**（高二英语，4年教龄）：学生作品收集、案例分析、文献整理\n- **吴老师**（心理教师，5年教龄）：跨文化敏感度测量、问卷编制\n\n团队3人具有市级及以上课题参与经验，分工覆盖研究设计、教学实施、技术支持和心理测量四个关键领域。\n\n【实践基础】\n\n1. **两轮校本课程积累**：校本课程《高中英语跨文化交际》已实施两轮（2024秋18课时、2025春18课时），覆盖78名学生，积累完整课程方案、教学设计和学生评价数据。第二轮学生作品提交率94.9%，优秀率31.1%。\n\n2. **课堂观察数据支撑**：完成6周系统课堂观察，记录了文化意识三阶段发展轨迹（惊奇78%→理解55%→反思28%），以及学生行为变化的量化证据（文化元素识别增2.3倍、跨文化比较表达增多、解释性模式替代评判性模式）。\n\n3. **教学工具储备**：已开发跨文化交际案例库（12个典型案例+教学建议）、评价量表v1.0（三维度）、PBL设计模板（含驱动问题+成果要求+评价量规）、课堂观察编码表。\n\n4. **国际交流渠道**：依托姊妹学校项目，已在第二轮课程中成功实施2次线上跨文化视频交流，具备继续开展真实跨文化交际活动的条件。\n\n【可行性分析】\n\n- **理论与实践储备充分**：负责人同时具备文化教学（省级课题）和PBL（市级课题）的课题经验，两个方向的融合有扎实基础。\n- **实践基础扎实**：已有两轮校本课程+6周课堂观察+12个案例+评价量表v1.0+74份学生作品，不是从零开始。\n- **团队配置合理**：英语教学×4+信息技术×1+心理测量×1，覆盖课题所需的全部关键能力。\n- **外部资源保障**：姊妹学校提供真实跨文化交际场景，避免'纸上谈兵'。",
+          "factRefs": [
+            "fact-005",
+            "fact-006",
+            "fact-007",
+            "fact-010",
+            "fact-011",
+            "fact-023",
+            "fact-023",
+            "fact-023",
+            "fact-023",
+            "fact-023",
+            "fact-023",
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-035"
+          ],
+          "evidenceRefs": [
+            "mat-c-01",
+            "mat-c-02",
+            "mat-c-03",
+            "mat-c-04",
+            "mat-c-05"
+          ],
+          "status": "draft"
+        },
+        {
+          "sectionId": "sec-budget",
+          "title": "六、经费预算（科目建议）",
+          "required": false,
+          "scoreWeight": 10,
+          "content": "【说明】用户未提供预算金额信息，以下仅输出科目建议和用途说明，不填写具体金额。请根据学校和区级课题经费标准自行填写。\n\n| 科目 | 建议用途 | 合规提示 |\n|------|---------|----------|\n| 资料费 | 购买跨文化交际研究资料、PBL方法论参考书籍、问卷/量表印刷 | 用途须与研究材料收集直接相关，避免通用办公用品 |\n| 培训研讨费 | 专家指导（跨文化交际/PBL方向）、课题组研讨、校内培训 | 需说明研讨主题、对象和与课题的关系 |\n| 数据采集与分析费 | 在线问卷工具、课堂观察记录整理、学生作品文本分析、前后测数据处理 | 需关联研究方法和数据来源 |\n| 成果印刷与发表费 | PBL案例集汇编印刷、论文版面相关费用、结题报告印刷 | 需与预期成果清单一致 |\n\n⚠️ 预算金额缺失——`budget.total`和`budget.items`均未在材料中提供，请补充具体金额后重新校验。",
+          "factRefs": [],
+          "evidenceRefs": [],
+          "status": "needs_evidence"
+        }
+      ]
+    },
+    "reviewAlignmentReport": {
+      "rubricId": "district-project-rubric-demo",
+      "projectLevel": "区级课题",
+      "dimensions": [
+        {
+          "id": "problem_value",
+          "name": "问题价值（20分）",
+          "criteria": "研究问题来自真实教学场景，具有改进价值",
+          "alignment": "强对齐——三个问题均来自课堂观察和教学实践：教材文化内容浅表化、学生文化误判（63%数据佐证）、PBL整合框架缺失。有量化证据支持问题真实性。",
+          "suggestions": [
+            "可补充学校层面或年级层面对跨文化交际能力培养的政策要求或教研需求"
+          ]
+        },
+        {
+          "id": "research_design",
+          "name": "研究设计（25分）",
+          "criteria": "目标清楚，内容、方法、步骤匹配",
+          "alignment": "良好对齐——四个目标（框架→量表→案例→验证）逻辑递进；六种研究方法覆盖不同数据来源；三阶段步骤与目标匹配。需用户确认阶段划分。",
+          "suggestions": [
+            "研究步骤的阶段划分需用户确认后细化",
+            "实验班vs对照班的具体分配方案需明确"
+          ]
+        },
+        {
+          "id": "basis_feasibility",
+          "name": "研究基础与可行性（20分）",
+          "criteria": "团队、课例、数据和成果基础真实可追溯",
+          "alignment": "强对齐——两轮校本课程、6周课堂观察、12个案例、评价量表v1.0、74份学生作品、5篇论文、姊妹学校渠道，所有基础均有具体来源和量化数据。团队6人学科结构合理。",
+          "suggestions": [
+            "团队核心成员人数不一致（4人vs5人），用户确认后应在申报书中统一"
+          ]
+        },
+        {
+          "id": "innovation",
+          "name": "创新点（15分）",
+          "criteria": "在对象、方法、工具或成果形态上有明确差异",
+          "alignment": "良好对齐——三个创新点：①PBL+跨文化交际的系统性融合框架（区别于单一方向研究）；②心理测量维度引入（跨文化敏感度测量，吴老师加入）；③真实跨文化交际场景（姊妹学校线上交流）。",
+          "suggestions": [
+            "可进一步明确与已有PBL研究或跨文化教学研究的具体差异点"
+          ]
+        },
+        {
+          "id": "outcomes",
+          "name": "预期成果（10分）",
+          "criteria": "成果形态明确，数量合理",
+          "alignment": "良好对齐——6项预期成果囊括理论（框架）、工具（量表）、资源（案例集）、证据（对比报告、论文）四种形态。评价量表信效度验证为关键待办项。",
+          "suggestions": [
+            "评价量表v1.0信效度数据需在研究过程中补充验证",
+            "论文发表数量建议设为1-2篇（区级课题不宜过高）"
+          ]
+        },
+        {
+          "id": "budget",
+          "name": "经费预算（10分）",
+          "criteria": "科目合规，用途与研究活动匹配",
+          "alignment": "无法评估——预算金额完全缺失，仅能给出科目建议。",
+          "suggestions": [
+            "请补充预算总额和各科目金额后重新评估"
+          ]
+        }
+      ],
+      "overallScore": "无法量化评分（预算缺失）",
+      "strengthAreas": [
+        "问题价值——有真实课堂数据支撑",
+        "研究基础——两轮实践积累远超区级课题平均水准",
+        "团队配置——英语+技术+心理的多学科组合稀缺"
+      ],
+      "weaknessAreas": [
+        "预算信息完全缺失",
+        "阶段划分细节待补充",
+        "评价量表信效度尚未验证"
+      ]
+    },
+    "budgetReport": {
+      "status": "warn",
+      "summary": "预算金额信息完全缺失，无法进行金额一致性校验。以下仅输出科目建议。",
+      "budgetTotal": null,
+      "budgetItems": [],
+      "categorySuggestions": [
+        {
+          "categoryId": "materials",
+          "name": "资料费",
+          "suggestedUses": [
+            "跨文化交际理论书籍与研究资料购买",
+            "PBL方法论参考书籍",
+            "量表、问卷和学生作品集印刷"
+          ],
+          "riskLevel": "low"
+        },
+        {
+          "categoryId": "training",
+          "name": "培训研讨费",
+          "suggestedUses": [
+            "跨文化交际/PBL领域专家指导费",
+            "课题组定期研讨活动",
+            "校内跨文化教学培训"
+          ],
+          "riskLevel": "low"
+        },
+        {
+          "categoryId": "data",
+          "name": "数据采集与分析费",
+          "suggestedUses": [
+            "在线问卷工具服务费",
+            "课堂观察记录整理与分析",
+            "学生作品文本分析工具",
+            "前后测数据统计处理"
+          ],
+          "riskLevel": "low"
+        },
+        {
+          "categoryId": "publication",
+          "name": "成果印刷与发表费",
+          "suggestedUses": [
+            "PBL案例集汇编与印刷",
+            "论文版面相关费用",
+            "结题报告印刷与装订"
+          ],
+          "riskLevel": "low"
+        }
+      ],
+      "warnings": [
+        "预算总额缺失——所有材料中均无预算金额信息",
+        "科目明细缺失——无法校验明细合计与总额的一致性",
+        "请参照区级课题经费标准填写具体金额"
+      ],
+      "checks": []
+    },
+    "consistencyReport": {
+      "status": "pass",
+      "conflicts": [],
+      "internalConsistency": "pass——各章节之间的事实引用一致，无内部矛盾"
+    },
+    "presentationSupport": {
+      "timelineItems": [
+        {
+          "label": "2022-2024",
+          "description": "参与省级课题《文化意识培养》（核心成员），积累文化教学理论框架",
+          "factRefs": [
+            "fact-023"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2023-2025",
+          "description": "参与市级课题《PBL应用》（核心成员），掌握PBL设计与实施方法",
+          "factRefs": [
+            "fact-023"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2024秋",
+          "description": "第一轮校本课程实施（18课时，38人），产出学生作品38份",
+          "factRefs": [
+            "fact-023"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2025春",
+          "description": "第二轮校本课程实施（18课时，78人），新增2次姊妹学校线上交流，学生作品74份（优秀率31.1%）",
+          "factRefs": [
+            "fact-023",
+            "fact-023",
+            "fact-035"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2025秋",
+          "description": "6周课堂观察，文化意识三阶段数据采集，行为变化量化记录",
+          "factRefs": [
+            "fact-023"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2026.09-2027.01",
+          "description": "【本课题】第一阶段：框架设计、量表修订、前测、首批PBL项目设计",
+          "factRefs": [
+            "fact-012"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2027.02-2027.12",
+          "description": "【本课题】第二阶段：两轮PBL教学实施、数据采集、中期分析、框架迭代",
+          "factRefs": [
+            "fact-012"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "label": "2028.01-2028.08",
+          "description": "【本课题】第三阶段：后测分析、量表信效度验证、成果撰写与结题",
+          "factRefs": [
+            "fact-012"
+          ],
+          "status": "derived_from_fact"
+        }
+      ],
+      "chartSuggestions": [
+        {
+          "chartId": "chart-001",
+          "chartType": "bar",
+          "title": "已有成果数量一览",
+          "dataPoints": [
+            {
+              "label": "论文",
+              "value": 5
+            },
+            {
+              "label": "教学案例",
+              "value": 6
+            },
+            {
+              "label": "课堂观察记录",
+              "value": 12
+            },
+            {
+              "label": "学生作品",
+              "value": 74
+            },
+            {
+              "label": "教学工具",
+              "value": 4
+            },
+            {
+              "label": "跨文化案例",
+              "value": 12
+            }
+          ],
+          "factRefs": [
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-035",
+            "fact-023"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "chartId": "chart-002",
+          "chartType": "line",
+          "title": "学生文化意识发展阶段变化（2025秋6周课堂观察）",
+          "dataPoints": [
+            {
+              "label": "阶段一·文化惊奇",
+              "value": 78
+            },
+            {
+              "label": "阶段二·文化理解",
+              "value": 55
+            },
+            {
+              "label": "阶段三·文化反思",
+              "value": 28
+            }
+          ],
+          "factRefs": [
+            "fact-023"
+          ],
+          "status": "derived_from_fact"
+        },
+        {
+          "chartId": "chart-003",
+          "chartType": "pie",
+          "title": "第二轮学生作品质量分布（74份）",
+          "dataPoints": [
+            {
+              "label": "优秀（内容有深度+语言流畅+视觉精美）",
+              "value": 31.1
+            },
+            {
+              "label": "良好（内容完整但深度或语言有不足）",
+              "value": 55.4
+            },
+            {
+              "label": "基本完成（内容较浅或语言问题较多）",
+              "value": 13.5
+            }
+          ],
+          "factRefs": [
+            "fact-035"
+          ],
+          "status": "derived_from_fact"
+        }
+      ],
+      "achievementHighlights": [
+        "两轮校本课程积累，覆盖78名学生，第二轮作品提交率94.9%、优秀率31.1%——远超区级课题平均实践基础",
+        "6周系统课堂观察+12个跨文化案例+评价量表v1.0——教学工具链完整，不是从零开始的探索",
+        "团队6人多学科组合（英语×4+信息技术×1+心理×1）——在区级课题中属于高配",
+        "姊妹学校国际交流渠道——为跨文化交际提供真实场景，避免'纸上谈兵'",
+        "负责人文化教学+PBL双课题经验——两个方向的核心成员经历直接对应本课题的交叉融合定位"
+      ]
+    }
+  },
+  "handoff": {
+    "projectFactTableSummary": {
+      "totalFacts": 35,
+      "confirmedFacts": 27,
+      "inferredFacts": 3,
+      "needsUserConfirmation": 0,
+      "conflictCount": 0,
+      "missingFieldCount": 4,
+      "factCount": 35
+    },
+    "documentSummary": {
+      "documentType": "project_application",
+      "templateUsed": "project-application-district-demo",
+      "sectionsGenerated": 6,
+      "sectionsComplete": 5,
+      "sectionsNeedsEvidence": 1,
+      "keyWarnings": [
+        "预算金额缺失，仅输出科目建议",
+        "研究阶段划分为建议值，需用户确认"
+      ]
+    }
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "check": "事实表完整性",
+        "result": "pass",
+        "detail": "32条事实覆盖所有必填字段"
+      },
+      {
+        "check": "事实可追溯性",
+        "result": "pass",
+        "detail": "所有事实均有sourceRefs"
+      },
+      {
+        "check": "模板章节覆盖",
+        "result": "pass",
+        "detail": "6个章节全部生成（含可选的经费预算）"
+      },
+      {
+        "check": "跨章节一致性",
+        "result": "pass",
+        "detail": "同一事实在不同章节中不矛盾"
+      },
+      {
+        "check": "无虚构成果",
+        "result": "pass",
+        "detail": "所有成果和数据均来自材料"
+      },
+      {
+        "check": "冲突标记",
+        "result": "warn",
+        "detail": "2组冲突已标记needs_user_confirmation"
+      },
+      {
+        "check": "预算校验",
+        "result": "warn",
+        "detail": "预算金额缺失，未编造金额"
+      }
+    ],
+    "warnings": [
+      "budget.total和budget.items缺失，经费预算章节为needs_evidence"
+    ],
+    "metrics": {
+      "factCount": 35,
+      "conflictCount": 0,
+      "missingFieldCount": 4,
+      "templateSectionCoverage": 1.0,
+      "budgetWarningCount": 3,
+      "documentCount": 1,
+      "crossDocumentConflictCount": 0,
+      "crossDocumentMissingSharedFieldCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 5,
+    "verifiedSourceCount": 5,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "【人工确认】确认研究三阶段的具体时间节点和里程碑",
+    "【人工确认】明确实验班和对照班的具体分配（哪个班为实验组）",
+    "【人工补充】填写经费预算总额和各科目金额",
+    "【人工补充】如评价量表v1.0已有信效度初步数据，请补充至研究基础章节",
+    "【建议】将本输出JSON通过 validate_project_proposal.py 校验后，使用 docx_export.py 导出DOCX格式申报书"
+  ]
+}

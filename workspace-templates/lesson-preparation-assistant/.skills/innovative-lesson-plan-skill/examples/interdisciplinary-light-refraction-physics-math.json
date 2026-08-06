@@ -1,0 +1,18 @@
+{
+  "subject": "物理",
+  "grade": "八年级",
+  "topic": "光的折射",
+  "innovationType": "interdisciplinary",
+  "durationMin": 40,
+  "constraints": [
+    "普通教室",
+    "小组合作",
+    "需要投影设备"
+  ],
+  "requirements": "根据原有教案重新生成一份 interdisciplinary 教案。",
+  "confirmedContext": {
+    "linkedSubject": "数学",
+    "integrationNodeDescription": "学生用数学中的正弦函数计算折射角与入射角的关系，验证斯涅尔折射定律 n1·sin(θ1) = n2·sin(θ2)，物理现象用数学公式精确描述",
+    "applicableBoundaryHint": "适合已学锐角三角函数的八年级学生，不涉及复数、全反射临界角的复杂计算，数学以正弦函数和比例关系为主"
+  }
+}

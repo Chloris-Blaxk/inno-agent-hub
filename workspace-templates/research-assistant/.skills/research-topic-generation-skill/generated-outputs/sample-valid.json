@@ -1,0 +1,392 @@
+{
+  "requestId": "req-research-topic-valid-001",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "summary": "已基于教师课例材料生成 1 个总结性选题和 1 个规划性选题。",
+  "result": {
+    "materialDigests": [
+      {
+        "digestId": "digest-001",
+        "materialId": "mat-001",
+        "materialType": "teaching_case",
+        "title": "异分母分数加减法错因分析课例",
+        "keyFacts": [
+          {
+            "fact": "围绕通分错误和约分遗漏设计课堂诊断",
+            "confidence": "high"
+          }
+        ],
+        "topicSignals": [
+          "错因诊断",
+          "即时反馈",
+          "小学数学"
+        ],
+        "usableFor": [
+          "research_topic",
+          "project_basis"
+        ],
+        "limitations": [
+          "样本范围和持续周期尚未补充。"
+        ]
+      }
+    ],
+    "materialClusters": [
+      {
+        "clusterId": "cluster-001",
+        "clusterTitle": "错因诊断与精准讲评",
+        "materialIds": [
+          "mat-001"
+        ],
+        "coreSignals": [
+          "错因诊断",
+          "即时反馈",
+          "小学数学"
+        ],
+        "researchAxis": "围绕学生典型错因识别、分类记录和讲评调整形成连续研究。",
+        "evidenceSummary": [
+          {
+            "materialId": "mat-001",
+            "fact": "围绕通分错误和约分遗漏设计课堂诊断"
+          }
+        ],
+        "currentStage": "material_accumulation",
+        "gaps": [
+          "样本范围和持续周期尚未补充。"
+        ],
+        "usableTopicAngles": [
+          "错因诊断支持精准讲评"
+        ]
+      }
+    ],
+    "researchTrajectory": {
+      "trajectoryId": "trajectory-001",
+      "stage": "material_accumulation",
+      "sourceMaterialIds": [
+        "mat-001"
+      ],
+      "dominantThemes": [
+        "错因诊断与精准讲评"
+      ],
+      "trajectorySummary": "已有材料集中在错因诊断与精准讲评，可从单节课例升级为连续证据链研究。",
+      "pastAccumulation": [
+        "围绕通分错误和约分遗漏设计课堂诊断"
+      ],
+      "currentFocusableDirections": [
+        "围绕学生典型错因识别、分类记录和讲评调整形成连续研究。"
+      ],
+      "futureDeepeningPath": [
+        {
+          "stepId": "path-001",
+          "timeframe": "0-1 个月",
+          "action": "整理已有课例的问题链和错因分类标准。",
+          "requiredEvidence": [
+            "mat-001"
+          ],
+          "output": "问题链与材料证据对应表"
+        },
+        {
+          "stepId": "path-002",
+          "timeframe": "1-2 个月",
+          "action": "补充连续课堂观察和学生错题样本。",
+          "requiredEvidence": [
+            "课堂观察表",
+            "学生错题样本"
+          ],
+          "output": "连续实践证据包"
+        }
+      ],
+      "risks": [
+        "样本范围和持续周期尚未补充。"
+      ]
+    },
+    "topicCandidates": [
+      {
+        "topicId": "topic-001",
+        "topicTitle": "小学数学即时反馈支持错因诊断的实践研究",
+        "topicType": "summative",
+        "researchQuestion": "如何利用课堂即时反馈识别并讲评异分母分数加减法典型错因？",
+        "existingBasis": [
+          {
+            "materialId": "mat-001",
+            "basis": "已有错因诊断课例和课堂反馈记录雏形。"
+          }
+        ],
+        "innovationPoints": [
+          "把即时反馈记录与错因讲评流程结合。"
+        ],
+        "feasibility": {
+          "score": 4,
+          "risks": [
+            "需要补充连续课时的观察记录。"
+          ],
+          "neededMaterials": [
+            "学生错题样本",
+            "课堂观察表"
+          ]
+        },
+        "keywords": [
+          "即时反馈",
+          "错因诊断",
+          "小学数学"
+        ],
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师教学调整？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "已有错因诊断课例和课堂反馈记录雏形。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "需要补充连续课时的观察记录。",
+            "需要形成学生错题样本和讲评调整记录。"
+          ],
+          "upgradePath": [
+            "整理已有课例的问题链。",
+            "补充至少一轮连续课堂观察。",
+            "明确错因分类标准和阶段成果。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-001",
+          "nearestGrantTitle": "小学数学课堂即时反馈促进学生深度学习的实践研究",
+          "similarityScore": 0.5,
+          "riskLevel": "medium",
+          "differenceStrategy": "存在部分主题重合；建议突出错因分类和课堂调控机制。",
+          "differentiatedTitleSuggestion": "小学数学即时反馈支持错因诊断的实践研究"
+        }
+      },
+      {
+        "topicId": "topic-002",
+        "topicTitle": "基于学习证据的小学数学错因诊断工具设计研究",
+        "topicType": "planning",
+        "researchQuestion": "如何将课堂学习证据转化为可复用的错因诊断工具？",
+        "existingBasis": [
+          {
+            "materialId": "mat-001",
+            "basis": "已有错因分类和讲评实践材料。"
+          }
+        ],
+        "innovationPoints": [
+          "从单节课例扩展为工具化记录流程。"
+        ],
+        "feasibility": {
+          "score": 3,
+          "risks": [
+            "工具稳定性需要多轮课堂验证。"
+          ],
+          "neededMaterials": [
+            "多单元错因样本",
+            "教师访谈记录"
+          ]
+        },
+        "keywords": [
+          "学习证据",
+          "错因诊断",
+          "工具设计"
+        ],
+        "nextReadingQuestions": [
+          "学习证据在数学课堂评价中如何被采集和使用？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "已有错因分类和讲评实践材料。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "需要补充多单元错因样本。",
+            "需要验证诊断工具的稳定性。"
+          ],
+          "upgradePath": [
+            "把课例中的错因分类整理成工具雏形。",
+            "在不同单元中试用并修订。",
+            "形成工具说明和使用记录。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-002",
+          "nearestGrantTitle": "基于错因分析的小学高年级分数教学改进研究",
+          "similarityScore": 0.43,
+          "riskLevel": "medium",
+          "differenceStrategy": "存在部分主题重合；建议从即时反馈工具或证据化讲评路径形成差异。",
+          "differentiatedTitleSuggestion": "基于学习证据的小学数学错因诊断工具设计研究"
+        }
+      }
+    ],
+    "topicEvaluationReport": {
+      "materialEvidenceCoverage": 1,
+      "clusteredMaterialCoverage": 1,
+      "materialClusterChecks": [
+        {
+          "clusterId": "cluster-001",
+          "materialCount": 1,
+          "signalCount": 3
+        }
+      ],
+      "researchTrajectoryCheck": {
+        "stage": "material_accumulation",
+        "sourceMaterialCount": 1,
+        "futureStepCount": 2
+      },
+      "differentiationChecks": [
+        {
+          "topicId": "topic-001",
+          "nearestGrantId": "grant-demo-001",
+          "similarityScore": 0.5,
+          "riskLevel": "medium"
+        },
+        {
+          "topicId": "topic-002",
+          "nearestGrantId": "grant-demo-002",
+          "similarityScore": 0.43,
+          "riskLevel": "medium"
+        }
+      ],
+      "basisGapChecks": [
+        {
+          "topicId": "topic-001",
+          "gapCount": 2,
+          "upgradeStepCount": 3
+        },
+        {
+          "topicId": "topic-002",
+          "gapCount": 2,
+          "upgradeStepCount": 3
+        }
+      ],
+      "notes": [
+        "两个选题均回链用户材料。"
+      ]
+    }
+  },
+  "handoff": {
+    "topicCandidates": [
+      "topic-001",
+      "topic-002"
+    ],
+    "materialClusters": [
+      "cluster-001"
+    ],
+    "researchTrajectory": "trajectory-001",
+    "keywords": [
+      "即时反馈",
+      "错因诊断",
+      "小学数学",
+      "学习证据"
+    ],
+    "readingQuestions": [
+      "课堂即时反馈如何支持教师教学调整？"
+    ]
+  },
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "summative_material_ref",
+        "status": "pass"
+      },
+      {
+        "id": "topic_risks_or_materials",
+        "status": "pass"
+      }
+    ],
+    "warnings": [],
+    "metrics": {
+      "topicCount": 2,
+      "summativeCount": 1,
+      "planningCount": 1,
+      "materialEvidenceCoverage": 1,
+      "feasibilityWarnings": 2,
+      "basisGapCount": 2,
+      "differentiationCheckCount": 2,
+      "highSimilarityCount": 0,
+      "materialClusterCount": 1,
+      "clusteredMaterialCoverage": 1,
+      "trajectoryStepCount": 2
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "补充连续课堂观察记录，用于细化研究设计。"
+  ],
+  "status": "pass",
+  "warnings": [],
+  "dataSourceReport": {
+    "reportId": "dsr-research-topic-generation-skill",
+    "skillId": "research-topic-generation-skill",
+    "taskIntent": "mixed_topic",
+    "dataSources": [
+      {
+        "sourceId": "user-materials",
+        "sourceName": "教师上传/输入研究材料",
+        "sourceType": "user_provided",
+        "dataType": "teacher_research_material",
+        "recordCount": 1,
+        "authorizationStatus": "user_provided",
+        "version": "",
+        "limitations": [
+          "仅代表用户提供材料；事实真实性和敏感信息需由教师确认。"
+        ]
+      },
+      {
+        "sourceId": "grant-title-samples",
+        "sourceName": "本地立项题样例库",
+        "sourceType": "local_sample",
+        "dataType": "grant_title_sample",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "仅用于相似度演示和首轮降重提示，不能代表真实地区立项库覆盖。"
+        ]
+      },
+      {
+        "sourceId": "policy-hotspot-tags",
+        "sourceName": "本地政策热点标签样例",
+        "sourceType": "local_sample",
+        "dataType": "policy_hotspot_tag",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "政策标签为本地样例，真实申报前需按地区和年份更新。"
+        ]
+      },
+      {
+        "sourceId": "practice-problem-bank",
+        "sourceName": "本地实践问题样例库",
+        "sourceType": "local_sample",
+        "dataType": "practice_problem_cluster",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "实践问题库为种子样例，不能覆盖所有学段、学科和学校情境。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": true,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "立项题、政策热点和实践问题库仍为本地样例；选题只能作为候选方向，需结合真实区域要求复核。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "mixed_topic",
+    "sampleFile": "agent_cases/research-topic-generation-skill/generated-outputs/sample-valid.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/research-topic-generation-skill/generated-outputs/sample-valid.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

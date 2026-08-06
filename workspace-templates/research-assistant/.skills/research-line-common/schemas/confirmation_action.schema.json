@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/confirmation_action.schema.json",
+  "title": "ConfirmationAction",
+  "type": "object",
+  "required": [
+    "actionId",
+    "targetType",
+    "targetId",
+    "action",
+    "timestamp"
+  ],
+  "properties": {
+    "actionId": {"type": "string", "minLength": 1},
+    "targetType": {
+      "enum": [
+        "topic_candidate",
+        "reading_list_item",
+        "evidence_card",
+        "citation_insertion",
+        "project_fact",
+        "document_section",
+        "budget_item"
+      ]
+    },
+    "targetId": {"type": "string", "minLength": 1},
+    "action": {
+      "enum": ["confirm", "reject", "request_more_evidence", "revise", "merge", "defer"]
+    },
+    "statusAfterAction": {
+      "enum": ["confirmed", "rejected", "needs_more_evidence", "pending_teacher_confirmation", "candidate"]
+    },
+    "userNote": {"type": "string"},
+    "timestamp": {"type": "string", "minLength": 1},
+    "actor": {"type": "string"},
+    "sourceOutputId": {"type": "string"}
+  },
+  "additionalProperties": true
+}

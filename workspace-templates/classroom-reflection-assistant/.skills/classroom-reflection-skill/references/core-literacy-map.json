@@ -1,0 +1,924 @@
+{
+  "version": "2026-05-27",
+  "scope": "义务教育与普通高中学科核心素养映射",
+  "status": "standard_source_required",
+  "policy": {
+    "hardRule": "coreLiteracies 必须来自对应学段、对应学科课程标准中明确提出的学科核心素养。教育部官方解读只可用于 interpretationSources，不可替代 standardSource。",
+    "generationRule": "只有 verificationStatus 为 standard_declared 的学科条目，才允许直接用于生成学科核心素养导向教学目标；其他学科应回退到 fallback，可参考中国学生发展核心素养总体框架撰写通用育人目标，但不得把总体框架替代为具体学科核心素养，并提示需要人工核对课标原文。",
+    "sourceIndex": {
+      "title": "教育部关于印发义务教育课程方案和课程标准（2022年版）的通知",
+      "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html"
+    },
+    "sourceIndexes": [
+      {
+        "stage": "义务教育",
+        "title": "教育部关于印发义务教育课程方案和课程标准（2022年版）的通知",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html"
+      },
+      {
+        "stage": "普通高中",
+        "title": "教育部关于印发普通高中课程方案和语文等学科课程标准（2017年版2020年修订）的通知",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html"
+      }
+    ]
+  },
+  "fallback": {
+    "subject": "未核验学科",
+    "coreLiteracies": [],
+    "generalFramework": {
+      "name": "中国学生发展核心素养总体框架",
+      "core": "全面发展的人",
+      "dimensions": [
+        {
+          "name": "文化基础",
+          "literacies": ["人文底蕴", "科学精神"]
+        },
+        {
+          "name": "自主发展",
+          "literacies": ["学会学习", "健康生活"]
+        },
+        {
+          "name": "社会参与",
+          "literacies": ["责任担当", "实践创新"]
+        }
+      ],
+      "source": {
+        "title": "关于政协十三届全国委员会第一次会议第2014号（教育类205号）提案答复的函",
+        "url": "https://www.moe.gov.cn/jyb_xxgk/xxgk_jyta/jyta_jiaocaiju/201901/t20190122_367817.html"
+      }
+    },
+    "objectiveWritingHints": [
+      "未找到已核验学科条目时，可参考中国学生发展核心素养总体框架撰写通用育人目标。",
+      "不得把总体框架中的三方面、六大素养写成对应学科核心素养。",
+      "目标聚焦学生在本课中能够理解、表达、判断、操作、迁移、反思什么。",
+      "避免把目标写成知识点罗列或空泛口号。",
+      "如需标注对应核心素养，必须先按对应学段、对应学科课程标准人工核对后补充。"
+    ],
+    "standardSource": {
+      "title": "义务教育课程方案（2022年版）",
+      "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582343217634.pdf"
+    },
+    "verificationStatus": "fallback_requires_manual_verification"
+  },
+  "subjects": [
+    {
+      "subject": "道德与法治",
+      "aliases": ["小学道德与法治", "初中道德与法治", "思政"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "政治认同",
+        "道德修养",
+        "法治观念",
+        "健全人格",
+        "责任意识"
+      ],
+      "objectiveWritingHints": [
+        "目标应联系真实生活情境与公共生活问题，不写成抽象说教。",
+        "可围绕价值判断、规则意识、责任担当和行为选择来设计表现性目标。"
+      ],
+      "standardSource": {
+        "title": "义务教育道德与法治课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582343475848.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "义务教育课程方案和课程标准（2022年版）情况介绍",
+          "url": "https://www.moe.gov.cn/fbh/live/2022/54382/sfcl/202204/t20220421_620077.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "语文",
+      "aliases": ["小学语文", "初中语文"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "文化自信",
+        "语言运用",
+        "思维能力",
+        "审美创造"
+      ],
+      "objectiveWritingHints": [
+        "优先围绕阅读与鉴赏、表达与交流、梳理与探究等语文实践活动写目标。",
+        "目标既要落到文本学习任务，也要体现语言建构、思维发展和审美体验。"
+      ],
+      "standardSource": {
+        "title": "义务教育语文课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582344386456.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "教育部教材局负责人就《义务教育课程方案和课程标准（2022年版）》答记者问",
+          "url": "https://www.moe.gov.cn/jyb_xwfb/s271/202204/t20220421_620066.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "历史",
+      "aliases": ["初中历史"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "唯物史观",
+        "时空观念",
+        "史料实证",
+        "历史解释",
+        "家国情怀"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现学生基于史料阅读、比较和解释形成历史认识的过程。",
+        "把家国情怀放在理解历史与现实联系的任务中呈现，避免空泛拔高。"
+      ],
+      "standardSource": {
+        "title": "义务教育历史课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582345700037.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "教育部教材局负责人就《义务教育课程方案和课程标准（2022年版）》答记者问",
+          "url": "https://www.moe.gov.cn/jyb_xwfb/s271/202204/t20220421_620066.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "数学",
+      "aliases": ["小学数学", "初中数学"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "会用数学的眼光观察现实世界",
+        "会用数学的思维思考现实世界",
+        "会用数学的语言表达现实世界"
+      ],
+      "developmentalDimensions": [
+        {
+          "coreLiteracy": "会用数学的眼光观察现实世界",
+          "primaryStage": [
+            "数感",
+            "量感",
+            "符号意识",
+            "几何直观",
+            "空间观念",
+            "创新意识"
+          ],
+          "juniorStage": [
+            "抽象能力",
+            "几何直观",
+            "空间观念",
+            "创新意识"
+          ]
+        },
+        {
+          "coreLiteracy": "会用数学的思维思考现实世界",
+          "primaryStage": [
+            "运算能力",
+            "推理意识"
+          ],
+          "juniorStage": [
+            "运算能力",
+            "推理能力"
+          ]
+        },
+        {
+          "coreLiteracy": "会用数学的语言表达现实世界",
+          "primaryStage": [
+            "数据意识",
+            "模型意识",
+            "应用意识"
+          ],
+          "juniorStage": [
+            "数据观念",
+            "模型观念",
+            "应用意识"
+          ]
+        }
+      ],
+      "objectiveWritingHints": [
+        "目标应体现观察、抽象、建模、推理、表达、应用等学习行为。",
+        "避免只写知识点掌握，要体现现实情境中的数学化过程。",
+        "义务教育数学目标应先依据年级判断小学阶段或初中阶段，再在三大核心素养下选用对应二级维度。例如小学可写数感、量感、符号意识、几何直观、空间观念、创新意识、运算能力、推理意识、数据意识、模型意识、应用意识；初中可写抽象能力、几何直观、空间观念、创新意识、运算能力、推理能力、数据观念、模型观念、应用意识。"
+      ],
+      "standardSource": {
+        "title": "义务教育数学课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220510531636118932.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "英语",
+      "aliases": ["外语", "小学英语", "初中英语"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合听、说、读、写、看等综合语言运用任务来写。",
+        "不要只写词汇和语法掌握，要体现跨文化理解、思维发展和学习策略。"
+      ],
+      "standardSource": {
+        "title": "义务教育英语课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582349487953.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "对十三届全国人大五次会议第9010号建议的答复",
+          "url": "https://www.moe.gov.cn/jyb_xxgk/xxgk_jyta/jyta_jiaocaiju/202209/t20220923_664174.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "日语",
+      "aliases": ["小学日语", "初中日语", "义务教育日语"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合听、说、读、写、看等日语语言实践任务来写。",
+        "不要只写词汇和语法掌握，要体现跨文化理解、思维发展和学习策略。"
+      ],
+      "standardSource": {
+        "title": "义务教育日语课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020230605524874315398.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "俄语",
+      "aliases": ["小学俄语", "初中俄语", "义务教育俄语"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合听、说、读、写、看等俄语语言实践任务来写。",
+        "不要只写词汇和语法掌握，要体现跨文化理解、思维发展和学习策略。"
+      ],
+      "standardSource": {
+        "title": "义务教育俄语课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582353002089.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "地理",
+      "aliases": ["初中地理"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "人地协调观",
+        "综合思维",
+        "区域认知",
+        "地理实践力"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现地图判读、区域比较、地理解释与地理实践任务。",
+        "把人地协调观落到真实区域案例和实际问题分析中。"
+      ],
+      "standardSource": {
+        "title": "义务教育地理课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582354066450.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "科学",
+      "aliases": ["小学科学", "初中科学"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "科学观念",
+        "科学思维",
+        "探究实践",
+        "态度责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应与观察、实验、证据推理、模型建构等探究活动直接挂钩。",
+        "把态度责任写进科学实践与现实问题解决，不单列为空泛情感目标。"
+      ],
+      "standardSource": {
+        "title": "义务教育科学课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582355009892.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "做好科学教育加法 提升科学育人水平",
+          "url": "https://www.moe.gov.cn/jyb_xwfb/s5147/202307/t20230714_1068807.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "物理",
+      "aliases": ["初中物理"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "物理观念",
+        "科学思维",
+        "科学探究",
+        "科学态度与责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕现象解释、模型建构、证据推理、实验探究和责任意识设计。",
+        "避免只写公式或概念掌握，要体现学生如何用物理观点解决问题。"
+      ],
+      "standardSource": {
+        "title": "义务教育物理课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582357585169.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "化学",
+      "aliases": ["初中化学"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "化学观念",
+        "科学思维",
+        "科学探究与实践",
+        "科学态度与责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕物质性质与变化、证据推理、实验探究和绿色发展等真实问题设计。",
+        "避免只写化学知识点，要体现学生如何基于证据解释和解决问题。"
+      ],
+      "standardSource": {
+        "title": "义务教育化学课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020230605524875861384.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "生物学",
+      "aliases": ["初中生物", "初中生物学"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "生命观念",
+        "科学思维",
+        "探究实践",
+        "态度责任"
+      ],
+      "objectiveWritingHints": [
+        "目标可围绕生命现象解释、证据分析、实验探究与生态责任来组织。",
+        "优先使用“解释、分析、设计、论证、反思”等可观察动词。"
+      ],
+      "standardSource": {
+        "title": "义务教育生物学课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582359998122.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "信息科技",
+      "aliases": ["信息技术", "小学信息科技", "初中信息科技"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "信息意识",
+        "计算思维",
+        "数字化学习与创新",
+        "信息社会责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现基于数字工具的问题解决、合作创作与责任使用。",
+        "不要只写软件操作步骤，要体现分析、设计、实现、评估等过程。"
+      ],
+      "standardSource": {
+        "title": "义务教育信息科技课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582361024968.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "体育与健康",
+      "aliases": ["体育", "小学体育", "初中体育", "体育健康"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "运动能力",
+        "健康行为",
+        "体育品德"
+      ],
+      "objectiveWritingHints": [
+        "目标应兼顾技能形成、健康习惯和合作拼搏等课堂表现。",
+        "不只写动作学会，还要写学生在练习、比赛、反思中的行为变化。"
+      ],
+      "standardSource": {
+        "title": "义务教育体育与健康课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582362336303.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "关于政协第十三届全国委员会第五次会议第04042号（教育事业类407号）提案答复的函",
+          "url": "https://www.moe.gov.cn/jyb_xxgk/xxgk_jyta/jianguansi/202209/t20220923_664211.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "艺术",
+      "aliases": ["音乐", "美术", "书法", "舞蹈", "戏剧", "影视"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "审美感知",
+        "艺术表现",
+        "创意实践",
+        "文化理解"
+      ],
+      "objectiveWritingHints": [
+        "目标应同时覆盖感受、理解、表现和创作中的至少两个维度。",
+        "优先用欣赏、比较、表现、创编、评价等动词，不写空泛审美口号。"
+      ],
+      "standardSource": {
+        "title": "义务教育艺术课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582364678888.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "劳动",
+      "aliases": ["劳动教育"],
+      "stage": "义务教育",
+      "coreLiteracies": [
+        "劳动观念",
+        "劳动能力",
+        "劳动习惯和品质",
+        "劳动精神"
+      ],
+      "objectiveWritingHints": [
+        "目标应落在真实劳动任务、过程规范、合作服务和反思改进上。",
+        "避免把劳动目标仅写成劳动体验，要写出具体能力与品质表现。"
+      ],
+      "standardSource": {
+        "title": "义务教育劳动课程标准（2022年版）",
+        "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582367012450.pdf"
+      },
+      "interpretationSources": [
+        {
+          "title": "播下热爱劳动的种子",
+          "url": "https://www.moe.gov.cn/jyb_xwfb/s5148/202404/t20240422_1126822.html"
+        }
+      ],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "语文",
+      "aliases": ["高中语文", "普通高中语文"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言建构与运用",
+        "思维发展与提升",
+        "审美鉴赏与创造",
+        "文化传承与理解"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕阅读与鉴赏、表达与交流、梳理与探究等语文实践活动，体现语言经验、思维品质、审美体验与文化理解的综合发展。",
+        "避免只写篇目知识或答题技巧，要落到学生在真实语言情境中的理解、表达、鉴赏、探究和迁移表现。"
+      ],
+      "standardSource": {
+        "title": "普通高中语文课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "2.普通高中语文课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "数学",
+      "aliases": ["高中数学", "普通高中数学"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "数学抽象",
+        "逻辑推理",
+        "数学建模",
+        "直观想象",
+        "数学运算",
+        "数据分析"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现学生经历抽象、推理、建模、运算、直观表达和数据分析的数学活动过程。",
+        "避免只写公式、定理或题型掌握，要写出学生如何用数学方法刻画问题、论证结论和解释现实情境。"
+      ],
+      "standardSource": {
+        "title": "普通高中数学课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "3.普通高中数学课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "英语",
+      "aliases": ["高中英语", "普通高中英语", "高中外语"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合听、说、读、看、写等综合语言实践任务，体现理解、表达、交互和迁移使用。",
+        "不要只写词汇、语法或篇章知识，要体现跨文化理解、思维发展和自主学习策略。"
+      ],
+      "standardSource": {
+        "title": "普通高中英语课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "4.普通高中英语课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "思想政治",
+      "aliases": ["高中思想政治", "普通高中思想政治", "高中政治", "政治"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "政治认同",
+        "科学精神",
+        "法治意识",
+        "公共参与"
+      ],
+      "objectiveWritingHints": [
+        "目标应联系社会生活议题、国家制度理解和公共参与任务，体现价值判断、理性分析、法治思维和行动选择。",
+        "避免写成抽象政治口号，要把政治认同、科学精神、法治意识和公共参与落到可讨论、可论证、可表达的学习表现中。"
+      ],
+      "standardSource": {
+        "title": "普通高中思想政治课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "5.普通高中思想政治课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "历史",
+      "aliases": ["高中历史", "普通高中历史"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "唯物史观",
+        "时空观念",
+        "史料实证",
+        "历史解释",
+        "家国情怀"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现学生基于时空定位、史料证据、历史解释和价值理解形成历史认识的过程。",
+        "把家国情怀放在历史理解、证据分析和现实关联任务中呈现，避免脱离史实的空泛提升。"
+      ],
+      "standardSource": {
+        "title": "普通高中历史课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "6.普通高中历史课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "地理",
+      "aliases": ["高中地理", "普通高中地理"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "人地协调观",
+        "综合思维",
+        "区域认知",
+        "地理实践力"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现区域案例分析、地理过程解释、图表判读、地理实践和人地关系评价。",
+        "把人地协调观落到资源环境、区域发展和国家安全等真实问题分析中。"
+      ],
+      "standardSource": {
+        "title": "普通高中地理课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "7.普通高中地理课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "物理",
+      "aliases": ["高中物理", "普通高中物理"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "物理观念",
+        "科学思维",
+        "科学探究",
+        "科学态度与责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕现象解释、模型建构、证据推理、实验探究和科学责任设计。",
+        "避免只写概念、公式或题型，要体现学生如何用物理观念和科学思维分析并解决问题。"
+      ],
+      "standardSource": {
+        "title": "普通高中物理课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "8.普通高中物理课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "化学",
+      "aliases": ["高中化学", "普通高中化学"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "宏观辨识与微观探析",
+        "变化观念与平衡思想",
+        "证据推理与模型认知",
+        "科学探究与创新意识",
+        "科学态度与社会责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现学生从宏观现象、微观结构、变化和平衡、证据推理与模型解释中理解化学问题。",
+        "避免只写化学知识点或实验步骤，要体现基于证据的解释、探究设计、创新意识和社会责任。"
+      ],
+      "standardSource": {
+        "title": "普通高中化学课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "9.普通高中化学课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "生物学",
+      "aliases": ["高中生物", "高中生物学", "普通高中生物学"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "生命观念",
+        "科学思维",
+        "科学探究",
+        "社会责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕生命现象解释、概念模型建构、证据分析、实验探究和社会责任判断来组织。",
+        "避免只写生物学事实记忆，要体现学生如何用生命观念分析生命活动、解释生物学问题并形成责任意识。"
+      ],
+      "standardSource": {
+        "title": "普通高中生物学课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "10.普通高中生物学课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "信息技术",
+      "aliases": ["高中信息技术", "普通高中信息技术", "高中信息科技"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "信息意识",
+        "计算思维",
+        "数字化学习与创新",
+        "信息社会责任"
+      ],
+      "objectiveWritingHints": [
+        "目标应体现数据、算法、系统、网络、人工智能或数字工具支持下的问题解决和创新表达。",
+        "不要只写软件操作步骤，要体现信息判断、计算思维、数字化协作创新和负责任使用。"
+      ],
+      "standardSource": {
+        "title": "普通高中信息技术课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "11.普通高中信息技术课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "通用技术",
+      "aliases": ["高中通用技术", "普通高中通用技术"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "技术意识",
+        "工程思维",
+        "创新设计",
+        "图样表达",
+        "物化能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕真实技术问题、方案构思、工程分析、图样表达、模型制作和测试改进设计。",
+        "避免只写工具使用或作品完成，要体现技术判断、工程权衡、创新设计和物化实现过程。"
+      ],
+      "standardSource": {
+        "title": "普通高中通用技术课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "12.普通高中通用技术课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "艺术",
+      "aliases": ["高中艺术", "普通高中艺术"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "艺术感知",
+        "创意表达",
+        "审美情趣",
+        "文化理解"
+      ],
+      "objectiveWritingHints": [
+        "目标应覆盖艺术感知、创意表达、审美体验和文化理解中的至少两个方面，并落到具体艺术实践活动。",
+        "避免空泛写审美提升，要写出学生如何感受、理解、表现、创作、评价和交流艺术经验。"
+      ],
+      "standardSource": {
+        "title": "普通高中艺术课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "13.普通高中艺术课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "音乐",
+      "aliases": ["高中音乐", "普通高中音乐"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "审美感知",
+        "艺术表现",
+        "文化理解"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合聆听、演唱、演奏、创编、鉴赏和评价等音乐实践，体现审美感知、艺术表现和文化理解。",
+        "避免只写会唱会听，要写出学生如何感受音乐要素、表达音乐情感并理解音乐文化。"
+      ],
+      "standardSource": {
+        "title": "普通高中音乐课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "14.普通高中音乐课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "美术",
+      "aliases": ["高中美术", "普通高中美术"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "图像识读",
+        "美术表现",
+        "审美判断",
+        "创意实践",
+        "文化理解"
+      ],
+      "objectiveWritingHints": [
+        "目标应围绕图像观察解读、材料技法表现、审美判断、创意实践和文化理解来设计。",
+        "避免只写作品完成或技法掌握，要体现学生对视觉图像的理解、表达、评价和创意转化。"
+      ],
+      "standardSource": {
+        "title": "普通高中美术课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "15.普通高中美术课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "体育与健康",
+      "aliases": ["高中体育", "高中体育与健康", "普通高中体育与健康"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "运动能力",
+        "健康行为",
+        "体育品德"
+      ],
+      "objectiveWritingHints": [
+        "目标应兼顾专项运动能力、体能发展、健康管理、规则意识、合作竞争和体育品德。",
+        "避免只写动作技能达成，要写出学生在练习、比赛、健康选择和反思改进中的具体表现。"
+      ],
+      "standardSource": {
+        "title": "普通高中体育与健康课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "16.普通高中体育与健康课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "日语",
+      "aliases": ["高中日语", "普通高中日语"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合日语理解、表达、交互和跨文化比较任务，体现综合语言运用。",
+        "不要只写词汇语法，要体现文化意识、思维品质和自主学习能力的发展。"
+      ],
+      "standardSource": {
+        "title": "普通高中日语课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "17.普通高中日语课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "俄语",
+      "aliases": ["高中俄语", "普通高中俄语"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合俄语听说读写看等语言实践和跨文化交流任务来写。",
+        "不要只写语言知识掌握，要体现文化理解、思维发展和学习策略。"
+      ],
+      "standardSource": {
+        "title": "普通高中俄语课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "18.普通高中俄语课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "德语",
+      "aliases": ["高中德语", "普通高中德语"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合德语理解、表达、交互和文化比较任务来写。",
+        "不要只写词汇语法，要体现学生在跨文化情境中的表达、判断、合作和反思。"
+      ],
+      "standardSource": {
+        "title": "普通高中德语课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "19.普通高中德语课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "法语",
+      "aliases": ["高中法语", "普通高中法语"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言能力",
+        "思维品质",
+        "文化意识",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合法语语言实践、文本理解、文化比较和学习策略运用来写。",
+        "不要只写语言知识掌握，要体现学生在真实交际或探究任务中的理解、表达、判断和迁移。"
+      ],
+      "standardSource": {
+        "title": "普通高中法语课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "20.普通高中法语课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    },
+    {
+      "subject": "西班牙语",
+      "aliases": ["高中西班牙语", "普通高中西班牙语"],
+      "stage": "普通高中",
+      "coreLiteracies": [
+        "语言能力",
+        "文化意识",
+        "思维品质",
+        "学习能力"
+      ],
+      "objectiveWritingHints": [
+        "目标应结合西班牙语理解、表达、交互、文化比较和学习策略任务来写。",
+        "不要只写词汇语法，要体现综合语言运用、跨文化理解和思维品质发展。"
+      ],
+      "standardSource": {
+        "title": "普通高中西班牙语课程标准（2017年版2020年修订）",
+        "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/W020200603315372317586.zip",
+        "sourceFile": "21.普通高中西班牙语课程标准（2017年版2020年修订）.pdf"
+      },
+      "interpretationSources": [],
+      "verificationStatus": "standard_declared"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "requestId": "cli-smoke-research-topic-001",
+  "entryToken": "@研究选题生成",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "mixed_topic",
+  "sourceRequest": "@研究选题生成 根据我的教学案例生成课题选题",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "五六年级",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "参加过校本教研和区级公开课磨课",
+    "existingAchievements": ["校内公开课 2 节", "错因诊断教学反思 3 篇"],
+    "availableCycle": "1 年",
+    "constraints": ["可开展校内课堂观察", "暂未形成正式论文", "不能虚构学生成绩提升数据"]
+  },
+  "input": {
+    "teacherProfile": {
+      "subject": "小学数学",
+      "gradeBand": "五六年级",
+      "schoolContext": "城区普通小学",
+      "researchExperience": "参加过校本教研和区级公开课磨课",
+      "existingAchievements": ["校内公开课 2 节", "错因诊断教学反思 3 篇"],
+      "availableCycle": "1 年",
+      "constraints": ["可开展校内课堂观察", "暂未形成正式论文", "不能虚构学生成绩提升数据"]
+    },
+    "materials": [
+      {
+        "materialId": "case-lesson-001",
+        "materialType": "teaching_case",
+        "title": "异分母分数加减法错因诊断课例",
+        "content": "课堂中发现学生主要错因包括通分依据不清、约分遗漏和结果解释不完整。教师使用即时投票、错因标签贴和小组讲评记录调整讲评顺序。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "reflection-001",
+        "materialType": "reflection",
+        "title": "即时反馈支持讲评课调整的教学反思",
+        "content": "反思记录显示，即时反馈可以帮助教师发现共性错因，但目前证据主要来自课堂观察和学生作业片段，尚缺少连续跟踪和对照材料。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      },
+      {
+        "materialId": "research-log-001",
+        "materialType": "practice_record",
+        "title": "三节讲评课实践记录",
+        "content": "已完成 3 节五年级分数讲评课实践，形成课堂观察表 6 份、学生错因样例 42 条和课后访谈摘要 5 份。",
+        "sourcePath": "",
+        "sensitivityLevel": "internal",
+        "licenseStatus": "user_provided"
+      }
+    ],
+    "targetProjectType": "区级课题",
+    "topicCount": {"summative": 3, "planning": 2},
+    "requirements": "请生成总结性选题和规划性选题，说明已有基础、材料来源、创新风险、可行性风险和下一步补资料清单。"
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

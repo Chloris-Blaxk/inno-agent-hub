@@ -1,0 +1,20 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "单元综合",
+  "topic": "分数加减法阶段测验",
+  "knowledgePointIds": [
+    "math-g5-fraction-same-denominator-add",
+    "math-g5-fraction-add",
+    "math-g5-fraction-application"
+  ],
+  "taskType": "stage_test",
+  "questionCount": 15,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["计算题", "应用题", "比较题", "判断题", "填空题"],
+  "questionTypeMix": {"计算题": 5, "应用题": 7, "比较题": 1, "判断题": 1, "填空题": 1},
+  "difficultyMix": {"1": 4, "2": 5, "3": 4, "4": 2},
+  "requirements": "生成阶段测验草稿，控制基础、巩固、拓展比例，输出知识点覆盖和讲评建议。"
+}

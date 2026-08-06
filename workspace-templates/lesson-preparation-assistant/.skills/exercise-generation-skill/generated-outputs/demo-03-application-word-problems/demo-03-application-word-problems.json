@@ -1,0 +1,549 @@
+{
+  "exerciseMeta": {
+    "title": "分数加减法应用·应用题专练 分层作业",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第3课时",
+    "topic": "分数加减法应用·应用题专练",
+    "taskType": "layered_homework",
+    "questionCount": 6,
+    "source": "InnoSpark-235B-dynamic-generation"
+  },
+  "blueprint": {
+    "taskType": "layered_homework",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 2,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 2,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      },
+      {
+        "layer": "C",
+        "name": "拓展层",
+        "targetCount": 2,
+        "difficultyRange": [
+          3,
+          4
+        ],
+        "goal": "能处理多步、比较、判断或解释类问题，并说明理由。",
+        "cognitiveLevel": "迁移"
+      }
+    ],
+    "questionTypes": [
+      "应用题",
+      "比较题"
+    ],
+    "layerTargets": {
+      "A": 2,
+      "B": 2,
+      "C": 2
+    },
+    "questionTypeTargets": {
+      "应用题": 4,
+      "比较题": 2
+    },
+    "difficultyTargets": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "strictBlueprint": false,
+    "knowledgePointIds": [
+      "math-g5-fraction-application"
+    ],
+    "lessonBoundary": "解决一步或两步简单实际问题，能说明数量关系；不引入复杂方程建模。",
+    "requirements": "应用题专项练习。全部围绕生活场景（分物品、量长度、算时间等）。A层一步应用，B层两步应用，C层说理+比较。每层2题。"
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "一根彩带长 \frac{7}{8} 米，小丽剪下 \frac{3}{8} 米做手工，还剩多少米？",
+      "answer": "\\frac{1}{2}",
+      "solutionSteps": [
+        "求剩余长度，用减法：\\frac{7}{8} - \\frac{3}{8}。",
+        "同分母分数相减，得到 \\frac{4}{8}。",
+        "将 \\frac{4}{8} 约分为最简分数 \\frac{1}{2}。"
+      ],
+      "commonErrors": [
+        "计算错误：将分子分母分别相减，得到 \\frac{4}{0}。",
+        "忘记约分：答案写成 \\frac{4}{8}。"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "强调同分母分数减法的计算法则，以及结果必须化为最简分数。",
+      "sourceId": "A1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q002",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一瓶果汁，哥哥喝了 \frac{1}{3}，弟弟喝了 \frac{1}{4}。两人一共喝了这瓶果汁的几分之几？",
+      "answer": "\\frac{7}{12}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{3} + \\frac{1}{4}。",
+        "异分母分数相加，先通分：\\frac{4}{12} + \\frac{3}{12}。",
+        "计算得到 \\frac{7}{12}。"
+      ],
+      "commonErrors": [
+        "直接相加分子分母：错误地计算为 \\frac{1+1}{3+4} = \\frac{2}{7}。",
+        "通分错误：将分母相乘后忘记调整分子。"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "重点讲解异分母分数加法的通分方法，强调必须先统一分数单位再计算。",
+      "sourceId": "A2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q003",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "一条彩带，小华剪去它的 \\frac{1}{4} 做蝴蝶结，小丽剪去它的 \\frac{1}{3} 做装饰。两人一共剪去了这条彩带的几分之几？",
+      "answer": "\\frac{7}{12}",
+      "solutionSteps": [
+        "求一共剪去多少，用加法：\\frac{1}{4} + \\frac{1}{3}。",
+        "通分：\\frac{3}{12} + \\frac{4}{12} = \\frac{7}{12}。"
+      ],
+      "commonErrors": [
+        "通分错误",
+        "忘记约分"
+      ],
+      "scorePoints": 2,
+      "teachingNote": "引导学生注意异分母分数加法的通分步骤，强调结果要化为最简分数。",
+      "sourceId": "B-001",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q004",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一盒牛奶，小明喝了 \\frac{1}{2}，小红喝了 \\frac{1}{5}。谁喝得多？多喝了多少？",
+      "answer": "小明喝得多，多喝了 \\frac{3}{10}",
+      "solutionSteps": [
+        "比较 \\frac{1}{2} 和 \\frac{1}{5} 的大小：\\frac{1}{2} = \\frac{5}{10}，\\frac{1}{5} = \\frac{2}{10}，所以 \\frac{1}{2} > \\frac{1}{5}。",
+        "计算差值：\\frac{1}{2} - \\frac{1}{5} = \\frac{5}{10} - \\frac{2}{10} = \\frac{3}{10}。"
+      ],
+      "commonErrors": [
+        "比较大小时通分错误",
+        "减法计算错误"
+      ],
+      "scorePoints": 3,
+      "teachingNote": "通过具体情境帮助学生理解分数大小比较和减法运算，提醒学生注意通分和计算的准确性。",
+      "sourceId": "B-002",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q005",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "应用题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "小华看一本故事书，第一天看了全书的 \\frac{1}{4}，第二天看了全书的 \\frac{2}{5}。如果这本书共有120页，那么还剩下多少页没有看？",
+      "answer": "42",
+      "solutionSteps": [
+        "方法一：先求已看部分占全书的比例，再求剩余页数。",
+        "已看比例：\\frac{1}{4} + \\frac{2}{5} = \\frac{5}{20} + \\frac{8}{20} = \\frac{13}{20}。",
+        "剩余比例：1 - \\frac{13}{20} = \\frac{7}{20}。",
+        "剩余页数：120 \\times \\frac{7}{20} = 42（页）。",
+        "方法二：先分别计算两天看的页数，再求剩余页数。",
+        "第一天看：120 \\times \\frac{1}{4} = 30（页）。",
+        "第二天看：120 \\times \\frac{2}{5} = 48（页）。",
+        "剩余页数：120 - 30 - 48 = 42（页）。",
+        "两种方法结果一致，验证答案正确。"
+      ],
+      "commonErrors": [
+        "只计算已看页数（30+48=78），忘记求剩余部分。",
+        "通分错误，如将 \\frac{1}{4} + \\frac{2}{5} 错算为 \\frac{3}{9}。",
+        "计算剩余比例时，用 \\frac{13}{20} 直接乘以120，混淆了已看和剩余部分。"
+      ],
+      "scorePoints": [
+        "正确计算两天看的总比例（2分）",
+        "正确计算剩余比例（1分）",
+        "正确计算剩余页数（1分）",
+        "或：正确计算两天看的页数（2分），正确计算剩余页数（2分）"
+      ],
+      "teachingNote": "本题是分数应用题与整数乘法的综合，旨在考察学生将抽象分数与具体数量结合的能力。教学时可引导学生理解‘单位1’（全书页数）的重要性，并鼓励用不同方法解题，培养思维的灵活性。强调审题，特别是‘还剩下’这个关键词。",
+      "sourceId": "C1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q006",
+      "knowledgePointIds": [
+        "math-g5-fraction-application"
+      ],
+      "layer": "C",
+      "questionType": "比较题",
+      "difficulty": 4,
+      "cognitiveLevel": "迁移",
+      "stem": "甲、乙两个工程队共同修一条路。甲队完成了全长的 \\frac{3}{8}，乙队完成了全长的 \\frac{2}{5}。请问：哪个队完成的更多？多出的部分占全长的几分之几？",
+      "answer": "乙队完成的更多，多出的部分占全长的 \\frac{1}{40}。",
+      "solutionSteps": [
+        "第一步：比较 \\frac{3}{8} 和 \\frac{2}{5} 的大小。",
+        "通分：\\frac{3}{8} = \\frac{15}{40}，\\frac{2}{5} = \\frac{16}{40}。",
+        "因为 \\frac{16}{40} > \\frac{15}{40}，所以乙队完成的更多。",
+        "第二步：计算多出的部分。",
+        "用乙队完成的比例减去甲队完成的比例：\\frac{2}{5} - \\frac{3}{8} = \\frac{16}{40} - \\frac{15}{40} = \\frac{1}{40}。",
+        "答：乙队完成的更多，多出的部分占全长的 \\frac{1}{40}。"
+      ],
+      "commonErrors": [
+        "比较大小时，错误地认为分子大的分数就大（如认为 \\frac{3}{8} > \\frac{2}{5}），或分母大的分数就大。",
+        "通分时找错最小公分母，或计算出错。",
+        "在计算多出部分时，用大数减小数，但列式时顺序颠倒，如用 \\frac{3}{8} - \\frac{2}{5}，导致结果为负数。"
+      ],
+      "scorePoints": [
+        "正确比较两个分数大小（2分）",
+        "正确列出减法算式（1分）",
+        "正确计算出差值（1分）"
+      ],
+      "teachingNote": "本题考察异分母分数的比较和减法运算，是分数应用题中的常见题型。教学时应强调‘比较大小’和‘求差’是两个不同的步骤，引导学生先比较再计算。可以通过画线段图的方式，帮助学生直观理解两个分数所代表的部分以及它们之间的差值。",
+      "sourceId": "C2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "\\frac{1}{2}",
+      "solutionSteps": [
+        "求剩余长度，用减法：\\frac{7}{8} - \\frac{3}{8}。",
+        "同分母分数相减，得到 \\frac{4}{8}。",
+        "将 \\frac{4}{8} 约分为最简分数 \\frac{1}{2}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q002",
+      "answer": "\\frac{7}{12}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{3} + \\frac{1}{4}。",
+        "异分母分数相加，先通分：\\frac{4}{12} + \\frac{3}{12}。",
+        "计算得到 \\frac{7}{12}。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q003",
+      "answer": "\\frac{7}{12}",
+      "solutionSteps": [
+        "求一共剪去多少，用加法：\\frac{1}{4} + \\frac{1}{3}。",
+        "通分：\\frac{3}{12} + \\frac{4}{12} = \\frac{7}{12}。"
+      ],
+      "scorePoints": 2
+    },
+    {
+      "questionId": "q004",
+      "answer": "小明喝得多，多喝了 \\frac{3}{10}",
+      "solutionSteps": [
+        "比较 \\frac{1}{2} 和 \\frac{1}{5} 的大小：\\frac{1}{2} = \\frac{5}{10}，\\frac{1}{5} = \\frac{2}{10}，所以 \\frac{1}{2} > \\frac{1}{5}。",
+        "计算差值：\\frac{1}{2} - \\frac{1}{5} = \\frac{5}{10} - \\frac{2}{10} = \\frac{3}{10}。"
+      ],
+      "scorePoints": 3
+    },
+    {
+      "questionId": "q005",
+      "answer": "42",
+      "solutionSteps": [
+        "方法一：先求已看部分占全书的比例，再求剩余页数。",
+        "已看比例：\\frac{1}{4} + \\frac{2}{5} = \\frac{5}{20} + \\frac{8}{20} = \\frac{13}{20}。",
+        "剩余比例：1 - \\frac{13}{20} = \\frac{7}{20}。",
+        "剩余页数：120 \\times \\frac{7}{20} = 42（页）。",
+        "方法二：先分别计算两天看的页数，再求剩余页数。",
+        "第一天看：120 \\times \\frac{1}{4} = 30（页）。",
+        "第二天看：120 \\times \\frac{2}{5} = 48（页）。",
+        "剩余页数：120 - 30 - 48 = 42（页）。",
+        "两种方法结果一致，验证答案正确。"
+      ],
+      "scorePoints": [
+        "正确计算两天看的总比例（2分）",
+        "正确计算剩余比例（1分）",
+        "正确计算剩余页数（1分）",
+        "或：正确计算两天看的页数（2分），正确计算剩余页数（2分）"
+      ]
+    },
+    {
+      "questionId": "q006",
+      "answer": "乙队完成的更多，多出的部分占全长的 \\frac{1}{40}。",
+      "solutionSteps": [
+        "第一步：比较 \\frac{3}{8} 和 \\frac{2}{5} 的大小。",
+        "通分：\\frac{3}{8} = \\frac{15}{40}，\\frac{2}{5} = \\frac{16}{40}。",
+        "因为 \\frac{16}{40} > \\frac{15}{40}，所以乙队完成的更多。",
+        "第二步：计算多出的部分。",
+        "用乙队完成的比例减去甲队完成的比例：\\frac{2}{5} - \\frac{3}{8} = \\frac{16}{40} - \\frac{15}{40} = \\frac{1}{40}。",
+        "答：乙队完成的更多，多出的部分占全长的 \\frac{1}{40}。"
+      ],
+      "scorePoints": [
+        "正确比较两个分数大小（2分）",
+        "正确列出减法算式（1分）",
+        "正确计算出差值（1分）"
+      ]
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-application"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-application"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-application": {
+        "questionCount": 6,
+        "questionTypes": {
+          "应用题": 5,
+          "比较题": 1
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 2,
+        "min": 1,
+        "max": 2,
+        "average": 1.5
+      },
+      "B": {
+        "questionCount": 2,
+        "min": 2,
+        "max": 3,
+        "average": 2.5
+      },
+      "C": {
+        "questionCount": 2,
+        "min": 4,
+        "max": 4,
+        "average": 4.0
+      }
+    },
+    "byDifficulty": {
+      "1": 1,
+      "2": 2,
+      "3": 1,
+      "4": 2
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "含未知数方程求解",
+      "复杂比例推理",
+      "多步百分数应用"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "计算错误：将分子分母分别相减，得到 \\frac{4}{0}。",
+      "name": "计算错误：将分子分母分别相减，得到 \\frac{4}{0}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记约分：答案写成 \\frac{4}{8}。",
+      "name": "忘记约分：答案写成 \\frac{4}{8}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "直接相加分子分母：错误地计算为 \\frac{1+1}{3+4} = \\frac{2}{7}。",
+      "name": "直接相加分子分母：错误地计算为 \\frac{1+1}{3+4} = \\frac{2}{7}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分错误：将分母相乘后忘记调整分子。",
+      "name": "通分错误：将分母相乘后忘记调整分子。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分错误",
+      "name": "通分错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "忘记约分",
+      "name": "忘记约分",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "比较大小时通分错误",
+      "name": "比较大小时通分错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "减法计算错误",
+      "name": "减法计算错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "只计算已看页数（30+48=78），忘记求剩余部分。",
+      "name": "只计算已看页数（30+48=78），忘记求剩余部分。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分错误，如将 \\frac{1}{4} + \\frac{2}{5} 错算为 \\frac{3}{9}。",
+      "name": "通分错误，如将 \\frac{1}{4} + \\frac{2}{5} 错算为 \\frac{3}{9}。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算剩余比例时，用 \\frac{13}{20} 直接乘以120，混淆了已看和剩余部分。",
+      "name": "计算剩余比例时，用 \\frac{13}{20} 直接乘以120，混淆了已看和剩余部分。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "比较大小时，错误地认为分子大的分数就大（如认为 \\frac{3}{8} > \\frac{2}{5}），或分母大的分数就大。",
+      "name": "比较大小时，错误地认为分子大的分数就大（如认为 \\frac{3}{8} > \\frac{2}{5}），或分母大的分数就大。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "通分时找错最小公分母，或计算出错。",
+      "name": "通分时找错最小公分母，或计算出错。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "在计算多出部分时，用大数减小数，但列式时顺序颠倒，如用 \\frac{3}{8} - \\frac{2}{5}，导致结果为负数。",
+      "name": "在计算多出部分时，用大数减小数，但列式时顺序颠倒，如用 \\frac{3}{8} - \\frac{2}{5}，导致结果为负数。",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    }
+  ],
+  "replacementSuggestions": [],
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 6 题，请求 6 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "layer_C_count",
+        "status": "pass",
+        "message": "C 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "warn",
+        "message": "题型比例未完全匹配目标 {'应用题': 4, '比较题': 2}，实际 {'应用题': 5, '比较题': 1}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "warn",
+        "message": "难度比例未完全匹配目标 {'1': 2, '2': 2, '3': 1, '4': 1}，实际 {'1': 1, '2': 2, '3': 1, '4': 2}。"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  }
+}

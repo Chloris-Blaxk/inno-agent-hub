@@ -1,0 +1,1145 @@
+{
+  "requestId": "req-literature-teacher-b-001",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "literature_discovery",
+  "status": "pass",
+  "summary": "围绕\"初中语文整本书阅读四阶段教学模式促进学生思维品质发展的实践研究——以《朝花夕拾》为例\"，PedaScope KB MCP 6 次查询共命中 51 篇不重复候选文献，精选 Top 20 推荐阅读，覆盖整本书阅读教学、思维品质培养、布鲁姆理论应用、评价工具开发四个维度。",
+  "warnings": [
+    "PedaScope 仅返回安全题录和系统生成的非逐字摘要——所有文献仅知标题和系统摘要，不提供原文摘要或全文。正式引用前需在 CNKI/万方/维普获取原文确认。",
+    "部分高引用文献（如林崇德 1984）年代较早，引用量高但时效性需评估。",
+    "检索结果受查询词覆盖度影响，不构成该方向的完整文献覆盖声明。"
+  ],
+  "dataSourceReport": {
+    "mockDataUsed": false,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": true,
+    "externalVerifiedDataUsed": true,
+    "dataSources": [
+      {
+        "sourceId": "pedascope-kb-mcp",
+        "sourceName": "PedaScope KB MCP（150 万篇教育论文题录）",
+        "sourceType": "authorized_database",
+        "dataType": "bibliographic_metadata",
+        "recordCount": 1500000,
+        "authorizationStatus": "public_metadata_service",
+        "version": "0.2.2",
+        "limitations": [
+          "仅返回安全题录和系统生成的非逐字摘要，不返回原文摘要、全文、片段",
+          "abstract_type=generated_non_verbatim，未透传原始摘要"
+        ]
+      }
+    ],
+    "overallLimitations": [
+      "所有文献摘要为系统根据题录信号生成的非逐字摘要，不构成原文摘要",
+      "EvidenceCard 不能在 textAvailability=metadata 时生成",
+      "当前包含 mock/local sample 数据源不可用，结果来自外部验证服务但不可视为完整检索。"
+    ]
+  },
+  "result": {
+    "corpusSearchReport": {
+      "indexName": "PedaScope KB",
+      "indexSource": "pedascope_kb",
+      "simulatedCorpusSize": 1500000,
+      "query": {
+        "keywords": [
+          "整本书阅读",
+          "思维品质",
+          "初中语文",
+          "教学模式",
+          "批注",
+          "朝花夕拾",
+          "布鲁姆认知目标",
+          "评价量表"
+        ],
+        "topic": "初中语文整本书阅读四阶段教学模式促进学生思维品质发展的实践研究",
+        "searchQueries": 6
+      },
+      "candidateCount": 51,
+      "returnedCount": 20,
+      "rankingSignals": [
+        "主题相关度",
+        "引用量",
+        "时效性",
+        "期刊权威性",
+        "学科匹配度"
+      ],
+      "topHits": [
+        {
+          "paperId": "paper_lfbtWCDZcLirXZVG",
+          "score": 6.7,
+          "matchedKeywords": [
+            "思维品质"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(188次)",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_XVFsalrevrQK6rKO",
+          "score": 5.9,
+          "matchedKeywords": [
+            "整本书阅读"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(99次)；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_LX5N9owMA4ubi1bj",
+          "score": 6.0,
+          "matchedKeywords": [
+            "整本书阅读",
+            "朝花夕拾",
+            "深度学习"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(97次)；主题与选题高度匹配；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_GjZLrLgDIxb5TUo1",
+          "score": 5.5,
+          "matchedKeywords": [
+            "整本书阅读"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(197次)；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_KYvo3h3T1qkDGISa",
+          "score": 5.3,
+          "matchedKeywords": [
+            "整本书阅读"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(157次)；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_3njRqHUZW0XHNzyl",
+          "score": 4.9,
+          "matchedKeywords": [
+            "认知目标"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(117次)；覆盖核心理论框架",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_rxb5SKxVokNr4_Ex",
+          "score": 5.5,
+          "matchedKeywords": [
+            "整本书阅读"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(75次)；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_vtZwfDaVYL6OGw5z",
+          "score": 7.8,
+          "matchedKeywords": [
+            "整本书阅读",
+            "朝花夕拾"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "时效性高；高被引(57次)；直接以《朝花夕拾》为案例；涉及评价工具开发；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_JzsiCTqeKRZif0OF",
+          "score": 6.9,
+          "matchedKeywords": [],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "有引用基础(40次)；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_3L3lMoghn3Ddtcqs",
+          "score": 5.4,
+          "matchedKeywords": [
+            "认知目标"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(68次)；覆盖核心理论框架",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_jsOid9ETZRFAW92Z",
+          "score": 7.2,
+          "matchedKeywords": [
+            "整本书阅读",
+            "批注",
+            "朝花夕拾"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(59次)；直接以《朝花夕拾》为案例；与三色批注法直接对标；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_dHkrhzNrMqaKHSr1",
+          "score": 7.1,
+          "matchedKeywords": [
+            "批注",
+            "朝花夕拾"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(60次)；直接以《朝花夕拾》为案例；与三色批注法直接对标；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_jxLOhqY5bCfbLEaa",
+          "score": 6.5,
+          "matchedKeywords": [
+            "整本书阅读",
+            "初中语文"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "时效性高；有引用基础(44次)",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_9YHG9yjcikkEgwlB",
+          "score": 5.3,
+          "matchedKeywords": [
+            "认知目标"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "高被引(56次)；覆盖核心理论框架",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_zMURVENSFT00Ykz0",
+          "score": 5.5,
+          "matchedKeywords": [
+            "整本书阅读"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "有引用基础(45次)；语文学科核心期刊",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_lxpmqxpP4xl_sBbn",
+          "score": 7.5,
+          "matchedKeywords": [
+            "朝花夕拾"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "有引用基础(33次)；直接以《朝花夕拾》为案例",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_Yyx154Q7VhMHD6AF",
+          "score": 6.9,
+          "matchedKeywords": [
+            "朝花夕拾"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "有引用基础(45次)；直接以《朝花夕拾》为案例",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_s2fC167Hvdl9hOmy",
+          "score": 6.6,
+          "matchedKeywords": [],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "有引用基础(19次)；涉及评价工具开发",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_IofqCjGisG2G_vWh",
+          "score": 6.8,
+          "matchedKeywords": [
+            "思维品质"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "补充理论或方法视角",
+          "source": "pedascope-kb"
+        },
+        {
+          "paperId": "paper_ITBiElH6o1srCp2m",
+          "score": 6.9,
+          "matchedKeywords": [
+            "思维品质"
+          ],
+          "textAvailability": "metadata",
+          "sourceStatus": "external_verified",
+          "selectionReason": "时效性高；补充理论或方法视角",
+          "source": "pedascope-kb"
+        }
+      ]
+    },
+    "literatureRecords": [
+      {
+        "paperId": "paper_lfbtWCDZcLirXZVG",
+        "title": "国外关于思维品质发展与培养的研究",
+        "authors": [
+          "林崇德[1]"
+        ],
+        "year": "1984",
+        "journal": "应用心理学",
+        "doi": "",
+        "keywords": [
+          "思维品质",
+          "培养的",
+          "智力品质",
+          "苏联心理学",
+          "灵活性",
+          "吉尔福特",
+          "美国心理学",
+          "个体差异",
+          "实验研究",
+          "敏捷性"
+        ],
+        "abstract": "该文献与“国外关于思维品质发展与培养的研究”相关；关键词信号包括思维品质、培养的、智力品质、苏联心理学、灵活性；来源信息为应用心理学，1984；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_XVFsalrevrQK6rKO",
+        "title": "整本书阅读四境界及其测评",
+        "authors": [
+          "余党绪[1]"
+        ],
+        "year": "2020",
+        "journal": "中学语文教学",
+        "doi": "",
+        "keywords": [
+          "整本书阅读",
+          "测评",
+          "思辨"
+        ],
+        "abstract": "该文献与“整本书阅读四境界及其测评”相关；关键词信号包括整本书阅读、测评、思辨；来源信息为中学语文教学，2020；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_LX5N9owMA4ubi1bj",
+        "title": "整本书阅读深度学习教学策略",
+        "authors": [
+          "邓彤[1]"
+        ],
+        "year": "2020",
+        "journal": "中学语文教学",
+        "doi": "",
+        "keywords": [
+          "深度学习",
+          "整本书阅读",
+          "课堂情境",
+          "有效促进",
+          "《朝花夕拾》",
+          "阅读量",
+          "教学策略",
+          "中国现代散文"
+        ],
+        "abstract": "该文献与“整本书阅读深度学习教学策略”相关；关键词信号包括深度学习、整本书阅读、课堂情境、有效促进、《朝花夕拾》；来源信息为中学语文教学，2020；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_GjZLrLgDIxb5TUo1",
+        "title": "基于思辨读写的整本书阅读教学",
+        "authors": [
+          "余党绪[1]"
+        ],
+        "year": "2022",
+        "journal": "语文建设",
+        "doi": "",
+        "keywords": [
+          "整本书阅读",
+          "母题",
+          "议题",
+          "问题",
+          "思辨读写"
+        ],
+        "abstract": "该文献与“基于思辨读写的整本书阅读教学”相关；关键词信号包括整本书阅读、母题、议题、问题、思辨读写；来源信息为语文建设，2022；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_KYvo3h3T1qkDGISa",
+        "title": "整本书阅读教学的常见问题及其解决策略",
+        "authors": [
+          "黄厚江[1]",
+          "孙国萍[2]"
+        ],
+        "year": "2021",
+        "journal": "语文建设",
+        "doi": "",
+        "keywords": [
+          "整本书阅读",
+          "教学问题",
+          "解决策略"
+        ],
+        "abstract": "该文献与“整本书阅读教学的常见问题及其解决策略”相关；关键词信号包括整本书阅读、教学问题、解决策略；来源信息为语文建设，2021；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_3njRqHUZW0XHNzyl",
+        "title": "布卢姆认知目标分类学(修订版)的教学观",
+        "authors": [
+          "王小明[1]"
+        ],
+        "year": "2016",
+        "journal": "全球教育展望",
+        "doi": "",
+        "keywords": [
+          "布卢姆认知目标分类学",
+          "知识",
+          "认知过程",
+          "教学目标"
+        ],
+        "abstract": "该文献与“布卢姆认知目标分类学(修订版)的教学观”相关；关键词信号包括布卢姆认知目标分类学、知识、认知过程、教学目标；来源信息为全球教育展望，2016；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_rxb5SKxVokNr4_Ex",
+        "title": "小学整本书阅读教学现状分析与再思考",
+        "authors": [
+          "谈永康[1]"
+        ],
+        "year": "2021",
+        "journal": "语文建设",
+        "doi": "",
+        "keywords": [
+          "整本书阅读",
+          "小学",
+          "阅读教学",
+          "现状分析",
+          "再思考"
+        ],
+        "abstract": "该文献与“小学整本书阅读教学现状分析与再思考”相关；关键词信号包括整本书阅读、小学、阅读教学、现状分析、再思考；来源信息为语文建设，2021；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_vtZwfDaVYL6OGw5z",
+        "title": "“教学评一体化”理念下的整本书阅读教学评价探究——以《朝花夕拾》为例",
+        "authors": [
+          "李欣欣[1]"
+        ],
+        "year": "2023",
+        "journal": "语文建设",
+        "doi": "",
+        "keywords": [
+          "教学评一体化",
+          "教学评价",
+          "整本书阅读",
+          "《朝花夕拾》"
+        ],
+        "abstract": "该文献与““教学评一体化”理念下的整本书阅读教学评价探究——以《朝花夕拾》为例”相关；关键词信号包括教学评一体化、教学评价、整本书阅读、《朝花夕拾》；来源信息为语文建设，2023；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_JzsiCTqeKRZif0OF",
+        "title": "论语文教学中思维能力的培养",
+        "authors": [
+          "严华银[1,2]"
+        ],
+        "year": "2021",
+        "journal": "中学语文教学",
+        "doi": "",
+        "keywords": [
+          "语文教学",
+          "思维",
+          "思维发展",
+          "思维提升"
+        ],
+        "abstract": "该文献与“论语文教学中思维能力的培养”相关；关键词信号包括语文教学、思维、思维发展、思维提升；来源信息为中学语文教学，2021；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_3L3lMoghn3Ddtcqs",
+        "title": "重在认知过程的理解与创造——布卢姆认知目标分类学修订的特色",
+        "authors": [
+          "盛群力[1]",
+          "褚献华[1]"
+        ],
+        "year": "2004",
+        "journal": "全球教育展望",
+        "doi": "",
+        "keywords": [
+          "认知过程",
+          "布卢姆",
+          "认知目标分类学",
+          "知识迁移",
+          "问题解决"
+        ],
+        "abstract": "该文献与“重在认知过程的理解与创造——布卢姆认知目标分类学修订的特色”相关；关键词信号包括认知过程、布卢姆、认知目标分类学、知识迁移、问题解决；来源信息为全球教育展望，2004；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_jsOid9ETZRFAW92Z",
+        "title": "整本书阅读教学的“批注”指导策略——以鲁迅《朝花夕拾》为例",
+        "authors": [
+          "万亚峰[1]"
+        ],
+        "year": "2019",
+        "journal": "中学语文教学",
+        "doi": "",
+        "keywords": [
+          "整本书阅读",
+          "阅读批注",
+          "指导策略"
+        ],
+        "abstract": "该文献与“整本书阅读教学的“批注”指导策略——以鲁迅《朝花夕拾》为例”相关；关键词信号包括整本书阅读、阅读批注、指导策略；来源信息为中学语文教学，2019；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_dHkrhzNrMqaKHSr1",
+        "title": "批注:把名著阅读引向深处——以《朝花夕拾》为例",
+        "authors": [
+          "陈元芝[1]"
+        ],
+        "year": "2018",
+        "journal": "语文建设",
+        "doi": "",
+        "keywords": [
+          "《朝花夕拾》",
+          "名著阅读",
+          "学生阅读",
+          "批注",
+          "童年生活",
+          "七年级",
+          "隔膜",
+          "教材"
+        ],
+        "abstract": "该文献与“批注:把名著阅读引向深处——以《朝花夕拾》为例”相关；关键词信号包括《朝花夕拾》、名著阅读、学生阅读、批注、童年生活；来源信息为语文建设，2018；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_jxLOhqY5bCfbLEaa",
+        "title": "初中语文整本书阅读路径分析",
+        "authors": [
+          "陈虹先[1]"
+        ],
+        "year": "2023",
+        "journal": "中国教育学刊",
+        "doi": "",
+        "keywords": [
+          "初中语文",
+          "整本书阅读",
+          "有效路径"
+        ],
+        "abstract": "该文献与“初中语文整本书阅读路径分析”相关；关键词信号包括初中语文、整本书阅读、有效路径；来源信息为中国教育学刊，2023；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_9YHG9yjcikkEgwlB",
+        "title": "布卢姆认知目标分类学(修订版)的国外应用研究",
+        "authors": [
+          "王小明[1]"
+        ],
+        "year": "2017",
+        "journal": "全球教育展望",
+        "doi": "",
+        "keywords": [
+          "布卢姆认知目标分类学(修订版)",
+          "应用研究",
+          "应用模式"
+        ],
+        "abstract": "该文献与“布卢姆认知目标分类学(修订版)的国外应用研究”相关；关键词信号包括布卢姆认知目标分类学(修订版)、应用研究、应用模式；来源信息为全球教育展望，2017；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_zMURVENSFT00Ykz0",
+        "title": "整本书阅读：读法及其教学路径",
+        "authors": [
+          "胡根林[1]"
+        ],
+        "year": "2019",
+        "journal": "中学语文教学",
+        "doi": "",
+        "keywords": [
+          "整本书阅读",
+          "《红楼梦》",
+          "读法",
+          "教学路径"
+        ],
+        "abstract": "该文献与“整本书阅读：读法及其教学路径”相关；关键词信号包括整本书阅读、《红楼梦》、读法、教学路径；来源信息为中学语文教学，2019；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_lxpmqxpP4xl_sBbn",
+        "title": "《朝花夕拾》：鲁迅的“休息”与“沟通”",
+        "authors": [
+          "李怡[1]"
+        ],
+        "year": "2009",
+        "journal": "首都师范大学学报（社会科学版）",
+        "doi": "",
+        "keywords": [
+          "《朝花夕拾》",
+          "闲静",
+          "休息",
+          "沟通"
+        ],
+        "abstract": "该文献与“《朝花夕拾》：鲁迅的“休息”与“沟通””相关；关键词信号包括《朝花夕拾》、闲静、休息、沟通；来源信息为首都师范大学学报（社会科学版），2009；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_Yyx154Q7VhMHD6AF",
+        "title": "作为“整本书”的《朝花夕拾》隐含的两个问题--关于教育成长主题和典型化",
+        "authors": [
+          "陈思和[1]"
+        ],
+        "year": "2021",
+        "journal": "杭州师范大学学报（社会科学版）",
+        "doi": "10.19925/j.cnki.issn.1674-2338.2021.01.006",
+        "keywords": [
+          "鲁迅",
+          "《朝花夕拾》",
+          "“整本书”阅读",
+          "教育成长主题",
+          "细节虚构",
+          "艺术真实",
+          "典型化手法"
+        ],
+        "abstract": "该文献与“作为“整本书”的《朝花夕拾》隐含的两个问题--关于教育成长主题和典型化”相关；关键词信号包括鲁迅、《朝花夕拾》、“整本书”阅读、教育成长主题、细节虚构；来源信息为杭州师范大学学报（社会科学版），2021；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_s2fC167Hvdl9hOmy",
+        "title": "从思维训练角度评价语文课堂教学",
+        "authors": [
+          "陈玉秋[1]"
+        ],
+        "year": "2007",
+        "journal": "广西师范大学学报（哲学社会科学版）",
+        "doi": "",
+        "keywords": [
+          "语文课堂",
+          "阅读教学",
+          "思维层次",
+          "评价标准"
+        ],
+        "abstract": "该文献与“从思维训练角度评价语文课堂教学”相关；关键词信号包括语文课堂、阅读教学、思维层次、评价标准；来源信息为广西师范大学学报（哲学社会科学版），2007；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_IofqCjGisG2G_vWh",
+        "title": "通过编题活动促进学生思维品质的发展",
+        "authors": [
+          "曹瑞珍[1]"
+        ],
+        "year": "1990",
+        "journal": "心理发展与教育",
+        "doi": "",
+        "keywords": [
+          "思维品质",
+          "编题",
+          "引导学生",
+          "个性差异",
+          "敏捷性",
+          "数学能力",
+          "教学质量",
+          "减轻学生负担",
+          "教改实验",
+          "批判性"
+        ],
+        "abstract": "该文献与“通过编题活动促进学生思维品质的发展”相关；关键词信号包括思维品质、编题、引导学生、个性差异、敏捷性；来源信息为心理发展与教育，1990；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      },
+      {
+        "paperId": "paper_ITBiElH6o1srCp2m",
+        "title": "在思辨性阅读中培养学生的思维品质",
+        "authors": [
+          "黄元虎[1]"
+        ],
+        "year": "2023",
+        "journal": "教学与管理",
+        "doi": "",
+        "keywords": [
+          "思辨性阅读",
+          "思维品质",
+          "情境"
+        ],
+        "abstract": "该文献与“在思辨性阅读中培养学生的思维品质”相关；关键词信号包括思辨性阅读、思维品质、情境；来源信息为教学与管理，2023；该摘要为系统根据题录和检索信号生成的非逐字摘要，未透传原始摘要或全文。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified"
+      }
+    ],
+    "quickReadCards": [],
+    "deepReadCards": [],
+    "comparisonMatrix": [],
+    "evidenceCards": []
+  },
+  "handoff": {
+    "literatureRecords": [
+      {
+        "paperId": "paper_lfbtWCDZcLirXZVG",
+        "title": "国外关于思维品质发展与培养的研究",
+        "authors": [
+          "林崇德[1]"
+        ],
+        "year": "1984",
+        "journal": "应用心理学",
+        "keywords": [
+          "思维品质",
+          "培养的",
+          "智力品质",
+          "苏联心理学",
+          "灵活性"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_XVFsalrevrQK6rKO",
+        "title": "整本书阅读四境界及其测评",
+        "authors": [
+          "余党绪[1]"
+        ],
+        "year": "2020",
+        "journal": "中学语文教学",
+        "keywords": [
+          "整本书阅读",
+          "测评",
+          "思辨"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_LX5N9owMA4ubi1bj",
+        "title": "整本书阅读深度学习教学策略",
+        "authors": [
+          "邓彤[1]"
+        ],
+        "year": "2020",
+        "journal": "中学语文教学",
+        "keywords": [
+          "深度学习",
+          "整本书阅读",
+          "课堂情境",
+          "有效促进",
+          "《朝花夕拾》"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_GjZLrLgDIxb5TUo1",
+        "title": "基于思辨读写的整本书阅读教学",
+        "authors": [
+          "余党绪[1]"
+        ],
+        "year": "2022",
+        "journal": "语文建设",
+        "keywords": [
+          "整本书阅读",
+          "母题",
+          "议题",
+          "问题",
+          "思辨读写"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_KYvo3h3T1qkDGISa",
+        "title": "整本书阅读教学的常见问题及其解决策略",
+        "authors": [
+          "黄厚江[1]",
+          "孙国萍[2]"
+        ],
+        "year": "2021",
+        "journal": "语文建设",
+        "keywords": [
+          "整本书阅读",
+          "教学问题",
+          "解决策略"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_3njRqHUZW0XHNzyl",
+        "title": "布卢姆认知目标分类学(修订版)的教学观",
+        "authors": [
+          "王小明[1]"
+        ],
+        "year": "2016",
+        "journal": "全球教育展望",
+        "keywords": [
+          "布卢姆认知目标分类学",
+          "知识",
+          "认知过程",
+          "教学目标"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_rxb5SKxVokNr4_Ex",
+        "title": "小学整本书阅读教学现状分析与再思考",
+        "authors": [
+          "谈永康[1]"
+        ],
+        "year": "2021",
+        "journal": "语文建设",
+        "keywords": [
+          "整本书阅读",
+          "小学",
+          "阅读教学",
+          "现状分析",
+          "再思考"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_vtZwfDaVYL6OGw5z",
+        "title": "“教学评一体化”理念下的整本书阅读教学评价探究——以《朝花夕拾》为例",
+        "authors": [
+          "李欣欣[1]"
+        ],
+        "year": "2023",
+        "journal": "语文建设",
+        "keywords": [
+          "教学评一体化",
+          "教学评价",
+          "整本书阅读",
+          "《朝花夕拾》"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_JzsiCTqeKRZif0OF",
+        "title": "论语文教学中思维能力的培养",
+        "authors": [
+          "严华银[1,2]"
+        ],
+        "year": "2021",
+        "journal": "中学语文教学",
+        "keywords": [
+          "语文教学",
+          "思维",
+          "思维发展",
+          "思维提升"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_3L3lMoghn3Ddtcqs",
+        "title": "重在认知过程的理解与创造——布卢姆认知目标分类学修订的特色",
+        "authors": [
+          "盛群力[1]",
+          "褚献华[1]"
+        ],
+        "year": "2004",
+        "journal": "全球教育展望",
+        "keywords": [
+          "认知过程",
+          "布卢姆",
+          "认知目标分类学",
+          "知识迁移",
+          "问题解决"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_jsOid9ETZRFAW92Z",
+        "title": "整本书阅读教学的“批注”指导策略——以鲁迅《朝花夕拾》为例",
+        "authors": [
+          "万亚峰[1]"
+        ],
+        "year": "2019",
+        "journal": "中学语文教学",
+        "keywords": [
+          "整本书阅读",
+          "阅读批注",
+          "指导策略"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_dHkrhzNrMqaKHSr1",
+        "title": "批注:把名著阅读引向深处——以《朝花夕拾》为例",
+        "authors": [
+          "陈元芝[1]"
+        ],
+        "year": "2018",
+        "journal": "语文建设",
+        "keywords": [
+          "《朝花夕拾》",
+          "名著阅读",
+          "学生阅读",
+          "批注",
+          "童年生活"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_jxLOhqY5bCfbLEaa",
+        "title": "初中语文整本书阅读路径分析",
+        "authors": [
+          "陈虹先[1]"
+        ],
+        "year": "2023",
+        "journal": "中国教育学刊",
+        "keywords": [
+          "初中语文",
+          "整本书阅读",
+          "有效路径"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_9YHG9yjcikkEgwlB",
+        "title": "布卢姆认知目标分类学(修订版)的国外应用研究",
+        "authors": [
+          "王小明[1]"
+        ],
+        "year": "2017",
+        "journal": "全球教育展望",
+        "keywords": [
+          "布卢姆认知目标分类学(修订版)",
+          "应用研究",
+          "应用模式"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_zMURVENSFT00Ykz0",
+        "title": "整本书阅读：读法及其教学路径",
+        "authors": [
+          "胡根林[1]"
+        ],
+        "year": "2019",
+        "journal": "中学语文教学",
+        "keywords": [
+          "整本书阅读",
+          "《红楼梦》",
+          "读法",
+          "教学路径"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_lxpmqxpP4xl_sBbn",
+        "title": "《朝花夕拾》：鲁迅的“休息”与“沟通”",
+        "authors": [
+          "李怡[1]"
+        ],
+        "year": "2009",
+        "journal": "首都师范大学学报（社会科学版）",
+        "keywords": [
+          "《朝花夕拾》",
+          "闲静",
+          "休息",
+          "沟通"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_Yyx154Q7VhMHD6AF",
+        "title": "作为“整本书”的《朝花夕拾》隐含的两个问题--关于教育成长主题和典型化",
+        "authors": [
+          "陈思和[1]"
+        ],
+        "year": "2021",
+        "journal": "杭州师范大学学报（社会科学版）",
+        "keywords": [
+          "鲁迅",
+          "《朝花夕拾》",
+          "“整本书”阅读",
+          "教育成长主题",
+          "细节虚构"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_s2fC167Hvdl9hOmy",
+        "title": "从思维训练角度评价语文课堂教学",
+        "authors": [
+          "陈玉秋[1]"
+        ],
+        "year": "2007",
+        "journal": "广西师范大学学报（哲学社会科学版）",
+        "keywords": [
+          "语文课堂",
+          "阅读教学",
+          "思维层次",
+          "评价标准"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_IofqCjGisG2G_vWh",
+        "title": "通过编题活动促进学生思维品质的发展",
+        "authors": [
+          "曹瑞珍[1]"
+        ],
+        "year": "1990",
+        "journal": "心理发展与教育",
+        "keywords": [
+          "思维品质",
+          "编题",
+          "引导学生",
+          "个性差异",
+          "敏捷性"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      },
+      {
+        "paperId": "paper_ITBiElH6o1srCp2m",
+        "title": "在思辨性阅读中培养学生的思维品质",
+        "authors": [
+          "黄元虎[1]"
+        ],
+        "year": "2023",
+        "journal": "教学与管理",
+        "keywords": [
+          "思辨性阅读",
+          "思维品质",
+          "情境"
+        ],
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "sourceStatus": "external_verified"
+      }
+    ],
+    "evidenceCards": [],
+    "keywords": [
+      "整本书阅读",
+      "思维品质",
+      "四阶段教学",
+      "三色批注",
+      "布鲁姆认知目标",
+      "评价量表"
+    ],
+    "readingQuestions": [
+      "郭跃辉(2025)的教学设计凸显思维品质与四阶段模式的异同？",
+      "陈元芝(2018)和万亚峰(2019)的批注策略与三色批注法的差异化空间？",
+      "邓彤(2020)深度学习视角与思维品质发展视角如何互补？"
+    ]
+  },
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "pedascope-connected",
+        "status": "pass",
+        "detail": "PedaScope KB MCP 6 次查询均成功返回"
+      },
+      {
+        "id": "dedup-complete",
+        "status": "pass",
+        "detail": "跨查询去重完成，51 篇不重复"
+      },
+      {
+        "id": "no-evidence-on-metadata",
+        "status": "pass",
+        "detail": "未在 metadata-only 文献上生成 EvidenceCard"
+      }
+    ],
+    "warnings": [
+      "PedaScope 仅返回安全题录和系统生成的非逐字摘要——所有文献仅知标题和系统摘要，不提供原文摘要或全文。正式引用前需在 CNKI/万方/维普获取原文确认。",
+      "部分高引用文献（如林崇德 1984）年代较早，引用量高但时效性需评估。",
+      "检索结果受查询词覆盖度影响，不构成该方向的完整文献覆盖声明。"
+    ],
+    "metrics": {
+      "totalCandidates": 51,
+      "topKReturned": 20,
+      "metadataOnlyCount": 20,
+      "fulltextCount": 0,
+      "userProvidedCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "在 CNKI/万方获取 Top 6 优先阅读文献的原文摘要或全文",
+    "对郭跃辉(2025)、邓彤(2020)、陈元芝(2018) 生成速读卡",
+    "用 search_by_domain 补充结构化检索（stage=初中, subject=语文）"
+  ]
+}

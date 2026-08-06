@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "历年立项题目样本（扩增至 22 条），覆盖小学数学为主、兼及其他学科和方向的区级/市级课题。用于选题重复度与差异化判断。"
+  },
+  "samples": [
+    {
+      "grantId": "grant-demo-001",
+      "title": "小学数学课堂即时反馈促进学生深度学习的实践研究",
+      "year": 2023,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["即时反馈", "深度学习", "小学数学"],
+      "differenceHint": "若用户研究错因诊断，应突出错因分类和课堂调控机制。"
+    },
+    {
+      "grantId": "grant-demo-002",
+      "title": "基于错因分析的小学高年级分数教学改进研究",
+      "year": 2022,
+      "level": "校级",
+      "subject": "小学数学",
+      "keywords": ["错因分析", "分数教学", "教学改进"],
+      "differenceHint": "可从即时反馈工具或证据化讲评路径形成差异。"
+    },
+    {
+      "grantId": "grant-demo-003",
+      "title": "课堂观察支持小学数学精准讲评的行动研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["课堂观察", "精准讲评", "行动研究"],
+      "differenceHint": "可与课堂投票数据、错因分类活动结合。"
+    },
+    {
+      "grantId": "grant-demo-004",
+      "title": "核心素养导向下小学数学大单元教学设计与实施研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["核心素养", "大单元教学", "教学设计"],
+      "differenceHint": "若聚焦具体单元或特定素养维度可形成差异。"
+    },
+    {
+      "grantId": "grant-demo-005",
+      "title": "小学数学项目化学习的课堂实践研究",
+      "year": 2023,
+      "level": "市级",
+      "subject": "小学数学",
+      "keywords": ["项目化学习", "课堂实践", "小学数学"],
+      "differenceHint": "可限定特定知识领域（如几何测量项目）或特定年级。"
+    },
+    {
+      "grantId": "grant-demo-006",
+      "title": "深度学习视域下小学数学问题链设计与实践研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["深度学习", "问题链", "教学设计"],
+      "differenceHint": "可聚焦特定题型（如应用题、开放题）或特定年级。"
+    },
+    {
+      "grantId": "grant-demo-007",
+      "title": "小学数学运算能力培养的进阶策略研究",
+      "year": 2023,
+      "level": "校级",
+      "subject": "小学数学",
+      "keywords": ["运算能力", "进阶策略", "核心素养"],
+      "differenceHint": "可接入错因诊断或即时反馈工具形成差异。"
+    },
+    {
+      "grantId": "grant-demo-008",
+      "title": "基于学习数据的小学数学分层教学实践研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["学习数据", "分层教学", "数据驱动"],
+      "differenceHint": "可将'学习数据'具体化为课堂即时标记数据或错题追踪数据。"
+    },
+    {
+      "grantId": "grant-demo-009",
+      "title": "素养导向的小学数学表现性评价设计与应用研究",
+      "year": 2023,
+      "level": "市级",
+      "subject": "小学数学",
+      "keywords": ["表现性评价", "素养导向", "评价设计"],
+      "differenceHint": "可聚焦特定评价工具（如错因自评表、数学日记）。"
+    },
+    {
+      "grantId": "grant-demo-010",
+      "title": "双减背景下小学数学作业精准化设计实践研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["双减", "作业设计", "精准化"],
+      "differenceHint": "可将错因诊断结果用于驱动分层作业设计。"
+    },
+    {
+      "grantId": "grant-demo-011",
+      "title": "小学数学课堂中思维可视化工具的应用研究",
+      "year": 2023,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["思维可视化", "课堂工具", "数学思维"],
+      "differenceHint": "可聚焦特定工具（如概念图、错题地图）或特定知识领域。"
+    },
+    {
+      "grantId": "grant-demo-012",
+      "title": "小组合作学习中同伴反馈质量提升策略研究",
+      "year": 2022,
+      "level": "校级",
+      "subject": "小学数学",
+      "keywords": ["小组合作", "同伴反馈", "反馈质量"],
+      "differenceHint": "可引入'红黄绿投票+先独立思考再投票'的机制创新。"
+    },
+    {
+      "grantId": "grant-demo-013",
+      "title": "信息技术赋能小学数学课堂精准教学的实践研究",
+      "year": 2025,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["信息技术", "精准教学", "数字化"],
+      "differenceHint": "可将'精准'具体化为错因识别精准度或分层标准精准度。"
+    },
+    {
+      "grantId": "grant-demo-014",
+      "title": "小学数学概念教学中认知冲突的设计与实施研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["概念教学", "认知冲突", "教学设计"],
+      "differenceHint": "可聚焦特定概念（如分数意义、面积公式）或特定年级。"
+    },
+    {
+      "grantId": "grant-demo-015",
+      "title": "小学语文整本书阅读指导策略的实践研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学语文",
+      "keywords": ["整本书阅读", "阅读策略", "指导策略"],
+      "differenceHint": "跨学科对照案例，数学教师可参考其研究方法论。"
+    },
+    {
+      "grantId": "grant-demo-016",
+      "title": "基于学习任务群的小学语文单元整体教学研究",
+      "year": 2023,
+      "level": "市级",
+      "subject": "小学语文",
+      "keywords": ["学习任务群", "单元整体教学", "新课标"],
+      "differenceHint": "跨学科对照案例。"
+    },
+    {
+      "grantId": "grant-demo-017",
+      "title": "小学数学教学中学生元认知能力培养的实践研究",
+      "year": 2022,
+      "level": "校级",
+      "subject": "小学数学",
+      "keywords": ["元认知", "自我监控", "学习策略"],
+      "differenceHint": "可将'错因自评表'作为元认知训练工具，形成差异化论证。"
+    },
+    {
+      "grantId": "grant-demo-018",
+      "title": "数据驱动的小学数学课堂诊断与改进研究",
+      "year": 2025,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["数据驱动", "课堂诊断", "教学改进"],
+      "differenceHint": "可将'数据'具体化为课堂即时标记的三色数据（绿黄红）和错因分类统计。"
+    },
+    {
+      "grantId": "grant-demo-019",
+      "title": "人工智能辅助小学数学个性化学习路径研究",
+      "year": 2025,
+      "level": "市级",
+      "subject": "小学数学",
+      "keywords": ["人工智能", "个性化学习", "学习路径"],
+      "differenceHint": "技术门槛较高，可作为教师远期规划方向参考。"
+    },
+    {
+      "grantId": "grant-demo-020",
+      "title": "小学数学量感培养的课堂教学策略研究",
+      "year": 2024,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["量感", "核心素养", "教学策略"],
+      "differenceHint": "聚焦新课标新增的'量感'素养，可限定特定度量领域。"
+    },
+    {
+      "grantId": "grant-demo-021",
+      "title": "教学评一致性视角下小学数学课堂评价任务设计研究",
+      "year": 2025,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["教学评一致性", "评价任务", "课堂评价"],
+      "differenceHint": "可聚焦形成性评价工具（如评价量规、自评表）的设计与验证。"
+    },
+    {
+      "grantId": "grant-demo-022",
+      "title": "城乡结合部小学数学学困生转化策略的个案研究",
+      "year": 2023,
+      "level": "区级",
+      "subject": "小学数学",
+      "keywords": ["学困生", "转化策略", "个案研究"],
+      "differenceHint": "可接入错因诊断工具对学困生进行精准画像。"
+    }
+  ]
+}

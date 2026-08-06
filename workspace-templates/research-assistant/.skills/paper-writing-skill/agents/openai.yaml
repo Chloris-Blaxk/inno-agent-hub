@@ -1,0 +1,7 @@
+interface:
+  display_name: "论文写作助手"
+  short_description: "诊断论文结构并守卫真实引用"
+  default_prompt: "Use $paper-writing-skill to check my draft structure, trace claims to real evidence, and polish without adding facts."
+
+policy:
+  allow_implicit_invocation: true

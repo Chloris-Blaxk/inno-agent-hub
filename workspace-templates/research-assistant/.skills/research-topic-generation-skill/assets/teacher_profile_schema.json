@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["subject", "stage"],
+  "properties": {
+    "subject": {"type": "string", "description": "任教学科或研究学科"},
+    "stage": {"type": "string", "description": "学段，如小学、初中、高中、高校"},
+    "school_conditions": {"type": "string", "description": "学校条件、区域特点、可获得样本"},
+    "ability_base": {"type": "string", "description": "已有研究基础、方法能力、成果积累"},
+    "available_cycle": {"type": "string", "description": "可投入周期，如 3 个月、1 年、3 年"},
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "material_type": {"type": "string"},
+          "time": {"type": "string"},
+          "summary": {"type": "string"},
+          "evidence": {"type": "string"}
+        }
+      }
+    }
+  }
+}

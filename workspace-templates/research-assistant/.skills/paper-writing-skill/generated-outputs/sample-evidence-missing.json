@@ -1,0 +1,188 @@
+{
+  "requestId": "req-paper-writing-evidence-missing-001",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "summary": "仅找到主题相关文献，不能确认查询句来源，也不能作为支撑引用。",
+  "result": {
+    "literatureRecords": [
+      {
+        "paperId": "paper-demo-002",
+        "title": "小学数学错因诊断与针对性讲评策略研究",
+        "authors": [
+          "示例作者二"
+        ],
+        "year": 2022,
+        "journal": "基础教育研究示例",
+        "volume": "8",
+        "issue": "2",
+        "pages": "33-37",
+        "doi": "",
+        "keywords": [
+          "错因诊断",
+          "小学数学",
+          "讲评策略"
+        ],
+        "abstract": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified"
+      }
+    ],
+    "sourceTraceResults": [
+      {
+        "queryText": "课堂即时反馈能够显著提升学生数学成绩。",
+        "candidates": [
+          {
+            "paperId": "paper-demo-002",
+            "matchType": "abstract",
+            "matchSnippet": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+            "supportStatus": "related_only",
+            "confidence": "low",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract",
+              "page": "",
+              "paragraph": "",
+              "confidence": "medium"
+            },
+            "evidenceLevel": "abstract_verified",
+            "citation": "示例作者二. 小学数学错因诊断与针对性讲评策略研究[J]. 基础教育研究示例, 2022, 8(2): 33-37."
+          }
+        ],
+        "decision": "related_sources_only"
+      }
+    ],
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈能够显著提升学生数学成绩。",
+        "status": "needs_evidence",
+        "matchedEvidenceCards": [],
+        "riskNotes": [
+          "当前候选文献只与错因诊断相关，不能支撑成绩显著提升。"
+        ],
+        "recommendedRewrite": "如需保留成绩提升表述，请补充原文、数据或可验证研究证据。"
+      }
+    ],
+    "structureDiagnosis": {},
+    "revisionSuggestions": [],
+    "citationChecks": [],
+    "insertionSuggestions": [],
+    "citationWarnings": [
+      "未生成支撑性引用。"
+    ]
+  },
+  "handoff": {
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "status": "needs_evidence",
+        "matchedEvidenceCards": []
+      }
+    ],
+    "usableEvidenceCards": [],
+    "paperRevisionSummary": {
+      "addedFacts": 0,
+      "revisionSuggestionCount": 0,
+      "needsEvidenceRevisionCount": 0,
+      "citationCheckCount": 0,
+      "insertionSuggestionCount": 0,
+      "citationPolicy": "no_supporting_citation_inserted"
+    }
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "id": "source_trace_decision",
+        "status": "pass"
+      },
+      {
+        "id": "no_fabricated_citation",
+        "status": "pass"
+      }
+    ],
+    "warnings": [
+      "未找到可支撑原句的证据。"
+    ],
+    "metrics": {
+      "claimCount": 1,
+      "supportedClaimCount": 0,
+      "needsEvidenceCount": 1,
+      "sourceTraceHitCount": 0,
+      "citationFormatWarnings": 1,
+      "structureIssueCount": 0,
+      "missingAbstractElementCount": 0,
+      "revisionSuggestionCount": 0,
+      "addedFactCount": 0,
+      "needsEvidenceRevisionCount": 0,
+      "citationCheckCount": 0,
+      "citationReadyCount": 0,
+      "insertionSuggestionCount": 0,
+      "pendingTeacherConfirmationCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 1,
+    "verifiedSourceCount": 1,
+    "unsupportedClaimCount": 1
+  },
+  "nextActions": [
+    "上传原文片段或补充关键词后再做 source_trace。"
+  ],
+  "status": "warn",
+  "warnings": [
+    "未找到可支撑原句的证据。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-paper-writing-skill",
+    "skillId": "paper-writing-skill",
+    "taskIntent": "source_trace",
+    "dataSources": [
+      {
+        "sourceId": "shared-literature-pool",
+        "sourceName": "科研线共享本地文献池",
+        "sourceType": "local_mock",
+        "dataType": "literature_record",
+        "recordCount": 1,
+        "authorizationStatus": "mock_sample",
+        "version": "research-literature-adapter-v1",
+        "limitations": [
+          "由本地 mock 文献索引和样例白名单合并而来，不能替代真实授权检索。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-evidence-card-index",
+        "sourceName": "论文写作证据卡样例库",
+        "sourceType": "local_sample",
+        "dataType": "evidence_card",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "证据卡为样例数据；进入引用建议前仍需支撑性、定位和教师确认校验。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前查源依赖本地 mock/样例文献池；未验证支撑性的候选不得进入引用或正文事实。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "source_trace",
+    "sampleFile": "agent_cases/paper-writing-skill/generated-outputs/sample-evidence-missing.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/sample-evidence-missing.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

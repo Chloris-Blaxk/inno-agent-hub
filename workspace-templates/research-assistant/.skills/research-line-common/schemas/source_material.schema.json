@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/source_material.schema.json",
+  "title": "SourceMaterial",
+  "type": "object",
+  "required": [
+    "materialId",
+    "materialType",
+    "title",
+    "sourceStatus",
+    "permissions"
+  ],
+  "properties": {
+    "materialId": {"type": "string", "minLength": 1},
+    "materialType": {
+      "enum": [
+        "published_paper",
+        "lesson_case",
+        "teaching_reflection",
+        "project_result",
+        "project_process_record",
+        "team_info",
+        "budget_info",
+        "policy_notice",
+        "uploaded_paper_text",
+        "other"
+      ]
+    },
+    "title": {"type": "string", "minLength": 1},
+    "rawText": {"type": "string"},
+    "filePath": {"type": "string"},
+    "sourceStatus": {
+      "enum": ["user_provided", "synthetic", "authorized", "external_verified", "mock_sample", "unknown"]
+    },
+    "sensitivity": {
+      "enum": ["public", "internal", "personal", "sensitive", "unknown"]
+    },
+    "permissions": {
+      "type": "object",
+      "required": ["canUseForGeneration", "canStore", "canExport"],
+      "properties": {
+        "canUseForGeneration": {"type": "boolean"},
+        "canStore": {"type": "boolean"},
+        "canExport": {"type": "boolean"},
+        "license": {"type": "string"},
+        "limits": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "syntheticGeneratedBy": {"type": "string"},
+    "usableFor": {"type": "array", "items": {"type": "string"}},
+    "notUsableFor": {"type": "array", "items": {"type": "string"}},
+    "metadata": {"type": "object", "additionalProperties": true}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"sourceStatus": {"const": "synthetic"}}},
+      "then": {
+        "required": ["syntheticGeneratedBy", "usableFor", "notUsableFor"]
+      }
+    }
+  ],
+  "additionalProperties": true
+}

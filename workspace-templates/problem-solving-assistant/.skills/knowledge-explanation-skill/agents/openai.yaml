@@ -1,0 +1,7 @@
+interface:
+  display_name: "知识点讲解"
+  short_description: "用指定风格小步互动讲解具体知识点"
+  default_prompt: "Use $knowledge-explanation-skill to explain a specific knowledge point with an appropriate teaching style, one small interactive teaching move at a time."
+
+policy:
+  allow_implicit_invocation: true

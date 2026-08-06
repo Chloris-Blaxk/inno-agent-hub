@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "dataType": "mock",
+    "description": "AI 融合点模式和跨学科关联样例。供生成模型（Generator）在阶段二生成时参考。"
+  },
+  "aiIntegrationPatterns": [
+    {
+      "patternId": "ai-source-screening",
+      "toolType": "通用大模型或搜索增强问答工具",
+      "toolRole": "资料筛选助手",
+      "interventionStage": "资料整理",
+      "applicableSubject": ["语文", "社会", "历史", "地理"],
+      "useBoundary": "AI 只提供候选资料和筛选建议，学生必须核对来源并说明取舍理由。",
+      "studentCritiqueTask": "标注 AI 建议中可靠、存疑和不适用的信息，并写出判断依据。"
+    },
+    {
+      "patternId": "ai-expression-feedback",
+      "toolType": "通用大模型",
+      "toolRole": "表达反馈伙伴",
+      "interventionStage": "草稿修改",
+      "applicableSubject": ["语文", "英语"],
+      "useBoundary": "AI 只评价清楚、准确、条理，不替学生生成最终文本。",
+      "studentCritiqueTask": "比较原稿、AI 建议和修改稿，说明保留或拒绝某条建议的原因。"
+    },
+    {
+      "patternId": "ai-question-generator",
+      "toolType": "通用大模型",
+      "toolRole": "追问生成器",
+      "interventionStage": "探究深化",
+      "applicableSubject": ["科学", "物理", "化学", "生物"],
+      "useBoundary": "AI 生成的问题必须由学生筛选，教师确认是否符合课标和课堂目标。",
+      "studentCritiqueTask": "选择 1 个最值得继续探究的问题，并说明它与本课目标的关系。"
+    },
+    {
+      "patternId": "ai-analogy-generator",
+      "toolType": "通用大模型",
+      "toolRole": "类比生成器",
+      "interventionStage": "概念理解",
+      "applicableSubject": ["物理", "化学", "生物", "数学"],
+      "useBoundary": "AI 提供生活类比帮助理解抽象概念，学生必须判断类比是否贴切并说明哪里贴切、哪里不贴切。",
+      "studentCritiqueTask": "选择 AI 给出的类比中最贴切的一个，指出它在哪里与概念一致、在哪里有偏差，并尝试修正。"
+    },
+    {
+      "patternId": "ai-data-analysis-assistant",
+      "toolType": "通用大模型或数据分析工具",
+      "toolRole": "数据分析助手",
+      "interventionStage": "数据处理与可视化",
+      "applicableSubject": ["数学", "科学", "地理"],
+      "useBoundary": "AI 帮助整理数据格式和生成图表建议，学生必须自己选择图表类型、解释数据含义并得出结论。",
+      "studentCritiqueTask": "比较 AI 建议的图表类型与自己选择的图表类型，说明为什么自己的选择更适合当前数据。"
+    },
+    {
+      "patternId": "ai-debate-opponent",
+      "toolType": "通用大模型",
+      "toolRole": "辩论对手",
+      "interventionStage": "观点论证",
+      "applicableSubject": ["语文", "历史", "道德与法治"],
+      "useBoundary": "AI 模拟反方观点帮助学生发现论证漏洞，学生必须自己组织反驳论据，不能直接复制 AI 的表述。",
+      "studentCritiqueTask": "指出 AI 反驳中最有力的 1 个质疑，用自己的论据回应，并评估自己的论证是否因此需要调整。"
+    },
+    {
+      "patternId": "ai-scenario-simulator",
+      "toolType": "通用大模型",
+      "toolRole": "情境模拟器",
+      "interventionStage": "情境体验",
+      "applicableSubject": ["历史", "地理", "语文"],
+      "useBoundary": "AI 生成历史或地理情境的描述帮助学生建立画面感，学生必须结合史料或数据验证情境的合理性。",
+      "studentCritiqueTask": "指出 AI 描述的情境中哪些细节有史料或数据支撑，哪些是推测，并说明推测是否合理。"
+    },
+    {
+      "patternId": "ai-experiment-designer",
+      "toolType": "通用大模型",
+      "toolRole": "实验方案建议器",
+      "interventionStage": "实验设计",
+      "applicableSubject": ["物理", "化学", "生物", "科学"],
+      "useBoundary": "AI 提供实验步骤和器材建议，学生必须评估方案的可行性、安全性和变量控制，最终方案由学生确认。",
+      "studentCritiqueTask": "审查 AI 建议的实验方案，找出 1 个可能影响结果准确性的因素，提出改进办法。"
+    },
+    {
+      "patternId": "ai-knowledge-map-builder",
+      "toolType": "通用大模型或思维导图工具",
+      "toolRole": "知识关联提示器",
+      "interventionStage": "知识梳理",
+      "applicableSubject": ["生物", "历史", "地理", "科学"],
+      "useBoundary": "AI 提示知识点之间的可能关联，学生必须判断关联是否成立并补充自己的理解。",
+      "studentCritiqueTask": "保留 AI 提示中自己认同的关联，删除不准确的，并添加 AI 未提到的 1 个自己的关联。"
+    },
+    {
+      "patternId": "ai-visualization-critic",
+      "toolType": "通用大模型或图表分析工具",
+      "toolRole": "可视化审阅员",
+      "interventionStage": "成果优化",
+      "applicableSubject": ["数学", "科学", "地理"],
+      "useBoundary": "AI 评价学生制作的图表或海报的信息完整性和表达清晰度，不替学生修改设计。",
+      "studentCritiqueTask": "根据 AI 的 3 条改进建议，选择最有价值的 1 条实施，说明选择理由。"
+    }
+  ],
+  "interdisciplinaryLinks": [
+    {
+      "linkId": "link-water-data-math-science",
+      "primarySubject": "科学",
+      "linkedSubject": "数学",
+      "topic": "校园节水",
+      "connection": "科学关注节水问题和方案可行性，数学提供调查数据整理、统计图表达和数据解释方法。",
+      "integrationNode": "学生用数学图表呈现校园用水调查结果，再用科学视角提出节水方案。",
+      "commonProduct": "校园节水数据报告与改进建议海报",
+      "applicableBoundary": "适合简单调查和数据表达，不涉及复杂统计推断或专业水质检测。"
+    },
+    {
+      "linkId": "link-exposition-science-source",
+      "primarySubject": "语文",
+      "linkedSubject": "科学",
+      "topic": "说明文资料筛选",
+      "connection": "语文关注说明表达的准确清楚，科学提供资料来源可靠性和证据意识。",
+      "integrationNode": "学生筛选科学资料后，用说明文方式表达对象特征。",
+      "commonProduct": "一段来源清楚、表达准确的说明文片段",
+      "applicableBoundary": "适合资料筛选和表达训练，不扩展到完整科学研究报告。"
+    },
+    {
+      "linkId": "link-lever-physics-math",
+      "primarySubject": "物理",
+      "linkedSubject": "数学",
+      "topic": "杠杆原理",
+      "connection": "物理关注杠杆的力和力臂关系，数学提供比例关系和数据建模方法。",
+      "integrationNode": "学生用数学比例关系验证杠杆平衡条件，再用物理原理解释生活中的杠杆应用。",
+      "commonProduct": "杠杆原理探究报告（含数据验证和生活应用分析）",
+      "applicableBoundary": "适合简单比例计算和实验验证，不涉及力矩的向量分析或复杂静力学。"
+    },
+    {
+      "linkId": "link-ecology-biology-geography",
+      "primarySubject": "生物",
+      "linkedSubject": "地理",
+      "topic": "校园生态系统调查",
+      "connection": "生物关注物种多样性和生态关系，地理提供地形、气候和土地利用的空间视角。",
+      "integrationNode": "学生在校园地图上标注生物分布，结合地形和微气候分析分布原因。",
+      "commonProduct": "校园生态地图与分布原因分析报告",
+      "applicableBoundary": "适合校园范围的简单调查，不涉及专业生态评估或 GIS 分析。"
+    },
+    {
+      "linkId": "link-refraction-physics-math",
+      "primarySubject": "物理",
+      "linkedSubject": "数学",
+      "topic": "光的折射",
+      "connection": "物理关注折射现象和规律，数学提供三角函数计算折射角的方法。",
+      "integrationNode": "学生通过实验测量入射角和折射角，用三角函数验证斯涅尔定律。",
+      "commonProduct": "折射实验数据表与三角函数计算报告",
+      "applicableBoundary": "仅使用基础三角函数（sin/cos/tan），不涉及反三角函数或波动光学。"
+    },
+    {
+      "linkId": "link-argumentation-chinese-history",
+      "primarySubject": "语文",
+      "linkedSubject": "历史",
+      "topic": "围绕历史事件进行论证写作",
+      "connection": "语文关注论证结构、论据组织和语言表达，历史提供史料实证和时空观念。",
+      "integrationNode": "学生搜集历史资料作为论据，用语文课学到的论证方法撰写关于历史事件评价的议论文。",
+      "commonProduct": "一篇有史料支撑的议论文",
+      "applicableBoundary": "适合围绕单一历史事件的论证训练，不涉及复杂史学方法论或跨时代比较。"
+    },
+    {
+      "linkId": "link-climate-geography-math",
+      "primarySubject": "地理",
+      "linkedSubject": "数学",
+      "topic": "气候数据分析",
+      "connection": "地理关注气温和降水特征及其对生产生活的影响，数学提供数据读取、整理和图表表达方法。",
+      "integrationNode": "学生用数学方法读取气温降水图表数据，计算年均温和年降水量，再用地理视角分析气候特征。",
+      "commonProduct": "气候数据图表分析报告（含计算过程和特征描述）",
+      "applicableBoundary": "适合简单数据读取和基本统计计算，不涉及气候成因的气团分析或全球气候模型。"
+    },
+    {
+      "linkId": "link-local-history-chinese-geography",
+      "primarySubject": "历史",
+      "linkedSubject": "地理",
+      "topic": "本地历史遗迹调查",
+      "connection": "历史关注遗迹的历史背景和文化价值，地理提供地理位置、空间分布和人地关系视角。",
+      "integrationNode": "学生在地图上标注本地历史遗迹位置，结合地理环境分析遗迹选址原因和保护现状。",
+      "commonProduct": "本地历史遗迹地图与保护建议报告",
+      "applicableBoundary": "适合本地范围的实地调查，不涉及档案学专业检索或大尺度历史地理分析。"
+    },
+    {
+      "linkId": "link-biodiversity-biology-chinese",
+      "primarySubject": "生物",
+      "linkedSubject": "语文",
+      "topic": "校园生物多样性调查报告",
+      "connection": "生物关注物种分类和生态观察方法，语文关注说明文的资料筛选和准确表达。",
+      "integrationNode": "学生完成生物观察记录后，用说明文方式撰写校园生物多样性调查报告。",
+      "commonProduct": "一份结构完整、表达准确的生物多样性调查报告",
+      "applicableBoundary": "适合简单的观察记录和说明文写作，不涉及专业分类学或学术论文写作。"
+    },
+    {
+      "linkId": "link-ecology-biology-chinese",
+      "primarySubject": "生物",
+      "linkedSubject": "语文",
+      "topic": "校园生态保护倡议书",
+      "connection": "生物关注生态关系和保护建议的科学性，语文关注倡议书的说服力和表达效果。",
+      "integrationNode": "学生基于生物调查结果，用语文课学到的说服技巧撰写面向全校的生态保护倡议书。",
+      "commonProduct": "一份有科学依据、表达有说服力的生态保护倡议书",
+      "applicableBoundary": "适合简单的倡议书写作，不涉及复杂修辞手法或专业环保政策分析。"
+    }
+  ]
+}

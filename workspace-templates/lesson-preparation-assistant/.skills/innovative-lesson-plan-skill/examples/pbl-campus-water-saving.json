@@ -1,0 +1,15 @@
+{
+  "subject": "科学",
+  "grade": "六年级",
+  "textbookVersion": "教科版",
+  "topic": "校园节水方案设计",
+  "innovationType": "PBL",
+  "durationMin": 40,
+  "constraints": ["普通教室", "可使用平板", "小组合作", "可进行课前校园观察"],
+  "requirements": "生成一份 PBL 教案，包含驱动问题、里程碑任务、最终产出、活动流程和评价量规。",
+  "confirmedContext": {
+    "drivingQuestionDirection": "基于校园真实用水情况提出可执行方案",
+    "finalProductType": "方案海报",
+    "projectSpan": "单课时40分钟"
+  }
+}

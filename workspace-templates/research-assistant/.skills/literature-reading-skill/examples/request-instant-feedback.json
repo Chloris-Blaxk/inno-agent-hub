@@ -1,0 +1,31 @@
+{
+  "requestId": "req-instant-feedback-001",
+  "entryToken": "@文献阅读助手",
+  "skillId": "literature-reading-skill",
+  "taskIntent": "literature_discovery",
+  "sourceRequest": "围绕小学数学课堂即时反馈，筛选 5 篇优先阅读文献。",
+  "teacherProfile": {
+    "subject": "小学数学",
+    "gradeBand": "小学全段",
+    "schoolContext": "城区普通小学",
+    "researchExperience": "",
+    "existingAchievements": [],
+    "availableCycle": "",
+    "constraints": []
+  },
+  "input": {
+    "researchTopic": "小学数学课堂即时反馈",
+    "keywords": ["即时反馈", "课堂反馈", "小学数学", "教学调整", "学习证据"],
+    "readingGoal": "筛选 5 篇优先阅读文献，了解小学数学课堂即时反馈的研究现状与核心发现。",
+    "availablePapers": []
+  },
+  "researchWorkspace": null,
+  "constraints": {
+    "language": "zh-CN",
+    "citationStyle": "GB/T 7714",
+    "allowExternalSearch": false,
+    "strictEvidence": true
+  },
+  "assumptions": [],
+  "sourceFiles": []
+}

@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "description": "物理学科错误模式库",
+  "errorCategories": [
+    {
+      "categoryId": "physics-force-analysis",
+      "categoryName": "受力分析错误",
+      "description": "力的分析、合成、分解过程中的常见错误",
+      "patterns": [
+        {
+          "id": "err-phy-force-missing",
+          "name": "漏力",
+          "knowledgePointIds": ["phy-force-analysis", "phy-newton-law"],
+          "symptom": "受力分析时遗漏某个力（常见漏摩擦力或支持力）",
+          "likelyCause": "对接触面之间的相互作用不敏感，或忽略了运动状态的影响",
+          "diagnosisSignals": ["力的个数不全", "合力方向与加速度方向不一致", "力的平衡条件不满足"],
+          "hintTemplate": "受力分析时，先想清楚物体接触了什么，每个接触面都可能有力。",
+          "remediationSteps": [
+            "按顺序排查：重力→弹力→摩擦力→其他力",
+            "每个接触面都检查：有没有弹力？有没有摩擦力？",
+            "用牛顿第二定律验证：合力方向是否与加速度方向一致"
+          ]
+        },
+        {
+          "id": "err-phy-force-extra",
+          "name": "多力",
+          "knowledgePointIds": ["phy-force-analysis"],
+          "symptom": "画了不存在的力（如向前的'冲力'或'运动力'）",
+          "likelyCause": "用生活直觉替代物理概念，认为运动就必须有力维持",
+          "diagnosisSignals": ["出现'冲力'或'惯性力'", "力的方向与运动方向相同但无施力物体"],
+          "hintTemplate": "每个力都要找到施力物体。如果找不到谁给了这个力，那它就不存在。",
+          "remediationSteps": [
+            "理解牛顿第一定律：匀速运动不需要力维持",
+            "每画一个力都问自己：谁给的这个力？",
+            "没有施力物体的力一定是错的"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "physics-unit-dimension",
+      "categoryName": "单位与量纲错误",
+      "description": "物理量的单位换算、量纲分析中的错误",
+      "patterns": [
+        {
+          "id": "err-phy-unit-inconsistent",
+          "name": "单位不统一",
+          "knowledgePointIds": ["phy-kinematics", "phy-mechanics"],
+          "symptom": "计算中混用不同单位制（如km/h和m/s混用）",
+          "likelyCause": "代入公式前没有统一单位",
+          "diagnosisSignals": ["速度用km/h但时间用s", "长度用cm但力用N", "结果数量级异常"],
+          "hintTemplate": "代入公式前，先把所有量统一到国际单位制（SI）。",
+          "remediationSteps": [
+            "养成习惯：代入公式前先统一单位",
+            "常见换算：1km/h = 1/3.6 m/s，1cm = 0.01m",
+            "用量纲检查答案是否合理"
+          ]
+        },
+        {
+          "id": "err-phy-formula-unit-wrong",
+          "name": "公式结果单位错误",
+          "knowledgePointIds": ["phy-mechanics", "phy-energy"],
+          "symptom": "用对了公式但单位写错（如功的单位写成N而非J）",
+          "likelyCause": "只记公式不记各物理量的单位",
+          "diagnosisSignals": ["数值正确但单位错误", "单位与物理量不匹配"],
+          "hintTemplate": "算完数值后要检查单位。功的单位是焦耳(J)，不是牛顿(N)。",
+          "remediationSteps": [
+            "记住基本物理量的单位：力(N)、功(J)、功率(W)、速度(m/s)、加速度(m/s²)",
+            "用公式推导单位：W=Fs → J=N·m",
+            "写答案时数值和单位一起写"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "physics-formula-misuse",
+      "categoryName": "公式误用",
+      "description": "使用了不适用当前情境的公式，或公式条件不满足",
+      "patterns": [
+        {
+          "id": "err-phy-uniform-formula-nonuniform",
+          "name": "匀速公式用于变速",
+          "knowledgePointIds": ["phy-kinematics"],
+          "symptom": "在加速运动中使用v=s/t求瞬时速度",
+          "likelyCause": "混淆平均速度和瞬时速度",
+          "diagnosisSignals": ["加速度不为0却用v=s/t", "求瞬时速度用了总路程/总时间"],
+          "hintTemplate": "v=s/t求的是平均速度。如果是匀加速运动，瞬时速度要用v=v₀+at。",
+          "remediationSteps": [
+            "区分平均速度和瞬时速度",
+            "匀变速运动公式：v=v₀+at, s=v₀t+½at², v²=v₀²+2as",
+            "判断运动类型后再选择公式"
+          ]
+        },
+        {
+          "id": "err-phy-energy-conservation-misuse",
+          "name": "能量守恒误用",
+          "knowledgePointIds": ["phy-energy-conservation"],
+          "symptom": "有摩擦力做功时仍用机械能守恒",
+          "likelyCause": "不理解机械能守恒的条件：只有重力和弹力做功",
+          "diagnosisSignals": ["有摩擦力但用½mv²=mgh", "有外力做功但只写动能+势能守恒"],
+          "hintTemplate": "机械能守恒的条件是：只有重力和弹力做功。有摩擦力时要用动能定理。",
+          "remediationSteps": [
+            "判断条件：只有重力/弹力做功→机械能守恒；有其他力→用动能定理",
+            "动能定理：W合=ΔEk，适用于所有情况",
+            "有摩擦力时：Ek1+Ep1 = Ek2+Ep2+Wf"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "physics-direction-sign",
+      "categoryName": "方向与正负号错误",
+      "description": "矢量方向的正负号选取和判断错误",
+      "patterns": [
+        {
+          "id": "err-phy-direction-sign",
+          "name": "正方向选取不一致",
+          "knowledgePointIds": ["phy-kinematics", "phy-newton-law"],
+          "symptom": "同一题中对不同物理量使用了不同的正方向",
+          "likelyCause": "没有在开始时统一规定正方向",
+          "diagnosisSignals": ["速度取正向右但加速度取正向左", "力的正方向前后不一致"],
+          "hintTemplate": "先规定正方向，然后所有矢量都按同一个正方向取正负。",
+          "remediationSteps": [
+            "在解题开始时明确写出：取…方向为正方向",
+            "所有矢量（力、速度、加速度）都按这个正方向取正负",
+            "代入公式时保持正负号一致"
+          ]
+        }
+      ]
+    }
+  ]
+}

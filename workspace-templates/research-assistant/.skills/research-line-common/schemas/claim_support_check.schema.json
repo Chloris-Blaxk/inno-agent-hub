@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/claim_support_check.schema.json",
+  "title": "ClaimSupportCheck",
+  "type": "object",
+  "required": [
+    "checkId",
+    "claim",
+    "literatureVerification",
+    "evidenceMatches",
+    "decision",
+    "reasons"
+  ],
+  "properties": {
+    "checkId": {"type": "string", "minLength": 1},
+    "claim": {"type": "string", "minLength": 1},
+    "literatureVerification": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["verified", "candidate_match", "not_verified", "not_checked"]},
+        "paperId": {"type": "string"},
+        "warnings": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "evidenceMatches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidenceCardId", "supportType", "evidenceLevel"],
+        "properties": {
+          "evidenceCardId": {"type": "string", "minLength": 1},
+          "supportType": {"enum": ["direct_support", "partial_support", "background", "not_support"]},
+          "evidenceLevel": {"enum": ["abstract_verified", "fulltext_verified", "user_text_only"]},
+          "confidence": {"enum": ["high", "medium", "low"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "decision": {
+      "enum": ["suggest_insert", "need_more_evidence", "blocked_fake_reference", "blocked_unsupported"]
+    },
+    "requiresTeacherConfirmation": {"type": "boolean"},
+    "reasons": {"type": "array", "items": {"type": "string"}},
+    "limits": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"decision": {"const": "suggest_insert"}}},
+      "then": {
+        "required": ["requiresTeacherConfirmation"],
+        "properties": {
+          "requiresTeacherConfirmation": {"const": true}
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

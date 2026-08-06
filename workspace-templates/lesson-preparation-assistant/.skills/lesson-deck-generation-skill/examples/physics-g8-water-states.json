@@ -1,0 +1,24 @@
+{
+  "requestId": "demo-002",
+  "sourceRequest": "帮我生成一个八年级物理水的三态变化的课件",
+  "taskIntent": "script",
+  "input": {
+    "subject": "物理",
+    "grade": "八年级",
+    "textbookVersion": "人教版",
+    "unit": "物态变化",
+    "period": "第 1 课时",
+    "topic": "水的三态变化",
+    "lessonType": "new_concept",
+    "durationMin": 40,
+    "studentProfile": {
+      "priorKnowledge": ["物质的基本形态", "温度概念", "热传递"],
+      "commonDifficulties": ["白雾就是水蒸气", "蒸发和沸腾混淆"]
+    }
+  },
+  "options": {
+    "outputFormat": "deck_json+teacher_script_md+html_preview"
+  },
+  "constraints": ["普通教室", "黑板", "教师电脑投影"],
+  "assumptions": []
+}

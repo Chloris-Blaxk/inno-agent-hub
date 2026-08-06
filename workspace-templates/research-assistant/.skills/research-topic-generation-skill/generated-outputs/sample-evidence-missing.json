@@ -1,0 +1,250 @@
+{
+  "requestId": "req-research-topic-evidence-missing-001",
+  "skillId": "research-topic-generation-skill",
+  "taskIntent": "planning_topic",
+  "summary": "用户未提供课例或成果材料，因此只生成规划性选题，并明确补资料清单。",
+  "result": {
+    "materialDigests": [],
+    "materialClusters": [],
+    "researchTrajectory": {
+      "trajectoryId": "trajectory-001",
+      "stage": "insufficient_material",
+      "sourceMaterialIds": [],
+      "dominantThemes": [],
+      "trajectorySummary": "当前只有教师画像，尚无可证明已有积累的材料。",
+      "pastAccumulation": [],
+      "currentFocusableDirections": [
+        "先补充课例、反思、学生作品或成果材料，再生成总结性选题。"
+      ],
+      "futureDeepeningPath": [
+        {
+          "stepId": "path-001",
+          "timeframe": "1-2 周",
+          "action": "整理至少 1 份课例或教学反思，标注问题、对象和改进动作。",
+          "requiredEvidence": [
+            "课例文本",
+            "教学反思"
+          ],
+          "output": "可用于总结性选题的 MaterialDigest"
+        },
+        {
+          "stepId": "path-002",
+          "timeframe": "1 个月",
+          "action": "补充课堂观察或学生作品样本，形成证据链雏形。",
+          "requiredEvidence": [
+            "课堂观察表",
+            "学生作品或错题样本"
+          ],
+          "output": "可验证研究基础的材料包"
+        }
+      ],
+      "risks": [
+        "材料不足时只能生成规划性方向，不能声称已有成果。"
+      ]
+    },
+    "topicCandidates": [
+      {
+        "topicId": "topic-001",
+        "topicTitle": "小学数学课堂反馈数据采集流程优化研究",
+        "topicType": "planning",
+        "researchQuestion": "如何在小学数学课堂中规范采集可用于错因诊断的反馈数据？",
+        "existingBasis": [
+          {
+            "basis": "仅依据教师画像：小学数学、高年级、可投入 1 年；尚无用户材料支撑。"
+          }
+        ],
+        "innovationPoints": [
+          "从反馈数据采集流程切入，避免直接声称已有成果。"
+        ],
+        "feasibility": {
+          "score": 3,
+          "risks": [
+            "缺少已有课例和学生错题样本，不能生成总结性选题。"
+          ],
+          "neededMaterials": [
+            "近 2 个单元的课堂记录",
+            "学生错题样本",
+            "已有教研反思"
+          ]
+        },
+        "keywords": [
+          "课堂反馈",
+          "数据采集",
+          "错因诊断"
+        ],
+        "nextReadingQuestions": [
+          "课堂反馈数据应包含哪些可观察维度？"
+        ],
+        "basisGap": {
+          "currentBasis": [
+            "仅依据教师画像：小学数学、高年级、可投入 1 年；尚无用户材料支撑。"
+          ],
+          "targetRequirement": "区级课题申报通常需要问题来源、连续实践证据、研究方法、过程数据和可展示成果。",
+          "gaps": [
+            "缺少已有课例和学生错题样本，不能生成总结性选题。",
+            "缺少反馈数据采集表和课堂观察记录。"
+          ],
+          "upgradePath": [
+            "先补充近 2 个单元的课堂记录。",
+            "整理学生错题样本并形成分类规则。",
+            "再把规划性方向升级为总结性选题。"
+          ]
+        },
+        "differentiation": {
+          "nearestGrantId": "grant-demo-002",
+          "nearestGrantTitle": "基于错因分析的小学高年级分数教学改进研究",
+          "similarityScore": 0.33,
+          "riskLevel": "low",
+          "differenceStrategy": "与样例立项题相似度较低，仍需在申报书中说明反馈数据采集流程和成果形态。",
+          "differentiatedTitleSuggestion": "小学数学课堂反馈数据采集流程优化研究"
+        }
+      }
+    ],
+    "topicEvaluationReport": {
+      "materialEvidenceCoverage": 0,
+      "clusteredMaterialCoverage": 0,
+      "materialClusterChecks": [],
+      "researchTrajectoryCheck": {
+        "stage": "insufficient_material",
+        "sourceMaterialCount": 0,
+        "futureStepCount": 2
+      },
+      "differentiationChecks": [
+        {
+          "topicId": "topic-001",
+          "nearestGrantId": "grant-demo-002",
+          "similarityScore": 0.33,
+          "riskLevel": "low"
+        }
+      ],
+      "basisGapChecks": [
+        {
+          "topicId": "topic-001",
+          "gapCount": 2,
+          "upgradeStepCount": 3
+        }
+      ],
+      "notes": [
+        "材料缺失，已降级为规划性建议。"
+      ]
+    }
+  },
+  "handoff": {
+    "topicCandidates": [
+      "topic-001"
+    ],
+    "materialClusters": [],
+    "researchTrajectory": "trajectory-001",
+    "keywords": [
+      "课堂反馈",
+      "数据采集",
+      "错因诊断"
+    ],
+    "readingQuestions": [
+      "课堂反馈数据应包含哪些可观察维度？"
+    ]
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "id": "no_fabricated_achievements",
+        "status": "pass"
+      },
+      {
+        "id": "needed_materials_listed",
+        "status": "pass"
+      }
+    ],
+    "warnings": [
+      "未提供用户材料，不能生成总结性选题。"
+    ],
+    "metrics": {
+      "topicCount": 1,
+      "summativeCount": 0,
+      "planningCount": 1,
+      "materialEvidenceCoverage": 0,
+      "feasibilityWarnings": 1,
+      "basisGapCount": 1,
+      "differentiationCheckCount": 1,
+      "highSimilarityCount": 0,
+      "materialClusterCount": 0,
+      "clusteredMaterialCoverage": 0,
+      "trajectoryStepCount": 2
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 0,
+    "verifiedSourceCount": 0,
+    "unsupportedClaimCount": 0
+  },
+  "nextActions": [
+    "上传课例、教学反思或成果材料后再生成总结性选题。"
+  ],
+  "status": "warn",
+  "warnings": [
+    "未提供用户材料，不能生成总结性选题。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-research-topic-generation-skill",
+    "skillId": "research-topic-generation-skill",
+    "taskIntent": "planning_topic",
+    "dataSources": [
+      {
+        "sourceId": "grant-title-samples",
+        "sourceName": "本地立项题样例库",
+        "sourceType": "local_sample",
+        "dataType": "grant_title_sample",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "仅用于相似度演示和首轮降重提示，不能代表真实地区立项库覆盖。"
+        ]
+      },
+      {
+        "sourceId": "policy-hotspot-tags",
+        "sourceName": "本地政策热点标签样例",
+        "sourceType": "local_sample",
+        "dataType": "policy_hotspot_tag",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "政策标签为本地样例，真实申报前需按地区和年份更新。"
+        ]
+      },
+      {
+        "sourceId": "practice-problem-bank",
+        "sourceName": "本地实践问题样例库",
+        "sourceType": "local_sample",
+        "dataType": "practice_problem_cluster",
+        "recordCount": 3,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "实践问题库为种子样例，不能覆盖所有学段、学科和学校情境。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "立项题、政策热点和实践问题库仍为本地样例；选题只能作为候选方向，需结合真实区域要求复核。"
+    ]
+  },
+  "inputSummary": {
+    "sourceRequest": "",
+    "taskIntent": "planning_topic",
+    "sampleFile": "agent_cases/research-topic-generation-skill/generated-outputs/sample-evidence-missing.json"
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/research-topic-generation-skill/generated-outputs/sample-evidence-missing.json",
+      "description": "样例结构化输出"
+    }
+  ]
+}

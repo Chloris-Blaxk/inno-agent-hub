@@ -1,0 +1,7 @@
+interface:
+  display_name: "文献阅读助手"
+  short_description: "筛文献、精读论文并沉淀证据卡"
+  default_prompt: "Use $literature-reading-skill to find priority papers, read them safely, and produce reusable evidence cards."
+
+policy:
+  allow_implicit_invocation: true

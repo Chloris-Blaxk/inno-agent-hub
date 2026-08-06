@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-design.local/research-line/research_line.schema.json",
+  "title": "ResearchLineEnvelope",
+  "type": "object",
+  "required": [
+    "requestId",
+    "skillId",
+    "taskIntent",
+    "status",
+    "summary",
+    "warnings",
+    "dataSourceReport",
+    "result",
+    "handoff",
+    "qualityReport",
+    "provenanceReport",
+    "nextActions"
+  ],
+  "properties": {
+    "requestId": {"type": "string", "minLength": 1},
+    "skillId": {"type": "string", "minLength": 1},
+    "taskIntent": {"type": "string", "minLength": 1},
+    "status": {"enum": ["pass", "warn", "failed"]},
+    "summary": {"type": "string"},
+    "inputSummary": {
+      "type": "object",
+      "description": "Compact input summary, missing fields, assumptions, and data-source notes.",
+      "additionalProperties": true
+    },
+    "warnings": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "dataSourceReport": {
+      "type": "object",
+      "required": ["dataSources", "mockDataUsed", "overallLimitations"],
+      "properties": {
+        "dataSources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["sourceId", "sourceName", "sourceType", "dataType", "recordCount", "authorizationStatus", "limitations"],
+            "properties": {
+              "sourceId": {"type": "string"},
+              "sourceName": {"type": "string"},
+              "sourceType": {"type": "string"},
+              "dataType": {"type": "string"},
+              "recordCount": {"type": "integer", "minimum": 0},
+              "authorizationStatus": {"type": "string"},
+              "version": {"type": "string"},
+              "limitations": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": true
+          }
+        },
+        "mockDataUsed": {"type": "boolean"},
+        "userProvidedDataUsed": {"type": "boolean"},
+        "authorizedDataUsed": {"type": "boolean"},
+        "externalVerifiedDataUsed": {"type": "boolean"},
+        "overallLimitations": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "path"],
+        "properties": {
+          "type": {"type": "string"},
+          "path": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "result": {
+      "type": "object",
+      "description": "Full skill-specific output object."
+    },
+    "handoff": {
+      "type": "object",
+      "description": "Compact downstream object. It may summarize result objects but must not rely on IDs alone."
+    },
+    "researchWorkspace": {
+      "$ref": "research_workspace.schema.json"
+    },
+    "qualityReport": {
+      "type": "object",
+      "required": ["status", "checks", "warnings", "metrics"],
+      "properties": {
+        "status": {"enum": ["pass", "warn", "failed"]},
+        "checks": {"type": "array", "items": {"type": "object"}},
+        "warnings": {"type": "array", "items": {"type": "string"}},
+        "metrics": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "provenanceReport": {
+      "type": "object",
+      "required": ["sourceCount", "verifiedSourceCount", "unsupportedClaimCount"],
+      "properties": {
+        "sourceCount": {"type": "integer", "minimum": 0},
+        "verifiedSourceCount": {"type": "integer", "minimum": 0},
+        "unsupportedClaimCount": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "nextActions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "pass"}}},
+      "then": {
+        "properties": {
+          "qualityReport": {
+            "properties": {"status": {"const": "pass"}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"status": {"const": "warn"}}},
+      "then": {
+        "properties": {
+          "qualityReport": {
+            "properties": {"status": {"const": "warn"}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"status": {"const": "failed"}}},
+      "then": {
+        "properties": {
+          "qualityReport": {
+            "properties": {"status": {"const": "failed"}}
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

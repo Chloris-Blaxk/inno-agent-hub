@@ -1,0 +1,9 @@
+{
+  "subject": "科学",
+  "grade": "六年级",
+  "topic": "校园节水方案设计",
+  "innovationType": "PBL",
+  "durationMin": 40,
+  "constraints": ["普通教室", "可使用平板", "小组合作"],
+  "requirements": "生成一份 PBL 教案，包含驱动问题、活动流程、阶段产出和评价量规。"
+}

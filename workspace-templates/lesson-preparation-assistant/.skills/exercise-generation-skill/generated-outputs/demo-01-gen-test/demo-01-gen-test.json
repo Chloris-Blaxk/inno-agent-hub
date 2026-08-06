@@ -1,0 +1,421 @@
+{
+  "exerciseMeta": {
+    "title": "同分母分数加减法·课堂速测 课堂练习",
+    "subject": "数学",
+    "grade": "五年级",
+    "textbookVersion": "人教版",
+    "unit": "分数的加法和减法",
+    "period": "第1课时",
+    "topic": "同分母分数加减法·课堂速测",
+    "taskType": "classroom_practice",
+    "questionCount": 5,
+    "source": "InnoSpark-235B-dynamic-generation"
+  },
+  "blueprint": {
+    "taskType": "classroom_practice",
+    "layerPlan": [
+      {
+        "layer": "A",
+        "name": "基础层",
+        "targetCount": 2,
+        "difficultyRange": [
+          1,
+          2
+        ],
+        "goal": "能理解题意并完成一步分数加减计算或基础应用。",
+        "cognitiveLevel": "理解"
+      },
+      {
+        "layer": "B",
+        "name": "巩固层",
+        "targetCount": 3,
+        "difficultyRange": [
+          2,
+          3
+        ],
+        "goal": "能在常见变式、一步或两步应用题中正确选择方法。",
+        "cognitiveLevel": "应用"
+      }
+    ],
+    "questionTypes": [
+      "计算题",
+      "判断题"
+    ],
+    "layerTargets": {
+      "A": 2,
+      "B": 3
+    },
+    "questionTypeTargets": {
+      "计算题": 3,
+      "判断题": 2
+    },
+    "difficultyTargets": {
+      "1": 2,
+      "2": 2,
+      "3": 1
+    },
+    "strictBlueprint": false,
+    "knowledgePointIds": [
+      "math-g5-fraction-same-denominator-add"
+    ],
+    "lessonBoundary": "理解分数单位相同才能直接相加减；结果要约成最简分数；假分数可化成整数或带分数。",
+    "requirements": "5分钟课堂速测。只出A层和B层，以计算题为主，加1道判断题。题目简短，适合当堂完成。"
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "计算题",
+      "difficulty": 1,
+      "cognitiveLevel": "理解",
+      "stem": "计算：\\frac{4}{9} + \\frac{2}{9} = ?",
+      "answer": "\\frac{2}{3}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相加。",
+        "4 + 2 = 6，所以 \\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。",
+        "将 \\frac{6}{9} 约分，分子分母同时除以3，得到 \\frac{2}{3}。"
+      ],
+      "commonErrors": [
+        "忘记约分",
+        "分子分母相加"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加法法则：分母不变，分子相加。同时提醒学生注意结果必须化为最简分数。",
+      "sourceId": "A1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q002",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "A",
+      "questionType": "应用题",
+      "difficulty": 2,
+      "cognitiveLevel": "理解",
+      "stem": "一瓶果汁，小明喝了 \\frac{1}{5}，小红喝了 \\frac{2}{5}，两人一共喝了这瓶果汁的几分之几？",
+      "answer": "\\frac{3}{5}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{5} + \\frac{2}{5}。",
+        "分母相同，分子相加：1 + 2 = 3，所以 \\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}。",
+        "结果 \\frac{3}{5} 已经是最简分数，无需约分。"
+      ],
+      "commonErrors": [
+        "用减法计算",
+        "分母相加"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解“一共”表示求和，从而选择加法运算。通过具体情境帮助学生巩固同分母分数加法的实际应用。",
+      "sourceId": "A2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q003",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "计算题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "计算：\\frac{4}{9} + \\frac{2}{9} - \\frac{1}{9} = ?",
+      "answer": "\\frac{5}{9}",
+      "solutionSteps": [
+        "按从左到右顺序计算：\\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。",
+        "\\frac{6}{9} - \\frac{1}{9} = \\frac{5}{9}。",
+        "注意：\\frac{6}{9} 可以约分为 \\frac{2}{3}，但在此题中无需约分，直接计算即可。"
+      ],
+      "commonErrors": [
+        "计算顺序错误",
+        "忘记约分"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加减法的运算顺序，以及约分的必要性。",
+      "sourceId": "B1",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q004",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "应用题",
+      "difficulty": 3,
+      "cognitiveLevel": "应用",
+      "stem": "一个水桶装满了水，第一次倒出 \\frac{1}{5}，第二次倒出 \\frac{2}{5}，还剩多少水？",
+      "answer": "\\frac{2}{5}",
+      "solutionSteps": [
+        "把整桶水看作单位 1，即 \\frac{5}{5}。",
+        "第一次倒出后剩下：\\frac{5}{5} - \\frac{1}{5} = \\frac{4}{5}。",
+        "第二次倒出后剩下：\\frac{4}{5} - \\frac{2}{5} = \\frac{2}{5}。",
+        "或者直接计算总共倒出：\\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}，然后 \\frac{5}{5} - \\frac{3}{5} = \\frac{2}{5}。"
+      ],
+      "commonErrors": [
+        "单位 1 理解错误",
+        "分步计算错误"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "引导学生理解单位 1 的概念，并掌握分步计算和整体计算两种方法。",
+      "sourceId": "B2",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    },
+    {
+      "id": "q005",
+      "knowledgePointIds": [
+        "math-g5-fraction-same-denominator-add"
+      ],
+      "layer": "B",
+      "questionType": "判断题",
+      "difficulty": 2,
+      "cognitiveLevel": "应用",
+      "stem": "判断：\\frac{3}{7} + \\frac{2}{7} = \\frac{5}{14} 是否正确？",
+      "answer": "错误",
+      "solutionSteps": [
+        "同分母分数相加，分母不变，分子相加。",
+        "\\frac{3}{7} + \\frac{2}{7} = \\frac{3+2}{7} = \\frac{5}{7}。",
+        "题目中分母相加，是错误的。"
+      ],
+      "commonErrors": [
+        "分母相加错误",
+        "混淆加减法规则"
+      ],
+      "scorePoints": 1,
+      "teachingNote": "强调同分母分数加减法的规则，特别是分母不变的原则，避免与异分母分数运算混淆。",
+      "sourceId": "B3",
+      "estimatedTimeSec": 60,
+      "isOriginal": true,
+      "licenseNote": "InnoSpark-235B 动态生成·仅供教学使用"
+    }
+  ],
+  "answerKey": [
+    {
+      "questionId": "q001",
+      "answer": "\\frac{2}{3}",
+      "solutionSteps": [
+        "分母相同，分数单位都是 \\frac{1}{9}，直接把分子相加。",
+        "4 + 2 = 6，所以 \\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。",
+        "将 \\frac{6}{9} 约分，分子分母同时除以3，得到 \\frac{2}{3}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q002",
+      "answer": "\\frac{3}{5}",
+      "solutionSteps": [
+        "求一共喝了多少，用加法：\\frac{1}{5} + \\frac{2}{5}。",
+        "分母相同，分子相加：1 + 2 = 3，所以 \\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}。",
+        "结果 \\frac{3}{5} 已经是最简分数，无需约分。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q003",
+      "answer": "\\frac{5}{9}",
+      "solutionSteps": [
+        "按从左到右顺序计算：\\frac{4}{9} + \\frac{2}{9} = \\frac{6}{9}。",
+        "\\frac{6}{9} - \\frac{1}{9} = \\frac{5}{9}。",
+        "注意：\\frac{6}{9} 可以约分为 \\frac{2}{3}，但在此题中无需约分，直接计算即可。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q004",
+      "answer": "\\frac{2}{5}",
+      "solutionSteps": [
+        "把整桶水看作单位 1，即 \\frac{5}{5}。",
+        "第一次倒出后剩下：\\frac{5}{5} - \\frac{1}{5} = \\frac{4}{5}。",
+        "第二次倒出后剩下：\\frac{4}{5} - \\frac{2}{5} = \\frac{2}{5}。",
+        "或者直接计算总共倒出：\\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}，然后 \\frac{5}{5} - \\frac{3}{5} = \\frac{2}{5}。"
+      ],
+      "scorePoints": 1
+    },
+    {
+      "questionId": "q005",
+      "answer": "错误",
+      "solutionSteps": [
+        "同分母分数相加，分母不变，分子相加。",
+        "\\frac{3}{7} + \\frac{2}{7} = \\frac{3+2}{7} = \\frac{5}{7}。",
+        "题目中分母相加，是错误的。"
+      ],
+      "scorePoints": 1
+    }
+  ],
+  "coverageReport": {
+    "requestedKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add"
+    ],
+    "coveredKnowledgePointIds": [
+      "math-g5-fraction-same-denominator-add"
+    ],
+    "uncoveredKnowledgePointIds": [],
+    "coverageByKnowledgePoint": {
+      "math-g5-fraction-same-denominator-add": {
+        "questionCount": 5,
+        "questionTypes": {
+          "计算题": 2,
+          "应用题": 2,
+          "判断题": 1
+        }
+      }
+    }
+  },
+  "difficultyReport": {
+    "byLayer": {
+      "A": {
+        "questionCount": 2,
+        "min": 1,
+        "max": 2,
+        "average": 1.5
+      },
+      "B": {
+        "questionCount": 3,
+        "min": 2,
+        "max": 3,
+        "average": 2.33
+      }
+    },
+    "byDifficulty": {
+      "1": 1,
+      "2": 3,
+      "3": 1
+    }
+  },
+  "riskReport": {
+    "forbiddenScope": [
+      "代数式通分",
+      "分式方程",
+      "异分母分数运算"
+    ],
+    "overScopeRisks": [],
+    "notes": [
+      "首批使用内部示例课标与知识点边界，真实业务需由教师或教研员最终确认。"
+    ]
+  },
+  "teachingSuggestions": [
+    {
+      "misconceptionId": "忘记约分",
+      "name": "忘记约分",
+      "relatedQuestionCount": 2,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分子分母相加",
+      "name": "分子分母相加",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "用减法计算",
+      "name": "用减法计算",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分母相加",
+      "name": "分母相加",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "计算顺序错误",
+      "name": "计算顺序错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "单位 1 理解错误",
+      "name": "单位 1 理解错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分步计算错误",
+      "name": "分步计算错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "分母相加错误",
+      "name": "分母相加错误",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    },
+    {
+      "misconceptionId": "混淆加减法规则",
+      "name": "混淆加减法规则",
+      "relatedQuestionCount": 1,
+      "symptom": "",
+      "remediation": ""
+    }
+  ],
+  "replacementSuggestions": [],
+  "qualityReport": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "question_count",
+        "status": "pass",
+        "message": "生成 5 题，请求 5 题。"
+      },
+      {
+        "id": "duplicate_stem",
+        "status": "pass",
+        "message": "题干无重复。"
+      },
+      {
+        "id": "layer_A_count",
+        "status": "pass",
+        "message": "A 层生成 2 题，目标 2 题。"
+      },
+      {
+        "id": "layer_B_count",
+        "status": "pass",
+        "message": "B 层生成 3 题，目标 3 题。"
+      },
+      {
+        "id": "knowledge_coverage",
+        "status": "pass",
+        "message": "请求知识点均已覆盖。"
+      },
+      {
+        "id": "over_scope",
+        "status": "pass",
+        "message": "未发现明显超纲风险。"
+      },
+      {
+        "id": "question_type_mix",
+        "status": "warn",
+        "message": "题型比例未完全匹配目标 {'计算题': 3, '判断题': 2}，实际 {'计算题': 2, '应用题': 2, '判断题': 1}。"
+      },
+      {
+        "id": "difficulty_mix",
+        "status": "warn",
+        "message": "难度比例未完全匹配目标 {'1': 2, '2': 2, '3': 1}，实际 {'1': 1, '2': 3, '3': 1}。"
+      }
+    ],
+    "warnings": [
+      "难度、分层和区分度为规则型近似，不代表真实测量学参数。",
+      "当前 references 为内部示例数据，扩学科前需补充真实授权数据。"
+    ]
+  }
+}

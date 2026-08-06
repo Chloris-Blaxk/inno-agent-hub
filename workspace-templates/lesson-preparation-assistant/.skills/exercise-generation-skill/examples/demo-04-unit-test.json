@@ -1,0 +1,16 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "textbookVersion": "人教版",
+  "unit": "分数的加法和减法",
+  "period": "单元综合",
+  "topic": "分数的加法和减法·单元测验",
+  "knowledgePointIds": ["math-g5-fraction-same-denominator-add", "math-g5-fraction-add", "math-g5-fraction-application"],
+  "taskType": "unit_test",
+  "questionCount": 15,
+  "layers": ["A", "B", "C"],
+  "questionTypes": ["计算题", "应用题", "比较题", "判断题", "填空题"],
+  "difficultyRange": {"min": 1, "max": 5},
+  "strictBlueprint": true,
+  "requirements": "单元测验卷。覆盖全部3个知识点，5种题型。基础50%巩固35%拓展15%。要求严格按蓝图配比，附完整答案、解析、评分标准和讲评建议。"
+}

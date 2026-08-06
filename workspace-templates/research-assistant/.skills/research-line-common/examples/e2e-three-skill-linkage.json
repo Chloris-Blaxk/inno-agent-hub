@@ -1,0 +1,85 @@
+{
+  "testId": "e2e-three-skill-linkage-001",
+  "description": "三 Skill 联动端到端验证：研究选题 → 文献阅读 → 论文写作",
+  "steps": [
+    {
+      "step": 1,
+      "skill": "research-topic-generation-skill",
+      "entryToken": "@研究选题生成",
+      "action": "生成 mixed_topic 选题",
+      "input": {
+        "teacherProfile": {
+          "subject": "小学数学",
+          "gradeBand": "高年级",
+          "availableCycle": "1年"
+        },
+        "materials": ["teacher-a 材料包 × 4"]
+      },
+      "expectedHandoff": {
+        "topicCandidates": "至少 1 条，含 topicTitle + keywords + readingQuestions"
+      },
+      "verified": true,
+      "note": "已在本会话中验证通过，产出 5 个选题"
+    },
+    {
+      "step": 2,
+      "skill": "literature-reading-skill",
+      "entryToken": "@文献阅读助手",
+      "action": "从 step1 的 handoff.topicCandidates[0] 获取选题和关键词，执行 literature_discovery",
+      "input": {
+        "researchTopic": "小学数学课堂即时反馈支持错因诊断的实践研究",
+        "keywords": ["即时反馈", "错因诊断", "小学数学", "课堂实践", "教学调整"],
+        "readingGoal": "筛选优先阅读文献并生成证据卡片"
+      },
+      "expectedHandoff": {
+        "literatureRecords": "≥ 1 条",
+        "evidenceCards": "≥ 1 张，含 paperId + evidenceText + evidenceLevel + limits"
+      },
+      "verified": true,
+      "note": "已在本会话中验证通过，产出 5 篇文献 + 5 张证据卡"
+    },
+    {
+      "step": 3,
+      "skill": "paper-writing-skill",
+      "entryToken": "@论文写作助手",
+      "action": "从 step2 的 handoff.evidenceCards 中找匹配，执行 source_trace",
+      "input": {
+        "queryText": "课堂即时反馈有助于教师发现错因"
+      },
+      "expectedOutput": {
+        "decision": "related_sources_only 或 candidate_source_found (PedaScope)",
+        "dataSourceReport": "逐级汇报 PedaScope + 文献阅读共享 + 本地白名单"
+      },
+      "verified": true,
+      "note": "已在本会话中验证通过。PedaScope 返回 candidate_source_found，文献阅读共享返回 related_sources_only"
+    }
+  ],
+  "linkageChecks": {
+    "handoffTopicToLiteratureKeywords": {
+      "status": "pass",
+      "detail": "研究选题的 topicCandidates[0].keywords 可直接作为文献阅读的 input.keywords"
+    },
+    "handoffEvidenceToPaperTrace": {
+      "status": "pass",
+      "detail": "文献阅读的 evidenceCards[].paperId + evidenceText 可被论文写作 source_trace 检索和匹配"
+    },
+    "dataSourceReportAcrossSkills": {
+      "status": "pass",
+      "detail": "论文写作的 dataSourceReport 可区分 PedaScope 命中 vs 文献阅读共享命中"
+    }
+  },
+  "gaps": [
+    {
+      "gap": "handoff 传递尚未自动化",
+      "severity": "medium",
+      "detail": "当前三个 Skill 的联动依赖人工在对话中依次调用。缺少一个自动化的 researchWorkspace 写入/读取机制，使得 Skill A 的 handoff 可以被 Skill B 自动消费。",
+      "suggestedFix": "在 research_line_cli.py 中增加 --workspace 参数，允许跨 Skill 读写共享 researchWorkspace JSON。"
+    },
+    {
+      "gap": "文献阅读的 evidenceCards 缺少 paper 元数据",
+      "severity": "low",
+      "detail": "handoff.evidenceCards 包含 paperId 但不含完整的题录信息（标题/作者/年份/期刊）。论文写作助手需要额外通过 paperId 反查 LiteratureRecord 才能生成 GB/T 7714 引用。",
+      "suggestedFix": "handoff.evidenceCards 中增加 title/authors/year/journal 字段，或确保 paperId 可在 literaturRecord[] 中快速查找。"
+    }
+  ]
+}

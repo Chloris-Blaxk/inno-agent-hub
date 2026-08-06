@@ -1,0 +1,11 @@
+{
+  "Code": "0",
+  "Data": {
+    "TaskId": "03786613e66b437daa57e543d51e12a4",
+    "TaskKey": "classroom-reflection-realtime-20260608131227",
+    "TaskStatus": "NEW",
+    "MeetingJoinUrl": "wss://tingwu-realtime-cn-beijing.aliyuncs.com/api/ws/v1?mc=Wx_P9d23Iie4wh1NWjcUPdXc3AJdXcbccKgY9DKx9-tDR48n8OcRmVupPkakn8f0RzzrcXA098CYMoO_g-blEZ_PuS-AjYXivHCwSHxA6rXgWaYk2IfgFxg2uMosOhdV"
+  },
+  "Message": "success",
+  "RequestId": "5E6A5347-D04C-5596-8C47-8CA3E71D1D4B"
+}

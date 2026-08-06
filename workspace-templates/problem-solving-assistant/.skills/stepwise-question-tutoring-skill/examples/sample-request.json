@@ -1,0 +1,11 @@
+{
+  "subject": "数学",
+  "grade": "五年级",
+  "questionText": "计算 1/2 + 1/3。",
+  "studentAnswer": {
+    "finalAnswer": "2/5",
+    "steps": ["1 + 1 = 2", "2 + 3 = 5", "所以答案是 2/5"]
+  },
+  "mode": "diagnose_answer",
+  "requirements": "指出第一处明显错误，给出原因，并推荐两道相似题。"
+}

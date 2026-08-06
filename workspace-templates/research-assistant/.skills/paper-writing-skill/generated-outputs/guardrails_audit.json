@@ -1,0 +1,44 @@
+{
+  "structure_check": {
+    "sections": {
+      "引言": true,
+      "文献综述": false,
+      "研究方法": true,
+      "结果": false,
+      "讨论": true,
+      "结论": false
+    },
+    "missing_sections": [
+      "文献综述",
+      "结果",
+      "结论"
+    ]
+  },
+  "abstract_check": {
+    "present": true,
+    "length": 18,
+    "elements": {
+      "研究问题/目的": true,
+      "方法/数据": false,
+      "核心发现": false,
+      "结论/意义": false
+    },
+    "text": "本研究探讨课堂提问与学生参与的关系。",
+    "missing_elements": [
+      "方法/数据",
+      "核心发现",
+      "结论/意义"
+    ]
+  },
+  "citation_check": {
+    "paper_ids_in_article": [],
+    "unknown_paper_ids": [],
+    "known_paper_ids": []
+  },
+  "unsupported_claims": [
+    {
+      "sentence": "五、讨论\n\n本研究发现课堂提问能显著提升学生学习效果。",
+      "risk": "事实性/因果性表述缺少证据标注"
+    }
+  ]
+}

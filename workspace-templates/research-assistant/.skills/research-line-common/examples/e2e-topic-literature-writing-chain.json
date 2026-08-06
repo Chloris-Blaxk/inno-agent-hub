@@ -1,0 +1,75 @@
+{
+  "description": "端到端链路样例：研究选题 handoff.keywords -> 文献阅读 EvidenceCard -> 论文写作 claim_support_check。",
+  "step1TopicHandoff": {
+    "topicCandidates": [
+      {
+        "topicId": "topic-sum-001",
+        "topicTitle": "小学数学课堂即时反馈支持错因诊断的实践研究",
+        "topicType": "summative",
+        "keywords": ["即时反馈", "错因诊断", "小学数学"],
+        "researchQuestion": "即时反馈如何帮助教师识别典型错因并调整讲评顺序？",
+        "evidenceStatus": "material_backed",
+        "feasibilityScore": 4,
+        "riskLevel": "medium",
+        "nextReadingQuestions": [
+          "课堂即时反馈如何支持教师调整教学？",
+          "错因诊断如何转化为讲评策略？"
+        ]
+      }
+    ],
+    "keywords": ["即时反馈", "错因诊断", "小学数学"],
+    "readingQuestions": [
+      "课堂即时反馈如何支持教师调整教学？",
+      "错因诊断如何转化为讲评策略？"
+    ]
+  },
+  "step2LiteratureRequest": {
+    "skillId": "literature-reading-skill",
+    "taskIntent": "evidence_carding",
+    "input": {
+      "researchTopic": "小学数学课堂即时反馈支持错因诊断的实践研究",
+      "keywords": ["即时反馈", "错因诊断", "小学数学"]
+    }
+  },
+  "step2LiteratureHandoff": {
+    "evidenceCards": [
+      {
+        "cardId": "ec-demo-001",
+        "claim": "即时反馈有助于教师调整教学决策",
+        "evidenceText": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "paperId": "paper-demo-001",
+        "quoteLocation": "abstract",
+        "supportType": "partial_support",
+        "evidenceLevel": "abstract_verified",
+        "usableFor": ["论文引言", "研究背景"],
+        "limits": ["只能支撑教学调整相关表述，不能支撑成绩显著提升。"]
+      }
+    ]
+  },
+  "step3PaperWritingRequest": {
+    "skillId": "paper-writing-skill",
+    "taskIntent": "claim_support_check",
+    "input": {
+      "queryText": "课堂即时反馈有助于教师调整教学决策。",
+      "claims": [
+        {
+          "claimId": "claim-001",
+          "claimText": "课堂即时反馈有助于教师调整教学决策。"
+        }
+      ],
+      "availableEvidenceCards": [
+        {
+          "cardId": "ec-demo-001",
+          "claim": "即时反馈有助于教师调整教学决策",
+          "evidenceText": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+          "paperId": "paper-demo-001",
+          "quoteLocation": "abstract",
+          "supportType": "partial_support",
+          "evidenceLevel": "abstract_verified",
+          "usableFor": ["论文引言", "研究背景"],
+          "limits": ["只能支撑教学调整相关表述，不能支撑成绩显著提升。"]
+        }
+      ]
+    }
+  }
+}

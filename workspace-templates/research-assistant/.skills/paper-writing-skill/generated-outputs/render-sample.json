@@ -1,0 +1,421 @@
+{
+  "requestId": "req-paper-writing-source-trace-001",
+  "skillId": "paper-writing-skill",
+  "taskIntent": "source_trace",
+  "status": "warn",
+  "summary": "已按 source_trace 模式完成论文写作辅助；查源、结构诊断和保守润色均遵守未获证据不生成支撑性引用的原则。",
+  "inputSummary": {
+    "sourceRequest": "帮我调研一下“课堂即时反馈有助于教师及时发现学生的典型错因”这句话出自哪篇文章。",
+    "queryText": "课堂即时反馈有助于教师及时发现学生的典型错因。",
+    "claimCount": 1,
+    "draftTextChars": 0,
+    "availableEvidenceCardCount": 0,
+    "assumptions": [],
+    "constraints": {
+      "language": "zh-CN",
+      "citationStyle": "GB/T 7714",
+      "allowExternalSearch": false,
+      "strictEvidence": true
+    }
+  },
+  "warnings": [
+    "未找到可确认为原句出处的证据。"
+  ],
+  "dataSourceReport": {
+    "reportId": "dsr-paper-writing-skill",
+    "skillId": "paper-writing-skill",
+    "taskIntent": "source_trace",
+    "dataSources": [
+      {
+        "sourceId": "shared-literature-pool",
+        "sourceName": "科研线共享本地文献池",
+        "sourceType": "local_mock",
+        "dataType": "literature_record",
+        "recordCount": 7,
+        "authorizationStatus": "mock_sample",
+        "version": "research-literature-adapter-v1",
+        "limitations": [
+          "由本地 mock 文献索引和样例白名单合并而来，不能替代真实授权检索。"
+        ]
+      },
+      {
+        "sourceId": "paper-writing-evidence-card-index",
+        "sourceName": "论文写作证据卡样例库",
+        "sourceType": "local_sample",
+        "dataType": "evidence_card",
+        "recordCount": 2,
+        "authorizationStatus": "sample_only",
+        "version": "",
+        "limitations": [
+          "证据卡为样例数据；进入引用建议前仍需支撑性、定位和教师确认校验。"
+        ]
+      }
+    ],
+    "mockDataUsed": true,
+    "userProvidedDataUsed": false,
+    "authorizedDataUsed": false,
+    "externalVerifiedDataUsed": false,
+    "overallLimitations": [
+      "当前查源依赖本地 mock/样例文献池；未验证支撑性的候选不得进入引用或正文事实。"
+    ]
+  },
+  "artifacts": [
+    {
+      "type": "json",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/render-sample.json",
+      "description": "结构化论文写作辅助结果"
+    },
+    {
+      "type": "markdown",
+      "path": "agent_cases/paper-writing-skill/generated-outputs/render-sample.md",
+      "description": "教师可读论文写作诊断报告"
+    }
+  ],
+  "result": {
+    "literatureRecords": [
+      {
+        "paperId": "paper-index-001",
+        "title": "小学数学课堂即时反馈与错因诊断的行动研究",
+        "authors": [
+          "索引示例作者一"
+        ],
+        "year": 2024,
+        "journal": "小学数学教育示例",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "错因诊断",
+          "小学数学",
+          "行动研究"
+        ],
+        "abstract": "本文基于小学数学课堂观察，讨论即时反馈信息如何帮助教师识别学生典型错因并调整讲评策略。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "小学数学",
+        "journalTier": "核心期刊样例",
+        "database": "mock-edu-index"
+      },
+      {
+        "paperId": "paper-index-002",
+        "title": "学习证据视角下的小学数学讲评课改进路径",
+        "authors": [
+          "索引示例作者二"
+        ],
+        "year": 2023,
+        "journal": "课堂教学研究示例",
+        "doi": "",
+        "keywords": [
+          "学习证据",
+          "讲评课",
+          "课堂观察",
+          "小学数学"
+        ],
+        "abstract": "研究围绕学习证据采集、错因归类和讲评课改进路径展开，强调过程记录在教师教学调整中的作用。",
+        "fullText": "研究围绕学习证据采集、错因归类和讲评课改进路径展开。教师通过课堂观察、学生作业和讲评记录识别共性错因，并据此调整后续讲评顺序。研究采用课堂观察和案例分析，未报告统计显著性结论。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "fulltext",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "小学数学",
+        "journalTier": "普通期刊样例",
+        "database": "mock-edu-index"
+      },
+      {
+        "paperId": "paper-index-003",
+        "title": "过程性评价数据支持课堂教学改进的机制研究",
+        "authors": [
+          "索引示例作者三"
+        ],
+        "year": 2021,
+        "journal": "教育评价研究示例",
+        "doi": "",
+        "keywords": [
+          "过程性评价",
+          "课堂改进",
+          "学习证据",
+          "教学调整"
+        ],
+        "abstract": "本文从过程性评价数据的采集、解释和反馈应用三个环节讨论课堂教学改进机制。",
+        "sourceStatus": "external_verified",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "教育评价",
+        "journalTier": "核心期刊样例",
+        "database": "mock-edu-index"
+      },
+      {
+        "paperId": "paper-index-004",
+        "title": "小组合作学习中的课堂反馈策略研究",
+        "authors": [
+          "索引示例作者四"
+        ],
+        "year": 2020,
+        "journal": "基础教育课堂示例",
+        "doi": "",
+        "keywords": [
+          "小组合作",
+          "课堂反馈",
+          "教学策略"
+        ],
+        "abstract": "",
+        "sourceStatus": "external_verified",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "subjectCategory": "课堂教学",
+        "journalTier": "普通期刊样例",
+        "database": "mock-edu-index"
+      },
+      {
+        "paperId": "paper-demo-001",
+        "title": "课堂即时反馈的教学价值研究",
+        "authors": [
+          "示例作者"
+        ],
+        "year": 2023,
+        "journal": "示例期刊",
+        "doi": "",
+        "keywords": [
+          "即时反馈",
+          "课堂评价",
+          "教学调整"
+        ],
+        "abstract": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "database": "paper_writing_whitelist",
+        "volume": "12",
+        "issue": "3",
+        "pages": "45-48"
+      },
+      {
+        "paperId": "paper-demo-002",
+        "title": "小学数学错因诊断与针对性讲评策略研究",
+        "authors": [
+          "示例作者二"
+        ],
+        "year": 2022,
+        "journal": "基础教育研究示例",
+        "doi": "",
+        "keywords": [
+          "错因诊断",
+          "小学数学",
+          "讲评策略"
+        ],
+        "abstract": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "abstract",
+        "evidenceLevel": "metadata_verified",
+        "database": "paper_writing_whitelist",
+        "volume": "8",
+        "issue": "2",
+        "pages": "33-37"
+      },
+      {
+        "paperId": "paper-demo-003",
+        "title": "过程性评价支持课堂教学改进的实践路径",
+        "authors": [
+          "示例作者三"
+        ],
+        "year": 2021,
+        "journal": "教育评价示例",
+        "doi": "",
+        "keywords": [
+          "过程性评价",
+          "课堂改进",
+          "学习证据"
+        ],
+        "abstract": "本文介绍利用过程性评价信息改进课堂教学的若干实践路径。",
+        "sourceStatus": "whitelist",
+        "textAvailability": "metadata",
+        "evidenceLevel": "metadata_verified",
+        "database": "whitelist"
+      }
+    ],
+    "sourceTraceResults": [
+      {
+        "queryText": "课堂即时反馈有助于教师及时发现学生的典型错因。",
+        "candidates": [
+          {
+            "paperId": "paper-demo-001",
+            "matchType": "evidence_card",
+            "evidenceCardId": "ec-demo-001",
+            "supportStatus": "related_only",
+            "confidence": "low",
+            "evidenceLevel": "abstract_verified",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract:sentence-001",
+              "page": "",
+              "paragraph": "abstract",
+              "confidence": "medium"
+            },
+            "citation": "示例作者. 课堂即时反馈的教学价值研究[J]. 示例期刊, 2023, 12(3): 45-48.",
+            "score": 27,
+            "matchSnippet": "本文讨论课堂即时反馈对学生学习投入和教师调整教学的影响。"
+          },
+          {
+            "paperId": "paper-demo-002",
+            "matchType": "evidence_card",
+            "evidenceCardId": "ec-demo-002",
+            "supportStatus": "related_only",
+            "confidence": "low",
+            "evidenceLevel": "abstract_verified",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract:sentence-001",
+              "page": "",
+              "paragraph": "abstract",
+              "confidence": "medium"
+            },
+            "citation": "示例作者二. 小学数学错因诊断与针对性讲评策略研究[J]. 基础教育研究示例, 2022, 8(2): 33-37.",
+            "score": 2,
+            "matchSnippet": "本文围绕小学数学错因分类、诊断记录和针对性讲评策略展开讨论。"
+          },
+          {
+            "paperId": "paper-index-001",
+            "matchType": "abstract",
+            "matchSnippet": "本文基于小学数学课堂观察，讨论即时反馈信息如何帮助教师识别学生典型错因并调整讲评策略。",
+            "supportStatus": "related_only",
+            "confidence": "medium",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract",
+              "page": "",
+              "paragraph": "",
+              "confidence": "medium"
+            },
+            "evidenceLevel": "abstract_verified",
+            "citation": "索引示例作者一. 小学数学课堂即时反馈与错因诊断的行动研究[J]. 小学数学教育示例, 2024.",
+            "score": 20
+          },
+          {
+            "paperId": "paper-index-002",
+            "matchType": "abstract",
+            "matchSnippet": "研究围绕学习证据采集、错因归类和讲评课改进路径展开，强调过程记录在教师教学调整中的作用。",
+            "supportStatus": "related_only",
+            "confidence": "medium",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract",
+              "page": "",
+              "paragraph": "",
+              "confidence": "medium"
+            },
+            "evidenceLevel": "abstract_verified",
+            "citation": "索引示例作者二. 学习证据视角下的小学数学讲评课改进路径[J]. 课堂教学研究示例, 2023.",
+            "score": 4
+          },
+          {
+            "paperId": "paper-index-003",
+            "matchType": "abstract",
+            "matchSnippet": "本文从过程性评价数据的采集、解释和反馈应用三个环节讨论课堂教学改进机制。",
+            "supportStatus": "related_only",
+            "confidence": "low",
+            "quoteLocation": "abstract",
+            "sourceLocator": {
+              "locationType": "abstract",
+              "locator": "abstract",
+              "page": "",
+              "paragraph": "",
+              "confidence": "medium"
+            },
+            "evidenceLevel": "abstract_verified",
+            "citation": "索引示例作者三. 过程性评价数据支持课堂教学改进的机制研究[J]. 教育评价研究示例, 2021.",
+            "score": 2
+          }
+        ],
+        "decision": "related_sources_only"
+      }
+    ],
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈有助于教师及时发现学生的典型错因。",
+        "status": "needs_evidence",
+        "matchedEvidenceCards": [],
+        "riskNotes": [
+          "当前查源命中的证据不能支撑该论点，不能顺带生成引用。"
+        ],
+        "recommendedRewrite": "保留该表述前，请补充原文、摘要证据或更精确关键词。"
+      }
+    ],
+    "structureDiagnosis": {},
+    "revisionSuggestions": [],
+    "outline": {},
+    "documentDraft": {},
+    "localRewrite": {},
+    "citationChecks": [],
+    "insertionSuggestions": [],
+    "citationWarnings": [
+      "未生成支撑性引用。"
+    ]
+  },
+  "handoff": {
+    "claimChecks": [
+      {
+        "claimId": "claim-001",
+        "claimText": "课堂即时反馈有助于教师及时发现学生的典型错因。",
+        "status": "needs_evidence",
+        "matchedEvidenceCards": [],
+        "riskNotes": [
+          "当前查源命中的证据不能支撑该论点，不能顺带生成引用。"
+        ],
+        "recommendedRewrite": "保留该表述前，请补充原文、摘要证据或更精确关键词。"
+      }
+    ],
+    "usableEvidenceCards": [],
+    "paperRevisionSummary": {
+      "addedFacts": 0,
+      "revisionSuggestionCount": 0,
+      "needsEvidenceRevisionCount": 0,
+      "citationCheckCount": 0,
+      "insertionSuggestionCount": 0,
+      "draftSectionCount": 0,
+      "citationPolicy": "no_supporting_citation_inserted"
+    }
+  },
+  "qualityReport": {
+    "status": "warn",
+    "checks": [
+      {
+        "id": "source_trace_decision",
+        "status": "pass"
+      }
+    ],
+    "warnings": [
+      "未找到可确认为原句出处的证据。"
+    ],
+    "metrics": {
+      "claimCount": 1,
+      "supportedClaimCount": 0,
+      "needsEvidenceCount": 1,
+      "sourceTraceHitCount": 0,
+      "citationFormatWarnings": 1,
+      "structureIssueCount": 0,
+      "missingAbstractElementCount": 0,
+      "revisionSuggestionCount": 0,
+      "addedFactCount": 0,
+      "needsEvidenceRevisionCount": 0,
+      "citationCheckCount": 0,
+      "citationReadyCount": 0,
+      "insertionSuggestionCount": 0,
+      "pendingTeacherConfirmationCount": 0,
+      "outlineSectionCount": 0,
+      "draftSectionCount": 0,
+      "localRewriteCount": 0
+    }
+  },
+  "provenanceReport": {
+    "sourceCount": 7,
+    "verifiedSourceCount": 3,
+    "unsupportedClaimCount": 1
+  },
+  "nextActions": [
+    "上传原文片段或调用文献阅读助手扩大候选文献池。"
+  ]
+}
