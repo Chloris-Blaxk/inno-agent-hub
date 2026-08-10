@@ -1,0 +1,7 @@
+{
+	"id": "task-alignment",
+	"name": "任务对齐与验收",
+	"description": "面向复杂学习、研究与创作任务：先探索、复述并提出关键疑问，冻结任务契约后执行，最后按证据验收。",
+	"category": "教学",
+	"icon": "list-checks"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务对齐"
+  short_description: "在复杂任务执行前探索上下文、澄清关键歧义并冻结可验证的任务契约"
+  default_prompt: "Use $task-alignment to explore and align this task before taking action."

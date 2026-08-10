@@ -1,0 +1,7 @@
+{
+  "id": "question-led-learning",
+  "name": "追问式学习",
+  "description": "Agent 提供概念种子，你用自己的问题持续追问，再通过复述与迁移检验真正掌握。",
+  "category": "教学",
+  "icon": "message-circle-question"
+}
