@@ -25,4 +25,4 @@ description: >-
 
 ## 文件与边界
 
-写入 `reports/<date>-<HHmm>-math-progress-<student|teacher>.md`。写入前检查同名文件，冲突时增加序号；除非用户明确要求更新原报告，不覆盖已有报告。报告应包含证据索引和数据截止时间。`observation`、`suspected`、`inconclusive`、`confirmed`、`improving`、`resolved`、`dismissed`、`reopened` 必须分开呈现；即时正确不得写成长期掌握。
+按 `templates/report-template.md` 的证据结构写入 `reports/<date>-<HHmm>-math-progress-<student|teacher>.md`。写入前检查同名文件，冲突时增加序号；除非用户明确要求更新原报告，不覆盖已有报告。报告应包含证据索引和数据截止时间。`observation`、`suspected`、`inconclusive`、`confirmed`、`improving`、`resolved`、`dismissed`、`reopened` 必须分开呈现；即时正确不得写成长期掌握。

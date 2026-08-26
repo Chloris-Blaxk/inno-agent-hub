@@ -37,10 +37,7 @@ adaptive-math-learning-agent/
 │   ├── curriculum/
 │   └── domains/
 ├── templates/
-├── examples/
-└── scripts/
-    ├── validate-template.mjs
-    └── validate-artifacts.mjs
+└── docs/design_notes.md
 ```
 
 ## 快速测试
@@ -61,16 +58,7 @@ adaptive-math-learning-agent/
 高中：函数 y=sqrt(x-1)/(x-2) 的定义域是 x>=1。
 ```
 
-期望行为和分 Skill 网页测试脚本见 `examples/browser-test-guide.md`。
-
-## 校验
-
-```bash
-node scripts/validate-template.mjs
-node scripts/validate-artifacts.mjs
-```
-
-第一个命令校验模板结构；第二个命令校验运行时生成的 attempt、practice 和错因账本（尚未产生数据时也可通过）。
+Agent 的六层职责、评价可靠性、多解法原则和记忆边界见 `docs/design_notes.md`。
 
 ## 数据边界
 

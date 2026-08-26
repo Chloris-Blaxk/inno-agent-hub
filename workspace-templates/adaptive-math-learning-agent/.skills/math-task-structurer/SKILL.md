@@ -28,7 +28,7 @@ description: >-
 
 ## 路由与前置
 
-从 `references/curriculum/` 选择对应学段，并只读取与题目相关的一个领域参考。目标概念已经原子化或本题不依赖前置时直接继续；确有必要时调用 `assess_learning_prerequisites`，最多提交 3 个直接相关、低置信的 `model_inferred` 候选，并严格遵守工具返回协议。
+按学段读取一份课程路由：小学使用 `references/curriculum/primary-math.md`，初中使用 `references/curriculum/junior-math.md`，高中使用 `references/curriculum/senior-math.md`；再只读取与题目相关的一个领域参考。目标概念已经原子化或本题不依赖前置时直接继续；确有必要时调用 `assess_learning_prerequisites`，最多提交 3 个直接相关、低置信的 `model_inferred` 候选，并严格遵守工具返回协议。
 
 ## 完整性检查
 

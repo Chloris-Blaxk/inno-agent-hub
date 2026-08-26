@@ -38,8 +38,8 @@ description: >-
 
 展示前独立求解并按 `references/problem-quality-checklist.md` 检查：条件完整、答案存在、结论无歧义、学段合适、目标纯净、数据合理、解析一致。未通过则内部修订或放弃，不把有缺陷的题交给学生。
 
-将通过检查的题按 `templates/practice-item-template.json` 写入 `practice/<practice-id>.json`，然后运行 `node scripts/validate-artifacts.mjs`；校验失败时修复后再展示。学生作答后调用 `record_learning_evidence`，并回填 evidence ID；只听完讲解只能记 `exposure`。
+将通过检查的题按 `templates/practice-item-template.json` 写入 `practice/<practice-id>.json`。写完后重新读取，确认 ID 与文件名一致、目标 concept ID 稳定、答案与解析一致且五项质量检查全部通过；有问题先修复，再向学生展示。学生作答后调用 `record_learning_evidence`，并回填 evidence ID；只听完讲解只能记 `exposure`。
 
 ## 复习计划
 
-即时训练完成只能标为 `improving`。更新 `review-plan.md` 前先读取现有计划：相同概念合并更新，不同概念保留原行，不得覆盖无关计划。只有用户明确同意后才调用 `create_scheduled_job`，使用 `taskType: spaced_review`；站内任务可以不指定 channel，用户明确要求外部推送时才确认并填写已启用渠道。
+即时训练完成只能标为 `improving`。更新 `review-plan.md` 前先读取现有计划；文件不存在时按 `templates/review-plan-template.md` 创建。相同概念合并更新，不同概念保留原行，不得覆盖无关计划。只有用户明确同意后才调用 `create_scheduled_job`，使用 `taskType: spaced_review`；站内任务可以不指定 channel，用户明确要求外部推送时才确认并填写已启用渠道。

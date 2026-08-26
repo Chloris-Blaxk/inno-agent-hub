@@ -42,8 +42,8 @@ description: >-
 1. 先在上下文中按 `templates/attempt-record-template.json` 整理 attempt，并从对应 `references/curriculum/` 文件逐字复制解释首个错误的最小稳定 `concept_id`。禁止把 `math.junior.*` 改写成 `math.geometry.*` 等同义 ID；没有精确细项时使用已有上位 ID，把细节写入 metadata。
 2. 调用 `record_learning_evidence`。通常用 `application`，解释或证明可以用 `free_recall`；提示等级、结果和评价方式必须真实。
 3. 工具成功返回后再写 `attempts/<attempt-id>.json`，把真实 `evidence_id` 写入 `evidence_ids`；失败时保留空数组并记录失败原因，不得伪造 ID。
-4. 更新 `misconception-ledger.md`，引用同一个 attempt 和 evidence ID。写入前必须先检查文件：不存在时按模板创建；存在时先按 concept ID 和可验证错因机制查重。同一机制已存在时把新证据追加到原 MIS 并按状态规则更新，不新建重复条目；机制确实不同才追加唯一的新 MIS。使用 `edit` 或等价追加方式，绝不能用 `write` 覆盖已有条目或复用其他机制的编号。
-5. 文件写完后运行 `node scripts/validate-artifacts.mjs`；失败时修复对应产物后再声称落盘成功。
+4. 更新 `misconception-ledger.md`，引用同一个 attempt 和 evidence ID。写入前必须先检查文件：不存在时按 `templates/misconception-ledger-template.md` 创建；存在时先按 concept ID 和可验证错因机制查重。同一机制已存在时把新证据追加到原 MIS 并按状态规则更新，不新建重复条目；机制确实不同才追加唯一的新 MIS。使用 `edit` 或等价追加方式，绝不能用 `write` 覆盖已有条目或复用其他机制的编号。
+5. 写完后重新读取产物，检查 JSON 可解析、attempt ID 与文件名一致、concept ID 稳定、状态和评价方式使用允许值、evidence ID 均来自真实工具返回；有问题先修复，再声称落盘成功。
 
 ## 学生反馈
 
