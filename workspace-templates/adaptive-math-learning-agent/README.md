@@ -1,0 +1,81 @@
+# 中小学数学错因诊断与自适应巩固
+
+这是一个由 `agent.md + workspace private skills` 驱动的 Inno Agent 工作区模板，适用于小学、初中和高中数学中的作业订正、自学辅导、错因分析、针对练习和阶段复习。
+
+它与普通解题助手的区别是：先保存学生的真实作答，定位首个关键错误，再用最小探针验证原因；只有验证后才选择多表征修复或生成练习。系统保留 attempt、learning evidence、错因状态和复测计划，避免把一次失误固化成标签。
+
+## 支持范围
+
+- 客观题、填空题和计算题；
+- 代数推导、方程不等式和函数；
+- 应用题与数学建模；
+- 几何计算和证明；
+- 图像、表格和解析式转换；
+- 概率统计、规律探究和多解法题。
+
+题目缺少条件、图片无法辨认或没有可靠评价标准时，Agent 会说明限制并请求补充，不会伪造确定结论。
+
+## Skills
+
+| Skill | 作用 |
+| --- | --- |
+| `math-task-structurer` | 识别学段、题型、条件、目标、表征、知识点和评价方式 |
+| `math-reasoning-trace-analyzer` | 兼容多种正确路径，定位首个关键错误并写入证据 |
+| `math-misconception-verifier` | 使用最小对照探针区分错因并维护状态机 |
+| `multi-representation-repair` | 在文字、符号、图像、表格和情境之间建立理解桥梁 |
+| `adaptive-math-practice` | 生成经质量检查的概念、同构、反例、迁移和复测题 |
+| `math-learning-progress-reporter` | 生成有证据索引的学生版或教师版学习报告 |
+
+## 目录
+
+```text
+adaptive-math-learning-agent/
+├── agent.md
+├── preset.json
+├── .skills/
+├── references/
+│   ├── curriculum/
+│   └── domains/
+├── templates/
+├── examples/
+└── scripts/
+    ├── validate-template.mjs
+    └── validate-artifacts.mjs
+```
+
+## 快速测试
+
+创建绑定本模板的新会话后发送：
+
+```text
+我是初一学生。请诊断：原题 2x+3=11；我的步骤是 2x=14，所以 x=7。
+不要因为一次错误就确认稳定误区，每次只给一道诊断题。
+```
+
+然后分别测试：
+
+```text
+小学：1/2+1/3=2/5，因为分子相加、分母相加。
+应用题：每盒彩笔8支，买3盒又送2支，我列式为8×(3+2)=40。
+几何证明：两条边分别相等，所以两个三角形全等。
+高中：函数 y=sqrt(x-1)/(x-2) 的定义域是 x>=1。
+```
+
+期望行为和分 Skill 网页测试脚本见 `examples/browser-test-guide.md`。
+
+## 校验
+
+```bash
+node scripts/validate-template.mjs
+node scripts/validate-artifacts.mjs
+```
+
+第一个命令校验模板结构；第二个命令校验运行时生成的 attempt、practice 和错因账本（尚未产生数据时也可通过）。
+
+## 数据边界
+
+- 工作区只保存学习所需的题目、步骤、证据和报告；
+- 不在模板中保存真实学生姓名、学校或 API key；
+- 不把一次错误表述为稳定能力标签；
+- 不把即时做对表述为长期掌握；
+- 定时提醒只有在用户明确授权后创建。

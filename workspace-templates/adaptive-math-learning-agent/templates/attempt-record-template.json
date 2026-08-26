@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "attempt_id": "YYYYMMDD-HHMM-domain-sequence",
+  "created_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+  "task": {
+    "grade_band": "unknown",
+    "grade_source": "unknown",
+    "topic": "",
+    "question_type": "calculation",
+    "prompt": "题目原文",
+    "conditions": [],
+    "target": "",
+    "representations": ["symbolic"],
+    "concept_ids": [],
+    "evaluation_method": "deterministic",
+    "completeness": "complete"
+  },
+  "student_response": {
+    "final_answer": "",
+    "steps": [],
+    "reasoning_source": "none",
+    "verbatim_reasoning": [],
+    "hint_level": 0
+  },
+  "analysis": {
+    "independent_answer": "",
+    "valid_alternative_path": null,
+    "last_valid_step": null,
+    "first_critical_error": null,
+    "propagation_notes": [],
+    "candidate_causes": [],
+    "diagnosis_status": "observation",
+    "evaluator": "deterministic",
+    "evaluator_confidence": 0.0
+  },
+  "evidence_ids": [],
+  "next_action": {
+    "skill": "math-misconception-verifier",
+    "reason": "需要最小探针验证候选错因"
+  }
+}

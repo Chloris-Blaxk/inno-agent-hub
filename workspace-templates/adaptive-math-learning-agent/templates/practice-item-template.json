@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "practice_id": "YYYYMMDD-HHMM-concept-stage",
+  "created_at": "YYYY-MM-DDTHH:mm:ss+08:00",
+  "source_attempt_ids": [],
+  "target_concept_id": "",
+  "target_error_type": "",
+  "practice_stage": "isomorphic",
+  "grade_band": "unknown",
+  "representation": "symbolic",
+  "difficulty": 1,
+  "prompt": "",
+  "expected_answer": "",
+  "solution_outline": [],
+  "verification_method": "deterministic",
+  "why_this_problem": "",
+  "quality_checks": {
+    "conditions_complete": false,
+    "answer_verified": false,
+    "target_isolated": false,
+    "grade_appropriate": false,
+    "no_ambiguity": false
+  },
+  "student_response": null,
+  "evidence_ids": []
+}
