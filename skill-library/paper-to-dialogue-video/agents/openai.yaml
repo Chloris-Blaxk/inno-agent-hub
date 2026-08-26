@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文双人播客"
+  short_description: "自动把学术论文制作成可核查的双人讲解、配音、字幕和竖屏动画节目"
+  default_prompt: "Use $paper-to-dialogue-video to turn this paper PDF into a grounded Chinese two-host animated podcast."

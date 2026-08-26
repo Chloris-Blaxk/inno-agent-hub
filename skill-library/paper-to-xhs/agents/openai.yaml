@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文转小红书"
+  short_description: "把论文转成千字内发布文案、核对解读和截图图卡"
+  default_prompt: "Use $paper-to-xhs to explain this paper and create a sub-1000-character Xiaohongshu post with screenshot-led cards."

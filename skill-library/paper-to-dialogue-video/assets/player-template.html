@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>论文双人播客</title>
+  <style>
+    :root {
+      --deep: #123f40;
+      --teal: #55b8ad;
+      --foam: #dff7f0;
+      --coral: #f5a08f;
+      --citrus: #f4c95f;
+      --ink: #f8fffc;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; margin: 0; }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: #c9e5df;
+      color: var(--ink);
+      font-family: "PingFang SC", "Hiragino Sans GB", "STHeiti", sans-serif;
+    }
+
+    button { font: inherit; }
+
+    .stage {
+      position: relative;
+      width: min(96vw, 75vh);
+      min-width: 320px;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 34px;
+      background: #dceae5;
+      box-shadow: 0 34px 90px rgba(18,63,64,.28);
+      isolation: isolate;
+    }
+
+    .visual-blur,
+    .visual-main,
+    .visual-shade {
+      position: absolute;
+      inset: 0;
+    }
+
+    .visual-blur {
+      display: none;
+      inset: 0;
+      z-index: -3;
+      background-image: var(--scene-image);
+      background-position: center;
+      background-size: cover;
+      filter: blur(26px) saturate(.75);
+      opacity: .74;
+      transform: scale(1.08);
+      transition: opacity .38s ease;
+    }
+
+    .visual-main {
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(.98) contrast(1.01);
+      transition: opacity .38s ease, transform .38s ease;
+    }
+
+    .visual-main.switching,
+    .visual-blur.switching {
+      opacity: 0;
+      transform: scale(1.025);
+    }
+
+    .visual-shade {
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(8,45,45,.16) 0%, transparent 18%),
+        linear-gradient(180deg, transparent 62%, rgba(7,35,36,.08) 78%, rgba(7,35,36,.26) 100%);
+      pointer-events: none;
+    }
+
+    .topline {
+      position: absolute;
+      top: 4.4%;
+      left: 6%;
+      right: 13%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: clamp(9px, 1.14vh, 14px);
+      letter-spacing: .08em;
+      padding: .55em .72em;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 999px;
+      background: rgba(12,66,66,.30);
+      box-shadow: 0 7px 20px rgba(18,63,64,.10);
+      backdrop-filter: blur(9px) saturate(1.12);
+      text-shadow: 0 2px 8px rgba(0,0,0,.18);
+    }
+
+    .station {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-weight: 700;
+    }
+
+    .scene-count { font-family: Menlo, monospace; }
+
+    .headline {
+      display: none;
+    }
+
+    .section-chip {
+      display: none;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 4%;
+      right: 5.2%;
+      display: grid;
+      place-items: center;
+      width: clamp(29px, 4.5vh, 43px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(255,255,255,.52);
+      border-radius: 50%;
+      background: rgba(16,67,68,.36);
+      color: white;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.17);
+      z-index: 5;
+    }
+
+    .play-button:focus-visible,
+    .start-button:focus-visible {
+      outline: 3px solid var(--citrus);
+      outline-offset: 3px;
+    }
+
+    .start-screen {
+      position: absolute;
+      inset: 0;
+      z-index: 8;
+      display: grid;
+      place-items: center;
+      background: rgba(10,45,46,.08);
+      transition: opacity .35s ease, visibility .35s ease;
+    }
+
+    .start-screen.hidden { opacity: 0; visibility: hidden; }
+
+    .start-button {
+      display: grid;
+      place-items: center;
+      width: clamp(70px, 10vh, 112px);
+      aspect-ratio: 1;
+      border: 2px solid rgba(255,255,255,.72);
+      border-radius: 50%;
+      background: rgba(18,63,64,.48);
+      color: white;
+      font-size: clamp(24px, 4vh, 46px);
+      cursor: pointer;
+      box-shadow: 0 16px 50px rgba(0,0,0,.25);
+      backdrop-filter: blur(14px);
+    }
+
+    .conversation-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-height: 25%;
+      padding: 3.4% 5.4% 3.6%;
+      border-top: 1px solid rgba(255,255,255,.32);
+      background: linear-gradient(180deg, rgba(8,44,45,.28), rgba(8,44,45,.52));
+      backdrop-filter: blur(10px) saturate(1.08);
+      box-shadow: 0 -14px 38px rgba(4,31,32,.10);
+    }
+
+    .speakers {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: clamp(48px, 7vh, 78px);
+    }
+
+    .speaker {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      opacity: .58;
+      transition: opacity .25s ease, transform .25s ease;
+    }
+
+    .speaker.expert { flex-direction: row-reverse; text-align: right; }
+    .speaker.active { opacity: 1; transform: translateY(-3px); }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: clamp(40px, 6.2vh, 68px);
+      aspect-ratio: 1;
+      border: 2px solid rgba(255,255,255,.58);
+      border-radius: 46% 54% 50% 50%;
+      background: rgba(223,247,240,.74);
+      font-size: clamp(21px, 3.6vh, 39px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.2);
+    }
+
+    .expert .avatar { background: rgba(255,239,191,.76); }
+    .speaker-name { font-size: clamp(11px, 1.42vh, 17px); font-weight: 800; }
+    .speaker-role { margin-top: 3px; color: rgba(255,255,255,.68); font-size: clamp(8px, 1vh, 12px); }
+
+    .tide {
+      position: absolute;
+      left: 23%;
+      right: 23%;
+      top: 50%;
+      height: 3px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: rgba(255,255,255,.14);
+    }
+
+    .tide::after {
+      content: "";
+      display: block;
+      width: 42%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, transparent, var(--teal), var(--citrus));
+      transform: translateX(var(--tide-x, 0%));
+      transition: transform .48s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .speaker-label {
+      margin-top: 3.5%;
+      color: #ffd1c8;
+      font-size: clamp(9px, 1.08vh, 13px);
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .subtitle {
+      min-height: 4.8em;
+      margin-top: 1.5%;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      font-size: clamp(13px, 1.62vh, 20px);
+      line-height: 1.55;
+      font-weight: 600;
+      text-shadow: 0 2px 7px rgba(0,0,0,.28);
+    }
+
+    .source {
+      margin-top: 2.2%;
+      overflow: hidden;
+      color: rgba(255,255,255,.58);
+      font: clamp(7px, .92vh, 11px)/1.35 Menlo, monospace;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .no-audio {
+      position: absolute;
+      left: 50%;
+      bottom: 30%;
+      transform: translateX(-50%);
+      padding: .7em 1em;
+      border-radius: 999px;
+      background: rgba(8,44,45,.78);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 420px) {
+      body { padding: 0; }
+      .stage { width: 100vw; min-width: 0; border-radius: 0; }
+      .headline { font-size: 5.4vw; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage" aria-label="论文双人播客播放器">
+    <div class="visual-blur" id="visualBlur"></div>
+    <img class="visual-main" id="visualMain" alt="当前讲解对应的论文原文或图表">
+    <div class="visual-shade"></div>
+
+    <div class="topline">
+      <span class="station" id="episodeLabel"></span>
+      <span class="scene-count" id="sceneCount"></span>
+    </div>
+    <h1 class="headline" id="episodeTitle"></h1>
+    <div class="section-chip" id="sectionChip"></div>
+    <button class="play-button" id="play" aria-label="播放">▶</button>
+
+    <div class="start-screen" id="startScreen">
+      <button class="start-button" id="start" aria-label="开始播放">▶</button>
+    </div>
+
+    <section class="conversation-overlay" aria-live="polite">
+      <div class="speakers">
+        <div class="speaker host" id="hostSpeaker">
+          <div class="avatar" id="hostEmoji"></div>
+          <div>
+            <div class="speaker-name" id="hostName"></div>
+            <div class="speaker-role" id="hostRole"></div>
+          </div>
+        </div>
+        <div class="tide" id="tide"></div>
+        <div class="speaker expert" id="expertSpeaker">
+          <div class="avatar" id="expertEmoji"></div>
+          <div>
+            <div class="speaker-name" id="expertName"></div>
+            <div class="speaker-role" id="expertRole"></div>
+          </div>
+        </div>
+      </div>
+      <div class="speaker-label" id="speakerLabel"></div>
+      <div class="subtitle" id="subtitle"></div>
+      <div class="source" id="source"></div>
+    </section>
+
+    <div class="no-audio" id="noAudio" hidden>视觉预览模式 · 使用方向键切换</div>
+    <audio id="audio" preload="auto"></audio>
+  </main>
+
+  <script>
+    const EPISODE = __EPISODE_JSON__;
+    const $ = (id) => document.getElementById(id);
+    const audio = $("audio");
+    const scenes = EPISODE.scenes;
+    let currentScene = -1;
+
+    $("episodeLabel").textContent = EPISODE.meta.episode_label || "柚子论文电台";
+    $("episodeTitle").textContent = EPISODE.meta.title;
+
+    for (const role of ["host", "expert"]) {
+      const person = EPISODE.speakers[role];
+      $(`${role}Name`).textContent = person.name;
+      $(`${role}Role`).textContent = person.role;
+      $(`${role}Emoji`).textContent = person.emoji;
+    }
+
+    function setVisual(path) {
+      const img = $("visualMain");
+      if (img.getAttribute("src") === path) return;
+      img.classList.add("switching");
+      $("visualBlur").classList.add("switching");
+      window.setTimeout(() => {
+        img.onload = () => {
+          img.classList.remove("switching");
+          $("visualBlur").classList.remove("switching");
+        };
+        img.onerror = img.onload;
+        img.src = path;
+        $("visualBlur").style.setProperty("--scene-image", `url('${path}')`);
+        if (img.complete) img.onload();
+      }, 170);
+    }
+
+    function renderScene(index, force = false) {
+      index = Math.max(0, Math.min(index, scenes.length - 1));
+      if (index === currentScene && !force) return;
+      currentScene = index;
+      const scene = scenes[index];
+      const speaker = EPISODE.speakers[scene.speaker];
+      $("sceneCount").textContent = `${String(index + 1).padStart(2, "0")} / ${String(scenes.length).padStart(2, "0")}`;
+      $("sectionChip").textContent = scene.section;
+      $("speakerLabel").textContent = `${scene.section} · ${speaker.name} · ${speaker.role}`;
+      $("subtitle").textContent = scene.text;
+      $("source").textContent = `证据：${scene.source}`;
+      $("hostSpeaker").classList.toggle("active", scene.speaker === "host");
+      $("expertSpeaker").classList.toggle("active", scene.speaker === "expert");
+      $("tide").style.setProperty("--tide-x", scene.speaker === "host" ? "-10%" : "148%");
+      setVisual(scene.visual);
+    }
+
+    function sceneAt(time) {
+      for (let index = scenes.length - 1; index >= 0; index -= 1) {
+        if (time >= scenes[index].start) return index;
+      }
+      return 0;
+    }
+
+    function togglePlayback() {
+      if (!EPISODE.audio) return;
+      if (audio.paused) audio.play(); else audio.pause();
+    }
+
+    if (EPISODE.audio) {
+      audio.src = EPISODE.audio;
+      audio.addEventListener("timeupdate", () => renderScene(sceneAt(audio.currentTime)));
+      audio.addEventListener("play", () => {
+        $("play").textContent = "❚❚";
+        $("play").setAttribute("aria-label", "暂停");
+        $("startScreen").classList.add("hidden");
+      });
+      audio.addEventListener("pause", () => {
+        $("play").textContent = "▶";
+        $("play").setAttribute("aria-label", "播放");
+      });
+    } else {
+      $("noAudio").hidden = false;
+      $("startScreen").classList.add("hidden");
+      $("play").hidden = true;
+    }
+
+    $("start").addEventListener("click", togglePlayback);
+    $("play").addEventListener("click", togglePlayback);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.code === "Space" && EPISODE.audio) {
+        event.preventDefault();
+        togglePlayback();
+      }
+      if (event.code === "ArrowLeft") {
+        const target = Math.max(0, currentScene - 1);
+        if (EPISODE.audio) audio.currentTime = scenes[target].start;
+        renderScene(target, true);
+      }
+      if (event.code === "ArrowRight") {
+        const target = Math.min(scenes.length - 1, currentScene + 1);
+        if (EPISODE.audio) audio.currentTime = scenes[target].start;
+        renderScene(target, true);
+      }
+    });
+
+    renderScene(0, true);
+  </script>
+</body>
+</html>

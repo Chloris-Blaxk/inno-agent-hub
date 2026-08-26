@@ -146,6 +146,8 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 | [baoyu-slide-deck](./baoyu-slide-deck/) | 收集 |  | 从内容生成专业幻灯片图像，先出带风格的提纲再逐页生图 | [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills/tree/HEAD/skills/baoyu-slide-deck) |
 | [smart-illustrator](./smart-illustrator/) | 收集 |  | 智能配图与 PPT 信息图生成器，三种模式（文章配图 / 批量信息图 / 封面图） | [axtonliu/smart-illustrator](https://github.com/axtonliu/smart-illustrator) |
 | [ian-xiaohei-illustrations](./ian-xiaohei-illustrations/) | 收集 |  | 生成 Ian「小黑」风格的中文正文配图（手绘、怪诞、16:9 解释图） | [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) |
+| [paper-to-xhs](./paper-to-xhs/) | 收集 |  | 论文 → 小红书科研笔记：证据核对层＋千字内发布文案＋4–6 张截图主导的 3:4 卡片图 | [youzizzz1028/Paper2Share](https://github.com/youzizzz1028/Paper2Share/tree/main/skills/paper-to-xhs) |
+| [paper-to-dialogue-video](./paper-to-dialogue-video/) | 收集 |  | 论文 → 中文双人播客视频：核对版讲稿＋双声部配音＋同步字幕＋HTML 动画与 MP4 导出 | [youzizzz1028/Paper2Share](https://github.com/youzizzz1028/Paper2Share/tree/main/skills/paper-to-dialogue-video) |
 
 ### 🧩 元能力 · 技能与提示词
 
