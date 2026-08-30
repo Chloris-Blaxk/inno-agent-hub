@@ -23,6 +23,7 @@
 | `math-reasoning-trace-analyzer` | 兼容多种正确路径，定位首个关键错误并写入证据 |
 | `math-misconception-verifier` | 使用最小对照探针区分错因并维护状态机 |
 | `multi-representation-repair` | 在文字、符号、图像、表格和情境之间建立理解桥梁 |
+| `math-visual-repair` | 用实物图标、点阵、数轴、分数条和线段图降低低年级理解负担 |
 | `adaptive-math-practice` | 生成经质量检查的概念、同构、反例、迁移和复测题 |
 | `math-learning-progress-reporter` | 生成有证据索引的学生版或教师版学习报告 |
 
