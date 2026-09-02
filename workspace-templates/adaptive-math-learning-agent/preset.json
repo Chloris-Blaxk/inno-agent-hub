@@ -1,0 +1,7 @@
+{
+  "id": "adaptive-math-learning-agent",
+  "name": "中小学数学错因诊断与自适应巩固",
+  "description": "分析小学至高中多类数学作答，验证真实错因，并通过多表征讲解、针对练习与迁移复测形成证据闭环。",
+  "category": "教学",
+  "icon": "sigma"
+}

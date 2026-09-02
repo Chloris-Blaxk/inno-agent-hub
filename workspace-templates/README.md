@@ -60,6 +60,7 @@ Inno Agent 的「简单模式」会直接把这些模板渲染成欢迎页的**�
 | [ppt-creation/](./ppt-creation/) | PPT / 演示文稿制作 | ppt-builder(结构化幻灯片生成)| ✅ 可用 |
 | [teaching-webpage-en/](./teaching-webpage-en/) | 课堂互动网页(英文版) | webpage-builder / claude-design / visual-explainer | ✅ 可用 |
 | [math-interactive-en/](./math-interactive-en/) | 数学交互解题(英文版) | edu-analytic-geometry / edu-solid-geometry | ✅ 可用 |
+| [adaptive-math-learning-agent/](./adaptive-math-learning-agent/) | 中小学数学错因诊断、多表征修复与自适应巩固 | math-task-structurer / math-reasoning-trace-analyzer / math-misconception-verifier / multi-representation-repair / math-visual-repair / adaptive-math-practice / math-learning-progress-reporter | ✅ 可用 |
 | [lesson-plan/](./lesson-plan/) | 结构化教案生成 | — | 🚧 骨架(工作流待细化)|
 | [scenario-explain/](./scenario-explain/) | 情景化讲题 | — | 🚧 骨架(工作流待细化)|
 | [ai4math-paper-reading/](./ai4math-paper-reading/) | 数学论文阅读：PDF 摄入、论文转 Skill | — | ✅ 可用（[VeryMath](https://github.com/VeryMath)）|
