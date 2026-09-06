@@ -33,6 +33,10 @@ DOCS = os.path.join(ROOT, "docs")
 HERE = os.path.dirname(os.path.abspath(__file__))
 GRID_TEMPLATE = os.path.join(HERE, "site_template.html")
 MAP_TEMPLATE = os.path.join(HERE, "map_template.html")
+STATIC_DIR = os.path.join(HERE, "static")          # 404 / favicon / og 图,原样拷到 docs/
+REPO_URL = "https://github.com/Chloris-Blaxk/inno-agent-hub"
+# 站点根 URL(带末尾 /),给 og:url / canonical 用;CI 里按仓库算,本地可用 SITE_URL 环境变量覆盖
+SITE_URL = os.environ.get("SITE_URL", "https://chloris-blaxk.github.io/inno-agent-hub/").rstrip("/") + "/"
 
 # category -> 莫兰迪配色(卡片网格页用)
 PALETTE = {
@@ -285,7 +289,8 @@ def main() -> int:
     data = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "count": len(skills),
-        "repo": "https://github.com/Chloris-Blaxk/inno-agent-hub",
+        "repo": REPO_URL,
+        "site": SITE_URL,
         "categories": [{"name": k, "count": v} for k, v in sorted(cats.items(), key=lambda x: -x[1])],
         "scenarios": [
             {**sc, "count": sc_counts.get(sc["key"], 0),
@@ -313,12 +318,22 @@ def main() -> int:
     with open(os.path.join(DOCS, "skills.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+    # 静态附件:404 页、favicon、og 分享图
+    if os.path.isdir(STATIC_DIR):
+        for f in sorted(os.listdir(STATIC_DIR)):
+            shutil.copy2(os.path.join(STATIC_DIR, f), os.path.join(DOCS, f))
+    open(os.path.join(DOCS, ".nojekyll"), "a").close()
+
     payload = json.dumps(data, ensure_ascii=False)
     for tpl, out in ((MAP_TEMPLATE, "index.html"), (GRID_TEMPLATE, "all.html")):
         if not os.path.isfile(tpl):
             print(f"❌ 缺少模板 {tpl}", file=sys.stderr)
             return 1
-        html = open(tpl, encoding="utf-8").read().replace("/*__DATA__*/null", payload)
+        html = (open(tpl, encoding="utf-8").read()
+                .replace("/*__DATA__*/null", payload)
+                .replace("{{SITE_URL}}", SITE_URL)
+                .replace("{{PAGE}}", out)
+                .replace("{{COUNT}}", str(len(skills))))
         with open(os.path.join(DOCS, out), "w", encoding="utf-8") as f:
             f.write(html)
 
