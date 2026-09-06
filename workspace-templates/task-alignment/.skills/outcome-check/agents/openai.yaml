@@ -1,0 +1,4 @@
+interface:
+  display_name: "结果校验"
+  short_description: "把实际产物逐条映射到验收标准和证据，区分通过、失败与未验证"
+  default_prompt: "Use $outcome-check to verify the result against the confirmed task contract."

@@ -57,6 +57,8 @@ Inno Agent 的「简单模式」会直接把这些模板渲染成欢迎页的**�
 |---|---|---|---|
 | [ielts-prep/](./ielts-prep/) | 雅思英语备考 | card-maker(词汇卡片生成器)| ✅ 可用 |
 | [ielts-coach/](./ielts-coach/) | 雅思备考(英文闭环版) | card-maker / essay-grader / reading-trainer / weekly-review | ✅ 可用 |
+| [question-led-learning/](./question-led-learning/) | 由学习者主动提问的追问式学习 | concept-seeder / learner-question-loop | ✅ 可用 |
+| [task-alignment/](./task-alignment/) | 复杂学习、研究与创作任务的对齐和结果校验 | task-alignment / outcome-check | ✅ 可用 |
 | [ppt-creation/](./ppt-creation/) | PPT / 演示文稿制作 | ppt-builder(结构化幻灯片生成)| ✅ 可用 |
 | [teaching-webpage-en/](./teaching-webpage-en/) | 课堂互动网页(英文版) | webpage-builder / claude-design / visual-explainer | ✅ 可用 |
 | [math-interactive-en/](./math-interactive-en/) | 数学交互解题(英文版) | edu-analytic-geometry / edu-solid-geometry | ✅ 可用 |

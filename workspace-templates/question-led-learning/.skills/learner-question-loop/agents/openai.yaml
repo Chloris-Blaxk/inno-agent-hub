@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习者追问循环"
+  short_description: "回答学习者提出的概念问题，并通过复述、边界和迁移任务验证理解"
+  default_prompt: "Use $learner-question-loop to answer my concept question and guide the next learning turn."

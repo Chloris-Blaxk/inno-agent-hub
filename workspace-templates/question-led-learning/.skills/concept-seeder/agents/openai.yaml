@@ -1,0 +1,4 @@
+interface:
+  display_name: "概念种子"
+  short_description: "为新学习主题生成少量、递进且可由学习者主动追问的概念起点"
+  default_prompt: "Use $concept-seeder to turn my learning goal into concept seeds I can question."

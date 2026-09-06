@@ -46,6 +46,8 @@
 **📦 我想按场景一键搭建工作区** —— 去 [`workspace-templates/`](./workspace-templates/) 选模板，复制 `agent.md` + `.skills/` 即可。当前已收录：
 
 - [`ielts-prep`](./workspace-templates/ielts-prep/) — 雅思英语备考工作区
+- [`question-led-learning`](./workspace-templates/question-led-learning/) — Agent 给概念线索、学习者主动追问的深度学习工作区
+- [`task-alignment`](./workspace-templates/task-alignment/) — 复杂任务先探索对齐、确认后执行并按证据验收
 - **VeryMath AI4Math 系列**（7 个模板） — 来自 [VeryMath](https://github.com/VeryMath) 开源组织，覆盖数学形式化、论文读写、计算数学、优化、自动科研、进化实验等场景
 
 **🧑‍🏫 我想自己写 Skill** —— 读 [`how-to/skill-tutorial.md`](./how-to/skill-tutorial.md)，看 `agent.md` 与 SKILL 包的设计与上传方式。
