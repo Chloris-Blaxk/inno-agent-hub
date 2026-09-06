@@ -1,0 +1,79 @@
+{
+  "packs": [
+    {
+      "id": "lesson-prep",
+      "name": "备课技能包",
+      "description": "从课标到教案:单元逆向设计、显性教学序列、分层适配与形成性评估,把一节课从零备到能上。",
+      "icon": "book-open",
+      "subject": "跨学科",
+      "skills": [
+        "k12-lesson-planning",
+        "backwards-design-unit-planner",
+        "explicit-instruction-sequence-builder",
+        "differentiation-adapter",
+        "formative-assessment-technique-selector",
+        "scope-and-sequence-designer"
+      ]
+    },
+    {
+      "id": "courseware",
+      "name": "课件与讲解技能包",
+      "description": "一句话出动画网页课件、PPT、信息图与配图;立体几何、圆锥曲线直接生成可交互解题页。",
+      "icon": "presentation",
+      "subject": "跨学科",
+      "skills": [
+        "frontend-slides",
+        "pptx",
+        "smart-illustrator",
+        "baoyu-infographic",
+        "baoyu-slide-deck",
+        "edu-solid-geometry",
+        "edu-analytic-geometry"
+      ]
+    },
+    {
+      "id": "grading",
+      "name": "批改与评价技能包",
+      "description": "量规批改、Word 原生批注、考题逆向拆考点、按学生水平分层出材料,形成教-评-改闭环。",
+      "icon": "square-check",
+      "subject": "跨学科",
+      "skills": [
+        "homework-grader",
+        "comment-on-docx",
+        "Exam2Knowledge",
+        "k12-lesson-differentiation",
+        "docx"
+      ]
+    },
+    {
+      "id": "self-study",
+      "name": "自学辅导技能包",
+      "description": "给思路不给答案:苏格拉底式讲题、数学家教、通用学科家教,建立真正的理解。",
+      "icon": "graduation-cap",
+      "subject": "跨学科",
+      "skills": [
+        "math-tutor",
+        "socratic-tutor",
+        "tutor",
+        "learning-opportunities"
+      ]
+    },
+    {
+      "id": "research",
+      "name": "教研科研技能包",
+      "description": "从选题到成稿:文献检索与引用校验、多视角深度研究报告、系统综述与文献图谱、资料格式转换。",
+      "icon": "flask-conical",
+      "subject": "跨学科",
+      "skills": [
+        "storm-research",
+        "paper-lookup",
+        "citation-management",
+        "markitdown",
+        "education-topic-decomposition",
+        "education-literature-map",
+        "education-systematic-review-preparation",
+        "scholar-distill"
+      ]
+    }
+  ]
+}

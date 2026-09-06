@@ -238,3 +238,12 @@ description: >-
 
 完整贡献流程见仓库根目录 [README.md 的「贡献」一节](../README.md#贡献)。
 
+
+## 平台元数据文件
+
+技能之外,`skill-library/` 里还有两个给展示站与 Innoskill 平台读的 JSON,**新增或调整技能时顺手维护**:
+
+| 文件 | 内容 | 谁用 |
+|---|---|---|
+| `scenarios.json` | 五个提问式场景(星系)、每个技能的场景归属与「试试这句话」示例、`featured` 精选名单(星图只展示这一组) | 星图首页 |
+| `packs.json` | 技能包:`{ id, name, description, icon, subject, skills[] }`,`icon` 用 [lucide](https://lucide.dev/icons) 图标名,`skills` 里的 id 必须是本目录下已存在的技能 | Innoskill「技能包」/ InnoAgent 技能仓库 |
