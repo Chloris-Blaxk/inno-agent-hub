@@ -1,6 +1,8 @@
 ---
 name: education-topic-decomposition
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when decomposing a broad education research topic into focused subtopics, searchable concepts, research gaps, candidate study designs, and writing directions. Best for thesis/article topic selection, narrowing a vague idea, or turning an education policy/practice issue into researchable tracks using STORM-style multi-perspective questioning plus OpenAlex/Semantic Scholar evidence search.
 metadata:
   short-description: Decompose broad education topics into researchable directions

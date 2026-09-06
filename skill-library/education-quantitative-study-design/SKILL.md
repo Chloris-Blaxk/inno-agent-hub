@@ -1,6 +1,8 @@
 ---
 name: education-quantitative-study-design
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for education papers using quantitative survey, correlational, regression, experimental, quasi-experimental, causal-comparative, mediation/moderation, SEM, multilevel, or longitudinal designs. Produces variables, hypotheses, sampling, instruments, power/sample-size guidance, statistical plan, and methods-section structure.
 metadata:
   short-description: Design quantitative education studies

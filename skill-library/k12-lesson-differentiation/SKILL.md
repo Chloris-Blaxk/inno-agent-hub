@@ -1,6 +1,8 @@
 ---
 name: k12-lesson-differentiation
 category: 教学辅导
+subject: 跨学科
+kind: 教学设计
 description: >-
   把一节已有的 K-12 课(数学、语文/英语 ELA、科学、社会与历史)按学生水平做分层适配:低于年级水平 / 达到年级水平 / 高于年级水平。在向老师追问课程、层级或学生水平之前就应加载本技能。一次性产出 1 份教师用分层方案 + 3 份学生可直接用的分层材料,全部为可编辑 Word 文档;由同一份材料源 JSON 经内置脚本渲染,共享内容只写一次,保证各层不跑偏。连接 Learning Commons 知识图谱时会自动使用,不连也能用。本技能只改造老师带来或指名的已有课程;从零建新课请用 k12-lesson-planning。不适用于批改、量规、评估反馈或测验。触发词:分层教学, 差异化教学, 因材施教, 分层材料, 学生水平不一样, 给这节课做分层, 分层作业, 搭支架, 照顾不同层次; differentiate, tier, scaffold a lesson.
 license: Complete terms in LICENSE

@@ -1,6 +1,8 @@
 ---
 name: education-learning-analytics-modeling
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use after learning analytics or educational data mining data are available and cleaned, especially LMS logs, AI platform logs, clickstream, assignment histories, assessment sequences, student writing revision traces, knowledge component data, and learning behavior records. Covers feature engineering, sequence analysis, clustering, prediction, early warning, knowledge tracing, model evaluation, explainability, leakage checks, privacy, and education-paper reporting.
 metadata:
   short-description: Model learning logs, behavior data, knowledge tracing, clustering, and prediction

@@ -1,6 +1,8 @@
 ---
 name: education-validity-reliability-analysis
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when education research uses scales, questionnaires, tests, rubrics, or latent constructs and needs reliability and validity analysis, including Cronbach's alpha, McDonald's omega, item-total correlations, EFA, CFA, CR, AVE, convergent validity, discriminant validity, factor loadings, model fit, and measurement reporting. This second-layer execution skill supports quantitative, mixed-methods, psychometric, program evaluation, and survey studies.
 metadata:
   short-description: Analyze reliability and validity for education scales and questionnaires

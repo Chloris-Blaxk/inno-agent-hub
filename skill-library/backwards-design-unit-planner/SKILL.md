@@ -2,6 +2,8 @@
 # AGENT SKILLS STANDARD FIELDS (v2)
 name: backwards-design-unit-planner
 category: 教学辅导
+subject: 跨学科
+kind: 教学设计
 description: >-
   用 Wiggins & McTighe 的逆向设计(UbD)规划教学单元:从期望学习成果 → 评估证据 → 学习活动三阶段倒推,产出含大概念/基本问题、评估蓝图、WHERETO 教学序列与对齐自检的完整单元计划。开一个新单元或按课程标准重构旧单元时使用。触发词:设计单元, 单元教学设计, 大单元设计, 逆向设计, UbD, 备一个单元, 教学目标对齐, 单元规划; unit plan, backwards design, understanding by design.
 disable-model-invocation: false

@@ -1,6 +1,8 @@
 ---
 name: scholar-distill
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when distilling a scholar, professor, research group, or intellectual lineage into an evidence-grounded research assistant for academic background mapping, topic selection, research-question generation, Survey or literature-review outlining, theory/method choice, and paper positioning. Trigger when the user mentions 学者蒸馏, 人物蒸馏 for academic research, scholar persona, academic style distillation, research background, 选题, Survey, literature review, professor profile, AMiner/Google Scholar/Semantic Scholar/OpenAlex profile, or wants to learn from a scholar's publications without impersonating them.
 ---
 

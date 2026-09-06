@@ -1,6 +1,8 @@
 ---
 name: education-paper-type-router
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use after an education research topic and research questions are drafted, or whenever the user is unsure what type of education paper to write. Routes the project to empirical quantitative, qualitative, mixed methods, action research, design-based research, literature review, systematic review, meta-analysis, psychometric scale development, learning analytics, policy/comparative analysis, or program evaluation without exposing internal skill names to the user.
 metadata:
   short-description: Route education papers to the right research path

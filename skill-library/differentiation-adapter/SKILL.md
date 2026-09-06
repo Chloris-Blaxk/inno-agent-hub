@@ -2,6 +2,8 @@
 # AGENT SKILLS STANDARD FIELDS (v2)
 name: differentiation-adapter
 category: 教学辅导
+subject: 跨学科
+kind: 教学设计
 description: >-
   把同一堂课的任务按不同学习者需求做差异化适配,同时保持核心学习目标不变:为学困、超常、注意力障碍(ADHD)、读写障碍、焦虑或二语(EAL)学生调整难度入口与支架,输出改了什么、保留了什么、目标核验与实施建议(明确排斥已被证伪的“学习风格”理论)。同一份教案要照顾不同层次学生时使用。触发词:分层教学, 差异化教学, 因材施教, 照顾不同层次, 学困生辅导, 分层作业, 分层任务, 个别化调整; differentiation, adapt task, SEND, EAL, scaffolding.
 disable-model-invocation: false

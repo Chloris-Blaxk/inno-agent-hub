@@ -1,6 +1,8 @@
 ---
 name: education-survey-instrument-design
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use when designing survey instruments, questionnaires, scales, rubrics, or measurement tools for education research after research questions, variables, or constructs are identified. Covers scale selection, construct-dimension mapping, item generation, reverse-coded items, response formats, expert validity review, pilot testing, reliability/validity planning, and questionnaire deployment tools. This is a second-layer execution skill used by quantitative, mixed-methods, program evaluation, psychometric, and action research workflows.
 metadata:
   short-description: Design education surveys, scales, and questionnaire instruments

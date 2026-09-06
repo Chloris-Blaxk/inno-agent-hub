@@ -1,6 +1,8 @@
 ---
 name: education-meta-analysis-preparation
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use for education meta-analysis papers or systematic reviews that quantitatively synthesize effect sizes. Supports effect-size extraction, coding sheet design, heterogeneity, moderator analysis, publication bias, forest/funnel plots, and R metafor/meta workflows.
 metadata:
   short-description: Prepare education meta-analysis workflows

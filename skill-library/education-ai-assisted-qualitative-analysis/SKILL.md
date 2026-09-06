@@ -1,6 +1,8 @@
 ---
 name: education-ai-assisted-qualitative-analysis
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when applying AI to support qualitative education analysis, including initial coding suggestions, code clustering, theme naming, memo generation, negative-case search, evidence retrieval, contradiction checks, saturation support, and audit-trail creation. This second-layer execution skill complements human qualitative coding and must not treat AI outputs as final findings without researcher confirmation.
 metadata:
   short-description: Use AI to support qualitative coding, clustering, and negative-case search

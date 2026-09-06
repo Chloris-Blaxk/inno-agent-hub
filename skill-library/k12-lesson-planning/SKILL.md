@@ -1,6 +1,8 @@
 ---
 name: k12-lesson-planning
 category: 教学辅导
+subject: 跨学科
+kind: 教学设计
 description: >-
   为 K-12 教师从零创建一节课的完整教学包:教案 + 学生用材料 + 课堂观察表,覆盖数学、语文/英语(ELA)、科学、社会与历史四科,并按学科加载专属参考,产出可编辑的 Word 文档。在向老师追问年级、学科、课题、课标或时长之前就应加载本技能。若同一次请求还要分层/分级材料,仍算一次备课,由本技能在教学包内一并产出,不要再调用 k12-lesson-differentiation。不适用于批改、评分量规、作业反馈、出测验或课标检索(直接回答即可);改造已有教案请用 k12-lesson-differentiation。触发词:备课, 写教案, 教案设计, 写一节课, 课时计划, 单元计划, 迷你课, 我明天要讲, 我在教, 学生用材料, 课堂观察表; lesson plan, mini-lesson, unit plan, daily plan.
 license: Complete terms in LICENSE

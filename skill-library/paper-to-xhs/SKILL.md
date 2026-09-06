@@ -1,6 +1,8 @@
 ---
 name: paper-to-xhs
 category: 内容创作
+subject: 跨学科
+kind: 内容创作
 description: Convert an academic paper, PDF, DOI, arXiv page, or publisher link into a Chinese Xiaohongshu paper note in the user's established voice, including a detailed verification layer, a self-contained sub-1000-character publishable post with functional emoji, topics, and 4–6 screenshot-led portrait images. Use for 论文分享、论文解读、小红书科研笔记、论文做小红书、paper-to-XHS, or when the user sends a paper and asks to “生成笔记/生成吧”.
 ---
 

@@ -1,6 +1,8 @@
 ---
 name: education-learning-analytics-design
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for learning analytics, educational data mining, LMS log analysis, AI platform behavior data, learner modeling, prediction, clustering, sequence mining, early warning, dashboard design, and explainable analytics in education research.
 metadata:
   short-description: Design learning analytics and educational data mining studies

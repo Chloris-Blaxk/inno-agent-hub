@@ -1,6 +1,8 @@
 ---
 name: edu-analytic-geometry
 category: 教学辅导
+subject: 数学
+kind: 课件生成
 description: >-
   把一道解析几何题解成一个自包含的交互教学网页：左栏题面 + 动态控制台（一个
   可变参数滑块驱动实时重算的几何量 + 理论范围/定值指示），中栏 KaTeX 分步解析，右栏 2D

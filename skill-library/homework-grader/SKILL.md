@@ -1,6 +1,8 @@
 ---
 name: homework-grader
 category: 教学辅导
+subject: 跨学科
+kind: 评价测评
 version: 1.0.0
 allowed-tools:
 - Read

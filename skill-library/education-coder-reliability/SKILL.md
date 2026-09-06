@@ -1,6 +1,8 @@
 ---
 name: education-coder-reliability
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when education qualitative or content-analysis projects involve multiple coders, coding reliability, coding agreement, pilot coding, codebook calibration, coding conflict resolution, Cohen's Kappa, Krippendorff's Alpha, percent agreement, inter-rater reliability, or reporting coder agreement. This second-layer execution skill supports qualitative coding, content analysis, discourse coding, classroom observation coding, policy text coding, open-ended survey coding, and AI-assisted coding review.
 metadata:
   short-description: Check coder agreement and reliability in education qualitative/content analysis

@@ -2,6 +2,8 @@
 # AGENT SKILLS STANDARD FIELDS (v2)
 name: scope-and-sequence-designer
 category: 教学辅导
+subject: 跨学科
+kind: 教学设计
 description: >-
   设计课程的范围与进度(scope & sequence):跨年级、跨学期的纵向进阶与横向衔接,含先修依赖、知识类型诊断、硬性与建议的排序约束、逐条带理由的教学顺序与连贯性检查。搭建新课程、重构学科体系或梳理进阶路径时使用。触发词:课程规划, 教学进度表, 课程大纲, 学期教学计划, 知识点顺序, 单元排布, 课程体系, 进阶路径; scope and sequence, curriculum map, progression.
 disable-model-invocation: false

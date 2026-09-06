@@ -2,6 +2,8 @@
 # AGENT SKILLS STANDARD FIELDS (v2)
 name: explicit-instruction-sequence-builder
 category: 教学辅导
+subject: 跨学科
+kind: 教学设计
 description: >-
   构建完整的显性教学课时序列:教师示范(I Do)→ 引导练习(We Do)→ 独立练习(You Do),含各阶段理解检查点、时间分配、示例与常见误区,基于渐进释放责任模型。教新技能/新步骤/新概念、需要一份能直接上课的课时教案时使用。触发词:一节课教案, 课时设计, 讲课流程, 教学过程设计, 示范讲解, 精讲精练, 显性教学, 我讲你练; explicit instruction, lesson sequence, gradual release, I do we do you do.
 disable-model-invocation: false

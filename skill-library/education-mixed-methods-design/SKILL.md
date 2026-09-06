@@ -1,6 +1,8 @@
 ---
 name: education-mixed-methods-design
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for education papers combining quantitative and qualitative data, including explanatory sequential, exploratory sequential, convergent parallel, embedded, intervention mixed methods, and action research with mixed evidence. Produces integration logic, sampling, data collection sequence, joint displays, and mixed-methods validity plan.
 metadata:
   short-description: Design mixed-methods education studies

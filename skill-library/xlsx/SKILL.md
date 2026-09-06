@@ -1,6 +1,8 @@
 ---
 name: xlsx
 category: 文档处理
+subject: 跨学科
+kind: 文档处理
 description: >-
   读取、编辑、修复和分析电子表格(.xlsx/.xlsm/.csv/.tsv):新增列、计算公式、调整格式、做数据透视与图表等。任何以表格文件为主要输入或输出的任务都使用本技能。触发词:Excel, 电子表格, .xlsx, 表格处理, 公式计算, 数据透视; spreadsheet, xlsx, csv.
 ---

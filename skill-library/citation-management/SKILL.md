@@ -1,6 +1,8 @@
 ---
 name: citation-management
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: >-
   学术引用管理:检索 Google Scholar 与 PubMed,抽取并校验文献元数据,生成规范的 BibTeX 条目。需要管理参考文献、核对引用、生成 BibTeX 时使用。触发词:参考文献, 引用管理, BibTeX, 文献校验, 引文; citation, bibtex, references.
 ---

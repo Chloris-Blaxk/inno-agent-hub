@@ -1,6 +1,8 @@
 ---
 name: education-literature-map
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when creating education literature maps, bibliometric analyses, keyword co-occurrence maps, co-citation maps, research trend summaries, author/institution networks, and topic evolution views using VOSviewer, bibliometrix/Biblioshiny, OpenAlex, Semantic Scholar, or exported citation files.
 metadata:
   short-description: Build literature maps and bibliometric views for education topics

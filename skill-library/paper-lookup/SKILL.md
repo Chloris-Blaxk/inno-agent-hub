@@ -1,6 +1,8 @@
 ---
 name: paper-lookup
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: >-
   通过 REST API 检索 10 个学术文献库(PubMed、PMC 全文、bioRxiv、medRxiv、arXiv、OpenAlex、Crossref、Semantic Scholar、CORE、Unpaywall),查找论文、预印本与学术文章。触发词:查论文, 文献检索, 找 paper, arXiv, PubMed, 综述检索; search papers, literature search.
 ---

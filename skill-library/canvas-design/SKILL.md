@@ -1,6 +1,8 @@
 ---
 name: canvas-design
 category: 内容创作
+subject: 艺术
+kind: 内容创作
 description: >-
   运用设计理念创作精美静态视觉作品(海报、艺术图等),输出为 .png 与 .pdf。当用户要做海报、视觉作品、平面设计稿时使用。触发词:海报, 平面设计, 视觉作品, 配图设计; poster, canvas design, visual art.
 ---

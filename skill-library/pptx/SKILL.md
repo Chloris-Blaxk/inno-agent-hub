@@ -1,6 +1,8 @@
 ---
 name: pptx
 category: 文档处理
+subject: 跨学科
+kind: 课件生成
 description: >-
   创建、读取、解析与提取 PowerPoint(.pptx)内容:制作演示/路演幻灯片,或从已有 pptx 抽取文字。任何涉及 .pptx 的场景都使用本技能。触发词:PPT, 幻灯片, 演示文稿, .pptx, 做一套 slides; pptx, slide deck, presentation.
 ---

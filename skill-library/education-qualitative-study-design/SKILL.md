@@ -1,6 +1,8 @@
 ---
 name: education-qualitative-study-design
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for qualitative education papers including case study, interview study, classroom observation, ethnography, phenomenology, narrative inquiry, grounded theory, content analysis, discourse analysis, and qualitative document analysis. Produces sampling, protocols, interview/observation guides, coding approach, trustworthiness plan, and findings-section structure.
 metadata:
   short-description: Design qualitative education studies

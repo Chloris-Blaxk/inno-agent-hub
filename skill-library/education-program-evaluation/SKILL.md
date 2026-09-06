@@ -1,6 +1,8 @@
 ---
 name: education-program-evaluation
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for education program evaluation, curriculum evaluation, platform/tool evaluation, teacher training evaluation, school reform evaluation, and implementation/effectiveness studies. Produces logic model, evaluation questions, indicators, data plan, analysis plan, and evaluation-report/paper structure.
 metadata:
   short-description: Design education program and curriculum evaluations

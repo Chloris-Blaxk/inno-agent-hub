@@ -1,6 +1,8 @@
 ---
 name: education-inferential-statistics
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use after descriptive statistics when an education research project needs hypothesis testing or statistical relationships, including t-tests, ANOVA/ANCOVA, chi-square tests, correlations, linear/logistic regression, simple mediation/moderation screening, effect sizes, assumptions, post-hoc tests, and APA/Chinese education paper result reporting. This second-layer execution skill supports quantitative, mixed-methods, experimental, quasi-experimental, survey, program evaluation, and action research studies.
 metadata:
   short-description: Run and report common inferential statistics for education research

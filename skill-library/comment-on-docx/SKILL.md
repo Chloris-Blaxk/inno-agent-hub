@@ -1,6 +1,8 @@
 ---
 name: comment-on-docx
 category: 教学辅导
+subject: 跨学科
+kind: 评价测评
 description: >-
   给 Word(.docx)文档添加批注式反馈:按批注规范定位到具体词句,以原生 Word 批注(comment)写回原文而不改动正文,并另存副本。适合作文/论文/作业批改与文稿评审。自带读取文档 runs、起草批注、用 python-docx 程序化插入批注的脚本与指南。触发词:批改作文, 给文档加批注, Word 批注, 论文评阅, 作业反馈, 评审意见, 不改原文的修改建议; comment on docx, word comments, review feedback, add comments.
 ---

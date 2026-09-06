@@ -1,6 +1,8 @@
 ---
 name: understand
 category: 开发工具
+subject: 其它
+kind: 开发工具
 description: >-
   分析一个代码库,生成交互式知识图谱,帮助理解其架构、组件与相互关系。想快速读懂一个项目或代码库时使用。触发词:理解代码库, 读懂项目, 代码架构, 知识图谱, 代码导览; understand codebase, code map.
 ---

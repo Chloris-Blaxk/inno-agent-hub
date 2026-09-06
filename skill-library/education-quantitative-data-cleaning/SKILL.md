@@ -1,6 +1,8 @@
 ---
 name: education-quantitative-data-cleaning
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use after quantitative education data are collected and before descriptive, inferential, reliability, validity, SEM, multilevel, or learning analytics analysis. Covers data import checks, data dictionary validation, missing values, invalid values, outliers, duplicate records, participant attrition, variable coding, reverse scoring, scale scoring, group/timepoint coding, dataset versioning, and reproducible cleaning logs.
 metadata:
   short-description: Clean and prepare quantitative education research data

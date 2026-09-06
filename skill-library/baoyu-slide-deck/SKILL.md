@@ -1,6 +1,8 @@
 ---
 name: baoyu-slide-deck
 category: 内容创作
+subject: 跨学科
+kind: 课件生成
 description: >-
   从内容生成专业幻灯片图像:先产出带风格说明的提纲,再逐页生成幻灯片图(产物为图片,区别于可编辑的 pptx)。需要快速做一套演示/分享页时使用。触发词:幻灯片, 演示, 做 slides, slide deck, 分享页; presentation, generate deck.
 ---

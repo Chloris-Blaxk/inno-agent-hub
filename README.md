@@ -147,6 +147,48 @@ description: >-
 
 ---
 
+## 学科与用途标签 (必填)
+
+Innoskill 平台与 InnoAgent「技能仓库」按 **学科(`subject`)** 和 **用途(`kind`)** 两个维度筛选技能。写在 `SKILL.md` frontmatter 的 `category:` 之后,各选**一个**值:
+
+```yaml
+---
+name: edu-solid-geometry
+category: 教学辅导
+subject: 数学
+kind: 课件生成
+description: >-
+  ...
+---
+```
+
+### `subject` 学科
+
+| 值 | 用于 |
+|---|---|
+| `跨学科` | 面向教学、但不限学科的技能 —— 大多数备课 / 批改 / 课件 / 研究类都是它 |
+| `语文` `数学` `英语` `物理` `化学` `生物` `历史` `地理` `道德与法治` `科学` `信息技术` `艺术` | 只对该学科有意义的技能(如 `edu-solid-geometry` → 数学,`socratic-tutor` 讲编程 → 信息技术,`algorithmic-art` → 艺术) |
+| `其它` | 与教学无关的通用 / 开发类技能(`claude-api`、`mcp-builder`、`email-sender`) |
+
+### `kind` 用途
+
+比 `category` 细一级,回答"老师拿它干什么":
+
+| 值 | 说明 | 典型技能 |
+|---|---|---|
+| `教学设计` | 备课、单元与课时设计、分层适配、课程进度 | k12-lesson-planning、backwards-design-unit-planner、differentiation-adapter |
+| `课件生成` | PPT、网页课件、动态几何、信息图、漫画、配图 | frontend-slides、edu-solid-geometry、baoyu-infographic、pptx |
+| `评价测评` | 批改、批注、量规、考点拆解、形成性评估 | homework-grader、comment-on-docx、Exam2Knowledge |
+| `学习辅导` | 面向学生的讲题、家教、练习 | tutor、math-tutor、socratic-tutor |
+| `课堂分析` | 课堂实录、师生互动、提问层级分析(预留,暂无技能) | — |
+| `教研科研` | 文献检索与引用、研究设计、数据分析、论文写作 | paper-lookup、storm-research、education-* 系列 |
+| `文档处理` | Office / PDF / 网页 / 视频的读写转换 | docx、pdf、markitdown、baoyu-url-to-markdown |
+| `内容创作` | 艺术、海报、科普传播 | algorithmic-art、paper-to-xhs、ian-xiaohei-illustrations |
+| `开发工具` | API、MCP、测试、前端工程、提示词 | claude-api、mcp-builder、webapp-testing、prompt-engineer |
+| `通用工具` | 邮件、联网搜索等不归上面任何一类的工具 | email-sender、tavily-search |
+
+规则:**不要新造值**(平台按精确值筛选,新值不会出现在任何 tab 里);拿不准时 `subject` 写 `跨学科`,`kind` 按 `category` 就近选。加新值先提 issue。
+
 ## 关联项目
 
 - [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) — 主项目（Inno Agent 运行时）
