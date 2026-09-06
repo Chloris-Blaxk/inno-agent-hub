@@ -5,7 +5,7 @@
   - 每个 skill-library/<id>/SKILL.md 的 frontmatter -> name / category / description
   - skill-library/README.md 的目录表 -> 类型 / 通过验证 / 一句话 / 引用 / 效果 / 分组
   - skill-library/assets/<id>/*.gif|png -> demo 素材
-  - scripts/skill_scenarios.py -> 星图的场景归属与示例输入
+  - skill-library/scenarios.json -> 星图的场景归属与示例输入
 
 产出:
   - docs/index.html   星图首页(场景星系 + 程序化 riso 图块 + 点击看详情)
@@ -25,10 +25,12 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import riso_art  # noqa: E402
-from skill_scenarios import FALLBACK, SCENARIOS, SKILLS as SCENARIO_MAP  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIB = os.path.join(ROOT, "skill-library")
+# 星图的场景归属与示例输入,和技能内容放在一起维护(新增 skill 时在这里补一条)
+_SC = json.load(open(os.path.join(LIB, "scenarios.json"), encoding="utf-8"))
+SCENARIOS, FALLBACK, SCENARIO_MAP = _SC["scenarios"], _SC["fallback"], _SC["skills"]
 DOCS = os.path.join(ROOT, "docs")
 HERE = os.path.dirname(os.path.abspath(__file__))
 GRID_TEMPLATE = os.path.join(HERE, "site_template.html")
@@ -342,7 +344,7 @@ def main() -> int:
     print("   分类: " + " · ".join(f"{c['name']}({c['count']})" for c in data["categories"]))
     print(f"   demo {copied} 个 | 已验证 {sum(1 for s in skills if s['verified'])} 个 | 图块 {len(skills)} 张")
     if unmapped:
-        print(f"   ⚠️ 未配场景/示例(已兜底,建议补 scripts/skill_scenarios.py): {', '.join(unmapped)}")
+        print(f"   ⚠️ 未配场景/示例(已兜底,建议补 skill-library/scenarios.json): {', '.join(unmapped)}")
     miss = [s["id"] for s in skills if not s["refUrl"] and s["type"] == "收集"]
     if miss:
         print(f"   ⚠️ 收集类但缺引用: {', '.join(miss)}")

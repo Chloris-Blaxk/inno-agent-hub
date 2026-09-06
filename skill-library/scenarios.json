@@ -1,0 +1,345 @@
+{
+  "fallback": "创造",
+  "scenarios": [
+    {
+      "key": "备课",
+      "title": "怎么备好一节课?",
+      "blurb": "教案设计、分层适配、出题与批改 —— 把一节课从零备到能上。",
+      "color": {
+        "bg": "#cdd9ce",
+        "fg": "#3f5c48",
+        "ink": "#2f4636"
+      }
+    },
+    {
+      "key": "讲课",
+      "title": "课怎么讲得好看?",
+      "blurb": "互动课件、动态几何、幻灯片与配图 —— 让抽象的东西看得见。",
+      "color": {
+        "bg": "#cddae3",
+        "fg": "#3d627e",
+        "ink": "#2d4a60"
+      }
+    },
+    {
+      "key": "自学",
+      "title": "学生怎么自己学会?",
+      "blurb": "引导式讲题、家教式辅导 —— 给思路不给答案，建立真正的理解。",
+      "color": {
+        "bg": "#e8d6ca",
+        "fg": "#9a5c40",
+        "ink": "#7d4a33"
+      }
+    },
+    {
+      "key": "研究",
+      "title": "怎么把研究做深?",
+      "blurb": "文献检索、引用校验、资料转换与深度报告 —— 从查到写的一整条链路。",
+      "color": {
+        "bg": "#e6e0cd",
+        "fg": "#736846",
+        "ink": "#5c5338"
+      }
+    },
+    {
+      "key": "创造",
+      "title": "怎么做出惊艳的东西?",
+      "blurb": "生成艺术、视觉设计、前端与元能力 —— 把想法直接变成能看能玩的作品。",
+      "color": {
+        "bg": "#d7d0de",
+        "fg": "#5b4b73",
+        "ink": "#48395d"
+      }
+    }
+  ],
+  "skills": {
+    "k12-lesson-planning": {
+      "scenario": "备课",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 k12-lesson-planning 备一节五年级数学「长除法」的课，要教案、学生用材料和课堂观察表。"
+    },
+    "backwards-design-unit-planner": {
+      "scenario": "备课",
+      "also": [],
+      "example": "用 backwards-design-unit-planner 帮我备「二次函数」这个单元的教案，初三，6 课时，目标是学生能根据图象说出性质并解决实际问题。"
+    },
+    "explicit-instruction-sequence-builder": {
+      "scenario": "备课",
+      "also": [],
+      "example": "用 explicit-instruction-sequence-builder 做一节「分数除法」的课时教案，I do / we do / you do 结构，带时间分配和随堂检查点。"
+    },
+    "scope-and-sequence-designer": {
+      "scenario": "备课",
+      "also": [],
+      "example": "用 scope-and-sequence-designer 排一份初中数学三年的教学进度表，标出先修依赖。"
+    },
+    "differentiation-adapter": {
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 differentiation-adapter 把这道课堂任务做分层，照顾学困生和学有余力的学生，但保持学习目标不变。"
+    },
+    "k12-lesson-differentiation": {
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 k12-lesson-differentiation 把这节课按学生水平分成三层，输出可编辑的 Word 分层材料。"
+    },
+    "formative-assessment-technique-selector": {
+      "scenario": "备课",
+      "also": [],
+      "example": "用 formative-assessment-technique-selector 帮我挑几个课中检查学生是否听懂的随堂检测方法。"
+    },
+    "comment-on-docx": {
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 comment-on-docx 批改这篇作文：按议论文标准，在具体句子上加批注指出论点、论据、结构的问题，不要改我的原文。"
+    },
+    "homework-grader": {
+      "scenario": "备课",
+      "also": [],
+      "example": "用 homework-grader 按这份评分标准批改这些作业，打分要引用原文证据，最后导出成绩 Excel 和每人评语。"
+    },
+    "Exam2Knowledge": {
+      "scenario": "备课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 Exam2Knowledge 把这份物理期末卷拆成高频考点和解题模板，再整理出一份错题清单。"
+    },
+    "docx": {
+      "scenario": "备课",
+      "also": [
+        "研究"
+      ],
+      "example": "用 docx 把这份教案排成正式的 Word 文档，带标题层级、页码和目录。"
+    },
+    "xlsx": {
+      "scenario": "备课",
+      "also": [
+        "研究"
+      ],
+      "example": "用 xlsx 把这份成绩表算出班级均分和排名，再做一个分数段分布图表。"
+    },
+    "edu-solid-geometry": {
+      "scenario": "讲课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 edu-solid-geometry 把这道题做成能旋转的 3D 解题页：正方体 ABCD-A₁B₁C₁D₁ 中，求异面直线 AC 与 BD₁ 所成的角。"
+    },
+    "edu-analytic-geometry": {
+      "scenario": "讲课",
+      "also": [
+        "自学"
+      ],
+      "example": "用 edu-analytic-geometry 把这道椭圆题做成能拖动的 2D 动态画板。"
+    },
+    "frontend-slides": {
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 frontend-slides 做一套讲「二次函数图象与性质」的网页幻灯片，带动画，风格清爽。"
+    },
+    "pptx": {
+      "scenario": "讲课",
+      "also": [
+        "备课"
+      ],
+      "example": "用 pptx 把这份教案做成一套可编辑的 PPT 课件。"
+    },
+    "baoyu-slide-deck": {
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 baoyu-slide-deck 把这份教研汇报做成一套带统一风格的幻灯片。"
+    },
+    "baoyu-comic": {
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 baoyu-comic 把「光合作用」画成一组四格知识漫画，画风轻松一点。"
+    },
+    "baoyu-infographic": {
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 baoyu-infographic 把「中国四大发明」做成一张可直接发布的信息图。"
+    },
+    "smart-illustrator": {
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 smart-illustrator 给这篇课文讲解批量生成配图，再做一张封面图。"
+    },
+    "theme-factory": {
+      "scenario": "讲课",
+      "also": [
+        "创造"
+      ],
+      "example": "用 theme-factory 给这套课件统一配色和字体，风格清爽一点。"
+    },
+    "math-tutor": {
+      "scenario": "自学",
+      "also": [],
+      "example": "用 math-tutor 讲这道题，别直接给答案，一步步引导我自己做出来：二次函数过点 (1,0)、(3,0)，且最小值为 -2，求解析式。"
+    },
+    "socratic-tutor": {
+      "scenario": "自学",
+      "also": [
+        "创造"
+      ],
+      "example": "用 socratic-tutor 引导我理解这段递归代码，只给提示别直接告诉我答案。"
+    },
+    "tutor": {
+      "scenario": "自学",
+      "also": [],
+      "example": "用 tutor 教我理解「细胞呼吸」，像人类家教那样一步步来，先问我已经知道什么。"
+    },
+    "learning-opportunities": {
+      "scenario": "自学",
+      "also": [
+        "创造"
+      ],
+      "example": "用 learning-opportunities 在我写完这段代码之后，给我出几个循证的学习练习巩固一下。"
+    },
+    "storm-research": {
+      "scenario": "研究",
+      "also": [],
+      "example": "用 storm-research 写一份「人工智能与教育公平」的深度研究报告，要多视角提问并带来源引用。"
+    },
+    "paper-lookup": {
+      "scenario": "研究",
+      "also": [],
+      "example": "用 paper-lookup 检索近三年「生成式 AI 在中小学教学中的应用」相关的论文。"
+    },
+    "citation-management": {
+      "scenario": "研究",
+      "also": [],
+      "example": "用 citation-management 帮我核对这几篇参考文献，并生成规范的 BibTeX。"
+    },
+    "tavily-search": {
+      "scenario": "研究",
+      "also": [],
+      "example": "用 tavily-search 查一下今年最新的中小学人工智能课程相关政策。"
+    },
+    "markitdown": {
+      "scenario": "研究",
+      "also": [
+        "备课"
+      ],
+      "example": "用 markitdown 把这堆 PDF 和 PPT 统一转成 Markdown，方便我做笔记。"
+    },
+    "pdf": {
+      "scenario": "研究",
+      "also": [
+        "备课"
+      ],
+      "example": "用 pdf 把这份扫描的试卷做 OCR，并提取出里面所有题目。"
+    },
+    "baoyu-url-to-markdown": {
+      "scenario": "研究",
+      "also": [],
+      "example": "用 baoyu-url-to-markdown 把这篇文章抓下来转成 markdown 存进我的笔记。"
+    },
+    "baoyu-youtube-transcript": {
+      "scenario": "研究",
+      "also": [
+        "自学"
+      ],
+      "example": "用 baoyu-youtube-transcript 下载这个公开课视频的中文字幕，并按章节整理成文稿。"
+    },
+    "doc-coauthoring": {
+      "scenario": "研究",
+      "also": [
+        "备课"
+      ],
+      "example": "用 doc-coauthoring 和我一起把这份教学设计规范逐节写完整。"
+    },
+    "algorithmic-art": {
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 algorithmic-art 生成一群会跟着鼠标游动的发光水母，能调数量、颜色和游动速度，背景是深海渐变。"
+    },
+    "canvas-design": {
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 canvas-design 做一张「校园读书节」的活动海报，输出 PDF 可直接拿去打印。"
+    },
+    "ian-xiaohei-illustrations": {
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 ian-xiaohei-illustrations 给这篇公众号文章配几张小黑风格的解释图。"
+    },
+    "frontend-design": {
+      "scenario": "创造",
+      "also": [],
+      "example": "用 frontend-design 帮我把这个页面重做得更有设计感，别一眼看上去像 AI 模板。"
+    },
+    "web-artifacts-builder": {
+      "scenario": "创造",
+      "also": [
+        "讲课"
+      ],
+      "example": "用 web-artifacts-builder 做一个多组件的互动学习小应用，带状态管理。"
+    },
+    "webapp-testing": {
+      "scenario": "创造",
+      "also": [],
+      "example": "用 webapp-testing 帮我测一下这个页面功能是否正常，顺便截图并把控制台报错抓出来。"
+    },
+    "understand": {
+      "scenario": "创造",
+      "also": [
+        "研究"
+      ],
+      "example": "用 understand 分析这个项目，生成一张交互式的代码知识图谱。"
+    },
+    "skill-creator": {
+      "scenario": "创造",
+      "also": [
+        "备课"
+      ],
+      "example": "用 skill-creator 把我这套备课流程做成一个可复用的 skill。"
+    },
+    "prompt-engineer": {
+      "scenario": "创造",
+      "also": [],
+      "example": "用 prompt-engineer 帮我把这个批改提示词重写得更稳定，并配一套测试用例。"
+    },
+    "mcp-builder": {
+      "scenario": "创造",
+      "also": [],
+      "example": "用 mcp-builder 把我们学校的教务 API 封装成一个 MCP 服务器。"
+    },
+    "claude-api": {
+      "scenario": "创造",
+      "also": [],
+      "example": "用 claude-api 帮我写一个调用 Claude 的批量批改脚本，加上 prompt 缓存降低成本。"
+    },
+    "email-sender": {
+      "scenario": "创造",
+      "also": [
+        "备课"
+      ],
+      "example": "用 email-sender 把这份家长会通知发到班级邮件组。"
+    }
+  }
+}
