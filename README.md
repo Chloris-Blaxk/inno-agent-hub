@@ -189,6 +189,18 @@ description: >-
 
 规则:**不要新造值**(平台按精确值筛选,新值不会出现在任何 tab 里);拿不准时 `subject` 写 `跨学科`,`kind` 按 `category` 就近选。加新值先提 issue。
 
+## Innoskill 平台
+
+本仓库是**内容源**;技能的浏览、搜索、技能包、安装台账由 [Innoskill](https://github.com/yuyue12111/innoskill) 平台提供,它定时从本仓库 `main` 同步,并向 InnoAgent 供货。
+
+| 文档 | 给谁 |
+|---|---|
+| [InnoAgent 后端接入指南](https://github.com/yuyue12111/innoskill/blob/main/docs/03-InnoAgent%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97.md) | 线上 InnoAgent 后端:一键添加 / 我的技能 / 技能包 / 学科用途筛选的接口与联调步骤 |
+| [需求定义](https://github.com/yuyue12111/innoskill/blob/main/docs/01-%E9%9C%80%E6%B1%82%E5%AE%9A%E4%B9%89.md) | 平台的定位、决策记录、数据模型与接口清单 |
+| [模块划分](https://github.com/yuyue12111/innoskill/blob/main/docs/02-%E6%A8%A1%E5%9D%97%E5%88%92%E5%88%86.md) | 改平台代码前先看 |
+
+本仓库里给平台读的元数据:`skill-library/scenarios.json`(场景 / 示例 / 精选)、`skill-library/packs.json`(技能包)、每个 `SKILL.md` 的 `category` / `subject` / `kind`(见上方两节)。
+
 ## 关联项目
 
 - [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) — 主项目（Inno Agent 运行时）
