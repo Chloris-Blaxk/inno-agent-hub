@@ -1,6 +1,8 @@
 ---
 name: pdf
 category: 文档处理
+subject: 跨学科
+kind: 文档处理
 description: >-
   读取、创建和审阅 PDF,尤其在排版/版式重要时:用 Poppler 渲染页面做可视化检查,用 reportlab/pdfplumber/pypdf 生成与抽取内容,并能处理表单填写。触发词:PDF, 读取 PDF, 生成 PDF, 填表单, 提取 PDF 文本; pdf, fill form.
 ---

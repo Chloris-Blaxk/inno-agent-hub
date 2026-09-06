@@ -1,6 +1,8 @@
 ---
 name: markitdown
 category: 文档处理
+subject: 跨学科
+kind: 文档处理
 description: >-
   用 MarkItDown 把各类文件转成 Markdown:PDF、Word/PPT/Excel、图片(OCR)、音频(转写)、HTML、CSV/JSON/XML、ZIP、YouTube 链接、EPub 等。做笔记或喂给模型前先转 Markdown 时使用。触发词:转 Markdown, 文档转换, 提取文本, PDF 转 md; convert to markdown, markitdown.
 ---

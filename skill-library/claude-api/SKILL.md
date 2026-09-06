@@ -1,6 +1,8 @@
 ---
 name: claude-api
 category: 开发工具
+subject: 其它
+kind: 开发工具
 description: >-
   构建、调试与优化基于 Claude API / Anthropic SDK 的应用,涵盖 prompt caching、工具调用、流式、迁移升级等,内置 Go/Python/TypeScript/Java/PHP 等多语言示例。学习或开发 AI 应用时使用。触发词:Claude API, Anthropic SDK, 调用大模型, prompt caching, 模型迁移; build with claude, llm app.
 ---

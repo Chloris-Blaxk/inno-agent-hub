@@ -1,6 +1,8 @@
 ---
 name: education-evidence-check
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when checking whether claims, theory choices, research questions, variable relationships, or literature review statements in education papers are supported, contradicted, weakly supported, outdated, or missing citations. Uses Scite-style citation context, Elicit evidence reports, Semantic Scholar citation relationships, and manual source verification.
 metadata:
   short-description: Verify evidence and citation strength in education writing

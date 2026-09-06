@@ -1,6 +1,8 @@
 ---
 name: education-policy-comparative-analysis
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use for education policy analysis, curriculum standard analysis, comparative education papers, international/regional comparison, policy text coding, historical policy evolution, and institutional analysis.
 metadata:
   short-description: Analyze education policy and comparative education topics

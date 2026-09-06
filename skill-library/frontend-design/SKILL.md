@@ -1,6 +1,8 @@
 ---
 name: frontend-design
 category: 内容创作
+subject: 其它
+kind: 开发工具
 description: >-
   打造有设计感、达到生产级品质的前端界面、页面与组件。当用户要做高质量的 Web 组件、页面或应用界面时使用(设计指南型,无捆绑脚本)。触发词:前端设计, UI 界面, 网页组件, 生产级前端; frontend design, ui design, web interface.
 ---

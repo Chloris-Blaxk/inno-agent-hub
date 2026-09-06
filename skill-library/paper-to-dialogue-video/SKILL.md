@@ -1,6 +1,8 @@
 ---
 name: paper-to-dialogue-video
 category: 内容创作
+subject: 跨学科
+kind: 内容创作
 description: Turn a research-paper PDF into a source-grounded Chinese two-host podcast with a checked dialogue script, distinct voices, synchronized subtitles, paper figures, and a warm vertical HTML animation. Use when the user asks for 论文播客、双人讲论文、论文音频、论文视频、小红书论文动画、带字幕配音的论文解读, or wants an academic PDF converted into a conversational audiovisual episode.
 ---
 

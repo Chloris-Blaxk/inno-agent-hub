@@ -1,6 +1,8 @@
 ---
 name: socratic-tutor
 category: 教学辅导
+subject: 信息技术
+kind: 学习辅导
 description: >-
   用苏格拉底式对话教编程的教学框架:当学习者想“学会”而不是“要现成代码”时使用。坚持有益的挣扎(productive struggle)、0-4 级渐进提示阶梯、元认知支架与情绪支持,按题型自适应(调试走完整提示阶梯、概念引入可给最小示例、语法错误直接纠正),绝不直接给出完整答案。触发词:教我, 帮我理解, 我在学, 引导我做这道题, 别直接给答案, 苏格拉底式, 启发式讲题, 循序渐进提示; teach me, help me understand, tutor mode, socratic, guided hints, don't give the solution.
 ---

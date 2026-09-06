@@ -1,6 +1,8 @@
 ---
 name: education-research-question-generation
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when generating, refining, comparing, or validating education research questions and hypotheses. Supports qualitative, quantitative, mixed-methods, intervention, design-based research, survey, classroom observation, and systematic review questions using Elicit-style evidence search, Semantic Scholar/OpenAlex, and LLM reasoning.
 metadata:
   short-description: Generate and validate education research questions

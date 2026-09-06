@@ -1,6 +1,8 @@
 ---
 name: education-design-based-research
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for design-based research (DBR) in education, including iterative design of learning environments, AI teaching tools, curriculum models, learning activities, instructional systems, and design principles tested in authentic education settings.
 metadata:
   short-description: Design DBR education studies

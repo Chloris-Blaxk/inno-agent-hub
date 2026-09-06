@@ -1,6 +1,8 @@
 ---
 name: baoyu-infographic
 category: 内容创作
+subject: 跨学科
+kind: 课件生成
 description: >-
   专业信息图生成:内置 21 种布局 × 21 种视觉风格,先分析内容并推荐布局×风格组合,再产出可直接发布的信息图。把要点或数据可视化成信息图时使用。触发词:信息图, infographic, 可视化海报, 图解, 知识卡片; visual summary.
 ---

@@ -1,6 +1,8 @@
 ---
 name: edu-solid-geometry
 category: 教学辅导
+subject: 数学
+kind: 课件生成
 description: >-
   把一道立体几何题解成一个自包含的交互教学网页：左侧 MathJax 分步解析，
   右侧 Three.js 可交互 3D 模型（分步高亮 + 镜头切换）。支持三种入口——给定文字题目、

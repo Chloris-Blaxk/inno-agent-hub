@@ -1,6 +1,8 @@
 ---
 name: skill-creator
 category: 开发工具
+subject: 其它
+kind: 开发工具
 description: >-
   创建、修改和优化 Skill,并量化评估其表现。当用户想从零做一个新 Skill、编辑或改进已有 Skill、运行评测(eval)来测试 Skill、对 Skill 做带方差分析的基准测试,或优化 Skill 的 description 以提升触发准确率时使用本技能。内置评测脚本与评审网页查看器(eval-viewer),可在后台跑测试用例并可视化对比结果。触发词:创建技能, 制作 skill, 写一个 skill, 改进技能, 优化 skill 描述, 评测技能; create skill, build a skill, improve skill, optimize description.
 ---

@@ -1,6 +1,8 @@
 ---
 name: baoyu-youtube-transcript
 category: 文档处理
+subject: 跨学科
+kind: 文档处理
 description: >-
   按 URL 或视频 ID 下载 YouTube 字幕/文字稿与封面图,支持多语言、翻译、分章与说话人识别,并缓存原始数据便于重排。把视频内容整理成可学习的文字稿时使用。触发词:YouTube 字幕, 视频转文字, 下载字幕, 视频文稿; youtube transcript, subtitles.
 ---

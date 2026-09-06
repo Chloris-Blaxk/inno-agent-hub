@@ -1,6 +1,8 @@
 ---
 name: frontend-slides
 category: 内容创作
+subject: 跨学科
+kind: 课件生成
 description: >-
   把一句话、一份内容或 PPT 变成零依赖、单文件、带动画的 16:9 网页幻灯片(HTML)。核心理念是“展示风格而非提问”:内置 12 套配色预设与 34 套设计模板,直接产出可在浏览器打开、可投屏演示的精美 deck,也支持把 PPT/PPTX 转成网页幻灯片。适合讲座、答辩、路演与教学课件。触发词:做一套幻灯片, 网页 PPT, 生成 deck, 演示文稿, 把 PPT 转网页, 炫酷幻灯片, 课件演示; frontend slides, web slides, presentation deck, ppt to web, html slides.
 ---

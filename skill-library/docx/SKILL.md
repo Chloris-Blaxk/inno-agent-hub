@@ -1,6 +1,8 @@
 ---
 name: docx
 category: 文档处理
+subject: 跨学科
+kind: 文档处理
 description: >-
   创建、读取和编辑 Word 文档(.docx):带格式的正式文稿、样式、修订等。凡涉及 Word 文档的任务都使用本技能。触发词:Word, Word 文档, .docx, 写一份文档, 公文, 报告; word document, docx.
 ---

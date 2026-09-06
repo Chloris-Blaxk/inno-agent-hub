@@ -1,6 +1,8 @@
 ---
 name: education-advanced-quantitative-modeling
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when education research needs advanced quantitative modeling beyond common t-tests, ANOVA, chi-square, correlation, and simple regression. Covers multilevel/hierarchical linear models, SEM, latent variable models, mediation, moderation, moderated mediation, IRT, longitudinal/growth models, DID, propensity score adjustment, nested school/class/student data, and advanced model reporting. This second-layer execution skill supports quantitative, mixed-methods, intervention, learning analytics, psychometric, and program evaluation studies.
 metadata:
   short-description: Plan and report advanced quantitative models for education data

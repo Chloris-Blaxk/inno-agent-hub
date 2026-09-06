@@ -1,6 +1,8 @@
 ---
 name: smart-illustrator
 category: 内容创作
+subject: 跨学科
+kind: 课件生成
 description: >-
   智能配图与 PPT 信息图生成器,三种模式:(1) 文章配图——分析文章生成插图;(2) PPT/Slides——批量生成信息图;(3) Cover——生成封面图。默认出图,`--prompt-only` 只出 prompt,支持 Bento Grid 功能展示图风格(`--style bento`)。触发词:配图, 插图, PPT, slides, 封面图, thumbnail, cover, bento grid, 功能展示图; feature showcase.
 ---

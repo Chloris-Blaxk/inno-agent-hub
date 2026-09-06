@@ -1,6 +1,8 @@
 ---
 name: tavily-search
 category: 研究检索
+subject: 跨学科
+kind: 通用工具
 description: >-
   通过 Tavily API 进行实时联网搜索，获取模型训练截止日期之后的最新信息。
   当用户询问近期事件、实时数据、当前状态、价格、版本号等容易过时的事实，

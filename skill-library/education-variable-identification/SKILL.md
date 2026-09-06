@@ -1,6 +1,8 @@
 ---
 name: education-variable-identification
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when identifying independent variables, dependent variables, mediators, moderators, controls, constructs, indicators, instruments, and operational definitions from education research topics, papers, PDFs, Zotero libraries, survey plans, or literature review notes. Supports Elicit-style extraction, PDF RAG, and structured variable tables.
 metadata:
   short-description: Extract and operationalize education research variables

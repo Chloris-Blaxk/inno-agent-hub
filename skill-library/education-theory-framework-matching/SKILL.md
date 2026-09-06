@@ -1,6 +1,8 @@
 ---
 name: education-theory-framework-matching
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when matching an education research topic, question, or variable model to appropriate theories, conceptual frameworks, and prior research traditions. Supports ResearchRabbit/Litmaps/Connected Papers-style citation exploration, OpenAlex/Semantic Scholar search, and theory-fit scoring.
 metadata:
   short-description: Match education topics to theories and frameworks

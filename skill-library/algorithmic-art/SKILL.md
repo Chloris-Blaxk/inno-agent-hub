@@ -1,6 +1,8 @@
 ---
 name: algorithmic-art
 category: 内容创作
+subject: 艺术
+kind: 内容创作
 description: >-
   用 p5.js 创作算法生成艺术:基于随机种子的可复现随机性,配合交互式参数探索。当用户想用代码生成艺术、做生成式视觉作品时使用。触发词:生成艺术, 算法艺术, p5.js, 创意编程; generative art, algorithmic art, creative coding.
 ---

@@ -1,6 +1,8 @@
 ---
 name: education-sampling-data-management
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use before collecting education research data, or when planning samples, recruitment, participant tracking, school/class/teacher/student data structures, consent, anonymization, data dictionaries, file naming, secure storage, and dataset readiness. This second-layer execution skill supports quantitative, qualitative, mixed-methods, experimental, action research, DBR, program evaluation, psychometric, and learning analytics workflows.
 metadata:
   short-description: Plan education samples, recruitment, anonymization, and data management

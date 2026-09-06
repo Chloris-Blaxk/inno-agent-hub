@@ -1,6 +1,8 @@
 ---
 name: baoyu-comic
 category: 内容创作
+subject: 跨学科
+kind: 课件生成
 description: >-
   知识漫画创作工具:支持多种画风与基调,自动分镜排版并按序生成图像,产出原创的教育/科普漫画。把知识点做成漫画讲解时使用。触发词:知识漫画, 教育漫画, 科普漫画, 人物传记漫画, 漫画讲解; knowledge comic, educational comic.
 ---

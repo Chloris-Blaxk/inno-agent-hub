@@ -1,6 +1,8 @@
 ---
 name: education-psychometric-scale-development
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for education scale development, questionnaire validation, test development, rubric validation, educational measurement, item analysis, EFA/CFA, reliability, validity evidence, IRT, measurement invariance, and score interpretation.
 metadata:
   short-description: Develop and validate education scales/tests

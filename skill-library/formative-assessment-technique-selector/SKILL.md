@@ -2,6 +2,8 @@
 # AGENT SKILLS STANDARD FIELDS (v2)
 name: formative-assessment-technique-selector
 category: 教学辅导
+subject: 跨学科
+kind: 评价测评
 description: >-
   为具体的教学时刻、评估目的与学段挑选合适的形成性评估/随堂检测技术(基于 Black & Wiliam 等循证研究):给出 2–3 种按适配度排序的技术、实施步骤、如何解读学生应答以及常见误区。想在课中、课间或课后检查学生是否学会、设计随堂反馈时使用。触发词:随堂检测, 形成性评价, 课堂提问, 检查理解, 当堂反馈, 出口卡, 学情检测, 怎么知道学生学会没有; formative assessment, check for understanding, exit ticket, hinge question.
 disable-model-invocation: true

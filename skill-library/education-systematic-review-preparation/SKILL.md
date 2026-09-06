@@ -1,6 +1,8 @@
 ---
 name: education-systematic-review-preparation
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use for education systematic reviews, scoping reviews, evidence maps, and rigorous literature syntheses requiring PRISMA/PRISMA-ScR logic, search strategy, inclusion/exclusion criteria, duplicate screening, evidence extraction tables, quality appraisal, and transparent reporting.
 metadata:
   short-description: Prepare systematic and scoping reviews in education

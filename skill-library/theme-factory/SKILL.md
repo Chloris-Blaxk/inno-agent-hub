@@ -1,6 +1,8 @@
 ---
 name: theme-factory
 category: 内容创作
+subject: 跨学科
+kind: 课件生成
 description: >-
   用预设主题为各类产物(幻灯片、文档、HTML 落地页等)统一配色与字体,内置 10 套主题,也可自定义。需要给作品套统一视觉风格时使用。触发词:主题, 配色, 视觉风格, 美化幻灯片, 美化文档; theme, styling, color scheme.
 ---

@@ -1,6 +1,8 @@
 ---
 name: webapp-testing
 category: 开发工具
+subject: 其它
+kind: 开发工具
 description: >-
   用 Playwright 与本地 Web 应用交互并测试:验证前端功能、调试 UI 行为、截图、抓取控制台日志。需要测试或调试网页应用时使用。触发词:网页测试, Playwright, 前端测试, UI 调试, 自动化测试; webapp testing, browser automation test.
 ---

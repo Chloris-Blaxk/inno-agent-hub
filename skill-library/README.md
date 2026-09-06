@@ -30,7 +30,7 @@ Inno Agent Skill 集合整理 —— 每个 Skill 是独立目录，可直接下
 
 按场景分组，便于按需取用。
 
-> ⚠️ **新增 Skill 必须在 frontmatter 加 `category` 标签** —— Inno Agent 客户端按 `category` 分组并支持搜索,缺失会落到「未分类」组。可用分类: `教学辅导` / `内容创作` / `文档处理` / `研究检索` / `开发工具`。详细约定见仓库根目录 [README.md 的「分类标签 (必填)」](../README.md#分类标签-必填) 一节。
+> ⚠️ **新增 Skill 必须在 frontmatter 加 `category`、`subject`、`kind` 三个标签**(取值表见仓库根目录 README「学科与用途标签」一节)。`category` —— Inno Agent 客户端按 `category` 分组并支持搜索,缺失会落到「未分类」组。可用分类: `教学辅导` / `内容创作` / `文档处理` / `研究检索` / `开发工具`。详细约定见仓库根目录 [README.md 的「分类标签 (必填)」](../README.md#分类标签-必填) 一节。
 
 ### 🌐 工具 · 信息获取
 

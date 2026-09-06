@@ -1,6 +1,8 @@
 ---
 name: doc-coauthoring
 category: 文档处理
+subject: 其它
+kind: 文档处理
 description: >-
   引导用户走一套结构化的协作写作流程,共同撰写文档、提案、技术规范、决策记录等。需要系统地写一份正式文档时使用(纯指令型,无捆绑脚本)。触发词:写文档, 协作写作, 技术规范, 提案, 文档共创; documentation, co-authoring, technical spec.
 ---

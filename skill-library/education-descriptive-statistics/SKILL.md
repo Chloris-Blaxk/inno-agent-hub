@@ -1,6 +1,8 @@
 ---
 name: education-descriptive-statistics
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use after quantitative education data cleaning to summarize datasets before reliability, validity, inferential, experimental, regression, SEM, multilevel, or learning analytics analysis. Covers means, standard deviations, medians, frequencies, percentages, cross-tabulations, group comparisons, pre/post descriptive summaries, scale/item descriptives, visualization, and APA/education-paper result table wording.
 metadata:
   short-description: Produce descriptive statistics and baseline summaries for education data

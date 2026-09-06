@@ -1,6 +1,8 @@
 ---
 name: baoyu-url-to-markdown
 category: 文档处理
+subject: 跨学科
+kind: 文档处理
 description: >-
   用 baoyu-fetch(基于 Chrome CDP)抓取任意网页转成 Markdown,内置 X/Twitter、YouTube 字幕、Hacker News、通用页面(Defuddle)等适配器,可处理登录/验证码。把网页剪藏成笔记时使用。触发词:网页转 Markdown, 抓取网页, 剪藏, 保存文章; url to markdown, fetch page.
 ---

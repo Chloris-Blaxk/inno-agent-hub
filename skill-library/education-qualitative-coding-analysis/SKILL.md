@@ -1,6 +1,8 @@
 ---
 name: education-qualitative-coding-analysis
 category: 研究检索
+subject: 跨学科
+kind: 教研科研
 description: Use when analyzing qualitative education data such as interviews, focus groups, classroom observations, reflective journals, student work, policy documents, teaching artifacts, AI feedback texts, and open-ended survey responses. Covers open coding, axial coding, selective coding, thematic analysis, grounded theory, content analysis, discourse-oriented coding, memo writing, evidence extraction, codebook development, and qualitative findings structure. This is a second-layer execution skill for qualitative, mixed-methods, action research, DBR, policy/comparative analysis, program evaluation, and AI-assisted education research.
 metadata:
   short-description: Execute qualitative coding and thematic analysis for education data

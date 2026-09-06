@@ -1,6 +1,8 @@
 ---
 name: education-action-research-design
 category: 教学辅导
+subject: 跨学科
+kind: 教研科研
 description: Use for teacher-led action research, teaching practice papers, classroom improvement studies, lesson reform, iterative intervention reflection, and practitioner inquiry in education. Produces problem diagnosis, action plan, implementation cycle, classroom evidence, reflection framework, and practice-paper structure.
 metadata:
   short-description: Design action research and teaching practice papers

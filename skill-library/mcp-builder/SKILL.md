@@ -1,6 +1,8 @@
 ---
 name: mcp-builder
 category: 开发工具
+subject: 其它
+kind: 开发工具
 description: >-
   构建高质量的 MCP(Model Context Protocol)服务器,让大模型通过设计良好的工具接入外部服务。想给 AI 接外部能力或写 MCP 工具时使用。触发词:MCP, Model Context Protocol, MCP 服务器, 给 AI 加工具; build mcp, tool server.
 ---
