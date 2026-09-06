@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inno Agent · 技能库</title>
 <meta name="description" content="Inno Agent Skill Library — 面向教学、自学、研究与创作的可直接调用技能。">
+<link rel="canonical" href="{{SITE_URL}}{{PAGE}}">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Inno Agent">
+<meta property="og:title" content="Inno Agent · 技能库">
+<meta property="og:description" content="面向教学、自学、研究与创作的 {{COUNT}} 个可直接调用 Agent 技能。">
+<meta property="og:url" content="{{SITE_URL}}{{PAGE}}">
+<meta property="og:image" content="{{SITE_URL}}og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root{
     --paper:#f7f4ed; --ink:#14140f; --muted:#6f6c63; --line:#e2ded6;
@@ -167,6 +178,7 @@
     #hint{left:14px; bottom:16px; font-size:11.5px; padding:8px 12px}
     #zoom{right:14px; bottom:16px}
     header{padding:14px 16px}
+    .logo{white-space:nowrap; font-size:14.5px}
     .nlink{padding:6px 11px; font-size:11.5px}
   }
   @media (prefers-reduced-motion:reduce){
@@ -441,7 +453,7 @@ function openDetail(id){
   const c = SC[s.scenario] || {color:{bg:'#eee',fg:'#555',ink:'#333'}, title:''};
   const themes = [c.title, ...(s.also||[]).map(k => SC[k] && SC[k].title).filter(Boolean)];
   $('detail').innerHTML = `
-    <div class="bigart${!s.hasDemo && s.h > s.w ? ' portrait' : ''}">${s.hasDemo ? `<img src="${esc(s.demo)}" alt="${esc(s.name)} 演示">` : s.svg}</div>
+    <div class="bigart${!s.hasDemo && s.h > s.w ? ' portrait' : ''}">${s.hasDemo ? `<img src="${esc(s.demo)}" alt="${esc(s.name)} 演示" loading="lazy" decoding="async">` : s.svg}</div>
     <div class="dcard">
       <button class="dclose" id="dclose" aria-label="关闭">×</button>
       <span class="dsc" style="background:${c.color.bg}; color:${c.color.ink}">${esc(s.scenario)}</span>

@@ -1,0 +1,60 @@
+name: skills-site
+
+# skill-library 或构建脚本一变,就重建展示站并发布到 GitHub Pages。
+# 上游需在 Settings → Pages 把 Source 设为 "GitHub Actions"(只需一次)。
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skill-library/**"
+      - "scripts/**"
+      - ".github/workflows/pages.yml"
+  pull_request:
+    paths:
+      - "skill-library/**"
+      - "scripts/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build docs/
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python3 scripts/build_skills_site.py
+      - name: Sanity check
+        run: |
+          test -s docs/index.html && test -s docs/all.html && test -s docs/skills.json
+          python3 -c "import json; d=json.load(open('docs/skills.json')); assert d['count']>0, 'no skills'; print(d['count'], 'skills')"
+      - if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
