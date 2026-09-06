@@ -1,5 +1,28 @@
 {
   "fallback": "创造",
+  "featured": [
+    "k12-lesson-planning",
+    "backwards-design-unit-planner",
+    "homework-grader",
+    "Exam2Knowledge",
+    "comment-on-docx",
+    "edu-solid-geometry",
+    "edu-analytic-geometry",
+    "frontend-slides",
+    "baoyu-comic",
+    "baoyu-infographic",
+    "math-tutor",
+    "socratic-tutor",
+    "tutor",
+    "storm-research",
+    "paper-lookup",
+    "citation-management",
+    "markitdown",
+    "algorithmic-art",
+    "paper-to-xhs",
+    "paper-to-dialogue-video",
+    "ian-xiaohei-illustrations"
+  ],
   "scenarios": [
     {
       "key": "备课",
