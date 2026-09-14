@@ -65,6 +65,7 @@ Inno Agent 的「简单模式」会直接把这些模板渲染成欢迎页的**�
 | [adaptive-math-learning-agent/](./adaptive-math-learning-agent/) | 中小学数学错因诊断、多表征修复与自适应巩固 | math-task-structurer / math-reasoning-trace-analyzer / math-misconception-verifier / multi-representation-repair / math-visual-repair / adaptive-math-practice / math-learning-progress-reporter | ✅ 可用 |
 | [lesson-plan/](./lesson-plan/) | 结构化教案生成 | — | 🚧 骨架(工作流待细化)|
 | [scenario-explain/](./scenario-explain/) | 情景化讲题 | — | 🚧 骨架(工作流待细化)|
+| [modular-learning/](./modular-learning/) | 模块化渐进学习 | modular-learning-orchestrator | ✅ 可用 |
 | [ai4math-paper-reading/](./ai4math-paper-reading/) | 数学论文阅读：PDF 摄入、论文转 Skill | — | ✅ 可用（[VeryMath](https://github.com/VeryMath)）|
 | [ai4math-computational-mathematics/](./ai4math-computational-mathematics/) | 计算数学：有限元、不变量、最小二乘、代码复现 | — | ✅ 可用（[VeryMath](https://github.com/VeryMath)）|
 | [ai4math-optimization/](./ai4math-optimization/) | 数学优化：LP / MIP / SOCP / CDOpt / COPT | — | ✅ 可用（[VeryMath](https://github.com/VeryMath)）|
